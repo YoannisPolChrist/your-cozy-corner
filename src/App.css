@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Brush Script MT'), local('BrushScriptMT');
+}
+
+.font-script {
+  font-family: 'Dancing Script', 'Brush Script MT', cursive;
+  font-weight: 400;
+}
+
+/* Additional styles if needed */

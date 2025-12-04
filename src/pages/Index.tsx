@@ -1,0 +1,156 @@
+import { Navigation } from "@/components/Navigation";
+import { Hero } from "@/components/Hero";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Heart, Brain, Lightbulb } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const services = [
+  {
+    icon: Heart,
+    title: "Therapie & Heilung",
+    description: "Für tieferliegende Themen und emotionale Blockaden.",
+  },
+  {
+    icon: Brain,
+    title: "Coaching & Fokus",
+    description: "Für berufliche Entscheidungen und persönliche Entwicklung.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Klarheit & Einordnung",
+    description: "Professionelle Diagnostik für den richtigen Weg.",
+  },
+];
+
+const Index = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      <main className="pt-20">
+        <Hero />
+
+        {/* Services Preview */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="font-heading text-4xl md:text-5xl mb-4 text-gold-accent">
+                Mein Angebot
+              </h2>
+              <p className="text-xl text-muted-foreground italic">
+                Spezialisierte Unterstützung für Ihre Bedürfnisse
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+              {services.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <Card
+                    key={index}
+                    className="p-6 bg-gray-light border-none text-center"
+                  >
+                    <div className="mb-4 flex justify-center">
+                      <Icon className="w-10 h-10 text-gold-accent" strokeWidth={1.5} />
+                    </div>
+                    <h3 className="font-heading text-xl mb-2 text-primary">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      {service.description}
+                    </p>
+                  </Card>
+                );
+              })}
+            </div>
+
+            <div className="text-center">
+              <Link to="/angebot">
+                <Button className="bg-gold-accent hover:bg-gold-accent/90 text-white font-semibold">
+                  Alle Angebote entdecken <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* About Preview */}
+        <section className="py-20 bg-gray-light">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="font-heading text-4xl md:text-5xl mb-6 text-primary">
+                Über mich
+              </h2>
+              <p className="text-xl text-muted-foreground italic mb-8 leading-relaxed">
+                Ich bin Johannes Christ, Gestalttherapeut, Coach und Psychologe (M.Sc.). 
+                Meine Arbeit basiert auf der Überzeugung, dass echte Veränderung entsteht, 
+                wenn wir die Verbindung zwischen unseren Gedanken, Gefühlen und unserem Körper verstehen.
+              </p>
+              <Link to="/ueber-mich">
+                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-semibold">
+                  Mehr über mich <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Gestalttherapie Preview */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="font-heading text-4xl md:text-5xl mb-6 text-gold-accent">
+                Gestalttherapie
+              </h2>
+              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+                Die Gestalttherapie ist ein humanistischer Therapieansatz, der sich auf das 
+                Hier und Jetzt konzentriert. Erfahren Sie mehr über die Grundlagen und wie 
+                dieser Ansatz Ihnen helfen kann.
+              </p>
+              <Link to="/gestalttherapie">
+                <Button className="bg-primary hover:bg-primary/90 text-white font-semibold">
+                  Mehr erfahren <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-teal text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="font-heading text-3xl md:text-4xl mb-6">
+              Bereit für den ersten Schritt?
+            </h2>
+            <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+              Vereinbaren Sie ein kostenloses Kennenlerngespräch und erfahren Sie, 
+              wie ich Sie auf Ihrem Weg unterstützen kann.
+            </p>
+            <Link to="/kontakt">
+              <Button size="lg" className="bg-gold-accent hover:bg-gold-accent/90 text-white font-semibold">
+                Kontakt aufnehmen <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+        </section>
+      </main>
+
+      <footer className="bg-primary text-white py-8">
+        <div className="container mx-auto px-4 text-center">
+          <p className="mb-4">© {new Date().getFullYear()} Johannes Christ · Gestalttherapie & Coaching</p>
+          <div className="space-x-4 text-sm text-white/80">
+            <a href="#" className="hover:text-gold-accent transition-colors">
+              Datenschutzerklärung
+            </a>
+            <span>·</span>
+            <a href="#" className="hover:text-gold-accent transition-colors">
+              Impressum
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Index;

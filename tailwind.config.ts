@@ -57,6 +57,22 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "teal-primary": "hsl(var(--teal-primary))",
+        "teal-dark": "hsl(var(--teal-dark))",
+        "gold-accent": "hsl(var(--gold-accent))",
+        "gray-light": "hsl(var(--gray-light))",
+      },
+      fontFamily: {
+        heading: ['Montserrat', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+      },
+      backgroundImage: {
+        'gradient-teal': 'var(--gradient-teal)',
+        'gradient-gold': 'var(--gradient-gold)',
+      },
+      boxShadow: {
+        'soft': 'var(--shadow-soft)',
+        'teal': 'var(--shadow-teal)',
       },
       borderRadius: {
         lg: "var(--radius)",
