@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
+import { AnimatedSection } from "@/components/AnimatedSection";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Brain, Lightbulb } from "lucide-react";
@@ -31,7 +32,7 @@ const Index = () => {
         <Hero />
 
         {/* Services Preview */}
-        <section className="py-20 bg-background">
+        <AnimatedSection className="py-20 bg-background" animation="fade-up">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="font-heading text-4xl md:text-5xl mb-4 text-gold-accent">
@@ -48,7 +49,8 @@ const Index = () => {
                 return (
                   <Card
                     key={index}
-                    className="p-6 bg-gray-light border-none text-center"
+                    className="p-6 bg-gray-light border-none text-center transition-all duration-500 hover:shadow-lg hover:-translate-y-1"
+                    style={{ transitionDelay: `${index * 100}ms` }}
                   >
                     <div className="mb-4 flex justify-center">
                       <Icon className="w-10 h-10 text-gold-accent" strokeWidth={1.5} />
@@ -72,10 +74,10 @@ const Index = () => {
               </Link>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* About Preview */}
-        <section className="py-20 bg-gray-light">
+        <AnimatedSection className="py-20 bg-gray-light" animation="fade-up" delay={100}>
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="font-heading text-4xl md:text-5xl mb-6 text-primary">
@@ -93,10 +95,10 @@ const Index = () => {
               </Link>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* Gestalttherapie Preview */}
-        <section className="py-20 bg-background">
+        <AnimatedSection className="py-20 bg-background" animation="fade-up" delay={100}>
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="font-heading text-4xl md:text-5xl mb-6 text-gold-accent">
@@ -114,10 +116,10 @@ const Index = () => {
               </Link>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-teal text-white">
+        <AnimatedSection className="py-20 bg-gradient-teal text-white" animation="scale">
           <div className="container mx-auto px-4 text-center">
             <h2 className="font-heading text-3xl md:text-4xl mb-6">
               Bereit für den ersten Schritt?
@@ -132,7 +134,7 @@ const Index = () => {
               </Button>
             </Link>
           </div>
-        </section>
+        </AnimatedSection>
       </main>
 
       <footer className="bg-primary text-white py-8">
