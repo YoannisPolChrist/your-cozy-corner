@@ -3,25 +3,22 @@ import { Hero } from "@/components/Hero";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Heart, Brain, Lightbulb, AlertCircle, Users, Compass } from "lucide-react";
+import { ArrowRight, Heart, Brain, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import johannesPortrait from "@/assets/johannes-portrait.png";
 
-const problems = [
+const painPoints = [
   {
-    icon: AlertCircle,
-    title: "Innere Unruhe & Blockaden",
-    description: "Sie fühlen sich festgefahren, haben wiederkehrende Ängste oder können bestimmte Muster nicht durchbrechen.",
+    title: "Auf der Stelle treten",
+    description: "Das Gefühl, auf der Stelle zu treten, obwohl Sie sich bewegen wollen. Alte Muster wiederholen sich, besonders in Beziehungen.",
   },
   {
-    icon: Users,
-    title: "Beziehungskonflikte",
-    description: "Schwierigkeiten in Partnerschaften, Familie oder am Arbeitsplatz belasten Ihren Alltag und Ihre Lebensqualität.",
+    title: "Distanz und Nähe",
+    description: "Die Distanz zu anderen wächst, oder die Nähe fühlt sich erdrückend an. Gespräche drehen sich im Kreis.",
   },
   {
-    icon: Compass,
-    title: "Orientierungslosigkeit",
-    description: "Sie stehen vor wichtigen Entscheidungen oder suchen nach Sinn und Richtung in Ihrem Leben.",
+    title: "Nebel der Unklarheit",
+    description: "Der Wunsch nach Klarheit ist da, aber der nächste Schritt bleibt im Nebel verborgen.",
   },
 ];
 
@@ -54,71 +51,78 @@ const Index = () => {
       <main>
         <Hero />
 
-        {/* Problems Section */}
-        <AnimatedSection className="py-24 bg-gray-light" animation="fade-up">
-          <div className="container mx-auto px-4">
+        {/* Pain Points Section - Empathetic Narrative */}
+        <AnimatedSection className="py-24 relative overflow-hidden" animation="fade-up">
+          {/* Subtle topographical background */}
+          <div 
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 90 Q 30 70, 50 80 T 90 70' stroke='%231e5f74' fill='none' stroke-width='1'/%3E%3Cpath d='M10 60 Q 40 40, 60 55 T 90 45' stroke='%231e5f74' fill='none' stroke-width='1'/%3E%3Cpath d='M10 30 Q 35 15, 55 25 T 90 20' stroke='%231e5f74' fill='none' stroke-width='1'/%3E%3C/svg%3E")`,
+              backgroundSize: '200px 200px'
+            }}
+          />
+          <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="font-heading text-3xl md:text-4xl mb-4 text-primary">
-                Kennen Sie das?
+              <h2 className="font-heading text-[2.2rem] md:text-[2.7rem] mb-5 text-primary leading-tight">
+                Wenn der innere Kompass stillsteht
               </h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Viele meiner Klienten kommen mit ähnlichen Herausforderungen zu mir
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto italic">
+                Oft spüren wir, dass etwas fehlt, lange bevor wir es benennen können.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {problems.map((problem, index) => {
-                const Icon = problem.icon;
-                return (
-                  <div
-                    key={index}
-                    className="text-center p-8"
-                  >
-                    <div className="mb-6 flex justify-center">
-                      <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                        <Icon className="w-8 h-8 text-primary" strokeWidth={1.5} />
-                      </div>
-                    </div>
-                    <h3 className="font-heading text-xl mb-3 text-primary">
-                      {problem.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {problem.description}
-                    </p>
-                  </div>
-                );
-              })}
+            <div className="grid md:grid-cols-2 gap-x-16 gap-y-12 max-w-4xl mx-auto">
+              {painPoints.map((point, index) => (
+                <div
+                  key={index}
+                  className={`relative pl-8 ${index === 2 ? 'md:col-span-2 md:max-w-lg md:mx-auto' : ''}`}
+                >
+                  <div className="absolute left-0 top-1 w-1 h-full bg-gradient-to-b from-primary/30 to-transparent rounded-full" />
+                  <h3 className="font-heading text-xl mb-3 text-primary">
+                    {point.title}
+                  </h3>
+                  <p className="text-muted-foreground text-lg leading-relaxed">
+                    {point.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </AnimatedSection>
 
-        {/* Services Teaser */}
-        <AnimatedSection className="py-24 bg-background" animation="fade-up">
+        {/* Services Section - High-End Cards */}
+        <AnimatedSection className="py-24 bg-secondary/30" animation="fade-up">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="font-heading text-3xl md:text-4xl mb-4 text-gold-accent">
+            <div className="text-center mb-14">
+              <h2 className="font-heading text-[2.2rem] md:text-[2.7rem] mb-4 text-accent">
                 Mein Angebot
               </h2>
               <p className="text-muted-foreground text-lg">
-                Individuelle Unterstützung für Ihren Weg
+                Individuelle Räume für Ihre Entwicklung
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-14">
               {services.map((service, index) => {
                 const Icon = service.icon;
                 return (
                   <Card
                     key={index}
-                    className="p-6 bg-gray-light border-none text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                    className="p-8 bg-[#fdfbf7] border border-accent/20 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 group relative overflow-hidden"
                   >
-                    <div className="mb-4 flex justify-center">
-                      <Icon className="w-8 h-8 text-gold-accent" strokeWidth={1.5} />
+                    {/* Bottom border highlight on hover */}
+                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                    
+                    <div className="mb-5 flex justify-center">
+                      <Icon 
+                        className="w-10 h-10 text-accent group-hover:text-primary transition-colors duration-300" 
+                        strokeWidth={1.5} 
+                      />
                     </div>
-                    <h3 className="font-heading text-lg mb-2 text-primary">
+                    <h3 className="font-heading text-xl mb-3 text-primary">
                       {service.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-muted-foreground">
                       {service.description}
                     </p>
                   </Card>
@@ -128,7 +132,7 @@ const Index = () => {
 
             <div className="text-center">
               <Link to="/angebot" onClick={scrollToTop}>
-                <Button className="bg-gold-accent hover:bg-gold-accent/90 text-white font-semibold">
+                <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
                   Alle Angebote entdecken <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
