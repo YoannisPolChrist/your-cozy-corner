@@ -51,11 +51,11 @@ export const Hero = () => {
         </video>
       </motion.div>
       
-      {/* Gradient Overlay - Teal to transparent */}
+      {/* Gradient Overlay - Darker for readability */}
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(to top, hsl(190 75% 30% / 0.7) 0%, hsl(190 75% 30% / 0.4) 40%, transparent 70%, hsl(0 0% 0% / 0.3) 100%)'
+          background: 'linear-gradient(to top, hsl(0 0% 0% / 0.75) 0%, hsl(0 0% 0% / 0.6) 40%, hsl(0 0% 0% / 0.4) 100%)'
         }}
       />
       
@@ -70,17 +70,17 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isRevealed ? 1 : 0, y: isRevealed ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-wrap justify-center gap-3 mb-8"
+            className="flex flex-wrap justify-center gap-3 mb-10"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary-foreground/10 backdrop-blur-sm rounded-full text-primary-foreground/90 text-sm border border-primary-foreground/20">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm border border-white/20">
               <Sparkles className="w-4 h-4" />
               Gestalttherapie
             </span>
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary-foreground/10 backdrop-blur-sm rounded-full text-primary-foreground/90 text-sm border border-primary-foreground/20">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm border border-white/20">
               <Brain className="w-4 h-4" />
               Coaching
             </span>
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary-foreground/10 backdrop-blur-sm rounded-full text-primary-foreground/90 text-sm border border-primary-foreground/20">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm border border-white/20">
               <Bot className="w-4 h-4" />
               KI-gestützt
             </span>
@@ -90,7 +90,8 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isRevealed ? 1 : 0, y: isRevealed ? 0 : 30 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="font-heading text-4xl md:text-5xl lg:text-6xl mb-6 text-primary-foreground leading-tight"
+            className="font-heading text-4xl md:text-5xl lg:text-6xl mb-6 text-white leading-tight drop-shadow-lg"
+            style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}
           >
             Veränderung beginnt im{" "}
             <span className="italic text-accent">Hier und Jetzt</span>
@@ -100,7 +101,8 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isRevealed ? 1 : 0, y: isRevealed ? 0 : 30 }}
             transition={{ duration: 0.8, delay: 1.2 }}
-            className="text-lg md:text-xl mb-10 text-primary-foreground/85 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl mb-12 text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-md"
+            style={{ textShadow: '0 1px 10px rgba(0,0,0,0.4)' }}
           >
             Begleitung auf Ihrem Weg zu mehr Klarheit und Erfüllung – 
             durch humanistische Gestalttherapie, modernes Coaching und innovative KI-Tools.
@@ -110,24 +112,17 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isRevealed ? 1 : 0, y: isRevealed ? 0 : 30 }}
             transition={{ duration: 0.8, delay: 1.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link to="/kontakt" onClick={scrollToTop}>
               <Button
                 size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-medium px-8 py-6 text-lg w-full sm:w-auto shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                className="text-white font-medium px-10 py-7 text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                style={{ backgroundColor: '#c5a065' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#d4b07a'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#c5a065'}
               >
                 Kennenlerngespräch vereinbaren
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link to="/angebot" onClick={scrollToTop}>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-medium px-8 py-6 text-lg w-full sm:w-auto backdrop-blur-sm"
-              >
-                Angebot entdecken
               </Button>
             </Link>
           </motion.div>
