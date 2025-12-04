@@ -63,7 +63,7 @@ export default {
         "gray-light": "hsl(var(--gray-light))",
       },
       fontFamily: {
-        heading: ['Montserrat', 'sans-serif'],
+        heading: ['Playfair Display', 'serif'],
         sans: ['Inter', 'sans-serif'],
       },
       backgroundImage: {
