@@ -61,7 +61,7 @@ const UeberMich = () => {
                   {/* Gold background accent - 20px offset, 10px on mobile */}
                   <div className="absolute bottom-[10px] right-[10px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-2xl" />
                   <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
-                    <img src={johannesHero} alt="Johannes Christ - Gestalttherapeut" className="w-full h-full border-solid border-sidebar-primary object-scale-down shadow-md border-0 rounded-none" />
+                    <img alt="Johannes Christ - Gestalttherapeut" className="w-full h-full border-solid border-sidebar-primary object-scale-down shadow-md border-0 rounded-none" src="/lovable-uploads/344b749b-e6b8-4454-94e0-5ad41901e13b.jpg" />
                   </div>
                 </motion.div>
 
