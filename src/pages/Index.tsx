@@ -3,8 +3,9 @@ import { Hero } from "@/components/Hero";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Heart, Brain, Lightbulb } from "lucide-react";
+import { ArrowRight, Heart, Brain, Lightbulb, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import johannesPortrait from "@/assets/johannes-portrait.png";
 
 const services = [
   {
@@ -21,6 +22,11 @@ const services = [
     icon: Lightbulb,
     title: "Klarheit & Einordnung",
     description: "Professionelle Diagnostik für den richtigen Weg.",
+  },
+  {
+    icon: Sparkles,
+    title: "Gestalttherapie",
+    description: "Humanistischer Ansatz mit Fokus auf das Hier und Jetzt.",
   },
 ];
 
@@ -43,7 +49,7 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
               {services.map((service, index) => {
                 const Icon = service.icon;
                 return (
@@ -76,44 +82,45 @@ const Index = () => {
           </div>
         </AnimatedSection>
 
-        {/* About Preview */}
-        <AnimatedSection className="py-20 bg-gray-light" animation="fade-up" delay={100}>
+        {/* About Preview - Split Layout with Diagonal */}
+        <AnimatedSection className="py-20 bg-background overflow-hidden" animation="fade-up" delay={100}>
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-heading text-4xl md:text-5xl mb-6 text-primary">
-                Über mich
-              </h2>
-              <p className="text-xl text-muted-foreground italic mb-8 leading-relaxed">
-                Ich bin Johannes Christ, Gestalttherapeut, Coach und Psychologe (M.Sc.). 
-                Meine Arbeit basiert auf der Überzeugung, dass echte Veränderung entsteht, 
-                wenn wir die Verbindung zwischen unseren Gedanken, Gefühlen und unserem Körper verstehen.
-              </p>
-              <Link to="/ueber-mich">
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-semibold">
-                  Mehr über mich <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </AnimatedSection>
-
-        {/* Gestalttherapie Preview */}
-        <AnimatedSection className="py-20 bg-background" animation="fade-up" delay={100}>
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-heading text-4xl md:text-5xl mb-6 text-gold-accent">
-                Gestalttherapie
-              </h2>
-              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                Die Gestalttherapie ist ein humanistischer Therapieansatz, der sich auf das 
-                Hier und Jetzt konzentriert. Erfahren Sie mehr über die Grundlagen und wie 
-                dieser Ansatz Ihnen helfen kann.
-              </p>
-              <Link to="/gestalttherapie">
-                <Button className="bg-primary hover:bg-primary/90 text-white font-semibold">
-                  Mehr erfahren <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
+            <div className="grid md:grid-cols-2 gap-0 items-stretch min-h-[500px]">
+              {/* Left Side - Text */}
+              <div className="flex flex-col justify-center pr-8 md:pr-16 py-12">
+                <h2 className="font-heading text-4xl md:text-5xl mb-6 text-primary">
+                  Über mich
+                </h2>
+                <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+                  Ich bin Johannes Christ, Gestalttherapeut, Coach und Psychologe (M.Sc.). 
+                  Meine Arbeit basiert auf der Überzeugung, dass echte Veränderung entsteht, 
+                  wenn wir die Verbindung zwischen unseren Gedanken, Gefühlen und unserem Körper verstehen.
+                </p>
+                <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+                  Mit langjähriger Erfahrung in Gestalttherapie und Coaching begleite ich Sie 
+                  auf dem Weg zu mehr Klarheit, Wohlbefinden und Erfüllung.
+                </p>
+                <Link to="/ueber-mich" className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors group">
+                  Mehr über mich erfahren 
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </div>
+              
+              {/* Right Side - Image with Diagonal Clip */}
+              <div className="relative h-full min-h-[400px] md:min-h-[500px]">
+                {/* Diagonal overlay */}
+                <div 
+                  className="absolute inset-0 bg-background z-10"
+                  style={{
+                    clipPath: 'polygon(0 0, 15% 0, 0 100%, 0 100%)'
+                  }}
+                />
+                <img 
+                  src={johannesPortrait} 
+                  alt="Johannes Christ - Gestalttherapeut und Coach"
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                />
+              </div>
             </div>
           </div>
         </AnimatedSection>
