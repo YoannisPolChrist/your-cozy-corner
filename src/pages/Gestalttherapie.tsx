@@ -1,6 +1,8 @@
 import { Navigation } from "@/components/Navigation";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { AnimatedSection, AnimatedItem, StaggerContainer } from "@/components/AnimatedSection";
+import { Hand, Brain, Palette } from "lucide-react";
 import gestalttherapieIntro from "@/assets/gestalttherapie-intro.png";
 import gestaltKontaktzyklus from "@/assets/gestalt-kontaktzyklus.png";
 import ressourcenUnterstuetzung from "@/assets/ressourcen-unterstuetzung.png";
@@ -116,46 +118,64 @@ const Gestalttherapie = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-24">
-        {/* Image 1: Gestalttherapie Intro */}
-        <section className="py-20">
+        {/* Image 1: Gestalttherapie Intro - Warm paper background */}
+        <section className="py-24 md:py-32" style={{ backgroundColor: '#fdfbf7' }}>
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <img 
+            <AnimatedSection className="max-w-5xl mx-auto">
+              <motion.img 
                 src={gestalttherapieIntro} 
                 alt="Gestalttherapie - Humanistisches Erleben und Selbstentfaltung" 
-                className="w-full rounded-xl shadow-lg mb-10"
+                className="w-full rounded-xl mb-12"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                style={{ boxShadow: '0 10px 40px rgba(30, 95, 116, 0.1)' }}
               />
-              <div className="bg-card p-10 md:p-12 rounded-xl border border-border shadow-soft">
-                <h2 className="font-heading text-2xl md:text-3xl font-bold text-primary mb-6">
+              <motion.div 
+                className="p-10 md:p-14 rounded-2xl"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                style={{ backgroundColor: '#f7f5f0' }}
+              >
+                <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-8">
                   Was ist Gestalttherapie?
                 </h2>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                <p className="text-foreground/80 text-lg leading-loose mb-6">
                   Die Gestalttherapie ist ein <strong className="text-primary">humanistischer Psychotherapieansatz</strong>, 
-                  der den Fokus auf das <strong className="text-gold-accent">Hier und Jetzt</strong> legt – 
+                  der den Fokus auf das <strong className="text-accent">Hier und Jetzt</strong> legt – 
                   im Gegensatz zur klassischen Analyse der Vergangenheit. 
                 </p>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-8 italic border-l-4 border-gold-accent pl-6">
+                <p className="text-foreground/70 text-lg leading-loose mb-10 italic border-l-4 border-accent pl-6">
                   Anstatt zu fragen „Warum?" fragen wir „Wie?" und „Was erlebe ich gerade?"
                 </p>
-                <h3 className="font-heading text-xl font-semibold text-primary mb-6">
+                <h3 className="font-heading text-2xl font-semibold text-primary mb-8">
                   Die drei Grundpfeiler der Gestalttherapie:
                 </h3>
-                <ul className="space-y-5 text-muted-foreground">
-                  <li className="flex items-start gap-4 p-4 bg-primary/5 rounded-lg">
-                    <span className="text-teal-primary font-bold text-lg whitespace-nowrap">Gewahrsein</span> 
-                    <span className="text-base leading-relaxed">Spüren statt Denken – Körper und Gefühle bewusst wahrnehmen und im Moment verankert sein.</span>
-                  </li>
-                  <li className="flex items-start gap-4 p-4 bg-primary/5 rounded-lg">
-                    <span className="text-teal-primary font-bold text-lg whitespace-nowrap">Ganzheitlichkeit</span> 
-                    <span className="text-base leading-relaxed">Körper, Seele, Geist und Umfeld als untrennbare Einheit betrachten und verstehen.</span>
-                  </li>
-                  <li className="flex items-start gap-4 p-4 bg-primary/5 rounded-lg">
-                    <span className="text-teal-primary font-bold text-lg whitespace-nowrap">Kontakt & Dialog</span> 
-                    <span className="text-base leading-relaxed">Echte Begegnung auf Augenhöhe – Heilung geschieht im authentischen Dialog.</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
+                <StaggerContainer className="space-y-5">
+                  <AnimatedItem>
+                    <div className="flex items-start gap-4 p-5 rounded-xl" style={{ backgroundColor: 'rgba(30, 95, 116, 0.06)' }}>
+                      <span className="text-primary font-bold text-lg whitespace-nowrap">Gewahrsein</span> 
+                      <span className="text-foreground/70 text-base leading-relaxed">Spüren statt Denken – Körper und Gefühle bewusst wahrnehmen und im Moment verankert sein.</span>
+                    </div>
+                  </AnimatedItem>
+                  <AnimatedItem>
+                    <div className="flex items-start gap-4 p-5 rounded-xl" style={{ backgroundColor: 'rgba(30, 95, 116, 0.06)' }}>
+                      <span className="text-primary font-bold text-lg whitespace-nowrap">Ganzheitlichkeit</span> 
+                      <span className="text-foreground/70 text-base leading-relaxed">Körper, Seele, Geist und Umfeld als untrennbare Einheit betrachten und verstehen.</span>
+                    </div>
+                  </AnimatedItem>
+                  <AnimatedItem>
+                    <div className="flex items-start gap-4 p-5 rounded-xl" style={{ backgroundColor: 'rgba(30, 95, 116, 0.06)' }}>
+                      <span className="text-primary font-bold text-lg whitespace-nowrap">Kontakt & Dialog</span> 
+                      <span className="text-foreground/70 text-base leading-relaxed">Echte Begegnung auf Augenhöhe – Heilung geschieht im authentischen Dialog.</span>
+                    </div>
+                  </AnimatedItem>
+                </StaggerContainer>
+              </motion.div>
+            </AnimatedSection>
           </div>
         </section>
 
@@ -216,130 +236,205 @@ const Gestalttherapie = () => {
           }
         />
 
-        {/* Image 2: Gestalt-Kontaktzyklus */}
-        <section className="py-20 bg-gray-light/30">
+        {/* Image 2: Gestalt-Kontaktzyklus - Warm paper background */}
+        <section className="py-24 md:py-32" style={{ backgroundColor: '#fdfbf7' }}>
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <img 
+            <AnimatedSection className="max-w-5xl mx-auto">
+              <motion.img 
                 src={gestaltKontaktzyklus} 
                 alt="Der Gestalt-Kontaktzyklus" 
-                className="w-full rounded-xl shadow-lg mb-10"
+                className="w-full rounded-xl mb-12"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                style={{ boxShadow: '0 10px 40px rgba(30, 95, 116, 0.1)' }}
               />
-              <div className="bg-card p-10 md:p-12 rounded-xl border border-border shadow-soft">
-                <h2 className="font-heading text-2xl md:text-3xl font-bold text-primary mb-6">
+              
+              {/* Gold connector line from image to cards */}
+              <div className="flex justify-center mb-8">
+                <div className="w-px h-12 bg-gradient-to-b from-accent to-accent/30" />
+              </div>
+              
+              <motion.div 
+                className="p-10 md:p-14 rounded-2xl"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                style={{ backgroundColor: '#f7f5f0' }}
+              >
+                <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-8">
                   Der Gestalt-Kontaktzyklus
                 </h2>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+                <p className="text-foreground/80 text-lg leading-loose mb-10">
                   Der Kontaktzyklus beschreibt den <strong className="text-primary">natürlichen Rhythmus</strong> von 
                   Bedürfnis und Handlung – ein kontinuierlicher Prozess, der in sechs Phasen verläuft:
                 </p>
-                <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <StaggerContainer className="grid md:grid-cols-2 gap-5 mb-10">
                   <div className="space-y-4">
-                    <div className="p-4 bg-primary/5 rounded-lg">
-                      <p className="text-muted-foreground"><span className="text-gold-accent font-semibold">1. Empfindung</span> <span className="text-sm text-muted-foreground/70">(Körper)</span><br/><span className="text-sm">Wahrnehmen eines inneren Bedürfnisses</span></p>
-                    </div>
-                    <div className="p-4 bg-primary/5 rounded-lg">
-                      <p className="text-muted-foreground"><span className="text-gold-accent font-semibold">2. Gewahrsein</span> <span className="text-sm text-muted-foreground/70">(Geist)</span><br/><span className="text-sm">Bewusstwerdung und Erkenntnis</span></p>
-                    </div>
-                    <div className="p-4 bg-primary/5 rounded-lg">
-                      <p className="text-muted-foreground"><span className="text-gold-accent font-semibold">3. Mobilisierung</span> <span className="text-sm text-muted-foreground/70">(Handlung)</span><br/><span className="text-sm">Energie und Motivation aufbauen</span></p>
-                    </div>
+                    <AnimatedItem>
+                      <div className="p-5 rounded-xl border-l-3 border-accent" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px' }}>
+                        <p className="text-foreground/80"><span className="text-accent font-semibold text-lg">1. Empfindung</span> <span className="text-sm text-foreground/50">(Körper)</span><br/><span className="text-sm text-foreground/70">Wahrnehmen eines inneren Bedürfnisses</span></p>
+                      </div>
+                    </AnimatedItem>
+                    <AnimatedItem>
+                      <div className="p-5 rounded-xl border-l-3 border-accent" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px' }}>
+                        <p className="text-foreground/80"><span className="text-accent font-semibold text-lg">2. Gewahrsein</span> <span className="text-sm text-foreground/50">(Geist)</span><br/><span className="text-sm text-foreground/70">Bewusstwerdung und Erkenntnis</span></p>
+                      </div>
+                    </AnimatedItem>
+                    <AnimatedItem>
+                      <div className="p-5 rounded-xl border-l-3 border-accent" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px' }}>
+                        <p className="text-foreground/80"><span className="text-accent font-semibold text-lg">3. Mobilisierung</span> <span className="text-sm text-foreground/50">(Handlung)</span><br/><span className="text-sm text-foreground/70">Energie und Motivation aufbauen</span></p>
+                      </div>
+                    </AnimatedItem>
                   </div>
                   <div className="space-y-4">
-                    <div className="p-4 bg-primary/5 rounded-lg">
-                      <p className="text-muted-foreground"><span className="text-gold-accent font-semibold">4. Kontakt</span><br/><span className="text-sm">Vollständiges Erleben im Moment</span></p>
-                    </div>
-                    <div className="p-4 bg-primary/5 rounded-lg">
-                      <p className="text-muted-foreground"><span className="text-gold-accent font-semibold">5. Integration</span> <span className="text-sm text-muted-foreground/70">(Verdauen)</span><br/><span className="text-sm">Verarbeitung und Einordnung</span></p>
-                    </div>
-                    <div className="p-4 bg-primary/5 rounded-lg">
-                      <p className="text-muted-foreground"><span className="text-gold-accent font-semibold">6. Rückzug</span> <span className="text-sm text-muted-foreground/70">(Ruhe)</span><br/><span className="text-sm">Regeneration und Neuorientierung</span></p>
-                    </div>
+                    <AnimatedItem>
+                      <div className="p-5 rounded-xl border-l-3 border-accent" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px' }}>
+                        <p className="text-foreground/80"><span className="text-accent font-semibold text-lg">4. Kontakt</span><br/><span className="text-sm text-foreground/70">Vollständiges Erleben im Moment</span></p>
+                      </div>
+                    </AnimatedItem>
+                    <AnimatedItem>
+                      <div className="p-5 rounded-xl border-l-3 border-accent" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px' }}>
+                        <p className="text-foreground/80"><span className="text-accent font-semibold text-lg">5. Integration</span> <span className="text-sm text-foreground/50">(Verdauen)</span><br/><span className="text-sm text-foreground/70">Verarbeitung und Einordnung</span></p>
+                      </div>
+                    </AnimatedItem>
+                    <AnimatedItem>
+                      <div className="p-5 rounded-xl border-l-3 border-accent" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px' }}>
+                        <p className="text-foreground/80"><span className="text-accent font-semibold text-lg">6. Rückzug</span> <span className="text-sm text-foreground/50">(Ruhe)</span><br/><span className="text-sm text-foreground/70">Regeneration und Neuorientierung</span></p>
+                      </div>
+                    </AnimatedItem>
                   </div>
-                </div>
-                <div className="p-6 bg-teal-primary/10 rounded-lg border-l-4 border-teal-primary">
-                  <p className="text-muted-foreground leading-relaxed">
-                    <strong className="text-teal-primary">Unterbrechungen</strong> dieses Zyklus – wie Deflektionen, 
+                </StaggerContainer>
+                <motion.div 
+                  className="p-6 rounded-xl border-l-4 border-primary"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  style={{ backgroundColor: 'rgba(30, 95, 116, 0.08)' }}
+                >
+                  <p className="text-foreground/80 leading-relaxed">
+                    <strong className="text-primary">Unterbrechungen</strong> dieses Zyklus – wie Deflektionen, 
                     Projektionen oder Introjektionen – können zu psychischen Beschwerden führen. In der Therapie 
-                    arbeiten wir daran, diese zu erkennen und <strong className="text-teal-primary">neue Verhaltensweisen 
+                    arbeiten wir daran, diese zu erkennen und <strong className="text-primary">neue Verhaltensweisen 
                     in einem sicheren Raum auszuprobieren</strong>.
                   </p>
-                </div>
-              </div>
-            </div>
+                </motion.div>
+              </motion.div>
+            </AnimatedSection>
           </div>
         </section>
 
-        {/* Image 3: Ressourcen & Unterstützung */}
-        <section className="py-20">
+        {/* Image 3: Ressourcen & Unterstützung - Warm paper background */}
+        <section className="py-24 md:py-32 bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <img 
+            <AnimatedSection className="max-w-5xl mx-auto">
+              <motion.img 
                 src={ressourcenUnterstuetzung} 
                 alt="Ressourcen und Unterstützung für den Prozess" 
-                className="w-full rounded-xl shadow-lg mb-10"
+                className="w-full rounded-xl mb-8"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                style={{ boxShadow: '0 10px 40px rgba(30, 95, 116, 0.1)' }}
               />
-              <div className="bg-card p-10 md:p-12 rounded-xl border border-border shadow-soft">
-                <h2 className="font-heading text-2xl md:text-3xl font-bold text-primary mb-6">
+              
+              {/* Gold connector with arrow */}
+              <div className="flex flex-col items-center mb-8">
+                <div className="w-px h-8 bg-gradient-to-b from-accent to-accent/50" />
+                <div className="w-3 h-3 border-b-2 border-r-2 border-accent rotate-45 -mt-1" />
+              </div>
+              
+              <motion.div 
+                className="p-10 md:p-14 rounded-2xl"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                style={{ backgroundColor: '#f7f5f0' }}
+              >
+                <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-8">
                   Ressourcen & Unterstützung für Ihren Weg
                 </h2>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+                <p className="text-foreground/80 text-lg leading-loose mb-10">
                   Im therapeutischen Prozess nutzen wir verschiedene <strong className="text-primary">Ressourcen zur Stabilisierung</strong> – 
                   diese bilden das Fundament für nachhaltige Veränderung:
                 </p>
-                <div className="grid md:grid-cols-3 gap-8">
-                  <div className="text-center p-6 bg-primary/5 rounded-xl border border-border/50 hover:shadow-md transition-shadow">
-                    <div className="w-12 h-12 bg-teal-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-teal-primary text-xl">🤝</span>
+                <StaggerContainer className="grid md:grid-cols-3 gap-6">
+                  <AnimatedItem>
+                    <div className="text-center p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)' }}>
+                      <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5" style={{ backgroundColor: 'rgba(197, 160, 101, 0.15)' }}>
+                        <Hand className="w-7 h-7 text-accent" />
+                      </div>
+                      <h3 className="font-heading font-bold text-primary mb-4 text-xl">Äußere Stützen</h3>
+                      <p className="text-foreground/70 leading-relaxed text-sm">
+                        Die therapeutische Beziehung – geprägt von Vertrauen und Empathie – sowie 
+                        Familie und Gruppen bilden ein stabiles Netzwerk für Ihren Weg.
+                      </p>
                     </div>
-                    <h3 className="font-heading font-bold text-teal-primary mb-3 text-lg">Äußere Stützen</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Die therapeutische Beziehung – geprägt von Vertrauen und Empathie – sowie 
-                      Familie und Gruppen bilden ein stabiles Netzwerk für Ihren Weg.
-                    </p>
-                  </div>
-                  <div className="text-center p-6 bg-primary/5 rounded-xl border border-border/50 hover:shadow-md transition-shadow">
-                    <div className="w-12 h-12 bg-gold-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-gold-accent text-xl">💫</span>
+                  </AnimatedItem>
+                  <AnimatedItem>
+                    <div className="text-center p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)' }}>
+                      <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5" style={{ backgroundColor: 'rgba(197, 160, 101, 0.15)' }}>
+                        <Brain className="w-7 h-7 text-accent" />
+                      </div>
+                      <h3 className="font-heading font-bold text-primary mb-4 text-xl">Innere Ressourcen</h3>
+                      <p className="text-foreground/70 leading-relaxed text-sm">
+                        Körperliches Spüren, Zentrierung und Resilienz – die Verbindung von 
+                        Herz und Verstand für innere Stabilität und Selbstvertrauen.
+                      </p>
                     </div>
-                    <h3 className="font-heading font-bold text-gold-accent mb-3 text-lg">Innere Ressourcen</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Körperliches Spüren, Zentrierung und Resilienz – die Verbindung von 
-                      Herz und Verstand für innere Stabilität und Selbstvertrauen.
-                    </p>
-                  </div>
-                  <div className="text-center p-6 bg-primary/5 rounded-xl border border-border/50 hover:shadow-md transition-shadow">
-                    <div className="w-12 h-12 bg-teal-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-teal-primary text-xl">🎨</span>
+                  </AnimatedItem>
+                  <AnimatedItem>
+                    <div className="text-center p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)' }}>
+                      <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5" style={{ backgroundColor: 'rgba(197, 160, 101, 0.15)' }}>
+                        <Palette className="w-7 h-7 text-accent" />
+                      </div>
+                      <h3 className="font-heading font-bold text-primary mb-4 text-xl">Kreative Ausdrucksformen</h3>
+                      <p className="text-foreground/70 leading-relaxed text-sm">
+                        Malen, Schreiben, Bewegung und Musik – kreative Methoden öffnen 
+                        neue Wege zur Verarbeitung und zum authentischen Selbstausdruck.
+                      </p>
                     </div>
-                    <h3 className="font-heading font-bold text-teal-primary mb-3 text-lg">Kreative Ausdrucksformen</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Malen, Schreiben, Bewegung und Musik – kreative Methoden öffnen 
-                      neue Wege zur Verarbeitung und zum authentischen Selbstausdruck.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  </AnimatedItem>
+                </StaggerContainer>
+              </motion.div>
+            </AnimatedSection>
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="py-16 bg-gradient-teal text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="font-heading text-3xl font-bold mb-4">
-              Neugierig geworden?
-            </h2>
-            <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-              Vereinbaren Sie ein unverbindliches Erstgespräch und erfahren Sie, 
-              wie Gestalttherapie Ihnen helfen kann.
-            </p>
-            <a 
-              href="/#kontakt"
-              className="inline-block bg-gold-accent text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gold-accent/90 transition-colors"
-            >
-              Kontakt aufnehmen
-            </a>
+        {/* CTA with organic gradient */}
+        <section className="py-20 md:py-24 text-white relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #1e5f74 0%, #2a7a8f 50%, #1e5f74 100%)' }}>
+          {/* Organic gradient blob */}
+          <div 
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-20 blur-3xl"
+            style={{ 
+              background: 'radial-gradient(circle, rgba(42, 157, 178, 0.6) 0%, transparent 70%)',
+              animation: 'breathe 8s ease-in-out infinite'
+            }}
+          />
+          
+          <div className="container mx-auto px-4 text-center relative z-10">
+            <AnimatedSection>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
+                Neugierig geworden?
+              </h2>
+              <p className="text-white/80 mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
+                Vereinbaren Sie ein unverbindliches Erstgespräch und erfahren Sie, 
+                wie Gestalttherapie Ihnen helfen kann.
+              </p>
+              <motion.a 
+                href="/#kontakt"
+                className="inline-block bg-accent text-primary px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-xl"
+                whileHover={{ y: -3, boxShadow: '0 20px 40px rgba(197, 160, 101, 0.3)' }}
+                style={{ boxShadow: '0 10px 30px rgba(197, 160, 101, 0.2)' }}
+              >
+                Kontakt aufnehmen
+              </motion.a>
+            </AnimatedSection>
           </div>
         </section>
       </main>
