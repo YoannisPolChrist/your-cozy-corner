@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Brain, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import johannesPortrait from "@/assets/johannes-portrait.png";
 
 const painPoints = [
@@ -217,26 +218,53 @@ const Index = () => {
           </div>
         </AnimatedSection>
 
-        {/* About Preview - Split Layout with Diagonal */}
-        <AnimatedSection className="py-28 md:py-36 bg-background overflow-hidden">
+        {/* About Preview - Editorial Layout */}
+        <AnimatedSection className="py-28 md:py-40 bg-[#fafafa] overflow-hidden">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-0 items-stretch min-h-[550px]">
-              {/* Left Side - Text */}
-              <StaggerContainer className="flex flex-col justify-center pr-8 md:pr-20 py-16">
+            <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center max-w-6xl mx-auto">
+              {/* Left Side - Image with Gold Frame Effect */}
+              <StaggerContainer className="relative order-2 md:order-1">
+                <AnimatedItem>
+                  <div className="relative">
+                    {/* Gold background block - offset */}
+                    <motion.div 
+                      className="absolute -bottom-5 -right-5 w-full h-full bg-accent rounded-2xl"
+                      initial={{ opacity: 0, x: -20, y: -20 }}
+                      whileInView={{ opacity: 1, x: 0, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+                    />
+                    {/* Main image */}
+                    <img 
+                      src={johannesPortrait} 
+                      alt="Johannes Christ - Gestalttherapeut und Coach"
+                      className="relative z-10 w-full aspect-[4/5] object-cover object-center rounded-2xl shadow-xl"
+                    />
+                  </div>
+                </AnimatedItem>
+              </StaggerContainer>
+              
+              {/* Right Side - Text */}
+              <StaggerContainer className="order-1 md:order-2">
+                <AnimatedItem>
+                  <span className="text-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">
+                    Ihr Begleiter
+                  </span>
+                </AnimatedItem>
                 <AnimatedItem>
                   <h2 className="font-heading text-4xl md:text-5xl mb-8 text-primary">
                     Über mich
                   </h2>
                 </AnimatedItem>
                 <AnimatedItem>
-                  <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+                  <p className="text-muted-foreground text-lg mb-6 leading-loose">
                     Ich bin Johannes Christ, Gestalttherapeut, Coach und Psychologe (M.Sc.). 
                     Meine Arbeit basiert auf der Überzeugung, dass echte Veränderung entsteht, 
                     wenn wir die Verbindung zwischen unseren Gedanken, Gefühlen und unserem Körper verstehen.
                   </p>
                 </AnimatedItem>
                 <AnimatedItem>
-                  <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
+                  <p className="text-muted-foreground text-lg mb-10 leading-loose">
                     Mit langjähriger Erfahrung in Gestalttherapie und Coaching begleite ich Sie 
                     auf dem Weg zu mehr Klarheit, Wohlbefinden und Erfüllung.
                   </p>
@@ -245,29 +273,16 @@ const Index = () => {
                   <Link 
                     to="/ueber-mich" 
                     onClick={scrollToTop}
-                    className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors group"
+                    className="inline-flex items-center text-primary font-semibold text-lg group relative"
                   >
-                    Mehr über mich erfahren 
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    <span className="relative">
+                      Mehr zu meiner Person
+                      <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300" />
+                    </span>
+                    <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-2" />
                   </Link>
                 </AnimatedItem>
               </StaggerContainer>
-              
-              {/* Right Side - Image with Diagonal Clip */}
-              <div className="relative h-full min-h-[450px] md:min-h-[550px]">
-                {/* Diagonal overlay */}
-                <div 
-                  className="absolute inset-0 bg-background z-10"
-                  style={{
-                    clipPath: 'polygon(0 0, 15% 0, 0 100%, 0 100%)'
-                  }}
-                />
-                <img 
-                  src={johannesPortrait} 
-                  alt="Johannes Christ - Gestalttherapeut und Coach"
-                  className="absolute inset-0 w-full h-full object-cover object-center"
-                />
-              </div>
             </div>
           </div>
         </AnimatedSection>
