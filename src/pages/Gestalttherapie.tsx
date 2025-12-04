@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import gestalttherapieIntro from "@/assets/gestalttherapie-intro.png";
 import gestaltKontaktzyklus from "@/assets/gestalt-kontaktzyklus.png";
 import ressourcenUnterstuetzung from "@/assets/ressourcen-unterstuetzung.png";
@@ -18,6 +19,7 @@ interface VideoSectionProps {
 const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center' }: VideoSectionProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +32,10 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
           (viewportHeight - rect.top) / (viewportHeight + sectionHeight)
         ));
         setScrollProgress(progress);
+        
+        // Set visibility for Framer Motion
+        const shouldBeVisible = progress > 0.15 && progress < 0.70;
+        setIsVisible(shouldBeVisible);
       }
     };
 
@@ -38,20 +44,11 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const getBoxOpacity = () => {
-    if (scrollProgress < 0.15) return 0;
-    if (scrollProgress < 0.20) return (scrollProgress - 0.15) / 0.05;
-    if (scrollProgress < 0.65) return 1;
-    if (scrollProgress < 0.70) return 1 - (scrollProgress - 0.65) / 0.05;
-    return 0;
-  };
-
-  const boxOpacity = getBoxOpacity();
-
+  // Position classes - offset from center to not cover video content
   const positionClasses = {
-    left: 'justify-start pl-8 md:pl-16',
-    center: 'justify-center',
-    right: 'justify-end pr-8 md:pr-16'
+    left: 'items-end justify-start pl-6 md:pl-12 lg:pl-20 pb-20 md:pb-24',
+    center: 'items-end justify-center pb-16 md:pb-20',
+    right: 'items-end justify-end pr-6 md:pr-12 lg:pr-20 pb-20 md:pb-24'
   };
 
   return (
@@ -71,24 +68,43 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
           <source src={videoSrc} type="video/mp4" />
         </video>
         
-        <div className="absolute inset-0 bg-primary/10" />
+        {/* Subtle overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
         
-        <div 
-          className={`absolute inset-0 flex items-center ${positionClasses[position]} p-4`}
-          style={{ 
-            opacity: boxOpacity,
-            transform: `translateY(${(1 - boxOpacity) * 20}px)`,
-            transition: 'transform 0.1s ease-out'
-          }}
-        >
-          <div className="bg-card/90 backdrop-blur-sm p-8 md:p-10 rounded-xl shadow-lg max-w-lg border border-gold-accent/20">
-            <h2 className="font-heading text-2xl md:text-3xl font-bold text-primary mb-4 text-center">
-              {title}
-            </h2>
-            <div className="text-muted-foreground text-base md:text-lg">
-              {content}
+        <div className={`absolute inset-0 flex ${positionClasses[position]} p-4`}>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ 
+              opacity: isVisible ? 1 : 0, 
+              y: isVisible ? 0 : 30 
+            }}
+            transition={{ 
+              duration: 0.8, 
+              ease: [0.25, 0.1, 0.25, 1]
+            }}
+            className="max-w-md lg:max-w-lg"
+          >
+            {/* Glassmorphism Card */}
+            <div 
+              className="p-8 md:p-10 rounded-2xl shadow-2xl border border-white/20"
+              style={{
+                background: 'rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(16px)',
+                WebkitBackdropFilter: 'blur(16px)',
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1) inset'
+              }}
+            >
+              <h2 
+                className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-5 text-center"
+                style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}
+              >
+                {title}
+              </h2>
+              <div className="text-white/90 text-base md:text-lg leading-relaxed">
+                {content}
+              </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
@@ -151,11 +167,11 @@ const Gestalttherapie = () => {
           position="right"
           content={
             <>
-              <p className="mb-2">
-                Eine <strong className="text-gold-accent">offene Gestalt</strong> ist ein unvollendetes Erlebnis – 
+              <p className="mb-3">
+                Eine <strong className="text-accent font-semibold">offene Gestalt</strong> ist ein unvollendetes Erlebnis – 
                 ein ungelöster Konflikt oder unterdrücktes Gefühl.
               </p>
-              <p className="text-teal-primary font-medium text-center mt-3">
+              <p className="text-white font-medium text-center mt-4 text-sm md:text-base opacity-90">
                 In der Therapie schließen wir diese Gestalten.
               </p>
             </>
@@ -170,11 +186,11 @@ const Gestalttherapie = () => {
           position="left"
           content={
             <>
-              <p className="mb-2">
-                <strong className="text-gold-accent">Kontaktunterbrechungen</strong> sind Schutzmechanismen, 
+              <p className="mb-3">
+                <strong className="text-accent font-semibold">Kontaktunterbrechungen</strong> sind Schutzmechanismen, 
                 die uns einst geholfen haben, aber heute hindern.
               </p>
-              <p className="text-teal-primary font-medium text-center mt-3">
+              <p className="text-white font-medium text-center mt-4 text-sm md:text-base opacity-90">
                 Wir lernen, sie zu erkennen und zu lösen.
               </p>
             </>
@@ -189,11 +205,11 @@ const Gestalttherapie = () => {
           position="center"
           content={
             <>
-              <p className="mb-2">
-                Das <strong className="text-gold-accent">Hier und Jetzt</strong> ist der einzige Moment, 
+              <p className="mb-3">
+                Das <strong className="text-accent font-semibold">Hier und Jetzt</strong> ist der einzige Moment, 
                 in dem echte Veränderung möglich ist.
               </p>
-              <p className="text-teal-primary font-medium text-center mt-3">
+              <p className="text-white font-medium text-center mt-4 text-sm md:text-base opacity-90">
                 Präsenz als Schlüssel zur Heilung.
               </p>
             </>
