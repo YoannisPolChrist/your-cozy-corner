@@ -1,6 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
-import { AnimatedSection } from "@/components/AnimatedSection";
+import { AnimatedSection, StaggerContainer, AnimatedItem } from "@/components/AnimatedSection";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Brain, Lightbulb } from "lucide-react";
@@ -52,7 +52,7 @@ const Index = () => {
         <Hero />
 
         {/* Pain Points Section - Empathetic Narrative */}
-        <AnimatedSection className="py-24 relative overflow-hidden" animation="fade-up">
+        <AnimatedSection className="py-28 md:py-36 relative overflow-hidden">
           {/* Subtle topographical background */}
           <div 
             className="absolute inset-0 opacity-[0.03]"
@@ -62,8 +62,8 @@ const Index = () => {
             }}
           />
           <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="font-heading text-[2.2rem] md:text-[2.7rem] mb-5 text-primary leading-tight">
+            <div className="text-center mb-20">
+              <h2 className="font-heading text-[2.2rem] md:text-[2.7rem] mb-6 text-primary leading-tight">
                 Wenn der innere Kompass stillsteht
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto italic">
@@ -71,30 +71,30 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-x-16 gap-y-12 max-w-4xl mx-auto">
+            <StaggerContainer className="grid md:grid-cols-2 gap-x-20 gap-y-16 max-w-4xl mx-auto">
               {painPoints.map((point, index) => (
-                <div
+                <AnimatedItem
                   key={index}
                   className={`relative pl-8 ${index === 2 ? 'md:col-span-2 md:max-w-lg md:mx-auto' : ''}`}
                 >
                   <div className="absolute left-0 top-1 w-1 h-full bg-gradient-to-b from-primary/30 to-transparent rounded-full" />
-                  <h3 className="font-heading text-xl mb-3 text-primary">
+                  <h3 className="font-heading text-xl mb-4 text-primary">
                     {point.title}
                   </h3>
                   <p className="text-muted-foreground text-lg leading-relaxed">
                     {point.description}
                   </p>
-                </div>
+                </AnimatedItem>
               ))}
-            </div>
+            </StaggerContainer>
           </div>
         </AnimatedSection>
 
         {/* Services Section - High-End Cards */}
-        <AnimatedSection className="py-24 bg-secondary/30" animation="fade-up">
+        <AnimatedSection className="py-28 md:py-36 bg-secondary/30">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-14">
-              <h2 className="font-heading text-[2.2rem] md:text-[2.7rem] mb-4 text-accent">
+            <div className="text-center mb-20">
+              <h2 className="font-heading text-[2.2rem] md:text-[2.7rem] mb-5 text-accent">
                 Mein Angebot
               </h2>
               <p className="text-muted-foreground text-lg">
@@ -102,33 +102,32 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-14">
+            <StaggerContainer className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto mb-16">
               {services.map((service, index) => {
                 const Icon = service.icon;
                 return (
-                  <Card
-                    key={index}
-                    className="p-8 bg-[#fdfbf7] border border-accent/20 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 group relative overflow-hidden"
-                  >
-                    {/* Bottom border highlight on hover */}
-                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                    
-                    <div className="mb-5 flex justify-center">
-                      <Icon 
-                        className="w-10 h-10 text-accent group-hover:text-primary transition-colors duration-300" 
-                        strokeWidth={1.5} 
-                      />
-                    </div>
-                    <h3 className="font-heading text-xl mb-3 text-primary">
-                      {service.title}
-                    </h3>
-                    <p className="text-muted-foreground">
-                      {service.description}
-                    </p>
-                  </Card>
+                  <AnimatedItem key={index}>
+                    <Card className="p-10 bg-[#fdfbf7] border border-accent/20 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group relative overflow-hidden h-full">
+                      {/* Bottom border highlight on hover */}
+                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                      
+                      <div className="mb-6 flex justify-center">
+                        <Icon 
+                          className="w-12 h-12 text-accent group-hover:text-primary transition-colors duration-300" 
+                          strokeWidth={1.5} 
+                        />
+                      </div>
+                      <h3 className="font-heading text-xl mb-4 text-primary">
+                        {service.title}
+                      </h3>
+                      <p className="text-muted-foreground">
+                        {service.description}
+                      </p>
+                    </Card>
+                  </AnimatedItem>
                 );
               })}
-            </div>
+            </StaggerContainer>
 
             <div className="text-center">
               <Link to="/angebot" onClick={scrollToTop}>
@@ -141,18 +140,18 @@ const Index = () => {
         </AnimatedSection>
 
         {/* Gestalttherapie Creative Link */}
-        <AnimatedSection className="py-20 bg-primary" animation="fade-up">
+        <AnimatedSection className="py-28 md:py-36 bg-primary">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                  <span className="text-gold-accent text-sm uppercase tracking-wider mb-4 block">
+              <StaggerContainer className="grid md:grid-cols-2 gap-16 items-center">
+                <AnimatedItem>
+                  <span className="text-gold-accent text-sm uppercase tracking-wider mb-5 block">
                     Mein therapeutischer Ansatz
                   </span>
-                  <h2 className="font-heading text-3xl md:text-4xl text-white mb-6 leading-tight">
+                  <h2 className="font-heading text-3xl md:text-4xl text-white mb-8 leading-tight">
                     Was ist <span className="italic">Gestalttherapie?</span>
                   </h2>
-                  <p className="text-white/80 leading-relaxed mb-8">
+                  <p className="text-white/80 leading-relaxed mb-10">
                     Die Gestalttherapie ist ein humanistischer Therapieansatz, der sich auf das bewusste 
                     Erleben im Hier und Jetzt konzentriert. Statt nur über Probleme zu sprechen, 
                     erforschen wir gemeinsam, wie Sie Ihre Welt wahrnehmen und gestalten.
@@ -166,8 +165,8 @@ const Index = () => {
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Button>
                   </Link>
-                </div>
-                <div className="relative">
+                </AnimatedItem>
+                <AnimatedItem className="relative">
                   <div className="aspect-square bg-white/5 rounded-full flex items-center justify-center border border-white/10">
                     <div className="text-center p-8">
                       <div className="font-heading text-6xl text-gold-accent mb-4 italic">
@@ -178,42 +177,50 @@ const Index = () => {
                       </p>
                     </div>
                   </div>
-                </div>
-              </div>
+                </AnimatedItem>
+              </StaggerContainer>
             </div>
           </div>
         </AnimatedSection>
 
         {/* About Preview - Split Layout with Diagonal */}
-        <AnimatedSection className="py-20 bg-background overflow-hidden" animation="fade-up" delay={100}>
+        <AnimatedSection className="py-28 md:py-36 bg-background overflow-hidden">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-0 items-stretch min-h-[500px]">
+            <div className="grid md:grid-cols-2 gap-0 items-stretch min-h-[550px]">
               {/* Left Side - Text */}
-              <div className="flex flex-col justify-center pr-8 md:pr-16 py-12">
-                <h2 className="font-heading text-4xl md:text-5xl mb-6 text-primary">
-                  Über mich
-                </h2>
-                <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                  Ich bin Johannes Christ, Gestalttherapeut, Coach und Psychologe (M.Sc.). 
-                  Meine Arbeit basiert auf der Überzeugung, dass echte Veränderung entsteht, 
-                  wenn wir die Verbindung zwischen unseren Gedanken, Gefühlen und unserem Körper verstehen.
-                </p>
-                <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                  Mit langjähriger Erfahrung in Gestalttherapie und Coaching begleite ich Sie 
-                  auf dem Weg zu mehr Klarheit, Wohlbefinden und Erfüllung.
-                </p>
-                <Link 
-                  to="/ueber-mich" 
-                  onClick={scrollToTop}
-                  className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors group"
-                >
-                  Mehr über mich erfahren 
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </div>
+              <StaggerContainer className="flex flex-col justify-center pr-8 md:pr-20 py-16">
+                <AnimatedItem>
+                  <h2 className="font-heading text-4xl md:text-5xl mb-8 text-primary">
+                    Über mich
+                  </h2>
+                </AnimatedItem>
+                <AnimatedItem>
+                  <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+                    Ich bin Johannes Christ, Gestalttherapeut, Coach und Psychologe (M.Sc.). 
+                    Meine Arbeit basiert auf der Überzeugung, dass echte Veränderung entsteht, 
+                    wenn wir die Verbindung zwischen unseren Gedanken, Gefühlen und unserem Körper verstehen.
+                  </p>
+                </AnimatedItem>
+                <AnimatedItem>
+                  <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
+                    Mit langjähriger Erfahrung in Gestalttherapie und Coaching begleite ich Sie 
+                    auf dem Weg zu mehr Klarheit, Wohlbefinden und Erfüllung.
+                  </p>
+                </AnimatedItem>
+                <AnimatedItem>
+                  <Link 
+                    to="/ueber-mich" 
+                    onClick={scrollToTop}
+                    className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors group"
+                  >
+                    Mehr über mich erfahren 
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </AnimatedItem>
+              </StaggerContainer>
               
               {/* Right Side - Image with Diagonal Clip */}
-              <div className="relative h-full min-h-[400px] md:min-h-[500px]">
+              <div className="relative h-full min-h-[450px] md:min-h-[550px]">
                 {/* Diagonal overlay */}
                 <div 
                   className="absolute inset-0 bg-background z-10"
@@ -232,27 +239,35 @@ const Index = () => {
         </AnimatedSection>
 
         {/* CTA Section */}
-        <AnimatedSection className="py-20 bg-gradient-teal text-white" animation="scale">
+        <AnimatedSection className="py-28 md:py-36 bg-gradient-teal text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="font-heading text-3xl md:text-4xl mb-6">
-              Bereit für den ersten Schritt?
-            </h2>
-            <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-              Vereinbaren Sie ein kostenloses Kennenlerngespräch und erfahren Sie, 
-              wie ich Sie auf Ihrem Weg unterstützen kann.
-            </p>
-            <Link to="/kontakt" onClick={scrollToTop}>
-              <Button size="lg" className="bg-gold-accent hover:bg-gold-accent/90 text-white font-semibold">
-                Kontakt aufnehmen <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
+            <StaggerContainer className="max-w-2xl mx-auto">
+              <AnimatedItem>
+                <h2 className="font-heading text-3xl md:text-4xl mb-8">
+                  Bereit für den ersten Schritt?
+                </h2>
+              </AnimatedItem>
+              <AnimatedItem>
+                <p className="text-white/80 text-lg mb-10">
+                  Vereinbaren Sie ein kostenloses Kennenlerngespräch und erfahren Sie, 
+                  wie ich Sie auf Ihrem Weg unterstützen kann.
+                </p>
+              </AnimatedItem>
+              <AnimatedItem>
+                <Link to="/kontakt" onClick={scrollToTop}>
+                  <Button size="lg" className="bg-gold-accent hover:bg-gold-accent/90 text-white font-semibold">
+                    Kontakt aufnehmen <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </AnimatedItem>
+            </StaggerContainer>
           </div>
         </AnimatedSection>
       </main>
 
-      <footer className="bg-primary text-white py-8">
+      <footer className="bg-primary text-white py-12">
         <div className="container mx-auto px-4 text-center">
-          <p className="mb-4">© {new Date().getFullYear()} Johannes Christ · Gestalttherapie & Coaching</p>
+          <p className="mb-5">© {new Date().getFullYear()} Johannes Christ · Gestalttherapie & Coaching</p>
           <div className="space-x-4 text-sm text-white/80">
             <a href="#" className="hover:text-gold-accent transition-colors">
               Datenschutzerklärung
