@@ -140,39 +140,73 @@ const Index = () => {
         </AnimatedSection>
 
         {/* Gestalttherapie Creative Link */}
-        <AnimatedSection className="py-28 md:py-36 bg-primary">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <StaggerContainer className="grid md:grid-cols-2 gap-16 items-center">
+        <AnimatedSection className="py-28 md:py-36 bg-primary relative overflow-hidden">
+          {/* Animated organic gradient background */}
+          <div 
+            className="absolute inset-0 opacity-30"
+            style={{
+              background: 'radial-gradient(ellipse at 30% 50%, hsl(190 80% 35% / 0.4) 0%, transparent 50%), radial-gradient(ellipse at 70% 30%, hsl(185 75% 40% / 0.3) 0%, transparent 45%)',
+              animation: 'gradientShift 12s ease-in-out infinite alternate'
+            }}
+          />
+          <style>{`
+            @keyframes gradientShift {
+              0% { transform: scale(1) translateX(0); }
+              100% { transform: scale(1.1) translateX(-3%); }
+            }
+            @keyframes breathe {
+              0%, 100% { transform: scale(1); }
+              50% { transform: scale(1.05); }
+            }
+          `}</style>
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-5xl mx-auto">
+              <StaggerContainer className="grid md:grid-cols-2 gap-16 lg:gap-20 items-center">
                 <AnimatedItem>
                   <span className="text-gold-accent text-sm uppercase tracking-wider mb-5 block">
                     Mein therapeutischer Ansatz
                   </span>
-                  <h2 className="font-heading text-3xl md:text-4xl text-white mb-8 leading-tight">
+                  <h2 className="font-heading text-4xl md:text-5xl text-white mb-8 leading-tight">
                     Was ist <span className="italic">Gestalttherapie?</span>
                   </h2>
-                  <p className="text-white/80 leading-relaxed mb-10">
+                  <p className="text-white/85 text-lg leading-loose mb-10">
                     Die Gestalttherapie ist ein humanistischer Therapieansatz, der sich auf das bewusste 
                     Erleben im Hier und Jetzt konzentriert. Statt nur über Probleme zu sprechen, 
                     erforschen wir gemeinsam, wie Sie Ihre Welt wahrnehmen und gestalten.
                   </p>
-                  <Link to="/gestalttherapie" onClick={scrollToTop}>
-                    <Button 
-                      variant="outline" 
-                      className="border-white/30 text-white hover:bg-white hover:text-primary font-medium group"
-                    >
-                      Mehr über Gestalttherapie
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Button>
+                  <Link 
+                    to="/gestalttherapie" 
+                    onClick={scrollToTop}
+                    className="inline-flex items-center text-gold-accent hover:text-gold-accent/80 font-medium text-lg group transition-colors duration-300"
+                  >
+                    Mehr über Gestalttherapie erfahren
+                    <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-2" />
                   </Link>
                 </AnimatedItem>
-                <AnimatedItem className="relative">
-                  <div className="aspect-square bg-white/5 rounded-full flex items-center justify-center border border-white/10">
-                    <div className="text-center p-8">
-                      <div className="font-heading text-6xl text-gold-accent mb-4 italic">
+                <AnimatedItem className="relative flex justify-center">
+                  {/* Organic Blob with Glassmorphism */}
+                  <div 
+                    className="relative w-72 h-72 md:w-80 md:h-80 flex items-center justify-center"
+                    style={{
+                      animation: 'breathe 6s ease-in-out infinite'
+                    }}
+                  >
+                    {/* Blob shape with glassmorphism */}
+                    <div 
+                      className="absolute inset-0 backdrop-blur-md border border-white/20"
+                      style={{
+                        background: 'rgba(255, 255, 255, 0.08)',
+                        borderRadius: '60% 40% 55% 45% / 55% 60% 40% 45%',
+                        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1), inset 0 0 60px rgba(255, 255, 255, 0.05)'
+                      }}
+                    />
+                    {/* Quote content */}
+                    <div className="relative z-10 text-center px-8">
+                      <div className="font-heading text-7xl text-gold-accent mb-2 leading-none" style={{ marginTop: '-10px' }}>
                         "
                       </div>
-                      <p className="text-white/90 text-lg italic leading-relaxed">
+                      <p className="text-white/95 text-lg italic leading-relaxed font-heading">
                         Sei ganz hier, ganz jetzt – der Rest folgt von selbst.
                       </p>
                     </div>
