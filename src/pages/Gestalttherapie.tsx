@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { AnimatedSection, AnimatedItem, StaggerContainer } from "@/components/AnimatedSection";
 import { Hand, Brain, Palette } from "lucide-react";
+import gestalttherapieIntro from "@/assets/gestalttherapie-intro.png";
 import gestaltKontaktzyklus from "@/assets/gestalt-kontaktzyklus.png";
 import ressourcenUnterstuetzung from "@/assets/ressourcen-unterstuetzung.png";
 import gestaltVideo from "@/assets/gestalt-video.mp4";
@@ -10,7 +11,6 @@ import gestaltVideo2 from "@/assets/gestalt-video-2.mp4";
 import gestaltVideo3 from "@/assets/gestalt-video-3.mp4";
 import { cinematicEase, viewportSettings } from "@/lib/animations";
 import { Footer } from "@/components/Footer";
-import { GestaltScrollTelling } from "@/components/GestaltScrollTelling";
 
 interface VideoSectionProps {
   videoSrc: string;
@@ -120,8 +120,66 @@ const Gestalttherapie = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-24">
-        {/* Scroll-Telling: Was ist Gestalttherapie? */}
-        <GestaltScrollTelling />
+        {/* Image 1: Gestalttherapie Intro - Warm paper background */}
+        <section className="py-24 md:py-32" style={{ backgroundColor: '#fdfbf7' }}>
+          <div className="container mx-auto px-4">
+            <AnimatedSection className="max-w-5xl mx-auto">
+              <motion.img 
+                src={gestalttherapieIntro} 
+                alt="Gestalttherapie - Humanistisches Erleben und Selbstentfaltung" 
+                className="w-full rounded-xl mb-12"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={viewportSettings}
+                transition={{ duration: 0.9, ease: cinematicEase }}
+                style={{ boxShadow: '0 10px 40px rgba(30, 95, 116, 0.1)' }}
+              />
+              <motion.div 
+                className="p-10 md:p-14 rounded-2xl"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={viewportSettings}
+                transition={{ duration: 0.9, delay: 0.15, ease: cinematicEase }}
+                style={{ backgroundColor: '#f7f5f0' }}
+              >
+                <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-8">
+                  Was ist Gestalttherapie?
+                </h2>
+                <p className="text-foreground/80 text-lg leading-loose mb-6">
+                  Die Gestalttherapie ist ein <strong className="text-primary">humanistischer Psychotherapieansatz</strong>, 
+                  der den Fokus auf das <strong className="text-accent">Hier und Jetzt</strong> legt – 
+                  im Gegensatz zur klassischen Analyse der Vergangenheit. 
+                </p>
+                <p className="text-foreground/70 text-lg leading-loose mb-10 italic border-l-4 border-accent pl-6">
+                  Anstatt zu fragen „Warum?" fragen wir „Wie?" und „Was erlebe ich gerade?"
+                </p>
+                <h3 className="font-heading text-2xl font-semibold text-primary mb-8">
+                  Die drei Grundpfeiler der Gestalttherapie:
+                </h3>
+                <StaggerContainer className="space-y-5">
+                  <AnimatedItem>
+                    <div className="flex items-start gap-4 p-5 rounded-xl" style={{ backgroundColor: 'rgba(30, 95, 116, 0.06)' }}>
+                      <span className="text-primary font-bold text-lg whitespace-nowrap">Gewahrsein</span> 
+                      <span className="text-foreground/70 text-base leading-relaxed">Spüren statt Denken – Körper und Gefühle bewusst wahrnehmen und im Moment verankert sein.</span>
+                    </div>
+                  </AnimatedItem>
+                  <AnimatedItem>
+                    <div className="flex items-start gap-4 p-5 rounded-xl" style={{ backgroundColor: 'rgba(30, 95, 116, 0.06)' }}>
+                      <span className="text-primary font-bold text-lg whitespace-nowrap">Ganzheitlichkeit</span> 
+                      <span className="text-foreground/70 text-base leading-relaxed">Körper, Seele, Geist und Umfeld als untrennbare Einheit betrachten und verstehen.</span>
+                    </div>
+                  </AnimatedItem>
+                  <AnimatedItem>
+                    <div className="flex items-start gap-4 p-5 rounded-xl" style={{ backgroundColor: 'rgba(30, 95, 116, 0.06)' }}>
+                      <span className="text-primary font-bold text-lg whitespace-nowrap">Kontakt & Dialog</span> 
+                      <span className="text-foreground/70 text-base leading-relaxed">Echte Begegnung auf Augenhöhe – Heilung geschieht im authentischen Dialog.</span>
+                    </div>
+                  </AnimatedItem>
+                </StaggerContainer>
+              </motion.div>
+            </AnimatedSection>
+          </div>
+        </section>
 
         {/* Video 1: Offene Gestalt */}
         <VideoSection

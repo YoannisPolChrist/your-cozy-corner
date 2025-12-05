@@ -98,8 +98,8 @@ const UeberMich = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-                {/* Text Content - Left aligned */}
-                <motion.div variants={staggerContainer} className="space-y-6 order-2 md:order-1 text-left">
+                {/* Text Content */}
+                <motion.div variants={staggerContainer} className="space-y-6 order-2 md:order-1">
                   <motion.span 
                     variants={fadeUp}
                     className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
@@ -108,13 +108,13 @@ const UeberMich = () => {
                   </motion.span>
                   <motion.h2 
                     variants={fadeUp}
-                    className="font-heading text-[calc(1.875rem+3px)] md:text-[calc(2.25rem+3px)] text-white leading-tight text-left"
+                    className="font-heading text-[calc(1.875rem+3px)] md:text-[calc(2.25rem+3px)] text-white leading-tight"
                   >
                     Raum für das, was ist.
                   </motion.h2>
                   <motion.div 
                     variants={fadeUp}
-                    className="space-y-4 text-white/90 leading-relaxed text-left"
+                    className="space-y-4 text-white/90 leading-relaxed"
                   >
                     <p>
                       In über 40 intensiven Einzelprozessen durfte ich erleben, was passiert, wenn wir dem 
@@ -126,29 +126,29 @@ const UeberMich = () => {
                     </p>
                   </motion.div>
                   
-                  {/* Gold Icons - Left aligned, larger */}
+                  {/* Gold Icons with Staggered Animation */}
                   <motion.div 
                     variants={iconStagger} 
                     initial="hidden" 
                     whileInView="visible" 
                     viewport={{ once: true }}
-                    className="flex flex-wrap gap-8 pt-6"
+                    className="grid grid-cols-3 gap-6 pt-6"
                   >
-                    <motion.div variants={iconItem} className="flex items-center gap-3">
-                      <div className="w-16 h-16 rounded-full border border-[#c5a065]/40 flex items-center justify-center">
-                        <Heart className="w-8 h-8 text-[#c5a065]" strokeWidth={1.5} />
+                    <motion.div variants={iconItem} className="text-center">
+                      <div className="w-14 h-14 mx-auto mb-3 rounded-full border border-[#c5a065]/30 flex items-center justify-center">
+                        <Heart className="w-6 h-6 text-[#c5a065]" strokeWidth={1.5} />
                       </div>
                       <span className="text-sm font-medium text-white">Körper</span>
                     </motion.div>
-                    <motion.div variants={iconItem} className="flex items-center gap-3">
-                      <div className="w-16 h-16 rounded-full border border-[#c5a065]/40 flex items-center justify-center">
-                        <Brain className="w-8 h-8 text-[#c5a065]" strokeWidth={1.5} />
+                    <motion.div variants={iconItem} className="text-center">
+                      <div className="w-14 h-14 mx-auto mb-3 rounded-full border border-[#c5a065]/30 flex items-center justify-center">
+                        <Brain className="w-6 h-6 text-[#c5a065]" strokeWidth={1.5} />
                       </div>
                       <span className="text-sm font-medium text-white">Psyche</span>
                     </motion.div>
-                    <motion.div variants={iconItem} className="flex items-center gap-3">
-                      <div className="w-16 h-16 rounded-full border border-[#c5a065]/40 flex items-center justify-center">
-                        <MessageCircle className="w-8 h-8 text-[#c5a065]" strokeWidth={1.5} />
+                    <motion.div variants={iconItem} className="text-center">
+                      <div className="w-14 h-14 mx-auto mb-3 rounded-full border border-[#c5a065]/30 flex items-center justify-center">
+                        <MessageCircle className="w-6 h-6 text-[#c5a065]" strokeWidth={1.5} />
                       </div>
                       <span className="text-sm font-medium text-white">Resonanz</span>
                     </motion.div>
@@ -179,7 +179,7 @@ const UeberMich = () => {
           </div>
         </motion.section>
 
-        {/* Section 3: Personal - Off-White Background (Image Left / Text Right) */}
+        {/* Section 3: Personal - Off-White Background */}
         <motion.section 
           initial="hidden" 
           whileInView="visible" 
@@ -188,19 +188,26 @@ const UeberMich = () => {
           className="py-32 bg-[#f9f9f7]"
         >
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-                {/* Image with Gold Frame - Left Side */}
-                <motion.div className="relative">
-                  {/* Gold Frame - Slides out from behind with delay */}
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center space-y-8">
+                <motion.h2 
+                  variants={fadeUp}
+                  className="font-heading text-[calc(1.875rem+3px)] md:text-[calc(2.25rem+3px)] text-primary"
+                >
+                  Und sonst so?
+                </motion.h2>
+                
+                {/* Circular Image with Gold Frame - Cinematic Parallax */}
+                <motion.div className="relative mx-auto w-48 h-48 md:w-64 md:h-64">
+                  {/* Gold Frame - Slides out with delay */}
                   <motion.div 
                     variants={goldFrameVariants}
-                    className="absolute bottom-[10px] right-[10px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-2xl" 
+                    className="absolute bottom-[10px] right-[10px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-full" 
                   />
-                  {/* Main Image - Portrait Rectangle */}
+                  {/* Main Image */}
                   <motion.div 
                     variants={imageVariants}
-                    className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl"
+                    className="relative w-full h-full rounded-full overflow-hidden shadow-xl"
                   >
                     <img 
                       src={johannesLaughing} 
@@ -210,35 +217,20 @@ const UeberMich = () => {
                   </motion.div>
                 </motion.div>
 
-                {/* Text Content - Right Side */}
-                <motion.div variants={staggerContainer} className="space-y-6">
-                  <motion.span 
-                    variants={fadeUp}
-                    className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
-                  >
-                    PERSÖNLICH
-                  </motion.span>
-                  <motion.h2 
-                    variants={fadeUp}
-                    className="font-heading text-[calc(1.875rem+3px)] md:text-[calc(2.25rem+3px)] text-primary leading-tight"
-                  >
-                    Und sonst so?
-                  </motion.h2>
-                  <motion.div 
-                    variants={fadeUp}
-                    className="space-y-4 text-muted-foreground leading-relaxed"
-                  >
-                    <p>
-                      Wer mich kennt, weiß: Ich nehme meine Arbeit ernst, aber mich selbst nicht zu sehr. 
-                      Ich glaube an die Kraft von Humor, Leichtigkeit und echten Begegnungen.
-                    </p>
-                    <p>
-                      Abseits der Therapie findest du mich beim Wandern in den Bergen, beim Kochen mit 
-                      Freunden oder versunken in ein gutes Buch. Ich bin überzeugt, dass ein erfülltes 
-                      Leben aus vielen kleinen Momenten der Verbundenheit besteht – mit uns selbst und 
-                      mit anderen.
-                    </p>
-                  </motion.div>
+                <motion.div 
+                  variants={fadeUp}
+                  className="max-w-2xl mx-auto space-y-4 text-muted-foreground leading-relaxed"
+                >
+                  <p>
+                    Wer mich kennt, weiß: Ich nehme meine Arbeit ernst, aber mich selbst nicht zu sehr. 
+                    Ich glaube an die Kraft von Humor, Leichtigkeit und echten Begegnungen.
+                  </p>
+                  <p>
+                    Abseits der Therapie findest du mich beim Wandern in den Bergen, beim Kochen mit 
+                    Freunden oder versunken in ein gutes Buch. Ich bin überzeugt, dass ein erfülltes 
+                    Leben aus vielen kleinen Momenten der Verbundenheit besteht – mit uns selbst und 
+                    mit anderen.
+                  </p>
                 </motion.div>
               </div>
             </div>
