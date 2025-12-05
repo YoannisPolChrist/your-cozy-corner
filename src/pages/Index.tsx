@@ -259,7 +259,7 @@ const Index = () => {
                 </AnimatedItem>
                 <AnimatedItem>
                   <p className="text-muted-foreground text-lg mb-6 leading-loose">
-                    Ich bin Johannes Christ, Gestalttherapeut, Coach und Psychologe (M.Sc.). 
+                    Ich bin Johannes Christ, Gestalttherapeut, Coach und M.Sc. Psychologie (i.A.). 
                     Meine Arbeit basiert auf der Überzeugung, dass echte Veränderung entsteht, 
                     wenn wir die Verbindung zwischen unseren Gedanken, Gefühlen und unserem Körper verstehen.
                   </p>
