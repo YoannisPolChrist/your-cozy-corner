@@ -4,7 +4,7 @@ import gestalttherapieIntro from "@/assets/gestalttherapie-intro.png";
 
 export const GestaltScrollTelling = () => {
   return (
-    <section className="py-24 md:py-32" style={{ backgroundColor: '#fdfbf7' }}>
+    <section className="py-24 md:py-32 bg-off-white">
       <div className="container mx-auto px-4">
         <AnimatedSection className="max-w-5xl mx-auto">
           <motion.img 
@@ -24,12 +24,7 @@ export const GestaltScrollTelling = () => {
           </div>
           
           <motion.div 
-            className="p-10 md:p-14 rounded-2xl"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            style={{ backgroundColor: '#f7f5f0' }}
+            className="p-10 md:p-14 rounded-2xl bg-secondary"
           >
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-8">
               Was ist Gestalttherapie?
@@ -40,10 +35,7 @@ export const GestaltScrollTelling = () => {
             </p>
             <StaggerContainer className="grid md:grid-cols-3 gap-6 mb-10">
               <AnimatedItem>
-                <div 
-                  className="p-6 rounded-xl border-l-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-default" 
-                  style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--accent))' }}
-                >
+                <div className="p-6 rounded-xl border-l-[3px] border-accent bg-primary/[0.04] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-default">
                   <h3 className="text-accent font-semibold text-xl mb-3">1. Gewahrsein</h3>
                   <p className="text-sm text-foreground/60 mb-2 italic">Spüren statt Denken</p>
                   <p className="text-foreground/70 text-sm leading-relaxed">
@@ -52,10 +44,7 @@ export const GestaltScrollTelling = () => {
                 </div>
               </AnimatedItem>
               <AnimatedItem>
-                <div 
-                  className="p-6 rounded-xl border-l-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-default" 
-                  style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--accent))' }}
-                >
+                <div className="p-6 rounded-xl border-l-[3px] border-accent bg-primary/[0.04] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-default">
                   <h3 className="text-accent font-semibold text-xl mb-3">2. Ganzheitlichkeit</h3>
                   <p className="text-sm text-foreground/60 mb-2 italic">Körper, Seele, Geist & Umfeld</p>
                   <p className="text-foreground/70 text-sm leading-relaxed">
@@ -64,10 +53,7 @@ export const GestaltScrollTelling = () => {
                 </div>
               </AnimatedItem>
               <AnimatedItem>
-                <div 
-                  className="p-6 rounded-xl border-l-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-default" 
-                  style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--accent))' }}
-                >
+                <div className="p-6 rounded-xl border-l-[3px] border-accent bg-primary/[0.04] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-default">
                   <h3 className="text-accent font-semibold text-xl mb-3">3. Kontakt & Dialog</h3>
                   <p className="text-sm text-foreground/60 mb-2 italic">Echte Begegnung auf Augenhöhe</p>
                   <p className="text-foreground/70 text-sm leading-relaxed">
@@ -77,12 +63,11 @@ export const GestaltScrollTelling = () => {
               </AnimatedItem>
             </StaggerContainer>
             <motion.div 
-              className="p-6 rounded-xl border-l-4 border-primary"
+              className="p-6 rounded-xl border-l-4 border-primary bg-primary/[0.08]"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              style={{ backgroundColor: 'rgba(30, 95, 116, 0.08)' }}
             >
               <p className="text-foreground/80 leading-relaxed">
                 <strong className="text-primary">Gestalttherapie</strong> bedeutet, im gegenwärtigen Moment 

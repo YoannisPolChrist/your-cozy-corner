@@ -63,6 +63,7 @@ export default {
         "gold-accent": "hsl(var(--gold-accent))",
         "gold-dark": "hsl(var(--gold-dark))",
         "gray-light": "hsl(var(--gray-light))",
+        "off-white": "hsl(var(--off-white))",
       },
       fontFamily: {
         heading: ['Playfair Display', 'serif'],

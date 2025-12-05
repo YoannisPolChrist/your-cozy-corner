@@ -55,16 +55,8 @@ const Index = () => {
         <Hero />
 
         {/* Pain Points Section - Empathetic Narrative */}
-        <AnimatedSection className="py-28 md:py-36 relative overflow-hidden">
-          {/* Subtle topographical background */}
-          <div 
-            className="absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 90 Q 30 70, 50 80 T 90 70' stroke='%231e5f74' fill='none' stroke-width='1'/%3E%3Cpath d='M10 60 Q 40 40, 60 55 T 90 45' stroke='%231e5f74' fill='none' stroke-width='1'/%3E%3Cpath d='M10 30 Q 35 15, 55 25 T 90 20' stroke='%231e5f74' fill='none' stroke-width='1'/%3E%3C/svg%3E")`,
-              backgroundSize: '200px 200px'
-            }}
-          />
-          <div className="container mx-auto px-4 relative z-10">
+        <AnimatedSection className="py-28 md:py-36 bg-off-white">
+          <div className="container mx-auto px-4">
             <div className="text-center mb-20">
               <h2 className="font-heading text-[2.2rem] md:text-[2.7rem] mb-6 text-primary leading-tight">
                 Wenn der innere Kompass stillsteht
@@ -97,7 +89,7 @@ const Index = () => {
         <AnimatedSection className="py-28 md:py-36 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-20">
-              <h2 className="font-heading text-[2.2rem] md:text-[2.7rem] mb-5 text-accent">
+              <h2 className="font-heading text-[2.2rem] md:text-[2.7rem] mb-5 text-primary">
                 Mein Angebot
               </h2>
               <p className="text-muted-foreground text-lg">
@@ -110,7 +102,7 @@ const Index = () => {
                 const Icon = service.icon;
                 return (
                   <AnimatedItem key={index}>
-                    <Card className="p-10 bg-[#fdfbf7] border border-accent/20 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group relative overflow-hidden h-full">
+                    <Card className="p-10 bg-off-white border border-accent/20 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group relative overflow-hidden h-full">
                       {/* Bottom border highlight on hover */}
                       <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                       
@@ -143,27 +135,8 @@ const Index = () => {
         </AnimatedSection>
 
         {/* Gestalttherapie Creative Link */}
-        <AnimatedSection className="py-28 md:py-36 bg-primary relative overflow-hidden">
-          {/* Animated organic gradient background */}
-          <div 
-            className="absolute inset-0 opacity-30"
-            style={{
-              background: 'radial-gradient(ellipse at 30% 50%, hsl(190 80% 35% / 0.4) 0%, transparent 50%), radial-gradient(ellipse at 70% 30%, hsl(185 75% 40% / 0.3) 0%, transparent 45%)',
-              animation: 'gradientShift 12s ease-in-out infinite alternate'
-            }}
-          />
-          <style>{`
-            @keyframes gradientShift {
-              0% { transform: scale(1) translateX(0); }
-              100% { transform: scale(1.1) translateX(-3%); }
-            }
-            @keyframes breathe {
-              0%, 100% { transform: scale(1); }
-              50% { transform: scale(1.05); }
-            }
-          `}</style>
-          
-          <div className="container mx-auto px-4 relative z-10">
+        <AnimatedSection className="py-28 md:py-36 bg-primary">
+          <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <StaggerContainer className="grid md:grid-cols-2 gap-16 lg:gap-20 items-center">
                 <AnimatedItem>
@@ -188,23 +161,15 @@ const Index = () => {
                   </Link>
                 </AnimatedItem>
                 <AnimatedItem className="relative flex justify-center">
-                  {/* Organic Blob with Glassmorphism */}
-                  <div 
-                    className="relative w-72 h-72 md:w-80 md:h-80 flex items-center justify-center"
-                    style={{
-                      animation: 'breathe 6s ease-in-out infinite'
-                    }}
-                  >
-                    {/* Blob shape with glassmorphism */}
+                  {/* Clean Quote Card */}
+                  <div className="relative w-72 h-72 md:w-80 md:h-80 flex items-center justify-center">
                     <div 
-                      className="absolute inset-0 backdrop-blur-md border border-white/20"
+                      className="absolute inset-0 backdrop-blur-md border border-white/20 rounded-2xl"
                       style={{
                         background: 'rgba(255, 255, 255, 0.08)',
-                        borderRadius: '60% 40% 55% 45% / 55% 60% 40% 45%',
-                        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1), inset 0 0 60px rgba(255, 255, 255, 0.05)'
+                        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)'
                       }}
                     />
-                    {/* Quote content */}
                     <div className="relative z-10 text-center px-8">
                       <div className="font-heading text-7xl text-gold-accent mb-2 leading-none" style={{ marginTop: '-10px' }}>
                         "
@@ -221,7 +186,7 @@ const Index = () => {
         </AnimatedSection>
 
         {/* About Preview - Editorial Layout */}
-        <AnimatedSection className="py-28 md:py-40 bg-[#fafafa] overflow-hidden">
+        <AnimatedSection className="py-28 md:py-40 bg-off-white overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center max-w-6xl mx-auto">
               {/* Left Side - Image with Gold Frame Effect - Cinematic Parallax */}

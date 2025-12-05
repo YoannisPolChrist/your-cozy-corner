@@ -4,10 +4,10 @@ import { Brain, ArrowRight } from "lucide-react";
 
 export const ProgramsSection = () => {
   return (
-    <section className="py-20 bg-gray-light">
+    <section className="py-20 bg-off-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="font-heading text-4xl md:text-5xl mb-4 text-gold-accent">
+          <h2 className="font-heading text-4xl md:text-5xl mb-4 text-primary">
             Meine Programme
           </h2>
           <p className="text-xl text-muted-foreground italic">
@@ -37,7 +37,7 @@ export const ProgramsSection = () => {
                   </p>
                   <div className="flex items-center justify-between">
                     <p className="text-3xl font-bold text-primary">899,99€</p>
-                    <Button className="bg-gold-accent hover:bg-gold-accent/90 text-white">
+                    <Button variant="gold">
                       Mehr erfahren <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </div>
