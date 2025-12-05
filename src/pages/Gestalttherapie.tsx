@@ -12,6 +12,7 @@ import gestaltVideo3 from "@/assets/gestalt-video-3.mp4";
 import { cinematicEase, viewportSettings } from "@/lib/animations";
 import { Footer } from "@/components/Footer";
 import { GestaltScrollTelling } from "@/components/GestaltScrollTelling";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface VideoSectionProps {
   videoSrc: string;
@@ -19,12 +20,16 @@ interface VideoSectionProps {
   content: React.ReactNode;
   sectionId: string;
   position?: 'left' | 'center' | 'right';
+  posterImage?: string;
 }
 
-const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center' }: VideoSectionProps) => {
+const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center', posterImage }: VideoSectionProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [videoFailed, setVideoFailed] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,12 +54,51 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Try to play video on mobile when it becomes visible
+  useEffect(() => {
+    if (videoRef.current && isVisible && !videoFailed) {
+      videoRef.current.play().catch(() => {
+        setVideoFailed(true);
+      });
+    }
+  }, [isVisible, videoFailed]);
+
   // Position classes - slightly offset from center
   const positionClasses = {
     left: 'items-center justify-center -translate-x-[25%]',
     center: 'items-center justify-center',
     right: 'items-center justify-center translate-x-[10%]'
   };
+
+  // On mobile, use a simpler layout without sticky video
+  if (isMobile) {
+    return (
+      <section 
+        ref={sectionRef}
+        id={sectionId}
+        className="relative py-16 bg-primary"
+      >
+        <div className="container mx-auto px-4">
+          <div className="max-w-lg mx-auto">
+            <div 
+              className="p-6 rounded-2xl shadow-2xl"
+              style={{
+                background: 'rgba(255, 255, 255, 0.95)',
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
+              }}
+            >
+              <h2 className="font-heading text-xl md:text-2xl font-bold text-primary mb-4 text-center">
+                {title}
+              </h2>
+              <div className="text-foreground/80 text-sm md:text-base leading-relaxed">
+                {content}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section 
@@ -64,6 +108,7 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden">
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
@@ -114,7 +159,6 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
     </section>
   );
 };
-
 const Gestalttherapie = () => {
   return (
     <div className="min-h-screen bg-background">
