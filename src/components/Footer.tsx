@@ -26,8 +26,11 @@ export const Footer = () => {
             {/* Navigation Column */}
             
 
+            {/* Spacer Column */}
+            <div className="hidden md:block"></div>
+
             {/* Legal Column */}
-            <div>
+            <div className="md:text-right">
               <p className="font-heading text-base text-primary font-semibold mb-3">Rechtliches</p>
               <nav className="space-y-2 text-sm">
                 <a href="#" className="block text-primary hover:text-accent transition-colors">
