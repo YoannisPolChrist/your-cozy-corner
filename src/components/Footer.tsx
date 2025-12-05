@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail } from "lucide-react";
-
 export const Footer = () => {
-  return (
-    <footer className="bg-white border-t border-primary/10 py-12">
+  return <footer className="bg-white border-t border-primary/10 py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-10 md:gap-16">
@@ -27,26 +25,7 @@ export const Footer = () => {
             </div>
 
             {/* Navigation Column */}
-            <div>
-              <h4 className="font-heading text-lg text-[#c5a065] mb-4">Seiten</h4>
-              <nav className="space-y-2 text-sm">
-                <Link to="/" className="block text-primary hover:text-[#c5a065] transition-colors">
-                  Startseite
-                </Link>
-                <Link to="/gestalttherapie" className="block text-primary hover:text-[#c5a065] transition-colors">
-                  Gestalttherapie
-                </Link>
-                <Link to="/angebot" className="block text-primary hover:text-[#c5a065] transition-colors">
-                  Angebot
-                </Link>
-                <Link to="/ueber-mich" className="block text-primary hover:text-[#c5a065] transition-colors">
-                  Über mich
-                </Link>
-                <Link to="/kontakt" className="block text-primary hover:text-[#c5a065] transition-colors">
-                  Kontakt
-                </Link>
-              </nav>
-            </div>
+            
 
             {/* Legal Column */}
             <div>
@@ -70,6 +49,5 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
