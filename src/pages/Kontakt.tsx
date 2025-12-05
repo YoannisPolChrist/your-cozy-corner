@@ -136,8 +136,9 @@ const Kontakt = () => {
 
                       <Button
                         type="submit"
+                        variant="gold"
                         size="lg"
-                        className="w-full bg-gold-accent hover:bg-gold-accent/90 font-semibold"
+                        className="w-full font-semibold"
                       >
                         Nachricht senden
                       </Button>

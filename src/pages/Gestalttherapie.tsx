@@ -408,31 +408,24 @@ const Gestalttherapie = () => {
           </div>
         </section>
 
-        {/* CTA with organic gradient */}
-        <section className="py-20 md:py-24 text-white relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #1e5f74 0%, #2a7a8f 50%, #1e5f74 100%)' }}>
-          {/* Organic gradient blob */}
-          <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-20 blur-3xl"
-            style={{ 
-              background: 'radial-gradient(circle, rgba(42, 157, 178, 0.6) 0%, transparent 70%)',
-              animation: 'breathe 8s ease-in-out infinite'
-            }}
-          />
+        {/* CTA with gradient */}
+        <section className="py-24 md:py-28 text-white relative overflow-hidden bg-gradient-cta">
+          {/* Subtle gradient overlay for depth */}
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-teal-navy/30" />
           
           <div className="container mx-auto px-4 text-center relative z-10">
             <AnimatedSection>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-white">
                 Neugierig geworden?
               </h2>
-              <p className="text-white/80 mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
+              <p className="text-white/85 mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
                 Vereinbaren Sie ein unverbindliches Erstgespräch und erfahren Sie, 
                 wie Gestalttherapie Ihnen helfen kann.
               </p>
               <motion.a 
-                href="/#kontakt"
-                className="inline-block bg-accent text-primary px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-xl"
-                whileHover={{ y: -3, boxShadow: '0 20px 40px rgba(197, 160, 101, 0.3)' }}
-                style={{ boxShadow: '0 10px 30px rgba(197, 160, 101, 0.2)' }}
+                href="/kontakt"
+                className="inline-flex items-center justify-center bg-gold-accent text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-gold-dark hover:shadow-gold hover:-translate-y-0.5"
+                whileHover={{ y: -2 }}
               >
                 Kontakt aufnehmen
               </motion.a>
