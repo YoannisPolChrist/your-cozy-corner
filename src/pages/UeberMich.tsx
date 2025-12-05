@@ -132,23 +132,23 @@ const UeberMich = () => {
                     initial="hidden" 
                     whileInView="visible" 
                     viewport={{ once: true }}
-                    className="grid grid-cols-3 gap-6 pt-6"
+                    className="flex flex-wrap gap-8 pt-8"
                   >
-                    <motion.div variants={iconItem} className="text-center">
-                      <div className="w-14 h-14 mx-auto mb-3 rounded-full border border-[#c5a065]/30 flex items-center justify-center">
-                        <Heart className="w-6 h-6 text-[#c5a065]" strokeWidth={1.5} />
+                    <motion.div variants={iconItem} className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-full border-2 border-[#c5a065]/40 flex items-center justify-center bg-[#c5a065]/10">
+                        <Heart className="w-5 h-5 text-[#c5a065]" strokeWidth={1.5} />
                       </div>
                       <span className="text-sm font-medium text-white">Körper</span>
                     </motion.div>
-                    <motion.div variants={iconItem} className="text-center">
-                      <div className="w-14 h-14 mx-auto mb-3 rounded-full border border-[#c5a065]/30 flex items-center justify-center">
-                        <Brain className="w-6 h-6 text-[#c5a065]" strokeWidth={1.5} />
+                    <motion.div variants={iconItem} className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-full border-2 border-[#c5a065]/40 flex items-center justify-center bg-[#c5a065]/10">
+                        <Brain className="w-5 h-5 text-[#c5a065]" strokeWidth={1.5} />
                       </div>
                       <span className="text-sm font-medium text-white">Psyche</span>
                     </motion.div>
-                    <motion.div variants={iconItem} className="text-center">
-                      <div className="w-14 h-14 mx-auto mb-3 rounded-full border border-[#c5a065]/30 flex items-center justify-center">
-                        <MessageCircle className="w-6 h-6 text-[#c5a065]" strokeWidth={1.5} />
+                    <motion.div variants={iconItem} className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-full border-2 border-[#c5a065]/40 flex items-center justify-center bg-[#c5a065]/10">
+                        <MessageCircle className="w-5 h-5 text-[#c5a065]" strokeWidth={1.5} />
                       </div>
                       <span className="text-sm font-medium text-white">Resonanz</span>
                     </motion.div>
