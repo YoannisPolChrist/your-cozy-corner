@@ -115,11 +115,11 @@ export const Hero = () => {
           delay: 1.4
         }}>
             <Link to="/kontakt" onClick={scrollToTop}>
-              <Button size="lg" className="text-white font-medium px-10 py-7 text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300" style={{
+              <Button size="default" className="text-white font-medium px-6 py-3 text-base shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300" style={{
               backgroundColor: '#c5a065'
             }} onMouseEnter={e => e.currentTarget.style.backgroundColor = '#d4b07a'} onMouseLeave={e => e.currentTarget.style.backgroundColor = '#c5a065'}>
                 Kennenlerngespräch vereinbaren
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
           </motion.div>
