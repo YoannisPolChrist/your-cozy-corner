@@ -7,6 +7,7 @@ import { ArrowRight, Heart, Brain, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import johannesPortrait from "@/assets/johannes-portrait.png";
+import johannesMeet from "@/assets/johannes-meet.jpg";
 import { goldFrameVariants, imageVariants, viewportSettings } from "@/lib/animations";
 import { Footer } from "@/components/Footer";
 
@@ -53,6 +54,71 @@ const Index = () => {
       <Navigation />
       <main>
         <Hero />
+
+        {/* Meet Johannes Section */}
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-5 gap-10 md:gap-16 items-center">
+                {/* Portrait - 40% */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.6 }}
+                  className="md:col-span-2 order-1"
+                >
+                  <img 
+                    src={johannesMeet} 
+                    alt="Johannes Christ – Gestalttherapeut und Coach, freundlicher Blickkontakt"
+                    className="w-full aspect-[4/5] object-cover object-top rounded-xl"
+                  />
+                </motion.div>
+
+                {/* Content - 60% */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="md:col-span-3 order-2"
+                >
+                  <h2 className="font-heading text-2xl md:text-3xl text-primary mb-6">
+                    Johannes kennenlernen
+                  </h2>
+                  
+                  <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
+                    <p>
+                      Ich begleite Menschen, die spüren, dass etwas in Bewegung kommen darf – 
+                      auch wenn der Weg noch unklar ist.
+                    </p>
+                    <p>
+                      Meine Arbeit ist geprägt von Ruhe, Präsenz und einem tiefen Vertrauen 
+                      in die Kraft des Augenblicks.
+                    </p>
+                  </div>
+
+                  <p className="text-sm text-muted-foreground/80 mb-8">
+                    Praxis in Frankfurt · Online & vor Ort
+                  </p>
+
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Link to="/kontakt" onClick={scrollToTop}>
+                      <Button variant="gold" className="w-full sm:w-auto">
+                        Erstgespräch buchen
+                      </Button>
+                    </Link>
+                    <Link to="/ueber-mich" onClick={scrollToTop}>
+                      <Button variant="outline" className="w-full sm:w-auto border-primary/20 text-primary hover:bg-primary/5">
+                        Mehr erfahren
+                      </Button>
+                    </Link>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Pain Points Section - Empathetic Narrative */}
         <AnimatedSection className="py-28 md:py-36 bg-off-white">
