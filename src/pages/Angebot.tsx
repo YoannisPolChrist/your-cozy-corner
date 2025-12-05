@@ -194,7 +194,7 @@ const Angebot = () => {
                       Psychologische Beratung (i.A.), Gestalttherapie & Coaching. Ideal für akute Anliegen.
                     </p>
                     <Link to="/kontakt" className="block">
-                      <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                      <Button variant="gold" className="w-full font-semibold">
                         Termin buchen
                       </Button>
                     </Link>
@@ -215,7 +215,7 @@ const Angebot = () => {
                       Veränderung braucht Zeit. Für tiefgreifende Themen vereinbaren wir einen festen Rhythmus. Abrechnung flexibel pro Sitzung.
                     </p>
                     <Link to="/kontakt" className="block">
-                      <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+                      <Button variant="gold-outline" className="w-full font-semibold">
                         Kostenloses Vorgespräch
                       </Button>
                     </Link>
@@ -276,8 +276,10 @@ const Angebot = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 bg-primary">
-          <div className="container mx-auto px-4 text-center">
+        <section className="py-24 md:py-28 bg-gradient-cta relative overflow-hidden">
+          {/* Subtle gradient overlay for depth */}
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-teal-navy/30" />
+          <div className="container mx-auto px-4 text-center relative z-10">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -286,20 +288,20 @@ const Angebot = () => {
             >
               <motion.h2
                 variants={fadeUp}
-                className="font-heading text-3xl md:text-4xl text-primary-foreground mb-6"
+                className="font-heading text-3xl md:text-4xl text-white mb-6"
               >
                 Bereit für den ersten Schritt?
               </motion.h2>
               <motion.p
                 variants={fadeUp}
-                className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto"
+                className="text-white/85 text-lg mb-8 max-w-2xl mx-auto"
               >
                 Vereinbaren Sie ein kostenloses 20-minütiges Kennenlerngespräch, 
                 um herauszufinden, wie ich Sie unterstützen kann.
               </motion.p>
               <motion.div variants={fadeUp}>
                 <Link to="/kontakt">
-                  <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+                  <Button variant="gold" size="lg" className="font-semibold">
                     Kontakt aufnehmen
                   </Button>
                 </Link>

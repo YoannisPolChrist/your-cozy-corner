@@ -59,7 +59,9 @@ export default {
         },
         "teal-primary": "hsl(var(--teal-primary))",
         "teal-dark": "hsl(var(--teal-dark))",
+        "teal-navy": "hsl(var(--teal-navy))",
         "gold-accent": "hsl(var(--gold-accent))",
+        "gold-dark": "hsl(var(--gold-dark))",
         "gray-light": "hsl(var(--gray-light))",
       },
       fontFamily: {
@@ -68,11 +70,13 @@ export default {
       },
       backgroundImage: {
         'gradient-teal': 'var(--gradient-teal)',
+        'gradient-cta': 'var(--gradient-cta)',
         'gradient-gold': 'var(--gradient-gold)',
       },
       boxShadow: {
         'soft': 'var(--shadow-soft)',
         'teal': 'var(--shadow-teal)',
+        'gold': 'var(--shadow-gold)',
       },
       borderRadius: {
         lg: "var(--radius)",

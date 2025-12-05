@@ -134,7 +134,7 @@ const Index = () => {
 
             <div className="text-center">
               <Link to="/angebot" onClick={scrollToTop}>
-                <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
+                <Button variant="gold" className="font-semibold">
                   Alle Angebote entdecken <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -289,23 +289,25 @@ const Index = () => {
         </AnimatedSection>
 
         {/* CTA Section */}
-        <AnimatedSection className="py-28 md:py-36 bg-gradient-teal text-white">
-          <div className="container mx-auto px-4 text-center">
+        <AnimatedSection className="py-28 md:py-36 bg-gradient-cta text-white relative overflow-hidden">
+          {/* Subtle gradient overlay for depth */}
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-teal-navy/30" />
+          <div className="container mx-auto px-4 text-center relative z-10">
             <StaggerContainer className="max-w-2xl mx-auto">
               <AnimatedItem>
-                <h2 className="font-heading text-3xl md:text-4xl mb-8">
+                <h2 className="font-heading text-3xl md:text-4xl mb-8 text-white">
                   Bereit für den ersten Schritt?
                 </h2>
               </AnimatedItem>
               <AnimatedItem>
-                <p className="text-white/80 text-lg mb-10">
+                <p className="text-white/85 text-lg mb-10">
                   Vereinbaren Sie ein kostenloses Kennenlerngespräch und erfahren Sie, 
                   wie ich Sie auf Ihrem Weg unterstützen kann.
                 </p>
               </AnimatedItem>
               <AnimatedItem>
                 <Link to="/kontakt" onClick={scrollToTop}>
-                  <Button size="lg" className="bg-gold-accent hover:bg-gold-accent/90 text-white font-semibold">
+                  <Button variant="gold" size="lg" className="font-semibold">
                     Kontakt aufnehmen <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>

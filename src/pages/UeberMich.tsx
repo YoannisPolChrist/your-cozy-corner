@@ -243,17 +243,10 @@ const UeberMich = () => {
           whileInView="visible" 
           viewport={viewportSettings}
           variants={staggerContainer} 
-          className="py-20 relative overflow-hidden"
+          className="py-24 md:py-28 relative overflow-hidden bg-gradient-cta"
         >
-          {/* Background with gradient */}
-          <div className="absolute inset-0 bg-gradient-teal" />
-          <div 
-            className="absolute top-1/2 left-1/4 w-96 h-96 rounded-full opacity-20" 
-            style={{
-              background: 'radial-gradient(circle, hsl(var(--primary-light)) 0%, transparent 70%)',
-              transform: 'translate(-50%, -50%)'
-            }} 
-          />
+          {/* Subtle gradient overlay for depth */}
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-teal-navy/30" />
           
           <div className="container mx-auto px-4 text-center relative z-10">
             <motion.h2 
@@ -264,17 +257,14 @@ const UeberMich = () => {
             </motion.h2>
             <motion.p 
               variants={fadeUp}
-              className="text-white/80 text-lg mb-8 max-w-2xl mx-auto"
+              className="text-white/85 text-lg mb-8 max-w-2xl mx-auto"
             >
               In einem kostenlosen Erstgespräch können wir herausfinden, 
               ob die Chemie stimmt und wie ich dich am besten unterstützen kann.
             </motion.p>
             <motion.div variants={fadeUp}>
               <Link to="/kontakt">
-                <Button 
-                  size="lg" 
-                  className="bg-[#c5a065] hover:bg-[#c5a065]/90 text-white font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
-                >
+                <Button variant="gold" size="lg" className="font-semibold">
                   Kontakt aufnehmen <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
