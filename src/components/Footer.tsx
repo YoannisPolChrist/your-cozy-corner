@@ -42,7 +42,7 @@ export const Footer = () => {
 
           {/* Copyright */}
           <div className="mt-6 pt-4 border-t border-primary/10 text-center">
-            <p className="text-xs text-foreground/60">
+            <p className="text-xs text-muted-foreground">
               © {new Date().getFullYear()} Johannes Christ · Gestalttherapie & Coaching
             </p>
           </div>
