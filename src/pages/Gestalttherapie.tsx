@@ -90,21 +90,20 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
           >
             {/* Glassmorphism Card */}
             <div 
-              className="p-8 md:p-10 rounded-2xl shadow-2xl border border-white/20"
+              className="p-8 md:p-10 rounded-2xl shadow-2xl"
               style={{
-                background: 'rgba(255, 255, 255, 0.1)',
+                background: 'rgba(255, 255, 255, 0.9)',
                 backdropFilter: 'blur(16px)',
                 WebkitBackdropFilter: 'blur(16px)',
-                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1) inset'
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
               }}
             >
               <h2 
-                className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-5 text-center"
-                style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)' }}
+                className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-5 text-center"
               >
                 {title}
               </h2>
-              <div className="text-white/90 text-base md:text-lg leading-relaxed">
+              <div className="text-foreground/80 text-base md:text-lg leading-relaxed">
                 {content}
               </div>
             </div>
@@ -135,7 +134,7 @@ const Gestalttherapie = () => {
                 Eine <strong className="text-accent font-semibold">offene Gestalt</strong> ist ein unvollendetes Erlebnis – 
                 ein ungelöster Konflikt oder unterdrücktes Gefühl.
               </p>
-              <p className="text-white font-medium text-center mt-4 text-sm md:text-base opacity-90">
+              <p className="text-primary font-medium text-center mt-4 text-sm md:text-base">
                 In der Therapie schließen wir diese Gestalten.
               </p>
             </>
@@ -154,7 +153,7 @@ const Gestalttherapie = () => {
                 <strong className="text-accent font-semibold">Kontaktunterbrechungen</strong> sind Schutzmechanismen, 
                 die uns einst geholfen haben, aber heute hindern.
               </p>
-              <p className="text-white font-medium text-center mt-4 text-sm md:text-base opacity-90">
+              <p className="text-primary font-medium text-center mt-4 text-sm md:text-base">
                 Wir lernen, sie zu erkennen und zu lösen.
               </p>
             </>
@@ -173,7 +172,7 @@ const Gestalttherapie = () => {
                 Das <strong className="text-accent font-semibold">Hier und Jetzt</strong> ist der einzige Moment, 
                 in dem echte Veränderung möglich ist.
               </p>
-              <p className="text-white font-medium text-center mt-4 text-sm md:text-base opacity-90">
+              <p className="text-primary font-medium text-center mt-4 text-sm md:text-base">
                 Präsenz als Schlüssel zur Heilung.
               </p>
             </>
