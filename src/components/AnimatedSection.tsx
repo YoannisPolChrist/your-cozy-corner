@@ -1,69 +1,36 @@
 import { ReactNode } from "react";
 import { motion, Variants } from "framer-motion";
+import { 
+  fadeUp, 
+  staggerContainer, 
+  staggerItem,
+  cardStagger,
+  cardItem,
+  viewportSettings 
+} from "@/lib/animations";
 
 interface AnimatedSectionProps {
   children: ReactNode;
   className?: string;
-  animation?: "fade-up" | "fade-left" | "fade-right" | "scale";
   delay?: number;
   stagger?: boolean;
 }
 
-const sectionVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 30,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: [0.25, 0.1, 0.25, 1], // Custom easeOut
-    },
-  },
-};
-
-const containerVariants: Variants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.1,
-    },
-  },
-};
-
-export const itemVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 30,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: [0.25, 0.1, 0.25, 1],
-    },
-  },
-};
-
+// Main section wrapper with cinematic fade up
 export const AnimatedSection = ({
   children,
   className,
   delay = 0,
   stagger = false,
 }: AnimatedSectionProps) => {
+  const variants = stagger ? staggerContainer : fadeUp;
+  
   return (
     <motion.section
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={stagger ? containerVariants : sectionVariants}
+      viewport={viewportSettings}
+      variants={variants}
       transition={{ delay: delay / 1000 }}
       className={className}
     >
@@ -72,20 +39,22 @@ export const AnimatedSection = ({
   );
 };
 
-// Stagger container for child animations
+// Stagger container for child animations (Domino Effect)
 export const StaggerContainer = ({
   children,
   className,
+  asCards = false,
 }: {
   children: ReactNode;
   className?: string;
+  asCards?: boolean;
 }) => {
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-50px" }}
-      variants={containerVariants}
+      viewport={viewportSettings}
+      variants={asCards ? cardStagger : staggerContainer}
       className={className}
     >
       {children}
@@ -97,15 +66,23 @@ export const StaggerContainer = ({
 export const AnimatedItem = ({
   children,
   className,
+  asCard = false,
 }: {
   children: ReactNode;
   className?: string;
+  asCard?: boolean;
 }) => {
   return (
-    <motion.div variants={itemVariants} className={className}>
+    <motion.div 
+      variants={asCard ? cardItem : staggerItem} 
+      className={className}
+    >
       {children}
     </motion.div>
   );
 };
+
+// Export item variants for direct use
+export const itemVariants: Variants = staggerItem;
 
 AnimatedSection.displayName = "AnimatedSection";

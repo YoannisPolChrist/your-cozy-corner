@@ -7,6 +7,14 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { motion } from "framer-motion";
+import { 
+  fadeUp, 
+  staggerContainer, 
+  cardStagger,
+  cardItem,
+  viewportSettings 
+} from "@/lib/animations";
 
 const Kontakt = () => {
   const { toast } = useToast();
@@ -31,153 +39,182 @@ const Kontakt = () => {
       <Navigation />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-b from-gray-light to-background">
+        <motion.section 
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          variants={staggerContainer}
+          className="py-20 bg-gradient-to-b from-gray-light to-background"
+        >
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="font-heading text-4xl md:text-6xl mb-6 text-primary">
+              <motion.h1 
+                variants={fadeUp}
+                className="font-heading text-4xl md:text-6xl mb-6 text-primary"
+              >
                 Kontakt
-              </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              </motion.h1>
+              <motion.p 
+                variants={fadeUp}
+                className="text-xl text-muted-foreground leading-relaxed"
+              >
                 Haben Sie Fragen oder möchten Sie einen Termin vereinbaren? 
                 Ich freue mich auf Ihre Nachricht.
-              </p>
+              </motion.p>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Contact Section */}
-        <section className="py-20 bg-background">
+        <motion.section 
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          variants={staggerContainer}
+          className="py-20 bg-background"
+        >
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-8">
+              <motion.div 
+                variants={cardStagger}
+                className="grid md:grid-cols-2 gap-8"
+              >
                 {/* Contact Form */}
-                <Card className="p-8 shadow-soft">
-                  <h2 className="font-heading text-2xl mb-6 text-primary">
-                    Schreiben Sie mir
-                  </h2>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Name *</Label>
-                      <Input
-                        id="name"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        required
-                        className="transition-all focus:ring-2 focus:ring-primary"
-                      />
-                    </div>
+                <motion.div variants={cardItem}>
+                  <Card className="p-8 shadow-soft">
+                    <h2 className="font-heading text-2xl mb-6 text-primary">
+                      Schreiben Sie mir
+                    </h2>
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <div className="space-y-2">
+                        <Label htmlFor="name">Name *</Label>
+                        <Input
+                          id="name"
+                          value={formData.name}
+                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                          required
+                          className="transition-all focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="email">E-Mail *</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        required
-                        className="transition-all focus:ring-2 focus:ring-primary"
-                      />
-                    </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="email">E-Mail *</Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          required
+                          className="transition-all focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Telefon (optional)</Label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="transition-all focus:ring-2 focus:ring-primary"
-                      />
-                    </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="phone">Telefon (optional)</Label>
+                        <Input
+                          id="phone"
+                          type="tel"
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          className="transition-all focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Ihre Nachricht *</Label>
-                      <Textarea
-                        id="message"
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        required
-                        rows={5}
-                        placeholder="Beschreiben Sie kurz Ihr Anliegen..."
-                        className="transition-all focus:ring-2 focus:ring-primary resize-none"
-                      />
-                    </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="message">Ihre Nachricht *</Label>
+                        <Textarea
+                          id="message"
+                          value={formData.message}
+                          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                          required
+                          rows={5}
+                          placeholder="Beschreiben Sie kurz Ihr Anliegen..."
+                          className="transition-all focus:ring-2 focus:ring-primary resize-none"
+                        />
+                      </div>
 
-                    <Button
-                      type="submit"
-                      size="lg"
-                      className="w-full bg-gold-accent hover:bg-gold-accent/90 font-semibold"
-                    >
-                      Nachricht senden
-                    </Button>
-                  </form>
-                </Card>
+                      <Button
+                        type="submit"
+                        size="lg"
+                        className="w-full bg-gold-accent hover:bg-gold-accent/90 font-semibold"
+                      >
+                        Nachricht senden
+                      </Button>
+                    </form>
+                  </Card>
+                </motion.div>
 
                 {/* Contact Info */}
-                <div className="space-y-6">
-                  <Card className="p-8 bg-gradient-teal text-white">
-                    <h2 className="font-heading text-2xl mb-6">Kontaktdaten</h2>
-                    <div className="space-y-6">
-                      <div className="flex items-start gap-4">
-                        <MapPin className="w-6 h-6 flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-semibold mb-1">Standort</p>
-                          <p>Toulouse, Frankreich</p>
+                <motion.div variants={cardStagger} className="space-y-6">
+                  <motion.div variants={cardItem}>
+                    <Card className="p-8 bg-gradient-teal text-white">
+                      <h2 className="font-heading text-2xl mb-6">Kontaktdaten</h2>
+                      <div className="space-y-6">
+                        <div className="flex items-start gap-4">
+                          <MapPin className="w-6 h-6 flex-shrink-0 mt-1" />
+                          <div>
+                            <p className="font-semibold mb-1">Standort</p>
+                            <p>Toulouse, Frankreich</p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start gap-4">
+                          <Phone className="w-6 h-6 flex-shrink-0 mt-1" />
+                          <div>
+                            <p className="font-semibold mb-1">Telefon</p>
+                            <p>+49 162 170 9979</p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start gap-4">
+                          <Mail className="w-6 h-6 flex-shrink-0 mt-1" />
+                          <div>
+                            <p className="font-semibold mb-1">E-Mail</p>
+                            <p className="break-all">ps.johanneschrist@gmail.com</p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start gap-4">
+                          <Clock className="w-6 h-6 flex-shrink-0 mt-1" />
+                          <div>
+                            <p className="font-semibold mb-1">Erreichbarkeit</p>
+                            <p>Mo-Fr: 9:00 - 18:00 Uhr</p>
+                            <p className="text-white/80 text-sm">Termine nach Vereinbarung</p>
+                          </div>
                         </div>
                       </div>
+                    </Card>
+                  </motion.div>
 
-                      <div className="flex items-start gap-4">
-                        <Phone className="w-6 h-6 flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-semibold mb-1">Telefon</p>
-                          <p>+49 162 170 9979</p>
-                        </div>
-                      </div>
+                  <motion.div variants={cardItem}>
+                    <Card className="p-6 bg-gray-light border-none">
+                      <h3 className="font-heading text-lg mb-3 text-primary">
+                        Kostenloses Erstgespräch
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Ich biete ein kostenloses 20-minütiges Kennenlerngespräch an, 
+                        in dem wir gemeinsam schauen können, ob und wie ich Sie unterstützen kann. 
+                        Melden Sie sich gerne!
+                      </p>
+                    </Card>
+                  </motion.div>
 
-                      <div className="flex items-start gap-4">
-                        <Mail className="w-6 h-6 flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-semibold mb-1">E-Mail</p>
-                          <p className="break-all">ps.johanneschrist@gmail.com</p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-4">
-                        <Clock className="w-6 h-6 flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-semibold mb-1">Erreichbarkeit</p>
-                          <p>Mo-Fr: 9:00 - 18:00 Uhr</p>
-                          <p className="text-white/80 text-sm">Termine nach Vereinbarung</p>
-                        </div>
-                      </div>
-                    </div>
-                  </Card>
-
-                  <Card className="p-6 bg-gray-light border-none">
-                    <h3 className="font-heading text-lg mb-3 text-primary">
-                      Kostenloses Erstgespräch
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Ich biete ein kostenloses 20-minütiges Kennenlerngespräch an, 
-                      in dem wir gemeinsam schauen können, ob und wie ich Sie unterstützen kann. 
-                      Melden Sie sich gerne!
-                    </p>
-                  </Card>
-
-                  <Card className="p-6 bg-gray-light border-none">
-                    <h3 className="font-heading text-lg mb-3 text-primary">
-                      Online-Sitzungen
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Alle Sitzungen können auch online per Video stattfinden – 
-                      ideal für Menschen im Ausland oder mit wenig Zeit.
-                    </p>
-                  </Card>
-                </div>
-              </div>
+                  <motion.div variants={cardItem}>
+                    <Card className="p-6 bg-gray-light border-none">
+                      <h3 className="font-heading text-lg mb-3 text-primary">
+                        Online-Sitzungen
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Alle Sitzungen können auch online per Video stattfinden – 
+                        ideal für Menschen im Ausland oder mit wenig Zeit.
+                      </p>
+                    </Card>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
             </div>
           </div>
-        </section>
+        </motion.section>
       </main>
 
       <footer className="bg-primary text-white py-8">

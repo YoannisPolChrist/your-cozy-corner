@@ -7,6 +7,7 @@ import { ArrowRight, Heart, Brain, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import johannesPortrait from "@/assets/johannes-portrait.png";
+import { goldFrameVariants, imageVariants, viewportSettings } from "@/lib/animations";
 
 const painPoints = [
   {
@@ -222,27 +223,26 @@ const Index = () => {
         <AnimatedSection className="py-28 md:py-40 bg-[#fafafa] overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center max-w-6xl mx-auto">
-              {/* Left Side - Image with Gold Frame Effect */}
-              <StaggerContainer className="relative order-2 md:order-1">
-                <AnimatedItem>
-                  <div className="relative">
-                    {/* Gold background block - offset */}
-                    <motion.div 
-                      className="absolute -bottom-5 -right-5 w-full h-full bg-accent rounded-2xl"
-                      initial={{ opacity: 0, x: -20, y: -20 }}
-                      whileInView={{ opacity: 1, x: 0, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-                    />
-                    {/* Main image */}
-                    <img 
-                      src={johannesPortrait} 
-                      alt="Johannes Christ - Gestalttherapeut und Coach"
-                      className="relative z-10 w-full aspect-[4/5] object-cover object-center rounded-2xl shadow-xl"
-                    />
-                  </div>
-                </AnimatedItem>
-              </StaggerContainer>
+              {/* Left Side - Image with Gold Frame Effect - Cinematic Parallax */}
+              <motion.div 
+                initial="hidden"
+                whileInView="visible"
+                viewport={viewportSettings}
+                className="relative order-2 md:order-1"
+              >
+                {/* Gold Frame - Slides out from behind with delay */}
+                <motion.div 
+                  variants={goldFrameVariants}
+                  className="absolute bottom-[-10px] right-[-10px] md:bottom-[-20px] md:right-[-20px] w-full h-full bg-accent rounded-2xl"
+                />
+                {/* Main image */}
+                <motion.img 
+                  variants={imageVariants}
+                  src={johannesPortrait} 
+                  alt="Johannes Christ - Gestalttherapeut und Coach"
+                  className="relative z-10 w-full aspect-[4/5] object-cover object-center rounded-2xl shadow-xl"
+                />
+              </motion.div>
               
               {/* Right Side - Text */}
               <StaggerContainer className="order-1 md:order-2">
