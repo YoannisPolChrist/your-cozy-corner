@@ -48,11 +48,11 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Position classes - offset from center to not cover video content
+  // Position classes - centered vertically in viewport
   const positionClasses = {
-    left: 'items-end justify-start pl-6 md:pl-12 lg:pl-20 pb-20 md:pb-24',
-    center: 'items-end justify-center pb-16 md:pb-20',
-    right: 'items-end justify-end pr-6 md:pr-12 lg:pr-20 pb-20 md:pb-24'
+    left: 'items-center justify-start pl-6 md:pl-12 lg:pl-20',
+    center: 'items-center justify-center',
+    right: 'items-center justify-end pr-6 md:pr-12 lg:pr-20'
   };
 
   return (
