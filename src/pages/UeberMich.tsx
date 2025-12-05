@@ -75,14 +75,13 @@ const UeberMich = () => {
                   </motion.h1>
                   <motion.div variants={fadeUpVariants} className="space-y-4 text-muted-foreground leading-relaxed">
                     <p>
-                      Hi, ich bin Johannes – Psychologe (M.Sc., i.A.) und Gestalttherapeut in Ausbildung. 
-                      Ich begleite Menschen dabei, sich selbst besser zu verstehen, blockierende Muster 
-                      zu erkennen und neue Wege zu gehen.
+                      Hi, ich bin Johannes. Mein Weg begann in der Bewegungswissenschaft (B.A.), wo ich lernte, 
+                      wie der Körper funktioniert. Doch echte Veränderung braucht mehr als Trainingspläne. 
+                      Seit 2018 vertiefe ich mein Wissen in Gestalttherapie.
                     </p>
                     <p>
-                      Mein Ansatz verbindet wissenschaftlich fundierte Psychologie mit der erfahrungsorientierten 
-                      Tiefe der Gestalttherapie. Ich glaube daran, dass echte Veränderung nicht nur im Kopf passiert, 
-                      sondern im ganzen Körper spürbar wird.
+                      Aktuell verbinde ich diese Welten in meinem Masterstudium der Angewandten Psychologie 
+                      (M.Sc. i.A.). Ich biete keine Schablonen, sondern fundierte Begleitung auf Augenhöhe.
                     </p>
                   </motion.div>
                 </motion.div>
@@ -109,14 +108,12 @@ const UeberMich = () => {
                   </motion.h2>
                   <motion.div variants={fadeUpVariants} className="space-y-4 text-white/90 leading-relaxed">
                     <p>
-                      In über 40 intensiven Einzelprozessen habe ich gelernt: Jeder Mensch trägt seine 
-                      eigene Weisheit in sich. Meine Aufgabe ist es, einen Raum zu schaffen, in dem diese 
-                      Weisheit sichtbar werden kann.
+                      In über 40 intensiven Einzelprozessen durfte ich erleben, was passiert, wenn wir dem 
+                      Körper und den Emotionen gleichermaßen Raum geben. Ob früher als Trainer oder heute 
+                      als Coach und Berater: Ich bin dein Sparringspartner.
                     </p>
                     <p>
-                      Ich arbeite nicht mit schnellen Lösungen oder standardisierten Techniken. Stattdessen 
-                      begegne ich dir auf Augenhöhe – präsent, ehrlich und mit echtem Interesse an dem, 
-                      was dich bewegt.
+                      Ich halte den Raum, gebe Struktur und stelle die Fragen, die dich wirklich weiterbringen.
                     </p>
                   </motion.div>
                   

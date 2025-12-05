@@ -37,9 +37,9 @@ const services = [
   },
   {
     icon: Compass,
-    title: "Klinische Diagnostik",
+    title: "Psychologische Diagnostik",
     subline: "PRÄZISION STATT BAUCHGEFÜHL",
-    description: "Als Psychologe (M.Sc.) biete ich eine fundierte Standortbestimmung. Wir ordnen Symptome wissenschaftlich ein und erstellen einen Fahrplan, der zu Ihrer psychischen Realität passt."
+    description: "Auf Basis aktueller wissenschaftlicher Standards (M.Sc. Psychologie i.A.) biete ich eine fundierte Standortbestimmung. Wir ordnen Symptome ein und erstellen einen Fahrplan, der zu Ihrer Situation passt."
   }
 ];
 
@@ -188,7 +188,7 @@ const Angebot = () => {
                       Einzelbegleitung
                     </h3>
                     <p className="text-muted-foreground leading-relaxed text-center mb-8">
-                      Psychologische Beratung, Gestalttherapie & Coaching. Ideal für akute Anliegen oder zum Kennenlernen.
+                      Psychologische Beratung (i.A.), Gestalttherapie & Coaching. Ideal für akute Anliegen.
                     </p>
                     <Link to="/kontakt" className="block">
                       <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
@@ -209,7 +209,7 @@ const Angebot = () => {
                       Intensive Zusammenarbeit
                     </h3>
                     <p className="text-muted-foreground leading-relaxed text-center mb-8">
-                      Veränderung braucht Zeit. Für tiefgreifende Themen (Holomotion) vereinbaren wir einen festen Rhythmus, der Halt gibt. Abrechnung erfolgt flexibel pro Sitzung.
+                      Veränderung braucht Zeit. Für tiefgreifende Themen vereinbaren wir einen festen Rhythmus. Abrechnung flexibel pro Sitzung.
                     </p>
                     <Link to="/kontakt" className="block">
                       <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
