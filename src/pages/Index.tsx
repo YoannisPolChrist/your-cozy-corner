@@ -7,7 +7,7 @@ import { ArrowRight, Heart, Brain, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import johannesPortrait from "@/assets/johannes-portrait.png";
-import johannesMeet from "@/assets/johannes-meet.png";
+import johannesMeet from "@/assets/johannes-meet.jpg";
 import { goldFrameVariants, imageVariants, viewportSettings } from "@/lib/animations";
 import { Footer } from "@/components/Footer";
 
