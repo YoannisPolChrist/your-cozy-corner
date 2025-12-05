@@ -50,7 +50,7 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
 
   // Position classes - slightly offset from center
   const positionClasses = {
-    left: 'items-center justify-center -translate-x-[10%]',
+    left: 'items-center justify-center -translate-x-[25%]',
     center: 'items-center justify-center',
     right: 'items-center justify-center translate-x-[10%]'
   };
