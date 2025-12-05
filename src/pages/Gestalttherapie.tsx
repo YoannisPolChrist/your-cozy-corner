@@ -90,7 +90,7 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
           >
             {/* Glassmorphism Card */}
             <div 
-              className="p-8 md:p-10 rounded-2xl shadow-2xl"
+              className="p-6 md:p-8 rounded-2xl shadow-2xl"
               style={{
                 background: 'rgba(255, 255, 255, 0.9)',
                 backdropFilter: 'blur(16px)',
@@ -99,11 +99,11 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
               }}
             >
               <h2 
-                className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-5 text-center"
+                className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-primary mb-4 text-center"
               >
                 {title}
               </h2>
-              <div className="text-foreground/80 text-base md:text-lg leading-relaxed">
+              <div className="text-foreground/80 text-sm md:text-base leading-relaxed">
                 {content}
               </div>
             </div>
