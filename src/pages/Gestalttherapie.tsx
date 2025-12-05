@@ -2,7 +2,8 @@ import { Navigation } from "@/components/Navigation";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { AnimatedSection, AnimatedItem, StaggerContainer } from "@/components/AnimatedSection";
-import { Hand, Brain, Palette } from "lucide-react";
+import { Hand, Brain, Palette, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import gestaltKontaktzyklus from "@/assets/gestalt-kontaktzyklus.png";
 import ressourcenUnterstuetzung from "@/assets/ressourcen-unterstuetzung.png";
 import gestaltVideo from "@/assets/gestalt-video.mp4";
@@ -350,29 +351,32 @@ const Gestalttherapie = () => {
         </section>
 
         {/* CTA with gradient */}
-        <section className="py-24 md:py-28 text-white relative overflow-hidden bg-gradient-cta">
+        <AnimatedSection className="py-28 md:py-36 bg-gradient-cta text-white relative overflow-hidden">
           {/* Subtle gradient overlay for depth */}
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-teal-navy/30" />
-          
           <div className="container mx-auto px-4 text-center relative z-10">
-            <AnimatedSection>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-white">
-                Neugierig geworden?
-              </h2>
-              <p className="text-white/85 mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
-                Vereinbaren Sie ein unverbindliches Erstgespräch und erfahren Sie, 
-                wie Gestalttherapie Ihnen helfen kann.
-              </p>
-              <motion.a 
-                href="/kontakt"
-                className="inline-flex items-center justify-center bg-gold-accent text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-gold-dark hover:shadow-gold hover:-translate-y-0.5"
-                whileHover={{ y: -2 }}
-              >
-                Kontakt aufnehmen
-              </motion.a>
-            </AnimatedSection>
+            <StaggerContainer className="max-w-2xl mx-auto">
+              <AnimatedItem>
+                <h2 className="font-heading text-3xl md:text-4xl mb-8 text-white">
+                  Neugierig geworden?
+                </h2>
+              </AnimatedItem>
+              <AnimatedItem>
+                <p className="text-white/85 text-lg mb-10">
+                  Vereinbaren Sie ein unverbindliches Erstgespräch und erfahren Sie, 
+                  wie Gestalttherapie Ihnen helfen kann.
+                </p>
+              </AnimatedItem>
+              <AnimatedItem>
+                <a href="/kontakt">
+                  <Button variant="gold" size="lg" className="font-semibold">
+                    Kontakt aufnehmen <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </a>
+              </AnimatedItem>
+            </StaggerContainer>
           </div>
-        </section>
+        </AnimatedSection>
       </main>
 
       <Footer />

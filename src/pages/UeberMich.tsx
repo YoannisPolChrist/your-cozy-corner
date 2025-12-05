@@ -251,7 +251,7 @@ const UeberMich = () => {
           whileInView="visible" 
           viewport={viewportSettings}
           variants={staggerContainer} 
-          className="py-24 md:py-28 relative overflow-hidden bg-gradient-cta"
+          className="py-28 md:py-36 relative overflow-hidden bg-gradient-cta"
         >
           {/* Subtle gradient overlay for depth */}
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-teal-navy/30" />
@@ -259,13 +259,13 @@ const UeberMich = () => {
           <div className="container mx-auto px-4 text-center relative z-10">
             <motion.h2 
               variants={fadeUp}
-              className="font-heading text-3xl md:text-4xl mb-6 text-white"
+              className="font-heading text-3xl md:text-4xl mb-8 text-white"
             >
               Neugierig geworden?
             </motion.h2>
             <motion.p 
               variants={fadeUp}
-              className="text-white/85 text-lg mb-8 max-w-2xl mx-auto"
+              className="text-white/85 text-lg mb-10 max-w-2xl mx-auto"
             >
               In einem kostenlosen Erstgespräch können wir herausfinden, 
               ob die Chemie stimmt und wie ich dich am besten unterstützen kann.
