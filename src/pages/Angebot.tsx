@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Heart, Brain, Compass, Activity, BarChart3, Map, Video, MapPin } from "lucide-react";
+import { Heart, Brain, Compass, Activity, BarChart3, Map, Video, MapPin, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Footer } from "@/components/Footer";
@@ -276,7 +276,7 @@ const Angebot = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 md:py-28 bg-gradient-cta relative overflow-hidden">
+        <section className="py-28 md:py-36 bg-gradient-cta relative overflow-hidden">
           {/* Subtle gradient overlay for depth */}
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-teal-navy/30" />
           <div className="container mx-auto px-4 text-center relative z-10">
@@ -285,16 +285,17 @@ const Angebot = () => {
               whileInView="visible"
               viewport={viewportSettings}
               variants={staggerContainer}
+              className="max-w-2xl mx-auto"
             >
               <motion.h2
                 variants={fadeUp}
-                className="font-heading text-3xl md:text-4xl text-white mb-6"
+                className="font-heading text-3xl md:text-4xl text-white mb-8"
               >
                 Bereit für den ersten Schritt?
               </motion.h2>
               <motion.p
                 variants={fadeUp}
-                className="text-white/85 text-lg mb-8 max-w-2xl mx-auto"
+                className="text-white/85 text-lg mb-10"
               >
                 Vereinbaren Sie ein kostenloses 20-minütiges Kennenlerngespräch, 
                 um herauszufinden, wie ich Sie unterstützen kann.
@@ -302,7 +303,7 @@ const Angebot = () => {
               <motion.div variants={fadeUp}>
                 <Link to="/kontakt">
                   <Button variant="gold" size="lg" className="font-semibold">
-                    Kontakt aufnehmen
+                    Kontakt aufnehmen <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
               </motion.div>
