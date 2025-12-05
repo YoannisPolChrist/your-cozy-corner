@@ -181,7 +181,7 @@ const Gestalttherapie = () => {
         />
 
         {/* Image 2: Gestalt-Kontaktzyklus - Warm paper background */}
-        <section className="py-24 md:py-32" style={{ backgroundColor: '#fdfbf7' }}>
+        <section className="py-24 md:py-32 bg-off-white">
           <div className="container mx-auto px-4">
             <AnimatedSection className="max-w-5xl mx-auto">
               <motion.img 
@@ -201,12 +201,11 @@ const Gestalttherapie = () => {
               </div>
               
               <motion.div 
-                className="p-10 md:p-14 rounded-2xl"
+                className="p-10 md:p-14 rounded-2xl bg-secondary"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                style={{ backgroundColor: '#f7f5f0' }}
               >
                 <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-8">
                   Der Gestalt-Kontaktzyklus
@@ -218,46 +217,45 @@ const Gestalttherapie = () => {
                 <StaggerContainer className="grid md:grid-cols-2 gap-5 mb-10">
                   <div className="space-y-4">
                     <AnimatedItem>
-                      <div className="p-5 rounded-xl border-l-3 border-accent" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px' }}>
+                      <div className="p-5 rounded-xl border-l-[3px] border-accent bg-primary/[0.04]">
                         <p className="text-foreground/80"><span className="text-accent font-semibold text-lg">1. Empfindung</span> <span className="text-sm text-foreground/50">(Körper)</span><br/><span className="text-sm text-foreground/70">Wahrnehmen eines inneren Bedürfnisses</span></p>
                       </div>
                     </AnimatedItem>
                     <AnimatedItem>
-                      <div className="p-5 rounded-xl border-l-3 border-accent" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px' }}>
+                      <div className="p-5 rounded-xl border-l-[3px] border-accent bg-primary/[0.04]">
                         <p className="text-foreground/80"><span className="text-accent font-semibold text-lg">2. Gewahrsein</span> <span className="text-sm text-foreground/50">(Geist)</span><br/><span className="text-sm text-foreground/70">Bewusstwerdung und Erkenntnis</span></p>
                       </div>
                     </AnimatedItem>
                     <AnimatedItem>
-                      <div className="p-5 rounded-xl border-l-3 border-accent" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px' }}>
+                      <div className="p-5 rounded-xl border-l-[3px] border-accent bg-primary/[0.04]">
                         <p className="text-foreground/80"><span className="text-accent font-semibold text-lg">3. Mobilisierung</span> <span className="text-sm text-foreground/50">(Handlung)</span><br/><span className="text-sm text-foreground/70">Energie und Motivation aufbauen</span></p>
                       </div>
                     </AnimatedItem>
                   </div>
                   <div className="space-y-4">
                     <AnimatedItem>
-                      <div className="p-5 rounded-xl border-l-3 border-accent" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px' }}>
+                      <div className="p-5 rounded-xl border-l-[3px] border-accent bg-primary/[0.04]">
                         <p className="text-foreground/80"><span className="text-accent font-semibold text-lg">4. Kontakt</span><br/><span className="text-sm text-foreground/70">Vollständiges Erleben im Moment</span></p>
                       </div>
                     </AnimatedItem>
                     <AnimatedItem>
-                      <div className="p-5 rounded-xl border-l-3 border-accent" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px' }}>
+                      <div className="p-5 rounded-xl border-l-[3px] border-accent bg-primary/[0.04]">
                         <p className="text-foreground/80"><span className="text-accent font-semibold text-lg">5. Integration</span> <span className="text-sm text-foreground/50">(Verdauen)</span><br/><span className="text-sm text-foreground/70">Verarbeitung und Einordnung</span></p>
                       </div>
                     </AnimatedItem>
                     <AnimatedItem>
-                      <div className="p-5 rounded-xl border-l-3 border-accent" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px' }}>
+                      <div className="p-5 rounded-xl border-l-[3px] border-accent bg-primary/[0.04]">
                         <p className="text-foreground/80"><span className="text-accent font-semibold text-lg">6. Rückzug</span> <span className="text-sm text-foreground/50">(Ruhe)</span><br/><span className="text-sm text-foreground/70">Regeneration und Neuorientierung</span></p>
                       </div>
                     </AnimatedItem>
                   </div>
                 </StaggerContainer>
                 <motion.div 
-                  className="p-6 rounded-xl border-l-4 border-primary"
+                  className="p-6 rounded-xl border-l-4 border-primary bg-primary/[0.08]"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.4 }}
-                  style={{ backgroundColor: 'rgba(30, 95, 116, 0.08)' }}
                 >
                   <p className="text-foreground/80 leading-relaxed">
                     <strong className="text-primary">Unterbrechungen</strong> dieses Zyklus – wie Deflektionen, 
@@ -293,12 +291,11 @@ const Gestalttherapie = () => {
               </div>
               
               <motion.div 
-                className="p-10 md:p-14 rounded-2xl"
+                className="p-10 md:p-14 rounded-2xl bg-secondary"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                style={{ backgroundColor: '#f7f5f0' }}
               >
                 <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-8">
                   Ressourcen & Unterstützung für Ihren Weg
@@ -309,8 +306,8 @@ const Gestalttherapie = () => {
                 </p>
                 <StaggerContainer className="grid md:grid-cols-3 gap-6">
                   <AnimatedItem>
-                    <div className="text-center p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)' }}>
-                      <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5" style={{ backgroundColor: 'rgba(197, 160, 101, 0.15)' }}>
+                    <div className="text-center p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 bg-primary/[0.04]">
+                      <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5 bg-accent/15">
                         <Hand className="w-7 h-7 text-accent" />
                       </div>
                       <h3 className="font-heading font-bold text-primary mb-4 text-xl">Äußere Stützen</h3>
@@ -321,8 +318,8 @@ const Gestalttherapie = () => {
                     </div>
                   </AnimatedItem>
                   <AnimatedItem>
-                    <div className="text-center p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)' }}>
-                      <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5" style={{ backgroundColor: 'rgba(197, 160, 101, 0.15)' }}>
+                    <div className="text-center p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 bg-primary/[0.04]">
+                      <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5 bg-accent/15">
                         <Brain className="w-7 h-7 text-accent" />
                       </div>
                       <h3 className="font-heading font-bold text-primary mb-4 text-xl">Innere Ressourcen</h3>
@@ -333,8 +330,8 @@ const Gestalttherapie = () => {
                     </div>
                   </AnimatedItem>
                   <AnimatedItem>
-                    <div className="text-center p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)' }}>
-                      <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5" style={{ backgroundColor: 'rgba(197, 160, 101, 0.15)' }}>
+                    <div className="text-center p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 bg-primary/[0.04]">
+                      <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5 bg-accent/15">
                         <Palette className="w-7 h-7 text-accent" />
                       </div>
                       <h3 className="font-heading font-bold text-primary mb-4 text-xl">Kreative Ausdrucksformen</h3>

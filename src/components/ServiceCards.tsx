@@ -21,10 +21,10 @@ const services = [
 
 export const ServiceCards = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-off-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-heading text-4xl md:text-5xl mb-4 text-gold-accent">
+          <h2 className="font-heading text-4xl md:text-5xl mb-4 text-primary">
             Mein Angebot
           </h2>
           <p className="text-xl text-muted-foreground italic">
@@ -38,11 +38,11 @@ export const ServiceCards = () => {
             return (
               <Card
                 key={index}
-                className="p-8 hover:shadow-teal transition-all duration-300 hover:-translate-y-1 animate-fade-in opacity-0 [animation-fill-mode:forwards] bg-gray-light border-none"
+                className="p-8 hover:shadow-teal transition-all duration-300 hover:-translate-y-1 animate-fade-in opacity-0 [animation-fill-mode:forwards] bg-card border-none shadow-soft"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="mb-6">
-                  <Icon className="w-12 h-12 text-gold-accent" strokeWidth={1.5} />
+                  <Icon className="w-12 h-12 text-accent" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-heading text-2xl mb-4 text-primary">
                   {service.title}

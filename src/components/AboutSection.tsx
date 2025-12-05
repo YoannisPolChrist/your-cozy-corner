@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export const AboutSection = () => {
   return (
-    <section id="uebermich" className="py-20 bg-gray-light">
+    <section id="uebermich" className="py-20 bg-off-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -30,7 +30,7 @@ export const AboutSection = () => {
                 </p>
               </Card>
 
-              <Button className="bg-gold-accent hover:bg-gold-accent/90 text-white font-semibold">
+              <Button variant="gold" className="font-semibold">
                 Mehr über mich erfahren <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>

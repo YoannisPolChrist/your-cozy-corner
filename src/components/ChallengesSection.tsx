@@ -21,10 +21,10 @@ const challenges = [
 
 export const ChallengesSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-off-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="font-heading text-4xl md:text-5xl mb-6 text-gold-accent">
+          <h2 className="font-heading text-4xl md:text-5xl mb-6 text-primary">
             Was belastet Sie?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -39,11 +39,11 @@ export const ChallengesSection = () => {
             return (
               <Card
                 key={index}
-                className="p-8 bg-gray-light border-none hover:shadow-teal transition-all duration-300 animate-fade-in opacity-0 [animation-fill-mode:forwards]"
+                className="p-8 bg-card border-none shadow-soft hover:shadow-teal transition-all duration-300 animate-fade-in opacity-0 [animation-fill-mode:forwards] hover:-translate-y-1"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="mb-6">
-                  <Icon className="w-12 h-12 text-gold-accent" strokeWidth={1.5} />
+                  <Icon className="w-12 h-12 text-accent" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-heading text-2xl mb-4 text-primary">
                   {challenge.title}

@@ -227,7 +227,7 @@ const Angebot = () => {
         </section>
 
         {/* Section 4: Flexible Formats */}
-        <section className="py-32 bg-[#f9f9f7]">
+        <section className="py-32 bg-off-white">
           <div className="container mx-auto px-4">
             <motion.div
               initial="hidden"
