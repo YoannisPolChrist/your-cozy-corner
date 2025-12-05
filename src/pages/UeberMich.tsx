@@ -188,26 +188,19 @@ const UeberMich = () => {
           className="py-32 bg-[#f9f9f7]"
         >
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center space-y-8">
-                <motion.h2 
-                  variants={fadeUp}
-                  className="font-heading text-[calc(1.875rem+3px)] md:text-[calc(2.25rem+3px)] text-primary"
-                >
-                  Und sonst so?
-                </motion.h2>
-                
-                {/* Circular Image with Gold Frame - Cinematic Parallax */}
-                <motion.div className="relative mx-auto w-48 h-48 md:w-64 md:h-64">
-                  {/* Gold Frame - Slides out with delay */}
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+                {/* Image with Gold Frame - Cinematic Parallax */}
+                <motion.div className="relative">
+                  {/* Gold Frame - Slides out from behind with delay */}
                   <motion.div 
                     variants={goldFrameVariants}
-                    className="absolute bottom-[10px] right-[10px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-full" 
+                    className="absolute bottom-[10px] right-[10px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-2xl" 
                   />
                   {/* Main Image */}
                   <motion.div 
                     variants={imageVariants}
-                    className="relative w-full h-full rounded-full overflow-hidden shadow-xl"
+                    className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl"
                   >
                     <img 
                       src={johannesLaughing} 
@@ -217,20 +210,35 @@ const UeberMich = () => {
                   </motion.div>
                 </motion.div>
 
-                <motion.div 
-                  variants={fadeUp}
-                  className="max-w-2xl mx-auto space-y-4 text-muted-foreground leading-relaxed"
-                >
-                  <p>
-                    Wer mich kennt, weiß: Ich nehme meine Arbeit ernst, aber mich selbst nicht zu sehr. 
-                    Ich glaube an die Kraft von Humor, Leichtigkeit und echten Begegnungen.
-                  </p>
-                  <p>
-                    Abseits der Therapie findest du mich beim Wandern in den Bergen, beim Kochen mit 
-                    Freunden oder versunken in ein gutes Buch. Ich bin überzeugt, dass ein erfülltes 
-                    Leben aus vielen kleinen Momenten der Verbundenheit besteht – mit uns selbst und 
-                    mit anderen.
-                  </p>
+                {/* Text Content */}
+                <motion.div variants={staggerContainer} className="space-y-6">
+                  <motion.span 
+                    variants={fadeUp}
+                    className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
+                  >
+                    ABSEITS DER ARBEIT
+                  </motion.span>
+                  <motion.h2 
+                    variants={fadeUp}
+                    className="font-heading text-[calc(1.875rem+3px)] md:text-[calc(2.25rem+3px)] text-primary leading-tight"
+                  >
+                    Und sonst so?
+                  </motion.h2>
+                  <motion.div 
+                    variants={fadeUp}
+                    className="space-y-4 text-muted-foreground leading-relaxed"
+                  >
+                    <p>
+                      Wer mich kennt, weiß: Ich nehme meine Arbeit ernst, aber mich selbst nicht zu sehr. 
+                      Ich glaube an die Kraft von Humor, Leichtigkeit und echten Begegnungen.
+                    </p>
+                    <p>
+                      Abseits der Therapie findest du mich beim Wandern in den Bergen, beim Kochen mit 
+                      Freunden oder versunken in ein gutes Buch. Ich bin überzeugt, dass ein erfülltes 
+                      Leben aus vielen kleinen Momenten der Verbundenheit besteht – mit uns selbst und 
+                      mit anderen.
+                    </p>
+                  </motion.div>
                 </motion.div>
               </div>
             </div>
