@@ -242,6 +242,10 @@ const Index = () => {
                   src={johannesPortrait} 
                   alt="Johannes Christ - Gestalttherapeut und Coach"
                   className="relative z-10 w-full aspect-[4/5] object-cover object-center rounded-2xl shadow-xl"
+                  width={528}
+                  height={683}
+                  loading="lazy"
+                  decoding="async"
                 />
               </motion.div>
               
