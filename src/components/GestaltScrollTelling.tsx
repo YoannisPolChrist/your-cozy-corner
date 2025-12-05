@@ -40,7 +40,10 @@ export const GestaltScrollTelling = () => {
             </p>
             <StaggerContainer className="grid md:grid-cols-3 gap-6 mb-10">
               <AnimatedItem>
-                <div className="p-6 rounded-xl border-l-3" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--accent))' }}>
+                <div 
+                  className="p-6 rounded-xl border-l-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-default" 
+                  style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--accent))' }}
+                >
                   <h3 className="text-accent font-semibold text-xl mb-3">1. Gewahrsein</h3>
                   <p className="text-sm text-foreground/60 mb-2 italic">Spüren statt Denken</p>
                   <p className="text-foreground/70 text-sm leading-relaxed">
@@ -49,7 +52,10 @@ export const GestaltScrollTelling = () => {
                 </div>
               </AnimatedItem>
               <AnimatedItem>
-                <div className="p-6 rounded-xl border-l-3" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--accent))' }}>
+                <div 
+                  className="p-6 rounded-xl border-l-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-default" 
+                  style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--accent))' }}
+                >
                   <h3 className="text-accent font-semibold text-xl mb-3">2. Ganzheitlichkeit</h3>
                   <p className="text-sm text-foreground/60 mb-2 italic">Körper, Seele, Geist & Umfeld</p>
                   <p className="text-foreground/70 text-sm leading-relaxed">
@@ -58,7 +64,10 @@ export const GestaltScrollTelling = () => {
                 </div>
               </AnimatedItem>
               <AnimatedItem>
-                <div className="p-6 rounded-xl border-l-3" style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--accent))' }}>
+                <div 
+                  className="p-6 rounded-xl border-l-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-default" 
+                  style={{ backgroundColor: 'rgba(30, 95, 116, 0.04)', borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--accent))' }}
+                >
                   <h3 className="text-accent font-semibold text-xl mb-3">3. Kontakt & Dialog</h3>
                   <p className="text-sm text-foreground/60 mb-2 italic">Echte Begegnung auf Augenhöhe</p>
                   <p className="text-foreground/70 text-sm leading-relaxed">
