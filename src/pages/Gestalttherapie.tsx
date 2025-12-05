@@ -86,7 +86,7 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
               duration: 0.9, 
               ease: cinematicEase
             }}
-            className="max-w-md lg:max-w-lg"
+            className="max-w-sm lg:max-w-md"
           >
             {/* Glassmorphism Card */}
             <div 
