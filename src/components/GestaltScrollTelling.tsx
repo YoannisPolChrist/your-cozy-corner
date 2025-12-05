@@ -146,8 +146,18 @@ const PrincipleCard = ({
     scale,
     opacity,
     zIndex
-  }} className="absolute w-full max-w-[280px] md:max-w-[320px] lg:max-w-[360px] aspect-[9/14]">
-      
+  }} className="absolute w-full max-w-[280px] md:max-w-[320px] lg:max-w-[360px]">
+      <div className="relative">
+        <img 
+          src={principle.image} 
+          alt={principle.title}
+          className="w-full aspect-[3/4] object-cover rounded-2xl shadow-2xl"
+        />
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+        <div className="absolute bottom-4 left-4 right-4">
+          <h4 className="font-heading text-xl text-white drop-shadow-lg">{principle.title}</h4>
+        </div>
+      </div>
     </motion.div>;
 };
 export default GestaltScrollTelling;
