@@ -9,6 +9,7 @@ import ressourcenUnterstuetzung from "@/assets/ressourcen-unterstuetzung.png";
 import gestaltVideo from "@/assets/gestalt-video.mp4";
 import gestaltVideo2 from "@/assets/gestalt-video-2.mp4";
 import gestaltVideo3 from "@/assets/gestalt-video-3.mp4";
+import { cinematicEase, viewportSettings } from "@/lib/animations";
 
 interface VideoSectionProps {
   videoSrc: string;
@@ -75,14 +76,14 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
         
         <div className={`absolute inset-0 flex ${positionClasses[position]} p-4`}>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ 
               opacity: isVisible ? 1 : 0, 
-              y: isVisible ? 0 : 30 
+              y: isVisible ? 0 : 40 
             }}
             transition={{ 
-              duration: 0.8, 
-              ease: [0.25, 0.1, 0.25, 1]
+              duration: 0.9, 
+              ease: cinematicEase
             }}
             className="max-w-md lg:max-w-lg"
           >
@@ -126,18 +127,18 @@ const Gestalttherapie = () => {
                 src={gestalttherapieIntro} 
                 alt="Gestalttherapie - Humanistisches Erleben und Selbstentfaltung" 
                 className="w-full rounded-xl mb-12"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
+                viewport={viewportSettings}
+                transition={{ duration: 0.9, ease: cinematicEase }}
                 style={{ boxShadow: '0 10px 40px rgba(30, 95, 116, 0.1)' }}
               />
               <motion.div 
                 className="p-10 md:p-14 rounded-2xl"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={viewportSettings}
+                transition={{ duration: 0.9, delay: 0.15, ease: cinematicEase }}
                 style={{ backgroundColor: '#f7f5f0' }}
               >
                 <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-8">

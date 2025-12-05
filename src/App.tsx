@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { SmoothScroll } from "@/components/SmoothScroll";
 import Index from "./pages/Index";
 import Gestalttherapie from "./pages/Gestalttherapie";
 import Angebot from "./pages/Angebot";
@@ -17,17 +18,19 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/gestalttherapie" element={<Gestalttherapie />} />
-          <Route path="/angebot" element={<Angebot />} />
-          <Route path="/ueber-mich" element={<UeberMich />} />
-          <Route path="/kontakt" element={<Kontakt />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <SmoothScroll>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/gestalttherapie" element={<Gestalttherapie />} />
+            <Route path="/angebot" element={<Angebot />} />
+            <Route path="/ueber-mich" element={<UeberMich />} />
+            <Route path="/kontakt" element={<Kontakt />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </SmoothScroll>
     </TooltipProvider>
   </QueryClientProvider>
 );

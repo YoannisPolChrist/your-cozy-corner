@@ -4,23 +4,16 @@ import { Button } from "@/components/ui/button";
 import { Heart, Brain, Compass, Activity, BarChart3, Map, Video, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-
-const fadeUpVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, ease: "easeOut" as const }
-  }
-};
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.2, delayChildren: 0.1 }
-  }
-};
+import { 
+  fadeUp, 
+  staggerContainer, 
+  cardStagger, 
+  cardItem, 
+  iconStagger, 
+  iconItem,
+  viewportSettings,
+  cinematicEase
+} from "@/lib/animations";
 
 const services = [
   {
@@ -72,23 +65,26 @@ const Angebot = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={viewportSettings}
               variants={staggerContainer}
               className="max-w-6xl mx-auto"
             >
               <motion.h2
-                variants={fadeUpVariants}
+                variants={fadeUp}
                 className="font-heading text-[2.25rem] md:text-[3.1875rem] text-primary text-center mb-16"
               >
                 Meine Leistungen
               </motion.h2>
               
-              <div className="grid md:grid-cols-3 gap-16">
+              <motion.div 
+                variants={cardStagger}
+                className="grid md:grid-cols-3 gap-8 md:gap-16"
+              >
                 {services.map((service, index) => {
                   const Icon = service.icon;
                   return (
-                    <motion.div key={index} variants={fadeUpVariants}>
-                      <Card className="p-8 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500 hover:-translate-y-1">
+                    <motion.div key={index} variants={cardItem}>
+                      <Card className="p-8 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500 hover:-translate-y-2">
                         <div className="mb-6">
                           <Icon className="w-12 h-12 text-accent stroke-[1.5]" />
                         </div>
@@ -105,7 +101,7 @@ const Angebot = () => {
                     </motion.div>
                   );
                 })}
-              </div>
+              </motion.div>
             </motion.div>
           </div>
         </section>
@@ -116,30 +112,33 @@ const Angebot = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={viewportSettings}
               variants={staggerContainer}
               className="max-w-6xl mx-auto"
             >
               <motion.p
-                variants={fadeUpVariants}
+                variants={fadeUp}
                 className="text-[#c5a065] text-xs uppercase tracking-widest text-center mb-4"
               >
                 PHASE 1: DIE STANDORTBESTIMMUNG
               </motion.p>
               <motion.h2
-                variants={fadeUpVariants}
+                variants={fadeUp}
                 className="font-heading text-[2.25rem] md:text-[3.1875rem] text-primary-foreground text-center mb-16"
               >
                 Wir können nur verändern, was wir verstehen.
               </motion.h2>
               
-              <div className="grid md:grid-cols-3 gap-16">
+              <motion.div 
+                variants={iconStagger}
+                className="grid md:grid-cols-3 gap-8 md:gap-16"
+              >
                 {checkupFeatures.map((feature, index) => {
                   const Icon = feature.icon;
                   return (
                     <motion.div
                       key={index}
-                      variants={fadeUpVariants}
+                      variants={iconItem}
                       className="text-center"
                     >
                       <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary-foreground/10 flex items-center justify-center">
@@ -154,7 +153,7 @@ const Angebot = () => {
                     </motion.div>
                   );
                 })}
-              </div>
+              </motion.div>
             </motion.div>
           </div>
         </section>
@@ -165,20 +164,23 @@ const Angebot = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={viewportSettings}
               variants={staggerContainer}
               className="max-w-5xl mx-auto"
             >
               <motion.h2
-                variants={fadeUpVariants}
+                variants={fadeUp}
                 className="font-heading text-[2.25rem] md:text-[3.1875rem] text-primary text-center mb-16"
               >
                 Konditionen & Zusammenarbeit
               </motion.h2>
               
-              <div className="grid md:grid-cols-2 gap-16">
+              <motion.div 
+                variants={cardStagger}
+                className="grid md:grid-cols-2 gap-8 md:gap-16"
+              >
                 {/* Card 1: Einzelbegleitung */}
-                <motion.div variants={fadeUpVariants}>
+                <motion.div variants={cardItem}>
                   <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500">
                     <div className="text-center mb-6">
                       <span className="font-heading text-6xl text-primary">50€</span>
@@ -199,7 +201,7 @@ const Angebot = () => {
                 </motion.div>
 
                 {/* Card 2: Intensive Zusammenarbeit */}
-                <motion.div variants={fadeUpVariants}>
+                <motion.div variants={cardItem}>
                   <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500">
                     <div className="text-center mb-6">
                       <span className="font-heading text-4xl md:text-5xl text-primary">Individueller Rahmen</span>
@@ -218,7 +220,7 @@ const Angebot = () => {
                     </Link>
                   </Card>
                 </motion.div>
-              </div>
+              </motion.div>
             </motion.div>
           </div>
         </section>
@@ -229,19 +231,22 @@ const Angebot = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={viewportSettings}
               variants={staggerContainer}
               className="max-w-4xl mx-auto"
             >
               <motion.h2
-                variants={fadeUpVariants}
+                variants={fadeUp}
                 className="font-heading text-[2.25rem] md:text-[3.1875rem] text-primary text-center mb-16"
               >
                 Flexible Formate
               </motion.h2>
               
-              <div className="grid md:grid-cols-2 gap-16">
-                <motion.div variants={fadeUpVariants} className="flex items-start gap-6">
+              <motion.div 
+                variants={cardStagger}
+                className="grid md:grid-cols-2 gap-8 md:gap-16"
+              >
+                <motion.div variants={cardItem} className="flex items-start gap-6">
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Video className="w-7 h-7 text-accent stroke-[1.5]" />
                   </div>
@@ -253,7 +258,7 @@ const Angebot = () => {
                   </div>
                 </motion.div>
 
-                <motion.div variants={fadeUpVariants} className="flex items-start gap-6">
+                <motion.div variants={cardItem} className="flex items-start gap-6">
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-7 h-7 text-accent stroke-[1.5]" />
                   </div>
@@ -264,7 +269,7 @@ const Angebot = () => {
                     </p>
                   </div>
                 </motion.div>
-              </div>
+              </motion.div>
             </motion.div>
           </div>
         </section>
@@ -275,23 +280,23 @@ const Angebot = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={viewportSettings}
               variants={staggerContainer}
             >
               <motion.h2
-                variants={fadeUpVariants}
+                variants={fadeUp}
                 className="font-heading text-3xl md:text-4xl text-primary-foreground mb-6"
               >
                 Bereit für den ersten Schritt?
               </motion.h2>
               <motion.p
-                variants={fadeUpVariants}
+                variants={fadeUp}
                 className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto"
               >
                 Vereinbaren Sie ein kostenloses 20-minütiges Kennenlerngespräch, 
                 um herauszufinden, wie ich Sie unterstützen kann.
               </motion.p>
-              <motion.div variants={fadeUpVariants}>
+              <motion.div variants={fadeUp}>
                 <Link to="/kontakt">
                   <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
                     Kontakt aufnehmen
