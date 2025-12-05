@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import conversationWindow from "@/assets/conversation-window.jpg";
 import johannesLaughing from "@/assets/johannes-laughing.png";
+import { Footer } from "@/components/Footer";
 import { 
   fadeUp, 
   staggerContainer, 
@@ -282,16 +283,7 @@ const UeberMich = () => {
         </motion.section>
       </main>
 
-      <footer className="bg-primary text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p className="mb-4">© {new Date().getFullYear()} Johannes Christ · Gestalttherapie & Coaching</p>
-          <div className="space-x-4 text-sm text-white/80">
-            <a href="#" className="hover:text-[#c5a065] transition-colors">Datenschutzerklärung</a>
-            <span>·</span>
-            <a href="#" className="hover:text-[#c5a065] transition-colors">Impressum</a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

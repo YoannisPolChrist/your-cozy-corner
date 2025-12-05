@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import johannesPortrait from "@/assets/johannes-portrait.png";
 import { goldFrameVariants, imageVariants, viewportSettings } from "@/lib/animations";
+import { Footer } from "@/components/Footer";
 
 const painPoints = [
   {
@@ -314,20 +315,7 @@ const Index = () => {
         </AnimatedSection>
       </main>
 
-      <footer className="bg-primary text-white py-12">
-        <div className="container mx-auto px-4 text-center">
-          <p className="mb-5">© {new Date().getFullYear()} Johannes Christ · Gestalttherapie & Coaching</p>
-          <div className="space-x-4 text-sm text-white/80">
-            <a href="#" className="hover:text-gold-accent transition-colors">
-              Datenschutzerklärung
-            </a>
-            <span>·</span>
-            <a href="#" className="hover:text-gold-accent transition-colors">
-              Impressum
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

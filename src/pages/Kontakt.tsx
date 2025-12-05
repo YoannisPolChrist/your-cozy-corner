@@ -8,6 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { motion } from "framer-motion";
+import { Footer } from "@/components/Footer";
 import { 
   fadeUp, 
   staggerContainer, 
@@ -217,16 +218,7 @@ const Kontakt = () => {
         </motion.section>
       </main>
 
-      <footer className="bg-primary text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p className="mb-4">© {new Date().getFullYear()} Johannes Christ · Gestalttherapie & Coaching</p>
-          <div className="space-x-4 text-sm text-white/80">
-            <a href="#" className="hover:text-gold-accent transition-colors">Datenschutzerklärung</a>
-            <span>·</span>
-            <a href="#" className="hover:text-gold-accent transition-colors">Impressum</a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
