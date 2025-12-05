@@ -23,27 +23,6 @@ html.lenis, html.lenis body {
   pointer-events: none;
 }
 
-/* Performance optimizations for animated elements */
-.will-change-transform {
-  will-change: transform;
-}
-
-.will-change-opacity {
-  will-change: opacity;
-}
-
-/* Optimize scroll-driven animations */
-[style*="transform"] {
-  will-change: transform;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-/* Reduce reflow on animated sections */
-section {
-  contain: layout style;
-}
-
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
