@@ -43,8 +43,8 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
         ));
         setScrollProgress(progress);
         
-        // Set visibility for Framer Motion - shorter visible duration
-        const shouldBeVisible = progress > 0.04 && progress < 0.55;
+        // Set visibility for Framer Motion - extended visible duration
+        const shouldBeVisible = progress > 0.04 && progress < 0.68;
         setIsVisible(shouldBeVisible);
       }
     };
@@ -104,7 +104,7 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
     <section 
       ref={sectionRef}
       id={sectionId}
-      className="relative h-[300vh]"
+      className="relative h-[350vh]"
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden">
         <video
@@ -113,7 +113,7 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          className="absolute inset-0 w-full h-full object-cover object-top"
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
