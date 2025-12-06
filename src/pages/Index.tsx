@@ -227,13 +227,37 @@ const Index = () => {
                   </Link>
                 </AnimatedItem>
                 <AnimatedItem className="relative flex justify-center">
-                  {/* Clean Quote Card */}
-                  <div className="relative w-72 h-72 md:w-80 md:h-80 flex items-center justify-center">
-                    <div 
-                      className="absolute inset-0 backdrop-blur-md border border-white/20 rounded-2xl"
+                  {/* Organic Breathing Quote Card */}
+                  <motion.div 
+                    className="relative w-72 h-72 md:w-80 md:h-80 flex items-center justify-center"
+                    animate={{
+                      scale: [1, 1.02, 1],
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    <motion.div 
+                      className="absolute inset-0 backdrop-blur-md border border-white/20"
                       style={{
                         background: 'rgba(255, 255, 255, 0.08)',
-                        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)'
+                        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
+                        borderRadius: '60% 40% 50% 50% / 50% 60% 40% 50%',
+                      }}
+                      animate={{
+                        borderRadius: [
+                          '60% 40% 50% 50% / 50% 60% 40% 50%',
+                          '50% 60% 40% 60% / 60% 40% 60% 40%',
+                          '40% 50% 60% 50% / 50% 50% 50% 60%',
+                          '60% 40% 50% 50% / 50% 60% 40% 50%',
+                        ],
+                      }}
+                      transition={{
+                        duration: 8,
+                        repeat: Infinity,
+                        ease: "easeInOut",
                       }}
                     />
                     <div className="relative z-10 text-center px-8">
@@ -244,7 +268,7 @@ const Index = () => {
                         Sei ganz hier, ganz jetzt – der Rest folgt von selbst.
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
                 </AnimatedItem>
               </StaggerContainer>
             </div>
