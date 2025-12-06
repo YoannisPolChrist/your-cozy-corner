@@ -109,18 +109,16 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
       className="relative h-[350vh]"
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden">
-        <div className="absolute inset-0 w-full h-[120%] -top-[10%]">
-          <video
-            ref={videoRef}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
-          >
-            <source src={videoSrc} type="video/mp4" />
-          </video>
-        </div>
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        >
+          <source src={videoSrc} type="video/mp4" />
+        </video>
         
         <div className={`absolute inset-0 flex ${positionClasses[position]} p-4`}>
           <motion.div
