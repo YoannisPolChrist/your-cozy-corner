@@ -111,8 +111,8 @@ const Index = () => {
             y: 0
           }} viewport={{
             once: true,
-            amount: 0.1,
-            margin: "-100px 0px 0px 0px"
+            amount: 0.3,
+            margin: "-300px 0px 0px 0px"
           }} transition={{
             duration: 0.8,
             ease: [0.16, 1, 0.3, 1]
