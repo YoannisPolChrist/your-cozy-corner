@@ -105,16 +105,19 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <motion.div initial={{
             opacity: 0,
-            y: 50
+            y: 80,
+            scale: 0.95
           }} whileInView={{
             opacity: 1,
-            y: 0
+            y: 0,
+            scale: 1
           }} viewport={{
             once: true,
-            amount: 0.15
+            amount: 0.4,
+            margin: "-100px"
           }} transition={{
-            duration: 1,
-            ease: [0.2, 0.8, 0.2, 1]
+            duration: 0.6,
+            ease: [0.25, 0.1, 0.25, 1]
           }} className="max-w-5xl mx-auto -mt-28 md:-mt-36 lg:-mt-40">
               {/* Warm Glassmorphism Card */}
               <div className="rounded-3xl md:rounded-[2rem] p-8 md:p-12 lg:p-14 shadow-2xl border border-white/40" style={{
