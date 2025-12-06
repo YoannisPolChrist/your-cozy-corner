@@ -5,7 +5,8 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Brain, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import johannesPortrait from "@/assets/johannes-portrait.png";
 import johannesMeet from "@/assets/johannes-meet.jpg";
 import { goldFrameVariants, imageVariants, viewportSettings } from "@/lib/animations";
@@ -48,6 +49,76 @@ const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
+// Parallax component for Meet section
+const MeetParallaxImage = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["5%", "-5%"]);
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.08, 1, 1.08]);
+
+  return (
+    <motion.div 
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6 }}
+      className="md:col-span-2 order-1 overflow-hidden rounded-xl aspect-[4/5]"
+    >
+      <motion.img 
+        src={johannesMeet} 
+        alt="Johannes Christ – Gestalttherapeut und Coach, freundlicher Blickkontakt"
+        className="w-full h-full object-cover object-top"
+        style={{ y, scale }}
+      />
+    </motion.div>
+  );
+};
+
+// Parallax component for About section
+const AboutParallaxImage = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["5%", "-5%"]);
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.08, 1, 1.08]);
+
+  return (
+    <motion.div 
+      ref={ref}
+      initial="hidden"
+      whileInView="visible"
+      viewport={viewportSettings}
+      className="relative order-2 md:order-1"
+    >
+      {/* Gold Frame - Slides out from behind with delay */}
+      <motion.div 
+        variants={goldFrameVariants}
+        className="absolute bottom-[-10px] right-[-10px] md:bottom-[-20px] md:right-[-20px] w-full h-full bg-accent rounded-2xl"
+      />
+      {/* Main image with parallax */}
+      <div className="relative z-10 overflow-hidden rounded-2xl shadow-xl aspect-[4/5]">
+        <motion.img 
+          variants={imageVariants}
+          src={johannesPortrait} 
+          alt="Johannes Christ - Gestalttherapeut und Coach"
+          className="w-full h-full object-cover object-center"
+          style={{ y, scale }}
+          width={528}
+          height={683}
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </motion.div>
+  );
+};
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -60,20 +131,8 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="grid md:grid-cols-5 gap-10 md:gap-16 items-center">
-                {/* Portrait - 40% */}
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.6 }}
-                  className="md:col-span-2 order-1"
-                >
-                  <img 
-                    src={johannesMeet} 
-                    alt="Johannes Christ – Gestalttherapeut und Coach, freundlicher Blickkontakt"
-                    className="w-full aspect-[4/5] object-cover object-top rounded-xl"
-                  />
-                </motion.div>
+                {/* Portrait - 40% with Parallax */}
+                <MeetParallaxImage />
 
                 {/* Content - 60% */}
                 <motion.div 
@@ -280,29 +339,7 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center max-w-6xl mx-auto">
               {/* Left Side - Image with Gold Frame Effect - Cinematic Parallax */}
-              <motion.div 
-                initial="hidden"
-                whileInView="visible"
-                viewport={viewportSettings}
-                className="relative order-2 md:order-1"
-              >
-                {/* Gold Frame - Slides out from behind with delay */}
-                <motion.div 
-                  variants={goldFrameVariants}
-                  className="absolute bottom-[-10px] right-[-10px] md:bottom-[-20px] md:right-[-20px] w-full h-full bg-accent rounded-2xl"
-                />
-                {/* Main image */}
-                <motion.img 
-                  variants={imageVariants}
-                  src={johannesPortrait} 
-                  alt="Johannes Christ - Gestalttherapeut und Coach"
-                  className="relative z-10 w-full aspect-[4/5] object-cover object-center rounded-2xl shadow-xl"
-                  width={528}
-                  height={683}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </motion.div>
+              <AboutParallaxImage />
               
               {/* Right Side - Text */}
               <StaggerContainer className="order-1 md:order-2">
