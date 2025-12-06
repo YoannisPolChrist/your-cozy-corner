@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import johannesPortrait from "@/assets/johannes-portrait.png";
-import johannesMeet from "@/assets/johannes-meet.jpg";
+import johannesMeet from "@/assets/johannes-stage.jpg";
 import { goldFrameVariants, imageVariants, viewportSettings } from "@/lib/animations";
 import { Footer } from "@/components/Footer";
 
