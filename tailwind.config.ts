@@ -64,6 +64,8 @@ export default {
         "gold-dark": "hsl(var(--gold-dark))",
         "gray-light": "hsl(var(--gray-light))",
         "off-white": "hsl(var(--off-white))",
+        "warm-sand": "hsl(var(--warm-sand))",
+        "warm-cream": "hsl(var(--warm-cream))",
       },
       fontFamily: {
         heading: ['Playfair Display', 'serif'],
