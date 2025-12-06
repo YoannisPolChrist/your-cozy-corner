@@ -113,7 +113,7 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-85"
+          className="absolute inset-0 w-full h-full object-cover"
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
@@ -131,14 +131,14 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
             }}
             className="max-w-sm lg:max-w-md"
           >
-            {/* Glassmorphism Card */}
+            {/* Enhanced Card with better contrast */}
             <div 
-              className="p-6 md:p-8 rounded-2xl shadow-2xl"
+              className="p-6 md:p-8 rounded-2xl"
               style={{
-                background: 'rgba(255, 255, 255, 0.9)',
-                backdropFilter: 'blur(16px)',
-                WebkitBackdropFilter: 'blur(16px)',
-                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
+                background: 'rgba(255, 255, 255, 0.97)',
+                backdropFilter: 'blur(20px)',
+                WebkitBackdropFilter: 'blur(20px)',
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.5)'
               }}
             >
               <h2 
@@ -146,7 +146,7 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
               >
                 {title}
               </h2>
-              <div className="text-foreground/80 text-sm md:text-base leading-relaxed">
+              <div className="text-foreground text-sm md:text-base leading-relaxed">
                 {content}
               </div>
             </div>
