@@ -126,56 +126,94 @@ const Index = () => {
       <main>
         <Hero />
 
-        {/* Meet Johannes Section */}
-        <section className="py-16 md:py-24 bg-background">
+        {/* Meet Johannes Section - Overlapping Glassmorphism Card */}
+        <section className="relative z-10 pb-16 md:pb-24">
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="grid md:grid-cols-5 gap-10 md:gap-16 items-center">
-                {/* Portrait - 40% with Parallax */}
-                <MeetParallaxImage />
+            <motion.div 
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
+              className="max-w-5xl mx-auto -mt-24 md:-mt-32"
+            >
+              {/* Glassmorphism Card */}
+              <div 
+                className="rounded-2xl md:rounded-3xl p-6 md:p-10 lg:p-12 shadow-2xl border border-white/30"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.85)',
+                  backdropFilter: 'blur(20px)',
+                  WebkitBackdropFilter: 'blur(20px)',
+                }}
+              >
+                <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
+                  {/* Portrait - Organic Shape */}
+                  <motion.div 
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="md:col-span-2 order-1"
+                  >
+                    <div className="relative">
+                      {/* Soft organic shadow/glow behind image */}
+                      <div 
+                        className="absolute inset-2 rounded-[2rem] bg-primary/10 blur-xl"
+                      />
+                      <div className="relative overflow-hidden rounded-[1.5rem] md:rounded-[2rem] shadow-lg aspect-[4/5]">
+                        <motion.img 
+                          src={johannesMeet} 
+                          alt="Johannes Christ – Gestalttherapeut und Coach, freundlicher Blickkontakt"
+                          className="w-full h-full object-cover object-top"
+                          whileHover={{ scale: 1.03 }}
+                          transition={{ duration: 0.4 }}
+                        />
+                      </div>
+                    </div>
+                  </motion.div>
 
-                {/* Content - 60% */}
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  className="md:col-span-3 order-2"
-                >
-                  <h2 className="font-heading text-2xl md:text-3xl text-primary mb-6">
-                    Johannes kennenlernen
-                  </h2>
-                  
-                  <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
-                    <p>
-                      Ich begleite Menschen, die spüren, dass etwas in Bewegung kommen darf – 
-                      auch wenn der Weg noch unklar ist.
+                  {/* Content */}
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="md:col-span-3 order-2"
+                  >
+                    <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl text-primary mb-6">
+                      Johannes kennenlernen
+                    </h2>
+                    
+                    <div className="space-y-4 text-gray-700 text-base md:text-lg leading-relaxed mb-6">
+                      <p>
+                        Ich begleite Menschen, die spüren, dass etwas in Bewegung kommen darf – 
+                        auch wenn der Weg noch unklar ist.
+                      </p>
+                      <p>
+                        Meine Arbeit ist geprägt von Ruhe, Präsenz und einem tiefen Vertrauen 
+                        in die Kraft des Augenblicks.
+                      </p>
+                    </div>
+
+                    <p className="text-sm text-gray-500 mb-8">
+                      Praxis in Frankfurt · Online & vor Ort
                     </p>
-                    <p>
-                      Meine Arbeit ist geprägt von Ruhe, Präsenz und einem tiefen Vertrauen 
-                      in die Kraft des Augenblicks.
-                    </p>
-                  </div>
 
-                  <p className="text-sm text-muted-foreground/80 mb-8">
-                    Praxis in Frankfurt · Online & vor Ort
-                  </p>
-
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Link to="/kontakt" onClick={scrollToTop}>
-                      <Button variant="gold" className="w-full sm:w-auto">
-                        Erstgespräch buchen
-                      </Button>
-                    </Link>
-                    <Link to="/ueber-mich" onClick={scrollToTop}>
-                      <Button variant="outline" className="w-full sm:w-auto border-primary/20 text-primary hover:bg-primary/5">
-                        Mehr erfahren
-                      </Button>
-                    </Link>
-                  </div>
-                </motion.div>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <Link to="/kontakt" onClick={scrollToTop}>
+                        <Button variant="gold" className="w-full sm:w-auto">
+                          Erstgespräch buchen
+                        </Button>
+                      </Link>
+                      <Link to="/ueber-mich" onClick={scrollToTop}>
+                        <Button variant="outline" className="w-full sm:w-auto border-primary/30 text-primary hover:bg-primary/5">
+                          Mehr erfahren
+                        </Button>
+                      </Link>
+                    </div>
+                  </motion.div>
+                </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
