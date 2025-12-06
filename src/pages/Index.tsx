@@ -126,46 +126,65 @@ const Index = () => {
       <main>
         <Hero />
 
-        {/* Meet Johannes Section - Overlapping Glassmorphism Card */}
-        <section className="relative z-10 pb-16 md:pb-24">
+        {/* Meet Johannes Section - Overlapping Organic Card */}
+        <section className="relative z-10 pb-20 md:pb-28 bg-gradient-to-b from-transparent via-warm-sand/50 to-warm-sand">
           <div className="container mx-auto px-4">
             <motion.div 
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
-              className="max-w-5xl mx-auto -mt-24 md:-mt-32"
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 1, ease: [0.2, 0.8, 0.2, 1] }}
+              className="max-w-5xl mx-auto -mt-28 md:-mt-36 lg:-mt-40"
             >
-              {/* Glassmorphism Card */}
+              {/* Warm Glassmorphism Card */}
               <div 
-                className="rounded-2xl md:rounded-3xl p-6 md:p-10 lg:p-12 shadow-2xl border border-white/30"
+                className="rounded-3xl md:rounded-[2rem] p-8 md:p-12 lg:p-14 shadow-2xl border border-white/40"
                 style={{
-                  background: 'rgba(255, 255, 255, 0.85)',
-                  backdropFilter: 'blur(20px)',
-                  WebkitBackdropFilter: 'blur(20px)',
+                  background: 'linear-gradient(135deg, hsla(40, 25%, 96%, 0.92) 0%, hsla(38, 30%, 94%, 0.88) 100%)',
+                  backdropFilter: 'blur(24px)',
+                  WebkitBackdropFilter: 'blur(24px)',
+                  boxShadow: '0 25px 60px -12px rgba(0, 0, 0, 0.15), 0 10px 20px -8px rgba(0, 0, 0, 0.08)',
                 }}
               >
-                <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
-                  {/* Portrait - Organic Shape */}
+                <div className="grid md:grid-cols-5 gap-10 md:gap-14 items-center">
+                  {/* Portrait - Organic Rounded Shape with Depth */}
                   <motion.div 
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
+                    transition={{ duration: 0.8, delay: 0.2, ease: [0.2, 0.8, 0.2, 1] }}
                     className="md:col-span-2 order-1"
                   >
                     <div className="relative">
-                      {/* Soft organic shadow/glow behind image */}
+                      {/* Layered organic shadows for depth */}
                       <div 
-                        className="absolute inset-2 rounded-[2rem] bg-primary/10 blur-xl"
+                        className="absolute -inset-3 rounded-[2.5rem] opacity-40"
+                        style={{
+                          background: 'linear-gradient(135deg, hsl(190 75% 30% / 0.15), hsl(40 45% 55% / 0.1))',
+                          filter: 'blur(20px)',
+                        }}
                       />
-                      <div className="relative overflow-hidden rounded-[1.5rem] md:rounded-[2rem] shadow-lg aspect-[4/5]">
+                      <div 
+                        className="absolute inset-0 rounded-[2rem] shadow-xl"
+                        style={{
+                          boxShadow: '0 20px 40px -10px rgba(0, 0, 0, 0.2), 0 8px 16px -6px rgba(0, 0, 0, 0.1)',
+                        }}
+                      />
+                      {/* Main image container with organic corners */}
+                      <div className="relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] aspect-[4/5]">
                         <motion.img 
                           src={johannesMeet} 
                           alt="Johannes Christ – Gestalttherapeut und Coach, freundlicher Blickkontakt"
                           className="w-full h-full object-cover object-top"
-                          whileHover={{ scale: 1.03 }}
-                          transition={{ duration: 0.4 }}
+                          whileHover={{ scale: 1.04 }}
+                          transition={{ duration: 0.5, ease: [0.2, 0.8, 0.2, 1] }}
+                        />
+                        {/* Subtle inner vignette for depth */}
+                        <div 
+                          className="absolute inset-0 pointer-events-none"
+                          style={{
+                            boxShadow: 'inset 0 0 40px rgba(0, 0, 0, 0.08)',
+                          }}
                         />
                       </div>
                     </div>
@@ -173,17 +192,17 @@ const Index = () => {
 
                   {/* Content */}
                   <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
+                    transition={{ duration: 0.8, delay: 0.35, ease: [0.2, 0.8, 0.2, 1] }}
                     className="md:col-span-3 order-2"
                   >
-                    <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl text-primary mb-6">
+                    <h2 className="font-heading text-3xl md:text-4xl lg:text-[2.75rem] text-primary mb-6 leading-tight">
                       Johannes kennenlernen
                     </h2>
                     
-                    <div className="space-y-4 text-gray-700 text-base md:text-lg leading-relaxed mb-6">
+                    <div className="space-y-4 text-gray-700 text-base md:text-lg leading-relaxed mb-8">
                       <p>
                         Ich begleite Menschen, die spüren, dass etwas in Bewegung kommen darf – 
                         auch wenn der Weg noch unklar ist.
@@ -194,18 +213,18 @@ const Index = () => {
                       </p>
                     </div>
 
-                    <p className="text-sm text-gray-500 mb-8">
+                    <p className="text-sm text-gray-500/90 mb-8 tracking-wide">
                       Praxis in Frankfurt · Online & vor Ort
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-3">
+                    <div className="flex flex-col sm:flex-row gap-4">
                       <Link to="/kontakt" onClick={scrollToTop}>
-                        <Button variant="gold" className="w-full sm:w-auto">
+                        <Button variant="gold" size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-xl transition-shadow">
                           Erstgespräch buchen
                         </Button>
                       </Link>
                       <Link to="/ueber-mich" onClick={scrollToTop}>
-                        <Button variant="outline" className="w-full sm:w-auto border-primary/30 text-primary hover:bg-primary/5">
+                        <Button variant="outline" size="lg" className="w-full sm:w-auto border-primary/25 text-primary hover:bg-primary/5 hover:border-primary/40 transition-all">
                           Mehr erfahren
                         </Button>
                       </Link>
