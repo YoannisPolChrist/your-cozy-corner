@@ -11,117 +11,91 @@ import johannesPortrait from "@/assets/johannes-portrait.png";
 import johannesMeet from "@/assets/johannes-meet.jpg";
 import { goldFrameVariants, imageVariants, viewportSettings } from "@/lib/animations";
 import { Footer } from "@/components/Footer";
-
-const painPoints = [
-  {
-    title: "Auf der Stelle treten",
-    description: "Das Gefühl, auf der Stelle zu treten, obwohl Sie sich bewegen wollen. Alte Muster wiederholen sich, besonders in Beziehungen.",
-  },
-  {
-    title: "Distanz und Nähe",
-    description: "Die Distanz zu anderen wächst, oder die Nähe fühlt sich erdrückend an. Gespräche drehen sich im Kreis.",
-  },
-  {
-    title: "Nebel der Unklarheit",
-    description: "Der Wunsch nach Klarheit ist da, aber der nächste Schritt bleibt im Nebel verborgen.",
-  },
-];
-
-const services = [
-  {
-    icon: Heart,
-    title: "Therapie",
-    description: "Tiefgreifende Arbeit an emotionalen Themen",
-  },
-  {
-    icon: Brain,
-    title: "Coaching",
-    description: "Fokussierte Entwicklung Ihrer Potenziale",
-  },
-  {
-    icon: Lightbulb,
-    title: "Diagnostik",
-    description: "Professionelle Einordnung und Klarheit",
-  },
-];
-
+const painPoints = [{
+  title: "Auf der Stelle treten",
+  description: "Das Gefühl, auf der Stelle zu treten, obwohl Sie sich bewegen wollen. Alte Muster wiederholen sich, besonders in Beziehungen."
+}, {
+  title: "Distanz und Nähe",
+  description: "Die Distanz zu anderen wächst, oder die Nähe fühlt sich erdrückend an. Gespräche drehen sich im Kreis."
+}, {
+  title: "Nebel der Unklarheit",
+  description: "Der Wunsch nach Klarheit ist da, aber der nächste Schritt bleibt im Nebel verborgen."
+}];
+const services = [{
+  icon: Heart,
+  title: "Therapie",
+  description: "Tiefgreifende Arbeit an emotionalen Themen"
+}, {
+  icon: Brain,
+  title: "Coaching",
+  description: "Fokussierte Entwicklung Ihrer Potenziale"
+}, {
+  icon: Lightbulb,
+  title: "Diagnostik",
+  description: "Professionelle Einordnung und Klarheit"
+}];
 const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 };
 
 // Parallax component for Meet section
 const MeetParallaxImage = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
+  const {
+    scrollYProgress
+  } = useScroll({
     target: ref,
-    offset: ["start end", "end start"],
+    offset: ["start end", "end start"]
   });
   const y = useTransform(scrollYProgress, [0, 1], ["5%", "-5%"]);
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.08, 1, 1.08]);
-
-  return (
-    <motion.div 
-      ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.6 }}
-      className="md:col-span-2 order-1 overflow-hidden rounded-xl aspect-[4/5]"
-    >
-      <motion.img 
-        src={johannesMeet} 
-        alt="Johannes Christ – Gestalttherapeut und Coach, freundlicher Blickkontakt"
-        className="w-full h-full object-cover object-top"
-        style={{ y, scale }}
-      />
-    </motion.div>
-  );
+  return <motion.div ref={ref} initial={{
+    opacity: 0,
+    y: 20
+  }} whileInView={{
+    opacity: 1,
+    y: 0
+  }} viewport={{
+    once: true,
+    amount: 0.3
+  }} transition={{
+    duration: 0.6
+  }} className="md:col-span-2 order-1 overflow-hidden rounded-xl aspect-[4/5]">
+      <motion.img src={johannesMeet} alt="Johannes Christ – Gestalttherapeut und Coach, freundlicher Blickkontakt" className="w-full h-full object-cover object-top" style={{
+      y,
+      scale
+    }} />
+    </motion.div>;
 };
 
 // Parallax component for About section
 const AboutParallaxImage = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
+  const {
+    scrollYProgress
+  } = useScroll({
     target: ref,
-    offset: ["start end", "end start"],
+    offset: ["start end", "end start"]
   });
   const y = useTransform(scrollYProgress, [0, 1], ["5%", "-5%"]);
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.08, 1, 1.08]);
-
-  return (
-    <motion.div 
-      ref={ref}
-      initial="hidden"
-      whileInView="visible"
-      viewport={viewportSettings}
-      className="relative order-2 md:order-1"
-    >
+  return <motion.div ref={ref} initial="hidden" whileInView="visible" viewport={viewportSettings} className="relative order-2 md:order-1">
       {/* Gold Frame - Slides out from behind with delay */}
-      <motion.div 
-        variants={goldFrameVariants}
-        className="absolute bottom-[-10px] right-[-10px] md:bottom-[-20px] md:right-[-20px] w-full h-full bg-accent rounded-2xl"
-      />
+      <motion.div variants={goldFrameVariants} className="absolute bottom-[-10px] right-[-10px] md:bottom-[-20px] md:right-[-20px] w-full h-full bg-accent rounded-2xl" />
       {/* Main image with parallax */}
       <div className="relative z-10 overflow-hidden rounded-2xl shadow-xl aspect-[4/5]">
-        <motion.img 
-          variants={imageVariants}
-          src={johannesPortrait} 
-          alt="Johannes Christ - Gestalttherapeut und Coach"
-          className="w-full h-full object-cover object-center"
-          style={{ y, scale }}
-          width={528}
-          height={683}
-          loading="lazy"
-          decoding="async"
-        />
+        <motion.img variants={imageVariants} alt="Johannes Christ - Gestalttherapeut und Coach" className="w-full h-full object-cover object-center" style={{
+        y,
+        scale
+      }} width={528} height={683} loading="lazy" decoding="async" src="/lovable-uploads/e688c494-51b1-4167-a52c-840cab4d93c5.jpg" />
       </div>
-    </motion.div>
-  );
+    </motion.div>;
 };
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       <main>
         <Hero />
@@ -129,75 +103,82 @@ const Index = () => {
         {/* Meet Johannes Section - Overlapping Organic Card */}
         <section className="relative z-10 pb-20 md:pb-28 bg-gradient-to-b from-transparent via-warm-sand/50 to-warm-sand">
           <div className="container mx-auto px-4">
-            <motion.div 
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{ duration: 1, ease: [0.2, 0.8, 0.2, 1] }}
-              className="max-w-5xl mx-auto -mt-28 md:-mt-36 lg:-mt-40"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 50
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            amount: 0.15
+          }} transition={{
+            duration: 1,
+            ease: [0.2, 0.8, 0.2, 1]
+          }} className="max-w-5xl mx-auto -mt-28 md:-mt-36 lg:-mt-40">
               {/* Warm Glassmorphism Card */}
-              <div 
-                className="rounded-3xl md:rounded-[2rem] p-8 md:p-12 lg:p-14 shadow-2xl border border-white/40"
-                style={{
-                  background: 'linear-gradient(135deg, hsla(40, 25%, 96%, 0.92) 0%, hsla(38, 30%, 94%, 0.88) 100%)',
-                  backdropFilter: 'blur(24px)',
-                  WebkitBackdropFilter: 'blur(24px)',
-                  boxShadow: '0 25px 60px -12px rgba(0, 0, 0, 0.15), 0 10px 20px -8px rgba(0, 0, 0, 0.08)',
-                }}
-              >
+              <div className="rounded-3xl md:rounded-[2rem] p-8 md:p-12 lg:p-14 shadow-2xl border border-white/40" style={{
+              background: 'linear-gradient(135deg, hsla(40, 25%, 96%, 0.92) 0%, hsla(38, 30%, 94%, 0.88) 100%)',
+              backdropFilter: 'blur(24px)',
+              WebkitBackdropFilter: 'blur(24px)',
+              boxShadow: '0 25px 60px -12px rgba(0, 0, 0, 0.15), 0 10px 20px -8px rgba(0, 0, 0, 0.08)'
+            }}>
                 <div className="grid md:grid-cols-5 gap-10 md:gap-14 items-center">
                   {/* Portrait - Organic Rounded Shape with Depth */}
-                  <motion.div 
-                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.2, ease: [0.2, 0.8, 0.2, 1] }}
-                    className="md:col-span-2 order-1"
-                  >
+                  <motion.div initial={{
+                  opacity: 0,
+                  scale: 0.9,
+                  y: 20
+                }} whileInView={{
+                  opacity: 1,
+                  scale: 1,
+                  y: 0
+                }} viewport={{
+                  once: true
+                }} transition={{
+                  duration: 0.8,
+                  delay: 0.2,
+                  ease: [0.2, 0.8, 0.2, 1]
+                }} className="md:col-span-2 order-1">
                     <div className="relative">
                       {/* Layered organic shadows for depth */}
-                      <div 
-                        className="absolute -inset-3 rounded-[2.5rem] opacity-40"
-                        style={{
-                          background: 'linear-gradient(135deg, hsl(190 75% 30% / 0.15), hsl(40 45% 55% / 0.1))',
-                          filter: 'blur(20px)',
-                        }}
-                      />
-                      <div 
-                        className="absolute inset-0 rounded-[2rem] shadow-xl"
-                        style={{
-                          boxShadow: '0 20px 40px -10px rgba(0, 0, 0, 0.2), 0 8px 16px -6px rgba(0, 0, 0, 0.1)',
-                        }}
-                      />
+                      <div className="absolute -inset-3 rounded-[2.5rem] opacity-40" style={{
+                      background: 'linear-gradient(135deg, hsl(190 75% 30% / 0.15), hsl(40 45% 55% / 0.1))',
+                      filter: 'blur(20px)'
+                    }} />
+                      <div className="absolute inset-0 rounded-[2rem] shadow-xl" style={{
+                      boxShadow: '0 20px 40px -10px rgba(0, 0, 0, 0.2), 0 8px 16px -6px rgba(0, 0, 0, 0.1)'
+                    }} />
                       {/* Main image container with organic corners */}
                       <div className="relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] aspect-[4/5]">
-                        <motion.img 
-                          src={johannesMeet} 
-                          alt="Johannes Christ – Gestalttherapeut und Coach, freundlicher Blickkontakt"
-                          className="w-full h-full object-cover object-top"
-                          whileHover={{ scale: 1.04 }}
-                          transition={{ duration: 0.5, ease: [0.2, 0.8, 0.2, 1] }}
-                        />
+                        <motion.img src={johannesMeet} alt="Johannes Christ – Gestalttherapeut und Coach, freundlicher Blickkontakt" className="w-full h-full object-cover object-top" whileHover={{
+                        scale: 1.04
+                      }} transition={{
+                        duration: 0.5,
+                        ease: [0.2, 0.8, 0.2, 1]
+                      }} />
                         {/* Subtle inner vignette for depth */}
-                        <div 
-                          className="absolute inset-0 pointer-events-none"
-                          style={{
-                            boxShadow: 'inset 0 0 40px rgba(0, 0, 0, 0.08)',
-                          }}
-                        />
+                        <div className="absolute inset-0 pointer-events-none" style={{
+                        boxShadow: 'inset 0 0 40px rgba(0, 0, 0, 0.08)'
+                      }} />
                       </div>
                     </div>
                   </motion.div>
 
                   {/* Content */}
-                  <motion.div 
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.35, ease: [0.2, 0.8, 0.2, 1] }}
-                    className="md:col-span-3 order-2"
-                  >
+                  <motion.div initial={{
+                  opacity: 0,
+                  y: 30
+                }} whileInView={{
+                  opacity: 1,
+                  y: 0
+                }} viewport={{
+                  once: true
+                }} transition={{
+                  duration: 0.8,
+                  delay: 0.35,
+                  ease: [0.2, 0.8, 0.2, 1]
+                }} className="md:col-span-3 order-2">
                     <h2 className="font-heading text-3xl md:text-4xl lg:text-[2.75rem] text-primary mb-6 leading-tight">
                       Johannes kennenlernen
                     </h2>
@@ -249,11 +230,7 @@ const Index = () => {
             </div>
 
             <StaggerContainer className="grid md:grid-cols-2 gap-x-20 gap-y-16 max-w-4xl mx-auto">
-              {painPoints.map((point, index) => (
-                <AnimatedItem
-                  key={index}
-                  className={`relative pl-8 ${index === 2 ? 'md:col-span-2 md:max-w-lg md:mx-auto' : ''}`}
-                >
+              {painPoints.map((point, index) => <AnimatedItem key={index} className={`relative pl-8 ${index === 2 ? 'md:col-span-2 md:max-w-lg md:mx-auto' : ''}`}>
                   <div className="absolute left-0 top-1 w-1 h-full bg-gradient-to-b from-primary/30 to-transparent rounded-full" />
                   <h3 className="font-heading text-xl mb-4 text-primary">
                     {point.title}
@@ -261,8 +238,7 @@ const Index = () => {
                   <p className="text-muted-foreground text-lg leading-relaxed">
                     {point.description}
                   </p>
-                </AnimatedItem>
-              ))}
+                </AnimatedItem>)}
             </StaggerContainer>
           </div>
         </AnimatedSection>
@@ -281,18 +257,14 @@ const Index = () => {
 
             <StaggerContainer className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto mb-16">
               {services.map((service, index) => {
-                const Icon = service.icon;
-                return (
-                  <AnimatedItem key={index}>
+              const Icon = service.icon;
+              return <AnimatedItem key={index}>
                     <Card className="p-10 bg-off-white border border-accent/20 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group relative overflow-hidden h-full">
                       {/* Bottom border highlight on hover */}
                       <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                       
                       <div className="mb-6 flex justify-center">
-                        <Icon 
-                          className="w-12 h-12 text-accent group-hover:text-primary transition-colors duration-300" 
-                          strokeWidth={1.5} 
-                        />
+                        <Icon className="w-12 h-12 text-accent group-hover:text-primary transition-colors duration-300" strokeWidth={1.5} />
                       </div>
                       <h3 className="font-heading text-xl mb-4 text-primary">
                         {service.title}
@@ -301,9 +273,8 @@ const Index = () => {
                         {service.description}
                       </p>
                     </Card>
-                  </AnimatedItem>
-                );
-              })}
+                  </AnimatedItem>;
+            })}
             </StaggerContainer>
 
             <div className="text-center">
@@ -333,51 +304,35 @@ const Index = () => {
                     Erleben im Hier und Jetzt konzentriert. Statt nur über Probleme zu sprechen, 
                     erforschen wir gemeinsam, wie Sie Ihre Welt wahrnehmen und gestalten.
                   </p>
-                  <Link 
-                    to="/gestalttherapie" 
-                    onClick={scrollToTop}
-                    className="inline-flex items-center text-gold-accent hover:text-gold-accent/80 font-medium text-lg group transition-colors duration-300"
-                  >
+                  <Link to="/gestalttherapie" onClick={scrollToTop} className="inline-flex items-center text-gold-accent hover:text-gold-accent/80 font-medium text-lg group transition-colors duration-300">
                     Mehr über Gestalttherapie erfahren
                     <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-2" />
                   </Link>
                 </AnimatedItem>
                 <AnimatedItem className="relative flex justify-center">
                   {/* Organic Breathing Quote Card */}
-                  <motion.div 
-                    className="relative w-72 h-72 md:w-80 md:h-80 flex items-center justify-center"
-                    animate={{
-                      scale: [1, 1.02, 1],
-                    }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    <motion.div 
-                      className="absolute inset-0 backdrop-blur-md border border-white/20"
-                      style={{
-                        background: 'rgba(255, 255, 255, 0.08)',
-                        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
-                        borderRadius: '60% 40% 50% 50% / 50% 60% 40% 50%',
-                      }}
-                      animate={{
-                        borderRadius: [
-                          '60% 40% 50% 50% / 50% 60% 40% 50%',
-                          '50% 60% 40% 60% / 60% 40% 60% 40%',
-                          '40% 50% 60% 50% / 50% 50% 50% 60%',
-                          '60% 40% 50% 50% / 50% 60% 40% 50%',
-                        ],
-                      }}
-                      transition={{
-                        duration: 8,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
-                    />
+                  <motion.div className="relative w-72 h-72 md:w-80 md:h-80 flex items-center justify-center" animate={{
+                  scale: [1, 1.02, 1]
+                }} transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}>
+                    <motion.div className="absolute inset-0 backdrop-blur-md border border-white/20" style={{
+                    background: 'rgba(255, 255, 255, 0.08)',
+                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
+                    borderRadius: '60% 40% 50% 50% / 50% 60% 40% 50%'
+                  }} animate={{
+                    borderRadius: ['60% 40% 50% 50% / 50% 60% 40% 50%', '50% 60% 40% 60% / 60% 40% 60% 40%', '40% 50% 60% 50% / 50% 50% 50% 60%', '60% 40% 50% 50% / 50% 60% 40% 50%']
+                  }} transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }} />
                     <div className="relative z-10 text-center px-8">
-                      <div className="font-heading text-7xl text-gold-accent mb-2 leading-none" style={{ marginTop: '-10px' }}>
+                      <div className="font-heading text-7xl text-gold-accent mb-2 leading-none" style={{
+                      marginTop: '-10px'
+                    }}>
                         "
                       </div>
                       <p className="text-white/95 text-lg italic leading-relaxed font-heading">
@@ -424,11 +379,7 @@ const Index = () => {
                   </p>
                 </AnimatedItem>
                 <AnimatedItem>
-                  <Link 
-                    to="/ueber-mich" 
-                    onClick={scrollToTop}
-                    className="inline-flex items-center text-primary font-semibold text-lg group relative"
-                  >
+                  <Link to="/ueber-mich" onClick={scrollToTop} className="inline-flex items-center text-primary font-semibold text-lg group relative">
                     <span className="relative">
                       Mehr zu meiner Person
                       <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300" />
@@ -471,8 +422,6 @@ const Index = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
