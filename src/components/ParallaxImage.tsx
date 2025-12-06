@@ -23,18 +23,18 @@ export const ParallaxImage = ({
     offset: ["start end", "end start"],
   });
 
-  // Subtle vertical movement
+  // Subtle vertical movement - reduced for smoother effect
   const y = useTransform(
     scrollYProgress,
     [0, 1],
-    [`${parallaxStrength * 100}%`, `-${parallaxStrength * 100}%`]
+    [`${parallaxStrength * 50}%`, `-${parallaxStrength * 50}%`]
   );
 
-  // Subtle scale effect
+  // Subtle scale effect - reduced intensity
   const imageScale = useTransform(
     scrollYProgress,
     [0, 0.5, 1],
-    scale ? [1.05, 1, 1.05] : [1, 1, 1]
+    scale ? [1.02, 1, 1.02] : [1, 1, 1]
   );
 
   return (
@@ -42,7 +42,11 @@ export const ParallaxImage = ({
       <motion.img
         src={src}
         alt={alt}
-        style={{ y, scale: imageScale }}
+        style={{ 
+          y, 
+          scale: imageScale,
+          willChange: 'transform'
+        }}
         className="w-full h-full object-cover"
       />
     </div>
