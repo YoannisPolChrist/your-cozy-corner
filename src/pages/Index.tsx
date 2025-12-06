@@ -104,18 +104,16 @@ const Index = () => {
         <section className="relative z-10 pb-20 md:pb-28 bg-gradient-to-b from-transparent via-warm-sand/50 to-warm-sand">
           <div className="container mx-auto px-4">
             <motion.div initial={{
-            opacity: 0,
-            y: 40
+            opacity: 0
           }} whileInView={{
-            opacity: 1,
-            y: 0
+            opacity: 1
           }} viewport={{
             once: true,
-            amount: 0.05
+            amount: 0.01
           }} transition={{
-            duration: 1.2,
+            duration: 1.4,
             ease: [0.16, 1, 0.3, 1]
-          }} className="max-w-5xl mx-auto -mt-28 md:-mt-36 lg:-mt-40">
+          }} className="max-w-5xl mx-auto -mt-40 md:-mt-52 lg:-mt-60">
               {/* Warm Glassmorphism Card */}
               <div className="rounded-3xl md:rounded-[2rem] p-8 md:p-12 lg:p-14 shadow-2xl border border-white/40" style={{
               background: 'linear-gradient(135deg, hsla(40, 25%, 96%, 0.92) 0%, hsla(38, 30%, 94%, 0.88) 100%)',
