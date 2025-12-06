@@ -182,16 +182,16 @@ export const textReveal: Variants = {
   }
 };
 
-// Viewport settings for scroll trigger
+// Viewport settings for scroll trigger - trigger earlier for smoother experience
 export const viewportSettings = {
   once: true,
-  amount: 0.2,
-  margin: "-50px"
+  amount: 0.05,
+  margin: "0px"
 };
 
-// Mobile viewport settings (trigger earlier)
+// Mobile viewport settings (trigger even earlier)
 export const mobileViewportSettings = {
   once: true,
-  amount: 0.1,
-  margin: "-30px"
+  amount: 0.02,
+  margin: "50px"
 };
