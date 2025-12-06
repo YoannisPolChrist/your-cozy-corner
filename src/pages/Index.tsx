@@ -111,11 +111,9 @@ const Index = () => {
             y: 0
           }} viewport={{
             once: true,
-            amount: 0.01,
-            margin: "0px 0px -200px 0px"
+            amount: 0.1
           }} transition={{
             duration: 0.8,
-            delay: 1.2,
             ease: [0.16, 1, 0.3, 1]
           }} className="max-w-5xl mx-auto -mt-24 md:-mt-32 lg:-mt-40">
               {/* Warm Glassmorphism Card */}
@@ -139,7 +137,7 @@ const Index = () => {
                   once: true
                 }} transition={{
                   duration: 0.8,
-                  delay: 1.3,
+                  delay: 0.1,
                   ease: [0.2, 0.8, 0.2, 1]
                 }} className="md:col-span-2 order-1">
                     <div className="relative">
@@ -196,7 +194,7 @@ const Index = () => {
                     once: true
                   }} transition={{
                     duration: 0.8,
-                    delay: 1.4,
+                    delay: 0.2,
                     ease: [0.2, 0.8, 0.2, 1]
                   }} className="font-heading text-3xl md:text-4xl lg:text-[2.75rem] text-primary mb-6 leading-tight">
                       Schön, dass Sie hier sind.
@@ -212,7 +210,7 @@ const Index = () => {
                     once: true
                   }} transition={{
                     duration: 0.8,
-                    delay: 1.5,
+                    delay: 0.3,
                     ease: [0.2, 0.8, 0.2, 1]
                   }} className="text-gray-700 text-base md:text-lg leading-relaxed">
                       Veränderung erfordert Mut – und einen sicheren Raum. Ich bin Johannes Christ. 
