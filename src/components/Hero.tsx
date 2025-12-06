@@ -80,7 +80,7 @@ export const Hero = () => {
           y: isRevealed ? 0 : 30
         }} transition={{
           duration: 0.8,
-          delay: 1
+          delay: 0.6
         }} className="font-heading text-4xl md:text-5xl lg:text-6xl mb-6 text-white leading-tight drop-shadow-lg" style={{
           textShadow: '0 2px 20px rgba(0,0,0,0.5)'
         }}>
@@ -96,7 +96,7 @@ export const Hero = () => {
           y: isRevealed ? 0 : 30
         }} transition={{
           duration: 0.8,
-          delay: 1.2
+          delay: 0.8
         }} className="text-lg md:text-xl mb-12 text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-md" style={{
           textShadow: '0 1px 10px rgba(0,0,0,0.4)'
         }}>
@@ -112,7 +112,7 @@ export const Hero = () => {
           y: isRevealed ? 0 : 30
         }} transition={{
           duration: 0.8,
-          delay: 1.4
+          delay: 1.0
         }}>
             <Link to="/kontakt" onClick={scrollToTop}>
               <Button size="default" className="text-white font-medium px-6 py-3 text-base shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300" style={{

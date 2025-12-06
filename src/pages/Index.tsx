@@ -115,7 +115,7 @@ const Index = () => {
             margin: "0px 0px -200px 0px"
           }} transition={{
             duration: 0.8,
-            delay: 1.4,
+            delay: 1.2,
             ease: [0.16, 1, 0.3, 1]
           }} className="max-w-5xl mx-auto -mt-24 md:-mt-32 lg:-mt-40">
               {/* Warm Glassmorphism Card */}
@@ -139,7 +139,7 @@ const Index = () => {
                   once: true
                 }} transition={{
                   duration: 0.8,
-                  delay: 1.5,
+                  delay: 1.3,
                   ease: [0.2, 0.8, 0.2, 1]
                 }} className="md:col-span-2 order-1">
                     <div className="relative">
@@ -185,29 +185,41 @@ const Index = () => {
                   </motion.div>
 
                   {/* Content */}
-                  <motion.div initial={{
-                  opacity: 0,
-                  y: 20
-                }} whileInView={{
-                  opacity: 1,
-                  y: 0
-                }} viewport={{
-                  once: true
-                }} transition={{
-                  duration: 0.8,
-                  delay: 1.6,
-                  ease: [0.2, 0.8, 0.2, 1]
-                }} className="md:col-span-3 order-2">
-                    <h2 className="font-heading text-3xl md:text-4xl lg:text-[2.75rem] text-primary mb-6 leading-tight">
+                  <div className="md:col-span-3 order-2">
+                    <motion.h2 initial={{
+                    opacity: 0,
+                    y: 20
+                  }} whileInView={{
+                    opacity: 1,
+                    y: 0
+                  }} viewport={{
+                    once: true
+                  }} transition={{
+                    duration: 0.8,
+                    delay: 1.4,
+                    ease: [0.2, 0.8, 0.2, 1]
+                  }} className="font-heading text-3xl md:text-4xl lg:text-[2.75rem] text-primary mb-6 leading-tight">
                       Schön, dass Sie hier sind.
-                    </h2>
+                    </motion.h2>
                     
-                    <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+                    <motion.p initial={{
+                    opacity: 0,
+                    y: 20
+                  }} whileInView={{
+                    opacity: 1,
+                    y: 0
+                  }} viewport={{
+                    once: true
+                  }} transition={{
+                    duration: 0.8,
+                    delay: 1.5,
+                    ease: [0.2, 0.8, 0.2, 1]
+                  }} className="text-gray-700 text-base md:text-lg leading-relaxed">
                       Veränderung erfordert Mut – und einen sicheren Raum. Ich bin Johannes Christ. 
                       Als Gestalttherapeut biete ich Ihnen keine fertigen Lösungen, sondern meine volle 
                       Präsenz, um gemeinsam herauszufinden, was Sie gerade wirklich brauchen.
-                    </p>
-                  </motion.div>
+                    </motion.p>
+                  </div>
                 </div>
               </div>
             </motion.div>
