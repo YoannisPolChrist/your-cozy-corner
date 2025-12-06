@@ -43,8 +43,8 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
         ));
         setScrollProgress(progress);
         
-        // Set visibility for Framer Motion - triggers earlier
-        const shouldBeVisible = progress > 0.08 && progress < 0.70;
+        // Set visibility for Framer Motion - triggers much earlier
+        const shouldBeVisible = progress > 0.04 && progress < 0.70;
         setIsVisible(shouldBeVisible);
       }
     };
