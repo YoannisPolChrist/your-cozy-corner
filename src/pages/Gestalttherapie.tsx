@@ -113,13 +113,10 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover opacity-85"
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
-        
-        {/* Subtle overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
         
         <div className={`absolute inset-0 flex ${positionClasses[position]} p-4`}>
           <motion.div
