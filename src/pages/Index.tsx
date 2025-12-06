@@ -114,8 +114,8 @@ const Index = () => {
             amount: 0.01,
             margin: "0px 0px -200px 0px"
           }} transition={{
-            duration: 1.2,
-            delay: 1.6,
+            duration: 0.8,
+            delay: 1.4,
             ease: [0.16, 1, 0.3, 1]
           }} className="max-w-5xl mx-auto -mt-24 md:-mt-32 lg:-mt-40">
               {/* Warm Glassmorphism Card */}
@@ -129,8 +129,8 @@ const Index = () => {
                   {/* Portrait - Johannes emerging from forest atmosphere */}
                   <motion.div initial={{
                   opacity: 0,
-                  scale: 0.85,
-                  y: 40
+                  scale: 0.95,
+                  y: 20
                 }} whileInView={{
                   opacity: 1,
                   scale: 1,
@@ -138,8 +138,8 @@ const Index = () => {
                 }} viewport={{
                   once: true
                 }} transition={{
-                  duration: 1.2,
-                  delay: 1.8,
+                  duration: 0.8,
+                  delay: 1.6,
                   ease: [0.2, 0.8, 0.2, 1]
                 }} className="md:col-span-2 order-1">
                     <div className="relative">
@@ -187,7 +187,7 @@ const Index = () => {
                   {/* Content */}
                   <motion.div initial={{
                   opacity: 0,
-                  y: 30
+                  y: 20
                 }} whileInView={{
                   opacity: 1,
                   y: 0
@@ -195,7 +195,7 @@ const Index = () => {
                   once: true
                 }} transition={{
                   duration: 0.8,
-                  delay: 2.0,
+                  delay: 1.8,
                   ease: [0.2, 0.8, 0.2, 1]
                 }} className="md:col-span-3 order-2">
                     <h2 className="font-heading text-3xl md:text-4xl lg:text-[2.75rem] text-primary mb-6 leading-tight">
