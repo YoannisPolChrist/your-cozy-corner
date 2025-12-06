@@ -4,7 +4,7 @@ import { ArrowRight, Heart, Brain, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import johannesStageHero from "@/assets/johannes-stage-hero.jpg";
+import johannesHeroPortrait from "@/assets/johannes-hero-portrait.png";
 import conversationWindow from "@/assets/conversation-window.jpg";
 import johannesLaughing from "@/assets/johannes-laughing.png";
 import { Footer } from "@/components/Footer";
@@ -80,10 +80,10 @@ const UeberMich = () => {
                   />
                   {/* Main Image with Parallax */}
                   <ParallaxImageWrapper 
-                    src={johannesStageHero}
+                    src={johannesHeroPortrait}
                     alt="Johannes Christ - Gestalttherapeut"
                     className="object-cover object-center"
-                    aspectRatio="aspect-[4/3]"
+                    aspectRatio="aspect-[3/4]"
                   />
                 </motion.div>
 
