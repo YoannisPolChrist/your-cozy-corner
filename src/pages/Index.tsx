@@ -204,36 +204,14 @@ const Index = () => {
                   ease: [0.2, 0.8, 0.2, 1]
                 }} className="md:col-span-3 order-2">
                     <h2 className="font-heading text-3xl md:text-4xl lg:text-[2.75rem] text-primary mb-6 leading-tight">
-                      Johannes kennenlernen
+                      Schön, dass Sie hier sind.
                     </h2>
                     
-                    <div className="space-y-4 text-gray-700 text-base md:text-lg leading-relaxed mb-8">
-                      <p>
-                        Ich begleite Menschen, die spüren, dass etwas in Bewegung kommen darf – 
-                        auch wenn der Weg noch unklar ist.
-                      </p>
-                      <p>
-                        Meine Arbeit ist geprägt von Ruhe, Präsenz und einem tiefen Vertrauen 
-                        in die Kraft des Augenblicks.
-                      </p>
-                    </div>
-
-                    <p className="text-sm text-gray-500/90 mb-8 tracking-wide">
-                      Praxis in Frankfurt · Online & vor Ort
+                    <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+                      Veränderung erfordert Mut – und einen sicheren Raum. Ich bin Johannes Christ. 
+                      Als Gestalttherapeut biete ich Ihnen keine fertigen Lösungen, sondern meine volle 
+                      Präsenz, um gemeinsam herauszufinden, was Sie gerade wirklich brauchen.
                     </p>
-
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <Link to="/kontakt" onClick={scrollToTop}>
-                        <Button variant="gold" size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-xl transition-shadow">
-                          Erstgespräch buchen
-                        </Button>
-                      </Link>
-                      <Link to="/ueber-mich" onClick={scrollToTop}>
-                        <Button variant="outline" size="lg" className="w-full sm:w-auto border-primary/25 text-primary hover:bg-primary/5 hover:border-primary/40 transition-all">
-                          Mehr erfahren
-                        </Button>
-                      </Link>
-                    </div>
                   </motion.div>
                 </div>
               </div>
