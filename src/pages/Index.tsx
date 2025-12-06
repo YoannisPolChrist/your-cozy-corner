@@ -124,11 +124,11 @@ const Index = () => {
               boxShadow: '0 25px 60px -12px rgba(0, 0, 0, 0.15), 0 10px 20px -8px rgba(0, 0, 0, 0.08)'
             }}>
                 <div className="grid md:grid-cols-5 gap-10 md:gap-14 items-center">
-                  {/* Portrait - Organic Rounded Shape with Depth */}
+                  {/* Portrait - Johannes emerging from forest atmosphere */}
                   <motion.div initial={{
                   opacity: 0,
-                  scale: 0.9,
-                  y: 20
+                  scale: 0.85,
+                  y: 40
                 }} whileInView={{
                   opacity: 1,
                   scale: 1,
@@ -136,31 +136,55 @@ const Index = () => {
                 }} viewport={{
                   once: true
                 }} transition={{
-                  duration: 0.8,
-                  delay: 0.2,
+                  duration: 1.2,
+                  delay: 0.15,
                   ease: [0.2, 0.8, 0.2, 1]
                 }} className="md:col-span-2 order-1">
                     <div className="relative">
-                      {/* Layered organic shadows for depth */}
-                      <div className="absolute -inset-3 rounded-[2.5rem] opacity-40" style={{
-                      background: 'linear-gradient(135deg, hsl(190 75% 30% / 0.15), hsl(40 45% 55% / 0.1))',
-                      filter: 'blur(20px)'
-                    }} />
-                      <div className="absolute inset-0 rounded-[2rem] shadow-xl" style={{
-                      boxShadow: '0 20px 40px -10px rgba(0, 0, 0, 0.2), 0 8px 16px -6px rgba(0, 0, 0, 0.1)'
-                    }} />
+                      {/* Atmospheric forest glow behind - creates depth */}
+                      <div className="absolute -inset-8 rounded-[3rem] opacity-60" style={{
+                        background: 'radial-gradient(ellipse at center, hsl(160 40% 35% / 0.25) 0%, hsl(145 35% 25% / 0.15) 40%, transparent 70%)',
+                        filter: 'blur(30px)'
+                      }} />
+                      {/* Soft light emanating from behind figure */}
+                      <div className="absolute -inset-4 rounded-[2.5rem] opacity-50" style={{
+                        background: 'radial-gradient(ellipse at 50% 30%, hsl(45 50% 90% / 0.6) 0%, transparent 60%)',
+                        filter: 'blur(20px)'
+                      }} />
+                      {/* Deeper shadow for grounding */}
+                      <div className="absolute inset-0 rounded-[2rem]" style={{
+                        boxShadow: '0 30px 60px -15px rgba(0, 0, 0, 0.3), 0 15px 30px -10px rgba(0, 0, 0, 0.15), 0 0 80px -20px hsl(160 40% 30% / 0.2)'
+                      }} />
                       {/* Main image container with organic corners */}
                       <div className="relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] aspect-[4/5]">
-                        <motion.img src={johannesMeet} alt="Johannes Christ – Gestalttherapeut und Coach, freundlicher Blickkontakt" className="w-full h-full object-cover object-top" whileHover={{
-                        scale: 1.04
-                      }} transition={{
-                        duration: 0.5,
-                        ease: [0.2, 0.8, 0.2, 1]
-                      }} />
-                        {/* Subtle inner vignette for depth */}
-                        <div className="absolute inset-0 pointer-events-none" style={{
-                        boxShadow: 'inset 0 0 40px rgba(0, 0, 0, 0.08)'
-                      }} />
+                        {/* Forest atmosphere overlay at edges */}
+                        <div className="absolute inset-0 z-10 pointer-events-none" style={{
+                          background: 'radial-gradient(ellipse at 50% 50%, transparent 50%, hsl(160 30% 25% / 0.08) 100%)',
+                        }} />
+                        <motion.img 
+                          src={johannesMeet} 
+                          alt="Johannes Christ – Gestalttherapeut und Coach, freundlicher Blickkontakt" 
+                          className="w-full h-full object-cover object-top"
+                          style={{
+                            filter: 'contrast(1.02) saturate(1.05)'
+                          }}
+                          whileHover={{
+                            scale: 1.03,
+                            filter: 'contrast(1.04) saturate(1.08)'
+                          }} 
+                          transition={{
+                            duration: 0.6,
+                            ease: [0.2, 0.8, 0.2, 1]
+                          }} 
+                        />
+                        {/* Subtle vignette for emerging effect */}
+                        <div className="absolute inset-0 pointer-events-none z-20" style={{
+                          boxShadow: 'inset 0 0 60px rgba(0, 0, 0, 0.1), inset 0 -30px 60px -30px hsl(160 30% 20% / 0.15)'
+                        }} />
+                        {/* Top light highlight for emergence */}
+                        <div className="absolute inset-x-0 top-0 h-1/3 pointer-events-none z-20" style={{
+                          background: 'linear-gradient(to bottom, hsl(45 40% 95% / 0.1) 0%, transparent 100%)'
+                        }} />
                       </div>
                     </div>
                   </motion.div>
