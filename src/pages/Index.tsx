@@ -109,7 +109,8 @@ const Index = () => {
             opacity: 1
           }} viewport={{
             once: true,
-            amount: 0.01
+            amount: 0.01,
+            margin: "0px 0px -200px 0px"
           }} transition={{
             duration: 1.4,
             ease: [0.16, 1, 0.3, 1]
