@@ -104,15 +104,18 @@ const Index = () => {
         <section className="relative z-10 pb-20 md:pb-28 bg-gradient-to-b from-transparent via-warm-sand/50 to-warm-sand">
           <div className="container mx-auto px-4">
             <motion.div initial={{
-            opacity: 0
+            opacity: 0,
+            y: 40
           }} whileInView={{
-            opacity: 1
+            opacity: 1,
+            y: 0
           }} viewport={{
             once: true,
             amount: 0.01,
             margin: "0px 0px -200px 0px"
           }} transition={{
-            duration: 1.4,
+            duration: 1.2,
+            delay: 1.6,
             ease: [0.16, 1, 0.3, 1]
           }} className="max-w-5xl mx-auto -mt-24 md:-mt-32 lg:-mt-40">
               {/* Warm Glassmorphism Card */}
@@ -136,7 +139,7 @@ const Index = () => {
                   once: true
                 }} transition={{
                   duration: 1.2,
-                  delay: 0.15,
+                  delay: 1.8,
                   ease: [0.2, 0.8, 0.2, 1]
                 }} className="md:col-span-2 order-1">
                     <div className="relative">
@@ -199,7 +202,7 @@ const Index = () => {
                   once: true
                 }} transition={{
                   duration: 0.8,
-                  delay: 0.35,
+                  delay: 2.0,
                   ease: [0.2, 0.8, 0.2, 1]
                 }} className="md:col-span-3 order-2">
                     <h2 className="font-heading text-3xl md:text-4xl lg:text-[2.75rem] text-primary mb-6 leading-tight">
