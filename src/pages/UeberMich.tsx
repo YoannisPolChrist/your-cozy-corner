@@ -2,7 +2,8 @@ import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Brain, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import conversationWindow from "@/assets/conversation-window.jpg";
 import johannesLaughing from "@/assets/johannes-laughing.png";
 import { Footer } from "@/components/Footer";
@@ -16,6 +17,42 @@ import {
   viewportSettings,
   cinematicEase
 } from "@/lib/animations";
+
+// Parallax wrapper component for images
+const ParallaxImageWrapper = ({ 
+  src, 
+  alt, 
+  className = "",
+  aspectRatio = "aspect-[3/4]"
+}: { 
+  src: string; 
+  alt: string; 
+  className?: string;
+  aspectRatio?: string;
+}) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["5%", "-5%"]);
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.08, 1, 1.08]);
+
+  return (
+    <motion.div 
+      ref={ref}
+      variants={imageVariants}
+      className={`relative ${aspectRatio} rounded-2xl overflow-hidden shadow-xl`}
+    >
+      <motion.img 
+        src={src}
+        alt={alt}
+        className={`w-full h-full ${className}`}
+        style={{ y, scale }}
+      />
+    </motion.div>
+  );
+};
 
 const UeberMich = () => {
   return (
@@ -40,17 +77,13 @@ const UeberMich = () => {
                     variants={goldFrameVariants}
                     className="absolute bottom-[10px] right-[10px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-2xl" 
                   />
-                  {/* Main Image */}
-                  <motion.div 
-                    variants={imageVariants}
-                    className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl"
-                  >
-                    <img 
-                      alt="Johannes Christ - Gestalttherapeut" 
-                      className="w-full h-full object-scale-down" 
-                      src="/lovable-uploads/344b749b-e6b8-4454-94e0-5ad41901e13b.jpg" 
-                    />
-                  </motion.div>
+                  {/* Main Image with Parallax */}
+                  <ParallaxImageWrapper 
+                    src="/lovable-uploads/344b749b-e6b8-4454-94e0-5ad41901e13b.jpg"
+                    alt="Johannes Christ - Gestalttherapeut"
+                    className="object-scale-down"
+                    aspectRatio="aspect-[3/4]"
+                  />
                 </motion.div>
 
                 {/* Text Content */}
@@ -162,17 +195,13 @@ const UeberMich = () => {
                     variants={goldFrameVariants}
                     className="absolute bottom-[10px] left-[10px] md:bottom-[20px] md:left-[20px] w-full h-full bg-[#c5a065] rounded-2xl" 
                   />
-                  {/* Main Image */}
-                  <motion.div 
-                    variants={imageVariants}
-                    className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl"
-                  >
-                    <img 
-                      src={conversationWindow} 
-                      alt="Therapeutische Arbeit" 
-                      className="w-full h-full object-cover" 
-                    />
-                  </motion.div>
+                  {/* Main Image with Parallax */}
+                  <ParallaxImageWrapper 
+                    src={conversationWindow}
+                    alt="Therapeutische Arbeit"
+                    className="object-cover"
+                    aspectRatio="aspect-[4/3]"
+                  />
                 </motion.div>
               </div>
             </div>
@@ -197,17 +226,13 @@ const UeberMich = () => {
                     variants={goldFrameVariants}
                     className="absolute bottom-[10px] right-[10px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-2xl" 
                   />
-                  {/* Main Image - Portrait Rectangle */}
-                  <motion.div 
-                    variants={imageVariants}
-                    className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl"
-                  >
-                    <img 
-                      src={johannesLaughing} 
-                      alt="Johannes Christ lachend" 
-                      className="w-full h-full object-cover" 
-                    />
-                  </motion.div>
+                  {/* Main Image - Portrait Rectangle with Parallax */}
+                  <ParallaxImageWrapper 
+                    src={johannesLaughing}
+                    alt="Johannes Christ lachend"
+                    className="object-cover"
+                    aspectRatio="aspect-[3/4]"
+                  />
                 </motion.div>
 
                 {/* Text Content - Right Side */}
