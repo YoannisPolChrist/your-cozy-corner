@@ -113,7 +113,8 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: 'center 30%' }}
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
