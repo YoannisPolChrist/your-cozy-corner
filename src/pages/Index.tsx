@@ -113,7 +113,7 @@ const Index = () => {
           }} transition={{
             duration: 1.4,
             ease: [0.16, 1, 0.3, 1]
-          }} className="max-w-5xl mx-auto -mt-36 md:-mt-44 lg:-mt-52">
+          }} className="max-w-5xl mx-auto -mt-24 md:-mt-32 lg:-mt-40">
               {/* Warm Glassmorphism Card */}
               <div className="rounded-3xl md:rounded-[2rem] p-8 md:p-12 lg:p-14 shadow-2xl border border-white/40" style={{
               background: 'linear-gradient(135deg, hsla(40, 25%, 96%, 0.92) 0%, hsla(38, 30%, 94%, 0.88) 100%)',
