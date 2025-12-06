@@ -38,13 +38,15 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
         const sectionHeight = sectionRef.current.offsetHeight;
         const viewportHeight = window.innerHeight;
         
+        // Calculate progress based on how much the section has scrolled into view
         const progress = Math.max(0, Math.min(1, 
           (viewportHeight - rect.top) / (viewportHeight + sectionHeight)
         ));
         setScrollProgress(progress);
         
-        // Set visibility for Framer Motion - extended visible duration
-        const shouldBeVisible = progress > 0.04 && progress < 0.68;
+        // Set visibility when sticky element is properly in view
+        // Trigger earlier (0.12) and extend visibility duration
+        const shouldBeVisible = progress > 0.12 && progress < 0.72;
         setIsVisible(shouldBeVisible);
       }
     };
