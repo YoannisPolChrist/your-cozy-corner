@@ -139,7 +139,7 @@ const Index = () => {
                   once: true
                 }} transition={{
                   duration: 0.8,
-                  delay: 1.6,
+                  delay: 1.5,
                   ease: [0.2, 0.8, 0.2, 1]
                 }} className="md:col-span-2 order-1">
                     <div className="relative">
@@ -195,7 +195,7 @@ const Index = () => {
                   once: true
                 }} transition={{
                   duration: 0.8,
-                  delay: 1.8,
+                  delay: 1.6,
                   ease: [0.2, 0.8, 0.2, 1]
                 }} className="md:col-span-3 order-2">
                     <h2 className="font-heading text-3xl md:text-4xl lg:text-[2.75rem] text-primary mb-6 leading-tight">
