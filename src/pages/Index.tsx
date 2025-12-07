@@ -170,7 +170,7 @@ const Index = () => {
                       }} transition={{
                         duration: 0.6,
                         ease: [0.2, 0.8, 0.2, 1]
-                      }} src="/lovable-uploads/4d576252-e1f7-400f-9da6-5468291bf00a.jpg" />
+                      }} src="/lovable-uploads/4d576252-e1f7-400f-9da6-5468291bf00a.jpg" width={330} height={443} loading="eager" decoding="async" />
                         {/* Subtle vignette for emerging effect */}
                         <div className="absolute inset-0 pointer-events-none z-20" style={{
                         boxShadow: 'inset 0 0 60px rgba(0, 0, 0, 0.1), inset 0 -30px 60px -30px hsl(160 30% 20% / 0.15)'
