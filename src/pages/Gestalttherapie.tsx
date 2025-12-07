@@ -149,7 +149,7 @@ const Gestalttherapie = () => {
 
         {/* Video 2: Kontaktunterbrechungen */}
         <VideoSection videoSrc={gestaltVideo2} sectionId="kontaktunterbrechungen" title="Kontaktunterbrechungen" position="left" content={<>
-              <p className="mb-3 text-[sidebar-accent-foreground] text-secondary-foreground">Heilung geschieht, wenn wir Unvollendetes integrieren. Eine geschlossene Gestalt brin fühlen.Kontaktunterbrechungen sind Schutzmechanismen, die uns einst geholfen haben, aber heute hindern.<strong className="text-accent font-semibold">Kontaktunterbrechungen</strong> sind Schutzmechanismen, 
+              <p className="mb-3 text-[sidebar-accent-foreground] text-secondary-foreground">Heilung geschieht, wenn wir Unvollendetes in.Kontaktunterbrechungen sind Schutzmechanismen, die uns einst geholfen haben, aber heute hindern.<strong className="text-accent font-semibold">Kontaktunterbrechungen</strong> sind Schutzmechanismen, 
                 die uns einst geholfen haben, aber heute hindern.
               </p>
               <p className="text-primary font-medium text-center mt-4 text-sm md:text-base">
