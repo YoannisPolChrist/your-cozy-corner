@@ -11,6 +11,8 @@ export const GestaltScrollTelling = () => {
             src={gestalttherapieIntro} 
             alt="Was ist Gestalttherapie?" 
             className="w-full rounded-xl mb-6 md:mb-12"
+            loading="eager"
+            decoding="async"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
