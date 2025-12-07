@@ -159,7 +159,7 @@ const Gestalttherapie = () => {
 
         {/* Video 3: Hier und Jetzt */}
         <VideoSection videoSrc={gestaltVideo3} sectionId="hier-und-jetzt" title="Hier und Jetzt" position="center" content={<>
-              <p className="mb-3">Heilung geschieht, wenn wir Unvollendetes integrieren. Eine geschlossene Gestalt bringt inneren Frieden und lässt Sie wieder als „ganzes Selbst“ fühlen. ​<strong className="text-accent font-semibold">Hier und Jetzt</strong> ​
+              <p className="mb-3">​<strong className="text-accent font-semibold">Hier und Jetzt</strong> ​
               </p>
               <p className="text-primary font-medium text-center mt-4 text-sm md:text-base">
                 Präsenz als Schlüssel zur Heilung.
