@@ -66,7 +66,7 @@ const UeberMich = () => {
           whileInView="visible" 
           viewport={viewportSettings}
           variants={staggerContainer} 
-          className="pt-[88px] pb-32 bg-white"
+          className="pt-[68px] pb-32 bg-white"
         >
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
