@@ -42,8 +42,8 @@ export const Navigation = () => {
           </Link>
         </div>
 
-        <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-          <Menu className="h-6 w-6" />
+        <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsOpen(!isOpen)} aria-label="Menü öffnen">
+          <Menu className="h-6 w-6" aria-hidden="true" />
         </Button>
       </div>
 
