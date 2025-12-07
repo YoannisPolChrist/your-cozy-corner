@@ -45,8 +45,8 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
         setScrollProgress(progress);
         
         // Set visibility when sticky element is properly in view
-        // Trigger earlier (0.12) and extend visibility duration
-        const shouldBeVisible = progress > 0.12 && progress < 0.72;
+        // Trigger immediately when section enters viewport
+        const shouldBeVisible = progress > 0.02 && progress < 0.75;
         setIsVisible(shouldBeVisible);
       }
     };
