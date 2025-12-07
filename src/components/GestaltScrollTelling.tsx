@@ -4,7 +4,7 @@ import gestalttherapieIntro from "@/assets/gestalttherapie-intro.png";
 
 export const GestaltScrollTelling = () => {
   return (
-    <section className="py-12 md:py-32 bg-off-white">
+    <section className="pt-[48px] pb-12 md:pt-[88px] md:pb-32 bg-off-white">
       <div className="container mx-auto px-4">
         <AnimatedSection className="max-w-5xl mx-auto">
           <motion.img 

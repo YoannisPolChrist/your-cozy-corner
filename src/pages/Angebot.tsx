@@ -61,7 +61,7 @@ const Angebot = () => {
       <Navigation />
       <main className="pt-20">
         {/* Section 1: The 3 Pillars */}
-        <section className="py-32 bg-background">
+        <section className="pt-[88px] pb-32 bg-background">
           <div className="container mx-auto px-4">
             <motion.div
               initial="hidden"
