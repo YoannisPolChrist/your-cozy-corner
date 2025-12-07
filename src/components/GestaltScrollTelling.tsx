@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { AnimatedSection, AnimatedItem, StaggerContainer } from "@/components/AnimatedSection";
-import gestalttherapieIntro from "@/assets/gestalttherapie-intro.png";
+import gestalttherapieIntro from "@/assets/gestalttherapie-intro.webp";
 
 export const GestaltScrollTelling = () => {
   return (
