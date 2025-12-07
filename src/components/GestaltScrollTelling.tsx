@@ -13,6 +13,8 @@ export const GestaltScrollTelling = () => {
             className="w-full rounded-xl mb-6 md:mb-12"
             loading="eager"
             decoding="async"
+            // @ts-ignore - fetchPriority is valid HTML attribute
+            fetchPriority="high"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
