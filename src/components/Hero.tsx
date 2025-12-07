@@ -41,7 +41,7 @@ export const Hero = () => {
       y,
       scale
     }} className="absolute inset-0 w-full h-full">
-        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+        <video autoPlay muted loop playsInline preload="metadata" className="absolute inset-0 w-full h-full object-cover">
           <source src={heroVideo} type="video/mp4" />
         </video>
       </motion.div>

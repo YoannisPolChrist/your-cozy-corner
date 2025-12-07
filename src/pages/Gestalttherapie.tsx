@@ -115,7 +115,7 @@ const VideoSection = ({ videoSrc, title, content, sectionId, position = 'center'
           loop
           muted
           playsInline
-          preload="auto"
+          preload={sectionId === 'hier-und-jetzt' ? 'none' : 'metadata'}
           className="absolute inset-0 w-full h-full object-cover object-center"
         >
           <source src={videoSrc} type="video/mp4" />
