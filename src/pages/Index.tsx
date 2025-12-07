@@ -103,20 +103,7 @@ const Index = () => {
         {/* Meet Johannes Section - Overlapping Organic Card */}
         <section className="relative z-10 pb-20 md:pb-28 bg-gradient-to-b from-transparent via-warm-sand/50 to-warm-sand">
           <div className="container mx-auto px-4">
-            <motion.div initial={{
-            opacity: 0,
-            y: 40
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true,
-            amount: 0.3,
-            margin: "-300px 0px 0px 0px"
-          }} transition={{
-            duration: 0.8,
-            ease: [0.16, 1, 0.3, 1]
-          }} className="max-w-5xl mx-auto -mt-24 md:-mt-32 lg:-mt-40">
+            <div className="max-w-5xl mx-auto -mt-24 md:-mt-32 lg:-mt-40">
               {/* Warm Glassmorphism Card */}
               <div className="rounded-3xl md:rounded-[2rem] p-8 md:p-12 lg:p-14 shadow-2xl border border-white/40" style={{
               background: 'linear-gradient(135deg, hsla(40, 25%, 96%, 0.92) 0%, hsla(38, 30%, 94%, 0.88) 100%)',
@@ -221,7 +208,7 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
