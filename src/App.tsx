@@ -2,8 +2,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import { LanguageProvider } from "@/i18n";
 
 // Lazy load pages for better performance (code splitting)
 const Index = lazy(() => import("./pages/Index"));
@@ -22,23 +23,54 @@ const PageLoader = () => (
   </div>
 );
 
+// Routes wrapped in language provider
+const AppRoutes = () => (
+  <Suspense fallback={<PageLoader />}>
+    <Routes>
+      {/* Redirect root to language-prefixed route */}
+      <Route path="/" element={<Navigate to="/de" replace />} />
+      
+      {/* German routes */}
+      <Route path="/de" element={<Index />} />
+      <Route path="/de/gestalttherapie" element={<Gestalttherapie />} />
+      <Route path="/de/angebot" element={<Angebot />} />
+      <Route path="/de/ueber-mich" element={<UeberMich />} />
+      <Route path="/de/kontakt" element={<Kontakt />} />
+      
+      {/* English routes */}
+      <Route path="/en" element={<Index />} />
+      <Route path="/en/gestalt-therapy" element={<Gestalttherapie />} />
+      <Route path="/en/services" element={<Angebot />} />
+      <Route path="/en/about-me" element={<UeberMich />} />
+      <Route path="/en/contact" element={<Kontakt />} />
+      
+      {/* French routes */}
+      <Route path="/fr" element={<Index />} />
+      <Route path="/fr/gestalt-therapie" element={<Gestalttherapie />} />
+      <Route path="/fr/services" element={<Angebot />} />
+      <Route path="/fr/a-propos" element={<UeberMich />} />
+      <Route path="/fr/contact" element={<Kontakt />} />
+      
+      {/* Legacy routes - redirect to German */}
+      <Route path="/gestalttherapie" element={<Navigate to="/de/gestalttherapie" replace />} />
+      <Route path="/angebot" element={<Navigate to="/de/angebot" replace />} />
+      <Route path="/ueber-mich" element={<Navigate to="/de/ueber-mich" replace />} />
+      <Route path="/kontakt" element={<Navigate to="/de/kontakt" replace />} />
+      
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  </Suspense>
+);
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Suspense fallback={<PageLoader />}>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/gestalttherapie" element={<Gestalttherapie />} />
-            <Route path="/angebot" element={<Angebot />} />
-            <Route path="/ueber-mich" element={<UeberMich />} />
-            <Route path="/kontakt" element={<Kontakt />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
+        <LanguageProvider>
+          <AppRoutes />
+        </LanguageProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
