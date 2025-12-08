@@ -9,28 +9,28 @@ export const de: Translations = {
   },
   
   hero: {
-    title: 'Veränderung beginnt im',
+    title: '',
     titleHighlight: 'Hier und Jetzt',
-    subtitle: 'Begleitung auf deinem Weg zu mehr Klarheit und Erfüllung – durch humanistische Gestalttherapie, modernes Coaching und innovative KI-Tools.',
+    subtitle: 'Begleitung auf deinem Weg zu mehr Klarheit, Erfüllung und innerem Frieden – durch Beratung, modernes Coaching und humanistische Gestalttherapie.',
     cta: 'Kennenlerngespräch vereinbaren',
   },
   
   meet: {
-    title: 'Schön, dass du hier bist.',
-    description: 'Veränderung erfordert Mut – und einen sicheren Raum. Ich bin Johannes Christ. Als Gestalttherapeut biete ich dir keine fertigen Lösungen, sondern meine volle Präsenz, um gemeinsam herauszufinden, was du gerade wirklich brauchst.',
+    title: 'Veränderung passiert –',
+    description: 'Optimalerweise in einem Rahmen, der hält und Sicherheit bietet. Dass dem meistens nicht so ist, ist natürlich selbstverständlich. Als Gestalttherapeut, Coach und M.Sc. Psychologie (i.A.) biete ich dir durch Präsenz, Kompetenz und Schmitz, den Raum, den es braucht, damit die Veränderung geschehen kann, die du dir wünschst!',
   },
   
   painPoints: {
     title: 'Wenn der innere Kompass stillsteht',
-    subtitle: 'Oft spüren wir, dass etwas fehlt, lange bevor wir es benennen können.',
+    subtitle: 'Oft spüren wir, dass etwas fehlt, aber so richtig bekommen wir den Finger nicht darauf.',
     items: [
       {
         title: 'Auf der Stelle treten',
-        description: 'Das Gefühl, auf der Stelle zu treten, obwohl du dich bewegen willst. Alte Muster wiederholen sich, besonders in Beziehungen.',
+        description: 'Das Gefühl, auf der Stelle zu treten, obwohl du dich bewegen willst. Alte Muster wiederholen sich. Frustration und Stillstand sind vorprogrammiert.',
       },
       {
         title: 'Distanz und Nähe',
-        description: 'Die Distanz zu anderen wächst, oder die Nähe fühlt sich erdrückend an. Gespräche drehen sich im Kreis.',
+        description: 'Die anderen wirken so weit weg, oder die Nähe fühlt sich erdrückend an. Gespräche drehen sich im Kreis.',
       },
       {
         title: 'Nebel der Unklarheit',
@@ -49,7 +49,7 @@ export const de: Translations = {
       },
       {
         title: 'Coaching',
-        description: 'Fokussierte Entwicklung deiner Potenziale',
+        description: 'Fokussierte Entwicklung, zielorientiert, praktisch, haptisch',
       },
       {
         title: 'Diagnostik',
@@ -60,25 +60,25 @@ export const de: Translations = {
   },
   
   gestaltSection: {
-    label: 'Mein therapeutischer Ansatz',
+    label: 'Der therapeutische Ansatz',
     title: 'Was ist',
     titleHighlight: 'Gestalttherapie?',
-    description: 'Die Gestalttherapie ist ein humanistischer Therapieansatz, der sich auf das bewusste Erleben im Hier und Jetzt konzentriert. Statt nur über Probleme zu sprechen, erforschen wir gemeinsam, wie du deine Welt wahrnimmst und gestaltest.',
+    description: 'Die Gestalttherapie ist ein humanistischer Therapieansatz, der sich auf das bewusste Erleben im Hier und Jetzt konzentriert. Statt nur über Probleme zu sprechen, erforschen wir gemeinsam, wie Sie Ihre Welt wahrnehmen und gestalten.',
     link: 'Mehr über Gestalttherapie erfahren',
     quote: 'Sei ganz hier, ganz jetzt – der Rest folgt von selbst.',
   },
   
   aboutPreview: {
-    label: 'Dein Begleiter',
+    label: 'Ihr Begleiter',
     title: 'Über mich',
-    description1: 'Ich bin Johannes Christ, Gestalttherapeut, Coach und M.Sc. Psychologie (i.A.). Meine Arbeit basiert auf der Überzeugung, dass echte Veränderung entsteht, wenn wir die Verbindung zwischen unseren Gedanken, Gefühlen und unserem Körper verstehen.',
+    description1: 'Ich bin Johannes Christ, Gestalttherapeut, Coach und M.Sc. Psychologie (i.A.). Meine Arbeit basiert in einer Haltung von Achtung und Gewahrsein. In diesem Gewahrsein geschieht die Veränderung. Dies ist unser Ansatzpunkt.',
     description2: 'Mit langjähriger Erfahrung in Gestalttherapie und Coaching begleite ich dich auf dem Weg zu mehr Klarheit, Wohlbefinden und Erfüllung.',
     link: 'Mehr zu meiner Person',
   },
   
   cta: {
-    title: 'Bereit für den ersten Schritt?',
-    description: 'Vereinbare ein kostenloses Kennenlerngespräch und erfahre, wie ich dich auf deinem Weg unterstützen kann.',
+    title: 'Bereit für den nächsten Schritt?',
+    description: 'Vereinbare ein kostenloses Kennenlerngespräch oder ruf einfach durch, um herauszufinden, ob eine Zusammenarbeit sinnvoll ist.',
     button: 'Kontakt aufnehmen',
   },
   
@@ -103,7 +103,7 @@ export const de: Translations = {
           description: 'Heilung geschieht im authentischen Dialog zwischen Therapeut und Klient.',
         },
       ],
-      summary: 'Gestalttherapie bedeutet, im gegenwärtigen Moment ganz präsent zu sein und die eigene Wahrnehmung zu schärfen. Durch achtsame Selbsterfahrung werden alte Muster erkannt.',
+      summary: 'Gestalttherapie bedeutet, im gegenwärtigen Moment präsent zu sein und die eigene Wahrnehmung zu schärfen. Durch achtsame Selbsterfahrung werden alte Muster erkannt und verändert.',
     },
     offeneGestalt: {
       title: 'Offene Gestalt',
@@ -112,13 +112,13 @@ export const de: Translations = {
     },
     kontaktunterbrechungen: {
       title: 'Kontaktunterbrechungen',
-      description: 'Kontaktunterbrechungen sind Schutzmechanismen, die uns einst geholfen haben, aber heute hindern.',
+      description: 'Kontaktunterbrechungen sind die Schutzmechanismen, die uns einst geholfen haben, aber heute hindern.',
       tagline: 'Wir lernen, sie zu erkennen und zu lösen.',
     },
     geschlosseneGestalt: {
       title: 'Geschlossene Gestalt',
       description: 'Heilung geschieht, wenn wir Unvollendetes integrieren. Eine geschlossene Gestalt bringt inneren Frieden und lässt dich wieder als „ganzes Selbst" fühlen.',
-      tagline: 'Präsenz als Schlüssel zur Heilung.',
+      tagline: 'Erfüllung, Frieden und Ruhe kehrt ein.',
     },
     kontaktzyklus: {
       title: 'Der Gestalt-Kontaktzyklus',
@@ -131,11 +131,11 @@ export const de: Translations = {
         { title: '5. Integration', subtitle: 'Verdauen', description: 'Verarbeitung und Einordnung' },
         { title: '6. Rückzug', subtitle: 'Ruhe', description: 'Regeneration und Neuorientierung' },
       ],
-      summary: 'Unterbrechungen dieses Zyklus können zu psychischen Beschwerden führen. In der Therapie arbeiten wir daran, diese zu erkennen und neue Verhaltensweisen auszuprobieren.',
+      summary: 'Unterbrechungen dieses Zyklus können zu psychischen und körperlichen Beschwerden führen. In der Therapie arbeiten wir daran, diese zu erkennen und neue Verhaltensweisen auszuprobieren.',
     },
     ressourcen: {
       title: 'Ressourcen & Unterstützung',
-      intro: 'Im therapeutischen Prozess nutzen wir verschiedene Ressourcen zur Stabilisierung:',
+      intro: 'Im therapeutischen Prozess nutzen wir Ressourcen um den Veränderungsprozess zu unterstützen, wobei verschiedene Ressourcen zur Stabilisierung dienen.',
       items: [
         { title: 'Äußere Stützen', description: 'Die therapeutische Beziehung sowie Familie und Gruppen als stabiles Netzwerk.' },
         { title: 'Innere Ressourcen', description: 'Körperliches Spüren, Zentrierung und Resilienz für innere Stabilität.' },
@@ -144,13 +144,13 @@ export const de: Translations = {
     },
     cta: {
       title: 'Neugierig geworden?',
-      description: 'Vereinbare ein unverbindliches Erstgespräch.',
+      description: 'Vereinbare ein kostenloses Kennenlerngespräch oder ruf einfach durch, um herauszufinden, ob eine Zusammenarbeit sinnvoll ist.',
       button: 'Kontakt aufnehmen',
     },
   },
   
   angebot: {
-    title: 'Meine Leistungen',
+    title: 'Das Angebot',
     services: [
       {
         title: 'Integrative Gestalttherapie',
@@ -165,16 +165,16 @@ export const de: Translations = {
       {
         title: 'Psychologische Diagnostik',
         subline: 'PRÄZISION STATT BAUCHGEFÜHL',
-        description: 'Auf Basis aktueller wissenschaftlicher Standards (M.Sc. Psychologie i.A.) biete ich eine fundierte Standortbestimmung. Wir ordnen Symptome ein und erstellen einen Fahrplan, der zu deiner Situation passt.',
+        description: 'Auf Basis aktueller wissenschaftlicher Standards (M.Sc. Psychologie i.A.) biete ich eine fundierte Standortbestimmung. Wir ordnen Symptome ein und erstellen einen Fahrplan, der zu Ihrer Situation passt.',
       },
     ],
     checkup: {
-      label: 'PHASE 1: DIE STANDORTBESTIMMUNG',
+      label: 'DIE STANDORTBESTIMMUNG',
       title: 'Wir können nur verändern, was wir verstehen.',
       features: [
         { title: 'Vitalwerte & Körper', description: 'Wir werfen einen Blick auf Blutwerte, Schlaf und Ressourcen, um körperliche Ursachen für psychische Themen auszuschließen.' },
-        { title: 'Tracking & Muster', description: 'Wir erheben den Ist-Zustand deiner Routinen. Wo verlierst du Energie? Wir machen das Unsichtbare messbar.' },
-        { title: 'Strategie', description: 'Basierend auf Daten erstellen wir deinen individuellen Fahrplan. Fortschritt ist kein Zufall.' },
+        { title: 'Tracking & Muster', description: 'Wir erheben den Ist-Zustand Ihrer Routinen. Wo verlieren Sie Energie? Wir machen das Unsichtbare messbar.' },
+        { title: 'Strategie', description: 'Basierend auf Daten erstellen wir Ihren individuellen Fahrplan der über der Gestalttherapie, d.h. deinen Prozess hinausgeht. Fortschritt ist kein Zufall.' },
       ],
     },
     konditionen: {
@@ -183,7 +183,7 @@ export const de: Translations = {
         price: '50€',
         priceLabel: 'pro 50 Min. Sitzung',
         title: 'Einzelbegleitung',
-        description: 'Psychologische Beratung, Gestalttherapie & Coaching. Ideal für akute Anliegen.',
+        description: 'Psychologische Beratung, Gestalttherapie & Coaching. Ideal für den Anfang.',
         cta: 'Termin buchen',
       },
       intensiv: {
@@ -191,6 +191,9 @@ export const de: Translations = {
         priceLabel: 'Empfohlen: 3-6 Monate',
         title: 'Intensive Zusammenarbeit',
         description: 'Veränderung braucht Zeit. Für tiefgreifende Themen vereinbaren wir einen festen Rhythmus. Abrechnung flexibel pro Sitzung.',
+        discount: '10% Rabatt',
+        discountPrice: '45€',
+        discountPriceLabel: 'pro 50 Min Sitzung',
         cta: 'Kostenloses Vorgespräch',
       },
     },
@@ -201,44 +204,44 @@ export const de: Translations = {
         description: 'Ortsunabhängig für Klienten weltweit.',
       },
       praesenz: {
-        title: 'Präsenz & Walk-and-Talk',
-        description: 'In Toulouse und Umgebung.',
+        title: 'Präsenz',
+        description: 'In Toulouse.',
       },
     },
     cta: {
-      title: 'Bereit für den ersten Schritt?',
-      description: 'Vereinbare ein kostenloses 20-minütiges Kennenlerngespräch, um herauszufinden, wie ich dich unterstützen kann.',
+      title: 'Bereit für den nächsten Schritt?',
+      description: 'Vereinbare ein kostenloses Kennenlerngespräch oder ruf einfach durch, um herauszufinden, ob eine Zusammenarbeit sinnvoll ist.',
       button: 'Kontakt aufnehmen',
     },
   },
   
   ueberMich: {
     hero: {
-      label: 'JOHANNES CHRIST — M.SC. PSYCHOLOGIE (i.A.)',
-      title: 'Fundiert durch Wissenschaft. Geerdet durch Erfahrung.',
-      description1: 'Hi, ich bin Johannes. Mein Weg begann in der Bewegungswissenschaft (B.A.), wo ich lernte, wie der Körper funktioniert. Doch echte Veränderung braucht mehr als Trainingspläne. Seit 2018 vertiefe ich mein Wissen in Gestalttherapie.',
-      description2: 'Aktuell verbinde ich diese Welten in meinem Masterstudium der Angewandten Psychologie (M.Sc. i.A.). Ich biete keine Schablonen, sondern fundierte Begleitung auf Augenhöhe.',
+      label: 'JOHANNES CHRIST — GESTALTTHERAPIE, B.A. BEWEGUNGSTHERAPIE UND PRÄVENTION, M.SC. PSYCHOLOGIE (i.A.)',
+      title: 'Fundiert, durch Erfahrung.',
+      description1: 'Hi, ich bin Johannes. Mein Weg begann vor einigen Jahren durch eine eigene existenzielle Krise mit der Gestalttherapie. Durch innere und äußere Arbeit habe ich mich aus meinem eigenen Loch gekämpft. Auf dem Weg verbrachte ich mehrere Jahre in Leipzig und Innsbruck, wobei ich in dieser Zeit ein duales Studium in der Bewegungstherapie und Prävention (B.A.) abschloss. Bewegungs- und Körperverständnis, menschlich und wissenschaftlich.',
+      description2: 'Aktuell verbinde ich diese Welten in meinem Masterstudium der Angewandten Psychologie und Beratung M.Sc. (i.A.).',
     },
     arbeitsweise: {
       label: 'MEINE ARBEITSWEISE',
       title: 'Raum für das, was ist.',
-      description1: 'In über 40 intensiven Einzelprozessen durfte ich erleben, was passiert, wenn wir dem Körper und den Emotionen gleichermaßen Raum geben. Ob früher als Trainer oder heute als Coach und Berater: Ich bin dein Sparringspartner.',
-      description2: 'Ich halte den Raum, gebe Struktur und stelle die Fragen, die dich wirklich weiterbringen.',
+      description1: 'In über hunderten intensiven Einzelprozessen durfte ich erleben, was passiert, wenn wir dem Körper und den Emotionen gleichermaßen Raum geben. Ob früher als Trainer und Coach oder heute als Gestalttherapeut: Ich bin dein Sparringspartner.',
+      description2: 'Ich halte den Raum und gebe dir Struktur, sodass du dich entspannt verändern kannst.',
       icons: {
         koerper: 'Körper',
         psyche: 'Psyche',
-        resonanz: 'Resonanz',
+        resonanz: 'Veränderung',
       },
     },
     persoenlich: {
       label: 'PERSÖNLICH',
       title: 'Und sonst so?',
-      description1: 'Wer mich kennt, weiß: Ich nehme meine Arbeit ernst, aber mich selbst nicht zu sehr. Ich glaube an die Kraft von Humor, Leichtigkeit und echten Begegnungen.',
-      description2: 'Abseits der Therapie findest du mich beim Wandern in den Bergen, beim Kochen mit Freunden oder versunken in ein gutes Buch. Ich bin überzeugt, dass ein erfülltes Leben aus vielen kleinen Momenten der Verbundenheit besteht – mit uns selbst und mit anderen.',
+      description1: 'Wer mich kennt, weiß: Ich nehme meine Arbeit ernst. Wenn wir aber irgendwann nichts mehr zum Lachen haben, dann wird\'s kritisch. Dann stimmt was nicht. Ich glaube an die Kraft von Humor, Leichtigkeit und echten Begegnungen.',
+      description2: 'Abseits der Therapie findest du mich beim Sport, unterwegs mit Freunden oder bei meinen Rhetorikclubs. Ein erfülltes Leben besteht, zumindest für mich, aus vielen kleinen Momenten der Verbundenheit – mit uns selbst, mit anderen und der Universum als Ganzem.',
     },
     cta: {
       title: 'Neugierig geworden?',
-      description: 'In einem kostenlosen Erstgespräch können wir herausfinden, ob die Chemie stimmt und wie ich dich am besten unterstützen kann.',
+      description: 'Vereinbare ein kostenloses Kennenlerngespräch oder ruf einfach durch, um herauszufinden, ob eine Zusammenarbeit sinnvoll ist.',
       button: 'Kontakt aufnehmen',
     },
   },
@@ -249,7 +252,7 @@ export const de: Translations = {
       subtitle: 'Hast du Fragen oder möchtest du einen Termin vereinbaren? Ich freue mich auf deine Nachricht.',
     },
     form: {
-      title: 'Schreib mir',
+      title: 'Schreibe mir',
       name: 'Name *',
       email: 'E-Mail *',
       phone: 'Telefon (optional)',
@@ -269,11 +272,11 @@ export const de: Translations = {
     },
     erstgespraech: {
       title: 'Kostenloses Erstgespräch',
-      description: 'Ich biete ein kostenloses 20-minütiges Kennenlerngespräch an, in dem wir gemeinsam schauen können, ob und wie ich dich unterstützen kann. Melde dich gerne!',
+      description: 'Ich biete ein kostenloses 30-minütiges Kennenlerngespräch an, in dem wir gemeinsam schauen können, ob und wie eine Zusammenarbeit sinnvoll wäre. Melden Sie sich gerne!',
     },
     online: {
       title: 'Online-Sitzungen',
-      description: 'Alle Sitzungen können auch online per Video stattfinden – ideal für Menschen im Ausland oder mit wenig Zeit.',
+      description: 'Alle Sitzungen können auch online per Video stattfinden.',
     },
   },
   

@@ -152,6 +152,9 @@ export interface Translations {
         priceLabel: string;
         title: string;
         description: string;
+        discount?: string;
+        discountPrice?: string;
+        discountPriceLabel?: string;
         cta: string;
       };
     };
