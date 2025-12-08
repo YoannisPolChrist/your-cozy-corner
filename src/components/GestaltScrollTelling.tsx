@@ -7,9 +7,9 @@ export const GestaltScrollTelling = () => {
     <section className="pt-[28px] pb-12 md:pt-[68px] md:pb-32 bg-off-white">
       <div className="container mx-auto px-4">
         <AnimatedSection className="max-w-5xl mx-auto">
-          <motion.img 
-            src={gestalttherapieIntro} 
-            alt="Was ist Gestalttherapie?" 
+          <motion.img
+            src={gestalttherapieIntro}
+            alt="Was ist Gestalttherapie?"
             className="w-full rounded-xl mb-6 md:mb-12"
             loading="eager"
             decoding="async"
@@ -21,20 +21,20 @@ export const GestaltScrollTelling = () => {
             transition={{ duration: 0.8 }}
             style={{ boxShadow: '0 10px 40px rgba(30, 95, 116, 0.1)' }}
           />
-          
+
           {/* Gold connector line from image to cards - hidden on mobile */}
           <div className="hidden md:flex justify-center mb-8">
             <div className="w-px h-12 bg-gradient-to-b from-accent to-accent/30" />
           </div>
-          
-          <motion.div 
+
+          <motion.div
             className="p-5 md:p-14 rounded-2xl bg-secondary"
           >
             <h2 className="font-heading text-2xl md:text-4xl font-bold text-primary mb-4 md:mb-8">
               Was ist Gestalttherapie?
             </h2>
             <p className="text-foreground/80 text-base md:text-lg leading-relaxed md:leading-loose mb-6 md:mb-10">
-              Gestalttherapie ist ein <strong className="text-primary">humanistischer Therapieansatz</strong>, 
+              Gestalttherapie ist ein <strong className="text-primary">humanistischer Therapieansatz</strong>,
               der auf drei wesentlichen Grundpfeilern basiert:
             </p>
             <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-10">
@@ -66,7 +66,7 @@ export const GestaltScrollTelling = () => {
                 </div>
               </AnimatedItem>
             </StaggerContainer>
-            <motion.div 
+            <motion.div
               className="p-4 md:p-6 rounded-xl border-l-4 border-primary bg-primary/[0.08]"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -74,15 +74,15 @@ export const GestaltScrollTelling = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <p className="text-foreground/80 text-sm md:text-base leading-relaxed">
-                <strong className="text-primary">Gestalttherapie</strong> bedeutet, im gegenwärtigen Moment 
-                <strong className="text-primary"> ganz präsent</strong> zu sein und die eigene Wahrnehmung zu schärfen. 
-                Durch achtsame Selbsterfahrung werden alte Muster erkannt.
+                <strong className="text-primary">Gestalttherapie</strong> bedeutet, im gegenwärtigen Moment
+                <strong className="text-primary"> präsent</strong> zu sein und die eigene Wahrnehmung zu schärfen.
+                Durch achtsame Selbsterfahrung werden alte Muster erkannt und verändert.
               </p>
             </motion.div>
           </motion.div>
         </AnimatedSection>
       </div>
-    </section>
+    </section >
   );
 };
 
