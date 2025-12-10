@@ -8,10 +8,10 @@ import johannesHeroPortrait from "@/assets/johannes-hero-portrait.png";
 import conversationWindow from "@/assets/conversation-window.jpg";
 import johannesLaughing from "@/assets/johannes-laughing.png";
 import { Footer } from "@/components/Footer";
-import { 
-  fadeUp, 
-  staggerContainer, 
-  goldFrameVariants, 
+import {
+  fadeUp,
+  staggerContainer,
+  goldFrameVariants,
   imageVariants,
   iconStagger,
   iconItem,
@@ -20,14 +20,14 @@ import {
 } from "@/lib/animations";
 
 // Parallax wrapper component for images
-const ParallaxImageWrapper = ({ 
-  src, 
-  alt, 
+const ParallaxImageWrapper = ({
+  src,
+  alt,
   className = "",
   aspectRatio = "aspect-[3/4]"
-}: { 
-  src: string; 
-  alt: string; 
+}: {
+  src: string;
+  alt: string;
   className?: string;
   aspectRatio?: string;
 }) => {
@@ -40,12 +40,12 @@ const ParallaxImageWrapper = ({
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.08, 1, 1.08]);
 
   return (
-    <motion.div 
+    <motion.div
       ref={ref}
       variants={imageVariants}
       className={`relative ${aspectRatio} rounded-2xl overflow-hidden shadow-xl`}
     >
-      <motion.img 
+      <motion.img
         src={src}
         alt={alt}
         className={`w-full h-full ${className}`}
@@ -61,11 +61,11 @@ const UeberMich = () => {
       <Navigation />
       <main className="pt-20">
         {/* Section 1: Hero - White Background */}
-        <motion.section 
-          initial="hidden" 
-          whileInView="visible" 
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
           viewport={viewportSettings}
-          variants={staggerContainer} 
+          variants={staggerContainer}
           className="pt-[68px] pb-32 bg-white"
         >
           <div className="container mx-auto px-4">
@@ -74,12 +74,12 @@ const UeberMich = () => {
                 {/* Image with Gold Frame - Cinematic Parallax */}
                 <motion.div className="relative">
                   {/* Gold Frame - Slides out from behind with delay */}
-                  <motion.div 
+                  <motion.div
                     variants={goldFrameVariants}
-                    className="absolute bottom-[10px] right-[10px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-2xl" 
+                    className="absolute bottom-[10px] right-[10px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-2xl"
                   />
                   {/* Main Image with Parallax */}
-                  <ParallaxImageWrapper 
+                  <ParallaxImageWrapper
                     src={johannesHeroPortrait}
                     alt="Johannes Christ - Gestalttherapeut"
                     className="object-cover object-center"
@@ -89,30 +89,27 @@ const UeberMich = () => {
 
                 {/* Text Content */}
                 <motion.div variants={staggerContainer} className="space-y-6 order-first md:order-last">
-                  <motion.span 
+                  <motion.span
                     variants={fadeUp}
                     className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
                   >
-                    JOHANNES CHRIST — M.SC. PSYCHOLOGIE (i.A.)
+                    JOHANNES CHRIST — GESTALTTHERAPIE, B.A. BEWEGUNGSTHERAPIE UND PRÄVENTION, M.SC. PSYCHOLOGIE (i.A.)
                   </motion.span>
-                  <motion.h1 
+                  <motion.h1
                     variants={fadeUp}
                     className="font-heading text-[calc(2.25rem+3px)] md:text-[calc(3rem+3px)] text-primary leading-tight"
                   >
-                    Fundiert durch Wissenschaft. Geerdet durch Erfahrung.
+                    Fundiert, durch Erfahrung.
                   </motion.h1>
-                  <motion.div 
+                  <motion.div
                     variants={fadeUp}
                     className="space-y-4 text-muted-foreground leading-relaxed"
                   >
                     <p>
-                      Hi, ich bin Johannes. Mein Weg begann in der Bewegungswissenschaft (B.A.), wo ich lernte, 
-                      wie der Körper funktioniert. Doch echte Veränderung braucht mehr als Trainingspläne. 
-                      Seit 2018 vertiefe ich mein Wissen in Gestalttherapie.
+                      Hi, ich bin Johannes. Mein Weg begann vor einigen Jahren durch eine eigene existenzielle Krise mit der Gestalttherapie. Durch innere und äußere Arbeit habe ich mich aus meinem eigenen Loch gekämpft. Auf dem Weg verbrachte ich mehrere Jahre in Leipzig und Innsbruck, wobei ich in dieser Zeit ein duales Studium in der Bewegungstherapie und Prävention (B.A.) abschloss. Bewegungs- und Körperverständnis, menschlich und wissenschaftlich.
                     </p>
                     <p>
-                      Aktuell verbinde ich diese Welten in meinem Masterstudium der Angewandten Psychologie 
-                      (M.Sc. i.A.). Ich biete keine Schablonen, sondern fundierte Begleitung auf Augenhöhe.
+                      Aktuell verbinde ich diese Welten in meinem Masterstudium der Angewandten Psychologie und Beratung M.Sc. (i.A.).
                     </p>
                   </motion.div>
                 </motion.div>
@@ -122,11 +119,11 @@ const UeberMich = () => {
         </motion.section>
 
         {/* Section 2: Process - Deep Teal Background */}
-        <motion.section 
-          initial="hidden" 
-          whileInView="visible" 
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
           viewport={viewportSettings}
-          variants={staggerContainer} 
+          variants={staggerContainer}
           className="py-32 bg-primary"
         >
           <div className="container mx-auto px-4">
@@ -134,37 +131,35 @@ const UeberMich = () => {
               <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                 {/* Text Content - Left aligned */}
                 <motion.div variants={staggerContainer} className="space-y-6 order-2 md:order-1 text-left">
-                  <motion.span 
+                  <motion.span
                     variants={fadeUp}
                     className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
                   >
                     MEINE ARBEITSWEISE
                   </motion.span>
-                  <motion.h2 
+                  <motion.h2
                     variants={fadeUp}
                     className="font-heading text-[calc(1.875rem+3px)] md:text-[calc(2.25rem+3px)] text-white leading-tight text-left"
                   >
                     Raum für das, was ist.
                   </motion.h2>
-                  <motion.div 
+                  <motion.div
                     variants={fadeUp}
                     className="space-y-4 text-white/90 leading-relaxed text-left"
                   >
                     <p>
-                      In über 40 intensiven Einzelprozessen durfte ich erleben, was passiert, wenn wir dem 
-                      Körper und den Emotionen gleichermaßen Raum geben. Ob früher als Trainer oder heute 
-                      als Coach und Berater: Ich bin dein Sparringspartner.
+                      In über hunderten intensiven Einzelprozessen durfte ich erleben, was passiert, wenn wir dem Körper und den Emotionen gleichermaßen Raum geben. Ob früher als Trainer und Coach oder heute als Gestalttherapeut: Ich bin dein Sparringspartner.
                     </p>
                     <p>
-                      Ich halte den Raum, gebe Struktur und stelle die Fragen, die dich wirklich weiterbringen.
+                      Ich halte den Raum und gebe dir Struktur, sodass du dich entspannt verändern kannst.
                     </p>
                   </motion.div>
-                  
+
                   {/* Gold Icons - Left aligned, larger */}
-                  <motion.div 
-                    variants={iconStagger} 
-                    initial="hidden" 
-                    whileInView="visible" 
+                  <motion.div
+                    variants={iconStagger}
+                    initial="hidden"
+                    whileInView="visible"
                     viewport={{ once: true }}
                     className="flex flex-wrap gap-8 pt-6"
                   >
@@ -184,7 +179,7 @@ const UeberMich = () => {
                       <div className="w-16 h-16 rounded-full border border-[#c5a065]/40 flex items-center justify-center">
                         <MessageCircle className="w-8 h-8 text-[#c5a065]" strokeWidth={1.5} />
                       </div>
-                      <span className="text-sm font-medium text-white">Resonanz</span>
+                      <span className="text-sm font-medium text-white">Veränderung</span>
                     </motion.div>
                   </motion.div>
                 </motion.div>
@@ -192,12 +187,12 @@ const UeberMich = () => {
                 {/* Image with Gold Frame - Cinematic Parallax */}
                 <motion.div className="order-1 md:order-2 relative">
                   {/* Gold Frame - Slides out from behind with delay */}
-                  <motion.div 
+                  <motion.div
                     variants={goldFrameVariants}
-                    className="absolute bottom-[10px] left-[10px] md:bottom-[20px] md:left-[20px] w-full h-full bg-[#c5a065] rounded-2xl" 
+                    className="absolute bottom-[10px] left-[10px] md:bottom-[20px] md:left-[20px] w-full h-full bg-[#c5a065] rounded-2xl"
                   />
                   {/* Main Image with Parallax */}
-                  <ParallaxImageWrapper 
+                  <ParallaxImageWrapper
                     src={conversationWindow}
                     alt="Therapeutische Arbeit"
                     className="object-cover"
@@ -210,11 +205,11 @@ const UeberMich = () => {
         </motion.section>
 
         {/* Section 3: Personal - Off-White Background (Image Left / Text Right) */}
-        <motion.section 
-          initial="hidden" 
-          whileInView="visible" 
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
           viewport={viewportSettings}
-          variants={staggerContainer} 
+          variants={staggerContainer}
           className="py-32 bg-off-white"
         >
           <div className="container mx-auto px-4">
@@ -223,12 +218,12 @@ const UeberMich = () => {
                 {/* Image with Gold Frame - Left Side */}
                 <motion.div className="relative">
                   {/* Gold Frame - Slides out from behind with delay */}
-                  <motion.div 
+                  <motion.div
                     variants={goldFrameVariants}
-                    className="absolute bottom-[10px] right-[10px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-2xl" 
+                    className="absolute bottom-[10px] right-[10px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-2xl"
                   />
                   {/* Main Image - Portrait Rectangle with Parallax */}
-                  <ParallaxImageWrapper 
+                  <ParallaxImageWrapper
                     src={johannesLaughing}
                     alt="Johannes Christ lachend"
                     className="object-cover"
@@ -238,31 +233,27 @@ const UeberMich = () => {
 
                 {/* Text Content - Right Side */}
                 <motion.div variants={staggerContainer} className="space-y-6">
-                  <motion.span 
+                  <motion.span
                     variants={fadeUp}
                     className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
                   >
                     PERSÖNLICH
                   </motion.span>
-                  <motion.h2 
+                  <motion.h2
                     variants={fadeUp}
                     className="font-heading text-[calc(1.875rem+3px)] md:text-[calc(2.25rem+3px)] text-primary leading-tight"
                   >
                     Und sonst so?
                   </motion.h2>
-                  <motion.div 
+                  <motion.div
                     variants={fadeUp}
                     className="space-y-4 text-muted-foreground leading-relaxed"
                   >
                     <p>
-                      Wer mich kennt, weiß: Ich nehme meine Arbeit ernst, aber mich selbst nicht zu sehr. 
-                      Ich glaube an die Kraft von Humor, Leichtigkeit und echten Begegnungen.
+                      Wer mich kennt, weiß: Ich nehme meine Arbeit ernst. Wenn wir aber irgendwann nichts mehr zum Lachen haben, dann wird's kritisch. Dann stimmt was nicht. Ich glaube an die Kraft von Humor, Leichtigkeit und echten Begegnungen.
                     </p>
                     <p>
-                      Abseits der Therapie findest du mich beim Wandern in den Bergen, beim Kochen mit 
-                      Freunden oder versunken in ein gutes Buch. Ich bin überzeugt, dass ein erfülltes 
-                      Leben aus vielen kleinen Momenten der Verbundenheit besteht – mit uns selbst und 
-                      mit anderen.
+                      Abseits der Therapie findest du mich beim Sport, unterwegs mit Freunden oder bei meinen Rhetorikclubs. Ein erfülltes Leben besteht, zumindest für mich, aus vielen kleinen Momenten der Verbundenheit – mit uns selbst, mit anderen und der Universum als Ganzem.
                     </p>
                   </motion.div>
                 </motion.div>
@@ -272,28 +263,28 @@ const UeberMich = () => {
         </motion.section>
 
         {/* CTA Section */}
-        <motion.section 
-          initial="hidden" 
-          whileInView="visible" 
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
           viewport={viewportSettings}
-          variants={staggerContainer} 
+          variants={staggerContainer}
           className="py-28 md:py-36 relative overflow-hidden bg-gradient-cta"
         >
           {/* Subtle gradient overlay for depth */}
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-teal-navy/30" />
-          
+
           <div className="container mx-auto px-4 text-center relative z-10">
-            <motion.h2 
+            <motion.h2
               variants={fadeUp}
               className="font-heading text-3xl md:text-4xl mb-8 text-white"
             >
               Neugierig geworden?
             </motion.h2>
-            <motion.p 
+            <motion.p
               variants={fadeUp}
               className="text-white/85 text-lg mb-10 max-w-2xl mx-auto"
             >
-              In einem kostenlosen Erstgespräch können wir herausfinden, 
+              In einem kostenlosen Erstgespräch können wir herausfinden,
               ob die Chemie stimmt und wie ich dich am besten unterstützen kann.
             </motion.p>
             <motion.div variants={fadeUp}>
