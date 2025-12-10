@@ -16,8 +16,10 @@ import {
   cardItem,
   viewportSettings
 } from "@/lib/animations";
+import { useLanguage } from "@/i18n";
 
-const Kontakt = () => { 
+const Kontakt = () => {
+  const { t } = useLanguage();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -29,8 +31,8 @@ const Kontakt = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Nachricht gesendet",
-      description: "Vielen Dank für Ihre Nachricht. Ich melde mich bald bei Ihnen.",
+      title: t.kontakt.form.successTitle,
+      description: t.kontakt.form.successMessage,
     });
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
@@ -53,14 +55,13 @@ const Kontakt = () => {
                 variants={fadeUp}
                 className="font-heading text-4xl md:text-6xl mb-6 text-primary"
               >
-                Kontakt
+                {t.kontakt.hero.title}
               </motion.h1>
               <motion.p
                 variants={fadeUp}
                 className="text-xl text-muted-foreground leading-relaxed"
               >
-                Hast du Fragen oder möchtest du einen Termin vereinbaren?
-                Ich freue mich auf deine Nachricht.
+                {t.kontakt.hero.subtitle}
               </motion.p>
             </div>
           </div>
@@ -84,11 +85,11 @@ const Kontakt = () => {
                 <motion.div variants={cardItem}>
                   <Card className="p-8 shadow-soft">
                     <h2 className="font-heading text-2xl mb-6 text-primary">
-                      Schreibe mir
+                      {t.kontakt.form.title}
                     </h2>
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="space-y-2">
-                        <Label htmlFor="name">Name *</Label>
+                        <Label htmlFor="name">{t.kontakt.form.name}</Label>
                         <Input
                           id="name"
                           value={formData.name}
@@ -99,7 +100,7 @@ const Kontakt = () => {
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="email">E-Mail *</Label>
+                        <Label htmlFor="email">{t.kontakt.form.email}</Label>
                         <Input
                           id="email"
                           type="email"
@@ -111,7 +112,7 @@ const Kontakt = () => {
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="phone">Telefon (optional)</Label>
+                        <Label htmlFor="phone">{t.kontakt.form.phone}</Label>
                         <Input
                           id="phone"
                           type="tel"
@@ -122,14 +123,14 @@ const Kontakt = () => {
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="message">deine Nachricht *</Label>
+                        <Label htmlFor="message">{t.kontakt.form.message}</Label>
                         <Textarea
                           id="message"
                           value={formData.message}
                           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                           required
                           rows={5}
-                          placeholder="Beschreiben Sie kurz Ihr Anliegen..."
+                          placeholder={t.kontakt.form.messagePlaceholder}
                           className="transition-all focus:ring-2 focus:ring-primary resize-none"
                         />
                       </div>
@@ -140,7 +141,7 @@ const Kontakt = () => {
                         size="lg"
                         className="w-full font-semibold"
                       >
-                        Nachricht senden
+                        {t.kontakt.form.submit}
                       </Button>
                     </form>
                   </Card>
@@ -150,12 +151,12 @@ const Kontakt = () => {
                 <motion.div variants={cardStagger} className="space-y-6">
                   <motion.div variants={cardItem}>
                     <Card className="p-8 bg-gradient-teal text-white">
-                      <h2 className="font-heading text-2xl mb-6">Kontaktdaten</h2>
+                      <h2 className="font-heading text-2xl mb-6">{t.kontakt.info.title}</h2>
                       <div className="space-y-6">
                         <div className="flex items-start gap-4">
                           <MapPin className="w-6 h-6 flex-shrink-0 mt-1" />
                           <div>
-                            <p className="font-semibold mb-1">Standort</p>
+                            <p className="font-semibold mb-1">{t.kontakt.info.standort}</p>
                             <p>Toulouse, Frankreich</p>
                           </div>
                         </div>
@@ -163,7 +164,7 @@ const Kontakt = () => {
                         <div className="flex items-start gap-4">
                           <Phone className="w-6 h-6 flex-shrink-0 mt-1" />
                           <div>
-                            <p className="font-semibold mb-1">Telefon</p>
+                            <p className="font-semibold mb-1">{t.kontakt.info.telefon}</p>
                             <p>+49 162 170 9979</p>
                           </div>
                         </div>
@@ -179,9 +180,9 @@ const Kontakt = () => {
                         <div className="flex items-start gap-4">
                           <Clock className="w-6 h-6 flex-shrink-0 mt-1" />
                           <div>
-                            <p className="font-semibold mb-1">Erreichbarkeit</p>
-                            <p>Mo-Fr: 8:30 - 18:00 Uhr</p>
-                            <p className="text-white/80 text-sm">Termine nach Vereinbarung</p>
+                            <p className="font-semibold mb-1">{t.kontakt.info.erreichbarkeit}</p>
+                            <p>{t.kontakt.info.erreichbarkeitZeiten}</p>
+                            <p className="text-white/80 text-sm">{t.kontakt.info.erreichbarkeitTermine}</p>
                           </div>
                         </div>
                       </div>
@@ -191,12 +192,10 @@ const Kontakt = () => {
                   <motion.div variants={cardItem}>
                     <Card className="p-6 bg-gray-light border-none">
                       <h3 className="font-heading text-lg mb-3 text-primary">
-                        Kostenloses Erstgespräch
+                        {t.kontakt.erstgespraech.title}
                       </h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        Ich biete ein kostenloses 30-minütiges Kennenlerngespräch an,
-                        in dem wir gemeinsam schauen können, ob und wie eine Zusammenarbeit sinnvoll wäre.
-                        Melden Sie sich gerne!
+                        {t.kontakt.erstgespraech.description}
                       </p>
                     </Card>
                   </motion.div>
@@ -204,10 +203,10 @@ const Kontakt = () => {
                   <motion.div variants={cardItem}>
                     <Card className="p-6 bg-gray-light border-none">
                       <h3 className="font-heading text-lg mb-3 text-primary">
-                        Online-Sitzungen
+                        {t.kontakt.online.title}
                       </h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        Alle Sitzungen können auch online per Video stattfinden.
+                        {t.kontakt.online.description}
                       </p>
                     </Card>
                   </motion.div>
