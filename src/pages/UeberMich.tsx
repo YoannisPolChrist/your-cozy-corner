@@ -15,9 +15,9 @@ import {
   imageVariants,
   iconStagger,
   iconItem,
-  viewportSettings,
-  cinematicEase
+  viewportSettings
 } from "@/lib/animations";
+import { useLanguage } from "@/i18n";
 
 // Parallax wrapper component for images
 const ParallaxImageWrapper = ({
@@ -56,6 +56,8 @@ const ParallaxImageWrapper = ({
 };
 
 const UeberMich = () => {
+  const { t, getLocalizedPath } = useLanguage();
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -93,24 +95,20 @@ const UeberMich = () => {
                     variants={fadeUp}
                     className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
                   >
-                    JOHANNES CHRIST — GESTALTTHERAPIE, B.A. BEWEGUNGSTHERAPIE UND PRÄVENTION, M.SC. PSYCHOLOGIE (i.A.)
+                    {t.ueberMich.hero.label}
                   </motion.span>
                   <motion.h1
                     variants={fadeUp}
                     className="font-heading text-[calc(2.25rem+3px)] md:text-[calc(3rem+3px)] text-primary leading-tight"
                   >
-                    Fundiert, durch Erfahrung.
+                    {t.ueberMich.hero.title}
                   </motion.h1>
                   <motion.div
                     variants={fadeUp}
                     className="space-y-4 text-muted-foreground leading-relaxed"
                   >
-                    <p>
-                      Hi, ich bin Johannes. Mein Weg begann vor einigen Jahren durch eine eigene existenzielle Krise mit der Gestalttherapie. Durch innere und äußere Arbeit habe ich mich aus meinem eigenen Loch gekämpft. Auf dem Weg verbrachte ich mehrere Jahre in Leipzig und Innsbruck, wobei ich in dieser Zeit ein duales Studium in der Bewegungstherapie und Prävention (B.A.) abschloss. Bewegungs- und Körperverständnis, menschlich und wissenschaftlich.
-                    </p>
-                    <p>
-                      Aktuell verbinde ich diese Welten in meinem Masterstudium der Angewandten Psychologie und Beratung M.Sc. (i.A.).
-                    </p>
+                    <p>{t.ueberMich.hero.description1}</p>
+                    <p>{t.ueberMich.hero.description2}</p>
                   </motion.div>
                 </motion.div>
               </div>
@@ -135,24 +133,20 @@ const UeberMich = () => {
                     variants={fadeUp}
                     className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
                   >
-                    MEINE ARBEITSWEISE
+                    {t.ueberMich.arbeitsweise.label}
                   </motion.span>
                   <motion.h2
                     variants={fadeUp}
                     className="font-heading text-[calc(1.875rem+3px)] md:text-[calc(2.25rem+3px)] text-white leading-tight text-left"
                   >
-                    Raum für das, was ist.
+                    {t.ueberMich.arbeitsweise.title}
                   </motion.h2>
                   <motion.div
                     variants={fadeUp}
                     className="space-y-4 text-white/90 leading-relaxed text-left"
                   >
-                    <p>
-                      In über hunderten intensiven Einzelprozessen durfte ich erleben, was passiert, wenn wir dem Körper und den Emotionen gleichermaßen Raum geben. Ob früher als Trainer und Coach oder heute als Gestalttherapeut: Ich bin dein Sparringspartner.
-                    </p>
-                    <p>
-                      Ich halte den Raum und gebe dir Struktur, sodass du dich entspannt verändern kannst.
-                    </p>
+                    <p>{t.ueberMich.arbeitsweise.description1}</p>
+                    <p>{t.ueberMich.arbeitsweise.description2}</p>
                   </motion.div>
 
                   {/* Gold Icons - Left aligned, larger */}
@@ -167,19 +161,19 @@ const UeberMich = () => {
                       <div className="w-16 h-16 rounded-full border border-[#c5a065]/40 flex items-center justify-center">
                         <Heart className="w-8 h-8 text-[#c5a065]" strokeWidth={1.5} />
                       </div>
-                      <span className="text-sm font-medium text-white">Körper</span>
+                      <span className="text-sm font-medium text-white">{t.ueberMich.arbeitsweise.icons.koerper}</span>
                     </motion.div>
                     <motion.div variants={iconItem} className="flex items-center gap-3">
                       <div className="w-16 h-16 rounded-full border border-[#c5a065]/40 flex items-center justify-center">
                         <Brain className="w-8 h-8 text-[#c5a065]" strokeWidth={1.5} />
                       </div>
-                      <span className="text-sm font-medium text-white">Psyche</span>
+                      <span className="text-sm font-medium text-white">{t.ueberMich.arbeitsweise.icons.psyche}</span>
                     </motion.div>
                     <motion.div variants={iconItem} className="flex items-center gap-3">
                       <div className="w-16 h-16 rounded-full border border-[#c5a065]/40 flex items-center justify-center">
                         <MessageCircle className="w-8 h-8 text-[#c5a065]" strokeWidth={1.5} />
                       </div>
-                      <span className="text-sm font-medium text-white">Veränderung</span>
+                      <span className="text-sm font-medium text-white">{t.ueberMich.arbeitsweise.icons.resonanz}</span>
                     </motion.div>
                   </motion.div>
                 </motion.div>
@@ -237,24 +231,20 @@ const UeberMich = () => {
                     variants={fadeUp}
                     className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
                   >
-                    PERSÖNLICH
+                    {t.ueberMich.persoenlich.label}
                   </motion.span>
                   <motion.h2
                     variants={fadeUp}
                     className="font-heading text-[calc(1.875rem+3px)] md:text-[calc(2.25rem+3px)] text-primary leading-tight"
                   >
-                    Und sonst so?
+                    {t.ueberMich.persoenlich.title}
                   </motion.h2>
                   <motion.div
                     variants={fadeUp}
                     className="space-y-4 text-muted-foreground leading-relaxed"
                   >
-                    <p>
-                      Wer mich kennt, weiß: Ich nehme meine Arbeit ernst. Wenn wir aber irgendwann nichts mehr zum Lachen haben, dann wird's kritisch. Dann stimmt was nicht. Ich glaube an die Kraft von Humor, Leichtigkeit und echten Begegnungen.
-                    </p>
-                    <p>
-                      Abseits der Therapie findest du mich beim Sport, unterwegs mit Freunden oder bei meinen Rhetorikclubs. Ein erfülltes Leben besteht, zumindest für mich, aus vielen kleinen Momenten der Verbundenheit – mit uns selbst, mit anderen und der Universum als Ganzem.
-                    </p>
+                    <p>{t.ueberMich.persoenlich.description1}</p>
+                    <p>{t.ueberMich.persoenlich.description2}</p>
                   </motion.div>
                 </motion.div>
               </div>
@@ -278,19 +268,18 @@ const UeberMich = () => {
               variants={fadeUp}
               className="font-heading text-3xl md:text-4xl mb-8 text-white"
             >
-              Neugierig geworden?
+              {t.ueberMich.cta.title}
             </motion.h2>
             <motion.p
               variants={fadeUp}
               className="text-white/85 text-lg mb-10 max-w-2xl mx-auto"
             >
-              In einem kostenlosen Erstgespräch können wir herausfinden,
-              ob die Chemie stimmt und wie ich dich am besten unterstützen kann.
+              {t.ueberMich.cta.description}
             </motion.p>
             <motion.div variants={fadeUp}>
-              <Link to="/kontakt">
+              <Link to={getLocalizedPath('/kontakt')}>
                 <Button variant="gold" size="lg" className="font-semibold">
-                  Kontakt aufnehmen <ArrowRight className="ml-2 h-4 w-4" />
+                  {t.ueberMich.cta.button} <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
             </motion.div>
