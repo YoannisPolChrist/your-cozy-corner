@@ -17,7 +17,7 @@ import {
   viewportSettings
 } from "@/lib/animations";
 
-const Kontakt = () => {
+const Kontakt = () => { 
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
