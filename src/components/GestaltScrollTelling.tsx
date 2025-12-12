@@ -60,19 +60,19 @@ export const GestaltScrollTelling = () => {
             </p>
 
             {/* Pillar 1: Image left, Text right */}
-            <motion.div 
-              className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-8 md:mb-12 items-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
+            <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-8 md:mb-12 items-center" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }}>
               <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
-                <img 
-                  src={cardGewahrsein} 
-                  alt="Gewahrsein - Spüren statt Denken" 
-                  className="w-full h-full object-cover"
-                />
+                <img alt="Gewahrsein - Spüren statt Denken" className="w-full h-full object-cover" src="/lovable-uploads/faa811b8-b250-4326-837c-5e135fcd2b61.png" />
               </div>
               <div className="p-4 md:p-6">
                 
@@ -89,13 +89,18 @@ export const GestaltScrollTelling = () => {
             </motion.div>
 
             {/* Pillar 2: Text left, Image right */}
-            <motion.div 
-              className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-8 md:mb-12 items-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
+            <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-8 md:mb-12 items-center" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6,
+            delay: 0.1
+          }}>
               <div className="p-4 md:p-6 order-2 md:order-1">
                 
                 <h3 className="text-primary font-heading font-bold text-xl md:text-2xl mb-3">
@@ -109,28 +114,25 @@ export const GestaltScrollTelling = () => {
                 </p>
               </div>
               <div className="relative rounded-xl overflow-hidden aspect-[4/3] order-1 md:order-2">
-                <img 
-                  src={cardGanzheitlichkeit} 
-                  alt="Ganzheitlichkeit - Körper, Seele, Geist & Umfeld" 
-                  className="w-full h-full object-cover"
-                />
+                <img src={cardGanzheitlichkeit} alt="Ganzheitlichkeit - Körper, Seele, Geist & Umfeld" className="w-full h-full object-cover" />
               </div>
             </motion.div>
 
             {/* Pillar 3: Image left, Text right */}
-            <motion.div 
-              className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-8 md:mb-12 items-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
+            <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-8 md:mb-12 items-center" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6,
+            delay: 0.2
+          }}>
               <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
-                <img 
-                  src={cardKontakt} 
-                  alt="Kontakt & Dialog - Echte Begegnung auf Augenhöhe" 
-                  className="w-full h-full object-cover"
-                />
+                <img src={cardKontakt} alt="Kontakt & Dialog - Echte Begegnung auf Augenhöhe" className="w-full h-full object-cover" />
               </div>
               <div className="p-4 md:p-6">
                 
