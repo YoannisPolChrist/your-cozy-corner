@@ -114,7 +114,7 @@ export const GestaltScrollTelling = () => {
                 </p>
               </div>
               <div className="relative rounded-xl overflow-hidden aspect-[4/3] order-1 md:order-2">
-                <img src={cardGanzheitlichkeit} alt="Ganzheitlichkeit - Körper, Seele, Geist & Umfeld" className="w-full h-full object-cover" />
+                <img alt="Ganzheitlichkeit - Körper, Seele, Geist & Umfeld" className="w-full h-full object-cover" src="/lovable-uploads/ed513495-a95f-4b6d-afaa-8f239f06589c.png" />
               </div>
             </motion.div>
 
