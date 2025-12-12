@@ -52,78 +52,100 @@ export const GestaltScrollTelling = () => {
           </div>
 
           <motion.div className="p-5 md:p-14 rounded-2xl bg-secondary">
-            <h2 className="font-heading text-2xl md:text-4xl font-bold text-primary mb-4 md:mb-8">
+            <h2 className="font-heading text-2xl md:text-4xl font-bold text-primary mb-4 md:mb-8 text-center">
               {t.gestalttherapie.scrollTelling.title}
             </h2>
-            <p className="text-foreground/80 text-base md:text-lg leading-relaxed md:leading-loose mb-6 md:mb-10">
+            <p className="text-foreground/80 text-base md:text-lg leading-relaxed md:leading-loose mb-8 md:mb-12 text-center max-w-3xl mx-auto">
               {t.gestalttherapie.scrollTelling.intro}
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 md:mb-8">
-              <motion.div 
-                className="relative rounded-xl overflow-hidden aspect-[3/4]"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
+
+            {/* Pillar 1: Image left, Text right */}
+            <motion.div 
+              className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-8 md:mb-12 items-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
                 <img 
                   src={cardGewahrsein} 
                   alt="Gewahrsein - Spüren statt Denken" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-3">
-                  <span className="text-white text-sm font-medium">1. Gewahrsein</span>
-                </div>
-              </motion.div>
-              <motion.div 
-                className="relative rounded-xl overflow-hidden aspect-[3/4]"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-              >
+              </div>
+              <div className="p-4 md:p-6">
+                <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-2 block">01</span>
+                <h3 className="text-primary font-heading font-bold text-xl md:text-2xl mb-3">
+                  {t.gestalttherapie.scrollTelling.pillars[0].title}
+                </h3>
+                <p className="text-foreground/60 italic text-sm mb-3">
+                  {t.gestalttherapie.scrollTelling.pillars[0].subtitle}
+                </p>
+                <p className="text-foreground/70 leading-relaxed">
+                  {t.gestalttherapie.scrollTelling.pillars[0].description}
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Pillar 2: Text left, Image right */}
+            <motion.div 
+              className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-8 md:mb-12 items-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <div className="p-4 md:p-6 order-2 md:order-1">
+                <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-2 block">02</span>
+                <h3 className="text-primary font-heading font-bold text-xl md:text-2xl mb-3">
+                  {t.gestalttherapie.scrollTelling.pillars[1].title}
+                </h3>
+                <p className="text-foreground/60 italic text-sm mb-3">
+                  {t.gestalttherapie.scrollTelling.pillars[1].subtitle}
+                </p>
+                <p className="text-foreground/70 leading-relaxed">
+                  {t.gestalttherapie.scrollTelling.pillars[1].description}
+                </p>
+              </div>
+              <div className="relative rounded-xl overflow-hidden aspect-[4/3] order-1 md:order-2">
                 <img 
                   src={cardGanzheitlichkeit} 
                   alt="Ganzheitlichkeit - Körper, Seele, Geist & Umfeld" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-3">
-                  <span className="text-white text-sm font-medium">2. Ganzheitlichkeit</span>
-                </div>
-              </motion.div>
-              <motion.div 
-                className="relative rounded-xl overflow-hidden aspect-[3/4]"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
+              </div>
+            </motion.div>
+
+            {/* Pillar 3: Image left, Text right */}
+            <motion.div 
+              className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-8 md:mb-12 items-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
                 <img 
                   src={cardKontakt} 
                   alt="Kontakt & Dialog - Echte Begegnung auf Augenhöhe" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-3">
-                  <span className="text-white text-sm font-medium">3. Kontakt & Dialog</span>
-                </div>
-              </motion.div>
-            </div>
+              </div>
+              <div className="p-4 md:p-6">
+                <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-2 block">03</span>
+                <h3 className="text-primary font-heading font-bold text-xl md:text-2xl mb-3">
+                  {t.gestalttherapie.scrollTelling.pillars[2].title}
+                </h3>
+                <p className="text-foreground/60 italic text-sm mb-3">
+                  {t.gestalttherapie.scrollTelling.pillars[2].subtitle}
+                </p>
+                <p className="text-foreground/70 leading-relaxed">
+                  {t.gestalttherapie.scrollTelling.pillars[2].description}
+                </p>
+              </div>
+            </motion.div>
 
-            <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-10">
-              {t.gestalttherapie.scrollTelling.pillars.map((pillar, index) => <AnimatedItem key={index}>
-                  <div className="p-4 md:p-6 rounded-xl border-l-[3px] border-accent bg-primary/[0.04] transition-all duration-300 md:hover:-translate-y-1 md:hover:shadow-lg cursor-default">
-                    <h3 className="text-accent font-semibold text-lg md:text-xl mb-2 md:mb-3">
-                      {index + 1}. {pillar.title}
-                    </h3>
-                    <p className="text-xs md:text-sm text-foreground/60 mb-1 md:mb-2 italic">
-                      {pillar.subtitle}
-                    </p>
-                    <p className="text-foreground/70 text-sm leading-relaxed">
-                      {pillar.description}
-                    </p>
-                  </div>
-                </AnimatedItem>)}
-            </StaggerContainer>
             <motion.div className="p-4 md:p-6 rounded-xl border-l-4 border-primary bg-primary/[0.08]" initial={{
             opacity: 0,
             x: -20
