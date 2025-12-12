@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { AnimatedSection, AnimatedItem, StaggerContainer } from "@/components/AnimatedSection";
-import gestalttherapieIntro from "@/assets/gestalttherapie-intro.webp";
+import gestaltDamalsJetzt from "@/assets/gestalt-damals-jetzt.png";
 import { useLanguage } from "@/i18n";
 
 export const GestaltScrollTelling = () => {
@@ -10,9 +10,23 @@ export const GestaltScrollTelling = () => {
     <section className="pt-[28px] pb-12 md:pt-[68px] md:pb-32 bg-off-white">
       <div className="container mx-auto px-4">
         <AnimatedSection className="max-w-5xl mx-auto">
+          <motion.div
+            className="text-center mb-6 md:mb-10"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="font-heading text-3xl md:text-5xl font-bold text-primary mb-2">
+              Gestalttherapie
+            </h1>
+            <p className="text-lg md:text-xl text-foreground/70">
+              Humanistisches Erleben. Selbstentfaltung
+            </p>
+          </motion.div>
           <motion.img
-            src={gestalttherapieIntro}
-            alt={t.gestalttherapie.scrollTelling.title}
+            src={gestaltDamalsJetzt}
+            alt="Gestalttherapie - Damals & Dort zu Hier & Jetzt"
             className="w-full rounded-xl mb-6 md:mb-12"
             loading="eager"
             decoding="async"
