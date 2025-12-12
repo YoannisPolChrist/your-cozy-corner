@@ -75,7 +75,7 @@ export const GestaltScrollTelling = () => {
                 />
               </div>
               <div className="p-4 md:p-6">
-                <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-2 block">01</span>
+                
                 <h3 className="text-primary font-heading font-bold text-xl md:text-2xl mb-3">
                   {t.gestalttherapie.scrollTelling.pillars[0].title}
                 </h3>
@@ -97,7 +97,7 @@ export const GestaltScrollTelling = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <div className="p-4 md:p-6 order-2 md:order-1">
-                <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-2 block">02</span>
+                
                 <h3 className="text-primary font-heading font-bold text-xl md:text-2xl mb-3">
                   {t.gestalttherapie.scrollTelling.pillars[1].title}
                 </h3>
@@ -133,7 +133,7 @@ export const GestaltScrollTelling = () => {
                 />
               </div>
               <div className="p-4 md:p-6">
-                <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-2 block">03</span>
+                
                 <h3 className="text-primary font-heading font-bold text-xl md:text-2xl mb-3">
                   {t.gestalttherapie.scrollTelling.pillars[2].title}
                 </h3>
