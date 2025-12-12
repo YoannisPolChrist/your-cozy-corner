@@ -56,17 +56,46 @@ export const GestaltScrollTelling = () => {
             <p className="text-foreground/80 text-base md:text-lg leading-relaxed md:leading-loose mb-6 md:mb-10">
               {t.gestalttherapie.scrollTelling.intro}
             </p>
-            <motion.img alt="Gewahrsein - Spüren statt Denken" className="w-full max-w-md mx-auto rounded-xl mb-6 md:mb-8" initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true
-          }} transition={{
-            duration: 0.6
-          }} src="/lovable-uploads/15727e8d-e612-423a-8b77-e1a8af1db145.png" />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 md:mb-8">
+              <motion.div 
+                className="relative rounded-xl overflow-hidden aspect-[4/3]"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <img 
+                  src="/lovable-uploads/15727e8d-e612-423a-8b77-e1a8af1db145.png" 
+                  alt="Gewahrsein - Spüren statt Denken" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-3">
+                  <span className="text-white text-sm font-medium">Gewahrsein</span>
+                </div>
+              </motion.div>
+              <motion.div 
+                className="relative rounded-xl overflow-hidden aspect-[4/3] bg-secondary flex items-center justify-center border-2 border-dashed border-accent/30"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+              >
+                <div className="text-center p-4">
+                  <span className="text-foreground/40 text-sm">Bild 2</span>
+                </div>
+              </motion.div>
+              <motion.div 
+                className="relative rounded-xl overflow-hidden aspect-[4/3] bg-secondary flex items-center justify-center border-2 border-dashed border-accent/30"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <div className="text-center p-4">
+                  <span className="text-foreground/40 text-sm">Bild 3</span>
+                </div>
+              </motion.div>
+            </div>
 
             <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-10">
               {t.gestalttherapie.scrollTelling.pillars.map((pillar, index) => <AnimatedItem key={index}>
