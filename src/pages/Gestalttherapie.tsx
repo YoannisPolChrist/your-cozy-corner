@@ -104,14 +104,7 @@ const Gestalttherapie = () => {
         
 
         {/* Video 2: Kontaktunterbrechungen */}
-        <VideoSection videoSrc={gestaltVideo2} sectionId="kontaktunterbrechungen" title={t.gestalttherapie.kontaktunterbrechungen.title} position="left" content={<>
-              <p className="mb-3">
-                {t.gestalttherapie.kontaktunterbrechungen.description}
-              </p>
-              <p className="text-primary font-medium text-center mt-4 text-sm md:text-base">
-                {t.gestalttherapie.kontaktunterbrechungen.tagline}
-              </p>
-            </>} />
+        
 
         {/* Video 3: Geschlossene Gestalt */}
         <VideoSection videoSrc={gestaltVideo3} sectionId="hier-und-jetzt" title={t.gestalttherapie.geschlosseneGestalt.title} position="center" content={<>
