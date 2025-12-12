@@ -107,14 +107,7 @@ const Gestalttherapie = () => {
         
 
         {/* Video 3: Geschlossene Gestalt */}
-        <VideoSection videoSrc={gestaltVideo3} sectionId="hier-und-jetzt" title={t.gestalttherapie.geschlosseneGestalt.title} position="center" content={<>
-              <p className="mb-3">
-                {t.gestalttherapie.geschlosseneGestalt.description}
-              </p>
-              <p className="text-primary font-medium text-center mt-4 text-sm md:text-base">
-                {t.gestalttherapie.geschlosseneGestalt.tagline}
-              </p>
-            </>} />
+        
 
         {/* Image 2: Gestalt-Kontaktzyklus */}
         <section className="py-12 md:py-32 bg-off-white">
