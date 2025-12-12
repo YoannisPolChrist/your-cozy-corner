@@ -58,7 +58,7 @@ export const GestaltScrollTelling = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 md:mb-8">
               <motion.div 
-                className="relative rounded-xl overflow-hidden aspect-[4/3]"
+                className="relative rounded-xl overflow-hidden aspect-[3/4]"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -74,7 +74,7 @@ export const GestaltScrollTelling = () => {
                 </div>
               </motion.div>
               <motion.div 
-                className="relative rounded-xl overflow-hidden aspect-[4/3] bg-secondary flex items-center justify-center border-2 border-dashed border-accent/30"
+                className="relative rounded-xl overflow-hidden aspect-[3/4] bg-secondary flex items-center justify-center border-2 border-dashed border-accent/30"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -85,7 +85,7 @@ export const GestaltScrollTelling = () => {
                 </div>
               </motion.div>
               <motion.div 
-                className="relative rounded-xl overflow-hidden aspect-[4/3] bg-secondary flex items-center justify-center border-2 border-dashed border-accent/30"
+                className="relative rounded-xl overflow-hidden aspect-[3/4] bg-secondary flex items-center justify-center border-2 border-dashed border-accent/30"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
