@@ -184,6 +184,21 @@ export interface Translations {
       description1: string;
       description2: string;
     };
+    qualifikationen: {
+      title: string;
+      akademisch: {
+        title: string;
+        items: string[];
+      };
+      therapeutisch: {
+        title: string;
+        items: string[];
+      };
+      coaching: {
+        title: string;
+        items: string[];
+      };
+    };
     arbeitsweise: {
       label: string;
       title: string;

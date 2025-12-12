@@ -217,10 +217,36 @@ export const en: Translations = {
   
   ueberMich: {
     hero: {
-      label: 'JOHANNES CHRIST — GESTALT THERAPY, B.A. MOVEMENT THERAPY AND PREVENTION, M.SC. PSYCHOLOGY (IN TRAINING)',
+      label: 'JOHANNES CHRIST — GESTALT THERAPIST, MOVEMENT THERAPY AND PREVENTION (B.A.), PSYCHOLOGY (M.SC.) (IN TRAINING)',
       title: 'Grounded, through experience.',
       description1: 'Hi, I\'m Johannes. My journey began several years ago through my own existential crisis with Gestalt therapy. Through inner and outer work, I fought my way out of my own hole. Along the way, I spent several years in Leipzig and Innsbruck, during which time I completed a dual degree in Movement Therapy and Prevention (B.A.). Movement and body understanding, human and scientific.',
-      description2: 'Currently, I\'m combining these worlds in my Master\'s in Applied Psychology and Counseling M.Sc. (in training).',
+      description2: 'Today I combine these worlds. As a Gestalt therapist with an upcoming Master\'s in Psychology (M.Sc.), I accompany people not only through cognitive processes, but through profound transformational work. Along this path, my training as a Hero\'s Journey facilitator following Paul Rebillot showed me how important rituals and structure are for these transitions. Through exceptionally personal guidance that unites scientific psychology with experiential depth, we create the change you desire.',
+    },
+    qualifikationen: {
+      title: 'Education & Qualifications',
+      akademisch: {
+        title: 'Academic Background',
+        items: [
+          'M.Sc. Applied Psychology and Counseling | IU International University (in training, expected 2027)',
+          'B.A. Prevention and Movement Therapy | German Professional Academy for Sports and Health',
+        ],
+      },
+      therapeutisch: {
+        title: 'Therapeutic Training',
+        items: [
+          'Gestalt Therapist | 5-year intensive training at Institute for Gestalt and Experience, Wasserburg & Prana Leipzig',
+          'Hero\'s Journey Facilitator (Paul Rebillot method) | Heldenweg Institute – Facilitation of structured Gestalt work and group processes',
+          'Systemic Family Constellations & Gestalt Practitioner | Prana Leipzig',
+        ],
+      },
+      coaching: {
+        title: 'Coaching & Bodywork',
+        items: [
+          'Holobody Coach | Mindvalley',
+          'Certified Athletic Trainer | German Professional Academy for Sports and Health',
+          'Trainer A-License | German Professional Academy for Sports and Health',
+        ],
+      },
     },
     arbeitsweise: {
       label: 'MY APPROACH',

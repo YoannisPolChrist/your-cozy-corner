@@ -217,10 +217,36 @@ export const de: Translations = {
   
   ueberMich: {
     hero: {
-      label: 'JOHANNES CHRIST — GESTALTTHERAPIE, B.A. BEWEGUNGSTHERAPIE UND PRÄVENTION, M.SC. PSYCHOLOGIE (i.A.)',
+      label: 'JOHANNES CHRIST — GESTALTTHERAPEUT, BEWEGUNGSTHERAPIE UND PRÄVENTION (B.A.), PSYCHOLOGIE (M.SC.) (i.A.)',
       title: 'Fundiert, durch Erfahrung.',
       description1: 'Hi, ich bin Johannes. Mein Weg begann vor einigen Jahren durch eine eigene existenzielle Krise mit der Gestalttherapie. Durch innere und äußere Arbeit habe ich mich aus meinem eigenen Loch gekämpft. Auf dem Weg verbrachte ich mehrere Jahre in Leipzig und Innsbruck, wobei ich in dieser Zeit ein duales Studium in der Bewegungstherapie und Prävention (B.A.) abschloss. Bewegungs- und Körperverständnis, menschlich und wissenschaftlich.',
-      description2: 'Aktuell verbinde ich diese Welten in meinem Masterstudium der Angewandten Psychologie und Beratung M.Sc. (i.A.).',
+      description2: 'Heute verbinde ich diese Welten. Als Gestalttherapeut, mit angehendem Master in Psychologie (M.Sc.) begleite ich Menschen nicht nur durch kognitive Prozesse, sondern durch tiefgreifende Transformationsarbeit. Auf diesem Weg hat meine Ausbildung zum Heldenreiseleiter nach Paul Rebillot mir gezeigt, wie wichtig Rituale und Struktur für diese Übergänge sind. Durch eine außergewöhnlich persönliche Begleitung, die wissenschaftliche Psychologie mit erfahrungsorientierter Tiefe vereint, schaffen wir die Veränderung, die du dir wünschst.',
+    },
+    qualifikationen: {
+      title: 'Ausbildung & Qualifikationen',
+      akademisch: {
+        title: 'Akademischer Werdegang',
+        items: [
+          'M.Sc. Angewandte Psychologie und Beratung | IU Internationale Hochschule (i.A., vsl. 2027)',
+          'B.A. Prävention und Bewegungstherapie | Deutsche Berufsakademie Sport und Gesundheit',
+        ],
+      },
+      therapeutisch: {
+        title: 'Therapeutische Ausbildung',
+        items: [
+          'Gestalttherapeut | 5-jährige Intensivausbildung Institut für Gestalt und Erfahrung, Wasserburg & Prana Leipzig',
+          'Heldenreiseleiter (nach Paul Rebillot) | Heldenweg-Institut – Leitung von strukturierter Gestaltarbeit und Gruppenprozessen',
+          'Systemisches Familienstellen & Gestaltpractitioner | Prana Leipzig',
+        ],
+      },
+      coaching: {
+        title: 'Coaching & Körperarbeit',
+        items: [
+          'Holobody Coach | Mindvalley',
+          'Diplom Athletiktrainer | Deutsche Berufsakademie Sport und Gesundheit',
+          'Trainer A-Lizenz | Deutsche Berufsakademie Sport und Gesundheit',
+        ],
+      },
     },
     arbeitsweise: {
       label: 'MEINE ARBEITSWEISE',
