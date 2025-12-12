@@ -85,36 +85,7 @@ const VideoSection = ({
       </section>;
   }
   return <section ref={sectionRef} id={sectionId} className="relative h-[350vh]">
-      <div className="sticky top-0 h-screen w-full overflow-hidden">
-        
-
-        <div className={`absolute inset-0 flex ${positionClasses[position]} p-4`}>
-          <motion.div initial={{
-          opacity: 0,
-          y: 40
-        }} animate={{
-          opacity: isVisible ? 1 : 0,
-          y: isVisible ? 0 : 40
-        }} transition={{
-          duration: 0.9,
-          ease: cinematicEase
-        }} className="max-w-sm lg:max-w-md">
-            <div className="p-6 md:p-8 rounded-2xl" style={{
-            background: 'rgba(255, 255, 255, 0.97)',
-            backdropFilter: 'blur(20px)',
-            WebkitBackdropFilter: 'blur(20px)',
-            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.5)'
-          }}>
-              <h2 className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-primary mb-4 text-center">
-                {title}
-              </h2>
-              <div className="text-foreground text-sm md:text-base leading-relaxed">
-                {content}
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
+      
     </section>;
 };
 const Gestalttherapie = () => {
@@ -130,14 +101,7 @@ const Gestalttherapie = () => {
         <GestaltScrollTelling />
 
         {/* Video 1: Offene Gestalt */}
-        <VideoSection videoSrc={gestaltVideo} sectionId="offene-gestalt" title={t.gestalttherapie.offeneGestalt.title} position="right" content={<>
-              <p className="mb-3">
-                {t.gestalttherapie.offeneGestalt.description}
-              </p>
-              <p className="text-primary font-medium text-center mt-4 text-sm md:text-base">
-                {t.gestalttherapie.offeneGestalt.tagline}
-              </p>
-            </>} />
+        
 
         {/* Video 2: Kontaktunterbrechungen */}
         <VideoSection videoSrc={gestaltVideo2} sectionId="kontaktunterbrechungen" title={t.gestalttherapie.kontaktunterbrechungen.title} position="left" content={<>
