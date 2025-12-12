@@ -1,6 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Heart, Brain, MessageCircle } from "lucide-react";
+import { ArrowRight, Heart, Brain, MessageCircle, GraduationCap, Sparkles, Dumbbell } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
@@ -18,6 +18,12 @@ import {
   viewportSettings
 } from "@/lib/animations";
 import { useLanguage } from "@/i18n";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 // Parallax wrapper component for images
 const ParallaxImageWrapper = ({
@@ -109,6 +115,57 @@ const UeberMich = () => {
                   >
                     <p>{t.ueberMich.hero.description1}</p>
                     <p>{t.ueberMich.hero.description2}</p>
+                  </motion.div>
+                  
+                  {/* Qualifications Accordion */}
+                  <motion.div variants={fadeUp} className="pt-4">
+                    <Accordion type="single" collapsible className="w-full">
+                      <AccordionItem value="qualifikationen" className="border-[#c5a065]/20">
+                        <AccordionTrigger className="text-primary hover:text-[#c5a065] font-heading text-lg">
+                          {t.ueberMich.qualifikationen.title}
+                        </AccordionTrigger>
+                        <AccordionContent className="space-y-6 pt-4">
+                          {/* Akademisch */}
+                          <div className="space-y-2">
+                            <div className="flex items-center gap-2 text-[#c5a065]">
+                              <GraduationCap className="w-5 h-5" />
+                              <h4 className="font-semibold">{t.ueberMich.qualifikationen.akademisch.title}</h4>
+                            </div>
+                            <ul className="space-y-1 text-muted-foreground text-sm pl-7">
+                              {t.ueberMich.qualifikationen.akademisch.items.map((item, idx) => (
+                                <li key={idx}>{item}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          
+                          {/* Therapeutisch */}
+                          <div className="space-y-2">
+                            <div className="flex items-center gap-2 text-[#c5a065]">
+                              <Sparkles className="w-5 h-5" />
+                              <h4 className="font-semibold">{t.ueberMich.qualifikationen.therapeutisch.title}</h4>
+                            </div>
+                            <ul className="space-y-1 text-muted-foreground text-sm pl-7">
+                              {t.ueberMich.qualifikationen.therapeutisch.items.map((item, idx) => (
+                                <li key={idx}>{item}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          
+                          {/* Coaching */}
+                          <div className="space-y-2">
+                            <div className="flex items-center gap-2 text-[#c5a065]">
+                              <Dumbbell className="w-5 h-5" />
+                              <h4 className="font-semibold">{t.ueberMich.qualifikationen.coaching.title}</h4>
+                            </div>
+                            <ul className="space-y-1 text-muted-foreground text-sm pl-7">
+                              {t.ueberMich.qualifikationen.coaching.items.map((item, idx) => (
+                                <li key={idx}>{item}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
                   </motion.div>
                 </motion.div>
               </div>
