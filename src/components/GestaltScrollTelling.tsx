@@ -72,7 +72,7 @@ export const GestaltScrollTelling = () => {
             duration: 0.6
           }}>
               <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
-                <img alt="Gewahrsein - Spüren statt Denken" className="w-full h-full object-cover" src="/lovable-uploads/faa811b8-b250-4326-837c-5e135fcd2b61.png" />
+                <img alt="Gewahrsein - Spüren statt Denken" src="/lovable-uploads/faa811b8-b250-4326-837c-5e135fcd2b61.png" className="w-full h-full object-scale-down" />
               </div>
               <div className="p-4 md:p-6">
                 
@@ -114,7 +114,7 @@ export const GestaltScrollTelling = () => {
                 </p>
               </div>
               <div className="relative rounded-xl overflow-hidden aspect-[4/3] order-1 md:order-2">
-                <img alt="Ganzheitlichkeit - Körper, Seele, Geist & Umfeld" className="w-full h-full object-cover" src="/lovable-uploads/ed513495-a95f-4b6d-afaa-8f239f06589c.png" />
+                <img alt="Ganzheitlichkeit - Körper, Seele, Geist & Umfeld" src="/lovable-uploads/ed513495-a95f-4b6d-afaa-8f239f06589c.png" className="w-full h-full object-scale-down" />
               </div>
             </motion.div>
 
@@ -132,7 +132,7 @@ export const GestaltScrollTelling = () => {
             delay: 0.2
           }}>
               <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
-                <img src={cardKontakt} alt="Kontakt & Dialog - Echte Begegnung auf Augenhöhe" className="w-full h-full object-cover" />
+                <img src={cardKontakt} alt="Kontakt & Dialog - Echte Begegnung auf Augenhöhe" className="w-full h-full object-scale-down" />
               </div>
               <div className="p-4 md:p-6">
                 
