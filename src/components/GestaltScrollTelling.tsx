@@ -56,15 +56,17 @@ export const GestaltScrollTelling = () => {
             <p className="text-foreground/80 text-base md:text-lg leading-relaxed md:leading-loose mb-6 md:mb-10">
               {t.gestalttherapie.scrollTelling.intro}
             </p>
-            <motion.img
-              src={cardGewahrsein}
-              alt="Gewahrsein - Spüren statt Denken"
-              className="w-full max-w-md mx-auto rounded-xl mb-6 md:mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            />
+            <motion.img alt="Gewahrsein - Spüren statt Denken" className="w-full max-w-md mx-auto rounded-xl mb-6 md:mb-8" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} src="/lovable-uploads/15727e8d-e612-423a-8b77-e1a8af1db145.png" />
 
             <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-10">
               {t.gestalttherapie.scrollTelling.pillars.map((pillar, index) => <AnimatedItem key={index}>
