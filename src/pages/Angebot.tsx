@@ -126,7 +126,7 @@ const Angebot = () => {
               <motion.div variants={cardStagger} className="grid md:grid-cols-2 gap-8 md:gap-16">
                 {/* Card 1: Einzelbegleitung */}
                 <motion.div variants={cardItem}>
-                  <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500 flex flex-col">
+                  <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500 flex flex-col group hover:-translate-y-2 hover:border-[#c5a065]/20 hover:bg-card/95">
                     <div className="text-center mb-6">
                       <span className="font-heading text-6xl text-primary">
                         {t.angebot.konditionen.einzelbegleitung.price}
@@ -151,7 +151,7 @@ const Angebot = () => {
 
                 {/* Card 2: Intensive Zusammenarbeit */}
                 <motion.div variants={cardItem}>
-                  <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500 flex flex-col">
+                  <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500 flex flex-col group hover:-translate-y-2 hover:border-[#c5a065]/20 hover:bg-card/95">
                     <div className="text-center mb-6">
                       <span className="font-heading text-4xl md:text-5xl text-primary">
                         {t.angebot.konditionen.intensiv.price}
