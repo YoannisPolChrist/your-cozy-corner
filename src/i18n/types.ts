@@ -204,6 +204,7 @@ export interface Translations {
       title: string;
       description1: string;
       description2: string;
+      quote: string;
       icons: {
         koerper: string;
         psyche: string;
