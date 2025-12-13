@@ -126,7 +126,7 @@ const Angebot = () => {
               <motion.div variants={cardStagger} className="grid md:grid-cols-2 gap-8 md:gap-16">
                 {/* Card 1: Einzelbegleitung */}
                 <motion.div variants={cardItem}>
-                  <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500">
+                  <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500 flex flex-col">
                     <div className="text-center mb-6">
                       <span className="font-heading text-6xl text-primary">
                         {t.angebot.konditionen.einzelbegleitung.price}
@@ -138,11 +138,11 @@ const Angebot = () => {
                     <h3 className="font-heading text-2xl text-primary text-center mb-4">
                       {t.angebot.konditionen.einzelbegleitung.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed text-center mb-8">
+                    <p className="text-muted-foreground leading-relaxed text-center mb-8 flex-grow">
                       {t.angebot.konditionen.einzelbegleitung.description}
                     </p>
-                    <Link to={getLocalizedPath('/kontakt')} className="block">
-                      <Button variant="gold" className="w-full font-semibold">
+                    <Link to={getLocalizedPath('/kontakt')} className="block mt-auto">
+                      <Button variant="gold-outline" className="w-full font-semibold">
                         {t.angebot.konditionen.einzelbegleitung.cta}
                       </Button>
                     </Link>
@@ -151,7 +151,7 @@ const Angebot = () => {
 
                 {/* Card 2: Intensive Zusammenarbeit */}
                 <motion.div variants={cardItem}>
-                  <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500">
+                  <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500 flex flex-col">
                     <div className="text-center mb-6">
                       <span className="font-heading text-4xl md:text-5xl text-primary">
                         {t.angebot.konditionen.intensiv.price}
@@ -174,11 +174,11 @@ const Angebot = () => {
                     <h3 className="font-heading text-2xl text-primary text-center mb-4">
                       {t.angebot.konditionen.intensiv.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed text-center mb-8">
+                    <p className="text-muted-foreground leading-relaxed text-center mb-8 flex-grow">
                       {t.angebot.konditionen.intensiv.description}
                     </p>
-                    <Link to={getLocalizedPath('/kontakt')} className="block">
-                      <Button variant="gold-outline" className="w-full font-semibold">
+                    <Link to={getLocalizedPath('/kontakt')} className="block mt-auto">
+                      <Button variant="gold" className="w-full font-semibold">
                         {t.angebot.konditionen.intensiv.cta}
                       </Button>
                     </Link>
