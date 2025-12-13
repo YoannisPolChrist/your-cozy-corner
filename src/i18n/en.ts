@@ -220,7 +220,7 @@ export const en: Translations = {
       label: 'JOHANNES CHRIST — GESTALT THERAPIST, MOVEMENT THERAPY AND PREVENTION (B.A.), PSYCHOLOGY (M.SC.) (IN TRAINING)',
       title: 'Grounded, through experience.',
       description1: 'Hi, I\'m Johannes. My journey began several years ago through my own existential crisis with Gestalt therapy. Through inner and outer work, I fought my way out of my own hole. Along the way, I spent several years in Leipzig and Innsbruck, during which time I completed a dual degree in Movement Therapy and Prevention (B.A.). Movement and body understanding, human and scientific.',
-      description2: 'Today I combine these worlds. As a Gestalt therapist with an upcoming Master\'s in Psychology (M.Sc.), I accompany people not only through cognitive processes, but through profound transformational work. Along this path, my training as a Hero\'s Journey facilitator following Paul Rebillot showed me how important rituals and structure are for these transitions. Through exceptionally personal guidance that unites scientific psychology with experiential depth, we create the change you desire.',
+      description2: 'Today I combine these worlds. As a Gestalt therapist with an upcoming Master\'s in Psychology (M.Sc.), I accompany people not only through cognitive processes, but through profound transformational work. Along this path, my training as a Hero\'s Journey facilitator following Paul Rebillot showed me how important rituals and structure are for these transitions.',
     },
     qualifikationen: {
       title: 'Education & Qualifications',
@@ -251,8 +251,9 @@ export const en: Translations = {
     arbeitsweise: {
       label: 'MY APPROACH',
       title: 'Space for what is.',
-      description1: 'In over hundreds of intensive individual processes, I\'ve experienced what happens when we give equal space to the body and emotions. Whether as a former trainer and coach or today as a Gestalt therapist: I\'m your sparring partner.',
-      description2: 'I hold the space and give you structure, so you can change in a relaxed way.',
+      description1: 'Through exceptionally personal guidance that unites scientific psychology with experiential depth, we create the change you desire.',
+      description2: 'Whether as a former trainer and coach or today as a Gestalt therapist: I\'m your sparring partner. I hold the space and give you the structure you\'ve been missing.',
+      quote: '"What is, may be & what can be, may change."',
       icons: {
         koerper: 'Body',
         psyche: 'Psyche',

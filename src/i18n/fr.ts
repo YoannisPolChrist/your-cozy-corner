@@ -220,7 +220,7 @@ export const fr: Translations = {
       label: 'JOHANNES CHRIST — GESTALT-THÉRAPEUTE, THÉRAPIE PAR LE MOUVEMENT ET PRÉVENTION (B.A.), PSYCHOLOGIE (M.SC.) (EN FORMATION)',
       title: 'Fondé, par l\'expérience.',
       description1: 'Salut, je suis Johannes. Mon parcours a commencé il y a quelques années par ma propre crise existentielle avec la Gestalt-thérapie. Par le travail intérieur et extérieur, je me suis battu pour sortir de mon propre trou. En chemin, j\'ai passé plusieurs années à Leipzig et Innsbruck, période durant laquelle j\'ai obtenu un diplôme dual en Thérapie par le Mouvement et Prévention (B.A.). Compréhension du mouvement et du corps, humaine et scientifique.',
-      description2: 'Aujourd\'hui, je combine ces mondes. En tant que Gestalt-thérapeute avec un Master en Psychologie (M.Sc.) en cours, j\'accompagne les gens non seulement à travers des processus cognitifs, mais à travers un travail de transformation profonde. Sur ce chemin, ma formation de facilitateur du Voyage du Héros selon Paul Rebillot m\'a montré l\'importance des rituels et de la structure pour ces transitions. Grâce à un accompagnement exceptionnellement personnel qui unit la psychologie scientifique à la profondeur expérientielle, nous créons le changement que tu désires.',
+      description2: 'Aujourd\'hui, je combine ces mondes. En tant que Gestalt-thérapeute avec un Master en Psychologie (M.Sc.) en cours, j\'accompagne les gens non seulement à travers des processus cognitifs, mais à travers un travail de transformation profonde. Sur ce chemin, ma formation de facilitateur du Voyage du Héros selon Paul Rebillot m\'a montré l\'importance des rituels et de la structure pour ces transitions.',
     },
     qualifikationen: {
       title: 'Formation & Qualifications',
@@ -251,8 +251,9 @@ export const fr: Translations = {
     arbeitsweise: {
       label: 'MON APPROCHE',
       title: 'Espace pour ce qui est.',
-      description1: 'Dans plus de centaines de processus individuels intensifs, j\'ai pu vivre ce qui se passe lorsque nous donnons un espace égal au corps et aux émotions. Que ce soit avant en tant qu\'entraîneur et coach ou aujourd\'hui en tant que Gestalt-thérapeute : je suis ton partenaire d\'entraînement.',
-      description2: 'Je maintiens l\'espace et te donne de la structure, pour que tu puisses changer de manière détendue.',
+      description1: 'Grâce à un accompagnement exceptionnellement personnel qui unit la psychologie scientifique à la profondeur expérientielle, nous créons le changement que tu désires.',
+      description2: 'Que ce soit avant en tant qu\'entraîneur et coach ou aujourd\'hui en tant que Gestalt-thérapeute : je suis ton partenaire d\'entraînement. Je maintiens l\'espace et te donne la structure qui t\'a manquée.',
+      quote: '« Ce qui est, peut être & ce qui peut être, peut changer. »',
       icons: {
         koerper: 'Corps',
         psyche: 'Psyché',

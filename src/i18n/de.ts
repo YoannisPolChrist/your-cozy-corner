@@ -220,7 +220,7 @@ export const de: Translations = {
       label: 'JOHANNES CHRIST — GESTALTTHERAPEUT, BEWEGUNGSTHERAPIE UND PRÄVENTION (B.A.), PSYCHOLOGIE (M.SC.) (i.A.)',
       title: 'Fundiert, durch Erfahrung.',
       description1: 'Hi, ich bin Johannes. Mein Weg begann vor einigen Jahren durch eine eigene existenzielle Krise mit der Gestalttherapie. Durch innere und äußere Arbeit habe ich mich aus meinem eigenen Loch gekämpft. Auf dem Weg verbrachte ich mehrere Jahre in Leipzig und Innsbruck, wobei ich in dieser Zeit ein duales Studium in der Bewegungstherapie und Prävention (B.A.) abschloss. Bewegungs- und Körperverständnis, menschlich und wissenschaftlich.',
-      description2: 'Heute verbinde ich diese Welten. Als Gestalttherapeut, mit angehendem Master in Psychologie (M.Sc.) begleite ich Menschen nicht nur durch kognitive Prozesse, sondern durch tiefgreifende Transformationsarbeit. Auf diesem Weg hat meine Ausbildung zum Heldenreiseleiter nach Paul Rebillot mir gezeigt, wie wichtig Rituale und Struktur für diese Übergänge sind. Durch eine außergewöhnlich persönliche Begleitung, die wissenschaftliche Psychologie mit erfahrungsorientierter Tiefe vereint, schaffen wir die Veränderung, die du dir wünschst.',
+      description2: 'Heute verbinde ich diese Welten. Als Gestalttherapeut, mit angehendem Master in Psychologie (M.Sc.) begleite ich Menschen nicht nur durch kognitive Prozesse, sondern durch tiefgreifende Transformationsarbeit. Auf diesem Weg hat meine Ausbildung zum Heldenreiseleiter nach Paul Rebillot mir gezeigt, wie wichtig Rituale und Struktur für diese Übergänge sind.',
     },
     qualifikationen: {
       title: 'Ausbildung & Qualifikationen',
@@ -251,8 +251,9 @@ export const de: Translations = {
     arbeitsweise: {
       label: 'MEINE ARBEITSWEISE',
       title: 'Raum für das, was ist.',
-      description1: 'In über hunderten intensiven Einzelprozessen durfte ich erleben, was passiert, wenn wir dem Körper und den Emotionen gleichermaßen Raum geben. Ob früher als Trainer und Coach oder heute als Gestalttherapeut: Ich bin dein Sparringspartner.',
-      description2: 'Ich halte den Raum und gebe dir Struktur, sodass du dich entspannt verändern kannst.',
+      description1: 'Durch eine außergewöhnlich persönliche Begleitung, die wissenschaftliche Psychologie mit erfahrungsorientierter Tiefe vereint, schaffen wir die Veränderung, die du dir wünschst.',
+      description2: 'Ob früher als Trainer und Coach oder heute als Gestalttherapeut: Ich bin dein Sparringspartner. Ich halte den Raum und gebe dir Struktur die bisher gefehlt hat.',
+      quote: '„Das Was ist, darf sein & was sein kann darf sich verändern."',
       icons: {
         koerper: 'Körper',
         psyche: 'Psyche',
