@@ -119,7 +119,7 @@ const Index = () => {
                       }} transition={{
                         duration: 0.6,
                         ease: [0.2, 0.8, 0.2, 1]
-                      }} width={330} height={443} loading="eager" decoding="async" src="/lovable-uploads/21328137-c4ff-4353-bf00-b34e737ceeb1.jpg" />
+                      }} width={330} height={443} loading="eager" decoding="async" src="/lovable-uploads/7ba139ec-2d72-4520-abf4-5660e7c3f8d0.jpg" />
                         {/* Subtle vignette for emerging effect */}
                         <div className="absolute inset-0 pointer-events-none z-20" style={{
                         boxShadow: 'inset 0 0 60px rgba(0, 0, 0, 0.1), inset 0 -30px 60px -30px hsl(160 30% 20% / 0.15)'
