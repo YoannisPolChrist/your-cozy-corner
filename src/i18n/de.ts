@@ -17,7 +17,7 @@ export const de: Translations = {
   
   meet: {
     title: 'Veränderung passiert –',
-    description: 'Optimalerweise in einem Rahmen, der hält und Sicherheit bietet. Dass dem meistens nicht so ist, ist natürlich selbstverständlich. Als Gestalttherapeut, Coach und M.Sc. Psychologie (i.A.) biete ich dir durch Präsenz, Kompetenz und Schmitz, den Raum, den es braucht, damit die Veränderung geschehen kann, die du dir wünschst!',
+    description: 'Optimalerweise in einem Rahmen, der hält und Sicherheit bietet. Dass dem meistens nicht so ist, ist natürlich selbstverständlich. Als Gestalttherapeut, Coach und M.Sc. Psychologie (i.A.) biete ich dir durch Präsenz, Kompetenz und Witz, den Raum, den es braucht, damit die Veränderung geschehen kann, die du dir wünschst!',
   },
   
   painPoints: {
@@ -71,7 +71,7 @@ export const de: Translations = {
   aboutPreview: {
     label: 'Ihr Begleiter',
     title: 'Über mich',
-    description1: 'Ich bin Johannes Christ, Gestalttherapeut, Coach und M.Sc. Psychologie (i.A.). Meine Arbeit basiert in einer Haltung von Achtung und Gewahrsein. In diesem Gewahrsein geschieht die Veränderung. Dies ist unser Ansatzpunkt.',
+    description1: 'Ich bin Johannes Christ, Gestalttherapeut, Coach und M.Sc. Psychologie (i.A.). Meine Arbeit basiert auf einer Haltung von Achtung und Gewahrsein. In diesem Gewahrsein geschieht die Veränderung. Dies ist unser Ansatzpunkt.',
     description2: 'Mit langjähriger Erfahrung in Gestalttherapie und Coaching begleite ich dich auf dem Weg zu mehr Klarheit, Wohlbefinden und Erfüllung.',
     link: 'Mehr zu meiner Person',
   },
@@ -174,7 +174,7 @@ export const de: Translations = {
       features: [
         { title: 'Vitalwerte & Körper', description: 'Wir werfen einen Blick auf Blutwerte, Schlaf und Ressourcen, um körperliche Ursachen für psychische Themen auszuschließen.' },
         { title: 'Tracking & Muster', description: 'Wir erheben den Ist-Zustand Ihrer Routinen. Wo verlieren Sie Energie? Wir machen das Unsichtbare messbar.' },
-        { title: 'Strategie', description: 'Basierend auf Daten erstellen wir Ihren individuellen Fahrplan der über der Gestalttherapie, d.h. deinen Prozess hinausgeht. Fortschritt ist kein Zufall.' },
+        { title: 'Strategie', description: 'Basierend auf Daten erstellen wir Ihren individuellen Fahrplan, der über die Gestalttherapie, d.h. deinen Prozess, hinausgeht. Fortschritt ist kein Zufall.' },
       ],
     },
     konditionen: {
@@ -252,8 +252,8 @@ export const de: Translations = {
       label: 'MEINE ARBEITSWEISE',
       title: 'Raum für das, was ist.',
       description1: 'Durch eine außergewöhnlich persönliche Begleitung, die wissenschaftliche Psychologie mit erfahrungsorientierter Tiefe vereint, schaffen wir die Veränderung, die du dir wünschst.',
-      description2: 'Ob früher als Trainer und Coach oder heute als Gestalttherapeut: Ich bin dein Sparringspartner. Ich halte den Raum und gebe dir Struktur die bisher gefehlt hat.',
-      quote: '„Das Was ist, darf sein & was sein kann darf sich verändern."',
+      description2: 'Ob früher als Trainer und Coach oder heute als Gestalttherapeut: Ich bin dein Sparringspartner. Ich halte den Raum und gebe dir Struktur, die bisher gefehlt hat.',
+      quote: '„Das, was ist, darf sein – und was sein kann, darf sich verändern."',
       icons: {
         koerper: 'Körper',
         psyche: 'Psyche',
@@ -264,7 +264,7 @@ export const de: Translations = {
       label: 'PERSÖNLICH',
       title: 'Und sonst so?',
       description1: 'Wer mich kennt, weiß: Ich nehme meine Arbeit ernst. Wenn wir aber irgendwann nichts mehr zum Lachen haben, dann wird\'s kritisch. Dann stimmt was nicht. Ich glaube an die Kraft von Humor, Leichtigkeit und echten Begegnungen.',
-      description2: 'Abseits der Therapie findest du mich beim Sport, unterwegs mit Freunden oder bei meinen Rhetorikclubs. Ein erfülltes Leben besteht, zumindest für mich, aus vielen kleinen Momenten der Verbundenheit – mit uns selbst, mit anderen und der Universum als Ganzem.',
+      description2: 'Abseits der Therapie findest du mich beim Sport, unterwegs mit Freunden oder bei meinen Rhetorikclubs. Ein erfülltes Leben besteht, zumindest für mich, aus vielen kleinen Momenten der Verbundenheit – mit uns selbst, mit anderen und dem Universum als Ganzem.',
     },
     cta: {
       title: 'Neugierig geworden?',
