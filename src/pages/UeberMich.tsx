@@ -4,7 +4,7 @@ import { ArrowRight, GraduationCap, Sparkles, Dumbbell } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import johannesHeroPortrait from "@/assets/johannes-hero-portrait.png";
+import johannesHeroPortrait from "@/assets/johannes-hero-new.jpg";
 import conversationWindow from "@/assets/conversation-window.jpg";
 import johannesLaughing from "@/assets/johannes-laughing.png";
 import { Footer } from "@/components/Footer";
