@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import johannesHeroPortrait from "@/assets/johannes-hero-portrait.png";
 import conversationWindow from "@/assets/conversation-window.jpg";
-import johannesLaughing from "@/assets/johannes-laughing.png";
+import johannesPersoenlich from "@/assets/johannes-persoenlich.jpg";
 import { Footer } from "@/components/Footer";
 import {
   fadeUp,
@@ -246,8 +246,8 @@ const UeberMich = () => {
                   />
                   {/* Main Image - Portrait Rectangle with Parallax */}
                   <ParallaxImageWrapper
-                    src={johannesLaughing}
-                    alt="Johannes Christ lachend"
+                    src={johannesPersoenlich}
+                    alt="Johannes Christ"
                     className="object-cover"
                     aspectRatio="aspect-[3/4]"
                   />
