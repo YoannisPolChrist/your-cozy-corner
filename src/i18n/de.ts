@@ -17,7 +17,7 @@ export const de: Translations = {
   
   meet: {
     title: 'Veränderung passiert –',
-    description: 'Optimalerweise in einem Rahmen, der hält und Sicherheit bietet. Dass dieser Rahmen meistens vorhanden ist, ist natürlich selbstverständlich. Als Gestalttherapeut, Coach und M.Sc. Psychologie (i.A.) biete ich dir durch Präsenz, Kompetenz und Witz, den Raum den es braucht, damit die Veränderung geschehen kann, die du dir wünschst!',
+    description: 'Optimalerweise in einem Rahmen, der hält und Sicherheit bietet. Dass dieser Rahmen meistens nicht vorhanden ist, ist natürlich selbstverständlich. Als Gestalttherapeut, Coach und M.Sc. Psychologie (i.A.) biete ich dir durch Präsenz, Kompetenz und Witz, den Raum den es braucht, damit die Veränderung geschehen kann, die du dir wünschst!',
   },
   
   painPoints: {
