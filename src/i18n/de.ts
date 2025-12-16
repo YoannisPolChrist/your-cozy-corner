@@ -165,7 +165,7 @@ export const de: Translations = {
       {
         title: 'Psychologische Diagnostik',
         subline: 'PRÄZISION STATT BAUCHGEFÜHL',
-        description: 'Auf Basis aktueller wissenschaftlicher Standards (M.Sc. Psychologie i.A.) biete ich eine fundierte Standortbestimmung. Wir ordnen Symptome ein und erstellen einen Fahrplan, der zu Ihrer Situation passt.',
+        description: 'Auf Basis der Gestalttherapie, sowie wissenschaftlicher Praktiken, führen wir eine fundierte Standortbestimmung durch. Dazu gehören je nach Bedarf Blut-, Bewegungs- oder Nährstoffanalysen.',
       },
     ],
     checkup: {
