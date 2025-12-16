@@ -173,8 +173,8 @@ export const de: Translations = {
       title: 'Wir können nur verändern, was wir verstehen.',
       features: [
         { title: 'Vitalwerte & Körper', description: 'Wir werfen einen Blick auf Blutwerte, Schlaf und Ressourcen, um körperliche Ursachen für psychische Themen auszuschließen.' },
-        { title: 'Tracking & Muster', description: 'Wir erheben den Ist-Zustand Ihrer Routinen. Wo verlieren Sie Energie? Wir machen das Unsichtbare messbar.' },
-        { title: 'Strategie', description: 'Basierend auf Daten erstellen wir Ihren individuellen Fahrplan, der über die Gestalttherapie, d.h. deinen Prozess, hinausgeht. Fortschritt ist kein Zufall.' },
+        { title: 'Tracking & Muster', description: 'Wir erheben den Ist-Zustand deiner Routinen. Wo verlierst du Energie? Wir machen das Unsichtbare messbar.' },
+        { title: 'Strategie', description: 'Basierend auf Daten erstellen wir deinen individuellen Fahrplan, der über die Gestalttherapie, d.h. deinen Prozess, hinausgeht. Fortschritt ist dahingehend kein Zufall.' },
       ],
     },
     konditionen: {
@@ -183,12 +183,12 @@ export const de: Translations = {
         price: '50€',
         priceLabel: 'pro 50 Min. Sitzung',
         title: 'Einzelbegleitung',
-        description: 'Psychologische Beratung, Gestalttherapie & Coaching. Ideal für den Anfang.',
+        description: 'Psychologische Beratung, Gestalttherapie & Coaching. Ideal um die Arbeitsweise kennen zu lernen.',
         cta: 'Termin buchen',
       },
       intensiv: {
         price: 'Individueller Rahmen',
-        priceLabel: 'Empfohlen: 3-6 Monate',
+        priceLabel: '3-6 Monate',
         title: 'Intensive Zusammenarbeit',
         description: 'Veränderung braucht Zeit. Für tiefgreifende Themen vereinbaren wir einen festen Rhythmus. Abrechnung flexibel pro Sitzung.',
         discount: '10% Rabatt',

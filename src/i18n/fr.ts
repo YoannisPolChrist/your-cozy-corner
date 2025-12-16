@@ -173,8 +173,8 @@ export const fr: Translations = {
       title: 'Nous ne pouvons changer que ce que nous comprenons.',
       features: [
         { title: 'Signes vitaux & Corps', description: 'Nous examinons les valeurs sanguines, le sommeil et les ressources pour exclure les causes physiques des problèmes psychologiques.' },
-        { title: 'Suivi & Schémas', description: 'Nous évaluons l\'état actuel de vos routines. Où perdez-vous de l\'énergie ? Nous rendons l\'invisible mesurable.' },
-        { title: 'Stratégie', description: 'Sur la base des données, nous créons votre feuille de route individuelle qui va au-delà de la Gestalt-thérapie, c\'est-à-dire votre processus. Le progrès n\'est pas un hasard.' },
+        { title: 'Suivi & Schémas', description: 'Nous évaluons l\'état actuel de tes routines. Où perds-tu de l\'énergie ? Nous rendons l\'invisible mesurable.' },
+        { title: 'Stratégie', description: 'Sur la base des données, nous créons ta feuille de route individuelle qui va au-delà de la Gestalt-thérapie, c\'est-à-dire ton processus. Le progrès n\'est donc pas un hasard.' },
       ],
     },
     konditionen: {
@@ -183,12 +183,12 @@ export const fr: Translations = {
         price: '50€',
         priceLabel: 'la séance de 50 min.',
         title: 'Accompagnement individuel',
-        description: 'Conseil psychologique, Gestalt-thérapie & coaching. Idéal pour commencer et découvrir ma manière de travailler.',
+        description: 'Conseil psychologique, Gestalt-thérapie & coaching. Idéal pour découvrir ma manière de travailler.',
         cta: 'Prendre rendez-vous',
       },
       intensiv: {
         price: 'Cadre sur mesure',
-        priceLabel: 'Recommandé : 3-6 mois',
+        priceLabel: '3-6 mois',
         title: 'Collaboration intensive',
         description: 'Le changement prend du temps. Pour les thèmes profonds, nous établissons un rythme régulier. Facturation flexible par séance.',
         discount: '10% de réduction',

@@ -174,7 +174,7 @@ export const en: Translations = {
       features: [
         { title: 'Vital Signs & Body', description: 'We look at blood values, sleep and resources to rule out physical causes for psychological issues.' },
         { title: 'Tracking & Patterns', description: 'We assess the current state of your routines. Where are you losing energy? We make the invisible measurable.' },
-        { title: 'Strategy', description: 'Based on data, we create your individual roadmap that goes beyond Gestalt therapy, i.e. your process. Progress is no coincidence.' },
+        { title: 'Strategy', description: 'Based on data, we create your individual roadmap that goes beyond Gestalt therapy, i.e. your process. Progress is therefore no coincidence.' },
       ],
     },
     konditionen: {
@@ -183,12 +183,12 @@ export const en: Translations = {
         price: '€50',
         priceLabel: 'per 50 min. session',
         title: 'Individual Sessions',
-        description: 'Psychological counseling, Gestalt Therapy & coaching. Ideal for getting started.',
+        description: 'Psychological counseling, Gestalt Therapy & coaching. Ideal for getting to know the approach.',
         cta: 'Book appointment',
       },
       intensiv: {
         price: 'Individual Framework',
-        priceLabel: 'Recommended: 3-6 months',
+        priceLabel: '3-6 months',
         title: 'Intensive Collaboration',
         description: 'Change takes time. For deep-seated issues, we establish a fixed rhythm. Billing flexible per session.',
         discount: '10% Discount',
