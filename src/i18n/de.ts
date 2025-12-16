@@ -61,9 +61,9 @@ export const de: Translations = {
   
   gestaltSection: {
     label: 'Der therapeutische Ansatz',
-    title: 'Was ist',
-    titleHighlight: 'Gestalttherapie?',
-    description: 'Die Gestalttherapie ist ein humanistischer Therapieansatz, der sich auf das bewusste Erleben im Hier und Jetzt konzentriert. Statt nur über Probleme zu sprechen, erforschen wir gemeinsam, wie Sie Ihre Welt wahrnehmen und gestalten.',
+    title: 'Gestalttherapie',
+    titleHighlight: '',
+    description: 'Die Gestalttherapie bietet die Basis meiner Arbeit. Sie ist ein humanistischer Therapieansatz, der sich auf das bewusste Erleben im Hier und Jetzt konzentriert. Statt über Probleme zu sprechen, bringen wir den Kern dessen, was dich zurückhält, ins Erleben. Veränderung geschieht dadurch tiefgreifend, ganzheitlich und nachhaltig.',
     link: 'Mehr über Gestalttherapie erfahren',
     quote: 'Sei ganz hier, ganz jetzt – der Rest folgt von selbst.',
   },
