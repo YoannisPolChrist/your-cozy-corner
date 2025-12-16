@@ -9,9 +9,9 @@ export const de: Translations = {
   },
   
   hero: {
-    title: '',
+    title: 'Veränderung geschieht im',
     titleHighlight: 'Hier und Jetzt',
-    subtitle: 'Begleitung auf deinem Weg zu mehr Klarheit, Erfüllung und innerem Frieden – durch Beratung, modernes Coaching und humanistische Gestalttherapie.',
+    subtitle: 'Begleitung auf deinem Weg zu mehr Klarheit, Erfüllung und innerem Frieden – durch humanistische Gestalttherapie, Beratung und Coaching.',
     cta: 'Kennenlerngespräch vereinbaren',
   },
   
