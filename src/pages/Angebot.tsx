@@ -127,7 +127,7 @@ const Angebot = () => {
                 {/* Card 1: Einzelbegleitung */}
                 <motion.div variants={cardItem}>
                   <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500 flex flex-col group hover:-translate-y-2 hover:border-[#c5a065]/20 hover:bg-card/95">
-                    <h3 className="font-heading text-2xl text-primary text-center mb-4">
+                    <h3 className="font-heading text-4xl md:text-5xl text-primary text-center mb-4">
                       {t.angebot.konditionen.einzelbegleitung.title}
                     </h3>
                     <div className="text-center mb-6">
