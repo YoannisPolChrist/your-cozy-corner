@@ -181,8 +181,8 @@ export const en: Translations = {
       title: 'Terms & Collaboration',
       einzelbegleitung: {
         price: '€50',
-        priceLabel: 'per 50 min. session',
-        title: 'Individual Sessions',
+        priceLabel: '',
+        title: 'Individual Session',
         description: 'Psychological counseling, Gestalt Therapy & coaching. Ideal for getting to know the approach.',
         cta: 'Book appointment',
       },

@@ -181,8 +181,8 @@ export const de: Translations = {
       title: 'Konditionen & Zusammenarbeit',
       einzelbegleitung: {
         price: '50€',
-        priceLabel: 'pro 50 Min. Sitzung',
-        title: 'Einzelbegleitung',
+        priceLabel: '',
+        title: 'Einzelsitzung',
         description: 'Psychologische Beratung, Gestalttherapie & Coaching. Ideal um die Arbeitsweise kennen zu lernen.',
         cta: 'Termin buchen',
       },

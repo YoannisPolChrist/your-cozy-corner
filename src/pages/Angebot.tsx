@@ -127,19 +127,16 @@ const Angebot = () => {
                 {/* Card 1: Einzelbegleitung */}
                 <motion.div variants={cardItem}>
                   <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500 flex flex-col group hover:-translate-y-2 hover:border-[#c5a065]/20 hover:bg-card/95">
+                    <h3 className="font-heading text-2xl text-primary text-center mb-4">
+                      {t.angebot.konditionen.einzelbegleitung.title}
+                    </h3>
                     <div className="text-center mb-6">
                       <div className="inline-block px-6 py-4 bg-accent/10 rounded-lg border border-accent/20">
                         <span className="font-heading text-5xl text-primary">
                           {t.angebot.konditionen.einzelbegleitung.price}
                         </span>
-                        <p className="text-muted-foreground mt-2">
-                          {t.angebot.konditionen.einzelbegleitung.priceLabel}
-                        </p>
                       </div>
                     </div>
-                    <h3 className="font-heading text-2xl text-primary text-center mb-4">
-                      {t.angebot.konditionen.einzelbegleitung.title}
-                    </h3>
                     <p className="text-muted-foreground leading-relaxed text-center mb-8 flex-grow">
                       {t.angebot.konditionen.einzelbegleitung.description}
                     </p>
