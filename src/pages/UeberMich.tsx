@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import johannesHeroPortrait from "@/assets/johannes-hero-portrait.png";
 import conversationWindow from "@/assets/conversation-window.jpg";
-import johannesPersoenlich from "@/assets/johannes-persoenlich.jpg";
+import johannesPersoenlich from "@/assets/johannes-persoenlich-neu.jpg";
 import { Footer } from "@/components/Footer";
 import {
   fadeUp,
