@@ -132,7 +132,7 @@ const Angebot = () => {
                     </h3>
                     <div className="text-center mb-6">
                       <div className="inline-block px-6 py-4 bg-accent/10 rounded-lg border border-accent/20">
-                        <span className="font-heading text-5xl text-primary">
+                        <span className="font-heading text-2xl text-primary">
                           {t.angebot.konditionen.einzelbegleitung.price}
                         </span>
                       </div>
@@ -160,7 +160,7 @@ const Angebot = () => {
                       </p>
                       {t.angebot.konditionen.intensiv.discount && (
                         <div className="mt-4 p-3 bg-accent/10 rounded-lg">
-                          <p className="text-accent font-semibold">{t.angebot.konditionen.intensiv.discount}</p>
+                          <p className="text-accent font-semibold text-2xl font-heading">{t.angebot.konditionen.intensiv.discount}</p>
                           {t.angebot.konditionen.intensiv.discountPrice && (
                             <p className="text-muted-foreground text-sm">
                               <span className="line-through">{t.angebot.konditionen.einzelbegleitung.price}</span>
