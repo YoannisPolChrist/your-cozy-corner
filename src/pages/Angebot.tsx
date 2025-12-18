@@ -127,7 +127,7 @@ const Angebot = () => {
                 {/* Card 1: Einzelbegleitung */}
                 <motion.div variants={cardItem}>
                   <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500 flex flex-col group hover:-translate-y-2 hover:border-[#c5a065]/20 hover:bg-card/95">
-                    <h3 className="font-heading text-4xl md:text-5xl text-primary text-center mb-4">
+                    <h3 className="font-heading text-2xl md:text-3xl text-primary text-center mb-4">
                       {t.angebot.konditionen.einzelbegleitung.title}
                     </h3>
                     <div className="text-center mb-6">
@@ -152,7 +152,7 @@ const Angebot = () => {
                 <motion.div variants={cardItem}>
                   <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500 flex flex-col group hover:-translate-y-2 hover:border-[#c5a065]/20 hover:bg-card/95">
                     <div className="text-center mb-6">
-                      <span className="font-heading text-4xl md:text-5xl text-primary">
+                      <span className="font-heading text-2xl md:text-3xl text-primary">
                         {t.angebot.konditionen.intensiv.price}
                       </span>
                       <p className="text-muted-foreground mt-2">
@@ -162,7 +162,7 @@ const Angebot = () => {
                         <div className="mt-4 p-3 bg-accent/10 rounded-lg">
                           <p className="text-accent font-semibold text-2xl font-heading">{t.angebot.konditionen.intensiv.discount}</p>
                           {t.angebot.konditionen.intensiv.discountPrice && (
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-2xl font-heading">
                               <span className="line-through">{t.angebot.konditionen.einzelbegleitung.price}</span>
                               {' '}{t.angebot.konditionen.intensiv.discountPrice}
                             </p>
