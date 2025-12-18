@@ -251,8 +251,8 @@ export const de: Translations = {
     arbeitsweise: {
       label: 'MEINE ARBEITSWEISE',
       title: 'Raum für das, was ist.',
-      description1: 'Durch eine außergewöhnlich persönliche Begleitung, die wissenschaftliche Psychologie mit erfahrungsorientierter Tiefe vereint, schaffen wir die Veränderung, die du dir wünschst.',
-      description2: 'Ob früher als Trainer und Coach oder heute als Gestalttherapeut: Ich bin dein Sparringspartner. Ich halte den Raum und gebe dir Struktur, die bisher gefehlt hat.',
+      description1: 'Durch eine außergewöhnlich persönliche Begleitung, die wissenschaftliche physio- & psychologische Ansätze vereint, schaffen wir die Veränderung, die du dir wünschst.',
+      description2: 'Ob früher als Trainer und Coach oder heute als Gestalttherapeut: Ich bin dein Sparringspartner! Ich halte den Raum für das, was bisher keinen Raum hatte und bringe mit dir das in Bewegung, was bisher feststeckt!',
       quote: '„Das, was ist, darf sein – und was sein kann, darf sich verändern."',
       icons: {
         koerper: 'Körper',
