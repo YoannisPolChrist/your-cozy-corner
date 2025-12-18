@@ -234,7 +234,7 @@ export const de: Translations = {
       therapeutisch: {
         title: 'Therapeutische Ausbildung',
         items: [
-          'Gestalttherapeut | 5-jährige Intensivausbildung Institut für Gestalt und Erfahrung, Wasserburg & Prana Leipzig',
+          'Gestalttherapeut | 7-jährige Intensivausbildung Institut für Gestalt und Erfahrung, Heldenweginstitut & Prana Leipzig',
           'Heldenreiseleiter (nach Paul Rebillot) | Heldenweg-Institut – Leitung von strukturierter Gestaltarbeit und Gruppenprozessen',
           'Systemisches Familienstellen & Gestaltpractitioner | Prana Leipzig',
         ],
