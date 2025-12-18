@@ -68,8 +68,8 @@ export default {
         "warm-cream": "hsl(var(--warm-cream))",
       },
       fontFamily: {
-        heading: ['Noto Serif', 'serif'],
-        sans: ['Noto Serif', 'serif'],
+        heading: ['Oxygen', 'sans-serif'],
+        sans: ['Oxygen', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-teal': 'var(--gradient-teal)',
