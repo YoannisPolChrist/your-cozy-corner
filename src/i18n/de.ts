@@ -219,8 +219,8 @@ export const de: Translations = {
     hero: {
       label: 'JOHANNES CHRIST — GESTALTTHERAPEUT, BEWEGUNGSTHERAPIE UND PRÄVENTION (B.A.), PSYCHOLOGIE (M.SC.) (i.A.)',
       title: 'Fundiert, durch Erfahrung.',
-      description1: 'Hi, ich bin Johannes. Mein Weg begann vor einigen Jahren durch eine eigene existenzielle Krise mit der Gestalttherapie. Durch innere und äußere Arbeit habe ich mich aus meinem eigenen Loch gekämpft. Auf dem Weg verbrachte ich mehrere Jahre in Leipzig und Innsbruck, wobei ich in dieser Zeit ein duales Studium in der Bewegungstherapie und Prävention (B.A.) abschloss. Bewegungs- und Körperverständnis, menschlich und wissenschaftlich.',
-      description2: 'Heute verbinde ich diese Welten. Als Gestalttherapeut, mit angehendem Master in Psychologie (M.Sc.) begleite ich Menschen nicht nur durch kognitive Prozesse, sondern durch tiefgreifende Transformationsarbeit. Auf diesem Weg hat meine Ausbildung zum Heldenreiseleiter nach Paul Rebillot mir gezeigt, wie wichtig Rituale und Struktur für diese Übergänge sind.',
+      description1: 'Mein Weg begann vor einigen Jahren durch eine eigene existenzielle Krise. Damals kam ich zum erstenmal mit der Gestalttherapie in Kontakt, welche mich seither nicht mehr loslässt. Durch innere und äußere Arbeit, habe ich mich mit Hilfe Anderer aus der Drepression gekämpft und stehe so kraftvoll da wie noch nie. In Leipzig und später in Innsbruck, habe ich neben der Gestalttherapie und vielen anderen Fortbildungen, ein Studium in der Bewegungstherapie und Prävention (B.A.) abgeschlossen.',
+      description2: 'In meiner Arbeit heute vereine ich das Wissen aus der aktuellen Wissenschaft mit der der Gestalt. Ein Master in Psychologie (M.Sc.) unterstützt dies einmal mehr, sodass du meine geballte Power und Wissen für dich und deinen Weg nutzen kannst.',
     },
     qualifikationen: {
       title: 'Ausbildung & Qualifikationen',
