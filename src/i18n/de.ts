@@ -223,7 +223,7 @@ export const de: Translations = {
       description2: 'In meiner Arbeit heute vereine ich das Wissen aus der aktuellen Wissenschaft mit der der Gestalt. Ein Master in Psychologie (M.Sc.) unterstützt dies einmal mehr, sodass du meine geballte Power und Wissen für dich und deinen Weg nutzen kannst.',
     },
     qualifikationen: {
-      title: '8 Jahre Ausbildung',
+      title: 'Ausbildung & Qualifikationen',
       akademisch: {
         title: 'Akademischer Werdegang',
         items: [
