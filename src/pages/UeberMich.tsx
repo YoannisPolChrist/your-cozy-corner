@@ -72,17 +72,41 @@ const UeberMich = () => {
           whileInView="visible"
           viewport={viewportSettings}
           variants={staggerContainer}
-          className="pt-[68px] pb-32 bg-white"
+          className="pt-12 md:pt-[68px] pb-16 md:pb-32 bg-white"
         >
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-                {/* Image with Gold Frame - Cinematic Parallax */}
-                <motion.div className="relative">
+              {/* Mobile: Text first, then image */}
+              <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+                {/* Text Content - Shows first on mobile */}
+                <motion.div variants={staggerContainer} className="space-y-4 md:space-y-6 order-1 md:order-2">
+                  <motion.span
+                    variants={fadeUp}
+                    className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-xs md:text-sm"
+                  >
+                    {t.ueberMich.hero.label}
+                  </motion.span>
+                  <motion.h1
+                    variants={fadeUp}
+                    className="font-heading text-2xl md:text-[calc(3rem+3px)] text-primary leading-tight"
+                  >
+                    {t.ueberMich.hero.title}
+                  </motion.h1>
+                  <motion.div
+                    variants={fadeUp}
+                    className="space-y-3 md:space-y-4 text-muted-foreground leading-relaxed text-sm md:text-base"
+                  >
+                    <p>{t.ueberMich.hero.description1}</p>
+                    <p>{t.ueberMich.hero.description2}</p>
+                  </motion.div>
+                </motion.div>
+
+                {/* Image with Gold Frame - Shows second on mobile */}
+                <motion.div className="relative order-2 md:order-1">
                   {/* Gold Frame - Slides out from behind with delay */}
                   <motion.div
                     variants={goldFrameVariants}
-                    className="absolute bottom-[10px] right-[10px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-2xl"
+                    className="absolute bottom-[8px] right-[8px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-xl md:rounded-2xl"
                   />
                   {/* Main Image with Parallax */}
                   <ParallaxImageWrapper
@@ -91,29 +115,6 @@ const UeberMich = () => {
                     className="object-cover object-center"
                     aspectRatio="aspect-[3/4]"
                   />
-                </motion.div>
-
-                {/* Text Content */}
-                <motion.div variants={staggerContainer} className="space-y-6 order-first md:order-last">
-                  <motion.span
-                    variants={fadeUp}
-                    className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
-                  >
-                    {t.ueberMich.hero.label}
-                  </motion.span>
-                  <motion.h1
-                    variants={fadeUp}
-                    className="font-heading text-[calc(2.25rem+3px)] md:text-[calc(3rem+3px)] text-primary leading-tight"
-                  >
-                    {t.ueberMich.hero.title}
-                  </motion.h1>
-                  <motion.div
-                    variants={fadeUp}
-                    className="space-y-4 text-muted-foreground leading-relaxed"
-                  >
-                    <p>{t.ueberMich.hero.description1}</p>
-                    <p>{t.ueberMich.hero.description2}</p>
-                  </motion.div>
                 </motion.div>
               </div>
             </div>
@@ -126,7 +127,7 @@ const UeberMich = () => {
           whileInView="visible"
           viewport={viewportSettings}
           variants={staggerContainer}
-          className="py-32 bg-primary"
+          className="py-16 md:py-32 bg-primary"
         >
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -226,23 +227,40 @@ const UeberMich = () => {
           </div>
         </motion.section>
 
-        {/* Section 3: Personal - Off-White Background (Image Left / Text Right) */}
+        {/* Section 3: Personal - Off-White Background */}
         <motion.section
           initial="hidden"
           whileInView="visible"
           viewport={viewportSettings}
           variants={staggerContainer}
-          className="py-32 bg-off-white"
+          className="py-16 md:py-32 bg-off-white"
         >
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-                {/* Image with Gold Frame - Left Side */}
-                <motion.div className="relative">
+              {/* Mobile: Title first, Image second, Description third */}
+              <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-16 items-center">
+                {/* Mobile-only: Title at top */}
+                <motion.div variants={staggerContainer} className="space-y-2 md:hidden order-1">
+                  <motion.span
+                    variants={fadeUp}
+                    className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-xs"
+                  >
+                    {t.ueberMich.persoenlich.label}
+                  </motion.span>
+                  <motion.h2
+                    variants={fadeUp}
+                    className="font-heading text-2xl text-primary leading-tight"
+                  >
+                    {t.ueberMich.persoenlich.title}
+                  </motion.h2>
+                </motion.div>
+
+                {/* Image with Gold Frame - Shows after title on mobile, left on desktop */}
+                <motion.div className="relative order-2 md:order-1">
                   {/* Gold Frame - Slides out from behind with delay */}
                   <motion.div
                     variants={goldFrameVariants}
-                    className="absolute bottom-[10px] right-[10px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-2xl"
+                    className="absolute bottom-[8px] right-[8px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-xl md:rounded-2xl"
                   />
                   {/* Main Image - Portrait Rectangle with Parallax */}
                   <ParallaxImageWrapper
@@ -253,23 +271,24 @@ const UeberMich = () => {
                   />
                 </motion.div>
 
-                {/* Text Content - Right Side */}
-                <motion.div variants={staggerContainer} className="space-y-6">
+                {/* Text Content - Right Side on desktop, after image on mobile */}
+                <motion.div variants={staggerContainer} className="space-y-4 md:space-y-6 order-3 md:order-2">
+                  {/* Desktop-only: Title */}
                   <motion.span
                     variants={fadeUp}
-                    className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
+                    className="hidden md:block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
                   >
                     {t.ueberMich.persoenlich.label}
                   </motion.span>
                   <motion.h2
                     variants={fadeUp}
-                    className="font-heading text-[calc(1.875rem+3px)] md:text-[calc(2.25rem+3px)] text-primary leading-tight"
+                    className="hidden md:block font-heading text-[calc(1.875rem+3px)] md:text-[calc(2.25rem+3px)] text-primary leading-tight"
                   >
                     {t.ueberMich.persoenlich.title}
                   </motion.h2>
                   <motion.div
                     variants={fadeUp}
-                    className="space-y-4 text-muted-foreground leading-relaxed"
+                    className="space-y-3 md:space-y-4 text-muted-foreground leading-relaxed text-sm md:text-base"
                   >
                     <p>{t.ueberMich.persoenlich.description1}</p>
                     <p>{t.ueberMich.persoenlich.description2}</p>
