@@ -38,7 +38,12 @@ export const Navigation = () => {
             <div className="font-heading font-bold text-gold-accent text-sm md:text-lg tracking-wide whitespace-nowrap">
               JOHANNES CHRIST
             </div>
-            <p className="text-[10px] md:text-xs text-muted-foreground whitespace-nowrap">Gestalttherapeut, Coach, M.Sc. Psychologie (i.A.)</p>
+            <p className="text-[10px] md:text-xs text-muted-foreground leading-tight">
+              <span className="whitespace-nowrap">Gestalttherapeut, Coach,</span>
+              <br className="md:hidden" />
+              <span className="hidden md:inline"> </span>
+              <span className="whitespace-nowrap">M.Sc. Psychologie (i.A.)</span>
+            </p>
           </div>
         </Link>
         
