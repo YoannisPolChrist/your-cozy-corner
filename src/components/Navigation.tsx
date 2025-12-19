@@ -32,13 +32,13 @@ export const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <Link to={getLocalizedPath('/')} className="flex items-center gap-3" onClick={scrollToTop}>
-          <img src={logo} alt="Johannes Christ Therapie Logo" className="w-14 h-14 object-contain" width={56} height={56} decoding="async" />
-          <div>
-            <div className="font-heading font-bold text-gold-accent text-lg tracking-wide">
+        <Link to={getLocalizedPath('/')} className="flex items-center gap-2 md:gap-3" onClick={scrollToTop}>
+          <img src={logo} alt="Johannes Christ Therapie Logo" className="w-10 h-10 md:w-14 md:h-14 object-contain" width={56} height={56} decoding="async" />
+          <div className="min-w-0">
+            <div className="font-heading font-bold text-gold-accent text-sm md:text-lg tracking-wide whitespace-nowrap">
               JOHANNES CHRIST
             </div>
-            <p className="text-xs text-muted-foreground">Gestalttherapeut, Coach, M.Sc. Psychologie (i.A.)</p>
+            <p className="text-[10px] md:text-xs text-muted-foreground whitespace-nowrap">Gestalttherapeut, Coach, M.Sc. Psychologie (i.A.)</p>
           </div>
         </Link>
         
