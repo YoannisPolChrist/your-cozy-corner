@@ -76,19 +76,49 @@ const UeberMich = () => {
         >
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              {/* Mobile: Text first, then image */}
-              <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-                {/* Text Content - Shows first on mobile */}
-                <motion.div variants={staggerContainer} className="space-y-4 md:space-y-6 order-1 md:order-2">
+              <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-16 items-center">
+                {/* Mobile-only: Title at top */}
+                <motion.div variants={staggerContainer} className="space-y-2 md:hidden order-1">
                   <motion.span
                     variants={fadeUp}
-                    className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-xs md:text-sm"
+                    className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-xs"
                   >
                     {t.ueberMich.hero.label}
                   </motion.span>
                   <motion.h1
                     variants={fadeUp}
-                    className="font-heading text-2xl md:text-[calc(3rem+3px)] text-primary leading-tight"
+                    className="font-heading text-2xl text-primary leading-tight"
+                  >
+                    {t.ueberMich.hero.title}
+                  </motion.h1>
+                </motion.div>
+
+                {/* Image with Gold Frame - Shows after title on mobile */}
+                <motion.div className="relative order-2 md:order-1">
+                  <motion.div
+                    variants={goldFrameVariants}
+                    className="absolute bottom-[8px] right-[8px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-xl md:rounded-2xl"
+                  />
+                  <ParallaxImageWrapper
+                    src={johannesHeroPortrait}
+                    alt="Johannes Christ - Gestalttherapeut"
+                    className="object-cover object-center"
+                    aspectRatio="aspect-[3/4]"
+                  />
+                </motion.div>
+
+                {/* Text Content - after image on mobile, right on desktop */}
+                <motion.div variants={staggerContainer} className="space-y-4 md:space-y-6 order-3 md:order-2">
+                  {/* Desktop-only: Title */}
+                  <motion.span
+                    variants={fadeUp}
+                    className="hidden md:block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
+                  >
+                    {t.ueberMich.hero.label}
+                  </motion.span>
+                  <motion.h1
+                    variants={fadeUp}
+                    className="hidden md:block font-heading text-[calc(3rem+3px)] text-primary leading-tight"
                   >
                     {t.ueberMich.hero.title}
                   </motion.h1>
@@ -99,22 +129,6 @@ const UeberMich = () => {
                     <p>{t.ueberMich.hero.description1}</p>
                     <p>{t.ueberMich.hero.description2}</p>
                   </motion.div>
-                </motion.div>
-
-                {/* Image with Gold Frame - Shows second on mobile */}
-                <motion.div className="relative order-2 md:order-1">
-                  {/* Gold Frame - Slides out from behind with delay */}
-                  <motion.div
-                    variants={goldFrameVariants}
-                    className="absolute bottom-[8px] right-[8px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-xl md:rounded-2xl"
-                  />
-                  {/* Main Image with Parallax */}
-                  <ParallaxImageWrapper
-                    src={johannesHeroPortrait}
-                    alt="Johannes Christ - Gestalttherapeut"
-                    className="object-cover object-center"
-                    aspectRatio="aspect-[3/4]"
-                  />
                 </motion.div>
               </div>
             </div>
@@ -131,35 +145,66 @@ const UeberMich = () => {
         >
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-                {/* Text Content - Left aligned */}
-                <motion.div variants={staggerContainer} className="space-y-6 order-2 md:order-1 text-left">
+              <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-16 items-center">
+                {/* Mobile-only: Title at top */}
+                <motion.div variants={staggerContainer} className="space-y-2 md:hidden order-1">
                   <motion.span
                     variants={fadeUp}
-                    className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
+                    className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-xs"
                   >
                     {t.ueberMich.arbeitsweise.label}
                   </motion.span>
                   <motion.h2
                     variants={fadeUp}
-                    className="font-heading text-[calc(1.875rem+3px)] md:text-[calc(2.25rem+3px)] text-white leading-tight text-left"
+                    className="font-heading text-2xl text-white leading-tight"
+                  >
+                    {t.ueberMich.arbeitsweise.title}
+                  </motion.h2>
+                </motion.div>
+
+                {/* Image with Gold Frame - Shows after title on mobile */}
+                <motion.div className="relative order-2 md:order-2">
+                  <motion.div
+                    variants={goldFrameVariants}
+                    className="absolute bottom-[8px] left-[8px] md:bottom-[20px] md:left-[20px] w-full h-full bg-[#c5a065] rounded-xl md:rounded-2xl"
+                  />
+                  <ParallaxImageWrapper
+                    src={conversationWindow}
+                    alt="Therapeutische Arbeit"
+                    className="object-cover"
+                    aspectRatio="aspect-[4/3]"
+                  />
+                </motion.div>
+
+                {/* Text Content - after image on mobile, left on desktop */}
+                <motion.div variants={staggerContainer} className="space-y-4 md:space-y-6 order-3 md:order-1 text-left">
+                  {/* Desktop-only: Title */}
+                  <motion.span
+                    variants={fadeUp}
+                    className="hidden md:block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
+                  >
+                    {t.ueberMich.arbeitsweise.label}
+                  </motion.span>
+                  <motion.h2
+                    variants={fadeUp}
+                    className="hidden md:block font-heading text-[calc(2.25rem+3px)] text-white leading-tight"
                   >
                     {t.ueberMich.arbeitsweise.title}
                   </motion.h2>
                   <motion.div
                     variants={fadeUp}
-                    className="space-y-4 text-white/90 leading-relaxed text-left"
+                    className="space-y-3 md:space-y-4 text-white/90 leading-relaxed text-sm md:text-base"
                   >
                     <p>{t.ueberMich.arbeitsweise.description1}</p>
                     <p>{t.ueberMich.arbeitsweise.description2}</p>
-                    <p className="italic text-[#c5a065] font-heading text-lg">{t.ueberMich.arbeitsweise.quote}</p>
+                    <p className="italic text-[#c5a065] font-heading text-base md:text-lg">{t.ueberMich.arbeitsweise.quote}</p>
                   </motion.div>
 
                   {/* Qualifications Accordion */}
                   <motion.div variants={fadeUp} className="pt-4">
                     <Accordion type="single" collapsible className="w-full">
                       <AccordionItem value="qualifikationen" className="border-[#c5a065]/30">
-                        <AccordionTrigger className="text-white hover:text-[#c5a065] font-heading text-lg">
+                        <AccordionTrigger className="text-white hover:text-[#c5a065] font-heading text-base md:text-lg">
                           {t.ueberMich.qualifikationen.title}
                         </AccordionTrigger>
                         <AccordionContent className="space-y-6 pt-4">
@@ -205,22 +250,6 @@ const UeberMich = () => {
                       </AccordionItem>
                     </Accordion>
                   </motion.div>
-                </motion.div>
-
-                {/* Image with Gold Frame - Cinematic Parallax */}
-                <motion.div className="order-1 md:order-2 relative">
-                  {/* Gold Frame - Slides out from behind with delay */}
-                  <motion.div
-                    variants={goldFrameVariants}
-                    className="absolute bottom-[10px] left-[10px] md:bottom-[20px] md:left-[20px] w-full h-full bg-[#c5a065] rounded-2xl"
-                  />
-                  {/* Main Image with Parallax */}
-                  <ParallaxImageWrapper
-                    src={conversationWindow}
-                    alt="Therapeutische Arbeit"
-                    className="object-cover"
-                    aspectRatio="aspect-[4/3]"
-                  />
                 </motion.div>
               </div>
             </div>
