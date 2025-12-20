@@ -36,9 +36,9 @@ Object.entries(routeMap).forEach(([baseRoute, langRoutes]) => {
 
 function detectBrowserLanguage(): Language {
   const browserLang = navigator.language.toLowerCase();
-  if (browserLang.startsWith('de')) return 'de';
+  if (browserLang.startsWith('en')) return 'en';
   if (browserLang.startsWith('fr')) return 'fr';
-  return 'en'; // Default to English for all other languages
+  return 'de'; // Default to German for all other languages
 }
 
 function getLanguageFromPath(pathname: string): Language | null {
