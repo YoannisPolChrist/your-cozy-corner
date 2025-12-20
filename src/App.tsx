@@ -28,7 +28,7 @@ const AppRoutes = () => (
   <Suspense fallback={<PageLoader />}>
     <Routes>
       {/* Redirect root to language-prefixed route */}
-      <Route path="/" element={<Navigate to="/de" replace />} />
+      <Route path="/" element={<Navigate to="/en" replace />} />
       
       {/* German routes */}
       <Route path="/de" element={<Index />} />
