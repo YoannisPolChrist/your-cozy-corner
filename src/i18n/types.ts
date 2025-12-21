@@ -141,6 +141,7 @@ export interface Translations {
     konditionen: {
       title: string;
       einzelbegleitung: {
+        label: string;
         price: string;
         priceLabel: string;
         title: string;
@@ -148,13 +149,13 @@ export interface Translations {
         cta: string;
       };
       intensiv: {
+        label: string;
         price: string;
         priceLabel: string;
         title: string;
         description: string;
         discount?: string;
         discountPrice?: string;
-        discountPriceLabel?: string;
         cta: string;
       };
     };
