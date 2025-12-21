@@ -73,8 +73,7 @@ export const Hero = () => {
             className="font-heading text-4xl md:text-5xl lg:text-6xl mb-6 text-white leading-tight drop-shadow-lg"
             style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}
           >
-            {t.hero.title}
-            <br />
+            <span className="block mb-4 md:mb-6">{t.hero.title}</span>
             <span className="italic text-accent">{t.hero.titleHighlight}</span>
           </motion.h1>
 
