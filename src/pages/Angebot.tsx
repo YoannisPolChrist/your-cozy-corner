@@ -136,6 +136,11 @@ const Angebot = () => {
                           {t.angebot.konditionen.einzelbegleitung.price}
                         </span>
                       </div>
+                      {t.angebot.konditionen.einzelbegleitung.priceLabel && (
+                        <p className="text-muted-foreground mt-2">
+                          {t.angebot.konditionen.einzelbegleitung.priceLabel}
+                        </p>
+                      )}
                     </div>
                     <p className="text-muted-foreground leading-relaxed text-center mb-8 flex-grow">
                       {t.angebot.konditionen.einzelbegleitung.description}
@@ -160,7 +165,7 @@ const Angebot = () => {
                       </p>
                       {t.angebot.konditionen.intensiv.discount && (
                         <div className="mt-4 p-3 bg-accent/10 rounded-lg">
-                          <p className="text-accent font-semibold text-2xl font-heading">{t.angebot.konditionen.intensiv.discount}</p>
+                          <p className="text-accent font-medium text-sm">{t.angebot.konditionen.intensiv.discount}</p>
                           {t.angebot.konditionen.intensiv.discountPrice && (
                             <p className="text-muted-foreground text-2xl font-heading">
                               <span className="line-through">{t.angebot.konditionen.einzelbegleitung.price}</span>
