@@ -17,7 +17,7 @@ export const en: Translations = {
   
   meet: {
     title: 'Change happens –',
-    description: 'Ideally within a framework that holds and provides safety. That this is usually not the case is of course understandable. As a Gestalt therapist, coach and M.Sc. Psychology (in training), I offer you through presence, competence and warmth, the space needed for the change you desire to happen!',
+    description: 'Ideally within a framework that holds and provides safety. That this framework is often missing is, of course, understandable. As a Gestalt therapist, coach and M.Sc. Psychology (in training), I offer you – through presence, competence and a touch of humor – the space needed for the change you desire to happen!',
   },
   
   painPoints: {
@@ -25,12 +25,12 @@ export const en: Translations = {
     subtitle: 'Often we sense that something is missing, but we can\'t quite put our finger on it.',
     items: [
       {
-        title: 'Feeling stuck',
-        description: 'The feeling of being stuck even though you want to move forward. Old patterns keep repeating. Frustration and stagnation are inevitable.',
+        title: 'Running in circles',
+        description: 'The feeling of being stuck even though you want to move forward. Old patterns keep repeating. Frustration and stagnation become inevitable.',
       },
       {
         title: 'Distance and closeness',
-        description: 'Others seem so far away, or closeness feels overwhelming. Conversations go in circles.',
+        description: 'Others seem so far away, or closeness feels overwhelming. Conversations go round in circles.',
       },
       {
         title: 'Fog of uncertainty',
@@ -49,7 +49,7 @@ export const en: Translations = {
       },
       {
         title: 'Coaching',
-        description: 'Focused development, goal-oriented, practical, tangible',
+        description: 'Focused development, goal-oriented, practical, hands-on',
       },
       {
         title: 'Diagnostics',
@@ -78,7 +78,7 @@ export const en: Translations = {
   
   cta: {
     title: 'Ready for the next step?',
-    description: 'Book a free discovery call or simply call to find out if working together makes sense.',
+    description: 'Book a free discovery call or simply give me a ring to find out if working together makes sense.',
     button: 'Get in touch',
   },
   
@@ -90,7 +90,7 @@ export const en: Translations = {
         {
           title: '1. Awareness',
           subtitle: 'Sensing instead of thinking',
-          description: 'Consciously perceiving body and emotions. Being anchored in the moment.',
+          description: 'Consciously perceiving body and emotions. Being anchored in the present moment.',
         },
         {
           title: '2. Holism',
@@ -103,21 +103,21 @@ export const en: Translations = {
           description: 'Healing happens in the authentic dialogue between therapist and client.',
         },
       ],
-      summary: 'Gestalt Therapy means being fully present in the current moment and sharpening your own perception. Through mindful self-experience, old patterns are recognized and changed.',
+      summary: 'Gestalt Therapy means being fully present in the current moment and sharpening your own perception. Through mindful self-experience, old patterns are recognized and transformed.',
     },
     offeneGestalt: {
-      title: 'Open Gestalt',
-      description: 'An Open Gestalt is an unfinished experience – an unresolved conflict or suppressed emotion.',
-      tagline: 'In therapy, we close these Gestalts.',
+      title: 'Unfinished Business',
+      description: 'Unfinished business is an incomplete experience – an unresolved conflict or suppressed emotion.',
+      tagline: 'In therapy, we bring closure to these open Gestalts.',
     },
     kontaktunterbrechungen: {
       title: 'Contact Interruptions',
-      description: 'Contact interruptions are the protective mechanisms that once helped us but now hinder us.',
-      tagline: 'We learn to recognize and resolve them.',
+      description: 'Contact interruptions are the protective mechanisms that once helped us but now hold us back.',
+      tagline: 'We learn to recognize and release them.',
     },
     geschlosseneGestalt: {
-      title: 'Closed Gestalt',
-      description: 'Healing happens when we integrate the unfinished. A Closed Gestalt brings inner peace and lets you feel like your "whole self" again.',
+      title: 'Completed Gestalt',
+      description: 'Healing happens when we integrate the unfinished. A completed Gestalt brings inner peace and lets you feel like your "whole self" again.',
       tagline: 'Fulfillment, peace and calm return.',
     },
     kontaktzyklus: {
@@ -131,7 +131,7 @@ export const en: Translations = {
         { title: '5. Integration', subtitle: 'Digesting', description: 'Processing and assimilating' },
         { title: '6. Withdrawal', subtitle: 'Rest', description: 'Regeneration and reorientation' },
       ],
-      summary: 'Interruptions in this cycle can lead to psychological and physical difficulties. In therapy, we work to recognize these and try new behaviors.',
+      summary: 'Interruptions in this cycle can lead to psychological and physical difficulties. In therapy, we work to recognize these and explore new ways of being.',
     },
     ressourcen: {
       title: 'Resources & Support',
@@ -144,13 +144,13 @@ export const en: Translations = {
     },
     cta: {
       title: 'Curious to learn more?',
-      description: 'Book a free discovery call or simply call to find out if working together makes sense.',
+      description: 'Book a free discovery call or simply give me a ring to find out if working together makes sense.',
       button: 'Get in touch',
     },
   },
   
   angebot: {
-    title: 'The Offer',
+    title: 'Services',
     services: [
       {
         title: 'Integrative Gestalt Therapy',
@@ -164,8 +164,8 @@ export const en: Translations = {
       },
       {
         title: 'Psychological Diagnostics',
-        subline: 'PRECISION OVER GUT FEELING',
-        description: 'Based on current scientific standards (M.Sc. Psychology in training), I offer a well-founded assessment. We classify symptoms and create a roadmap that fits your situation.',
+        subline: 'PRECISION INSTEAD OF GUT FEELING',
+        description: 'Based on Gestalt therapy and scientific practices, we conduct a thorough assessment. This may include blood, movement or nutritional analyses as needed.',
       },
     ],
     checkup: {
@@ -211,17 +211,17 @@ export const en: Translations = {
     },
     cta: {
       title: 'Ready for the next step?',
-      description: 'Book a free discovery call or simply call to find out if working together makes sense.',
+      description: 'Book a free discovery call or simply give me a ring to find out if working together makes sense.',
       button: 'Get in touch',
     },
   },
   
   ueberMich: {
     hero: {
-      label: 'JOHANNES CHRIST — GESTALT THERAPIST, MOVEMENT THERAPY AND PREVENTION (B.A.), PSYCHOLOGY (M.SC.) (IN TRAINING)',
-      title: 'Grounded, through experience.',
-      description1: 'Hi, I\'m Johannes. My journey began several years ago through my own existential crisis with Gestalt therapy. Through inner and outer work, I fought my way out of my own hole. Along the way, I spent several years in Leipzig and Innsbruck, during which time I completed a dual degree in Movement Therapy and Prevention (B.A.). Movement and body understanding, human and scientific.',
-      description2: 'Today I combine these worlds. As a Gestalt therapist with an upcoming Master\'s in Psychology (M.Sc.), I accompany people not only through cognitive processes, but through profound transformational work. Along this path, my training as a Hero\'s Journey facilitator following Paul Rebillot showed me how important rituals and structure are for these transitions.',
+      label: 'JOHANNES CHRIST — GESTALT THERAPIST, MOVEMENT THERAPY & PREVENTION (B.A.), PSYCHOLOGY (M.SC.) (IN TRAINING)',
+      title: 'Lived, not just learned.',
+      description1: 'My journey began a few years ago through my own existential crisis. That\'s when I first encountered Gestalt therapy, which has never let go of me since. Through inner and outer work, I fought my way out of depression with the help of others and now stand stronger than ever. In Leipzig and later in Innsbruck, alongside Gestalt therapy and many other trainings, I completed a degree in Movement Therapy and Prevention (B.A.).',
+      description2: 'In my work today, I unite knowledge from current science with that of Gestalt. A Master\'s in Psychology (M.Sc.) supports this even more, so you can benefit from my full power and knowledge for yourself and your journey.',
     },
     qualifikationen: {
       title: 'Education & Qualifications',
@@ -235,7 +235,7 @@ export const en: Translations = {
       therapeutisch: {
         title: 'Therapeutic Training',
         items: [
-          'Gestalt Therapist | 5-year intensive training at Institute for Gestalt and Experience, Wasserburg & Prana Leipzig',
+          'Gestalt Therapist | 7-year intensive training at Institute for Gestalt and Experience, Heldenweg Institute & Prana Leipzig',
           'Hero\'s Journey Facilitator (Paul Rebillot method) | Heldenweg Institute – Facilitation of structured Gestalt work and group processes',
           'Systemic Family Constellations & Gestalt Practitioner | Prana Leipzig',
         ],
@@ -252,9 +252,9 @@ export const en: Translations = {
     arbeitsweise: {
       label: 'MY APPROACH',
       title: 'Space for what is.',
-      description1: 'Through exceptionally personal guidance that unites scientific psychology with experiential depth, we create the change you desire.',
-      description2: 'Whether as a former trainer and coach or today as a Gestalt therapist: I\'m your sparring partner. I hold the space and give you the structure you\'ve been missing.',
-      quote: '"What is, may be & what can be, may change."',
+      description1: 'Through exceptionally personal guidance that unites scientific physiological and psychological approaches, we create the change you desire.',
+      description2: 'Whether before as a trainer and coach or today as a Gestalt therapist: I\'m your sparring partner! I hold the space for what has had no space before and bring movement to what has been stuck!',
+      quote: '"What is, may be – and what can be, may change."',
       icons: {
         koerper: 'Body',
         psyche: 'Psyche',
@@ -269,7 +269,7 @@ export const en: Translations = {
     },
     cta: {
       title: 'Curious to learn more?',
-      description: 'Book a free discovery call or simply call to find out if working together makes sense.',
+      description: 'Book a free discovery call or simply give me a ring to find out if working together makes sense.',
       button: 'Get in touch',
     },
   },
