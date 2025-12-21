@@ -127,10 +127,10 @@ const Angebot = () => {
                 {/* Card 1: Einzelbegleitung */}
                 <motion.div variants={cardItem}>
                   <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500 flex flex-col group hover:-translate-y-2 hover:border-[#c5a065]/20 hover:bg-card/95">
-                    {/* Label */}
-                    <p className="text-[#c5a065] text-xs uppercase tracking-widest text-center mb-4">
-                      {t.angebot.konditionen.einzelbegleitung.label}
-                    </p>
+                    {/* Title */}
+                    <h3 className="font-heading text-2xl md:text-3xl text-primary text-center mb-4">
+                      {t.angebot.konditionen.einzelbegleitung.title}
+                    </h3>
                     {/* Duration - same height as priceLabel on right */}
                     <p className="text-muted-foreground text-center mb-2">
                       {t.angebot.konditionen.einzelbegleitung.priceLabel}
@@ -143,10 +143,10 @@ const Angebot = () => {
                         </span>
                       </div>
                     </div>
-                    {/* Title */}
-                    <h3 className="font-heading text-2xl md:text-3xl text-primary text-center mb-4">
-                      {t.angebot.konditionen.einzelbegleitung.title}
-                    </h3>
+                    {/* Label */}
+                    <p className="text-[#c5a065] text-xs uppercase tracking-widest text-center mb-4">
+                      {t.angebot.konditionen.einzelbegleitung.label}
+                    </p>
                     {/* Description */}
                     <p className="text-muted-foreground leading-relaxed text-center mb-8 flex-grow">
                       {t.angebot.konditionen.einzelbegleitung.description}
@@ -162,10 +162,10 @@ const Angebot = () => {
                 {/* Card 2: Intensive Zusammenarbeit */}
                 <motion.div variants={cardItem}>
                   <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500 flex flex-col group hover:-translate-y-2 hover:border-[#c5a065]/20 hover:bg-card/95">
-                    {/* Label */}
-                    <p className="text-[#c5a065] text-xs uppercase tracking-widest text-center mb-4">
-                      {t.angebot.konditionen.intensiv.label}
-                    </p>
+                    {/* Title */}
+                    <h3 className="font-heading text-2xl md:text-3xl text-primary text-center mb-4">
+                      {t.angebot.konditionen.intensiv.title}
+                    </h3>
                     {/* Duration - same height as priceLabel on left */}
                     <p className="text-muted-foreground text-center mb-2">
                       {t.angebot.konditionen.intensiv.priceLabel}
@@ -184,10 +184,10 @@ const Angebot = () => {
                         {t.angebot.konditionen.intensiv.discount}
                       </p>
                     </div>
-                    {/* Title */}
-                    <h3 className="font-heading text-2xl md:text-3xl text-primary text-center mb-4">
-                      {t.angebot.konditionen.intensiv.title}
-                    </h3>
+                    {/* Label */}
+                    <p className="text-[#c5a065] text-xs uppercase tracking-widest text-center mb-4">
+                      {t.angebot.konditionen.intensiv.label}
+                    </p>
                     {/* Description */}
                     <p className="text-muted-foreground leading-relaxed text-center mb-8 flex-grow">
                       {t.angebot.konditionen.intensiv.description}

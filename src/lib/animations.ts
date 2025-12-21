@@ -7,13 +7,13 @@ export const cinematicEase = [0.2, 0.8, 0.2, 1] as const;
 export const fadeUp: Variants = {
   hidden: { 
     opacity: 0, 
-    y: 40 
+    y: 20 
   },
   visible: { 
     opacity: 1, 
     y: 0,
     transition: {
-      duration: 0.9,
+      duration: 0.5,
       ease: cinematicEase,
     }
   }
@@ -78,8 +78,8 @@ export const staggerContainer: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.1,
+      staggerChildren: 0.08,
+      delayChildren: 0.05,
     }
   }
 };
@@ -88,13 +88,13 @@ export const staggerContainer: Variants = {
 export const staggerItem: Variants = {
   hidden: { 
     opacity: 0, 
-    y: 40 
+    y: 20 
   },
   visible: { 
     opacity: 1, 
     y: 0,
     transition: {
-      duration: 0.9,
+      duration: 0.5,
       ease: cinematicEase,
     }
   }
@@ -106,8 +106,8 @@ export const cardStagger: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.2,
+      staggerChildren: 0.1,
+      delayChildren: 0.1,
     }
   }
 };
@@ -116,15 +116,15 @@ export const cardStagger: Variants = {
 export const cardItem: Variants = {
   hidden: { 
     opacity: 0, 
-    y: 50,
-    scale: 0.95
+    y: 25,
+    scale: 0.98
   },
   visible: { 
     opacity: 1, 
     y: 0,
     scale: 1,
     transition: {
-      duration: 0.9,
+      duration: 0.5,
       ease: cinematicEase,
     }
   }
@@ -142,8 +142,8 @@ export const iconStagger: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.4,
+      staggerChildren: 0.1,
+      delayChildren: 0.15,
     }
   }
 };
@@ -152,15 +152,15 @@ export const iconStagger: Variants = {
 export const iconItem: Variants = {
   hidden: { 
     opacity: 0, 
-    y: 30,
-    scale: 0.8
+    y: 15,
+    scale: 0.9
   },
   visible: { 
     opacity: 1, 
     y: 0,
     scale: 1,
     transition: {
-      duration: 0.8,
+      duration: 0.5,
       ease: cinematicEase,
     }
   }

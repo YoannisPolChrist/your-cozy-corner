@@ -154,7 +154,7 @@ const Gestalttherapie = () => {
                       <div className="p-3 md:p-5 rounded-xl border-l-[3px] border-accent bg-primary/[0.04]">
                         <p className="text-foreground/80">
                           <span className="text-accent font-semibold text-base md:text-lg">
-                            {index + 1}. {phase.title}
+                            {phase.title}
                           </span>
                           {phase.subtitle && <span className="text-xs md:text-sm text-foreground/50"> ({phase.subtitle})</span>}
                           <br />
