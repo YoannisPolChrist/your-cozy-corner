@@ -220,7 +220,7 @@ export const fr: Translations = {
     hero: {
       label: 'JOHANNES CHRIST — GESTALT-THÉRAPEUTE, THÉRAPIE PAR LE MOUVEMENT & PRÉVENTION (B.A.), PSYCHOLOGIE (M.SC.) (EN FORMATION)',
       title: 'Vécu, pas seulement appris.',
-      description1: 'Mon parcours a commencé il y a quelques années par ma propre crise existentielle. C\'est alors que j\'ai rencontré pour la première fois la Gestalt-thérapie, qui ne m\'a plus quitté depuis. Par le travail intérieur et extérieur, je me suis battu pour sortir de la dépression avec l\'aide des autres et je me tiens aujourd\'hui plus fort que jamais. À Leipzig puis à Innsbruck, en plus de la Gestalt-thérapie et de nombreuses autres formations, j\'ai obtenu un diplôme en Thérapie par le Mouvement et Prévention (B.A.).',
+      description1: 'Mon parcours a commencé il y a quelques années par ma propre crise existentielle. C\'est alors que j\'ai rencontré pour la première fois la Gestalt-thérapie, qui ne m\'a plus quitté depuis. Par le travail intérieur et extérieur, je me suis battu pour sortir de la dépression avec l\'aide des autres et je me tiens aujourd\'hui plus fort que jamais.\n\nÀ Leipzig puis à Innsbruck, en plus de la Gestalt-thérapie et de nombreuses autres formations, j\'ai obtenu un diplôme en Thérapie par le Mouvement et Prévention (B.A.).',
       description2: 'Dans mon travail aujourd\'hui, je réunis les connaissances de la science actuelle avec celles de la Gestalt. Un Master en Psychologie (M.Sc.) soutient cela encore davantage, pour que tu puisses bénéficier de toute ma puissance et mes connaissances pour toi et ton chemin.',
     },
     qualifikationen: {
