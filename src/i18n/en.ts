@@ -9,9 +9,9 @@ export const en: Translations = {
   },
   
   hero: {
-    title: '',
+    title: 'Change happens in the',
     titleHighlight: 'Here and Now',
-    subtitle: 'Guidance on your path to greater clarity, fulfillment and inner peace – through counseling, modern coaching and humanistic Gestalt Therapy.',
+    subtitle: 'Guidance on your path to greater clarity, fulfillment and inner peace – through humanistic Gestalt therapy, counseling and coaching.',
     cta: 'Book a discovery call',
   },
   

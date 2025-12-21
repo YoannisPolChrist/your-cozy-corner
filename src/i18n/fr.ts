@@ -9,9 +9,9 @@ export const fr: Translations = {
   },
   
   hero: {
-    title: '',
-    titleHighlight: 'Ici et maintenant',
-    subtitle: 'Accompagnement sur ton chemin vers plus de clarté, d\'épanouissement et de paix intérieure – à travers le conseil, le coaching moderne et la Gestalt-thérapie humaniste.',
+    title: 'Le changement se produit',
+    titleHighlight: 'Ici et Maintenant',
+    subtitle: 'Accompagnement sur ton chemin vers plus de clarté, d\'épanouissement et de paix intérieure – à travers la Gestalt-thérapie humaniste, le conseil et le coaching.',
     cta: 'Prendre rendez-vous',
   },
   
