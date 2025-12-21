@@ -127,21 +127,27 @@ const Angebot = () => {
                 {/* Card 1: Einzelbegleitung */}
                 <motion.div variants={cardItem}>
                   <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500 flex flex-col group hover:-translate-y-2 hover:border-[#c5a065]/20 hover:bg-card/95">
-                    <h3 className="font-heading text-2xl md:text-3xl text-primary text-center mb-4">
-                      {t.angebot.konditionen.einzelbegleitung.title}
-                    </h3>
+                    {/* Label */}
+                    <p className="text-[#c5a065] text-xs uppercase tracking-widest text-center mb-4">
+                      {t.angebot.konditionen.einzelbegleitung.label}
+                    </p>
+                    {/* Duration - same height as priceLabel on right */}
+                    <p className="text-muted-foreground text-center mb-2">
+                      {t.angebot.konditionen.einzelbegleitung.priceLabel}
+                    </p>
+                    {/* Price */}
                     <div className="text-center mb-6">
                       <div className="inline-block px-6 py-4 bg-accent/10 rounded-lg border border-accent/20">
                         <span className="font-heading text-2xl text-primary">
                           {t.angebot.konditionen.einzelbegleitung.price}
                         </span>
                       </div>
-                      {t.angebot.konditionen.einzelbegleitung.priceLabel && (
-                        <p className="text-muted-foreground mt-2">
-                          {t.angebot.konditionen.einzelbegleitung.priceLabel}
-                        </p>
-                      )}
                     </div>
+                    {/* Title */}
+                    <h3 className="font-heading text-2xl md:text-3xl text-primary text-center mb-4">
+                      {t.angebot.konditionen.einzelbegleitung.title}
+                    </h3>
+                    {/* Description */}
                     <p className="text-muted-foreground leading-relaxed text-center mb-8 flex-grow">
                       {t.angebot.konditionen.einzelbegleitung.description}
                     </p>
@@ -156,28 +162,33 @@ const Angebot = () => {
                 {/* Card 2: Intensive Zusammenarbeit */}
                 <motion.div variants={cardItem}>
                   <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500 flex flex-col group hover:-translate-y-2 hover:border-[#c5a065]/20 hover:bg-card/95">
+                    {/* Label */}
+                    <p className="text-[#c5a065] text-xs uppercase tracking-widest text-center mb-4">
+                      {t.angebot.konditionen.intensiv.label}
+                    </p>
+                    {/* Duration - same height as priceLabel on left */}
+                    <p className="text-muted-foreground text-center mb-2">
+                      {t.angebot.konditionen.intensiv.priceLabel}
+                    </p>
+                    {/* Price with discount */}
                     <div className="text-center mb-6">
-                      <span className="font-heading text-2xl md:text-3xl text-primary">
-                        {t.angebot.konditionen.intensiv.price}
-                      </span>
-                      <p className="text-muted-foreground mt-2">
-                        {t.angebot.konditionen.intensiv.priceLabel}
+                      <div className="inline-block px-6 py-4 bg-accent/10 rounded-lg border border-accent/20">
+                        <span className="font-heading text-2xl text-primary">
+                          {t.angebot.konditionen.intensiv.discountPrice}
+                        </span>
+                        <span className="text-muted-foreground line-through ml-2 text-lg">
+                          {t.angebot.konditionen.einzelbegleitung.price}
+                        </span>
+                      </div>
+                      <p className="text-accent text-sm mt-2">
+                        {t.angebot.konditionen.intensiv.discount}
                       </p>
-                      {t.angebot.konditionen.intensiv.discount && (
-                        <div className="mt-4 p-3 bg-accent/10 rounded-lg">
-                          <p className="text-accent font-medium text-sm">{t.angebot.konditionen.intensiv.discount}</p>
-                          {t.angebot.konditionen.intensiv.discountPrice && (
-                            <p className="text-muted-foreground text-2xl font-heading">
-                              <span className="line-through">{t.angebot.konditionen.einzelbegleitung.price}</span>
-                              {' '}{t.angebot.konditionen.intensiv.discountPrice}
-                            </p>
-                          )}
-                        </div>
-                      )}
                     </div>
-                    <h3 className="font-heading text-2xl text-primary text-center mb-4">
+                    {/* Title */}
+                    <h3 className="font-heading text-2xl md:text-3xl text-primary text-center mb-4">
                       {t.angebot.konditionen.intensiv.title}
                     </h3>
+                    {/* Description */}
                     <p className="text-muted-foreground leading-relaxed text-center mb-8 flex-grow">
                       {t.angebot.konditionen.intensiv.description}
                     </p>
