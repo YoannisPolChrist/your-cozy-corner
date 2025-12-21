@@ -17,7 +17,7 @@ export const fr: Translations = {
   
   meet: {
     title: 'Le changement arrive –',
-    description: 'Idéalement dans un cadre qui soutient et offre de la sécurité. Que ce ne soit généralement pas le cas est bien sûr compréhensible. En tant que Gestalt-thérapeute, coach et M.Sc. en Psychologie (en formation), je t\'offre par ma présence, ma compétence et ma chaleur, l\'espace nécessaire pour que le changement que tu souhaites puisse se produire !',
+    description: 'Idéalement dans un cadre qui soutient et offre de la sécurité. Que ce cadre soit souvent absent est bien sûr compréhensible. En tant que Gestalt-thérapeute, coach et M.Sc. en Psychologie (en formation), je t\'offre – par ma présence, ma compétence et une touche d\'humour – l\'espace nécessaire pour que le changement que tu souhaites puisse se produire !',
   },
   
   painPoints: {
@@ -25,8 +25,8 @@ export const fr: Translations = {
     subtitle: 'Souvent, nous sentons que quelque chose manque, mais nous n\'arrivons pas vraiment à mettre le doigt dessus.',
     items: [
       {
-        title: 'Faire du sur-place',
-        description: 'Le sentiment de faire du sur-place alors que tu veux avancer. Les anciens schémas se répètent. La frustration et la stagnation sont inévitables.',
+        title: 'Tourner en rond',
+        description: 'Le sentiment de faire du sur-place alors que tu veux avancer. Les anciens schémas se répètent. La frustration et la stagnation deviennent inévitables.',
       },
       {
         title: 'Distance et proximité',
@@ -69,69 +69,69 @@ export const fr: Translations = {
   },
   
   aboutPreview: {
-    label: 'Votre accompagnateur',
+    label: 'Ton accompagnateur',
     title: 'À propos de moi',
-    description1: 'Je suis Johannes Christ, Gestalt-thérapeute, coach et M.Sc. en Psychologie (en formation). Mon travail repose sur une attitude de respect et de conscience. Dans cette conscience, le changement se produit. C\'est notre point de départ.',
+    description1: 'Je suis Johannes Christ, Gestalt-thérapeute, coach et M.Sc. en Psychologie (en formation). Mon travail repose sur une attitude de respect et d\'awareness. Dans cette awareness, le changement se produit. C\'est notre point de départ.',
     description2: 'Fort de nombreuses années d\'expérience en Gestalt-thérapie et en coaching, je t\'accompagne sur le chemin vers plus de clarté, de bien-être et d\'épanouissement.',
     link: 'En savoir plus sur moi',
   },
   
   cta: {
     title: 'Prêt pour la prochaine étape ?',
-    description: 'Réserve un appel découverte gratuit ou appelle simplement pour découvrir si une collaboration fait sens.',
+    description: 'Réserve un appel découverte gratuit ou appelle-moi simplement pour découvrir si une collaboration fait sens.',
     button: 'Me contacter',
   },
   
   gestalttherapie: {
     scrollTelling: {
       title: 'Qu\'est-ce que la Gestalt-thérapie ?',
-      intro: 'La Gestalt-thérapie est une approche humaniste et relationnelle qui repose sur trois piliers essentiels :',
+      intro: 'La Gestalt-thérapie est une approche thérapeutique humaniste qui repose sur trois piliers essentiels :',
       pillars: [
         {
-          title: '1. L\'awareness',
-          subtitle: 'La conscience immédiate',
-          description: 'Percevoir consciemment le corps et les émotions. Être ancré dans l\'ici et maintenant.',
+          title: '1. L\'Awareness',
+          subtitle: 'Ressentir plutôt que penser',
+          description: 'Percevoir consciemment le corps et les émotions. Être ancré dans l\'instant présent.',
         },
         {
-          title: '2. La globalité',
-          subtitle: 'Corps, émotions, pensées & relations',
+          title: '2. La Globalité',
+          subtitle: 'Corps, âme, esprit & environnement',
           description: 'Considérer tous les aspects de l\'être humain comme une unité indissociable.',
         },
         {
-          title: '3. La relation',
-          subtitle: 'Une rencontre authentique',
+          title: '3. Contact & Dialogue',
+          subtitle: 'Rencontre authentique d\'égal à égal',
           description: 'La guérison se produit dans le dialogue authentique entre le thérapeute et le client.',
         },
       ],
-      summary: 'La Gestalt-thérapie permet de prendre conscience de notre manière d\'être en relation avec notre environnement et d\'ouvrir la possibilité de remettre du mouvement là où quelque chose semblait figé.',
+      summary: 'La Gestalt-thérapie signifie être pleinement présent dans l\'instant et affiner sa propre perception. Par l\'expérience de soi consciente, les anciens schémas sont reconnus et transformés.',
     },
     offeneGestalt: {
       title: 'Gestalt inachevée',
-      description: 'Une Gestalt inachevée est une expérience non terminée – un conflit non résolu ou une émotion refoulée qui continue d\'influencer notre présent.',
-      tagline: 'En thérapie, nous fermons ces Gestalts.',
+      description: 'Une Gestalt inachevée est une expérience non terminée – un conflit non résolu ou une émotion refoulée.',
+      tagline: 'En thérapie, nous fermons ces Gestalts ouvertes.',
     },
     kontaktunterbrechungen: {
-      title: 'Mécanismes de régulation du contact',
-      description: 'Introjection, projection, rétroflexion, déflection – des fonctionnements autrefois adaptés qui peuvent devenir sources de souffrance.',
-      tagline: 'Nous apprenons à les reconnaître et à retrouver de la mobilité.',
+      title: 'Interruptions du contact',
+      description: 'Les interruptions du contact sont les mécanismes de protection qui nous ont autrefois aidés mais qui maintenant nous freinent.',
+      tagline: 'Nous apprenons à les reconnaître et à les libérer.',
     },
     geschlosseneGestalt: {
       title: 'Gestalt achevée',
-      description: 'La guérison survient lorsque la personne s\'autorise à être pleinement ce qu\'elle est. Une Gestalt achevée apporte la paix intérieure et permet de se sentir à nouveau entier.',
+      description: 'La guérison survient lorsque nous intégrons l\'inachevé. Une Gestalt achevée apporte la paix intérieure et permet de se sentir à nouveau « entier ».',
       tagline: 'L\'épanouissement, la paix et le calme reviennent.',
     },
     kontaktzyklus: {
       title: 'Le cycle du contact',
-      intro: 'L\'expérience relationnelle se déploie en plusieurs phases, du pré-contact au retrait :',
+      intro: 'Le cycle du contact décrit le rythme naturel du besoin et de l\'action – en six phases :',
       phases: [
-        { title: '1. Sensation', subtitle: 'Corps', description: 'Émergence d\'un besoin intérieur' },
-        { title: '2. Conscience', subtitle: 'Awareness', description: 'Prise de conscience et clarification' },
-        { title: '3. Mobilisation', subtitle: 'Énergie', description: 'Développer l\'énergie pour agir' },
-        { title: '4. Plein contact', subtitle: 'Action', description: 'Mise en action et expérience complète' },
-        { title: '5. Assimilation', subtitle: 'Intégration', description: 'Traitement et intégration de l\'expérience' },
-        { title: '6. Retrait', subtitle: 'Repos', description: 'Régénération et retour à soi' },
+        { title: '1. Sensation', subtitle: 'Corps', description: 'Percevoir un besoin intérieur' },
+        { title: '2. Awareness', subtitle: 'Esprit', description: 'Prise de conscience et insight' },
+        { title: '3. Mobilisation', subtitle: 'Action', description: 'Développer l\'énergie et la motivation' },
+        { title: '4. Contact', subtitle: '', description: 'Expérience complète dans l\'instant' },
+        { title: '5. Intégration', subtitle: 'Assimilation', description: 'Traitement et intégration' },
+        { title: '6. Retrait', subtitle: 'Repos', description: 'Régénération et réorientation' },
       ],
-      summary: 'La Gestalt aide à repérer les interruptions éventuelles dans ce cycle et à remettre du mouvement dans le présent.',
+      summary: 'Les interruptions de ce cycle peuvent entraîner des difficultés psychologiques et physiques. En thérapie, nous travaillons à les reconnaître et à explorer de nouvelles façons d\'être.',
     },
     ressourcen: {
       title: 'Ressources & Soutien',
@@ -144,32 +144,32 @@ export const fr: Translations = {
     },
     cta: {
       title: 'Curieux d\'en savoir plus ?',
-      description: 'Réserve un appel découverte gratuit ou appelle simplement pour découvrir si une collaboration fait sens.',
+      description: 'Réserve un appel découverte gratuit ou appelle-moi simplement pour découvrir si une collaboration fait sens.',
       button: 'Me contacter',
     },
   },
   
   angebot: {
-    title: 'Mes services',
+    title: 'Services',
     services: [
       {
         title: 'Gestalt-thérapie intégrative',
         subline: 'QUAND COMPRENDRE NE SUFFIT PAS',
-        description: 'Nous dissolvons les anciens schémas là où ils sont nés : dans le contact et dans le corps. Au lieu d\'années à « en parler », nous utilisons l\'ici et maintenant pour remettre du mouvement là où quelque chose semblait figé.',
+        description: 'Nous dissolvons les anciens schémas là où ils sont nés : dans le contact et dans le corps. Au lieu d\'années à « en parler », nous utilisons l\'ici et maintenant pour rendre les blocages émotionnels tangibles et transformables.',
       },
       {
         title: 'Coaching Holomotion',
         subline: 'CLARTÉ PAR L\'INTELLIGENCE CORPORELLE',
-        description: 'La stratégie rencontre l\'intuition. Nous combinons la planification cognitive avec la sagesse de ton corps. Pour des décisions qui se sentent justes au plus profond de toi.',
+        description: 'La stratégie rencontre l\'intuition. Nous combinons la planification cognitive avec la sagesse de ton corps. Pour des décisions qui sonnent non seulement logiques mais se sentent aussi justes au plus profond de toi.',
       },
       {
         title: 'Diagnostic psychologique',
-        subline: 'PRÉCISION ET CLARTÉ',
-        description: 'Sur la base des normes scientifiques actuelles (M.Sc. Psychologie en formation), je propose une évaluation fondée. Nous classons les symptômes et créons une feuille de route adaptée à ta situation.',
+        subline: 'PRÉCISION PLUTÔT QU\'INTUITION',
+        description: 'Sur la base de la Gestalt-thérapie et des pratiques scientifiques, nous effectuons un bilan approfondi. Cela peut inclure des analyses de sang, de mouvement ou nutritionnelles selon les besoins.',
       },
     ],
     checkup: {
-      label: 'L\'ÉTAT DES LIEUX',
+      label: 'LE BILAN INITIAL',
       title: 'Nous ne pouvons changer que ce que nous comprenons.',
       features: [
         { title: 'Signes vitaux & Corps', description: 'Nous examinons les valeurs sanguines, le sommeil et les ressources pour exclure les causes physiques des problèmes psychologiques.' },
@@ -201,8 +201,8 @@ export const fr: Translations = {
     formate: {
       title: 'Formats flexibles',
       online: {
-        title: 'En visioconférence',
-        description: 'Séances à distance pour les personnes éloignées géographiquement ou en déplacement.',
+        title: 'En ligne (Zoom)',
+        description: 'Indépendant du lieu pour les clients du monde entier.',
       },
       praesenz: {
         title: 'En présentiel',
@@ -211,17 +211,17 @@ export const fr: Translations = {
     },
     cta: {
       title: 'Prêt pour la prochaine étape ?',
-      description: 'Contacte-moi pour un premier entretien gratuit ou pour toute question. Je me réjouis de faire ta connaissance.',
+      description: 'Réserve un appel découverte gratuit ou appelle-moi simplement pour découvrir si une collaboration fait sens.',
       button: 'Me contacter',
     },
   },
   
   ueberMich: {
     hero: {
-      label: 'JOHANNES CHRIST — GESTALT-THÉRAPEUTE, THÉRAPIE PAR LE MOUVEMENT ET PRÉVENTION (B.A.), PSYCHOLOGIE (M.SC.) (EN FORMATION)',
-      title: 'Fondé, par l\'expérience.',
-      description1: 'Salut, je suis Johannes. Mon parcours a commencé il y a quelques années par ma propre crise existentielle avec la Gestalt-thérapie. Par le travail intérieur et extérieur, je me suis battu pour sortir de mon propre trou. En chemin, j\'ai passé plusieurs années à Leipzig et Innsbruck, période durant laquelle j\'ai obtenu un diplôme dual en Thérapie par le Mouvement et Prévention (B.A.). Compréhension du mouvement et du corps, humaine et scientifique.',
-      description2: 'Aujourd\'hui, je combine ces mondes. En tant que Gestalt-thérapeute avec un Master en Psychologie (M.Sc.) en cours, j\'accompagne les gens non seulement à travers des processus cognitifs, mais à travers un travail de transformation profonde. Sur ce chemin, ma formation de facilitateur du Voyage du Héros selon Paul Rebillot m\'a montré l\'importance des rituels et de la structure pour ces transitions.',
+      label: 'JOHANNES CHRIST — GESTALT-THÉRAPEUTE, THÉRAPIE PAR LE MOUVEMENT & PRÉVENTION (B.A.), PSYCHOLOGIE (M.SC.) (EN FORMATION)',
+      title: 'Vécu, pas seulement appris.',
+      description1: 'Mon parcours a commencé il y a quelques années par ma propre crise existentielle. C\'est alors que j\'ai rencontré pour la première fois la Gestalt-thérapie, qui ne m\'a plus quitté depuis. Par le travail intérieur et extérieur, je me suis battu pour sortir de la dépression avec l\'aide des autres et je me tiens aujourd\'hui plus fort que jamais. À Leipzig puis à Innsbruck, en plus de la Gestalt-thérapie et de nombreuses autres formations, j\'ai obtenu un diplôme en Thérapie par le Mouvement et Prévention (B.A.).',
+      description2: 'Dans mon travail aujourd\'hui, je réunis les connaissances de la science actuelle avec celles de la Gestalt. Un Master en Psychologie (M.Sc.) soutient cela encore davantage, pour que tu puisses bénéficier de toute ma puissance et mes connaissances pour toi et ton chemin.',
     },
     qualifikationen: {
       title: 'Formation & Qualifications',
@@ -235,7 +235,7 @@ export const fr: Translations = {
       therapeutisch: {
         title: 'Formation thérapeutique',
         items: [
-          'Gestalt-thérapeute | Formation intensive de 5 ans à l\'Institut de Gestalt et d\'Expérience, Wasserburg & Prana Leipzig',
+          'Gestalt-thérapeute | Formation intensive de 7 ans à l\'Institut de Gestalt et d\'Expérience, Institut Heldenweg & Prana Leipzig',
           'Facilitateur du Voyage du Héros (méthode Paul Rebillot) | Institut Heldenweg – Animation de travail Gestalt structuré et processus de groupe',
           'Constellations Familiales Systémiques & Praticien Gestalt | Prana Leipzig',
         ],
@@ -252,9 +252,9 @@ export const fr: Translations = {
     arbeitsweise: {
       label: 'MON APPROCHE',
       title: 'Espace pour ce qui est.',
-      description1: 'Grâce à un accompagnement exceptionnellement personnel qui unit la psychologie scientifique à la profondeur expérientielle, nous créons le changement que tu désires.',
-      description2: 'Que ce soit avant en tant qu\'entraîneur et coach ou aujourd\'hui en tant que Gestalt-thérapeute : je suis ton partenaire d\'entraînement. Je maintiens l\'espace et te donne la structure qui t\'a manquée.',
-      quote: '« Ce qui est, peut être & ce qui peut être, peut changer. »',
+      description1: 'Grâce à un accompagnement exceptionnellement personnel qui unit les approches scientifiques physiologiques et psychologiques, nous créons le changement que tu désires.',
+      description2: 'Qu\'il s\'agisse d\'avant en tant qu\'entraîneur et coach ou aujourd\'hui en tant que Gestalt-thérapeute : je suis ton partenaire d\'entraînement ! Je maintiens l\'espace pour ce qui n\'a jamais eu d\'espace et je mets en mouvement ce qui était bloqué !',
+      quote: '« Ce qui est, peut être – et ce qui peut être, peut changer. »',
       icons: {
         koerper: 'Corps',
         psyche: 'Psyché',
@@ -269,7 +269,7 @@ export const fr: Translations = {
     },
     cta: {
       title: 'Curieux d\'en savoir plus ?',
-      description: 'Réserve un appel découverte gratuit ou appelle simplement pour découvrir si une collaboration fait sens.',
+      description: 'Réserve un appel découverte gratuit ou appelle-moi simplement pour découvrir si une collaboration fait sens.',
       button: 'Me contacter',
     },
   },
