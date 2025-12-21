@@ -61,9 +61,9 @@ export const fr: Translations = {
   
   gestaltSection: {
     label: 'L\'approche thérapeutique',
-    title: 'Qu\'est-ce que la',
-    titleHighlight: 'Gestalt-thérapie ?',
-    description: 'La Gestalt-thérapie est une approche humaniste et relationnelle qui s\'intéresse à la manière dont nous vivons nos expériences, ici et maintenant, dans notre corps, nos émotions, nos pensées et nos relations. Elle permet de prendre conscience de ce que nous souhaitons transformer.',
+    title: 'Gestalt-thérapie',
+    titleHighlight: '',
+    description: 'La Gestalt-thérapie constitue la base de mon travail. C\'est une approche thérapeutique humaniste qui se concentre sur l\'expérience consciente dans l\'ici et maintenant. Au lieu de parler des problèmes, nous amenons le cœur de ce qui te retient dans l\'expérience. Le changement se produit en profondeur, de manière holistique et durable.',
     link: 'En savoir plus sur la Gestalt-thérapie',
     quote: 'Être pleinement ici, pleinement maintenant – le reste suivra.',
   },

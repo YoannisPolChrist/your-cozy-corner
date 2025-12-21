@@ -61,9 +61,9 @@ export const en: Translations = {
   
   gestaltSection: {
     label: 'The therapeutic approach',
-    title: 'What is',
-    titleHighlight: 'Gestalt Therapy?',
-    description: 'Gestalt Therapy is a humanistic therapeutic approach that focuses on conscious experience in the here and now. Instead of just talking about problems, we explore together how you perceive and shape your world.',
+    title: 'Gestalt Therapy',
+    titleHighlight: '',
+    description: 'Gestalt Therapy forms the foundation of my work. It is a humanistic therapeutic approach that focuses on conscious experience in the here and now. Instead of talking about problems, we bring the core of what holds you back into experience. Change happens deeply, holistically and sustainably.',
     link: 'Learn more about Gestalt Therapy',
     quote: 'Be fully here, fully now – the rest will follow.',
   },
