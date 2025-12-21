@@ -41,7 +41,7 @@ export const GestaltScrollTelling = () => {
               {t.gestalttherapie.scrollTelling.pillars.map((pillar, index) => <AnimatedItem key={index}>
                   <div className="p-4 md:p-6 rounded-xl border-l-[3px] border-accent bg-primary/[0.04] transition-all duration-300 md:hover:-translate-y-1 md:hover:shadow-lg cursor-default">
                     <h3 className="text-accent font-semibold text-lg md:text-xl mb-2 md:mb-3">
-                      {index + 1}. {pillar.title}
+                      {pillar.title}
                     </h3>
                     <p className="text-xs md:text-sm text-foreground/60 mb-1 md:mb-2 italic">
                       {pillar.subtitle}
