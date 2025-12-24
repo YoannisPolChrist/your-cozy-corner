@@ -7,6 +7,12 @@ import { motion } from "framer-motion";
 import { Footer } from "@/components/Footer";
 import { fadeUp, staggerContainer, cardStagger, cardItem, iconStagger, iconItem, viewportSettings } from "@/lib/animations";
 import { useLanguage } from "@/i18n";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const Angebot = () => {
   const { t, getLocalizedPath } = useLanguage();
@@ -258,6 +264,71 @@ const Angebot = () => {
                   </div>
                 </motion.div>
               </motion.div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-28 md:py-36 bg-background">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportSettings}
+              variants={staggerContainer}
+              className="max-w-3xl mx-auto"
+            >
+              <motion.h2
+                variants={fadeUp}
+                className="font-heading text-[2.25rem] md:text-[3.1875rem] text-primary text-center mb-16"
+              >
+                {t.angebot.faq.title}
+              </motion.h2>
+
+              <motion.div variants={fadeUp}>
+                <Accordion type="single" collapsible className="w-full space-y-4">
+                  {t.angebot.faq.items.map((item, index) => (
+                    <AccordionItem
+                      key={index}
+                      value={`item-${index}`}
+                      className="bg-off-white border border-border/50 rounded-xl px-6 data-[state=open]:shadow-soft"
+                    >
+                      <AccordionTrigger className="text-left font-heading text-lg text-primary hover:no-underline py-6">
+                        {item.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                        {item.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="py-20 md:py-28 bg-secondary/30">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportSettings}
+              variants={staggerContainer}
+              className="max-w-3xl mx-auto text-center"
+            >
+              <motion.h2
+                variants={fadeUp}
+                className="font-heading text-2xl md:text-3xl text-primary mb-6"
+              >
+                {t.angebot.process.title}
+              </motion.h2>
+              <motion.p
+                variants={fadeUp}
+                className="text-muted-foreground text-lg leading-relaxed"
+              >
+                {t.angebot.process.description}
+              </motion.p>
             </motion.div>
           </div>
         </section>

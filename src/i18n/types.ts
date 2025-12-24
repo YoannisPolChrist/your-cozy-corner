@@ -136,6 +136,10 @@ export interface Translations {
   // Angebot Page
   angebot: {
     title: string;
+    process: {
+      title: string;
+      description: string;
+    };
     services: Array<{
       title: string;
       subline: string;
@@ -181,6 +185,13 @@ export interface Translations {
         title: string;
         description: string;
       };
+    };
+    faq: {
+      title: string;
+      items: Array<{
+        question: string;
+        answer: string;
+      }>;
     };
     cta: {
       title: string;

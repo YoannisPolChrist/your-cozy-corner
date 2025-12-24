@@ -61,9 +61,9 @@ export const de: Translations = {
   
   gestaltSection: {
     label: 'Der therapeutische Ansatz',
-    title: 'Gestalttherapie',
+    title: 'Meine Mission',
     titleHighlight: '',
-    description: 'Die Gestalttherapie bietet die Basis meiner Arbeit. Sie ist ein humanistischer Therapieansatz, der sich auf das bewusste Erleben im Hier und Jetzt konzentriert. Statt über Probleme zu sprechen, bringen wir den Kern dessen, was dich zurückhält, ins Erleben. Veränderung geschieht dadurch tiefgreifend, ganzheitlich und nachhaltig.',
+    description: 'Veränderung braucht mehr als Verstehen. Echtes Wachstum entsteht dort, wo Gefühl und Verstand sich verweben. In meiner Arbeit geht es darum, Punkte zu berühren, die reines Sprechen nicht erreicht – damit Veränderung nicht nur logisch erscheint, sondern sich auch richtig anfühlt. Denn nur was Sinn ergibt, bewegt uns wirklich.',
     link: 'Mehr über Gestalttherapie erfahren',
     quote: 'Sei ganz hier, ganz jetzt – der Rest folgt von selbst.',
   },
@@ -171,6 +171,10 @@ export const de: Translations = {
   
   angebot: {
     title: 'Das Angebot',
+    process: {
+      title: 'Der Prozess',
+      description: 'Wir starten mit deinen Bedürfnissen und dem, was dich frustriert. Von dort aus entscheiden wir gemeinsam, welche Tools (Diagnostik, Coaching oder Therapie) dich am besten an dein Ziel bringen.',
+    },
     services: [
       {
         title: 'Integrative Gestalttherapie',
@@ -229,6 +233,39 @@ export const de: Translations = {
         title: 'Präsenz',
         description: 'In Toulouse.',
       },
+    },
+    faq: {
+      title: 'Häufige Fragen',
+      items: [
+        {
+          question: 'Wie läuft eine Session konkret ab?',
+          answer: 'Wir arbeiten im Hier und Jetzt. Es ist ein dynamischer Prozess aus Gespräch und Erleben, ganz ohne starres Abfragen.',
+        },
+        {
+          question: 'Warum dieser Mix?',
+          answer: 'Die Psychologie (M.Sc.) gibt uns das Fundament und die Daten (Diagnostik), die Gestalttherapie gibt uns die emotionale Tiefe für echte Veränderung.',
+        },
+        {
+          question: 'Bezahlt die Krankenkasse die Sessions?',
+          answer: 'Als Psychologe (M.Sc.) und Gestalttherapeut arbeite ich in privater Praxis. Das bedeutet in der Regel, dass die Kosten von den gesetzlichen Krankenkassen nicht übernommen werden. Private Zusatzversicherungen oder private Kassen erstatten je nach Tarif einen Teil. Der Vorteil für dich: Wir können sofort ohne bürokratische Hürden starten und die Dauer sowie Frequenz der Sitzungen flexibel an deinen Prozess anpassen.',
+        },
+        {
+          question: 'Bietest du auch Online-Sitzungen an?',
+          answer: 'Ja. Auch wenn die Gestalttherapie stark von der Präsenz im Raum lebt, lässt sich die Methode sehr effektiv online umsetzen. Wir nutzen dann verstärkt den Fokus auf deine aktuelle Wahrnehmung vor dem Bildschirm. Das ist besonders praktisch, wenn du viel unterwegs bist oder nicht in Toulouse wohnst.',
+        },
+        {
+          question: 'Was genau bringen mir die „Daten" und Vitalwerte in der Therapie?',
+          answer: 'Daten (wie Schlafqualität, Stresslevel oder HRV) sind für mich kein Selbstzweck, sondern eine objektive „Landkarte". Sie helfen uns zu sehen, wie dein Körper auf Belastungen reagiert, auch wenn der Kopf es vielleicht noch ignoriert. Es ist die perfekte Ergänzung zur emotionalen Arbeit: Wir sehen schwarz auf weiß, wo das System unter Spannung steht, und nutzen die Gestalttherapie, um diese Spannung im Inneren zu lösen.',
+        },
+        {
+          question: 'In welchen Sprachen können wir arbeiten?',
+          answer: 'Ich arbeite fließend auf Deutsch, Englisch und Französisch. Es ist oft sehr spannend zu sehen, wie sich das emotionale Erleben verändert, wenn man in der Muttersprache oder einer Wahlsprache spricht. Wir nutzen die Sprache, in der du dich am sichersten fühlst, um an den Kern deiner Themen zu kommen.',
+        },
+        {
+          question: 'Wie lange dauert eine Sitzung?',
+          answer: 'Eine Standard-Sitzung dauert in der Regel 50 Minuten. Bei Paaren oder intensiveren Prozessen können wir nach Absprache auch längere Einheiten (90 Min.) vereinbaren. Wichtig ist, dass wir genug Zeit haben, um vom „Berichten" ins „Erleben" zu kommen.',
+        },
+      ],
     },
     cta: {
       title: 'Bereit für den nächsten Schritt?',
