@@ -102,6 +102,14 @@ const Angebot = () => {
                   );
                 })}
               </motion.div>
+
+              {/* Diagnostic Integration Text */}
+              <motion.p
+                variants={fadeUp}
+                className="text-primary-foreground/90 text-center max-w-3xl mx-auto mt-12 text-lg italic leading-relaxed"
+              >
+                {t.angebot.checkup.diagnosticIntegration}
+              </motion.p>
             </motion.div>
           </div>
         </section>

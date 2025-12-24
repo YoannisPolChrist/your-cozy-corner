@@ -25,16 +25,16 @@ export const fr: Translations = {
     subtitle: 'Souvent, nous sentons que quelque chose manque, mais nous n\'arrivons pas vraiment à mettre le doigt dessus.',
     items: [
       {
-        title: 'Tourner en rond',
-        description: 'Le sentiment de faire du sur-place alors que tu veux avancer. Les anciens schémas se répètent. La frustration et la stagnation deviennent inévitables.',
+        title: 'Burnout & Perte de sens',
+        description: 'Quand l\'épuisement est plus profond que la fatigue. Le système fonctionne encore, mais le sens s\'est perdu.',
       },
       {
-        title: 'Distance et proximité',
-        description: 'Les autres semblent si loin, ou la proximité devient étouffante. Les conversations tournent en rond.',
+        title: 'Phases de transition',
+        description: 'Quand le nouveau fait encore peur et que l\'ancien ne convient plus. L\'ancienne boussole ne fonctionne plus, mais le nouveau chemin reste dans le brouillard.',
       },
       {
-        title: 'Brouillard d\'incertitude',
-        description: 'Le désir de clarté est là, mais le prochain pas reste caché dans le brouillard.',
+        title: 'Couples & Communication',
+        description: 'Quand les conversations tournent en rond et que la vraie connexion manque. S\'éloigner des schémas figés vers une rencontre authentique.',
       },
     ],
   },
@@ -71,15 +71,35 @@ export const fr: Translations = {
   aboutPreview: {
     label: 'Ton accompagnateur',
     title: 'À propos de moi',
-    description1: 'Je suis Johannes Christ, Gestalt-thérapeute, coach et M.Sc. en Psychologie (en formation). Mon travail repose sur une attitude de respect et d\'awareness. Dans cette awareness, le changement se produit. C\'est notre point de départ.',
-    description2: 'Fort de nombreuses années d\'expérience en Gestalt-thérapie et en coaching, je t\'accompagne sur le chemin vers plus de clarté, de bien-être et d\'épanouissement.',
+    whyTitle: 'Pourquoi je fais ce que je fais',
+    whyDescription1: 'Dans mon propre parcours, j\'ai clairement reconnu une chose : nous pouvons parler de problèmes pendant des années sans que rien ne bouge vraiment. L\'esprit comprend tout, mais le point où le vrai changement commence n\'est souvent pas touché.',
+    whyDescription2: 'Ce qui me fascine dans la Gestalt-thérapie encore aujourd\'hui, et ce que je vis comme si profondément efficace, c\'est cette transition de la simple parole au vécu global. Il y a un niveau qui va plus profond que la logique. Quand nous tissons vraiment ensemble l\'esprit et le ressenti, une expérience émerge qui est durable. Le changement ne se produit alors plus par l\'effort, mais parce qu\'il fait enfin sens. Car tant que quelque chose n\'a pas de sens pour nous, nous ne bougeons pas.',
     link: 'En savoir plus sur moi',
+  },
+  
+  focusAreas: {
+    title: 'Axes de mon accompagnement',
+    items: [
+      {
+        title: 'Prévention du burnout & Épuisement',
+        description: 'Quand le système ne fait que fonctionner, mais que le sens s\'est perdu. Nous travaillons à rendre la connexion à tes besoins à nouveau perceptible.',
+      },
+      {
+        title: 'Personnes en transition',
+        description: 'Quand l\'ancienne boussole ne fonctionne plus, mais que le nouveau chemin est encore dans le brouillard. Nous trouvons la clarté dans le vécu, pas seulement dans la réflexion.',
+      },
+      {
+        title: 'Relations & Communication',
+        description: 'S\'éloigner des schémas figés vers une rencontre authentique. Nous regardons ce qui se passe entre les personnes dans l\'ici et maintenant.',
+      },
+    ],
   },
   
   cta: {
     title: 'Prêt pour la prochaine étape ?',
     description: 'Réserve un appel découverte gratuit ou appelle-moi simplement pour découvrir si une collaboration fait sens.',
     button: 'Me contacter',
+    buttonAlt: 'Explorons ensemble ce qui fait sens pour toi',
   },
   
   gestalttherapie: {
@@ -176,6 +196,7 @@ export const fr: Translations = {
         { title: 'Suivi & Schémas', description: 'Nous évaluons l\'état actuel de tes routines. Où perds-tu de l\'énergie ? Nous rendons l\'invisible mesurable.' },
         { title: 'Stratégie', description: 'Sur la base des données, nous créons ta feuille de route individuelle qui va au-delà de la Gestalt-thérapie, c\'est-à-dire ton processus. Le progrès n\'est donc pas un hasard.' },
       ],
+      diagnosticIntegration: 'Les données nous donnent la carte, mais parcourir le chemin est une expérience émotionnelle. J\'utilise un diagnostic solide comme fondement pour aller plus profond là où la simple parole s\'arrête.',
     },
     konditionen: {
       title: 'Tarifs & Collaboration',

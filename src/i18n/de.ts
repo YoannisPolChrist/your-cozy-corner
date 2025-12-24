@@ -25,16 +25,16 @@ export const de: Translations = {
     subtitle: 'Oft spüren wir, dass etwas fehlt, aber so richtig bekommen wir den Finger nicht darauf.',
     items: [
       {
-        title: 'Auf der Stelle treten',
-        description: 'Das Gefühl, auf der Stelle zu treten, obwohl du dich bewegen willst. Alte Muster wiederholen sich. Frustration und Stillstand sind vorprogrammiert.',
+        title: 'Burnout & Sinnverlust',
+        description: 'Wenn die Erschöpfung tiefer sitzt als Müdigkeit. Das System funktioniert noch, aber der Sinn ist verloren gegangen.',
       },
       {
-        title: 'Distanz und Nähe',
-        description: 'Die anderen wirken so weit weg, oder die Nähe fühlt sich erdrückend an. Gespräche drehen sich im Kreis.',
+        title: 'Umbruchphasen',
+        description: 'Wenn das Neue noch Angst macht und das Alte nicht mehr passt. Der alte Kompass funktioniert nicht mehr, aber der neue Weg liegt noch im Nebel.',
       },
       {
-        title: 'Nebel der Unklarheit',
-        description: 'Der Wunsch nach Klarheit ist da, aber der nächste Schritt bleibt im Nebel verborgen.',
+        title: 'Paare & Kommunikation',
+        description: 'Wenn Gespräche im Kreis laufen und echte Begegnung fehlt. Weg von festgefahrenen Mustern hin zu echter Begegnung.',
       },
     ],
   },
@@ -71,15 +71,35 @@ export const de: Translations = {
   aboutPreview: {
     label: 'Ihr Begleiter',
     title: 'Über mich',
-    description1: 'Ich bin Johannes Christ, Gestalttherapeut, Coach und M.Sc. Psychologie (i.A.). Meine Arbeit basiert auf einer Haltung von Achtung und Gewahrsein. In diesem Gewahrsein geschieht die Veränderung. Dies ist unser Ansatzpunkt.',
-    description2: 'Mit langjähriger Erfahrung in Gestalttherapie und Coaching begleite ich dich auf dem Weg zu mehr Klarheit, Wohlbefinden und Erfüllung.',
+    whyTitle: 'Warum ich tue, was ich tue',
+    whyDescription1: 'In meiner eigenen Reise habe ich eines klar erkannt: Wir können jahrelang über Probleme reden, ohne dass sich wirklich etwas bewegt. Der Kopf versteht alles, aber der Punkt, an dem echte Veränderung beginnt, wird oft nicht berührt.',
+    whyDescription2: 'Was mich an der Gestalttherapie bis heute fasziniert und was ich als so "krass" effektiv erlebe, ist dieser Übergang vom reinen Sprechen zum ganzheitlichen Erleben. Es gibt eine Ebene, die tiefer liegt als die Logik. Wenn wir Verstand und Gefühl wirklich miteinander verweben, entsteht eine Erfahrung, die nachhaltig ist. Veränderung passiert dann nicht mehr durch Anstrengung, sondern weil sie endlich Sinn ergibt. Denn solange etwas keinen Sinn für uns hat, bewegen wir uns nicht.',
     link: 'Mehr zu meiner Person',
+  },
+  
+  focusAreas: {
+    title: 'Schwerpunkte meiner Begleitung',
+    items: [
+      {
+        title: 'Burnout-Prävention & Erschöpfung',
+        description: 'Wenn das System nur noch funktioniert, aber der Sinn verloren gegangen ist. Wir arbeiten daran, die Verbindung zu deinen Bedürfnissen wieder spürbar zu machen.',
+      },
+      {
+        title: 'Menschen in Umbruchphasen',
+        description: 'Wenn der alte Kompass nicht mehr funktioniert, aber der neue Weg noch im Nebel liegt. Wir finden die Klarheit im Erleben, nicht nur im Nachdenken.',
+      },
+      {
+        title: 'Beziehung & Kommunikation',
+        description: 'Weg von festgefahrenen Mustern hin zu echter Begegnung. Wir schauen uns an, was im Hier und Jetzt zwischen Menschen passiert.',
+      },
+    ],
   },
   
   cta: {
     title: 'Bereit für den nächsten Schritt?',
     description: 'Vereinbare ein kostenloses Kennenlerngespräch oder ruf einfach durch, um herauszufinden, ob eine Zusammenarbeit sinnvoll ist.',
     button: 'Kontakt aufnehmen',
+    buttonAlt: 'Lass uns schauen, was für dich Sinn ergibt',
   },
   
   gestalttherapie: {
@@ -176,6 +196,7 @@ export const de: Translations = {
         { title: 'Tracking & Muster', description: 'Wir erheben den Ist-Zustand deiner Routinen. Wo verlierst du Energie? Wir machen das Unsichtbare messbar.' },
         { title: 'Strategie', description: 'Basierend auf Daten erstellen wir deinen individuellen Fahrplan, der über die Gestalttherapie, d.h. deinen Prozess, hinausgeht. Fortschritt ist dahingehend kein Zufall.' },
       ],
+      diagnosticIntegration: 'Daten geben uns die Landkarte, aber das Gehen des Weges ist eine emotionale Erfahrung. Ich nutze fundierte Diagnostik als Fundament, um dort tiefer zu gehen, wo reines Sprechen aufhört.',
     },
     konditionen: {
       title: 'Konditionen & Zusammenarbeit',
@@ -220,7 +241,7 @@ export const de: Translations = {
     hero: {
       label: 'JOHANNES CHRIST — GESTALTTHERAPEUT, BEWEGUNGSTHERAPIE UND PRÄVENTION (B.A.), PSYCHOLOGIE (M.SC.) (i.A.)',
       title: 'Gelebt, nicht nur gelernt.',
-      description1: 'Mein Weg begann vor einigen Jahren durch eine eigene existenzielle Krise. Damals kam ich zum erstenmal mit der Gestalttherapie in Kontakt, welche mich seither nicht mehr loslässt. Durch innere und äußere Arbeit, habe ich mich mit Hilfe Anderer aus der Drepression gekämpft und stehe so kraftvoll da wie noch nie. In Leipzig und später in Innsbruck, habe ich neben der Gestalttherapie und vielen anderen Fortbildungen, ein Studium in der Bewegungstherapie und Prävention (B.A.) abgeschlossen.',
+      description1: 'Mein Weg begann vor einigen Jahren durch eine eigene existenzielle Krise. Damals kam ich zum erstenmal mit der Gestalttherapie in Kontakt, welche mich seither nicht mehr loslässt. Durch innere und äußere Arbeit, habe ich mich mit Hilfe Anderer aus der Drepression gekämpft und stehe so kraftvoll da wie noch nie.\n\nIn Leipzig und später in Innsbruck, habe ich neben der Gestalttherapie und vielen anderen Fortbildungen, ein Studium in der Bewegungstherapie und Prävention (B.A.) abgeschlossen.',
       description2: 'In meiner Arbeit heute vereine ich das Wissen aus der aktuellen Wissenschaft mit der der Gestalt. Ein Master in Psychologie (M.Sc.) unterstützt dies einmal mehr, sodass du meine geballte Power und Wissen für dich und deinen Weg nutzen kannst.',
     },
     qualifikationen: {

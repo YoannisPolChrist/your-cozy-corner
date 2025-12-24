@@ -58,9 +58,19 @@ export interface Translations {
   aboutPreview: {
     label: string;
     title: string;
-    description1: string;
-    description2: string;
+    whyTitle: string;
+    whyDescription1: string;
+    whyDescription2: string;
     link: string;
+  };
+  
+  // Focus Areas / Schwerpunkte Section
+  focusAreas: {
+    title: string;
+    items: Array<{
+      title: string;
+      description: string;
+    }>;
   };
   
   // CTA Section
@@ -68,6 +78,7 @@ export interface Translations {
     title: string;
     description: string;
     button: string;
+    buttonAlt: string;
   };
   
   // Gestalttherapie Page
@@ -137,6 +148,7 @@ export interface Translations {
         title: string;
         description: string;
       }>;
+      diagnosticIntegration: string;
     };
     konditionen: {
       title: string;

@@ -25,16 +25,16 @@ export const en: Translations = {
     subtitle: 'Often we sense that something is missing, but we can\'t quite put our finger on it.',
     items: [
       {
-        title: 'Running in circles',
-        description: 'The feeling of being stuck even though you want to move forward. Old patterns keep repeating. Frustration and stagnation become inevitable.',
+        title: 'Burnout & Loss of Meaning',
+        description: 'When exhaustion runs deeper than tiredness. The system still functions, but the sense of purpose has been lost.',
       },
       {
-        title: 'Distance and closeness',
-        description: 'Others seem so far away, or closeness feels overwhelming. Conversations go round in circles.',
+        title: 'Phases of Transition',
+        description: 'When the new still frightens and the old no longer fits. The old compass no longer works, but the new path remains shrouded in fog.',
       },
       {
-        title: 'Fog of uncertainty',
-        description: 'The desire for clarity is there, but the next step remains hidden in the fog.',
+        title: 'Couples & Communication',
+        description: 'When conversations go in circles and genuine connection is missing. Moving away from entrenched patterns toward authentic encounter.',
       },
     ],
   },
@@ -71,15 +71,35 @@ export const en: Translations = {
   aboutPreview: {
     label: 'Your companion',
     title: 'About Me',
-    description1: 'I\'m Johannes Christ, Gestalt therapist, coach and M.Sc. Psychology (in training). My work is based on an attitude of respect and awareness. In this awareness, change happens. This is our starting point.',
-    description2: 'With years of experience in Gestalt Therapy and coaching, I accompany you on your path to greater clarity, well-being and fulfillment.',
+    whyTitle: 'Why I do what I do',
+    whyDescription1: 'In my own journey, I\'ve clearly recognized one thing: We can talk about problems for years without anything really moving. The mind understands everything, but the point where real change begins is often left untouched.',
+    whyDescription2: 'What fascinates me about Gestalt therapy to this day, and what I experience as so profoundly effective, is this transition from mere talking to holistic experiencing. There\'s a level that runs deeper than logic. When we truly weave mind and feeling together, an experience emerges that is lasting. Change then no longer happens through effort, but because it finally makes sense. For as long as something makes no sense to us, we don\'t move.',
     link: 'More about me',
+  },
+  
+  focusAreas: {
+    title: 'Focus Areas of My Practice',
+    items: [
+      {
+        title: 'Burnout Prevention & Exhaustion',
+        description: 'When the system is just functioning, but the meaning has been lost. We work on making the connection to your needs tangible again.',
+      },
+      {
+        title: 'People in Transition',
+        description: 'When the old compass no longer works, but the new path is still shrouded in fog. We find clarity in experiencing, not just in thinking.',
+      },
+      {
+        title: 'Relationships & Communication',
+        description: 'Away from entrenched patterns toward genuine encounter. We look at what\'s happening between people in the here and now.',
+      },
+    ],
   },
   
   cta: {
     title: 'Ready for the next step?',
     description: 'Book a free discovery call or simply give me a ring to find out if working together makes sense.',
     button: 'Get in touch',
+    buttonAlt: 'Let\'s explore what makes sense for you',
   },
   
   gestalttherapie: {
@@ -176,6 +196,7 @@ export const en: Translations = {
         { title: 'Tracking & Patterns', description: 'We assess the current state of your routines. Where are you losing energy? We make the invisible measurable.' },
         { title: 'Strategy', description: 'Based on data, we create your individual roadmap that goes beyond Gestalt therapy, i.e. your process. Progress is therefore no coincidence.' },
       ],
+      diagnosticIntegration: 'Data gives us the map, but walking the path is an emotional experience. I use sound diagnostics as a foundation to go deeper where pure talking stops.',
     },
     konditionen: {
       title: 'Terms & Collaboration',
@@ -220,7 +241,7 @@ export const en: Translations = {
     hero: {
       label: 'JOHANNES CHRIST — GESTALT THERAPIST, MOVEMENT THERAPY & PREVENTION (B.A.), PSYCHOLOGY (M.SC.) (IN TRAINING)',
       title: 'Lived, not just learned.',
-      description1: 'My journey began a few years ago through my own existential crisis. That\'s when I first encountered Gestalt therapy, which has never let go of me since. Through inner and outer work, I fought my way out of depression with the help of others and now stand stronger than ever. In Leipzig and later in Innsbruck, alongside Gestalt therapy and many other trainings, I completed a degree in Movement Therapy and Prevention (B.A.).',
+      description1: 'My journey began a few years ago through my own existential crisis. That\'s when I first encountered Gestalt therapy, which has never let go of me since. Through inner and outer work, I fought my way out of depression with the help of others and now stand stronger than ever.\n\nIn Leipzig and later in Innsbruck, alongside Gestalt therapy and many other trainings, I completed a degree in Movement Therapy and Prevention (B.A.).',
       description2: 'In my work today, I unite knowledge from current science with that of Gestalt. A Master\'s in Psychology (M.Sc.) supports this even more, so you can benefit from my full power and knowledge for yourself and your journey.',
     },
     qualifikationen: {
