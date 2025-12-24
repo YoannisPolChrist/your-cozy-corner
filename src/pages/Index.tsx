@@ -354,13 +354,19 @@ const Index = () => {
             <StaggerContainer className="grid md:grid-cols-3 gap-8 md:gap-12 max-w-5xl mx-auto">
               {t.focusAreas.items.map((item, index) => (
                 <AnimatedItem key={index}>
-                  <Card className="p-8 bg-off-white border-none text-center h-full hover:shadow-lg transition-shadow duration-300">
-                    <h3 className="font-heading text-xl mb-4 text-primary">
-                      {item.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {item.description}
-                    </p>
+                  <Card className="p-8 bg-off-white border border-transparent text-center h-full transition-all duration-500 hover:shadow-xl hover:-translate-y-3 hover:border-accent/30 hover:bg-card group relative overflow-hidden">
+                    {/* Accent bar that slides in on hover */}
+                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                    {/* Subtle background glow on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="relative z-10">
+                      <h3 className="font-heading text-xl mb-4 text-primary group-hover:text-primary transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                        {item.description}
+                      </p>
+                    </div>
                   </Card>
                 </AnimatedItem>
               ))}

@@ -61,9 +61,9 @@ export const fr: Translations = {
   
   gestaltSection: {
     label: 'L\'approche thérapeutique',
-    title: 'Gestalt-thérapie',
+    title: 'Ma Mission',
     titleHighlight: '',
-    description: 'La Gestalt-thérapie constitue la base de mon travail. C\'est une approche thérapeutique humaniste qui se concentre sur l\'expérience consciente dans l\'ici et maintenant. Au lieu de parler des problèmes, nous amenons le cœur de ce qui te retient dans l\'expérience. Le changement se produit en profondeur, de manière holistique et durable.',
+    description: 'Le changement demande plus que la compréhension. La vraie croissance naît là où le ressenti et l\'intellect se tissent ensemble. Mon travail consiste à toucher des points que la simple parole ne peut atteindre – pour que le changement ne paraisse pas seulement logique, mais se sente aussi juste. Car seul ce qui fait sens nous met vraiment en mouvement.',
     link: 'En savoir plus sur la Gestalt-thérapie',
     quote: 'Être pleinement ici, pleinement maintenant – le reste suivra.',
   },
@@ -171,6 +171,10 @@ export const fr: Translations = {
   
   angebot: {
     title: 'Services',
+    process: {
+      title: 'Le Processus',
+      description: 'Nous partons de tes besoins et de ce qui te frustre. À partir de là, nous décidons ensemble quels outils (diagnostic, coaching ou thérapie) te mèneront le mieux vers ton objectif.',
+    },
     services: [
       {
         title: 'Gestalt-thérapie intégrative',
@@ -229,6 +233,39 @@ export const fr: Translations = {
         title: 'En présentiel',
         description: 'À Toulouse.',
       },
+    },
+    faq: {
+      title: 'Questions Fréquentes',
+      items: [
+        {
+          question: 'Comment se déroule concrètement une séance ?',
+          answer: 'Nous travaillons dans l\'ici et maintenant. C\'est un processus dynamique de conversation et d\'expérience, sans questionnement rigide.',
+        },
+        {
+          question: 'Pourquoi ce mélange d\'approches ?',
+          answer: 'La psychologie (M.Sc.) nous donne le fondement et les données (diagnostic), la Gestalt-thérapie nous donne la profondeur émotionnelle pour un vrai changement.',
+        },
+        {
+          question: 'L\'assurance maladie couvre-t-elle les séances ?',
+          answer: 'En tant que psychologue (M.Sc.) et Gestalt-thérapeute, je travaille en pratique privée. Cela signifie généralement que les coûts ne sont pas couverts par l\'assurance maladie obligatoire. Les assurances complémentaires privées ou les assureurs privés remboursent une partie des coûts selon le contrat. L\'avantage pour toi : nous pouvons commencer immédiatement sans obstacles bureaucratiques et adapter la durée et la fréquence des séances de manière flexible à ton processus.',
+        },
+        {
+          question: 'Proposes-tu aussi des séances en ligne ?',
+          answer: 'Oui. Même si la Gestalt-thérapie vit beaucoup de la présence physique, la méthode peut être mise en œuvre très efficacement en ligne. Nous nous concentrons alors davantage sur ta perception actuelle devant l\'écran. C\'est particulièrement pratique si tu voyages beaucoup ou si tu ne vis pas à Toulouse.',
+        },
+        {
+          question: 'Qu\'apportent exactement les « données » et les signes vitaux à la thérapie ?',
+          answer: 'Les données (comme la qualité du sommeil, le niveau de stress ou la VFC) ne sont pas une fin en soi pour moi, mais une « carte » objective. Elles nous aident à voir comment ton corps réagit au stress, même si ton esprit l\'ignore peut-être encore. C\'est le complément parfait au travail émotionnel : nous voyons noir sur blanc où le système est sous tension, et utilisons la Gestalt-thérapie pour libérer cette tension intérieurement.',
+        },
+        {
+          question: 'Dans quelles langues pouvons-nous travailler ?',
+          answer: 'Je travaille couramment en allemand, anglais et français. Il est souvent fascinant de voir comment l\'expérience émotionnelle change quand on parle dans sa langue maternelle ou une langue choisie. Nous utilisons la langue dans laquelle tu te sens le plus en sécurité pour atteindre le cœur de tes problèmes.',
+        },
+        {
+          question: 'Combien de temps dure une séance ?',
+          answer: 'Une séance standard dure généralement 50 minutes. Pour les couples ou les processus plus intensifs, nous pouvons convenir d\'unités plus longues (90 min.). L\'important est d\'avoir assez de temps pour passer du « rapport » au « vécu ».',
+        },
+      ],
     },
     cta: {
       title: 'Prêt pour la prochaine étape ?',

@@ -61,9 +61,9 @@ export const en: Translations = {
   
   gestaltSection: {
     label: 'The therapeutic approach',
-    title: 'Gestalt Therapy',
+    title: 'My Mission',
     titleHighlight: '',
-    description: 'Gestalt Therapy forms the foundation of my work. It is a humanistic therapeutic approach that focuses on conscious experience in the here and now. Instead of talking about problems, we bring the core of what holds you back into experience. Change happens deeply, holistically and sustainably.',
+    description: 'Change requires more than understanding. Real growth happens where feeling and thought interweave. My work is about touching points that pure talking cannot reach – so that change doesn\'t just appear logical, but also feels right. Because only what makes sense truly moves us.',
     link: 'Learn more about Gestalt Therapy',
     quote: 'Be fully here, fully now – the rest will follow.',
   },
@@ -171,6 +171,10 @@ export const en: Translations = {
   
   angebot: {
     title: 'Services',
+    process: {
+      title: 'The Process',
+      description: 'We start with your needs and what frustrates you. From there, we decide together which tools (diagnostics, coaching or therapy) will best help you reach your goal.',
+    },
     services: [
       {
         title: 'Integrative Gestalt Therapy',
@@ -229,6 +233,39 @@ export const en: Translations = {
         title: 'In-Person',
         description: 'In Toulouse.',
       },
+    },
+    faq: {
+      title: 'Frequently Asked Questions',
+      items: [
+        {
+          question: 'What does a session actually look like?',
+          answer: 'We work in the here and now. It\'s a dynamic process of conversation and experience, without rigid questioning.',
+        },
+        {
+          question: 'Why this mix of approaches?',
+          answer: 'Psychology (M.Sc.) gives us the foundation and the data (diagnostics), Gestalt therapy gives us the emotional depth for real change.',
+        },
+        {
+          question: 'Does health insurance cover the sessions?',
+          answer: 'As a psychologist (M.Sc.) and Gestalt therapist, I work in private practice. This typically means that statutory health insurance does not cover the costs. Private supplementary insurance or private insurers reimburse part of the costs depending on the plan. The advantage for you: We can start immediately without bureaucratic hurdles and flexibly adapt the duration and frequency of sessions to your process.',
+        },
+        {
+          question: 'Do you also offer online sessions?',
+          answer: 'Yes. Even though Gestalt therapy thrives on physical presence, the method can be implemented very effectively online. We then focus more on your current perception in front of the screen. This is particularly practical if you travel a lot or don\'t live in Toulouse.',
+        },
+        {
+          question: 'What exactly do the "data" and vital signs bring to therapy?',
+          answer: 'Data (such as sleep quality, stress levels or HRV) are not an end in themselves for me, but an objective "map". They help us see how your body reacts to stress, even if your mind might still be ignoring it. It\'s the perfect complement to emotional work: We see in black and white where the system is under tension, and use Gestalt therapy to release that tension internally.',
+        },
+        {
+          question: 'In which languages can we work?',
+          answer: 'I work fluently in German, English and French. It\'s often fascinating to see how emotional experience changes when speaking in one\'s mother tongue or a chosen language. We use the language in which you feel safest to get to the core of your issues.',
+        },
+        {
+          question: 'How long does a session last?',
+          answer: 'A standard session usually lasts 50 minutes. For couples or more intensive processes, we can arrange longer units (90 min.) by agreement. The important thing is that we have enough time to move from "reporting" to "experiencing".',
+        },
+      ],
     },
     cta: {
       title: 'Ready for the next step?',
