@@ -130,11 +130,23 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "kern" 1;
+    font-size: 1rem; /* 16px base */
+    line-height: 1.7;
+  }
+
+  /* Typography hierarchy: Section headings are 3px larger than body text */
+  p, li, span {
+    font-size: 1rem; /* 16px body text */
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
     font-weight: 400;
+  }
+
+  /* Section headings: body (16px) + 3px = 19px = 1.1875rem */
+  .section-heading {
+    font-size: 1.1875rem;
   }
 }
 

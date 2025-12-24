@@ -314,13 +314,18 @@ const Index = () => {
                   </span>
                 </AnimatedItem>
                 <AnimatedItem>
-                  <h2 className="font-heading text-4xl md:text-5xl mb-8 text-primary">
-                    {t.aboutPreview.title}
+                  <h2 className="font-heading text-4xl md:text-5xl mb-4 text-primary">
+                    {t.aboutPreview.whyTitle}
                   </h2>
                 </AnimatedItem>
                 <AnimatedItem>
+                  <p className="text-muted-foreground text-lg mb-4 leading-loose">
+                    {t.aboutPreview.whyDescription1}
+                  </p>
+                </AnimatedItem>
+                <AnimatedItem>
                   <p className="text-muted-foreground text-lg mb-6 leading-loose">
-                    {t.aboutPreview.description1}
+                    {t.aboutPreview.whyDescription2}
                   </p>
                 </AnimatedItem>
                 <AnimatedItem>
@@ -334,6 +339,32 @@ const Index = () => {
                 </AnimatedItem>
               </StaggerContainer>
             </div>
+          </div>
+        </AnimatedSection>
+
+        {/* Focus Areas Section - 3 Column Grid */}
+        <AnimatedSection className="py-28 md:py-36 bg-secondary/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="font-heading text-[2.2rem] md:text-[2.7rem] mb-5 text-primary">
+                {t.focusAreas.title}
+              </h2>
+            </div>
+
+            <StaggerContainer className="grid md:grid-cols-3 gap-8 md:gap-12 max-w-5xl mx-auto">
+              {t.focusAreas.items.map((item, index) => (
+                <AnimatedItem key={index}>
+                  <Card className="p-8 bg-off-white border-none text-center h-full hover:shadow-lg transition-shadow duration-300">
+                    <h3 className="font-heading text-xl mb-4 text-primary">
+                      {item.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {item.description}
+                    </p>
+                  </Card>
+                </AnimatedItem>
+              ))}
+            </StaggerContainer>
           </div>
         </AnimatedSection>
 
@@ -356,7 +387,7 @@ const Index = () => {
               <AnimatedItem>
                 <Link to={getLocalizedPath('/kontakt')} onClick={scrollToTop}>
                   <Button variant="gold" size="lg" className="font-semibold">
-                    {t.cta.button} <ArrowRight className="ml-2 h-4 w-4" />
+                    {t.cta.buttonAlt} <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
               </AnimatedItem>
