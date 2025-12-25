@@ -21,6 +21,7 @@ const STORAGE_KEY = 'preferred-language';
 // Map route names between languages
 const routeMap: Record<string, Record<Language, string>> = {
   gestalttherapie: { de: 'gestalttherapie', en: 'gestalt-therapy', fr: 'gestalt-therapie' },
+  'my-work': { de: 'meine-arbeit', en: 'my-work', fr: 'mon-travail' },
   angebot: { de: 'angebot', en: 'services', fr: 'services' },
   'ueber-mich': { de: 'ueber-mich', en: 'about-me', fr: 'a-propos' },
   kontakt: { de: 'kontakt', en: 'contact', fr: 'contact' },

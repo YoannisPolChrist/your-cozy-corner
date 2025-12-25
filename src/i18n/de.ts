@@ -68,6 +68,40 @@ export const de: Translations = {
     quote: 'Sei ganz hier, ganz jetzt – der Rest folgt von selbst.',
   },
   
+  myWorkSection: {
+    title: 'Meine Arbeit',
+    description: 'Veränderung geschieht nicht allein durch Denken. Während der Verstand versteht, beginnt echte Bewegung erst dort, wo Gefühl und Logik sich verweben. Wenn eine Veränderung keinen ganzheitlichen Sinn ergibt – weder im Kopf noch im Herzen – wird sie nicht bestehen bleiben. Wir nutzen Diagnostik, Gestalttherapie und Coaching, um diese Lücke zu überbrücken und nachhaltige Erfahrungen zu schaffen.',
+    link: 'Mehr über meine Arbeit',
+    quote: 'Verliere deinen Verstand und komm zu deinen Sinnen.',
+  },
+  
+  myWork: {
+    hero: {
+      title: 'Meine Arbeit',
+      subtitle: 'Gestalttherapie, Psychologische Diagnostik & Coaching – integriert für nachhaltige Veränderung.',
+    },
+    diagnostics: {
+      label: 'Evidenzbasierte Standortbestimmung',
+      title: 'Psychologische Diagnostik',
+      intro: 'Präzision durch physiologische Daten. Wir nutzen Schlaftracking, HRV-Monitoring und evidenzbasierte psychologische Diagnostik, um eine objektive Grundlage für deinen Transformationsprozess zu schaffen.',
+      items: [
+        { title: 'Vitalwerte & Biomarker', description: 'Blutwerte, Schlafqualität und Stressindikatoren liefern objektive Gesundheitsdaten.' },
+        { title: 'Musteranalyse', description: 'Erfasse Routinen und Energielevel, um zu identifizieren, wo dein System unter Spannung steht.' },
+        { title: 'Personalisierte Strategie', description: 'Datengestützter Fahrplan, der über Intuition hinausgeht – für messbaren Fortschritt.' },
+      ],
+    },
+    coaching: {
+      label: 'Holomotion Coaching',
+      title: 'Coaching',
+      intro: 'Holomotion Coaching verbindet kognitive Strategie mit Körperintelligenz. Wenn Entscheidungen nicht nur logisch klingen, sondern sich auch im Bauch richtig anfühlen, entstehen nachhaltige Gewohnheiten ganz natürlich. Wir überbrücken die Lücke zwischen dem, was dein Verstand weiß, und dem, was dein Körper braucht.',
+      items: [
+        { title: 'Verkörperte Strategie', description: 'Integriere kognitive Planung mit somatischem Bewusstsein für Entscheidungen, die halten.' },
+        { title: 'Zielausrichtung', description: 'Kläre, was wirklich zählt, und schaffe gangbare Wege nach vorn.' },
+        { title: 'Nachhaltige Gewohnheiten', description: 'Baue Routinen auf, die sowohl deine Ambitionen als auch dein Wohlbefinden ehren.' },
+      ],
+    },
+  },
+  
   aboutPreview: {
     label: 'Ihr Begleiter',
     title: 'Über mich',

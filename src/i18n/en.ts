@@ -68,6 +68,40 @@ export const en: Translations = {
     quote: 'Be fully here, fully now – the rest will follow.',
   },
   
+  myWorkSection: {
+    title: 'My Work',
+    description: 'Change happens not just through thinking. While the mind understands, true movement only begins when feeling and logic interweave. If a change doesn\'t make holistic sense—both in your head and your heart—it won\'t stick. We use Diagnostics, Gestalt Therapy, and Coaching to bridge this gap and create lasting experience.',
+    link: 'More About My Work',
+    quote: 'Lose your mind and come to your senses.',
+  },
+  
+  myWork: {
+    hero: {
+      title: 'My Work',
+      subtitle: 'Gestalt Therapy, Psychological Diagnostics & Coaching – integrated for sustainable transformation.',
+    },
+    diagnostics: {
+      label: 'Evidence-Based Assessment',
+      title: 'Psychological Diagnostics',
+      intro: 'Precision through physiological data. We use sleep tracking, HRV monitoring, and evidence-based psychological assessment to create an objective baseline for your transformation journey.',
+      items: [
+        { title: 'Vital Signs & Biomarkers', description: 'Blood values, sleep quality, and stress indicators provide objective health metrics.' },
+        { title: 'Pattern Analysis', description: 'Track routines and energy levels to identify where your system is under strain.' },
+        { title: 'Personalized Strategy', description: 'Data-driven roadmap that goes beyond intuition for measurable progress.' },
+      ],
+    },
+    coaching: {
+      label: 'Holomotion Coaching',
+      title: 'Coaching',
+      intro: 'Holomotion Coaching combines cognitive strategy with body intelligence. When decisions don\'t just sound logical but also feel right in your gut, sustainable habits emerge naturally. We bridge the gap between what your mind knows and what your body needs.',
+      items: [
+        { title: 'Embodied Strategy', description: 'Integrate cognitive planning with somatic awareness for decisions that stick.' },
+        { title: 'Goal Alignment', description: 'Clarify what truly matters and create actionable pathways forward.' },
+        { title: 'Sustainable Habits', description: 'Build routines that honor both your ambitions and your wellbeing.' },
+      ],
+    },
+  },
+  
   aboutPreview: {
     label: 'Your companion',
     title: 'About Me',

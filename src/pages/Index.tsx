@@ -198,7 +198,7 @@ const Index = () => {
           </div>
         </AnimatedSection>
 
-        {/* Services Section - High-End Cards */}
+        {/* Services Section - High-End Cards with Anchor Links */}
         <AnimatedSection className="py-28 md:py-36 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-20">
@@ -213,27 +213,31 @@ const Index = () => {
             <StaggerContainer className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto mb-16">
               {t.services.items.map((service, index) => {
               const Icon = serviceIcons[index];
+              const anchorIds = ['gestalt', 'coaching', 'diagnostics'];
+              const anchorId = anchorIds[index];
               return <AnimatedItem key={index}>
-                    <Card className="p-10 bg-off-white border border-accent/20 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group relative overflow-hidden h-full">
-                      {/* Bottom border highlight on hover */}
-                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                    <Link to={`${getLocalizedPath('/my-work')}#${anchorId}`} className="block h-full">
+                      <Card className="p-10 bg-off-white border border-accent/20 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group relative overflow-hidden h-full cursor-pointer">
+                        {/* Bottom border highlight on hover */}
+                        <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
 
-                      <div className="mb-6 flex justify-center">
-                        <Icon className="w-12 h-12 text-accent group-hover:text-primary transition-colors duration-300" strokeWidth={1.5} />
-                      </div>
-                      <h3 className="font-heading text-xl mb-4 text-primary">
-                        {service.title}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {service.description}
-                      </p>
-                    </Card>
+                        <div className="mb-6 flex justify-center">
+                          <Icon className="w-12 h-12 text-accent group-hover:text-primary transition-colors duration-300" strokeWidth={1.5} />
+                        </div>
+                        <h3 className="font-heading text-xl mb-4 text-primary">
+                          {service.title}
+                        </h3>
+                        <p className="text-muted-foreground">
+                          {service.description}
+                        </p>
+                      </Card>
+                    </Link>
                   </AnimatedItem>;
             })}
             </StaggerContainer>
 
             <div className="text-center">
-              <Link to={getLocalizedPath('/angebot')} onClick={scrollToTop}>
+              <Link to={getLocalizedPath('/my-work')} onClick={scrollToTop}>
                 <Button variant="gold" className="font-semibold">
                   {t.services.cta} <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -242,7 +246,7 @@ const Index = () => {
           </div>
         </AnimatedSection>
 
-        {/* Gestalttherapie Creative Link */}
+        {/* My Work Creative Link */}
         <AnimatedSection className="py-28 md:py-36 bg-primary">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
@@ -252,18 +256,18 @@ const Index = () => {
                     {t.gestaltSection.label}
                   </span>
                   <h2 className="font-heading text-4xl md:text-5xl text-white mb-8 leading-tight">
-                    {t.gestaltSection.title} <span className="italic">{t.gestaltSection.titleHighlight}</span>
+                    {t.myWorkSection?.title || "My Work"}
                   </h2>
                   <p className="text-white/85 text-lg leading-loose mb-10">
-                    {t.gestaltSection.description}
+                    {t.myWorkSection?.description || "Change happens not just through thinking. While the mind understands, true movement only begins when feeling and logic interweave. If a change doesn't make holistic sense—both in your head and your heart—it won't stick. We use Diagnostics, Gestalt Therapy, and Coaching to bridge this gap and create lasting experience."}
                   </p>
-                  <Link to={getLocalizedPath('/gestalttherapie')} onClick={scrollToTop} className="inline-flex items-center text-gold-accent hover:text-gold-accent/80 font-medium text-lg group transition-colors duration-300">
-                    {t.gestaltSection.link}
+                  <Link to={getLocalizedPath('/my-work')} onClick={scrollToTop} className="inline-flex items-center text-gold-accent hover:text-gold-accent/80 font-medium text-lg group transition-colors duration-300">
+                    {t.myWorkSection?.link || "More About My Work"}
                     <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-2" />
                   </Link>
                 </AnimatedItem>
                 <AnimatedItem className="relative flex justify-center">
-                  {/* Organic Breathing Quote Card */}
+                  {/* Organic Breathing Quote Card - Fritz Perls Quote */}
                   <motion.div className="relative w-72 h-72 md:w-80 md:h-80 flex items-center justify-center" animate={{
                   scale: [1, 1.02, 1]
                 }} transition={{
@@ -289,7 +293,10 @@ const Index = () => {
                         "
                       </div>
                       <p className="text-white/95 text-lg italic leading-relaxed font-heading">
-                        {t.gestaltSection.quote}
+                        {t.myWorkSection?.quote || "Lose your mind and come to your senses."}
+                      </p>
+                      <p className="text-gold-accent/80 text-sm mt-3 font-medium">
+                        — Fritz Perls
                       </p>
                     </div>
                   </motion.div>
