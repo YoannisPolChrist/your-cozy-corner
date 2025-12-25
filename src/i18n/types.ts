@@ -54,6 +54,40 @@ export interface Translations {
     quote: string;
   };
   
+  // My Work Section on Index
+  myWorkSection: {
+    title: string;
+    description: string;
+    link: string;
+    quote: string;
+  };
+  
+  // My Work Page
+  myWork: {
+    hero: {
+      title: string;
+      subtitle: string;
+    };
+    diagnostics: {
+      label: string;
+      title: string;
+      intro: string;
+      items: Array<{
+        title: string;
+        description: string;
+      }>;
+    };
+    coaching: {
+      label: string;
+      title: string;
+      intro: string;
+      items: Array<{
+        title: string;
+        description: string;
+      }>;
+    };
+  };
+  
   // About Preview
   aboutPreview: {
     label: string;

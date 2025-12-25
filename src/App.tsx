@@ -9,6 +9,7 @@ import { LanguageProvider } from "@/i18n";
 // Lazy load pages for better performance (code splitting)
 const Index = lazy(() => import("./pages/Index"));
 const Gestalttherapie = lazy(() => import("./pages/Gestalttherapie"));
+const MyWork = lazy(() => import("./pages/MyWork"));
 const Angebot = lazy(() => import("./pages/Angebot"));
 const UeberMich = lazy(() => import("./pages/UeberMich"));
 const Kontakt = lazy(() => import("./pages/Kontakt"));
@@ -33,6 +34,7 @@ const AppRoutes = () => (
       {/* German routes */}
       <Route path="/de" element={<Index />} />
       <Route path="/de/gestalttherapie" element={<Gestalttherapie />} />
+      <Route path="/de/meine-arbeit" element={<MyWork />} />
       <Route path="/de/angebot" element={<Angebot />} />
       <Route path="/de/ueber-mich" element={<UeberMich />} />
       <Route path="/de/kontakt" element={<Kontakt />} />
@@ -40,6 +42,7 @@ const AppRoutes = () => (
       {/* English routes */}
       <Route path="/en" element={<Index />} />
       <Route path="/en/gestalt-therapy" element={<Gestalttherapie />} />
+      <Route path="/en/my-work" element={<MyWork />} />
       <Route path="/en/services" element={<Angebot />} />
       <Route path="/en/about-me" element={<UeberMich />} />
       <Route path="/en/contact" element={<Kontakt />} />
@@ -47,6 +50,7 @@ const AppRoutes = () => (
       {/* French routes */}
       <Route path="/fr" element={<Index />} />
       <Route path="/fr/gestalt-therapie" element={<Gestalttherapie />} />
+      <Route path="/fr/mon-travail" element={<MyWork />} />
       <Route path="/fr/services" element={<Angebot />} />
       <Route path="/fr/a-propos" element={<UeberMich />} />
       <Route path="/fr/contact" element={<Kontakt />} />
