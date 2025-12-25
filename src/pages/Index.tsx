@@ -342,38 +342,6 @@ const Index = () => {
           </div>
         </AnimatedSection>
 
-        {/* Focus Areas Section - 3 Column Grid */}
-        <AnimatedSection className="py-28 md:py-36 bg-secondary/30">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-heading text-[2.2rem] md:text-[2.7rem] mb-5 text-primary">
-                {t.focusAreas.title}
-              </h2>
-            </div>
-
-            <StaggerContainer className="grid md:grid-cols-3 gap-8 md:gap-12 max-w-5xl mx-auto">
-              {t.focusAreas.items.map((item, index) => (
-                <AnimatedItem key={index}>
-                  <Card className="p-8 bg-off-white border border-transparent text-center h-full transition-all duration-500 hover:shadow-xl hover:-translate-y-3 hover:border-accent/30 hover:bg-card group relative overflow-hidden">
-                    {/* Accent bar that slides in on hover */}
-                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                    {/* Subtle background glow on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="relative z-10">
-                      <h3 className="font-heading text-xl mb-4 text-primary group-hover:text-primary transition-colors duration-300">
-                        {item.title}
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
-                        {item.description}
-                      </p>
-                    </div>
-                  </Card>
-                </AnimatedItem>
-              ))}
-            </StaggerContainer>
-          </div>
-        </AnimatedSection>
-
         {/* CTA Section */}
         <AnimatedSection className="py-28 md:py-36 bg-gradient-cta text-white relative overflow-hidden">
           {/* Subtle gradient overlay for depth */}
