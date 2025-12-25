@@ -250,20 +250,12 @@ export const fr: Translations = {
           answer: 'En tant que psychologue (M.Sc.) et Gestalt-thérapeute, je travaille en pratique privée. Cela signifie généralement que les coûts ne sont pas couverts par l\'assurance maladie obligatoire. Les assurances complémentaires privées ou les assureurs privés remboursent une partie des coûts selon le contrat. L\'avantage pour toi : nous pouvons commencer immédiatement sans obstacles bureaucratiques et adapter la durée et la fréquence des séances de manière flexible à ton processus.',
         },
         {
-          question: 'Proposes-tu aussi des séances en ligne ?',
-          answer: 'Oui. Même si la Gestalt-thérapie vit beaucoup de la présence physique, la méthode peut être mise en œuvre très efficacement en ligne. Nous nous concentrons alors davantage sur ta perception actuelle devant l\'écran. C\'est particulièrement pratique si tu voyages beaucoup ou si tu ne vis pas à Toulouse.',
-        },
-        {
           question: 'Qu\'apportent exactement les « données » et les signes vitaux à la thérapie ?',
           answer: 'Les données (comme la qualité du sommeil, le niveau de stress ou la VFC) ne sont pas une fin en soi pour moi, mais une « carte » objective. Elles nous aident à voir comment ton corps réagit au stress, même si ton esprit l\'ignore peut-être encore. C\'est le complément parfait au travail émotionnel : nous voyons noir sur blanc où le système est sous tension, et utilisons la Gestalt-thérapie pour libérer cette tension intérieurement.',
         },
         {
           question: 'Dans quelles langues pouvons-nous travailler ?',
           answer: 'Je travaille couramment en allemand, anglais et français. Il est souvent fascinant de voir comment l\'expérience émotionnelle change quand on parle dans sa langue maternelle ou une langue choisie. Nous utilisons la langue dans laquelle tu te sens le plus en sécurité pour atteindre le cœur de tes problèmes.',
-        },
-        {
-          question: 'Combien de temps dure une séance ?',
-          answer: 'Une séance standard dure généralement 50 minutes. Pour les couples ou les processus plus intensifs, nous pouvons convenir d\'unités plus longues (90 min.). L\'important est d\'avoir assez de temps pour passer du « rapport » au « vécu ».',
         },
       ],
     },

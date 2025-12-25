@@ -250,20 +250,12 @@ export const de: Translations = {
           answer: 'Als Psychologe (M.Sc.) und Gestalttherapeut arbeite ich in privater Praxis. Das bedeutet in der Regel, dass die Kosten von den gesetzlichen Krankenkassen nicht übernommen werden. Private Zusatzversicherungen oder private Kassen erstatten je nach Tarif einen Teil. Der Vorteil für dich: Wir können sofort ohne bürokratische Hürden starten und die Dauer sowie Frequenz der Sitzungen flexibel an deinen Prozess anpassen.',
         },
         {
-          question: 'Bietest du auch Online-Sitzungen an?',
-          answer: 'Ja. Auch wenn die Gestalttherapie stark von der Präsenz im Raum lebt, lässt sich die Methode sehr effektiv online umsetzen. Wir nutzen dann verstärkt den Fokus auf deine aktuelle Wahrnehmung vor dem Bildschirm. Das ist besonders praktisch, wenn du viel unterwegs bist oder nicht in Toulouse wohnst.',
-        },
-        {
           question: 'Was genau bringen mir die „Daten" und Vitalwerte in der Therapie?',
           answer: 'Daten (wie Schlafqualität, Stresslevel oder HRV) sind für mich kein Selbstzweck, sondern eine objektive „Landkarte". Sie helfen uns zu sehen, wie dein Körper auf Belastungen reagiert, auch wenn der Kopf es vielleicht noch ignoriert. Es ist die perfekte Ergänzung zur emotionalen Arbeit: Wir sehen schwarz auf weiß, wo das System unter Spannung steht, und nutzen die Gestalttherapie, um diese Spannung im Inneren zu lösen.',
         },
         {
           question: 'In welchen Sprachen können wir arbeiten?',
           answer: 'Ich arbeite fließend auf Deutsch, Englisch und Französisch. Es ist oft sehr spannend zu sehen, wie sich das emotionale Erleben verändert, wenn man in der Muttersprache oder einer Wahlsprache spricht. Wir nutzen die Sprache, in der du dich am sichersten fühlst, um an den Kern deiner Themen zu kommen.',
-        },
-        {
-          question: 'Wie lange dauert eine Sitzung?',
-          answer: 'Eine Standard-Sitzung dauert in der Regel 50 Minuten. Bei Paaren oder intensiveren Prozessen können wir nach Absprache auch längere Einheiten (90 Min.) vereinbaren. Wichtig ist, dass wir genug Zeit haben, um vom „Berichten" ins „Erleben" zu kommen.',
         },
       ],
     },

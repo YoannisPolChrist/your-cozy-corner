@@ -250,20 +250,12 @@ export const en: Translations = {
           answer: 'As a psychologist (M.Sc.) and Gestalt therapist, I work in private practice. This typically means that statutory health insurance does not cover the costs. Private supplementary insurance or private insurers reimburse part of the costs depending on the plan. The advantage for you: We can start immediately without bureaucratic hurdles and flexibly adapt the duration and frequency of sessions to your process.',
         },
         {
-          question: 'Do you also offer online sessions?',
-          answer: 'Yes. Even though Gestalt therapy thrives on physical presence, the method can be implemented very effectively online. We then focus more on your current perception in front of the screen. This is particularly practical if you travel a lot or don\'t live in Toulouse.',
-        },
-        {
           question: 'What exactly do the "data" and vital signs bring to therapy?',
           answer: 'Data (such as sleep quality, stress levels or HRV) are not an end in themselves for me, but an objective "map". They help us see how your body reacts to stress, even if your mind might still be ignoring it. It\'s the perfect complement to emotional work: We see in black and white where the system is under tension, and use Gestalt therapy to release that tension internally.',
         },
         {
           question: 'In which languages can we work?',
           answer: 'I work fluently in German, English and French. It\'s often fascinating to see how emotional experience changes when speaking in one\'s mother tongue or a chosen language. We use the language in which you feel safest to get to the core of your issues.',
-        },
-        {
-          question: 'How long does a session last?',
-          answer: 'A standard session usually lasts 50 minutes. For couples or more intensive processes, we can arrange longer units (90 min.) by agreement. The important thing is that we have enough time to move from "reporting" to "experiencing".',
         },
       ],
     },
