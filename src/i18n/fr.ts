@@ -3,6 +3,7 @@ import { Translations } from './types';
 export const fr: Translations = {
   nav: {
     gestalttherapie: 'Gestalt-thérapie',
+    approach: 'Approche',
     angebot: 'Services',
     ueberMich: 'À propos',
     kontakt: 'Contact',
@@ -69,35 +70,35 @@ export const fr: Translations = {
   },
   
   myWorkSection: {
-    title: 'Mon Travail',
+    title: 'Approche',
     description: 'Le changement ne se produit pas uniquement par la pensée. Alors que l\'esprit comprend, le vrai mouvement ne commence que lorsque le ressenti et la logique s\'entrelacent. Si un changement n\'a pas de sens holistique – ni dans ta tête ni dans ton cœur – il ne tiendra pas. Nous utilisons le Diagnostic, la Gestalt-thérapie et le Coaching pour combler cet écart et créer une expérience durable.',
-    link: 'En savoir plus sur mon travail',
+    link: 'En savoir plus sur mon approche',
     quote: 'Perds la tête et retrouve tes sens.',
   },
   
   myWork: {
     hero: {
-      title: 'Mon Travail',
-      subtitle: 'Gestalt-thérapie, Diagnostic Psychologique & Coaching – intégrés pour une transformation durable.',
+      title: 'Approche',
+      subtitle: 'Mon approche combine précision scientifique et expérience émotionnelle profonde. Nous considérons le changement comme un processus holistique, reposant sur une base stable de connaissance et de vécu. Pour permettre un mouvement durable, nous utilisons la clarté analytique du diagnostic, la profondeur immédiate de la Gestalt-thérapie et la force stratégique du coaching. Ensemble, nous créons un espace où le développement n\'est pas seulement compris mais incarné dans l\'ici et maintenant. La connexion du corps, de l\'esprit et des données sert de boussole pour ton chemin. Ainsi, le changement devient un processus qui fait sens de manière holistique pour toi. Nous allons au-delà du simple fait de parler pour créer une vraie transformation.',
     },
     diagnostics: {
       label: 'Évaluation basée sur les preuves',
-      title: 'Diagnostic Psychologique',
-      intro: 'Précision grâce aux données physiologiques. Nous utilisons le suivi du sommeil, le monitoring HRV et l\'évaluation psychologique basée sur les preuves pour créer une base objective pour ton parcours de transformation.',
+      title: 'Diagnostic',
+      intro: 'Précision grâce aux questionnaires cliniques, à l\'observation comportementale et au suivi des données vitales. Nous utilisons des méthodes scientifiquement validées pour créer une base objective pour ton parcours de transformation.',
       items: [
-        { title: 'Signes vitaux & Biomarqueurs', description: 'Les valeurs sanguines, la qualité du sommeil et les indicateurs de stress fournissent des métriques de santé objectives.' },
-        { title: 'Analyse des schémas', description: 'Suivi des routines et des niveaux d\'énergie pour identifier où ton système est sous tension.' },
-        { title: 'Stratégie personnalisée', description: 'Feuille de route basée sur les données qui va au-delà de l\'intuition pour un progrès mesurable.' },
+        { title: 'Questionnaires cliniques', description: 'Évaluations psychologiques validées pour une évaluation systématique de ta situation actuelle.' },
+        { title: 'Observation comportementale', description: 'Analyse professionnelle des schémas et dynamiques de ta vie quotidienne.' },
+        { title: 'Suivi des données vitales', description: 'Mesure objective du sommeil, de la VFC et des indicateurs de stress pour un progrès mesurable.' },
       ],
     },
     coaching: {
       label: 'Coaching Holomotion',
       title: 'Coaching',
-      intro: 'Le Coaching Holomotion combine stratégie cognitive et intelligence corporelle. Quand les décisions ne sonnent pas seulement logiques mais se sentent aussi justes au plus profond de toi, des habitudes durables émergent naturellement. Nous comblons l\'écart entre ce que ton esprit sait et ce dont ton corps a besoin.',
+      intro: 'Stratégie quotidienne, formation d\'habitudes et changement durable. Nous comblons l\'écart entre ce que ton esprit sait et ce dont ton corps a besoin.',
       items: [
-        { title: 'Stratégie incarnée', description: 'Intégrer la planification cognitive avec la conscience somatique pour des décisions qui tiennent.' },
-        { title: 'Alignement des objectifs', description: 'Clarifier ce qui compte vraiment et créer des chemins d\'action vers l\'avant.' },
-        { title: 'Habitudes durables', description: 'Construire des routines qui honorent à la fois tes ambitions et ton bien-être.' },
+        { title: 'Structure quotidienne', description: 'Stratégies pratiques pour ta vie quotidienne, immédiatement applicables.' },
+        { title: 'Formation d\'habitudes', description: 'Établir pas à pas de nouveaux schémas qui te correspondent.' },
+        { title: 'Changement durable', description: 'Construire des routines qui durent sur le long terme.' },
       ],
     },
   },
@@ -138,7 +139,7 @@ export const fr: Translations = {
   
   gestalttherapie: {
     scrollTelling: {
-      title: 'Qu\'est-ce que la Gestalt-thérapie ?',
+      title: 'Gestalt-thérapie (Le cœur de mon travail)',
       intro: 'La Gestalt-thérapie est une approche thérapeutique humaniste qui repose sur trois piliers essentiels :',
       pillars: [
         {
