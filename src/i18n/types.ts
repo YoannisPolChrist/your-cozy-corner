@@ -4,6 +4,7 @@ export interface Translations {
   // Navigation
   nav: {
     gestalttherapie: string;
+    approach: string;
     angebot: string;
     ueberMich: string;
     kontakt: string;

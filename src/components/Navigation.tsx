@@ -23,7 +23,7 @@ export const Navigation = () => {
   };
 
   const navLinks = [
-    { to: 'gestalttherapie', label: t.nav.gestalttherapie },
+    { to: 'my-work', label: t.nav.approach },
     { to: 'angebot', label: t.nav.angebot },
     { to: 'ueber-mich', label: t.nav.ueberMich },
     { to: 'kontakt', label: t.nav.kontakt },

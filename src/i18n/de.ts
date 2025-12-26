@@ -3,6 +3,7 @@ import { Translations } from './types';
 export const de: Translations = {
   nav: {
     gestalttherapie: 'Gestalttherapie',
+    approach: 'Approach',
     angebot: 'Angebot',
     ueberMich: 'Über mich',
     kontakt: 'Kontakt',
@@ -69,35 +70,35 @@ export const de: Translations = {
   },
   
   myWorkSection: {
-    title: 'Meine Arbeit',
+    title: 'Approach',
     description: 'Veränderung geschieht nicht allein durch Denken. Während der Verstand versteht, beginnt echte Bewegung erst dort, wo Gefühl und Logik sich verweben. Wenn eine Veränderung keinen ganzheitlichen Sinn ergibt – weder im Kopf noch im Herzen – wird sie nicht bestehen bleiben. Wir nutzen Diagnostik, Gestalttherapie und Coaching, um diese Lücke zu überbrücken und nachhaltige Erfahrungen zu schaffen.',
-    link: 'Mehr über meine Arbeit',
+    link: 'Mehr über meinen Approach',
     quote: 'Verliere deinen Verstand und komm zu deinen Sinnen.',
   },
   
   myWork: {
     hero: {
-      title: 'Meine Arbeit',
-      subtitle: 'Gestalttherapie, Psychologische Diagnostik & Coaching – integriert für nachhaltige Veränderung.',
+      title: 'Approach',
+      subtitle: 'Mein Ansatz verbindet wissenschaftliche Präzision mit tiefer emotionaler Erfahrung. Wir betrachten Veränderung als ganzheitlichen Prozess, der auf einem stabilen Fundament aus Erkenntnis und Erleben ruht. Um nachhaltige Bewegung zu ermöglichen, nutzen wir die analytische Klarheit der Diagnostik, die unmittelbare Tiefe der Gestalttherapie und die strategische Kraft des Coachings. Gemeinsam schaffen wir einen Raum, in dem Entwicklung nicht nur verstanden, sondern im Hier und Jetzt verkörpert wird. Dabei dient uns die Verbindung von Körper, Geist und Daten als Kompass für deinen Weg. So wird Veränderung zu einem Prozess, der für dich ganzheitlich Sinn ergibt. Wir gehen über das reine Reden hinaus, um echte Transformation zu bewirken.',
     },
     diagnostics: {
       label: 'Evidenzbasierte Standortbestimmung',
-      title: 'Psychologische Diagnostik',
-      intro: 'Präzision durch physiologische Daten. Wir nutzen Schlaftracking, HRV-Monitoring und evidenzbasierte psychologische Diagnostik, um eine objektive Grundlage für deinen Transformationsprozess zu schaffen.',
+      title: 'Diagnostik',
+      intro: 'Präzision durch klinische Fragebögen, Verhaltensbeobachtung und Vitaldatentracking. Wir nutzen wissenschaftlich fundierte Methoden, um eine objektive Grundlage für deinen Transformationsprozess zu schaffen.',
       items: [
-        { title: 'Vitalwerte & Biomarker', description: 'Blutwerte, Schlafqualität und Stressindikatoren liefern objektive Gesundheitsdaten.' },
-        { title: 'Musteranalyse', description: 'Erfasse Routinen und Energielevel, um zu identifizieren, wo dein System unter Spannung steht.' },
-        { title: 'Personalisierte Strategie', description: 'Datengestützter Fahrplan, der über Intuition hinausgeht – für messbaren Fortschritt.' },
+        { title: 'Klinische Fragebögen', description: 'Validierte psychologische Tests zur systematischen Erfassung deiner aktuellen Situation.' },
+        { title: 'Verhaltensbeobachtung', description: 'Professionelle Analyse von Mustern und Dynamiken in deinem Alltag.' },
+        { title: 'Vitaldaten-Tracking', description: 'Objektive Messung von Schlaf, HRV und Stressindikatoren für messbaren Fortschritt.' },
       ],
     },
     coaching: {
       label: 'Holomotion Coaching',
       title: 'Coaching',
-      intro: 'Holomotion Coaching verbindet kognitive Strategie mit Körperintelligenz. Wenn Entscheidungen nicht nur logisch klingen, sondern sich auch im Bauch richtig anfühlen, entstehen nachhaltige Gewohnheiten ganz natürlich. Wir überbrücken die Lücke zwischen dem, was dein Verstand weiß, und dem, was dein Körper braucht.',
+      intro: 'Tägliche Strategie, Gewohnheitsbildung und nachhaltige Veränderung. Wir überbrücken die Lücke zwischen dem, was dein Verstand weiß, und dem, was dein Körper braucht.',
       items: [
-        { title: 'Verkörperte Strategie', description: 'Integriere kognitive Planung mit somatischem Bewusstsein für Entscheidungen, die halten.' },
-        { title: 'Zielausrichtung', description: 'Kläre, was wirklich zählt, und schaffe gangbare Wege nach vorn.' },
-        { title: 'Nachhaltige Gewohnheiten', description: 'Baue Routinen auf, die sowohl deine Ambitionen als auch dein Wohlbefinden ehren.' },
+        { title: 'Tagesstruktur', description: 'Praktische Strategien für deinen Alltag, die sofort umsetzbar sind.' },
+        { title: 'Gewohnheitsbildung', description: 'Schritt für Schritt neue Muster etablieren, die zu dir passen.' },
+        { title: 'Nachhaltige Veränderung', description: 'Routinen aufbauen, die langfristig Bestand haben.' },
       ],
     },
   },
@@ -138,7 +139,7 @@ export const de: Translations = {
   
   gestalttherapie: {
     scrollTelling: {
-      title: 'Was ist Gestalttherapie?',
+      title: 'Gestalttherapie (Herzstück meiner Arbeit)',
       intro: 'Gestalttherapie ist ein humanistischer Therapieansatz, der auf drei wesentlichen Grundpfeilern basiert:',
       pillars: [
         {

@@ -3,6 +3,7 @@ import { Translations } from './types';
 export const en: Translations = {
   nav: {
     gestalttherapie: 'Gestalt Therapy',
+    approach: 'Approach',
     angebot: 'Services',
     ueberMich: 'About Me',
     kontakt: 'Contact',
@@ -69,35 +70,35 @@ export const en: Translations = {
   },
   
   myWorkSection: {
-    title: 'My Work',
+    title: 'Approach',
     description: 'Change happens not just through thinking. While the mind understands, true movement only begins when feeling and logic interweave. If a change doesn\'t make holistic sense—both in your head and your heart—it won\'t stick. We use Diagnostics, Gestalt Therapy, and Coaching to bridge this gap and create lasting experience.',
-    link: 'More About My Work',
+    link: 'More About My Approach',
     quote: 'Lose your mind and come to your senses.',
   },
   
   myWork: {
     hero: {
-      title: 'My Work',
-      subtitle: 'Gestalt Therapy, Psychological Diagnostics & Coaching – integrated for sustainable transformation.',
+      title: 'Approach',
+      subtitle: 'My approach combines scientific precision with deep emotional experience. We view change as a holistic process, resting on a stable foundation of insight and lived experience. To enable sustainable movement, we use the analytical clarity of diagnostics, the immediate depth of Gestalt therapy, and the strategic power of coaching. Together, we create a space where development is not only understood but embodied in the here and now. The connection of body, mind, and data serves as a compass for your path. This way, change becomes a process that makes holistic sense for you. We go beyond mere talking to create real transformation.',
     },
     diagnostics: {
       label: 'Evidence-Based Assessment',
-      title: 'Psychological Diagnostics',
-      intro: 'Precision through physiological data. We use sleep tracking, HRV monitoring, and evidence-based psychological assessment to create an objective baseline for your transformation journey.',
+      title: 'Diagnostics',
+      intro: 'Precision through clinical questionnaires, behavioral observation, and vital data tracking. We use scientifically validated methods to create an objective foundation for your transformation journey.',
       items: [
-        { title: 'Vital Signs & Biomarkers', description: 'Blood values, sleep quality, and stress indicators provide objective health metrics.' },
-        { title: 'Pattern Analysis', description: 'Track routines and energy levels to identify where your system is under strain.' },
-        { title: 'Personalized Strategy', description: 'Data-driven roadmap that goes beyond intuition for measurable progress.' },
+        { title: 'Clinical Questionnaires', description: 'Validated psychological assessments for systematic evaluation of your current situation.' },
+        { title: 'Behavioral Observation', description: 'Professional analysis of patterns and dynamics in your daily life.' },
+        { title: 'Vital Data Tracking', description: 'Objective measurement of sleep, HRV, and stress indicators for measurable progress.' },
       ],
     },
     coaching: {
       label: 'Holomotion Coaching',
       title: 'Coaching',
-      intro: 'Holomotion Coaching combines cognitive strategy with body intelligence. When decisions don\'t just sound logical but also feel right in your gut, sustainable habits emerge naturally. We bridge the gap between what your mind knows and what your body needs.',
+      intro: 'Daily strategy, habit formation, and sustainable change. We bridge the gap between what your mind knows and what your body needs.',
       items: [
-        { title: 'Embodied Strategy', description: 'Integrate cognitive planning with somatic awareness for decisions that stick.' },
-        { title: 'Goal Alignment', description: 'Clarify what truly matters and create actionable pathways forward.' },
-        { title: 'Sustainable Habits', description: 'Build routines that honor both your ambitions and your wellbeing.' },
+        { title: 'Daily Structure', description: 'Practical strategies for your everyday life that can be implemented immediately.' },
+        { title: 'Habit Formation', description: 'Step by step establishing new patterns that fit you.' },
+        { title: 'Sustainable Change', description: 'Building routines that last long-term.' },
       ],
     },
   },
@@ -138,7 +139,7 @@ export const en: Translations = {
   
   gestalttherapie: {
     scrollTelling: {
-      title: 'What is Gestalt Therapy?',
+      title: 'Gestalt Therapy (The Heart of My Work)',
       intro: 'Gestalt Therapy is a humanistic therapeutic approach based on three essential pillars:',
       pillars: [
         {

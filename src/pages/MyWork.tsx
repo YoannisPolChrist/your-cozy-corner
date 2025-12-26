@@ -2,7 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { AnimatedSection, AnimatedItem, StaggerContainer } from "@/components/AnimatedSection";
-import { Hand, Brain, Palette, ArrowRight, Activity, BarChart3, HeartPulse, Dumbbell, Target, Zap } from "lucide-react";
+import { Hand, Brain, Palette, ArrowRight, Activity, BarChart3, HeartPulse, Dumbbell, Target, Zap, User, Crosshair } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import gestaltKontaktzyklus from "@/assets/gestalt-kontaktzyklus.webp";
@@ -32,6 +32,14 @@ const MyWork = () => {
   const diagnosticsIcons = [Activity, BarChart3, HeartPulse];
   const coachingIcons = [Dumbbell, Target, Zap];
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -43,18 +51,57 @@ const MyWork = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="font-heading text-4xl md:text-6xl text-white mb-6"
+              className="font-heading text-4xl md:text-6xl text-white mb-8"
             >
-              {t.myWork?.hero?.title || "My Work"}
+              {t.myWork?.hero?.title || "Approach"}
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-white/85 text-lg md:text-xl max-w-3xl mx-auto"
+              className="text-white/85 text-base md:text-lg max-w-4xl mx-auto leading-relaxed mb-12"
             >
-              {t.myWork?.hero?.subtitle || "Gestalttherapie, Psychologische Diagnostik & Coaching – integriert für nachhaltige Veränderung."}
+              {t.myWork?.hero?.subtitle}
             </motion.p>
+            
+            {/* Icon Navigation */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex justify-center items-center gap-8 md:gap-16"
+            >
+              <a
+                href="#diagnostics"
+                onClick={(e) => handleSmoothScroll(e, 'diagnostics')}
+                className="flex flex-col items-center gap-3 text-white/70 hover:text-gold-accent transition-colors duration-300 group cursor-pointer"
+              >
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-white/30 group-hover:border-gold-accent flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                  <BarChart3 className="w-7 h-7 md:w-9 md:h-9" strokeWidth={1.5} />
+                </div>
+                <span className="text-sm md:text-base font-medium">Diagnostik</span>
+              </a>
+              <a
+                href="#gestalt"
+                onClick={(e) => handleSmoothScroll(e, 'gestalt')}
+                className="flex flex-col items-center gap-3 text-white/70 hover:text-gold-accent transition-colors duration-300 group cursor-pointer"
+              >
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-white/30 group-hover:border-gold-accent flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                  <User className="w-7 h-7 md:w-9 md:h-9" strokeWidth={1.5} />
+                </div>
+                <span className="text-sm md:text-base font-medium">Gestalt</span>
+              </a>
+              <a
+                href="#coaching"
+                onClick={(e) => handleSmoothScroll(e, 'coaching')}
+                className="flex flex-col items-center gap-3 text-white/70 hover:text-gold-accent transition-colors duration-300 group cursor-pointer"
+              >
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-white/30 group-hover:border-gold-accent flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                  <Crosshair className="w-7 h-7 md:w-9 md:h-9" strokeWidth={1.5} />
+                </div>
+                <span className="text-sm md:text-base font-medium">Coaching</span>
+              </a>
+            </motion.div>
           </div>
         </section>
 
