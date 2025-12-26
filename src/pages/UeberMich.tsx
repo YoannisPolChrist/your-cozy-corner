@@ -66,13 +66,85 @@ const UeberMich = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-20">
-        {/* Section 1: Hero - White Background */}
+        {/* Section 1: My Mission - Off-White Background */}
         <motion.section
           initial="hidden"
           whileInView="visible"
           viewport={viewportSettings}
           variants={staggerContainer}
-          className="pt-12 md:pt-[68px] pb-16 md:pb-32 bg-white"
+          className="pt-12 md:pt-[68px] pb-16 md:pb-32 bg-off-white"
+        >
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              {/* Mobile: Title first, Image second, Description third */}
+              <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-16 items-center">
+                {/* Mobile-only: Title at top */}
+                <motion.div variants={staggerContainer} className="space-y-2 md:hidden order-1">
+                  <motion.span
+                    variants={fadeUp}
+                    className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-xs"
+                  >
+                    {t.ueberMich.persoenlich.label}
+                  </motion.span>
+                  <motion.h1
+                    variants={fadeUp}
+                    className="font-heading text-2xl text-primary leading-tight"
+                  >
+                    {t.ueberMich.persoenlich.title}
+                  </motion.h1>
+                </motion.div>
+
+                {/* Image with Gold Frame - Shows after title on mobile, left on desktop */}
+                <motion.div className="relative order-2 md:order-1">
+                  {/* Gold Frame - Slides out from behind with delay */}
+                  <motion.div
+                    variants={goldFrameVariants}
+                    className="absolute bottom-[8px] right-[8px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-xl md:rounded-2xl"
+                  />
+                  {/* Main Image - Portrait Rectangle with Parallax */}
+                  <ParallaxImageWrapper
+                    src={johannesPersoenlich}
+                    alt="Johannes Christ"
+                    className="object-cover"
+                    aspectRatio="aspect-[3/4]"
+                  />
+                </motion.div>
+
+                {/* Text Content - Right Side on desktop, after image on mobile */}
+                <motion.div variants={staggerContainer} className="space-y-4 md:space-y-6 order-3 md:order-2">
+                  {/* Desktop-only: Title */}
+                  <motion.span
+                    variants={fadeUp}
+                    className="hidden md:block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
+                  >
+                    {t.ueberMich.persoenlich.label}
+                  </motion.span>
+                  <motion.h1
+                    variants={fadeUp}
+                    className="hidden md:block font-heading text-[calc(3rem+3px)] text-primary leading-tight"
+                  >
+                    {t.ueberMich.persoenlich.title}
+                  </motion.h1>
+                  <motion.div
+                    variants={fadeUp}
+                    className="space-y-3 md:space-y-4 text-muted-foreground leading-relaxed text-sm md:text-base"
+                  >
+                    <p>{t.ueberMich.persoenlich.description1}</p>
+                    <p>{t.ueberMich.persoenlich.description2}</p>
+                  </motion.div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* Section 2: About Me - White Background */}
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          variants={staggerContainer}
+          className="py-16 md:py-32 bg-white"
         >
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -85,30 +157,16 @@ const UeberMich = () => {
                   >
                     {t.ueberMich.hero.label}
                   </motion.span>
-                  <motion.h1
+                  <motion.h2
                     variants={fadeUp}
                     className="font-heading text-2xl text-primary leading-tight"
                   >
                     {t.ueberMich.hero.title}
-                  </motion.h1>
+                  </motion.h2>
                 </motion.div>
 
-                {/* Image with Gold Frame - Shows after title on mobile */}
-                <motion.div className="relative order-2 md:order-1">
-                  <motion.div
-                    variants={goldFrameVariants}
-                    className="absolute bottom-[8px] right-[8px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-xl md:rounded-2xl"
-                  />
-                  <ParallaxImageWrapper
-                    src={johannesHeroPortrait}
-                    alt="Johannes Christ - Gestalttherapeut"
-                    className="object-cover object-center"
-                    aspectRatio="aspect-[3/4]"
-                  />
-                </motion.div>
-
-                {/* Text Content - after image on mobile, right on desktop */}
-                <motion.div variants={staggerContainer} className="space-y-4 md:space-y-6 order-3 md:order-2">
+                {/* Text Content - left on desktop, after title on mobile */}
+                <motion.div variants={staggerContainer} className="space-y-4 md:space-y-6 order-3 md:order-1">
                   {/* Desktop-only: Title */}
                   <motion.span
                     variants={fadeUp}
@@ -116,12 +174,12 @@ const UeberMich = () => {
                   >
                     {t.ueberMich.hero.label}
                   </motion.span>
-                  <motion.h1
+                  <motion.h2
                     variants={fadeUp}
-                    className="hidden md:block font-heading text-[calc(3rem+3px)] text-primary leading-tight"
+                    className="hidden md:block font-heading text-[calc(2.25rem+3px)] text-primary leading-tight"
                   >
                     {t.ueberMich.hero.title}
-                  </motion.h1>
+                  </motion.h2>
                   <motion.div
                     variants={fadeUp}
                     className="space-y-3 md:space-y-4 text-muted-foreground leading-relaxed text-sm md:text-base"
@@ -130,12 +188,26 @@ const UeberMich = () => {
                     <p>{t.ueberMich.hero.description2}</p>
                   </motion.div>
                 </motion.div>
+
+                {/* Image with Gold Frame - Shows after title on mobile */}
+                <motion.div className="relative order-2 md:order-2">
+                  <motion.div
+                    variants={goldFrameVariants}
+                    className="absolute bottom-[8px] left-[8px] md:bottom-[20px] md:left-[20px] w-full h-full bg-[#c5a065] rounded-xl md:rounded-2xl"
+                  />
+                  <ParallaxImageWrapper
+                    src={johannesHeroPortrait}
+                    alt="Johannes Christ - Gestalttherapeut"
+                    className="object-cover object-center"
+                    aspectRatio="aspect-[3/4]"
+                  />
+                </motion.div>
               </div>
             </div>
           </div>
         </motion.section>
 
-        {/* Section 2: Process - Deep Teal Background */}
+        {/* Section 3: Qualifications - Deep Teal Background */}
         <motion.section
           initial="hidden"
           whileInView="visible"
@@ -249,78 +321,6 @@ const UeberMich = () => {
                         </AccordionContent>
                       </AccordionItem>
                     </Accordion>
-                  </motion.div>
-                </motion.div>
-              </div>
-            </div>
-          </div>
-        </motion.section>
-
-        {/* Section 3: Personal - Off-White Background */}
-        <motion.section
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportSettings}
-          variants={staggerContainer}
-          className="py-16 md:py-32 bg-off-white"
-        >
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              {/* Mobile: Title first, Image second, Description third */}
-              <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-16 items-center">
-                {/* Mobile-only: Title at top */}
-                <motion.div variants={staggerContainer} className="space-y-2 md:hidden order-1">
-                  <motion.span
-                    variants={fadeUp}
-                    className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-xs"
-                  >
-                    {t.ueberMich.persoenlich.label}
-                  </motion.span>
-                  <motion.h2
-                    variants={fadeUp}
-                    className="font-heading text-2xl text-primary leading-tight"
-                  >
-                    {t.ueberMich.persoenlich.title}
-                  </motion.h2>
-                </motion.div>
-
-                {/* Image with Gold Frame - Shows after title on mobile, left on desktop */}
-                <motion.div className="relative order-2 md:order-1">
-                  {/* Gold Frame - Slides out from behind with delay */}
-                  <motion.div
-                    variants={goldFrameVariants}
-                    className="absolute bottom-[8px] right-[8px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-xl md:rounded-2xl"
-                  />
-                  {/* Main Image - Portrait Rectangle with Parallax */}
-                  <ParallaxImageWrapper
-                    src={johannesPersoenlich}
-                    alt="Johannes Christ"
-                    className="object-cover"
-                    aspectRatio="aspect-[3/4]"
-                  />
-                </motion.div>
-
-                {/* Text Content - Right Side on desktop, after image on mobile */}
-                <motion.div variants={staggerContainer} className="space-y-4 md:space-y-6 order-3 md:order-2">
-                  {/* Desktop-only: Title */}
-                  <motion.span
-                    variants={fadeUp}
-                    className="hidden md:block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
-                  >
-                    {t.ueberMich.persoenlich.label}
-                  </motion.span>
-                  <motion.h2
-                    variants={fadeUp}
-                    className="hidden md:block font-heading text-[calc(1.875rem+3px)] md:text-[calc(2.25rem+3px)] text-primary leading-tight"
-                  >
-                    {t.ueberMich.persoenlich.title}
-                  </motion.h2>
-                  <motion.div
-                    variants={fadeUp}
-                    className="space-y-3 md:space-y-4 text-muted-foreground leading-relaxed text-sm md:text-base"
-                  >
-                    <p>{t.ueberMich.persoenlich.description1}</p>
-                    <p>{t.ueberMich.persoenlich.description2}</p>
                   </motion.div>
                 </motion.div>
               </div>
