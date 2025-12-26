@@ -5,8 +5,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Footer } from "@/components/Footer";
 import {
@@ -37,8 +38,21 @@ const Kontakt = () => {
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
+  const location = useLocation();
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const subject = searchParams.get("subject");
+    if (subject) {
+      setFormData(prev => ({
+        ...prev,
+        message: `Ich interessiere mich für: ${subject}\n\n`
+      }));
+    }
+  }, [location]);
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-off-white">
       <Navigation />
       <main className="pt-20">
         {/* Hero Section */}
@@ -47,7 +61,7 @@ const Kontakt = () => {
           whileInView="visible"
           viewport={viewportSettings}
           variants={staggerContainer}
-          className="py-20 bg-gradient-to-b from-gray-light to-background"
+          className="py-20 bg-off-white"
         >
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">

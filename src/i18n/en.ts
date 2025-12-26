@@ -3,24 +3,26 @@ import { Translations } from './types';
 export const en: Translations = {
   nav: {
     gestalttherapie: 'Gestalt Therapy',
-    approach: 'Approach',
+    approach: 'My Approach',
     angebot: 'Services',
     ueberMich: 'About Me',
     kontakt: 'Contact',
+    subtitle1: 'Gestalt Therapist, Coach,',
+    subtitle2: 'M.Sc. Psychology (in training)',
   },
-  
+
   hero: {
     title: 'Change happens in the',
     titleHighlight: 'Here and Now',
     subtitle: 'Guidance on your path to greater clarity, fulfillment and inner peace – through humanistic Gestalt therapy, counseling and coaching.',
     cta: 'Book a discovery call',
   },
-  
+
   meet: {
     title: 'Change happens –',
-    description: 'Ideally within a framework that holds and provides safety. That this framework is often missing is, of course, understandable. As a Gestalt therapist, coach and M.Sc. Psychology (in training), I offer you – through presence, competence and a touch of humor – the space needed for the change you desire to happen!',
+    description: 'Ideally within a framework that holds and provides safety. That this framework is often missing is, of course, understandable. As a Gestalt therapist, coach and M.Sc. Psychology (in training), I offer you – through presence, competence and a touch of humor – the space needed for the change you desire to happen!\n\nHi - I\'m Johannes.',
   },
-  
+
   painPoints: {
     title: 'When your inner compass stands still',
     subtitle: 'Often we sense that something is missing, but we can\'t quite put our finger on it.',
@@ -39,56 +41,78 @@ export const en: Translations = {
       },
     ],
   },
-  
+
   services: {
     title: 'My Services',
     subtitle: 'Individual spaces for your development',
     items: [
       {
-        title: 'Therapy',
+        title: 'Diagnostics',
+        description: 'Professional assessment and clarity',
+      },
+      {
+        title: 'Gestalt Therapy',
         description: 'Deep work on emotional themes',
       },
       {
         title: 'Coaching',
-        description: 'Focused development, goal-oriented, practical, hands-on',
-      },
-      {
-        title: 'Diagnostics',
-        description: 'Professional assessment and clarity',
+        description: 'Focused development, goal-oriented, practical',
       },
     ],
-    cta: 'Discover all services',
+    cta: 'Discover services',
   },
-  
+
   gestaltSection: {
     label: 'The therapeutic approach',
     title: 'My Mission',
     titleHighlight: '',
     description: 'Change requires more than understanding. Real growth happens where feeling and thought interweave. My work is about touching points that pure talking cannot reach – so that change doesn\'t just appear logical, but also feels right. Because only what makes sense truly moves us.',
     link: 'Learn more about Gestalt Therapy',
-    quote: 'Be fully here, fully now – the rest will follow.',
+    quote: 'Perds la tête et retrouve tes sens.\n\n— Fritz Perls',
   },
-  
+
   myWorkSection: {
-    title: 'Approach',
+    title: 'My Approach',
     description: 'Change happens not just through thinking. While the mind understands, true movement only begins when feeling and logic interweave. If a change doesn\'t make holistic sense—both in your head and your heart—it won\'t stick. We use Diagnostics, Gestalt Therapy, and Coaching to bridge this gap and create lasting experience.',
     link: 'More About My Approach',
-    quote: 'Lose your mind and come to your senses.',
+    quote: 'Change occurs when one becomes what he is, not when he tries to become what he is not.\n\n— Arnold Beisser',
   },
-  
+
   myWork: {
     hero: {
-      title: 'Approach',
-      subtitle: 'My approach combines scientific precision with deep emotional experience. We view change as a holistic process, resting on a stable foundation of insight and lived experience. To enable sustainable movement, we use the analytical clarity of diagnostics, the immediate depth of Gestalt therapy, and the strategic power of coaching. Together, we create a space where development is not only understood but embodied in the here and now. The connection of body, mind, and data serves as a compass for your path. This way, change becomes a process that makes holistic sense for you. We go beyond mere talking to create real transformation.',
+      title: 'My Approach',
+      subtitle: 'My approach combines scientific precision with deep emotional experience. We view change as a holistic process, resting on a stable foundation of insight and lived experience. Together, we create a space where development is not only understood but embodied in the here and now.',
+      iconDescriptions: {
+        diagnostik: 'Analytical clarity through data',
+        gestalt: 'Immediate depth in experience',
+        coaching: 'Strategic power for change',
+      },
+      iconCards: {
+        diagnostik: {
+          title: 'Holistic Diagnostics',
+          subline: 'PRECISION INSTEAD OF GUT FEELING',
+          description: 'Based on Gestalt therapy and scientific practices, we conduct a fundamental assessment. This includes blood, movement, or nutritional analyses as needed.',
+        },
+        gestalt: {
+          title: 'Integrative Gestalt Therapy',
+          subline: 'WHEN UNDERSTANDING ISN\'T ENOUGH',
+          description: 'We resolve old patterns where they originated: in contact and in the body. Instead of years of \'talking about it\', we use the here and now to make emotional blockages tangible and changeable.',
+        },
+        coaching: {
+          title: 'Holomotion Coaching',
+          subline: 'CLARITY THROUGH BODY INTELLIGENCE',
+          description: 'Strategy meets intuition. We combine cognitive planning with the wisdom of your body. For decisions that not only sound logical but also feel right in your gut.',
+        },
+      },
     },
     diagnostics: {
       label: 'Evidence-Based Assessment',
       title: 'Diagnostics',
-      intro: 'Precision through clinical questionnaires, behavioral observation, and vital data tracking. We use scientifically validated methods to create an objective foundation for your transformation journey.',
+      intro: 'Precision through questionnaires, behavioral observation, and vital data tracking. We use scientifically validated methods to create an objective foundation for your transformation journey.',
       items: [
-        { title: 'Clinical Questionnaires', description: 'Validated psychological assessments for systematic evaluation of your current situation.' },
-        { title: 'Behavioral Observation', description: 'Professional analysis of patterns and dynamics in your daily life.' },
-        { title: 'Vital Data Tracking', description: 'Objective measurement of sleep, HRV, and stress indicators for measurable progress.' },
+        { title: 'Questionnaires', description: 'Validated psychological assessments for systematic evaluation of your current situation. These standardized instruments help us to objectively identify burdening patterns, stressors, and resources.' },
+        { title: 'Behavioral Observation', description: 'Professional analysis of patterns and dynamics in your daily life. We look together at where energy is lost and which routines support or drain you.' },
+        { title: 'Biomarkers & Vital Data', description: 'Objective measurement of blood values, sleep quality, and gut health. We use lab diagnostics and tracking to visualize physical causes and connections.' },
       ],
     },
     coaching: {
@@ -96,13 +120,18 @@ export const en: Translations = {
       title: 'Coaching',
       intro: 'Daily strategy, habit formation, and sustainable change. We bridge the gap between what your mind knows and what your body needs.',
       items: [
-        { title: 'Daily Structure', description: 'Practical strategies for your everyday life that can be implemented immediately.' },
-        { title: 'Habit Formation', description: 'Step by step establishing new patterns that fit you.' },
-        { title: 'Sustainable Change', description: 'Building routines that last long-term.' },
+        { title: 'Daily Structure', description: 'Practical strategies for your everyday life that can be implemented immediately. We develop routines that optimally use your energy and fit your life.' },
+        { title: 'Habit Formation', description: 'Step by step establishing new patterns that fit you. Small, sustainable changes instead of radical upheavals that don\'t last.' },
+        { title: 'Sustainable Change', description: 'Building routines that last long-term. Through regular reflection and adjustment, you develop a structure that grows with you.' },
       ],
     },
+    cta: {
+      title: 'Curious?',
+      description: 'Discover my services and find out which form of support fits you best.',
+      button: 'View Services',
+    },
   },
-  
+
   aboutPreview: {
     label: 'Your companion',
     title: 'About Me',
@@ -111,7 +140,7 @@ export const en: Translations = {
     whyDescription2: 'What fascinates me about Gestalt therapy to this day, and what I experience as so profoundly effective, is this transition from mere talking to holistic experiencing. There\'s a level that runs deeper than logic. When we truly weave mind and feeling together, an experience emerges that is lasting. Change then no longer happens through effort, but because it finally makes sense. For as long as something makes no sense to us, we don\'t move.',
     link: 'More about me',
   },
-  
+
   focusAreas: {
     title: 'Focus Areas of My Practice',
     items: [
@@ -129,15 +158,19 @@ export const en: Translations = {
       },
     ],
   },
-  
+
   cta: {
     title: 'Ready for the next step?',
     description: 'Book a free discovery call or simply give me a ring to find out if working together makes sense.',
     button: 'Get in touch',
     buttonAlt: 'Let\'s explore what makes sense for you',
   },
-  
+
   gestalttherapie: {
+    gestaltIntro: {
+      title: 'Gestalt Therapy',
+      description: 'Gestalt Therapy is a humanistic, experiential approach that views the person as a whole – body, mind, and soul in interaction with their environment. At its core is conscious awareness and experiencing in the present moment. Instead of just talking about problems, we work to make them tangible and changeable in the here and now. This is how genuine, lasting transformation emerges.',
+    },
     scrollTelling: {
       title: 'Gestalt Therapy (The Heart of My Work)',
       intro: 'Gestalt Therapy is a humanistic therapeutic approach based on three essential pillars:',
@@ -203,7 +236,7 @@ export const en: Translations = {
       button: 'Get in touch',
     },
   },
-  
+
   angebot: {
     title: 'Services',
     process: {
@@ -212,30 +245,31 @@ export const en: Translations = {
     },
     services: [
       {
+        title: 'Holistic Diagnostics',
+        subline: 'PRECISION INSTEAD OF GUT FEELING',
+        description: 'Based on Gestalt therapy and scientific practices, we conduct a fundamental assessment. This includes blood, movement, or nutritional analyses as needed.',
+      },
+      {
         title: 'Integrative Gestalt Therapy',
         subline: 'WHEN UNDERSTANDING ISN\'T ENOUGH',
-        description: 'We dissolve old patterns where they originated: in contact and in the body. Instead of years of "talking about it," we use the here and now to make emotional blockages tangible and changeable.',
+        description: 'We resolve old patterns where they originated: in contact and in the body. Instead of years of \'talking about it\', we use the here and now to make emotional blockages tangible and changeable.',
       },
       {
         title: 'Holomotion Coaching',
         subline: 'CLARITY THROUGH BODY INTELLIGENCE',
         description: 'Strategy meets intuition. We combine cognitive planning with the wisdom of your body. For decisions that not only sound logical but also feel right in your gut.',
       },
-      {
-        title: 'Psychological Diagnostics',
-        subline: 'PRECISION INSTEAD OF GUT FEELING',
-        description: 'Based on Gestalt therapy and scientific practices, we conduct a thorough assessment. This may include blood, movement or nutritional analyses as needed.',
-      },
     ],
     checkup: {
-      label: 'THE BASELINE ASSESSMENT',
-      title: 'We can only change what we understand.',
+      label: 'The Baseline Assessment',
+      title: 'Understanding as the Foundation for Change',
+      intro: 'The baseline assessment connects objective insights from diagnostics with your subjective experience. This creates a complete picture – the foundation for a path that truly fits you.',
       features: [
-        { title: 'Vital Signs & Body', description: 'We look at blood values, sleep and resources to rule out physical causes for psychological issues.' },
-        { title: 'Tracking & Patterns', description: 'We assess the current state of your routines. Where are you losing energy? We make the invisible measurable.' },
-        { title: 'Strategy', description: 'Based on data, we create your individual roadmap that goes beyond Gestalt therapy, i.e. your process. Progress is therefore no coincidence.' },
+        { title: 'Analysis', description: 'We evaluate your diagnostic data and identify recurring patterns.' },
+        { title: 'Reflection', description: 'Together we explore what these insights mean for your life and goals.' },
+        { title: 'Direction', description: 'We develop a clear, personalized roadmap for your next steps.' },
       ],
-      diagnosticIntegration: 'Data gives us the map, but walking the path is an emotional experience. I use sound diagnostics as a foundation to go deeper where pure talking stops.',
+      diagnosticIntegration: 'Data gives us the map, but walking the path is an emotional experience.',
     },
     konditionen: {
       title: 'Terms & Collaboration',
@@ -282,7 +316,7 @@ export const en: Translations = {
         },
         {
           question: 'Does health insurance cover the sessions?',
-          answer: 'As a psychologist (M.Sc.) and Gestalt therapist, I work in private practice. This typically means that statutory health insurance does not cover the costs. Private supplementary insurance or private insurers reimburse part of the costs depending on the plan. The advantage for you: We can start immediately without bureaucratic hurdles and flexibly adapt the duration and frequency of sessions to your process.',
+          answer: 'As M.Sc. Psychology and Gestalt therapist, I work in private practice. This typically means that statutory health insurance does not cover the costs. Private supplementary insurance or private insurers reimburse part of the costs depending on the plan. The advantage for you: We can start immediately without bureaucratic hurdles and flexibly adapt the duration and frequency of sessions to your process.',
         },
         {
           question: 'What exactly do the "data" and vital signs bring to therapy?',
@@ -300,7 +334,7 @@ export const en: Translations = {
       button: 'Get in touch',
     },
   },
-  
+
   ueberMich: {
     hero: {
       label: 'JOHANNES CHRIST — GESTALT THERAPIST, MOVEMENT THERAPY & PREVENTION (B.A.), PSYCHOLOGY (M.SC.) (IN TRAINING)',
@@ -358,7 +392,7 @@ export const en: Translations = {
       button: 'Get in touch',
     },
   },
-  
+
   kontakt: {
     hero: {
       title: 'Contact',
@@ -392,7 +426,7 @@ export const en: Translations = {
       description: 'All sessions can also take place online via video.',
     },
   },
-  
+
   footer: {
     kontakt: 'Contact',
     rechtliches: 'Legal',
@@ -400,7 +434,7 @@ export const en: Translations = {
     impressum: 'Legal Notice',
     copyright: 'Johannes Christ · Gestalt Therapy & Coaching',
   },
-  
+
   common: {
     learnMore: 'Learn more',
     bookAppointment: 'Book appointment',

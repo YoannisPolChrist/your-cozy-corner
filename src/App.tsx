@@ -30,37 +30,37 @@ const AppRoutes = () => (
     <Routes>
       {/* Redirect root to language-prefixed route */}
       <Route path="/" element={<Navigate to="/en" replace />} />
-      
+
       {/* German routes */}
       <Route path="/de" element={<Index />} />
       <Route path="/de/gestalttherapie" element={<Gestalttherapie />} />
-      <Route path="/de/meine-arbeit" element={<MyWork />} />
+      <Route path="/de/ansatz" element={<MyWork />} />
       <Route path="/de/angebot" element={<Angebot />} />
       <Route path="/de/ueber-mich" element={<UeberMich />} />
       <Route path="/de/kontakt" element={<Kontakt />} />
-      
+
       {/* English routes */}
       <Route path="/en" element={<Index />} />
       <Route path="/en/gestalt-therapy" element={<Gestalttherapie />} />
-      <Route path="/en/my-work" element={<MyWork />} />
+      <Route path="/en/approach" element={<MyWork />} />
       <Route path="/en/services" element={<Angebot />} />
       <Route path="/en/about-me" element={<UeberMich />} />
       <Route path="/en/contact" element={<Kontakt />} />
-      
+
       {/* French routes */}
       <Route path="/fr" element={<Index />} />
       <Route path="/fr/gestalt-therapie" element={<Gestalttherapie />} />
-      <Route path="/fr/mon-travail" element={<MyWork />} />
+      <Route path="/fr/approche" element={<MyWork />} />
       <Route path="/fr/services" element={<Angebot />} />
       <Route path="/fr/a-propos" element={<UeberMich />} />
       <Route path="/fr/contact" element={<Kontakt />} />
-      
+
       {/* Legacy routes - redirect to German */}
       <Route path="/gestalttherapie" element={<Navigate to="/de/gestalttherapie" replace />} />
       <Route path="/angebot" element={<Navigate to="/de/angebot" replace />} />
       <Route path="/ueber-mich" element={<Navigate to="/de/ueber-mich" replace />} />
       <Route path="/kontakt" element={<Navigate to="/de/kontakt" replace />} />
-      
+
       <Route path="*" element={<NotFound />} />
     </Routes>
   </Suspense>

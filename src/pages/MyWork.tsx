@@ -2,7 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { AnimatedSection, AnimatedItem, StaggerContainer } from "@/components/AnimatedSection";
-import { Hand, Brain, Palette, ArrowRight, Activity, BarChart3, HeartPulse, Dumbbell, Target, Zap, User, Crosshair } from "lucide-react";
+import { Heart, Brain, Palette, ArrowRight, Activity, Compass, HeartPulse, Dumbbell, Target, Zap, Map, BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import gestaltKontaktzyklus from "@/assets/gestalt-kontaktzyklus.webp";
@@ -15,7 +15,7 @@ import { useLanguage } from "@/i18n";
 const MyWork = () => {
   const { t, getLocalizedPath } = useLanguage();
   const location = useLocation();
-  
+
   // Handle smooth scroll to section on page load
   useEffect(() => {
     if (location.hash) {
@@ -28,9 +28,10 @@ const MyWork = () => {
     }
   }, [location.hash]);
 
-  const ressourcenIcons = [Hand, Brain, Palette];
+  const ressourcenIcons = [Heart, Brain, Palette];
   const diagnosticsIcons = [Activity, BarChart3, HeartPulse];
   const coachingIcons = [Dumbbell, Target, Zap];
+  const checkupIcons = [Activity, BarChart3, Map];
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
@@ -45,13 +46,13 @@ const MyWork = () => {
       <Navigation />
       <main className="pt-24">
         {/* Hero Section with H1 */}
-        <section className="py-16 md:py-24 bg-primary">
+        <section className="py-12 md:py-20 bg-off-white">
           <div className="container mx-auto px-4 text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="font-heading text-4xl md:text-6xl text-white mb-8"
+              className="font-heading text-4xl md:text-6xl text-primary mb-24"
             >
               {t.myWork?.hero?.title || "Approach"}
             </motion.h1>
@@ -59,58 +60,76 @@ const MyWork = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-white/85 text-base md:text-lg max-w-4xl mx-auto leading-relaxed mb-12"
+              className="text-muted-foreground text-base md:text-lg max-w-3xl mx-auto leading-relaxed mb-16"
             >
               {t.myWork?.hero?.subtitle}
             </motion.p>
-            
-            {/* Icon Navigation */}
+
+            {/* Icon Navigation - Enhanced */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex justify-center items-center gap-8 md:gap-16"
+              className="flex justify-center items-stretch gap-6 md:gap-12 lg:gap-20"
             >
               <a
                 href="#diagnostics"
                 onClick={(e) => handleSmoothScroll(e, 'diagnostics')}
-                className="flex flex-col items-center gap-3 text-white/70 hover:text-gold-accent transition-colors duration-300 group cursor-pointer"
+                className="flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl bg-primary border border-accent/20 shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group relative overflow-hidden cursor-pointer max-w-[200px] md:max-w-[240px]"
               >
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-white/30 group-hover:border-gold-accent flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-                  <BarChart3 className="w-7 h-7 md:w-9 md:h-9" strokeWidth={1.5} />
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white shadow-sm group-hover:border-accent/30 group-hover:shadow-md flex items-center justify-center transition-all duration-300">
+                  <Compass className="w-9 h-9 md:w-11 md:h-11 text-accent transition-colors duration-300" strokeWidth={1.5} />
                 </div>
-                <span className="text-sm md:text-base font-medium">Diagnostik</span>
+                <span className="text-base md:text-lg font-heading font-semibold text-white text-center">
+                  Diagnostik
+                </span>
+                <span className="text-xs md:text-sm text-white/80 text-center leading-relaxed px-2">
+                  {t.myWork?.hero?.iconDescriptions?.diagnostik || "Analytische Klarheit durch Daten"}
+                </span>
               </a>
               <a
                 href="#gestalt"
                 onClick={(e) => handleSmoothScroll(e, 'gestalt')}
-                className="flex flex-col items-center gap-3 text-white/70 hover:text-gold-accent transition-colors duration-300 group cursor-pointer"
+                className="flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl bg-primary border border-accent/20 shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group relative overflow-hidden cursor-pointer max-w-[200px] md:max-w-[240px]"
               >
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-white/30 group-hover:border-gold-accent flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-                  <User className="w-7 h-7 md:w-9 md:h-9" strokeWidth={1.5} />
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white shadow-sm group-hover:border-accent/30 group-hover:shadow-md flex items-center justify-center transition-all duration-300">
+                  <Heart className="w-9 h-9 md:w-11 md:h-11 text-accent transition-colors duration-300" strokeWidth={1.5} />
                 </div>
-                <span className="text-sm md:text-base font-medium">Gestalt</span>
+                <span className="text-base md:text-lg font-heading font-semibold text-white text-center">
+                  Gestalt
+                </span>
+                <span className="text-xs md:text-sm text-white/80 text-center leading-relaxed px-2">
+                  {t.myWork?.hero?.iconDescriptions?.gestalt || "Unmittelbare Tiefe im Erleben"}
+                </span>
               </a>
               <a
                 href="#coaching"
                 onClick={(e) => handleSmoothScroll(e, 'coaching')}
-                className="flex flex-col items-center gap-3 text-white/70 hover:text-gold-accent transition-colors duration-300 group cursor-pointer"
+                className="flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl bg-primary border border-accent/20 shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group relative overflow-hidden cursor-pointer max-w-[200px] md:max-w-[240px]"
               >
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-white/30 group-hover:border-gold-accent flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-                  <Crosshair className="w-7 h-7 md:w-9 md:h-9" strokeWidth={1.5} />
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white shadow-sm group-hover:border-accent/30 group-hover:shadow-md flex items-center justify-center transition-all duration-300">
+                  <Brain className="w-9 h-9 md:w-11 md:h-11 text-accent transition-colors duration-300" strokeWidth={1.5} />
                 </div>
-                <span className="text-sm md:text-base font-medium">Coaching</span>
+                <span className="text-base md:text-lg font-heading font-semibold text-white text-center">
+                  Coaching
+                </span>
+                <span className="text-xs md:text-sm text-white/80 text-center leading-relaxed px-2">
+                  {t.myWork?.hero?.iconDescriptions?.coaching || "Strategische Kraft für Veränderung"}
+                </span>
               </a>
             </motion.div>
           </div>
         </section>
 
         {/* Diagnostics Section */}
-        <section id="diagnostics" className="py-16 md:py-32 bg-off-white scroll-mt-24">
+        <section id="diagnostics" className="pt-16 pb-24 md:pt-24 md:pb-32 bg-off-white scroll-mt-24">
           <div className="container mx-auto px-4">
             <AnimatedSection className="max-w-5xl mx-auto">
               <motion.div
-                className="p-5 md:p-14 rounded-2xl bg-white shadow-lg"
+                className="p-5 md:p-14 rounded-2xl bg-off-white shadow-lg"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -125,7 +144,7 @@ const MyWork = () => {
                 <p className="text-foreground/80 text-base md:text-lg leading-relaxed md:leading-loose mb-6 md:mb-10">
                   {t.myWork?.diagnostics?.intro || "Precision through physiological data. We use sleep tracking, HRV monitoring, and evidence-based psychological assessment to create an objective baseline for your transformation journey."}
                 </p>
-                
+
                 <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                   {(t.myWork?.diagnostics?.items || [
                     { title: "Vital Signs & Biomarkers", description: "Blood values, sleep quality, and stress indicators provide objective health metrics." },
@@ -134,15 +153,15 @@ const MyWork = () => {
                   ]).map((item, index) => {
                     const Icon = diagnosticsIcons[index];
                     return (
-                      <AnimatedItem key={index}>
-                        <div className="text-center p-4 md:p-6 rounded-2xl transition-all duration-300 md:hover:-translate-y-1 bg-secondary/50">
+                      <AnimatedItem key={index} className="h-full">
+                        <div className="text-center p-4 md:p-6 rounded-2xl transition-all duration-300 md:hover:-translate-y-1 bg-primary/[0.04] h-full flex flex-col">
                           <div className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-5 bg-accent/15">
                             <Icon className="w-6 h-6 md:w-7 md:h-7 text-accent" />
                           </div>
                           <h3 className="font-heading font-bold text-primary mb-2 md:mb-4 text-lg md:text-xl">
                             {item.title}
                           </h3>
-                          <p className="text-foreground/70 leading-relaxed text-sm">
+                          <p className="text-foreground/70 leading-relaxed text-sm flex-grow">
                             {item.description}
                           </p>
                         </div>
@@ -157,10 +176,50 @@ const MyWork = () => {
 
         {/* Gestalt Therapy Section */}
         <section id="gestalt" className="scroll-mt-24">
+          {/* Gestalt Intro - Dark teal background like Coaching */}
+          <div className="py-20 md:py-32 bg-primary relative z-10">
+            {/* Decorative snaking lines - flowing from top to bottom along the sides */}
+            <svg className="absolute inset-0 w-full h-[1800px] z-20 pointer-events-none" preserveAspectRatio="none" viewBox="0 0 1000 1200">
+              {/* Left side - snaking lines flowing down from center */}
+              <path d="M0,0 C60,60 50,100 50,180 S80,280 40,350 S60,420 -20,500 S-100,600 -400,700" stroke="rgba(180,80,60,0.45)" strokeWidth="4" fill="none" strokeLinecap="round" />
+              <path d="M80,-30 C110,60 90,110 90,160 S120,260 80,330 S100,400 70,480 S0,580 -300,680" stroke="rgba(200,120,60,0.4)" strokeWidth="5" fill="none" strokeLinecap="round" />
+              <path d="M160,-10 C180,70 130,120 130,190 S160,290 120,360 S140,430 110,510 S80,610 -200,710" stroke="rgba(191,166,127,0.45)" strokeWidth="3.5" fill="none" strokeLinecap="round" />
+              <path d="M240,-30 C210,40 170,90 170,160 S200,260 160,340 S180,410 150,490 S150,590 -100,690" stroke="rgba(180,80,60,0.35)" strokeWidth="3" fill="none" strokeLinecap="round" />
+
+              {/* Right side - snaking lines flowing down from center (mirrored) */}
+              <path d="M1000,0 C940,60 950,100 950,180 S920,280 960,350 S940,420 1020,500 S1100,600 1400,700" stroke="rgba(180,80,60,0.45)" strokeWidth="4" fill="none" strokeLinecap="round" />
+              <path d="M920,-30 C890,60 910,110 910,160 S880,260 920,330 S900,400 930,480 S1000,580 1300,680" stroke="rgba(200,120,60,0.4)" strokeWidth="5" fill="none" strokeLinecap="round" />
+              <path d="M840,-10 C820,70 870,120 870,190 S840,290 880,360 S860,430 890,510 S920,610 1200,710" stroke="rgba(191,166,127,0.45)" strokeWidth="3.5" fill="none" strokeLinecap="round" />
+              <path d="M760,-30 C790,40 830,90 830,160 S800,260 840,340 S820,410 850,490 S850,590 1100,690" stroke="rgba(180,80,60,0.35)" strokeWidth="3" fill="none" strokeLinecap="round" />
+            </svg>
+
+            <div className="container mx-auto px-4 relative z-30">
+              <AnimatedSection className="max-w-5xl mx-auto">
+                <motion.div
+                  className="p-5 md:p-14 rounded-2xl bg-white/10 backdrop-blur-sm"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <span className="text-gold-accent text-sm uppercase tracking-widest font-medium mb-4 block">
+                    Das Herzstück meiner Arbeit
+                  </span>
+                  <h2 className="font-heading text-2xl md:text-4xl font-bold text-white mb-4 md:mb-8">
+                    {t.gestalttherapie?.gestaltIntro?.title || "Die Gestalttherapie"}
+                  </h2>
+                  <p className="text-white/85 text-base md:text-lg leading-relaxed md:leading-loose">
+                    {t.gestalttherapie?.gestaltIntro?.description || "Gestalttherapie ist ein humanistischer, erlebnisorientierter Therapieansatz, der den Menschen als Ganzes betrachtet."}
+                  </p>
+                </motion.div>
+              </AnimatedSection>
+            </div>
+          </div>
+
           <GestaltScrollTelling />
-          
+
           {/* Kontaktzyklus */}
-          <div className="py-12 md:py-32 bg-off-white">
+          <div className="pt-4 pb-12 md:pt-8 md:pb-32 bg-off-white">
             <div className="container mx-auto px-4">
               <AnimatedSection className="max-w-5xl mx-auto">
                 <motion.img
@@ -179,7 +238,7 @@ const MyWork = () => {
                 </div>
 
                 <motion.div
-                  className="p-5 md:p-14 rounded-2xl bg-secondary"
+                  className="p-5 md:p-14 rounded-2xl bg-off-white shadow-lg"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -226,7 +285,7 @@ const MyWork = () => {
           </div>
 
           {/* Ressourcen */}
-          <div className="py-12 md:py-32 bg-background">
+          <div className="pt-4 pb-12 md:pt-8 md:pb-32 bg-background">
             <div className="container mx-auto px-4">
               <AnimatedSection className="max-w-5xl mx-auto">
                 <motion.img
@@ -246,7 +305,7 @@ const MyWork = () => {
                 </div>
 
                 <motion.div
-                  className="p-5 md:p-14 rounded-2xl bg-secondary"
+                  className="p-5 md:p-14 rounded-2xl bg-off-white shadow-lg"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -289,7 +348,7 @@ const MyWork = () => {
           <div className="container mx-auto px-4">
             <AnimatedSection className="max-w-5xl mx-auto">
               <motion.div
-                className="p-5 md:p-14 rounded-2xl bg-white/10 backdrop-blur-sm"
+                className="p-5 md:p-14 rounded-2xl bg-white shadow-xl border border-accent/50"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -298,13 +357,13 @@ const MyWork = () => {
                 <span className="text-gold-accent text-sm uppercase tracking-widest font-medium mb-4 block">
                   {t.myWork?.coaching?.label || "Holomotion Coaching"}
                 </span>
-                <h2 className="font-heading text-2xl md:text-4xl font-bold text-white mb-4 md:mb-8">
+                <h2 className="font-heading text-2xl md:text-4xl font-bold text-primary mb-4 md:mb-8">
                   {t.myWork?.coaching?.title || "Coaching"}
                 </h2>
-                <p className="text-white/85 text-base md:text-lg leading-relaxed md:leading-loose mb-6 md:mb-10">
+                <p className="text-foreground/80 text-base md:text-lg leading-relaxed md:leading-loose mb-6 md:mb-10">
                   {t.myWork?.coaching?.intro || "Holomotion Coaching combines cognitive strategy with body intelligence. When decisions don't just sound logical but also feel right in your gut, sustainable habits emerge naturally. We bridge the gap between what your mind knows and what your body needs."}
                 </p>
-                
+
                 <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                   {(t.myWork?.coaching?.items || [
                     { title: "Embodied Strategy", description: "Integrate cognitive planning with somatic awareness for decisions that stick." },
@@ -314,8 +373,8 @@ const MyWork = () => {
                     const Icon = coachingIcons[index];
                     return (
                       <AnimatedItem key={index}>
-                        <div className="text-center p-4 md:p-6 rounded-2xl transition-all duration-300 md:hover:-translate-y-1 bg-white/10">
-                          <div className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-5 bg-gold-accent/20">
+                        <div className="text-center p-4 md:p-6 rounded-2xl transition-all duration-300 md:hover:-translate-y-1 bg-primary shadow-lg border border-accent/20 h-full flex flex-col">
+                          <div className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-5 bg-white/10">
                             <Icon className="w-6 h-6 md:w-7 md:h-7 text-gold-accent" />
                           </div>
                           <h3 className="font-heading font-bold text-white mb-2 md:mb-4 text-lg md:text-xl">
@@ -335,24 +394,23 @@ const MyWork = () => {
         </section>
 
         {/* CTA with gradient */}
-        <AnimatedSection className="py-16 md:py-36 bg-gradient-cta text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-teal-navy/30" />
+        <AnimatedSection className="py-16 md:py-36 bg-off-white relative overflow-hidden">
           <div className="container mx-auto px-4 text-center relative z-10">
             <StaggerContainer className="max-w-2xl mx-auto">
               <AnimatedItem>
-                <h2 className="font-heading text-2xl md:text-4xl mb-4 md:mb-8 text-white">
-                  {t.gestalttherapie.cta.title}
+                <h2 className="font-heading text-2xl md:text-4xl mb-4 md:mb-8 text-primary">
+                  {t.myWork?.cta?.title || t.gestalttherapie.cta.title}
                 </h2>
               </AnimatedItem>
               <AnimatedItem>
-                <p className="text-white/85 text-base md:text-lg mb-6 md:mb-10">
-                  {t.gestalttherapie.cta.description}
+                <p className="text-muted-foreground text-base md:text-lg mb-6 md:mb-10">
+                  {t.myWork?.cta?.description || t.gestalttherapie.cta.description}
                 </p>
               </AnimatedItem>
               <AnimatedItem>
-                <Link to={getLocalizedPath('/kontakt')}>
+                <Link to={getLocalizedPath('/angebot#konditionen')}>
                   <Button variant="gold" size="default" className="font-semibold">
-                    {t.gestalttherapie.cta.button} <ArrowRight className="ml-2 h-4 w-4" />
+                    {t.myWork?.cta?.button || "Zum Angebot"} <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
               </AnimatedItem>

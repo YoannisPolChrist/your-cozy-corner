@@ -2,11 +2,12 @@ import { Navigation } from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Brain, Compass, Activity, BarChart3, Map, Video, MapPin, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Footer } from "@/components/Footer";
 import { fadeUp, staggerContainer, cardStagger, cardItem, iconStagger, iconItem, viewportSettings } from "@/lib/animations";
 import { useLanguage } from "@/i18n";
+import { useEffect } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -16,15 +17,29 @@ import {
 
 const Angebot = () => {
   const { t, getLocalizedPath } = useLanguage();
-  const serviceIcons = [Heart, Brain, Compass];
+  const location = useLocation();
+  const serviceIcons = [Compass, Heart, Brain];
   const checkupIcons = [Activity, BarChart3, Map];
+
+  // Handle hash navigation
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, [location.hash]);
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-20">
         {/* Section 1: The 3 Pillars */}
-        <section className="pt-[68px] pb-32 bg-background">
+        <section className="pt-[68px] pb-32 bg-primary">
           <div className="container mx-auto px-4">
             <motion.div
               initial="hidden"
@@ -35,7 +50,7 @@ const Angebot = () => {
             >
               <motion.h2
                 variants={fadeUp}
-                className="font-heading text-[2.25rem] md:text-[3.1875rem] text-primary text-center mb-16"
+                className="font-heading text-[2.25rem] md:text-[3.1875rem] text-white text-center mb-16"
               >
                 {t.angebot.title}
               </motion.h2>
@@ -43,9 +58,11 @@ const Angebot = () => {
               <motion.div variants={cardStagger} className="grid md:grid-cols-3 gap-8 md:gap-16">
                 {t.angebot.services.map((service, index) => {
                   const Icon = serviceIcons[index];
+                  const serviceIds = ['diagnostik', 'gestalttherapie', 'coaching'];
                   return (
-                    <motion.div key={index} variants={cardItem}>
-                      <Card className="p-8 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500 hover:-translate-y-2">
+                    <motion.div key={index} id={serviceIds[index]} variants={cardItem} className="scroll-mt-24">
+                      <Card className="p-8 h-full bg-off-white shadow-soft hover:shadow-teal transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden border border-accent/20">
+                        <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                         <div className="mb-6">
                           <Icon className="w-12 h-12 text-accent stroke-[1.5]" />
                         </div>
@@ -67,61 +84,8 @@ const Angebot = () => {
           </div>
         </section>
 
-        {/* Section 2: Holomotion Check-Up */}
-        <section className="py-32 bg-primary">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportSettings}
-              variants={staggerContainer}
-              className="max-w-6xl mx-auto"
-            >
-              <motion.p
-                variants={fadeUp}
-                className="text-[#c5a065] text-xs uppercase tracking-widest text-center mb-4"
-              >
-                {t.angebot.checkup.label}
-              </motion.p>
-              <motion.h2
-                variants={fadeUp}
-                className="font-heading text-[2.25rem] md:text-[3.1875rem] text-primary-foreground text-center mb-16"
-              >
-                {t.angebot.checkup.title}
-              </motion.h2>
-
-              <motion.div variants={iconStagger} className="grid md:grid-cols-3 gap-8 md:gap-16">
-                {t.angebot.checkup.features.map((feature, index) => {
-                  const Icon = checkupIcons[index];
-                  return (
-                    <motion.div key={index} variants={iconItem} className="text-center">
-                      <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary-foreground/10 flex items-center justify-center">
-                        <Icon className="w-8 h-8 text-[#c5a065] stroke-[1.5]" />
-                      </div>
-                      <h3 className="font-heading text-xl text-primary-foreground mb-3">
-                        {feature.title}
-                      </h3>
-                      <p className="text-primary-foreground/80 leading-relaxed text-sm">
-                        {feature.description}
-                      </p>
-                    </motion.div>
-                  );
-                })}
-              </motion.div>
-
-              {/* Diagnostic Integration Text */}
-              <motion.p
-                variants={fadeUp}
-                className="text-primary-foreground/90 text-center max-w-3xl mx-auto mt-12 text-lg italic leading-relaxed"
-              >
-                {t.angebot.checkup.diagnosticIntegration}
-              </motion.p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Section 3: Investment & Cooperation */}
-        <section className="py-32 bg-background">
+        {/* Section 2: Investment & Cooperation */}
+        <section id="konditionen" className="pt-32 pb-56 bg-background scroll-mt-24">
           <div className="container mx-auto px-4">
             <motion.div
               initial="hidden"
@@ -132,7 +96,7 @@ const Angebot = () => {
             >
               <motion.h2
                 variants={fadeUp}
-                className="font-heading text-[2.25rem] md:text-[3.1875rem] text-primary text-center mb-16"
+                className="font-heading text-[2.25rem] md:text-[3.1875rem] text-primary text-center mb-24"
               >
                 {t.angebot.konditionen.title}
               </motion.h2>
@@ -140,7 +104,8 @@ const Angebot = () => {
               <motion.div variants={cardStagger} className="grid md:grid-cols-2 gap-8 md:gap-16">
                 {/* Card 1: Einzelbegleitung */}
                 <motion.div variants={cardItem}>
-                  <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500 flex flex-col group hover:-translate-y-2 hover:border-[#c5a065]/20 hover:bg-card/95">
+                  <Card className="px-10 py-16 md:py-20 h-full bg-white border border-accent/20 shadow-none hover:shadow-xl transition-all duration-300 flex flex-col group hover:-translate-y-2 relative overflow-hidden">
+                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                     {/* Title */}
                     <h3 className="font-heading text-2xl md:text-3xl text-primary text-center mb-4">
                       {t.angebot.konditionen.einzelbegleitung.title}
@@ -165,17 +130,18 @@ const Angebot = () => {
                     <p className="text-muted-foreground leading-relaxed text-center mb-8 flex-grow">
                       {t.angebot.konditionen.einzelbegleitung.description}
                     </p>
-                    <Link to={getLocalizedPath('/kontakt')} className="block mt-auto">
+                    <a href="https://calendly.com/johanneschrist/neues-meeting" target="_blank" rel="noopener noreferrer" className="block mt-auto">
                       <Button variant="gold-outline" className="w-full font-semibold">
                         {t.angebot.konditionen.einzelbegleitung.cta}
                       </Button>
-                    </Link>
+                    </a>
                   </Card>
                 </motion.div>
 
                 {/* Card 2: Intensive Zusammenarbeit */}
                 <motion.div variants={cardItem}>
-                  <Card className="p-10 h-full bg-card border-none shadow-soft hover:shadow-teal transition-all duration-500 flex flex-col group hover:-translate-y-2 hover:border-[#c5a065]/20 hover:bg-card/95">
+                  <Card className="px-10 py-16 md:py-20 h-full bg-white border border-accent/20 shadow-none hover:shadow-xl transition-all duration-300 flex flex-col group hover:-translate-y-2 relative overflow-hidden">
+                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                     {/* Title */}
                     <h3 className="font-heading text-2xl md:text-3xl text-primary text-center mb-4">
                       {t.angebot.konditionen.intensiv.title}
@@ -206,7 +172,7 @@ const Angebot = () => {
                     <p className="text-muted-foreground leading-relaxed text-center mb-8 flex-grow">
                       {t.angebot.konditionen.intensiv.description}
                     </p>
-                    <Link to={getLocalizedPath('/kontakt')} className="block mt-auto">
+                    <Link to={`${getLocalizedPath('/kontakt')}?subject=Intensive+Zusammenarbeit`} className="block mt-auto">
                       <Button variant="gold" className="w-full font-semibold">
                         {t.angebot.konditionen.intensiv.cta}
                       </Button>
@@ -219,7 +185,7 @@ const Angebot = () => {
         </section>
 
         {/* Section 4: Flexible Formats */}
-        <section className="py-32 bg-off-white">
+        <section className="py-32 bg-primary">
           <div className="container mx-auto px-4">
             <motion.div
               initial="hidden"
@@ -230,35 +196,35 @@ const Angebot = () => {
             >
               <motion.h2
                 variants={fadeUp}
-                className="font-heading text-[2.25rem] md:text-[3.1875rem] text-primary text-center mb-16"
+                className="font-heading text-[2.25rem] md:text-[3.1875rem] text-white text-center mb-16"
               >
                 {t.angebot.formate.title}
               </motion.h2>
 
               <motion.div variants={cardStagger} className="grid md:grid-cols-2 gap-8 md:gap-16">
                 <motion.div variants={cardItem} className="flex items-start gap-6">
-                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
                     <Video className="w-7 h-7 text-accent stroke-[1.5]" />
                   </div>
                   <div>
-                    <h3 className="font-heading text-xl text-primary mb-2">
+                    <h3 className="font-heading text-xl text-white mb-2">
                       {t.angebot.formate.online.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-white/80 leading-relaxed">
                       {t.angebot.formate.online.description}
                     </p>
                   </div>
                 </motion.div>
 
                 <motion.div variants={cardItem} className="flex items-start gap-6">
-                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-7 h-7 text-accent stroke-[1.5]" />
                   </div>
                   <div>
-                    <h3 className="font-heading text-xl text-primary mb-2">
+                    <h3 className="font-heading text-xl text-white mb-2">
                       {t.angebot.formate.praesenz.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-white/80 leading-relaxed">
                       {t.angebot.formate.praesenz.description}
                     </p>
                   </div>
@@ -307,64 +273,13 @@ const Angebot = () => {
           </div>
         </section>
 
-        {/* Process Section */}
-        <section className="py-20 md:py-28 bg-secondary/30">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportSettings}
-              variants={staggerContainer}
-              className="max-w-3xl mx-auto text-center"
-            >
-              <motion.h2
-                variants={fadeUp}
-                className="font-heading text-2xl md:text-3xl text-primary mb-6"
-              >
-                {t.angebot.process.title}
-              </motion.h2>
-              <motion.p
-                variants={fadeUp}
-                className="text-muted-foreground text-lg leading-relaxed"
-              >
-                {t.angebot.process.description}
-              </motion.p>
-            </motion.div>
-          </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-28 md:py-36 bg-gradient-cta relative overflow-hidden">
-          {/* Subtle gradient overlay for depth */}
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-teal-navy/30" />
-          <div className="container mx-auto px-4 text-center relative z-10">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportSettings}
-              variants={staggerContainer}
-              className="max-w-2xl mx-auto"
-            >
-              <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl text-white mb-8">
-                {t.angebot.cta.title}
-              </motion.h2>
-              <motion.p variants={fadeUp} className="text-white/85 text-lg mb-10">
-                {t.angebot.cta.description}
-              </motion.p>
-              <motion.div variants={fadeUp}>
-                <Link to={getLocalizedPath('/kontakt')}>
-                  <Button variant="gold" size="lg" className="font-semibold">
-                    {t.angebot.cta.button} <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
-      </main>
+
+
+      </main >
 
       <Footer />
-    </div>
+    </div >
   );
 };
 

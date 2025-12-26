@@ -3,24 +3,26 @@ import { Translations } from './types';
 export const de: Translations = {
   nav: {
     gestalttherapie: 'Gestalttherapie',
-    approach: 'Approach',
+    approach: 'Mein Ansatz',
     angebot: 'Angebot',
     ueberMich: 'Über mich',
     kontakt: 'Kontakt',
+    subtitle1: 'Gestalttherapeut, Coach,',
+    subtitle2: 'M.Sc. Psychologie (i.A.)',
   },
-  
+
   hero: {
     title: 'Veränderung geschieht im',
     titleHighlight: 'Hier und Jetzt',
     subtitle: 'Begleitung auf deinem Weg zu mehr Klarheit, Erfüllung und innerem Frieden – durch humanistische Gestalttherapie, Beratung und Coaching.',
     cta: 'Kennenlerngespräch vereinbaren',
   },
-  
+
   meet: {
     title: 'Veränderung passiert –',
-    description: 'Optimalerweise in einem Rahmen, der hält und Sicherheit bietet. Dass dieser Rahmen meistens nicht vorhanden ist, ist natürlich selbstverständlich. Als Gestalttherapeut, Coach und M.Sc. Psychologie (i.A.) biete ich dir durch Präsenz, Kompetenz und Witz, den Raum den es braucht, damit die Veränderung geschehen kann, die du dir wünschst!',
+    description: 'Optimalerweise in einem Rahmen, der hält und Sicherheit bietet. Dass dieser Rahmen meistens nicht vorhanden ist, ist natürlich selbstverständlich. Als Gestalttherapeut, Coach und M.Sc. Psychologie (i.A.) biete ich dir durch Präsenz, Kompetenz und Witz, den Raum den es braucht, damit die Veränderung geschehen kann, die du dir wünschst!\n\nHi - Ich bin Johannes.',
   },
-  
+
   painPoints: {
     title: 'Wenn der innere Kompass stillsteht',
     subtitle: 'Oft spüren wir, dass etwas fehlt, aber so richtig bekommen wir den Finger nicht darauf.',
@@ -39,27 +41,27 @@ export const de: Translations = {
       },
     ],
   },
-  
+
   services: {
     title: 'Mein Angebot',
     subtitle: 'Individuelle Räume für deine Entwicklung',
     items: [
       {
-        title: 'Therapie',
+        title: 'Diagnostik',
+        description: 'Professionelle Einordnung und Klarheit',
+      },
+      {
+        title: 'Gestalttherapie',
         description: 'Tiefgreifende Arbeit an emotionalen Themen',
       },
       {
         title: 'Coaching',
-        description: 'Fokussierte Entwicklung, zielorientiert, praktisch, haptisch',
-      },
-      {
-        title: 'Diagnostik',
-        description: 'Professionelle Einordnung und Klarheit',
+        description: 'Fokussierte Entwicklung, zielorientiert, praktisch',
       },
     ],
-    cta: 'Alle Angebote entdecken',
+    cta: 'Angebot entdecken',
   },
-  
+
   gestaltSection: {
     label: 'Der therapeutische Ansatz',
     title: 'Meine Mission',
@@ -68,27 +70,49 @@ export const de: Translations = {
     link: 'Mehr über Gestalttherapie erfahren',
     quote: 'Sei ganz hier, ganz jetzt – der Rest folgt von selbst.',
   },
-  
+
   myWorkSection: {
-    title: 'Approach',
-    description: 'Veränderung geschieht nicht allein durch Denken. Während der Verstand versteht, beginnt echte Bewegung erst dort, wo Gefühl und Logik sich verweben. Wenn eine Veränderung keinen ganzheitlichen Sinn ergibt – weder im Kopf noch im Herzen – wird sie nicht bestehen bleiben. Wir nutzen Diagnostik, Gestalttherapie und Coaching, um diese Lücke zu überbrücken und nachhaltige Erfahrungen zu schaffen.',
-    link: 'Mehr über meinen Approach',
-    quote: 'Verliere deinen Verstand und komm zu deinen Sinnen.',
+    title: 'Mein Ansatz',
+    description: 'Veränderung geschieht nicht allein durch Denken. Während der Verstand versteht, beginnt echte Bewegung erst dort, wo Gefühl und Logik sich verweben. Wenn eine Veränderung keinen ganzheitlichen Sinn ergibt – weder im Kopf noch im Herzen – wird sie nicht bestehen bleiben.\n\nWir nutzen Diagnostik, Gestalttherapie und Coaching, um diese Lücke zu überbrücken und nachhaltige Erfahrungen zu schaffen.',
+    link: 'Mehr über meinen Ansatz',
+    quote: 'Veränderung geschieht, wenn jemand wird, was er ist, nicht wenn er versucht, etwas zu werden, das er nicht ist.\n\n— Arnold Beisser',
   },
-  
+
   myWork: {
     hero: {
-      title: 'Approach',
-      subtitle: 'Mein Ansatz verbindet wissenschaftliche Präzision mit tiefer emotionaler Erfahrung. Wir betrachten Veränderung als ganzheitlichen Prozess, der auf einem stabilen Fundament aus Erkenntnis und Erleben ruht. Um nachhaltige Bewegung zu ermöglichen, nutzen wir die analytische Klarheit der Diagnostik, die unmittelbare Tiefe der Gestalttherapie und die strategische Kraft des Coachings. Gemeinsam schaffen wir einen Raum, in dem Entwicklung nicht nur verstanden, sondern im Hier und Jetzt verkörpert wird. Dabei dient uns die Verbindung von Körper, Geist und Daten als Kompass für deinen Weg. So wird Veränderung zu einem Prozess, der für dich ganzheitlich Sinn ergibt. Wir gehen über das reine Reden hinaus, um echte Transformation zu bewirken.',
+      title: 'Mein Ansatz',
+      subtitle: 'Mein Ansatz verbindet wissenschaftliche Präzision mit tiefer emotionaler Erfahrung. Wir betrachten Veränderung als ganzheitlichen Prozess, der auf einem stabilen Fundament aus Erkenntnis und Erleben ruht. Gemeinsam schaffen wir einen Raum, in dem Entwicklung nicht nur verstanden, sondern im Hier und Jetzt verkörpert wird.',
+      iconDescriptions: {
+        diagnostik: 'Analytische Klarheit durch Daten',
+        gestalt: 'Unmittelbare Tiefe im Erleben',
+        coaching: 'Strategische Kraft für Veränderung',
+      },
+      iconCards: {
+        diagnostik: {
+          title: 'Ganzheitliche Diagnostik',
+          subline: 'PRÄZISION STATT BAUCHGEFÜHL',
+          description: 'Auf Basis der Gestalttherapie, sowie wissenschaftlicher Praktiken, führen wir eine fundierte Standortbestimmung durch. Dazu gehören je nach Bedarf Blut-, Bewegungs- oder Nährstoffanalysen.',
+        },
+        gestalt: {
+          title: 'Integrative Gestalttherapie',
+          subline: 'WENN VERSTEHEN NICHT REICHT',
+          description: 'Wir lösen alte Muster dort auf, wo sie entstanden sind: im Kontakt und im Körper. Statt jahrelangem \'Darüber-Reden\' nutzen wir das Hier und Jetzt, um emotionale Blockaden spürbar und veränderbar zu machen.',
+        },
+        coaching: {
+          title: 'Holomotion Coaching',
+          subline: 'KLARHEIT DURCH KÖRPERINTELLIGENZ',
+          description: 'Strategie trifft Intuition. Wir kombinieren kognitive Planung mit der Weisheit deines Körpers. Für Entscheidungen, die sich nicht nur logisch anhören, sondern auch im Bauch richtig anfühlen.',
+        },
+      },
     },
     diagnostics: {
-      label: 'Evidenzbasierte Standortbestimmung',
+      label: 'Die Standortbestimmung',
       title: 'Diagnostik',
-      intro: 'Präzision durch klinische Fragebögen, Verhaltensbeobachtung und Vitaldatentracking. Wir nutzen wissenschaftlich fundierte Methoden, um eine objektive Grundlage für deinen Transformationsprozess zu schaffen.',
+      intro: 'Präzision durch Fragebögen, Verhaltensbeobachtung und Vitaldatentracking. Wir nutzen wissenschaftlich fundierte Methoden, um eine objektive Grundlage für deinen Transformationsprozess zu schaffen.',
       items: [
-        { title: 'Klinische Fragebögen', description: 'Validierte psychologische Tests zur systematischen Erfassung deiner aktuellen Situation.' },
-        { title: 'Verhaltensbeobachtung', description: 'Professionelle Analyse von Mustern und Dynamiken in deinem Alltag.' },
-        { title: 'Vitaldaten-Tracking', description: 'Objektive Messung von Schlaf, HRV und Stressindikatoren für messbaren Fortschritt.' },
+        { title: 'Fragebögen', description: 'Validierte psychologische Tests zur systematischen Erfassung deiner aktuellen Situation. Diese standardisierten Instrumente helfen uns, belastende Muster, Stressoren und Ressourcen objektiv zu erfassen.' },
+        { title: 'Verhaltensbeobachtung', description: 'Professionelle Analyse von Mustern und Dynamiken in deinem Alltag. Wir schauen gemeinsam hin, wo Energie verloren geht und welche Routinen dich unterstützen oder belasten.' },
+        { title: 'Biomarker & Vitaldaten', description: 'Objektive Messung von Blutwerten, Schlafqualität und Darmgesundheit. Wir nutzen Labordiagnostik und Tracking, um körperliche Ursachen und Zusammenhänge sichtbar zu machen.' },
       ],
     },
     coaching: {
@@ -96,22 +120,27 @@ export const de: Translations = {
       title: 'Coaching',
       intro: 'Tägliche Strategie, Gewohnheitsbildung und nachhaltige Veränderung. Wir überbrücken die Lücke zwischen dem, was dein Verstand weiß, und dem, was dein Körper braucht.',
       items: [
-        { title: 'Tagesstruktur', description: 'Praktische Strategien für deinen Alltag, die sofort umsetzbar sind.' },
-        { title: 'Gewohnheitsbildung', description: 'Schritt für Schritt neue Muster etablieren, die zu dir passen.' },
-        { title: 'Nachhaltige Veränderung', description: 'Routinen aufbauen, die langfristig Bestand haben.' },
+        { title: 'Tagesstruktur', description: 'Praktische Strategien für deinen Alltag, die sofort umsetzbar sind. Wir entwickeln Routinen, die deine Energie optimal nutzen und zu deinem Leben passen.' },
+        { title: 'Gewohnheitsbildung', description: 'Schritt für Schritt neue Muster etablieren, die zu dir passen. Kleine, nachhaltige Veränderungen statt radikaler Umbrüche, die nicht halten.' },
+        { title: 'Nachhaltige Veränderung', description: 'Routinen aufbauen, die langfristig Bestand haben. Durch regelmäßige Reflexion und Anpassung entwickelst du eine Struktur, die mit dir wächst.' },
       ],
     },
+    cta: {
+      title: 'Neugierig geworden?',
+      description: 'Entdecke mein Angebot und finde heraus, welche Form der Begleitung am besten zu dir passt.',
+      button: 'Zum Angebot',
+    },
   },
-  
+
   aboutPreview: {
     label: 'Ihr Begleiter',
     title: 'Über mich',
     whyTitle: 'Warum ich tue, was ich tue',
-    whyDescription1: 'In meiner eigenen Reise habe ich eines klar erkannt: Wir können jahrelang über Probleme reden, ohne dass sich wirklich etwas bewegt. Der Kopf versteht alles, aber der Punkt, an dem echte Veränderung beginnt, wird oft nicht berührt.',
-    whyDescription2: 'Was mich an der Gestalttherapie bis heute fasziniert und was ich als so "krass" effektiv erlebe, ist dieser Übergang vom reinen Sprechen zum ganzheitlichen Erleben. Es gibt eine Ebene, die tiefer liegt als die Logik. Wenn wir Verstand und Gefühl wirklich miteinander verweben, entsteht eine Erfahrung, die nachhaltig ist. Veränderung passiert dann nicht mehr durch Anstrengung, sondern weil sie endlich Sinn ergibt. Denn solange etwas keinen Sinn für uns hat, bewegen wir uns nicht.',
+    whyDescription1: 'In meiner eigenen Reise habe ich klar erkannt: Wir können jahrelang über Probleme reden, ohne dass sich etwas bewegt. Der Kopf versteht alles – aber echte Veränderung beginnt tiefer.',
+    whyDescription2: 'Was mich an der Gestalttherapie fasziniert: der Übergang vom Sprechen zum Erleben. Wenn Verstand und Gefühl sich verbinden, entsteht nachhaltige Veränderung – nicht durch Anstrengung, sondern weil sie endlich Sinn ergibt.',
     link: 'Mehr zu meiner Person',
   },
-  
+
   focusAreas: {
     title: 'Schwerpunkte meiner Begleitung',
     items: [
@@ -129,17 +158,21 @@ export const de: Translations = {
       },
     ],
   },
-  
+
   cta: {
     title: 'Bereit für den nächsten Schritt?',
     description: 'Vereinbare ein kostenloses Kennenlerngespräch oder ruf einfach durch, um herauszufinden, ob eine Zusammenarbeit sinnvoll ist.',
     button: 'Kontakt aufnehmen',
     buttonAlt: 'Lass uns schauen, was für dich Sinn ergibt',
   },
-  
+
   gestalttherapie: {
+    gestaltIntro: {
+      title: 'Die Gestalttherapie',
+      description: 'Gestalttherapie ist ein humanistischer, erlebnisorientierter Therapieansatz, der den Menschen als Ganzes betrachtet – Körper, Geist und Seele im Zusammenspiel mit seiner Umwelt. Im Zentrum steht das bewusste Wahrnehmen und Erleben im gegenwärtigen Moment. Anstatt nur über Probleme zu sprechen, arbeiten wir daran, sie im Hier und Jetzt spürbar und veränderbar zu machen. So entsteht echte, nachhaltige Transformation.',
+    },
     scrollTelling: {
-      title: 'Gestalttherapie (Herzstück meiner Arbeit)',
+      title: 'Gestalttherapie',
       intro: 'Gestalttherapie ist ein humanistischer Therapieansatz, der auf drei wesentlichen Grundpfeilern basiert:',
       pillars: [
         {
@@ -203,7 +236,7 @@ export const de: Translations = {
       button: 'Kontakt aufnehmen',
     },
   },
-  
+
   angebot: {
     title: 'Das Angebot',
     process: {
@@ -211,6 +244,11 @@ export const de: Translations = {
       description: 'Wir starten mit deinen Bedürfnissen und dem, was dich frustriert. Von dort aus entscheiden wir gemeinsam, welche Tools (Diagnostik, Coaching oder Therapie) dich am besten an dein Ziel bringen.',
     },
     services: [
+      {
+        title: 'Ganzheitliche Diagnostik',
+        subline: 'PRÄZISION STATT BAUCHGEFÜHL',
+        description: 'Auf Basis der Gestalttherapie, sowie wissenschaftlicher Praktiken, führen wir eine fundierte Standortbestimmung durch. Dazu gehören je nach Bedarf Blut-, Bewegungs- oder Nährstoffanalysen.',
+      },
       {
         title: 'Integrative Gestalttherapie',
         subline: 'WENN VERSTEHEN NICHT REICHT',
@@ -221,21 +259,17 @@ export const de: Translations = {
         subline: 'KLARHEIT DURCH KÖRPERINTELLIGENZ',
         description: 'Strategie trifft Intuition. Wir kombinieren kognitive Planung mit der Weisheit deines Körpers. Für Entscheidungen, die sich nicht nur logisch anhören, sondern auch im Bauch richtig anfühlen.',
       },
-      {
-        title: 'Psychologische Diagnostik',
-        subline: 'PRÄZISION STATT BAUCHGEFÜHL',
-        description: 'Auf Basis der Gestalttherapie, sowie wissenschaftlicher Praktiken, führen wir eine fundierte Standortbestimmung durch. Dazu gehören je nach Bedarf Blut-, Bewegungs- oder Nährstoffanalysen.',
-      },
     ],
     checkup: {
-      label: 'DIE STANDORTBESTIMMUNG',
-      title: 'Wir können nur verändern, was wir verstehen.',
+      label: 'Die Standortbestimmung',
+      title: 'Verstehen als Grundlage für Veränderung',
+      intro: 'Die Standortbestimmung verbindet die objektiven Erkenntnisse aus der Diagnostik mit deinem subjektiven Erleben. So entsteht ein vollständiges Bild – die Grundlage für einen Weg, der wirklich zu dir passt.',
       features: [
-        { title: 'Vitalwerte & Körper', description: 'Wir werfen einen Blick auf Blutwerte, Schlaf und Ressourcen, um körperliche Ursachen für psychische Themen auszuschließen.' },
-        { title: 'Tracking & Muster', description: 'Wir erheben den Ist-Zustand deiner Routinen. Wo verlierst du Energie? Wir machen das Unsichtbare messbar.' },
-        { title: 'Strategie', description: 'Basierend auf Daten erstellen wir deinen individuellen Fahrplan, der über die Gestalttherapie, d.h. deinen Prozess, hinausgeht. Fortschritt ist dahingehend kein Zufall.' },
+        { title: 'Analyse', description: 'Wir werten deine Diagnostik-Daten aus und identifizieren wiederkehrende Muster.' },
+        { title: 'Reflexion', description: 'Gemeinsam ordnen wir ein, was die Erkenntnisse für dein Leben und deine Ziele bedeuten.' },
+        { title: 'Richtung', description: 'Wir entwickeln einen klaren, individuellen Fahrplan für deine nächsten Schritte.' },
       ],
-      diagnosticIntegration: 'Daten geben uns die Landkarte, aber das Gehen des Weges ist eine emotionale Erfahrung. Ich nutze fundierte Diagnostik als Fundament, um dort tiefer zu gehen, wo reines Sprechen aufhört.',
+      diagnosticIntegration: 'Daten geben uns die Landkarte, aber das Gehen des Weges ist eine emotionale Erfahrung.',
     },
     konditionen: {
       title: 'Konditionen & Zusammenarbeit',
@@ -282,7 +316,7 @@ export const de: Translations = {
         },
         {
           question: 'Bezahlt die Krankenkasse die Sessions?',
-          answer: 'Als Psychologe (M.Sc.) und Gestalttherapeut arbeite ich in privater Praxis. Das bedeutet in der Regel, dass die Kosten von den gesetzlichen Krankenkassen nicht übernommen werden. Private Zusatzversicherungen oder private Kassen erstatten je nach Tarif einen Teil. Der Vorteil für dich: Wir können sofort ohne bürokratische Hürden starten und die Dauer sowie Frequenz der Sitzungen flexibel an deinen Prozess anpassen.',
+          answer: 'Als M.Sc. Psychologie und Gestalttherapeut arbeite ich in privater Praxis. Das bedeutet in der Regel, dass die Kosten von den gesetzlichen Krankenkassen nicht übernommen werden. Private Zusatzversicherungen oder private Kassen erstatten je nach Tarif einen Teil. Der Vorteil für dich: Wir können sofort ohne bürokratische Hürden starten und die Dauer sowie Frequenz der Sitzungen flexibel an deinen Prozess anpassen.',
         },
         {
           question: 'Was genau bringen mir die „Daten" und Vitalwerte in der Therapie?',
@@ -300,7 +334,7 @@ export const de: Translations = {
       button: 'Kontakt aufnehmen',
     },
   },
-  
+
   ueberMich: {
     hero: {
       label: 'JOHANNES CHRIST — GESTALTTHERAPEUT, BEWEGUNGSTHERAPIE UND PRÄVENTION (B.A.), PSYCHOLOGIE (M.SC.) (i.A.)',
@@ -358,7 +392,7 @@ export const de: Translations = {
       button: 'Kontakt aufnehmen',
     },
   },
-  
+
   kontakt: {
     hero: {
       title: 'Kontakt',
@@ -392,7 +426,7 @@ export const de: Translations = {
       description: 'Alle Sitzungen können auch online per Video stattfinden.',
     },
   },
-  
+
   footer: {
     kontakt: 'Kontakt',
     rechtliches: 'Rechtliches',
@@ -400,7 +434,7 @@ export const de: Translations = {
     impressum: 'Impressum',
     copyright: 'Johannes Christ · Gestalttherapie & Coaching',
   },
-  
+
   common: {
     learnMore: 'Mehr erfahren',
     bookAppointment: 'Termin buchen',

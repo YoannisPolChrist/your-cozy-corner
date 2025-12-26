@@ -16,16 +16,16 @@ export const AboutSection = () => {
               <h2 className="font-heading text-4xl md:text-5xl mb-6 text-primary">
                 Über mich
               </h2>
-              
+
               <p className="text-xl text-muted-foreground italic mb-8 leading-relaxed">
-                Ich bin Johannes Christ, Gestalttherapeut, Coach und Psychologe (M.Sc.). 
-                Meine Arbeit basiert auf der Überzeugung, dass echte Veränderung entsteht, 
+                Ich bin Johannes Christ, Gestalttherapeut, Coach und M.Sc. Psychologie.
+                Meine Arbeit basiert auf der Überzeugung, dass echte Veränderung entsteht,
                 wenn wir die Verbindung zwischen unseren Gedanken, Gefühlen und unserem Körper verstehen.
               </p>
 
               <Card className="p-6 bg-background mb-8">
                 <p className="text-foreground leading-relaxed">
-                  Mit meiner Erfahrung in Gestalttherapie und Coaching begleite ich Sie auf dem Weg zu 
+                  Mit meiner Erfahrung in Gestalttherapie und Coaching begleite ich Sie auf dem Weg zu
                   mehr Klarheit, Wohlbefinden und Erfüllung.
                 </p>
               </Card>

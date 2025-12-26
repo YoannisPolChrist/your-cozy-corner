@@ -8,8 +8,10 @@ export interface Translations {
     angebot: string;
     ueberMich: string;
     kontakt: string;
+    subtitle1: string;
+    subtitle2: string;
   };
-  
+
   // Hero
   hero: {
     title: string;
@@ -17,13 +19,13 @@ export interface Translations {
     subtitle: string;
     cta: string;
   };
-  
+
   // Meet Section
   meet: {
     title: string;
     description: string;
   };
-  
+
   // Pain Points
   painPoints: {
     title: string;
@@ -33,7 +35,7 @@ export interface Translations {
       description: string;
     }>;
   };
-  
+
   // Services Section
   services: {
     title: string;
@@ -44,7 +46,7 @@ export interface Translations {
     }>;
     cta: string;
   };
-  
+
   // Gestalt Section on Index
   gestaltSection: {
     label: string;
@@ -54,7 +56,7 @@ export interface Translations {
     link: string;
     quote: string;
   };
-  
+
   // My Work Section on Index
   myWorkSection: {
     title: string;
@@ -62,12 +64,34 @@ export interface Translations {
     link: string;
     quote: string;
   };
-  
+
   // My Work Page
   myWork: {
     hero: {
       title: string;
       subtitle: string;
+      iconDescriptions?: {
+        diagnostik: string;
+        gestalt: string;
+        coaching: string;
+      };
+      iconCards?: {
+        diagnostik: {
+          title: string;
+          subline: string;
+          description: string;
+        };
+        gestalt: {
+          title: string;
+          subline: string;
+          description: string;
+        };
+        coaching: {
+          title: string;
+          subline: string;
+          description: string;
+        };
+      };
     };
     diagnostics: {
       label: string;
@@ -87,8 +111,13 @@ export interface Translations {
         description: string;
       }>;
     };
+    cta?: {
+      title: string;
+      description: string;
+      button: string;
+    };
   };
-  
+
   // About Preview
   aboutPreview: {
     label: string;
@@ -98,7 +127,7 @@ export interface Translations {
     whyDescription2: string;
     link: string;
   };
-  
+
   // Focus Areas / Schwerpunkte Section
   focusAreas: {
     title: string;
@@ -107,7 +136,7 @@ export interface Translations {
       description: string;
     }>;
   };
-  
+
   // CTA Section
   cta: {
     title: string;
@@ -115,9 +144,13 @@ export interface Translations {
     button: string;
     buttonAlt: string;
   };
-  
+
   // Gestalttherapie Page
   gestalttherapie: {
+    gestaltIntro?: {
+      title: string;
+      description: string;
+    };
     scrollTelling: {
       title: string;
       intro: string;
@@ -167,7 +200,7 @@ export interface Translations {
       button: string;
     };
   };
-  
+
   // Angebot Page
   angebot: {
     title: string;
@@ -183,6 +216,7 @@ export interface Translations {
     checkup: {
       label: string;
       title: string;
+      intro?: string;
       features: Array<{
         title: string;
         description: string;
@@ -234,7 +268,7 @@ export interface Translations {
       button: string;
     };
   };
-  
+
   // Über mich Page
   ueberMich: {
     hero: {
@@ -282,7 +316,7 @@ export interface Translations {
       button: string;
     };
   };
-  
+
   // Kontakt Page
   kontakt: {
     hero: {
@@ -317,7 +351,7 @@ export interface Translations {
       description: string;
     };
   };
-  
+
   // Footer
   footer: {
     kontakt: string;
@@ -326,7 +360,7 @@ export interface Translations {
     impressum: string;
     copyright: string;
   };
-  
+
   // Common
   common: {
     learnMore: string;
