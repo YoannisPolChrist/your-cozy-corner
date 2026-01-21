@@ -25,6 +25,7 @@ const routeMap: Record<string, Record<Language, string>> = {
   angebot: { de: 'angebot', en: 'services', fr: 'services' },
   'ueber-mich': { de: 'ueber-mich', en: 'about-me', fr: 'a-propos' },
   kontakt: { de: 'kontakt', en: 'contact', fr: 'contact' },
+  'personal-training': { de: 'personal-training', en: 'personal-training', fr: 'coaching-sportif' },
 };
 
 // Reverse map for finding the base route

@@ -137,6 +137,14 @@ export interface Translations {
     }>;
   };
 
+  // Personal Training Preview on Index
+  personalTrainingPreview: {
+    label: string;
+    title: string;
+    description: string;
+    link: string;
+  };
+
   // CTA Section
   cta: {
     title: string;
@@ -366,5 +374,59 @@ export interface Translations {
     learnMore: string;
     bookAppointment: string;
     freeConsultation: string;
+  };
+
+  // Personal Training Page
+  personalTraining: {
+    nav: string;
+    hero: {
+      title: string;
+      subtitle: string;
+      cta: string;
+    };
+    approach: {
+      title: string;
+      description: string;
+    };
+    services: Array<{
+      title: string;
+      subline: string;
+      description: string;
+    }>;
+    qualifications: {
+      title: string;
+      items: string[];
+    };
+    location: {
+      title: string;
+      city: string;
+      description: string;
+    };
+    pricing: {
+      title: string;
+      single: {
+        label: string;
+        price: string;
+        priceLabel: string;
+        title: string;
+        description: string;
+        cta: string;
+      };
+      package: {
+        label: string;
+        price: string;
+        priceLabel: string;
+        title: string;
+        description: string;
+        discount?: string;
+        discountPrice?: string;
+        cta: string;
+      };
+    };
+    cta: {
+      title: string;
+      description: string;
+      button: string;
+    };
   };
 }

@@ -73,19 +73,19 @@ export const fr: Translations = {
 
   myWorkSection: {
     title: 'Mon Approche',
-    description: 'Le changement ne se produit pas uniquement par la pensée. Alors que l\'esprit comprend, le vrai mouvement ne commence que lorsque le ressenti et la logique s\'entrelacent. Si un changement n\'a pas de sens holistique – ni dans ta tête ni dans ton cœur – il ne tiendra pas. Nous utilisons le Diagnostic, la Gestalt-thérapie et le Coaching pour combler cet écart et créer une expérience durable.',
-    link: 'En savoir plus sur mon approche',
+    description: 'Le changement a trois dimensions : La profondeur émotionnelle de la Gestalt-thérapie (cœur), la clarté stratégique du coaching (tête), et la présence physique de l\'entraînement (corps). Ces trois piliers travaillent ensemble – car la vraie transformation se produit dans l\'interaction des trois.',
+    link: 'Découvrir les trois piliers',
     quote: 'Le changement survient lorsqu\'une personne devient ce qu\'elle est, non lorsqu\'elle essaie de devenir ce qu\'elle n\'est pas.\n\n— Arnold Beisser',
   },
 
   myWork: {
     hero: {
       title: 'Mon Approche',
-      subtitle: 'Mon approche combine précision scientifique et expérience émotionnelle profonde. Nous considérons le changement comme un processus holistique, reposant sur une base stable de connaissance et de vécu. Ensemble, nous créons un espace où le développement n\'est pas seulement compris mais incarné dans l\'ici et maintenant.',
+      subtitle: 'Le changement a trois dimensions : La profondeur émotionnelle de la Gestalt-thérapie, la clarté stratégique du coaching, et la présence physique dans l\'entraînement. Ces trois piliers forment un système holistique – car la vraie transformation se produit dans l\'interaction du cœur, de la tête et du corps.',
       iconDescriptions: {
-        diagnostik: 'Clarté analytique par les données',
-        gestalt: 'Profondeur immédiate dans le vécu',
-        coaching: 'Force stratégique pour le changement',
+        diagnostik: 'Clarté stratégique',
+        gestalt: 'Le cœur de mon travail',
+        coaching: 'Incl. diagnostic',
       },
       iconCards: {
         diagnostik: {
@@ -157,6 +157,13 @@ export const fr: Translations = {
         description: 'S\'éloigner des schémas figés vers une rencontre authentique. Nous regardons ce qui se passe entre les personnes dans l\'ici et maintenant.',
       },
     ],
+  },
+
+  personalTrainingPreview: {
+    label: 'La Troisième Dimension',
+    title: 'Le corps comme porte vers le changement',
+    description: 'La transformation commence souvent là où les mots s\'arrêtent : dans le corps. Le mouvement crée de nouveaux schémas, libère les blocages et ancre ce que nous travaillons en thérapie et en coaching. Coaching sportif à Toulouse.',
+    link: 'Découvrir le Coaching Sportif',
   },
 
   cta: {
@@ -245,19 +252,19 @@ export const fr: Translations = {
     },
     services: [
       {
-        title: 'Diagnostic Holistique',
-        subline: 'PRÉCISION PLUTÔT QU\'INTUITION',
-        description: 'Basé sur la Gestalt-thérapie et des pratiques scientifiques, nous effectuons une évaluation fondamentale. Cela inclut des analyses sanguines, de mouvement ou nutritionnelles selon les besoins.',
-      },
-      {
-        title: 'Gestalt-thérapie Intégrative',
-        subline: 'QUAND COMPRENDRE NE SUFFIT PAS',
+        title: 'Gestalt-thérapie',
+        subline: 'LE CŒUR DE MON TRAVAIL',
         description: 'Nous résolvons les anciens schémas là où ils sont nés : dans le contact et dans le corps. Au lieu d\'années à \'en parler\', nous utilisons l\'ici et maintenant pour rendre les blocages émotionnels tangibles et transformables.',
       },
       {
-        title: 'Coaching Holomotion',
-        subline: 'CLARTÉ PAR L\'INTELLIGENCE CORPORELLE',
-        description: 'La stratégie rencontre l\'intuition. Nous combinons la planification cognitive avec la sagesse de votre corps. Pour des décisions qui sonnent non seulement logiques mais se sentent aussi justes au plus profond de vous.',
+        title: 'Coaching',
+        subline: 'INCL. DIAGNOSTIC',
+        description: 'La stratégie rencontre l\'intuition. Nous combinons la planification cognitive avec la sagesse de votre corps. Bilan initial, analyses sanguines et de mouvement – pour des décisions qui se sentent justes.',
+      },
+      {
+        title: 'Coaching Sportif',
+        subline: 'CORPS EN MOUVEMENT',
+        description: 'Et si tout ça te paraît trop mental ? On met ton corps en mouvement – le reste suivra. Performance, thérapie par le mouvement et motivation à Toulouse.',
       },
     ],
     checkup: {
@@ -386,6 +393,12 @@ export const fr: Translations = {
       description1: 'Ceux qui me connaissent le savent : je prends mon travail au sérieux. Mais si à un moment donné nous n\'avons plus rien à rire, alors ça devient critique. Alors quelque chose ne va pas. Je crois au pouvoir de l\'humour, de la légèreté et des rencontres authentiques.',
       description2: 'En dehors de la thérapie, tu me trouveras en train de faire du sport, en sortie avec des amis ou dans mes clubs de rhétorique. Une vie épanouissante se compose, du moins pour moi, de nombreux petits moments de connexion – avec nous-mêmes, avec les autres et avec l\'univers dans son ensemble.',
     },
+    training: {
+      label: 'LA TROISIÈME DIMENSION',
+      title: 'Et si c\'est trop "profond" pour toi ?',
+      description1: 'Alors mettons ton corps en mouvement – le reste suivra. Parfois, le chemin direct par le corps est le plus efficace pour se vider la tête.',
+      description2: 'En tant qu\'entraîneur athlétique qualifié, je te propose un coaching sportif professionnel. Pas de thérapie, pas de coaching mental – juste un entraînement honnête et intense qui te ramène à toi-même.',
+    },
     cta: {
       title: 'Curieux d\'en savoir plus ?',
       description: 'Réserve un appel découverte gratuit ou appelle-moi simplement pour découvrir si une collaboration fait sens.',
@@ -439,5 +452,75 @@ export const fr: Translations = {
     learnMore: 'En savoir plus',
     bookAppointment: 'Prendre rendez-vous',
     freeConsultation: 'Première consultation gratuite',
+  },
+
+  personalTraining: {
+    nav: 'Coaching Sportif',
+    hero: {
+      title: 'Le mouvement qui a du sens',
+      subtitle: 'Transformation physique adaptée à vos besoins – performance, prévention et motivation à Toulouse.',
+      cta: 'Premier rendez-vous gratuit',
+    },
+    approach: {
+      title: 'Mon Approche',
+      description: 'En tant qu\'entraîneur sportif diplômé et thérapeute du mouvement, je combine un entraînement scientifiquement fondé avec une compréhension holistique du corps et de l\'esprit. Pour moi, le mouvement est plus qu\'un sport – c\'est un outil de transformation.\n\nAvec mon expérience en Gestalt-thérapie, j\'apporte une perspective unique à l\'entraînement : nous travaillons non seulement sur le corps, mais aussi sur les schémas qui nous empêchent de vivre notre plein potentiel.',
+    },
+    services: [
+      {
+        title: 'Entraînement Performance',
+        subline: 'FORCE, ENDURANCE, FONCTIONNALITÉ',
+        description: 'Un entraînement individuellement adapté à vos objectifs sportifs. Que ce soit pour la musculation, l\'endurance ou le fitness fonctionnel – nous travaillons sur ce qui vous fait progresser.',
+      },
+      {
+        title: 'Thérapie par le Mouvement',
+        subline: 'PRÉVENTION & RÉHABILITATION',
+        description: 'Le mouvement comme médecine. Nous utilisons des exercices ciblés pour la prévention, la réhabilitation et la réduction du stress physique.',
+      },
+      {
+        title: 'Motivation & Accompagnement',
+        subline: 'TENIR SUR LA DURÉE',
+        description: 'La partie la plus difficile est souvent de persévérer. Je vous accompagne en tant que coach et partenaire d\'entraînement sur votre chemin vers un changement durable.',
+      },
+    ],
+    qualifications: {
+      title: 'Qualifications',
+      items: [
+        'B.A. Prévention et Thérapie par le Mouvement',
+        'Entraîneur Athlétique Diplômé',
+        'Licence d\'Entraîneur A',
+        'Coach Holobody (Mindvalley)',
+      ],
+    },
+    location: {
+      title: 'Localisation',
+      city: 'Toulouse, France',
+      description: 'Entraînement sur place à Toulouse – en extérieur, en salle ou chez vous.',
+    },
+    pricing: {
+      title: 'Tarifs',
+      single: {
+        label: 'Séance Unique',
+        price: '50€',
+        priceLabel: '60 Minutes',
+        title: 'Séance de Coaching Sportif',
+        description: 'Une séance d\'entraînement intensive, individuellement adaptée à vos besoins.',
+        cta: 'Réserver une séance',
+      },
+      package: {
+        label: 'Pour un entraînement régulier',
+        price: '180€',
+        priceLabel: '4 Séances',
+        title: 'Forfait 4 Séances',
+        description: 'Quatre séances pour un progrès durable. Idéal pour bien démarrer.',
+        discount: '10% d\'économie',
+        discountPrice: '45€ par séance',
+        cta: 'Réserver le forfait',
+      },
+    },
+    cta: {
+      title: 'Prêt à commencer ?',
+      description: 'Prenez rendez-vous pour une première consultation gratuite afin de discuter de vos objectifs.',
+      button: 'Prendre rendez-vous',
+    },
   },
 };

@@ -13,6 +13,7 @@ const MyWork = lazy(() => import("./pages/MyWork"));
 const Angebot = lazy(() => import("./pages/Angebot"));
 const UeberMich = lazy(() => import("./pages/UeberMich"));
 const Kontakt = lazy(() => import("./pages/Kontakt"));
+const PersonalTraining = lazy(() => import("./pages/PersonalTraining"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -38,6 +39,7 @@ const AppRoutes = () => (
       <Route path="/de/angebot" element={<Angebot />} />
       <Route path="/de/ueber-mich" element={<UeberMich />} />
       <Route path="/de/kontakt" element={<Kontakt />} />
+      <Route path="/de/personal-training" element={<PersonalTraining />} />
 
       {/* English routes */}
       <Route path="/en" element={<Index />} />
@@ -46,6 +48,7 @@ const AppRoutes = () => (
       <Route path="/en/services" element={<Angebot />} />
       <Route path="/en/about-me" element={<UeberMich />} />
       <Route path="/en/contact" element={<Kontakt />} />
+      <Route path="/en/personal-training" element={<PersonalTraining />} />
 
       {/* French routes */}
       <Route path="/fr" element={<Index />} />
@@ -54,6 +57,7 @@ const AppRoutes = () => (
       <Route path="/fr/services" element={<Angebot />} />
       <Route path="/fr/a-propos" element={<UeberMich />} />
       <Route path="/fr/contact" element={<Kontakt />} />
+      <Route path="/fr/coaching-sportif" element={<PersonalTraining />} />
 
       {/* Legacy routes - redirect to German */}
       <Route path="/gestalttherapie" element={<Navigate to="/de/gestalttherapie" replace />} />

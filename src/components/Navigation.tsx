@@ -33,6 +33,7 @@ export const Navigation = () => {
   const navLinks = [
     { to: 'ansatz', label: t.nav.approach },
     { to: 'angebot', label: t.nav.angebot },
+    { to: 'personal-training', label: t.personalTraining.nav },
     { to: 'ueber-mich', label: t.nav.ueberMich },
     { to: 'kontakt', label: t.nav.kontakt },
   ];

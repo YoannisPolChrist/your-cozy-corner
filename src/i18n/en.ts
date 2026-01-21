@@ -73,19 +73,19 @@ export const en: Translations = {
 
   myWorkSection: {
     title: 'My Approach',
-    description: 'Change happens not just through thinking. While the mind understands, true movement only begins when feeling and logic interweave. If a change doesn\'t make holistic sense—both in your head and your heart—it won\'t stick. We use Diagnostics, Gestalt Therapy, and Coaching to bridge this gap and create lasting experience.',
-    link: 'More About My Approach',
+    description: 'Change has three dimensions: The emotional depth of Gestalt therapy (heart), the strategic clarity of coaching (head), and the physical presence of training (body). These three pillars work together – because real transformation happens not in isolation, but in the interplay of all three.',
+    link: 'Discover the Three Pillars',
     quote: 'Change occurs when one becomes what he is, not when he tries to become what he is not.\n\n— Arnold Beisser',
   },
 
   myWork: {
     hero: {
       title: 'My Approach',
-      subtitle: 'My approach combines scientific precision with deep emotional experience. We view change as a holistic process, resting on a stable foundation of insight and lived experience. Together, we create a space where development is not only understood but embodied in the here and now.',
+      subtitle: 'Change has three dimensions: The emotional depth of Gestalt therapy, the strategic clarity of coaching, and the physical presence in training. These three pillars form a holistic system – because real transformation happens in the interplay of heart, head, and body.',
       iconDescriptions: {
-        diagnostik: 'Analytical clarity through data',
-        gestalt: 'Immediate depth in experience',
-        coaching: 'Strategic power for change',
+        diagnostik: 'Strategic clarity',
+        gestalt: 'The heart of my work',
+        coaching: 'Incl. diagnostics',
       },
       iconCards: {
         diagnostik: {
@@ -157,6 +157,13 @@ export const en: Translations = {
         description: 'Away from entrenched patterns toward genuine encounter. We look at what\'s happening between people in the here and now.',
       },
     ],
+  },
+
+  personalTrainingPreview: {
+    label: 'The Third Dimension',
+    title: 'The Body as a Gateway to Change',
+    description: 'Transformation often begins where words end: in the body. Movement creates new patterns, releases blockages, and grounds what we work on in therapy and coaching. Personal training in Toulouse.',
+    link: 'Discover Personal Training',
   },
 
   cta: {
@@ -245,19 +252,19 @@ export const en: Translations = {
     },
     services: [
       {
-        title: 'Holistic Diagnostics',
-        subline: 'PRECISION INSTEAD OF GUT FEELING',
-        description: 'Based on Gestalt therapy and scientific practices, we conduct a fundamental assessment. This includes blood, movement, or nutritional analyses as needed.',
-      },
-      {
-        title: 'Integrative Gestalt Therapy',
-        subline: 'WHEN UNDERSTANDING ISN\'T ENOUGH',
+        title: 'Gestalt Therapy',
+        subline: 'THE HEART OF MY WORK',
         description: 'We resolve old patterns where they originated: in contact and in the body. Instead of years of \'talking about it\', we use the here and now to make emotional blockages tangible and changeable.',
       },
       {
-        title: 'Holomotion Coaching',
-        subline: 'CLARITY THROUGH BODY INTELLIGENCE',
-        description: 'Strategy meets intuition. We combine cognitive planning with the wisdom of your body. For decisions that not only sound logical but also feel right in your gut.',
+        title: 'Coaching',
+        subline: 'INCL. DIAGNOSTICS',
+        description: 'Strategy meets intuition. We combine cognitive planning with the wisdom of your body. Thorough baseline assessment, blood and movement analyses – for decisions that feel right in your gut.',
+      },
+      {
+        title: 'Personal Training',
+        subline: 'BODY IN MOTION',
+        description: 'And if all this feels too heady? We get your body moving – the rest follows. Performance, movement therapy, and motivation in Toulouse.',
       },
     ],
     checkup: {
@@ -386,6 +393,12 @@ export const en: Translations = {
       description1: 'Those who know me know: I take my work seriously. But if at some point we have nothing left to laugh about, then it gets critical. Then something\'s wrong. I believe in the power of humor, lightness and genuine encounters.',
       description2: 'Outside of therapy, you\'ll find me doing sports, out with friends or at my rhetoric clubs. A fulfilling life consists, at least for me, of many small moments of connection – with ourselves, with others and with the universe as a whole.',
     },
+    training: {
+      label: 'THE THIRD DIMENSION',
+      title: 'And if that\'s too "deep" for you?',
+      description1: 'Then let\'s get your body moving – the rest will follow. Sometimes the direct path through the body is the most effective way to clear your head.',
+      description2: 'As a qualified athletic trainer, I offer professional personal training. No therapy, no coaching – just honest, sweat-inducing training that brings you back to yourself.',
+    },
     cta: {
       title: 'Curious to learn more?',
       description: 'Book a free discovery call or simply give me a ring to find out if working together makes sense.',
@@ -439,5 +452,75 @@ export const en: Translations = {
     learnMore: 'Learn more',
     bookAppointment: 'Book appointment',
     freeConsultation: 'Free initial consultation',
+  },
+
+  personalTraining: {
+    nav: 'Personal Training',
+    hero: {
+      title: 'Movement with Purpose',
+      subtitle: 'Physical transformation tailored to you – performance, prevention, and motivation in Toulouse.',
+      cta: 'Free Consultation',
+    },
+    approach: {
+      title: 'My Approach',
+      description: 'As a certified athletic trainer and movement therapist, I combine science-based training with a holistic understanding of body and mind. For me, movement is more than sport – it\'s a tool for transformation.\n\nWith my experience in Gestalt therapy, I bring a unique perspective to training: We work not only on the body but also on the patterns that prevent us from living our full potential.',
+    },
+    services: [
+      {
+        title: 'Performance Training',
+        subline: 'STRENGTH, ENDURANCE, FUNCTIONALITY',
+        description: 'Individually tailored training for your athletic goals. Whether strength building, endurance, or functional fitness – we work on what moves you forward.',
+      },
+      {
+        title: 'Movement Therapy',
+        subline: 'PREVENTION & REHABILITATION',
+        description: 'Movement as medicine. We use targeted exercises for prevention, rehabilitation, and physical stress reduction.',
+      },
+      {
+        title: 'Motivation & Support',
+        subline: 'STAYING CONSISTENT',
+        description: 'The hardest part is often staying consistent. I accompany you as coach and training partner on your journey toward lasting change.',
+      },
+    ],
+    qualifications: {
+      title: 'Qualifications',
+      items: [
+        'B.A. Prevention and Movement Therapy',
+        'Certified Athletic Trainer',
+        'Trainer A-License',
+        'Holobody Coach (Mindvalley)',
+      ],
+    },
+    location: {
+      title: 'Location',
+      city: 'Toulouse, France',
+      description: 'On-site training in Toulouse – outdoors, at a studio, or at your place.',
+    },
+    pricing: {
+      title: 'Pricing',
+      single: {
+        label: 'Single Session',
+        price: '€50',
+        priceLabel: '60 Minutes',
+        title: 'Personal Training Session',
+        description: 'An intensive training session, individually tailored to you.',
+        cta: 'Book Session',
+      },
+      package: {
+        label: 'For Regular Training',
+        price: '€180',
+        priceLabel: '4 Sessions',
+        title: '4-Session Package',
+        description: 'Four sessions for sustainable progress. Ideal for getting started.',
+        discount: '10% Savings',
+        discountPrice: '€45 per session',
+        cta: 'Book Package',
+      },
+    },
+    cta: {
+      title: 'Ready to Start?',
+      description: 'Schedule a free initial consultation to discuss your goals.',
+      button: 'Book Appointment',
+    },
   },
 };

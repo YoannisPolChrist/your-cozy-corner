@@ -7,6 +7,7 @@ import { useRef } from "react";
 import johannesHeroPortrait from "@/assets/johannes-hero-portrait.png";
 import conversationWindow from "@/assets/conversation-window.jpg";
 import johannesPersoenlich from "@/assets/johannes-persoenlich-neu.jpg";
+import johannesMeet from "@/assets/johannes-meet.jpg";
 import { Footer } from "@/components/Footer";
 import {
   fadeUp,
@@ -321,6 +322,83 @@ const UeberMich = () => {
                     className="object-cover"
                     aspectRatio="aspect-[3/4]"
                   />
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* Section 4: Training - Deep Teal Background */}
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          variants={staggerContainer}
+          className="py-16 md:py-32 bg-primary"
+        >
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-16 items-center">
+                {/* Mobile-only: Title at top */}
+                <motion.div variants={staggerContainer} className="space-y-2 md:hidden order-1">
+                  <motion.span
+                    variants={fadeUp}
+                    className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-xs"
+                  >
+                    {t.ueberMich.training?.label}
+                  </motion.span>
+                  <motion.h2
+                    variants={fadeUp}
+                    className="font-heading text-2xl text-white leading-tight"
+                  >
+                    {t.ueberMich.training?.title}
+                  </motion.h2>
+                </motion.div>
+
+                {/* Image with Gold Frame - Shows after title on mobile */}
+                <motion.div className="relative order-2 md:order-2">
+                  <motion.div
+                    variants={goldFrameVariants}
+                    className="absolute bottom-[8px] left-[8px] md:bottom-[20px] md:left-[20px] w-full h-full bg-[#c5a065] rounded-xl md:rounded-2xl"
+                  />
+                  <ParallaxImageWrapper
+                    src={johannesMeet}
+                    alt="Johannes Christ - Personal Training"
+                    className="object-cover"
+                    aspectRatio="aspect-[4/3]"
+                  />
+                </motion.div>
+
+                {/* Text Content - after image on mobile, left on desktop */}
+                <motion.div variants={staggerContainer} className="space-y-4 md:space-y-6 order-3 md:order-1 text-left">
+                  {/* Desktop-only: Title */}
+                  <motion.span
+                    variants={fadeUp}
+                    className="hidden md:block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
+                  >
+                    {t.ueberMich.training?.label}
+                  </motion.span>
+                  <motion.h2
+                    variants={fadeUp}
+                    className="hidden md:block font-heading text-[calc(2.25rem+3px)] text-white leading-tight"
+                  >
+                    {t.ueberMich.training?.title}
+                  </motion.h2>
+                  <motion.div
+                    variants={fadeUp}
+                    className="space-y-3 md:space-y-4 text-white/90 leading-relaxed text-sm md:text-base"
+                  >
+                    <p>{t.ueberMich.training?.description1}</p>
+                    <p>{t.ueberMich.training?.description2}</p>
+                  </motion.div>
+
+                  <motion.div variants={fadeUp} className="pt-4">
+                    <Link to={getLocalizedPath('/personal-training')}>
+                      <Button variant="gold" className="font-semibold">
+                        Personal Training <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </motion.div>
                 </motion.div>
               </div>
             </div>

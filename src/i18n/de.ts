@@ -73,19 +73,19 @@ export const de: Translations = {
 
   myWorkSection: {
     title: 'Mein Ansatz',
-    description: 'Veränderung geschieht nicht allein durch Denken. Während der Verstand versteht, beginnt echte Bewegung erst dort, wo Gefühl und Logik sich verweben. Wenn eine Veränderung keinen ganzheitlichen Sinn ergibt – weder im Kopf noch im Herzen – wird sie nicht bestehen bleiben.\n\nWir nutzen Diagnostik, Gestalttherapie und Coaching, um diese Lücke zu überbrücken und nachhaltige Erfahrungen zu schaffen.',
-    link: 'Mehr über meinen Ansatz',
+    description: 'Veränderung hat drei Dimensionen: Die emotionale Tiefe (Gestalttherapie), die strategische Klarheit (Coaching), und die körperliche Präsenz (Personal Training). Diese drei Säulen greifen ineinander – denn echter Wandel geschieht nicht isoliert im Kopf, im Herzen oder im Körper, sondern im Zusammenspiel aller drei.',
+    link: 'Die drei Säulen entdecken',
     quote: 'Veränderung geschieht, wenn jemand wird, was er ist, nicht wenn er versucht, etwas zu werden, das er nicht ist.\n\n— Arnold Beisser',
   },
 
   myWork: {
     hero: {
       title: 'Mein Ansatz',
-      subtitle: 'Mein Ansatz verbindet wissenschaftliche Präzision mit tiefer emotionaler Erfahrung. Wir betrachten Veränderung als ganzheitlichen Prozess, der auf einem stabilen Fundament aus Erkenntnis und Erleben ruht. Gemeinsam schaffen wir einen Raum, in dem Entwicklung nicht nur verstanden, sondern im Hier und Jetzt verkörpert wird.',
+      subtitle: 'Veränderung hat drei Dimensionen: Die emotionale Tiefe der Gestalttherapie, die strategische Klarheit des Coachings, und die körperliche Präsenz im Training. Diese drei Säulen bilden ein ganzheitliches System – denn echter Wandel geschieht im Zusammenspiel von Herz, Kopf und Körper.',
       iconDescriptions: {
-        diagnostik: 'Analytische Klarheit durch Daten',
-        gestalt: 'Unmittelbare Tiefe im Erleben',
-        coaching: 'Strategische Kraft für Veränderung',
+        diagnostik: 'Strategische Klarheit',
+        gestalt: 'Das Herz meiner Arbeit',
+        coaching: 'Inkl. Diagnostik',
       },
       iconCards: {
         diagnostik: {
@@ -157,6 +157,13 @@ export const de: Translations = {
         description: 'Weg von festgefahrenen Mustern hin zu echter Begegnung. Wir schauen uns an, was im Hier und Jetzt zwischen Menschen passiert.',
       },
     ],
+  },
+
+  personalTrainingPreview: {
+    label: 'Die dritte Dimension',
+    title: 'Der Körper als Tor zur Veränderung',
+    description: 'Veränderung beginnt oft dort, wo Worte aufhören: im Körper. Bewegung schafft neue Muster, löst Blockaden und erdet das, was wir in Therapie und Coaching erarbeiten. Personal Training in Toulouse.',
+    link: 'Personal Training entdecken',
   },
 
   cta: {
@@ -245,19 +252,19 @@ export const de: Translations = {
     },
     services: [
       {
-        title: 'Ganzheitliche Diagnostik',
-        subline: 'PRÄZISION STATT BAUCHGEFÜHL',
-        description: 'Auf Basis der Gestalttherapie, sowie wissenschaftlicher Praktiken, führen wir eine fundierte Standortbestimmung durch. Dazu gehören je nach Bedarf Blut-, Bewegungs- oder Nährstoffanalysen.',
-      },
-      {
-        title: 'Integrative Gestalttherapie',
-        subline: 'WENN VERSTEHEN NICHT REICHT',
+        title: 'Gestalttherapie',
+        subline: 'DAS HERZ MEINER ARBEIT',
         description: 'Wir lösen alte Muster dort auf, wo sie entstanden sind: im Kontakt und im Körper. Statt jahrelangem \'Darüber-Reden\' nutzen wir das Hier und Jetzt, um emotionale Blockaden spürbar und veränderbar zu machen.',
       },
       {
-        title: 'Holomotion Coaching',
-        subline: 'KLARHEIT DURCH KÖRPERINTELLIGENZ',
-        description: 'Strategie trifft Intuition. Wir kombinieren kognitive Planung mit der Weisheit deines Körpers. Für Entscheidungen, die sich nicht nur logisch anhören, sondern auch im Bauch richtig anfühlen.',
+        title: 'Coaching',
+        subline: 'INKL. DIAGNOSTIK',
+        description: 'Strategie trifft Intuition. Wir kombinieren kognitive Planung mit der Weisheit deines Körpers. Fundierte Standortbestimmung, Blut- und Bewegungsanalysen – für Entscheidungen, die im Bauch richtig anfühlen.',
+      },
+      {
+        title: 'Personal Training',
+        subline: 'KÖRPER IN BEWEGUNG',
+        description: 'Und wenn dir das alles zu viel Kopf ist? Dann bringen wir deinen Körper in Bewegung – der Rest folgt. Performance, Bewegungstherapie und Motivation in Toulouse.',
       },
     ],
     checkup: {
@@ -386,6 +393,12 @@ export const de: Translations = {
       description1: 'Wer mich kennt, weiß: Ich nehme meine Arbeit ernst. Wenn wir aber irgendwann nichts mehr zum Lachen haben, dann wird\'s kritisch. Dann stimmt was nicht. Ich glaube an die Kraft von Humor, Leichtigkeit und echten Begegnungen.',
       description2: 'Abseits der Therapie findest du mich beim Sport, unterwegs mit Freunden oder bei meinen Rhetorikclubs. Ein erfülltes Leben besteht, zumindest für mich, aus vielen kleinen Momenten der Verbundenheit – mit uns selbst, mit anderen und dem Universum als Ganzem.',
     },
+    training: {
+      label: 'DIE DRITTE DIMENSION',
+      title: 'Und wem das zu viel "Tiefgang" ist?',
+      description1: 'Dann bringen wir deinen Körper in Bewegung – der Rest folgt. Manchmal ist der direkte Weg über den Körper der effektivste, um den Kopf frei zu bekommen.',
+      description2: 'Als ausgebildeter Athletiktrainer biete ich dir professionelles Personal Training an. Keine Therapie, kein Coaching – einfach ehrliches, schweißtreibendes Training, das dich wieder zu dir selbst bringt.',
+    },
     cta: {
       title: 'Neugierig geworden?',
       description: 'Vereinbare ein kostenloses Kennenlerngespräch oder ruf einfach durch, um herauszufinden, ob eine Zusammenarbeit sinnvoll ist.',
@@ -439,5 +452,75 @@ export const de: Translations = {
     learnMore: 'Mehr erfahren',
     bookAppointment: 'Termin buchen',
     freeConsultation: 'Kostenloses Erstgespräch',
+  },
+
+  personalTraining: {
+    nav: 'Personal Training',
+    hero: {
+      title: 'Bewegung mit Sinn',
+      subtitle: 'Körperliche Transformation, die zu dir passt – Performance, Prävention und Motivation in Toulouse.',
+      cta: 'Kostenloses Erstgespräch',
+    },
+    approach: {
+      title: 'Mein Ansatz',
+      description: 'Als ausgebildeter Athletiktrainer und Bewegungstherapeut verbinde ich wissenschaftlich fundiertes Training mit einem ganzheitlichen Verständnis von Körper und Psyche. Bewegung ist für mich mehr als Sport – sie ist ein Werkzeug für Veränderung.\n\nMit meiner Erfahrung aus der Gestalttherapie bringe ich einen einzigartigen Blick auf Training mit: Wir arbeiten nicht nur am Körper, sondern auch an den Mustern, die uns davon abhalten, unser volles Potenzial zu leben.',
+    },
+    services: [
+      {
+        title: 'Performance Training',
+        subline: 'KRAFT, AUSDAUER, FUNKTIONALITÄT',
+        description: 'Individuell angepasstes Training für deine sportlichen Ziele. Ob Kraftaufbau, Ausdauer oder funktionelle Fitness – wir arbeiten an dem, was dich weiterbringt.',
+      },
+      {
+        title: 'Bewegungstherapie',
+        subline: 'PRÄVENTION & REHABILITATION',
+        description: 'Bewegung als Medizin. Wir nutzen gezielte Übungen zur Vorbeugung, Rehabilitation und zum Abbau von körperlichem Stress.',
+      },
+      {
+        title: 'Motivation & Begleitung',
+        subline: 'LANGFRISTIG DRANBLEIBEN',
+        description: 'Der schwierigste Teil ist oft das Dranbleiben. Ich begleite dich als Coach und Sparringspartner auf deinem Weg zu nachhaltiger Veränderung.',
+      },
+    ],
+    qualifications: {
+      title: 'Qualifikationen',
+      items: [
+        'B.A. Prävention und Bewegungstherapie',
+        'Diplom Athletiktrainer',
+        'Trainer A-Lizenz',
+        'Holobody Coach (Mindvalley)',
+      ],
+    },
+    location: {
+      title: 'Standort',
+      city: 'Toulouse, Frankreich',
+      description: 'Training vor Ort in Toulouse – draußen, im Studio oder bei dir zu Hause.',
+    },
+    pricing: {
+      title: 'Konditionen',
+      single: {
+        label: 'Einzelsession',
+        price: '50€',
+        priceLabel: '60 Minuten',
+        title: 'Personal Training Session',
+        description: 'Eine intensive Trainingseinheit, individuell auf dich abgestimmt.',
+        cta: 'Termin buchen',
+      },
+      package: {
+        label: 'Für regelmäßiges Training',
+        price: '180€',
+        priceLabel: '4 Sessions',
+        title: '4er-Paket',
+        description: 'Vier Sessions für nachhaltigen Fortschritt. Ideal für den Einstieg.',
+        discount: '10% Ersparnis',
+        discountPrice: '45€ pro Session',
+        cta: 'Paket buchen',
+      },
+    },
+    cta: {
+      title: 'Bereit loszulegen?',
+      description: 'Vereinbare ein kostenloses Erstgespräch, um deine Ziele zu besprechen.',
+      button: 'Termin vereinbaren',
+    },
   },
 };

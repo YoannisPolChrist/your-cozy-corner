@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Heart, Brain, Compass, Activity, BarChart3, Map, Video, MapPin, ArrowRight } from "lucide-react";
+import { Heart, Brain, Compass, Activity, BarChart3, Map, Video, MapPin, ArrowRight, Dumbbell } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Footer } from "@/components/Footer";
@@ -18,7 +18,7 @@ import {
 const Angebot = () => {
   const { t, getLocalizedPath } = useLanguage();
   const location = useLocation();
-  const serviceIcons = [Compass, Heart, Brain];
+  const serviceIcons = [Heart, Brain, Dumbbell];
   const checkupIcons = [Activity, BarChart3, Map];
 
   // Handle hash navigation
@@ -58,7 +58,7 @@ const Angebot = () => {
               <motion.div variants={cardStagger} className="grid md:grid-cols-3 gap-8 md:gap-16">
                 {t.angebot.services.map((service, index) => {
                   const Icon = serviceIcons[index];
-                  const serviceIds = ['diagnostik', 'gestalttherapie', 'coaching'];
+                  const serviceIds = ['gestalttherapie', 'coaching', 'personal-training'];
                   return (
                     <motion.div key={index} id={serviceIds[index]} variants={cardItem} className="scroll-mt-24">
                       <Card className="p-8 h-full bg-off-white shadow-soft hover:shadow-teal transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden border border-accent/20">
