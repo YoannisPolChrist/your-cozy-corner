@@ -46,7 +46,7 @@ const Index = () => {
     t,
     getLocalizedPath
   } = useLanguage();
-  const serviceIcons = [Compass, Heart, Brain];
+  const serviceIcons = [Heart, Brain, Dumbbell];
   return <div className="min-h-screen bg-background">
     <Navigation />
     <main>
@@ -213,7 +213,7 @@ const Index = () => {
           <StaggerContainer className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto mb-16">
             {t.services.items.map((service, index) => {
               const Icon = serviceIcons[index];
-              const serviceAnchors = ['diagnostik', 'gestalttherapie', 'coaching'];
+              const serviceAnchors = ['gestalttherapie', 'coaching', 'personal-training'];
               return <AnimatedItem key={index}>
                 <Link to={getLocalizedPath(`/angebot#${serviceAnchors[index]}`)} className="block h-full">
                   <Card className="p-10 bg-off-white border border-accent/20 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group relative overflow-hidden h-full cursor-pointer">
