@@ -47,16 +47,16 @@ export const de: Translations = {
     subtitle: 'Individuelle Räume für deine Entwicklung',
     items: [
       {
-        title: 'Diagnostik',
-        description: 'Professionelle Einordnung und Klarheit',
-      },
-      {
         title: 'Gestalttherapie',
         description: 'Tiefgreifende Arbeit an emotionalen Themen',
       },
       {
         title: 'Coaching',
-        description: 'Fokussierte Entwicklung, zielorientiert, praktisch',
+        description: 'Fokussierte Entwicklung mit Diagnostik & Strategie',
+      },
+      {
+        title: 'Personal Training',
+        description: 'Körperliche Stärke als Fundament für Veränderung',
       },
     ],
     cta: 'Angebot entdecken',

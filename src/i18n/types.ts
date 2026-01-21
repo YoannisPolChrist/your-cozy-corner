@@ -318,6 +318,12 @@ export interface Translations {
       description1: string;
       description2: string;
     };
+    training?: {
+      label: string;
+      title: string;
+      description1: string;
+      description2: string;
+    };
     cta: {
       title: string;
       description: string;
