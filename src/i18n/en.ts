@@ -47,16 +47,16 @@ export const en: Translations = {
     subtitle: 'Individual spaces for your development',
     items: [
       {
-        title: 'Diagnostics',
-        description: 'Professional assessment and clarity',
-      },
-      {
         title: 'Gestalt Therapy',
         description: 'Deep work on emotional themes',
       },
       {
         title: 'Coaching',
         description: 'Focused development, goal-oriented, practical',
+      },
+      {
+        title: 'Personal Training',
+        description: 'Bodywork for performance, prevention, and rehabilitation.',
       },
     ],
     cta: 'Discover services',
@@ -116,9 +116,9 @@ export const en: Translations = {
       ],
     },
     coaching: {
-      label: 'Holomotion Coaching',
+      label: 'Structure & Clarity',
       title: 'Coaching',
-      intro: 'Daily strategy, habit formation, and sustainable change. We bridge the gap between what your mind knows and what your body needs.',
+      intro: 'While Gestalt therapy primarily revolves around the inner process, coaching is about working out concrete steps. We look at how new insights, feelings, and experiences can be optimally implemented to get closer to your own goal.',
       items: [
         { title: 'Daily Structure', description: 'Practical strategies for your everyday life that can be implemented immediately. We develop routines that optimally use your energy and fit your life.' },
         { title: 'Habit Formation', description: 'Step by step establishing new patterns that fit you. Small, sustainable changes instead of radical upheavals that don\'t last.' },
@@ -177,6 +177,12 @@ export const en: Translations = {
     gestaltIntro: {
       title: 'Gestalt Therapy',
       description: 'Gestalt Therapy is a humanistic, experiential approach that views the person as a whole – body, mind, and soul in interaction with their environment. At its core is conscious awareness and experiencing in the present moment. Instead of just talking about problems, we work to make them tangible and changeable in the here and now. This is how genuine, lasting transformation emerges.',
+      essence: [
+        { title: 'Here & Now', description: 'Life happens in the present moment. We work with what is emerging right now.' },
+        { title: 'Awareness', description: 'Conscious perception of body and feelings as the key to change.' },
+        { title: 'Contact', description: 'Healing happens in genuine connection – with yourself and the other.' },
+      ],
+      additionalInfo: 'Since Gestalt therapy is the heart of my work, here is some additional information:',
     },
     scrollTelling: {
       title: 'Gestalt Therapy (The Heart of My Work)',
@@ -281,20 +287,20 @@ export const en: Translations = {
     konditionen: {
       title: 'Terms & Collaboration',
       einzelbegleitung: {
-        label: 'Get to Know Me',
+        label: 'Trial Session or Individual Training',
         price: '€50',
-        priceLabel: '50 Minutes',
+        priceLabel: '60 Minutes',
         title: 'Individual Session',
-        description: 'Ideal for a first impression of my approach. Gestalt therapy, coaching or counseling – tailored to your needs.',
+        description: 'For change, be it through Gestalt therapy, coaching, or personal training – entirely according to your needs.',
         cta: 'Book appointment',
       },
       intensiv: {
         label: 'For Lasting Change',
         price: 'Individual Framework',
         priceLabel: '3-6 Months',
-        title: 'Intensive Collaboration',
-        description: 'Change takes time. For deep-seated issues, we establish a regular rhythm.',
-        discount: '10% Discount per session (50 min each)',
+        title: 'Individual Counseling',
+        description: 'Change takes time. For deep-seated issues, we establish a regular rhythm over 3-6 months.',
+        discount: '10% Discount per session',
         discountPrice: '€45',
         cta: 'Free preliminary talk',
       },
@@ -395,9 +401,10 @@ export const en: Translations = {
     },
     training: {
       label: 'THE THIRD DIMENSION',
-      title: 'And if that\'s too "deep" for you?',
-      description1: 'Then let\'s get your body moving – the rest will follow. Sometimes the direct path through the body is the most effective way to clear your head.',
-      description2: 'As a qualified athletic trainer, I offer professional personal training. No therapy, no coaching – just honest, sweat-inducing training that brings you back to yourself.',
+      title: 'And when you just can\'t get going?',
+      description1: 'Sometimes you don\'t need deep conversations – sometimes you just need to sweat. When your inner resistance wins, motivation is lacking, or you simply want to perform better, the direct path through the body is often the most effective.',
+      description2: 'Movement changes everything: your energy, your mindset, your self-image. Those who train regularly know: The body is not an appendage of the mind – it IS the mind. And sometimes you need to push yourself physically before your head clears up.',
+      description3: 'Whether you want to build muscle, lose weight, or tackle back problems – as a certified athletic trainer and movement therapist, I meet you where you are. No esoteric talk, no coaching jargon. Just honest, sweat-inducing training that gets you where you want to go.',
     },
     cta: {
       title: 'Curious to learn more?',
@@ -457,29 +464,30 @@ export const en: Translations = {
   personalTraining: {
     nav: 'Personal Training',
     hero: {
-      title: 'Movement with Purpose',
-      subtitle: 'Physical transformation tailored to you – performance, prevention, and motivation in Toulouse.',
+      title: 'Personal Training',
+      subtitle: 'Science-based training for those who want results. Whether performance, prevention, or rehabilitation – in Toulouse.',
       cta: 'Free Consultation',
     },
     approach: {
-      title: 'My Approach',
-      description: 'As a certified athletic trainer and movement therapist, I combine science-based training with a holistic understanding of body and mind. For me, movement is more than sport – it\'s a tool for transformation.\n\nWith my experience in Gestalt therapy, I bring a unique perspective to training: We work not only on the body but also on the patterns that prevent us from living our full potential.',
+      label: 'Athletics & Performance',
+      title: 'Personal Training',
+      description: 'As a sports scientist (B.A. Prevention and Movement Therapy) and certified athletic trainer, I work evidence-based. No guessing, no cookie-cutter plans. We start with a functional assessment, identify your weak points, and build a training program that fits your lifestyle.\n\nWhether you want to come back from an injury, work preventively on your posture, or take your athletic performance to the next level – we find the way.',
     },
     services: [
       {
-        title: 'Performance Training',
-        subline: 'STRENGTH, ENDURANCE, FUNCTIONALITY',
-        description: 'Individually tailored training for your athletic goals. Whether strength building, endurance, or functional fitness – we work on what moves you forward.',
+        title: 'Athletics & Performance',
+        subline: 'STRONGER. FASTER. MORE RESILIENT.',
+        description: 'Targeted training for athletes and recreational sports enthusiasts. Strength, speed, endurance – tailored to your sport and your goals. Correct exercise execution is the foundation for injury prevention and performance gains.',
       },
       {
-        title: 'Movement Therapy',
-        subline: 'PREVENTION & REHABILITATION',
-        description: 'Movement as medicine. We use targeted exercises for prevention, rehabilitation, and physical stress reduction.',
+        title: 'Prevention & Rehab',
+        subline: 'MOVEMENT AS MEDICINE',
+        description: 'Back pain, postural imbalances, overuse – many issues can be fixed or prevented through targeted training. I work on the cause, not the symptom. Mobility and stability form the foundation.',
       },
       {
-        title: 'Motivation & Support',
-        subline: 'STAYING CONSISTENT',
-        description: 'The hardest part is often staying consistent. I accompany you as coach and training partner on your journey toward lasting change.',
+        title: 'Personal Training',
+        subline: 'LOOKING GOOD NAKED',
+        description: '...is only part of the promise. With personalized coaching, you reach your goals faster and more sustainably. The combination of functional training and nutrition coaching makes the difference.',
       },
     ],
     qualifications: {

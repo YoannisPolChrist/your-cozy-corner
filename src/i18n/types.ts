@@ -158,6 +158,11 @@ export interface Translations {
     gestaltIntro?: {
       title: string;
       description: string;
+      essence?: Array<{
+        title: string;
+        description: string;
+      }>;
+      additionalInfo?: string;
     };
     scrollTelling: {
       title: string;
@@ -251,6 +256,14 @@ export interface Translations {
         discountPrice?: string;
         cta: string;
       };
+      personalTraining?: {
+        label: string;
+        price: string;
+        priceLabel: string;
+        title: string;
+        description: string;
+        cta: string;
+      };
     };
     formate: {
       title: string;
@@ -317,6 +330,13 @@ export interface Translations {
       title: string;
       description1: string;
       description2: string;
+    };
+    training?: {
+      label: string;
+      title: string;
+      description1: string;
+      description2: string;
+      description3?: string;
     };
     cta: {
       title: string;
@@ -385,6 +405,7 @@ export interface Translations {
       cta: string;
     };
     approach: {
+      label?: string;
       title: string;
       description: string;
     };

@@ -85,14 +85,23 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       return `/${language}`;
     }
 
+    // Handle hash
+    let hash = '';
+    let pathWithoutHash = path;
+    if (path.includes('#')) {
+      const [p, h] = path.split('#');
+      pathWithoutHash = p;
+      hash = `#${h}`;
+    }
+
     // Remove leading slash and any existing language prefix
-    const cleanPath = path.replace(/^\/(de|en|fr)?\/?/, '');
+    const cleanPath = pathWithoutHash.replace(/^\/(de|en|fr)?\/?/, '');
 
     // Check if this is a known route that needs translation
     const baseRoute = reverseRouteMap[cleanPath] || cleanPath;
     const localizedRoute = routeMap[baseRoute]?.[language] || cleanPath;
 
-    return `/${language}/${localizedRoute}`;
+    return `/${language}/${localizedRoute}${hash}`;
   };
 
   const setLanguage = (newLang: Language) => {

@@ -47,16 +47,16 @@ export const fr: Translations = {
     subtitle: 'Des espaces individuels pour ton développement',
     items: [
       {
-        title: 'Diagnostic',
-        description: 'Évaluation professionnelle et clarté',
-      },
-      {
         title: 'Gestalt-thérapie',
         description: 'Travail en profondeur sur les thèmes émotionnels',
       },
       {
         title: 'Coaching',
         description: 'Développement ciblé, orienté objectifs, pratique',
+      },
+      {
+        title: 'Entraînement Personnel',
+        description: 'Travail corporel pour la performance, la prévention et la réhabilitation.',
       },
     ],
     cta: 'Découvrir les services',
@@ -116,9 +116,9 @@ export const fr: Translations = {
       ],
     },
     coaching: {
-      label: 'Holomotion Coaching',
+      label: 'Structure & Clarté',
       title: 'Coaching',
-      intro: 'Stratégie quotidienne, formation d\'habitudes et changement durable. Nous comblons l\'écart entre ce que ton esprit sait et ce dont ton corps a besoin.',
+      intro: 'Alors que la Gestalt-thérapie se concentre principalement sur le processus intérieur, le coaching vise à élaborer des étapes concrètes. Nous regardons comment les nouvelles prises de conscience, les sentiments et les expériences peuvent être mis en œuvre de manière optimale pour se rapprocher de votre propre objectif.',
       items: [
         { title: 'Structure quotidienne', description: 'Stratégies pratiques pour ta vie quotidienne, immédiatement applicables. Nous développons des routines qui utilisent au mieux ton énergie et s\'adaptent à ta vie.' },
         { title: 'Formation d\'habitudes', description: 'Établir pas à pas de nouveaux schémas qui te correspondent. De petits changements durables au lieu de bouleversements radicaux qui ne tiennent pas.' },
@@ -177,6 +177,12 @@ export const fr: Translations = {
     gestaltIntro: {
       title: 'La Gestalt-thérapie',
       description: "La Gestalt-thérapie est une approche humaniste et expérientielle qui considère la personne dans sa globalité – corps, esprit et âme en interaction avec son environnement. Au cœur de cette approche se trouve la prise de conscience et le vécu dans le moment présent. Au lieu de simplement parler des problèmes, nous travaillons à les rendre tangibles et modifiables dans l'ici et maintenant. C'est ainsi qu'émerge une transformation authentique et durable.",
+      essence: [
+        { title: 'Ici & Maintenant', description: 'La vie se déroule dans l\'instant présent. Nous travaillons avec ce qui émerge maintenant.' },
+        { title: 'Conscience', description: 'La perception consciente du corps et des sentiments comme clé du changement.' },
+        { title: 'Contact', description: 'La guérison se produit dans une rencontre authentique – avec soi-même et avec l\'autre.' },
+      ],
+      additionalInfo: 'Comme la Gestalt-thérapie est le cœur de mon travail, voici quelques informations supplémentaires :',
     },
     scrollTelling: {
       title: 'Gestalt-thérapie (Le cœur de mon travail)',
@@ -281,20 +287,20 @@ export const fr: Translations = {
     konditionen: {
       title: 'Tarifs & Collaboration',
       einzelbegleitung: {
-        label: 'Pour faire connaissance',
+        label: 'Séance découverte ou entraînement individuel',
         price: '50€',
-        priceLabel: '50 Minutes',
+        priceLabel: '60 Minutes',
         title: 'Séance individuelle',
-        description: 'Idéal pour une première impression de mon approche. Gestalt-thérapie, coaching ou conseil – selon tes besoins.',
+        description: 'Pour le changement, que ce soit par la Gestalt-thérapie, le coaching ou le Personal Training – selon vos besoins.',
         cta: 'Prendre rendez-vous',
       },
       intensiv: {
         label: 'Pour un changement durable',
         price: 'Cadre sur mesure',
         priceLabel: '3-6 Mois',
-        title: 'Collaboration intensive',
-        description: 'Le changement prend du temps. Pour les thèmes profonds, nous établissons un rythme régulier.',
-        discount: '10% de réduction par séance (50 min)',
+        title: 'Accompagnement individuel',
+        description: 'Le changement prend du temps. Pour les thèmes profonds, nous établissons un rythme régulier sur 3-6 mois.',
+        discount: '10% de réduction par séance',
         discountPrice: '45€',
         cta: 'Premier entretien gratuit',
       },
@@ -395,9 +401,10 @@ export const fr: Translations = {
     },
     training: {
       label: 'LA TROISIÈME DIMENSION',
-      title: 'Et si c\'est trop "profond" pour toi ?',
-      description1: 'Alors mettons ton corps en mouvement – le reste suivra. Parfois, le chemin direct par le corps est le plus efficace pour se vider la tête.',
-      description2: 'En tant qu\'entraîneur athlétique qualifié, je te propose un coaching sportif professionnel. Pas de thérapie, pas de coaching mental – juste un entraînement honnête et intense qui te ramène à toi-même.',
+      title: 'Et si tu n\'arrives simplement pas à te bouger ?',
+      description1: 'Parfois, tu n\'as pas besoin de conversations profondes – parfois tu as juste besoin de transpirer. Quand la flemme gagne, que la motivation manque ou que tu veux simplement mieux performer, le chemin direct par le corps est souvent le plus efficace.',
+      description2: 'Le mouvement change tout : ton énergie, ton état d\'esprit, ton image de toi. Ceux qui s\'entraînent régulièrement le savent : Le corps n\'est pas un appendice de l\'esprit – il EST l\'esprit. Et parfois il faut d\'abord s\'épuiser physiquement avant que la tête ne s\'éclaircisse.',
+      description3: 'Que tu veuilles prendre du muscle, perdre du poids ou soulager ton dos – en tant qu\'entraîneur athlétique diplômé et thérapeute du mouvement, je te prends là où tu es. Pas de blabla ésotérique, pas de jargon coaching. Juste un entraînement honnête et intense pour t\'amener là où tu veux aller.',
     },
     cta: {
       title: 'Curieux d\'en savoir plus ?',
@@ -457,29 +464,30 @@ export const fr: Translations = {
   personalTraining: {
     nav: 'Coaching Sportif',
     hero: {
-      title: 'Le mouvement qui a du sens',
-      subtitle: 'Transformation physique adaptée à vos besoins – performance, prévention et motivation à Toulouse.',
+      title: 'Personal Training',
+      subtitle: 'Entraînement scientifiquement fondé pour ceux qui veulent des résultats. Performance, prévention ou réhabilitation – à Toulouse.',
       cta: 'Premier rendez-vous gratuit',
     },
     approach: {
-      title: 'Mon Approche',
-      description: 'En tant qu\'entraîneur sportif diplômé et thérapeute du mouvement, je combine un entraînement scientifiquement fondé avec une compréhension holistique du corps et de l\'esprit. Pour moi, le mouvement est plus qu\'un sport – c\'est un outil de transformation.\n\nAvec mon expérience en Gestalt-thérapie, j\'apporte une perspective unique à l\'entraînement : nous travaillons non seulement sur le corps, mais aussi sur les schémas qui nous empêchent de vivre notre plein potentiel.',
+      label: 'Athlétisme & Performance',
+      title: 'Personal Training',
+      description: 'En tant que scientifique du sport (B.A. Prévention et Thérapie par le Mouvement) et entraîneur athlétique diplômé, je travaille sur une base scientifique. Pas de devinettes, pas de programmes standards. On commence par un bilan fonctionnel, on identifie tes points faibles et on construit un programme adapté à ton quotidien.\n\nQue tu veuilles revenir après une blessure, travailler préventivement sur ta posture ou amener ta performance sportive au niveau supérieur – on trouve le chemin.',
     },
     services: [
       {
-        title: 'Entraînement Performance',
-        subline: 'FORCE, ENDURANCE, FONCTIONNALITÉ',
-        description: 'Un entraînement individuellement adapté à vos objectifs sportifs. Que ce soit pour la musculation, l\'endurance ou le fitness fonctionnel – nous travaillons sur ce qui vous fait progresser.',
+        title: 'Athlétisme & Performance',
+        subline: 'PLUS FORT. PLUS RAPIDE. PLUS RÉSISTANT.',
+        description: 'Entraînement ciblé pour athlètes et sportifs amateurs. Force, vitesse, endurance – adapté à ton sport et tes objectifs. Une exécution correcte des exercices est la base pour éviter les blessures et progresser.',
       },
       {
-        title: 'Thérapie par le Mouvement',
-        subline: 'PRÉVENTION & RÉHABILITATION',
-        description: 'Le mouvement comme médecine. Nous utilisons des exercices ciblés pour la prévention, la réhabilitation et la réduction du stress physique.',
+        title: 'Prévention & Réhab',
+        subline: 'LE MOUVEMENT COMME MÉDECINE',
+        description: 'Douleurs dorsales, déséquilibres posturaux, surcharge – beaucoup de problèmes peuvent être résolus ou évités par un entraînement ciblé. Je travaille sur la cause, pas le symptôme. Mobilité et stabilité forment la base.',
       },
       {
-        title: 'Motivation & Accompagnement',
-        subline: 'TENIR SUR LA DURÉE',
-        description: 'La partie la plus difficile est souvent de persévérer. Je vous accompagne en tant que coach et partenaire d\'entraînement sur votre chemin vers un changement durable.',
+        title: 'Personal Training',
+        subline: 'LOOKING GOOD NAKED',
+        description: '...n\'est qu\'une partie de la promesse. Avec un accompagnement personnalisé, tu atteins tes objectifs plus rapidement et durablement. La combinaison d\'entraînement fonctionnel et de coaching nutritionnel fait la différence.',
       },
     ],
     qualifications: {
@@ -494,7 +502,7 @@ export const fr: Translations = {
     location: {
       title: 'Localisation',
       city: 'Toulouse, France',
-      description: 'Entraînement sur place à Toulouse – en extérieur, en salle ou chez vous.',
+      description: 'Entraînement sur place à Toulouse – en extérieur, en salle ou chez toi.',
     },
     pricing: {
       title: 'Tarifs',
@@ -503,7 +511,7 @@ export const fr: Translations = {
         price: '50€',
         priceLabel: '60 Minutes',
         title: 'Séance de Coaching Sportif',
-        description: 'Une séance d\'entraînement intensive, individuellement adaptée à vos besoins.',
+        description: 'Une séance d\'entraînement intensive, individuellement adaptée à tes besoins.',
         cta: 'Réserver une séance',
       },
       package: {
@@ -519,7 +527,7 @@ export const fr: Translations = {
     },
     cta: {
       title: 'Prêt à commencer ?',
-      description: 'Prenez rendez-vous pour une première consultation gratuite afin de discuter de vos objectifs.',
+      description: 'Prends rendez-vous pour une première consultation gratuite afin de discuter de tes objectifs.',
       button: 'Prendre rendez-vous',
     },
   },

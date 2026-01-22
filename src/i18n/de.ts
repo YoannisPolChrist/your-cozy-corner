@@ -47,16 +47,16 @@ export const de: Translations = {
     subtitle: 'Individuelle Räume für deine Entwicklung',
     items: [
       {
-        title: 'Diagnostik',
-        description: 'Professionelle Einordnung und Klarheit',
-      },
-      {
         title: 'Gestalttherapie',
         description: 'Tiefgreifende Arbeit an emotionalen Themen',
       },
       {
         title: 'Coaching',
         description: 'Fokussierte Entwicklung, zielorientiert, praktisch',
+      },
+      {
+        title: 'Personal Training',
+        description: 'Körperarbeit für Performance, Prävention und Rehabilitation.',
       },
     ],
     cta: 'Angebot entdecken',
@@ -116,9 +116,9 @@ export const de: Translations = {
       ],
     },
     coaching: {
-      label: 'Holomotion Coaching',
+      label: 'Struktur & Klarheit',
       title: 'Coaching',
-      intro: 'Tägliche Strategie, Gewohnheitsbildung und nachhaltige Veränderung. Wir überbrücken die Lücke zwischen dem, was dein Verstand weiß, und dem, was dein Körper braucht.',
+      intro: 'Während es sich in der Gestalttherapie vor allem um den inneren Prozess dreht, geht es im Coaching darum, konkrete Schritte zu erarbeiten. Wir schauen, wie die neuen Erkenntnisse, Gefühle und Erfahrungen optimal umgesetzt werden können, um dem eigenen Ziel näher zu kommen.',
       items: [
         { title: 'Tagesstruktur', description: 'Praktische Strategien für deinen Alltag, die sofort umsetzbar sind. Wir entwickeln Routinen, die deine Energie optimal nutzen und zu deinem Leben passen.' },
         { title: 'Gewohnheitsbildung', description: 'Schritt für Schritt neue Muster etablieren, die zu dir passen. Kleine, nachhaltige Veränderungen statt radikaler Umbrüche, die nicht halten.' },
@@ -177,6 +177,12 @@ export const de: Translations = {
     gestaltIntro: {
       title: 'Die Gestalttherapie',
       description: 'Gestalttherapie ist ein humanistischer, erlebnisorientierter Therapieansatz, der den Menschen als Ganzes betrachtet – Körper, Geist und Seele im Zusammenspiel mit seiner Umwelt. Im Zentrum steht das bewusste Wahrnehmen und Erleben im gegenwärtigen Moment. Anstatt nur über Probleme zu sprechen, arbeiten wir daran, sie im Hier und Jetzt spürbar und veränderbar zu machen. So entsteht echte, nachhaltige Transformation.',
+      essence: [
+        { title: 'Hier & Jetzt', description: 'Das Leben findet im gegenwärtigen Moment statt. Wir arbeiten mit dem, was jetzt gerade da ist.' },
+        { title: 'Gewahrsein', description: 'Bewusstes Wahrnehmen von Körper und Gefühlen als Schlüssel zur Veränderung.' },
+        { title: 'Kontakt', description: 'Heilung geschieht in der echten Begegnung – mit sich selbst und dem Gegenüber.' },
+      ],
+      additionalInfo: 'Da die Gestalttherapie das Herzstück meiner Arbeit darstellt, hier noch zusätzliche Infos:',
     },
     scrollTelling: {
       title: 'Gestalttherapie',
@@ -281,20 +287,20 @@ export const de: Translations = {
     konditionen: {
       title: 'Konditionen & Zusammenarbeit',
       einzelbegleitung: {
-        label: 'Zum Kennenlernen',
+        label: 'Probe-Stunde oder Einzeltraining',
         price: '50€',
-        priceLabel: '50 Minuten',
+        priceLabel: '60 Minuten',
         title: 'Einzelsitzung',
-        description: 'Ideal für einen ersten Eindruck meiner Arbeitsweise. Gestalttherapie, Coaching oder Beratung – ganz nach deinem Bedarf.',
+        description: 'Für Veränderung, sei es durch Gestalttherapie, Coaching oder Personal Training – ganz nach deinem Bedarf.',
         cta: 'Termin buchen',
       },
       intensiv: {
         label: 'Für nachhaltige Veränderung',
         price: 'Individueller Rahmen',
         priceLabel: '3-6 Monate',
-        title: 'Intensive Zusammenarbeit',
-        description: 'Veränderung braucht Zeit. Für tiefgreifende Themen vereinbaren wir einen festen Rhythmus.',
-        discount: '10% Rabatt pro Sitzung (à 50 Min)',
+        title: 'Individuelle Beratung',
+        description: 'Veränderung braucht Zeit. Für tiefgreifende Themen vereinbaren wir einen festen Rhythmus über 3-6 Monate.',
+        discount: '10% Rabatt pro Sitzung',
         discountPrice: '45€',
         cta: 'Kostenloses Vorgespräch',
       },
@@ -395,9 +401,10 @@ export const de: Translations = {
     },
     training: {
       label: 'DIE DRITTE DIMENSION',
-      title: 'Und wem das zu viel "Tiefgang" ist?',
-      description1: 'Dann bringen wir deinen Körper in Bewegung – der Rest folgt. Manchmal ist der direkte Weg über den Körper der effektivste, um den Kopf frei zu bekommen.',
-      description2: 'Als ausgebildeter Athletiktrainer biete ich dir professionelles Personal Training an. Keine Therapie, kein Coaching – einfach ehrliches, schweißtreibendes Training, das dich wieder zu dir selbst bringt.',
+      title: 'Und wenn du einfach nicht in die Gänge kommst?',
+      description1: 'Manchmal braucht es keine tiefen Gespräche – manchmal braucht es Schweiß. Wenn der innere Schweinehund gewinnt, die Motivation fehlt oder du einfach besser performen willst, dann ist der direkte Weg über den Körper oft der effektivste.',
+      description2: 'Bewegung verändert alles: deine Energie, dein Mindset, dein Selbstbild. Wer regelmäßig trainiert, weiß: Der Körper ist kein Anhängsel des Geistes – er IST der Geist. Und manchmal muss man sich erstmal auspowern, bevor der Kopf wieder klar wird.',
+      description3: 'Ob du Muskeln aufbauen, Gewicht verlieren oder Rückenprobleme angehen willst – als ausgebildeter Athletiktrainer und Bewegungstherapeut hole ich dich da ab, wo du stehst. Kein Eso-Gerede, kein Coaching-Sprech. Einfach ehrliches, schweißtreibendes Training, das dich dahin bringt, wo du hinwillst.',
     },
     cta: {
       title: 'Neugierig geworden?',
@@ -457,29 +464,30 @@ export const de: Translations = {
   personalTraining: {
     nav: 'Personal Training',
     hero: {
-      title: 'Bewegung mit Sinn',
-      subtitle: 'Körperliche Transformation, die zu dir passt – Performance, Prävention und Motivation in Toulouse.',
+      title: 'Personal Training',
+      subtitle: 'Sportwissenschaftlich fundiertes Training für alle, die Ergebnisse wollen. Ob Leistungssteigerung, Prävention oder Rehabilitation – in Toulouse.',
       cta: 'Kostenloses Erstgespräch',
     },
     approach: {
-      title: 'Mein Ansatz',
-      description: 'Als ausgebildeter Athletiktrainer und Bewegungstherapeut verbinde ich wissenschaftlich fundiertes Training mit einem ganzheitlichen Verständnis von Körper und Psyche. Bewegung ist für mich mehr als Sport – sie ist ein Werkzeug für Veränderung.\n\nMit meiner Erfahrung aus der Gestalttherapie bringe ich einen einzigartigen Blick auf Training mit: Wir arbeiten nicht nur am Körper, sondern auch an den Mustern, die uns davon abhalten, unser volles Potenzial zu leben.',
+      label: 'Athletik & Performance',
+      title: 'Personal Training',
+      description: 'Als Sportwissenschaftler (B.A. Prävention und Bewegungstherapie) und Diplom-Athletiktrainer arbeite ich evidenzbasiert. Kein Rätselraten, keine Standardpläne. Wir starten mit einer funktionellen Diagnostik, identifizieren deine Schwachstellen und bauen darauf ein Training auf, das zu deinem Alltag passt.\n\nOb du nach einer Verletzung zurückkommen willst, präventiv an deiner Haltung arbeiten oder deine sportliche Leistung auf das nächste Level bringen möchtest – wir finden den Weg.',
     },
     services: [
       {
-        title: 'Performance Training',
-        subline: 'KRAFT, AUSDAUER, FUNKTIONALITÄT',
-        description: 'Individuell angepasstes Training für deine sportlichen Ziele. Ob Kraftaufbau, Ausdauer oder funktionelle Fitness – wir arbeiten an dem, was dich weiterbringt.',
+        title: 'Athletik & Performance',
+        subline: 'STÄRKER. SCHNELLER. BELASTBARER.',
+        description: 'Zielgerichtetes Training für Athleten und Hobbysportler. Kraftaufbau, Schnelligkeit, Ausdauer – abgestimmt auf deine Sportart und deine Ziele. Korrekte Übungsausführung ist dabei die Basis für Verletzungsfreiheit und Leistungssteigerung.',
       },
       {
-        title: 'Bewegungstherapie',
-        subline: 'PRÄVENTION & REHABILITATION',
-        description: 'Bewegung als Medizin. Wir nutzen gezielte Übungen zur Vorbeugung, Rehabilitation und zum Abbau von körperlichem Stress.',
+        title: 'Prävention & Reha',
+        subline: 'BEWEGUNG ALS MEDIZIN',
+        description: 'Rückenschmerzen, Haltungsschwächen, Überlastung – viele Beschwerden lassen sich durch gezieltes Training beheben oder verhindern. Ich arbeite an der Ursache, nicht am Symptom. Mobilität und Stabilität bilden die Grundlage.',
       },
       {
-        title: 'Motivation & Begleitung',
-        subline: 'LANGFRISTIG DRANBLEIBEN',
-        description: 'Der schwierigste Teil ist oft das Dranbleiben. Ich begleite dich als Coach und Sparringspartner auf deinem Weg zu nachhaltiger Veränderung.',
+        title: 'Personal Training',
+        subline: 'LOOKING GOOD NAKED',
+        description: '...ist nur ein Teil des Versprechens. Mit individueller Betreuung erreichst du deine Ziele schneller und nachhaltiger. Die Kombination aus funktionellem Training und Ernährungscoaching macht den Unterschied.',
       },
     ],
     qualifications: {

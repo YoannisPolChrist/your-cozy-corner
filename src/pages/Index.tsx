@@ -7,7 +7,7 @@ import { ArrowRight, Heart, Brain, Compass, Dumbbell } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import johannesMeet from "@/assets/johannes-meet.jpg";
+import johannesMeet from "@/assets/johannes-meet.webp";
 import { goldFrameVariants, imageVariants, viewportSettings } from "@/lib/animations";
 import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/i18n";
@@ -37,7 +37,7 @@ const AboutParallaxImage = () => {
       <motion.img variants={imageVariants} alt="Johannes Christ - Gestalttherapeut und Coach" className="w-full h-full object-cover object-center" style={{
         y,
         scale
-      }} width={528} height={683} loading="lazy" decoding="async" src="/lovable-uploads/e688c494-51b1-4167-a52c-840cab4d93c5.jpg" />
+      }} width={528} height={683} loading="lazy" decoding="async" src="/lovable-uploads/e688c494-51b1-4167-a52c-840cab4d93c5.webp" />
     </div>
   </motion.div>;
 };
@@ -46,7 +46,7 @@ const Index = () => {
     t,
     getLocalizedPath
   } = useLanguage();
-  const serviceIcons = [Compass, Heart, Brain];
+  const serviceIcons = [Heart, Brain, Dumbbell];
   return <div className="min-h-screen bg-background">
     <Navigation />
     <main>
@@ -213,7 +213,7 @@ const Index = () => {
           <StaggerContainer className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto mb-16">
             {t.services.items.map((service, index) => {
               const Icon = serviceIcons[index];
-              const serviceAnchors = ['diagnostik', 'gestalttherapie', 'coaching'];
+              const serviceAnchors = ['gestalt', 'coaching', 'personal-training'];
               return <AnimatedItem key={index}>
                 <Link to={getLocalizedPath(`/angebot#${serviceAnchors[index]}`)} className="block h-full">
                   <Card className="p-10 bg-off-white border border-accent/20 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group relative overflow-hidden h-full cursor-pointer">
@@ -346,50 +346,7 @@ const Index = () => {
         </div>
       </AnimatedSection>
 
-      {/* Personal Training Preview - Playful Section */}
-      <AnimatedSection className="py-28 md:py-40 bg-primary relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-gold-accent/10 blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-accent/10 blur-3xl" />
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <StaggerContainer>
-              <AnimatedItem>
-                <span className="text-gold-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">
-                  {t.personalTrainingPreview.label}
-                </span>
-              </AnimatedItem>
-              <AnimatedItem>
-                <h2 className="font-heading text-3xl md:text-5xl mb-6 text-white">
-                  {t.personalTrainingPreview.title}
-                </h2>
-              </AnimatedItem>
-              <AnimatedItem>
-                <p className="text-white/85 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl mx-auto">
-                  {t.personalTrainingPreview.description}
-                </p>
-              </AnimatedItem>
-              <AnimatedItem>
-                <div className="flex justify-center items-center gap-4">
-                  <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
-                    <Dumbbell className="w-8 h-8 text-gold-accent" strokeWidth={1.5} />
-                  </div>
-                </div>
-              </AnimatedItem>
-              <AnimatedItem>
-                <Link to={getLocalizedPath('/personal-training')} onClick={scrollToTop} className="inline-flex items-center text-gold-accent font-semibold text-lg group relative mt-8">
-                  <span className="relative">
-                    {t.personalTrainingPreview.link}
-                    <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gold-accent group-hover:w-full transition-all duration-300" />
-                  </span>
-                  <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-2" />
-                </Link>
-              </AnimatedItem>
-            </StaggerContainer>
-          </div>
-        </div>
-      </AnimatedSection>
 
       {/* CTA Section */}
       <AnimatedSection className="py-28 md:py-36 bg-gradient-cta text-white relative overflow-hidden">

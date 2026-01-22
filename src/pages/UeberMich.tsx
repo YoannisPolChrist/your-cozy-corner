@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import johannesHeroPortrait from "@/assets/johannes-hero-portrait.png";
-import conversationWindow from "@/assets/conversation-window.jpg";
-import johannesPersoenlich from "@/assets/johannes-persoenlich-neu.jpg";
-import johannesMeet from "@/assets/johannes-meet.jpg";
+import conversationWindow from "@/assets/conversation-window.webp";
+import johannesPersoenlich from "@/assets/johannes-persoenlich-neu.webp";
+import johannesMeet from "@/assets/johannes-meet.webp";
 import { Footer } from "@/components/Footer";
 import {
   fadeUp,
@@ -390,10 +390,11 @@ const UeberMich = () => {
                   >
                     <p>{t.ueberMich.training?.description1}</p>
                     <p>{t.ueberMich.training?.description2}</p>
+                    {t.ueberMich.training?.description3 && <p>{t.ueberMich.training.description3}</p>}
                   </motion.div>
 
                   <motion.div variants={fadeUp} className="pt-4">
-                    <Link to={getLocalizedPath('/personal-training')}>
+                    <Link to={getLocalizedPath('/angebot')}>
                       <Button variant="gold" className="font-semibold">
                         Personal Training <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>

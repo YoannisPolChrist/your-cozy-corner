@@ -21,18 +21,29 @@ const Angebot = () => {
   const serviceIcons = [Heart, Brain, Dumbbell];
   const checkupIcons = [Activity, BarChart3, Map];
 
-  // Handle hash navigation
+  // Handle hash navigation with retries
   useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.replace('#', '');
-      const element = document.getElementById(id);
-      if (element) {
-        setTimeout(() => {
+    const scrollToHash = () => {
+      if (location.hash) {
+        const id = location.hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
+          return true;
+        }
+      }
+      return false;
+    };
+
+    if (location.hash) {
+      // Try immediately and then with delays
+      if (!scrollToHash()) {
+        setTimeout(scrollToHash, 100);
+        setTimeout(scrollToHash, 300);
+        setTimeout(scrollToHash, 800);
       }
     }
-  }, [location.hash]);
+  }, [location.hash, location.pathname]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -92,7 +103,7 @@ const Angebot = () => {
               whileInView="visible"
               viewport={viewportSettings}
               variants={staggerContainer}
-              className="max-w-5xl mx-auto"
+              className="max-w-7xl mx-auto"
             >
               <motion.h2
                 variants={fadeUp}
@@ -101,7 +112,7 @@ const Angebot = () => {
                 {t.angebot.konditionen.title}
               </motion.h2>
 
-              <motion.div variants={cardStagger} className="grid md:grid-cols-2 gap-8 md:gap-16">
+              <motion.div variants={cardStagger} className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
                 {/* Card 1: Einzelbegleitung */}
                 <motion.div variants={cardItem}>
                   <Card className="px-10 py-16 md:py-20 h-full bg-white border border-accent/20 shadow-none hover:shadow-xl transition-all duration-300 flex flex-col group hover:-translate-y-2 relative overflow-hidden">
@@ -138,7 +149,8 @@ const Angebot = () => {
                   </Card>
                 </motion.div>
 
-                {/* Card 2: Intensive Zusammenarbeit */}
+
+                {/* Card 3: Intensive Zusammenarbeit */}
                 <motion.div variants={cardItem}>
                   <Card className="px-10 py-16 md:py-20 h-full bg-white border border-accent/20 shadow-none hover:shadow-xl transition-all duration-300 flex flex-col group hover:-translate-y-2 relative overflow-hidden">
                     <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
@@ -172,7 +184,7 @@ const Angebot = () => {
                     <p className="text-muted-foreground leading-relaxed text-center mb-8 flex-grow">
                       {t.angebot.konditionen.intensiv.description}
                     </p>
-                    <Link to={`${getLocalizedPath('/kontakt')}?subject=Intensive+Zusammenarbeit`} className="block mt-auto">
+                    <Link to={`${getLocalizedPath('/kontakt')}?subject=Individuelle+Beratung`} className="block mt-auto">
                       <Button variant="gold" className="w-full font-semibold">
                         {t.angebot.konditionen.intensiv.cta}
                       </Button>
