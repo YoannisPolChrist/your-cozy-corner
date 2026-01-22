@@ -52,7 +52,11 @@ export const de: Translations = {
       },
       {
         title: 'Coaching',
-        description: 'Fokussierte Entwicklung, zielorientiert, praktisch',
+        description: 'Fokussierte Entwicklung mit Diagnostik & Strategie',
+      },
+      {
+        title: 'Personal Training',
+        description: 'Körperliche Stärke als Fundament für Veränderung',
       },
       {
         title: 'Personal Training',
