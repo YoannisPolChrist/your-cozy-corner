@@ -43,17 +43,17 @@ const MyWork = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-clip">
       <Navigation />
-      <main className="pt-24">
+      <main className="pt-24 overflow-x-clip">
         {/* Hero Section with H1 */}
-        <section className="py-12 md:py-20 bg-off-white">
+        <section className="py-10 sm:py-12 md:py-20 bg-off-white overflow-x-clip">
           <div className="container mx-auto px-4 text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="font-heading text-4xl md:text-6xl text-primary mb-24"
+              className="font-heading text-3xl sm:text-4xl md:text-6xl text-primary mb-10 sm:mb-16 md:mb-24 leading-tight"
             >
               {t.myWork?.hero?.title || "Approach"}
             </motion.h1>
@@ -61,7 +61,7 @@ const MyWork = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-muted-foreground text-base md:text-lg max-w-3xl mx-auto leading-relaxed mb-16"
+              className="text-muted-foreground text-base sm:text-lg max-w-3xl mx-auto leading-relaxed mb-10 sm:mb-12 md:mb-16"
             >
               {t.myWork?.hero?.subtitle}
             </motion.p>
@@ -71,53 +71,53 @@ const MyWork = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex justify-center items-stretch gap-6 md:gap-12 lg:gap-20"
+              className="flex flex-col items-center gap-4 sm:gap-5 md:flex-row md:justify-center md:items-stretch md:gap-10 lg:gap-20"
             >
               <a
                 href="#gestalt"
                 onClick={(e) => handleSmoothScroll(e, 'gestalt')}
-                className="flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl bg-primary border border-accent/20 shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group relative overflow-hidden cursor-pointer w-[200px] md:w-[240px] h-full"
+                className="flex flex-col items-center gap-3 sm:gap-4 p-5 sm:p-6 md:p-8 rounded-2xl bg-primary border border-accent/20 shadow-xl transition-all duration-300 hover:shadow-2xl md:hover:-translate-y-2 group relative overflow-hidden cursor-pointer w-full max-w-[460px] md:w-[240px]"
               >
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white shadow-sm group-hover:border-accent/30 group-hover:shadow-md flex items-center justify-center transition-all duration-300">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-white shadow-sm group-hover:border-accent/30 group-hover:shadow-md flex items-center justify-center transition-all duration-300">
                   <Heart className="w-9 h-9 md:w-11 md:h-11 text-accent transition-colors duration-300" strokeWidth={1.5} />
                 </div>
-                <span className="text-base md:text-lg font-heading font-semibold text-white text-center">
+                <span className="text-base sm:text-lg font-heading font-semibold text-white text-center">
                   Gestalttherapie
                 </span>
-                <span className="text-xs md:text-sm text-white/80 text-center leading-relaxed px-2">
+                <span className="text-xs sm:text-sm text-white/80 text-center leading-relaxed px-2">
                   {t.myWork?.hero?.iconDescriptions?.gestalt || "Das Herz meiner Arbeit"}
                 </span>
               </a>
               <a
                 href="#coaching"
                 onClick={(e) => handleSmoothScroll(e, 'coaching')}
-                className="flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl bg-primary border border-accent/20 shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group relative overflow-hidden cursor-pointer w-[200px] md:w-[240px] h-full"
+                className="flex flex-col items-center gap-3 sm:gap-4 p-5 sm:p-6 md:p-8 rounded-2xl bg-primary border border-accent/20 shadow-xl transition-all duration-300 hover:shadow-2xl md:hover:-translate-y-2 group relative overflow-hidden cursor-pointer w-full max-w-[460px] md:w-[240px]"
               >
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white shadow-sm group-hover:border-accent/30 group-hover:shadow-md flex items-center justify-center transition-all duration-300">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-white shadow-sm group-hover:border-accent/30 group-hover:shadow-md flex items-center justify-center transition-all duration-300">
                   <Brain className="w-9 h-9 md:w-11 md:h-11 text-accent transition-colors duration-300" strokeWidth={1.5} />
                 </div>
-                <span className="text-base md:text-lg font-heading font-semibold text-white text-center">
+                <span className="text-base sm:text-lg font-heading font-semibold text-white text-center">
                   Coaching
                 </span>
-                <span className="text-xs md:text-sm text-white/80 text-center leading-relaxed px-2">
+                <span className="text-xs sm:text-sm text-white/80 text-center leading-relaxed px-2">
                   {t.myWork?.hero?.iconDescriptions?.coaching || "Inkl. Diagnostik"}
                 </span>
               </a>
               <a
                 href="#personal-training"
                 onClick={(e) => handleSmoothScroll(e, 'personal-training')}
-                className="flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl bg-primary border border-accent/20 shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group relative overflow-hidden cursor-pointer w-[200px] md:w-[240px] h-full"
+                className="flex flex-col items-center gap-3 sm:gap-4 p-5 sm:p-6 md:p-8 rounded-2xl bg-primary border border-accent/20 shadow-xl transition-all duration-300 hover:shadow-2xl md:hover:-translate-y-2 group relative overflow-hidden cursor-pointer w-full max-w-[460px] md:w-[240px]"
               >
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white shadow-sm group-hover:border-accent/30 group-hover:shadow-md flex items-center justify-center transition-all duration-300">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-white shadow-sm group-hover:border-accent/30 group-hover:shadow-md flex items-center justify-center transition-all duration-300">
                   <Dumbbell className="w-9 h-9 md:w-11 md:h-11 text-accent transition-colors duration-300" strokeWidth={1.5} />
                 </div>
-                <span className="text-base md:text-lg font-heading font-semibold text-white text-center">
+                <span className="text-base sm:text-lg font-heading font-semibold text-white text-center">
                   {t.personalTraining?.nav || "Personal Training"}
                 </span>
-                <span className="text-xs md:text-sm text-white/80 text-center leading-relaxed px-2">
+                <span className="text-xs sm:text-sm text-white/80 text-center leading-relaxed px-2">
                   Körperarbeit in Toulouse
                 </span>
               </a>
@@ -128,9 +128,9 @@ const MyWork = () => {
         {/* Gestalt Therapy Section */}
         <section id="gestalt" className="scroll-mt-24">
           {/* Gestalt Intro - Dark teal background like Coaching */}
-          <div className="py-20 md:py-32 bg-primary relative z-10">
+            <div className="py-20 md:py-32 bg-primary relative z-10 overflow-x-clip">
             {/* Decorative snaking lines - flowing from top to bottom along the sides */}
-            <svg className="absolute inset-0 w-full h-[1800px] z-20 pointer-events-none" preserveAspectRatio="none" viewBox="0 0 1000 1200">
+            <svg className="absolute inset-0 w-full h-[1800px] z-20 pointer-events-none overflow-hidden" preserveAspectRatio="none" viewBox="0 0 1000 1200">
               {/* Left side - snaking lines flowing down from center */}
               <path d="M0,0 C60,60 50,100 50,180 S80,280 40,350 S60,420 -20,500 S-100,600 -400,700" stroke="rgba(180,80,60,0.45)" strokeWidth="4" fill="none" strokeLinecap="round" />
               <path d="M80,-30 C110,60 90,110 90,160 S120,260 80,330 S100,400 70,480 S0,580 -300,680" stroke="rgba(200,120,60,0.4)" strokeWidth="5" fill="none" strokeLinecap="round" />
