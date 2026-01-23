@@ -25,18 +25,18 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="kontakt" className="py-20 bg-background">
+    <section id="kontakt" className="py-14 sm:py-20 bg-background overflow-x-clip">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-4xl md:text-5xl text-gold-accent mb-4">Kontakt</h2>
-            <p className="text-muted-foreground text-lg">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-gold-accent mb-3 sm:mb-4">Kontakt</h2>
+            <p className="text-muted-foreground text-base sm:text-lg">
               Haben Sie Fragen oder möchten Sie einen Termin vereinbaren? Ich freue mich auf Ihre Nachricht.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-8 shadow-soft">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
+            <Card className="p-6 sm:p-8 shadow-soft">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Name</Label>
@@ -84,7 +84,7 @@ export const ContactSection = () => {
             </Card>
 
             <div className="space-y-6">
-              <Card className="p-8 bg-gradient-teal text-white">
+              <Card className="p-6 sm:p-8 bg-gradient-teal text-white">
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <MapPin className="w-6 h-6 flex-shrink-0 mt-1" />
@@ -112,7 +112,7 @@ export const ContactSection = () => {
                 </div>
               </Card>
 
-              <Card className="p-6 bg-gray-light border-none">
+              <Card className="p-5 sm:p-6 bg-gray-light border-none">
                 <p className="text-muted-foreground leading-relaxed">
                   Ich biete Online-Sitzungen und persönliche Termine an. 
                   Vereinbaren Sie ein kostenloses 20-minütiges Kennenlerngespräch, 

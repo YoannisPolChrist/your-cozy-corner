@@ -47,13 +47,13 @@ const Index = () => {
     getLocalizedPath
   } = useLanguage();
   const serviceIcons = [Heart, Brain, Dumbbell];
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background overflow-x-clip">
     <Navigation />
-    <main>
+      <main className="overflow-x-clip">
       <Hero />
 
       {/* Meet Johannes Section - Overlapping Organic Card */}
-      <section className="relative z-10 pb-20 md:pb-28 bg-off-white">
+      <section className="relative z-10 pb-16 sm:pb-20 md:pb-28 bg-off-white overflow-x-clip">
         <div className="container mx-auto px-4">
           <motion.div initial={{
             opacity: 0,
@@ -199,34 +199,34 @@ const Index = () => {
       </AnimatedSection>
 
       {/* Services Section - High-End Cards with Anchor Links */}
-      <AnimatedSection className="py-28 md:py-36 bg-secondary/30">
+          <AnimatedSection className="py-20 sm:py-24 md:py-36 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
-            <h2 className="font-heading text-[2.2rem] md:text-[2.7rem] mb-5 text-primary">
+                <h2 className="font-heading text-[1.95rem] sm:text-[2.2rem] md:text-[2.7rem] mb-4 sm:mb-5 text-primary leading-tight">
               {t.services.title}
             </h2>
-            <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-base sm:text-lg">
               {t.services.subtitle}
             </p>
           </div>
 
-          <StaggerContainer className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto mb-16">
+              <StaggerContainer className="grid md:grid-cols-3 gap-6 sm:gap-8 md:gap-10 max-w-5xl mx-auto mb-12 sm:mb-16">
             {t.services.items.map((service, index) => {
               const Icon = serviceIcons[index];
               const serviceAnchors = ['gestalttherapie', 'coaching', 'personal-training'];
               return <AnimatedItem key={index}>
                 <Link to={getLocalizedPath(`/angebot#${serviceAnchors[index]}`)} className="block h-full">
-                  <Card className="p-10 bg-off-white border border-accent/20 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group relative overflow-hidden h-full cursor-pointer">
+                      <Card className="p-7 sm:p-8 md:p-10 bg-off-white border border-accent/20 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group relative overflow-hidden h-full cursor-pointer">
                     {/* Bottom border highlight on hover */}
                     <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
 
-                    <div className="mb-6 flex justify-center">
-                      <Icon className="w-12 h-12 text-accent group-hover:text-primary transition-colors duration-300" strokeWidth={1.5} />
+                        <div className="mb-5 sm:mb-6 flex justify-center">
+                          <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-accent group-hover:text-primary transition-colors duration-300" strokeWidth={1.5} />
                     </div>
-                    <h3 className="font-heading text-xl mb-4 text-primary">
+                        <h3 className="font-heading text-lg sm:text-xl mb-3 sm:mb-4 text-primary">
                       {service.title}
                     </h3>
-                    <p className="text-muted-foreground">
+                        <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                       {service.description}
                     </p>
                   </Card>

@@ -46,11 +46,11 @@ const Angebot = () => {
   }, [location.hash, location.pathname]);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-clip">
       <Navigation />
-      <main className="pt-20">
+      <main className="pt-20 overflow-x-clip">
         {/* Section 1: The 3 Pillars */}
-        <section className="pt-[68px] pb-32 bg-primary">
+        <section className="pt-[68px] pb-20 sm:pb-28 md:pb-32 bg-primary overflow-x-clip">
           <div className="container mx-auto px-4">
             <motion.div
               initial="hidden"
@@ -61,29 +61,29 @@ const Angebot = () => {
             >
               <motion.h2
                 variants={fadeUp}
-                className="font-heading text-[2.25rem] md:text-[3.1875rem] text-white text-center mb-16"
+                className="font-heading text-[2rem] sm:text-[2.25rem] md:text-[3.1875rem] text-white text-center mb-10 sm:mb-14 md:mb-16 leading-tight"
               >
                 {t.angebot.title}
               </motion.h2>
 
-              <motion.div variants={cardStagger} className="grid md:grid-cols-3 gap-8 md:gap-16">
+              <motion.div variants={cardStagger} className="grid md:grid-cols-3 gap-6 sm:gap-8 md:gap-16">
                 {t.angebot.services.map((service, index) => {
                   const Icon = serviceIcons[index];
                   const serviceIds = ['gestalttherapie', 'coaching', 'personal-training'];
                   return (
                     <motion.div key={index} id={serviceIds[index]} variants={cardItem} className="scroll-mt-24">
-                      <Card className="p-8 h-full bg-off-white shadow-soft hover:shadow-teal transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden border border-accent/20">
+                      <Card className="p-6 sm:p-8 h-full bg-off-white shadow-soft hover:shadow-teal transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden border border-accent/20">
                         <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                         <div className="mb-6">
-                          <Icon className="w-12 h-12 text-accent stroke-[1.5]" />
+                          <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-accent stroke-[1.5]" />
                         </div>
-                        <h3 className="font-heading text-2xl text-primary mb-2">
+                        <h3 className="font-heading text-xl sm:text-2xl text-primary mb-2">
                           {service.title}
                         </h3>
-                        <p className="text-[#c5a065] text-xs uppercase tracking-widest mb-4">
+                        <p className="text-accent text-xs uppercase tracking-widest mb-4">
                           {service.subline}
                         </p>
-                        <p className="text-muted-foreground leading-relaxed">
+                        <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                           {service.description}
                         </p>
                       </Card>
@@ -96,7 +96,7 @@ const Angebot = () => {
         </section>
 
         {/* Section 2: Investment & Cooperation */}
-        <section id="konditionen" className="pt-32 pb-56 bg-background scroll-mt-24">
+        <section id="konditionen" className="pt-20 sm:pt-28 md:pt-32 pb-28 sm:pb-40 md:pb-56 bg-background scroll-mt-24 overflow-x-clip">
           <div className="container mx-auto px-4">
             <motion.div
               initial="hidden"
@@ -107,7 +107,7 @@ const Angebot = () => {
             >
               <motion.h2
                 variants={fadeUp}
-                className="font-heading text-[2.25rem] md:text-[3.1875rem] text-primary text-center mb-24"
+                className="font-heading text-[2rem] sm:text-[2.25rem] md:text-[3.1875rem] text-primary text-center mb-12 sm:mb-18 md:mb-24 leading-tight"
               >
                 {t.angebot.konditionen.title}
               </motion.h2>
@@ -115,10 +115,10 @@ const Angebot = () => {
               <motion.div variants={cardStagger} className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
                 {/* Card 1: Einzelbegleitung */}
                 <motion.div variants={cardItem}>
-                  <Card className="px-10 py-16 md:py-20 h-full bg-white border border-accent/20 shadow-none hover:shadow-xl transition-all duration-300 flex flex-col group hover:-translate-y-2 relative overflow-hidden">
+                  <Card className="px-6 sm:px-10 py-10 sm:py-14 md:py-20 h-full bg-white border border-accent/20 shadow-none hover:shadow-xl transition-all duration-300 flex flex-col group hover:-translate-y-2 relative overflow-hidden">
                     <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                     {/* Title */}
-                    <h3 className="font-heading text-2xl md:text-3xl text-primary text-center mb-4">
+                    <h3 className="font-heading text-xl sm:text-2xl md:text-3xl text-primary text-center mb-4">
                       {t.angebot.konditionen.einzelbegleitung.title}
                     </h3>
                     {/* Duration - same height as priceLabel on right */}
@@ -134,7 +134,7 @@ const Angebot = () => {
                       </div>
                     </div>
                     {/* Label */}
-                    <p className="text-[#c5a065] text-xs uppercase tracking-widest text-center mb-4">
+                    <p className="text-accent text-xs uppercase tracking-widest text-center mb-4">
                       {t.angebot.konditionen.einzelbegleitung.label}
                     </p>
                     {/* Description */}
@@ -152,10 +152,10 @@ const Angebot = () => {
 
                 {/* Card 3: Intensive Zusammenarbeit */}
                 <motion.div variants={cardItem}>
-                  <Card className="px-10 py-16 md:py-20 h-full bg-white border border-accent/20 shadow-none hover:shadow-xl transition-all duration-300 flex flex-col group hover:-translate-y-2 relative overflow-hidden">
+                  <Card className="px-6 sm:px-10 py-10 sm:py-14 md:py-20 h-full bg-white border border-accent/20 shadow-none hover:shadow-xl transition-all duration-300 flex flex-col group hover:-translate-y-2 relative overflow-hidden">
                     <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                     {/* Title */}
-                    <h3 className="font-heading text-2xl md:text-3xl text-primary text-center mb-4">
+                    <h3 className="font-heading text-xl sm:text-2xl md:text-3xl text-primary text-center mb-4">
                       {t.angebot.konditionen.intensiv.title}
                     </h3>
                     {/* Duration - same height as priceLabel on left */}
@@ -177,7 +177,7 @@ const Angebot = () => {
                       </p>
                     </div>
                     {/* Label */}
-                    <p className="text-[#c5a065] text-xs uppercase tracking-widest text-center mb-4">
+                    <p className="text-accent text-xs uppercase tracking-widest text-center mb-4">
                       {t.angebot.konditionen.intensiv.label}
                     </p>
                     {/* Description */}
