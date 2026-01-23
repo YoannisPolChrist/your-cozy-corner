@@ -6,12 +6,14 @@ export const GestaltScrollTelling = () => {
   const {
     t
   } = useLanguage();
+  // React expects the lowercase attribute (`fetchpriority`), but framer-motion's TS types don't include it.
+  const imgFetchPriorityProps = {
+    fetchpriority: "high",
+  } as const as unknown as Record<string, string>;
   return <section className="pt-16 pb-12 md:pt-32 md:pb-32 bg-off-white">
     <div className="container mx-auto px-4">
       <AnimatedSection className="max-w-5xl mx-auto">
-        <motion.img alt={t.gestalttherapie.scrollTelling.title} className="w-full rounded-xl mb-6 md:mb-12" loading="eager" decoding="async"
-          // @ts-ignore - fetchPriority is valid HTML attribute
-          fetchPriority="high" initial={{
+        <motion.img {...imgFetchPriorityProps} alt={t.gestalttherapie.scrollTelling.title} className="w-full rounded-xl mb-6 md:mb-12" loading="eager" decoding="async" initial={{
             opacity: 0,
             y: 20
           }} whileInView={{
