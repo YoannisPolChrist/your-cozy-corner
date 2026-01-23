@@ -5,7 +5,7 @@ export const Footer = () => {
   const { t, language } = useLanguage();
 
   return (
-    <footer className="bg-white border-t border-primary/10 py-8">
+    <footer className="bg-background border-t border-primary/10 py-8 overflow-x-clip">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
