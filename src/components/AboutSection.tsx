@@ -13,18 +13,18 @@ export const AboutSection = () => {
             </div>
 
             <div className="order-1 md:order-2">
-              <h2 className="font-heading text-4xl md:text-5xl mb-6 text-primary">
+              <h2 className="typ-h2 mb-6 text-primary">
                 Über mich
               </h2>
 
-              <p className="text-xl text-muted-foreground italic mb-8 leading-relaxed">
+              <p className="typ-lead text-muted-foreground italic mb-8">
                 Ich bin Johannes Christ, Gestalttherapeut, Coach und M.Sc. Psychologie.
                 Meine Arbeit basiert auf der Überzeugung, dass echte Veränderung entsteht,
                 wenn wir die Verbindung zwischen unseren Gedanken, Gefühlen und unserem Körper verstehen.
               </p>
 
               <Card className="p-6 bg-background mb-8">
-                <p className="text-foreground leading-relaxed">
+                <p className="typ-body text-foreground">
                   Mit meiner Erfahrung in Gestalttherapie und Coaching begleite ich Sie auf dem Weg zu
                   mehr Klarheit, Wohlbefinden und Erfüllung.
                 </p>

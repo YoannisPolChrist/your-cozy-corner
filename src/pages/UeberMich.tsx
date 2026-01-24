@@ -88,7 +88,7 @@ const UeberMich = () => {
                   </motion.span>
                   <motion.h1
                     variants={fadeUp}
-                    className="font-heading text-2xl text-primary leading-tight"
+                    className="typ-h1 text-primary"
                   >
                     {t.ueberMich.hero.title}
                   </motion.h1>
@@ -121,13 +121,13 @@ const UeberMich = () => {
                   </motion.span>
                   <motion.h1
                     variants={fadeUp}
-                    className="hidden md:block font-heading text-[calc(3rem+3px)] text-primary leading-tight"
+                    className="hidden md:block typ-h1 text-primary"
                   >
                     {t.ueberMich.hero.title}
                   </motion.h1>
                   <motion.div
                     variants={fadeUp}
-                    className="space-y-3 md:space-y-4 text-muted-foreground leading-relaxed text-sm md:text-base"
+                    className="typ-body space-y-3 md:space-y-4 text-muted-foreground"
                   >
                     <p className="whitespace-pre-line">{t.ueberMich.hero.description1}</p>
                     <p>{t.ueberMich.hero.description2}</p>
@@ -159,7 +159,7 @@ const UeberMich = () => {
                   </motion.span>
                   <motion.h2
                     variants={fadeUp}
-                    className="font-heading text-2xl text-white leading-tight"
+                    className="typ-h2 text-white"
                   >
                     {t.ueberMich.arbeitsweise.title}
                   </motion.h2>
@@ -190,24 +190,24 @@ const UeberMich = () => {
                   </motion.span>
                   <motion.h2
                     variants={fadeUp}
-                    className="hidden md:block font-heading text-[calc(2.25rem+3px)] text-white leading-tight"
+                    className="hidden md:block typ-h2 text-white"
                   >
                     {t.ueberMich.arbeitsweise.title}
                   </motion.h2>
                   <motion.div
                     variants={fadeUp}
-                    className="space-y-3 md:space-y-4 text-white/90 leading-relaxed text-sm md:text-base"
+                    className="typ-body space-y-3 md:space-y-4 text-white/90"
                   >
                     <p>{t.ueberMich.arbeitsweise.description1}</p>
                     <p>{t.ueberMich.arbeitsweise.description2}</p>
-                    <p className="italic text-[#c5a065] font-heading text-base md:text-lg">{t.ueberMich.arbeitsweise.quote}</p>
+                    <p className="italic text-[#c5a065] font-heading typ-lead">{t.ueberMich.arbeitsweise.quote}</p>
                   </motion.div>
 
                   {/* Qualifications Accordion */}
                   <motion.div variants={fadeUp} className="pt-4">
                     <Accordion type="single" collapsible className="w-full">
                       <AccordionItem value="qualifikationen" className="border-[#c5a065]/30">
-                        <AccordionTrigger className="text-white hover:text-[#c5a065] font-heading text-base md:text-lg">
+                        <AccordionTrigger className="text-white hover:text-[#c5a065] font-heading typ-h4">
                           {t.ueberMich.qualifikationen.title}
                         </AccordionTrigger>
                         <AccordionContent className="space-y-6 pt-4">
@@ -280,7 +280,7 @@ const UeberMich = () => {
                   </motion.span>
                   <motion.h2
                     variants={fadeUp}
-                    className="font-heading text-2xl text-primary leading-tight"
+                    className="typ-h2 text-primary"
                   >
                     {t.ueberMich.persoenlich.title}
                   </motion.h2>
@@ -297,13 +297,13 @@ const UeberMich = () => {
                   </motion.span>
                   <motion.h2
                     variants={fadeUp}
-                    className="hidden md:block font-heading text-[calc(2.25rem+3px)] text-primary leading-tight"
+                    className="hidden md:block typ-h2 text-primary"
                   >
                     {t.ueberMich.persoenlich.title}
                   </motion.h2>
                   <motion.div
                     variants={fadeUp}
-                    className="space-y-3 md:space-y-4 text-muted-foreground leading-relaxed text-sm md:text-base"
+                    className="typ-body space-y-3 md:space-y-4 text-muted-foreground"
                   >
                     <p>{t.ueberMich.persoenlich.description1}</p>
                     <p>{t.ueberMich.persoenlich.description2}</p>
@@ -349,7 +349,7 @@ const UeberMich = () => {
                   </motion.span>
                   <motion.h2
                     variants={fadeUp}
-                    className="font-heading text-2xl text-white leading-tight"
+                    className="typ-h2 text-white"
                   >
                     {t.ueberMich.training?.title}
                   </motion.h2>
@@ -380,13 +380,13 @@ const UeberMich = () => {
                   </motion.span>
                   <motion.h2
                     variants={fadeUp}
-                    className="hidden md:block font-heading text-[calc(2.25rem+3px)] text-white leading-tight"
+                    className="hidden md:block typ-h2 text-white"
                   >
                     {t.ueberMich.training?.title}
                   </motion.h2>
                   <motion.div
                     variants={fadeUp}
-                    className="space-y-3 md:space-y-4 text-white/90 leading-relaxed text-sm md:text-base"
+                    className="typ-body space-y-3 md:space-y-4 text-white/90"
                   >
                     <p>{t.ueberMich.training?.description1}</p>
                     <p>{t.ueberMich.training?.description2}</p>
@@ -420,13 +420,13 @@ const UeberMich = () => {
           <div className="container mx-auto px-4 text-center relative z-10">
             <motion.h2
               variants={fadeUp}
-              className="font-heading text-3xl md:text-4xl mb-8 text-white"
+              className="typ-h2 mb-8 text-white"
             >
               {t.ueberMich.cta.title}
             </motion.h2>
             <motion.p
               variants={fadeUp}
-              className="text-white/85 text-lg mb-10 max-w-2xl mx-auto"
+              className="typ-body text-white/85 mb-10 max-w-2xl mx-auto"
             >
               {t.ueberMich.cta.description}
             </motion.p>

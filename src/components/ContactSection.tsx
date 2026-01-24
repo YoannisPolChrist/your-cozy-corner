@@ -29,8 +29,8 @@ export const ContactSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-gold-accent mb-3 sm:mb-4">Kontakt</h2>
-            <p className="text-muted-foreground text-base sm:text-lg">
+            <h2 className="typ-h2 text-gold-accent mb-3 sm:mb-4">Kontakt</h2>
+            <p className="typ-body text-muted-foreground">
               Haben Sie Fragen oder möchten Sie einen Termin vereinbaren? Ich freue mich auf Ihre Nachricht.
             </p>
           </div>
@@ -113,7 +113,7 @@ export const ContactSection = () => {
               </Card>
 
               <Card className="p-5 sm:p-6 bg-gray-light border-none">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="typ-body text-muted-foreground">
                   Ich biete Online-Sitzungen und persönliche Termine an. 
                   Vereinbaren Sie ein kostenloses 20-minütiges Kennenlerngespräch, 
                   um herauszufinden, wie ich Sie unterstützen kann.

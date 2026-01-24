@@ -24,10 +24,10 @@ export const ChallengesSection = () => {
     <section className="py-20 bg-off-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="font-heading text-4xl md:text-5xl mb-6 text-primary">
+          <h2 className="typ-h2 mb-6 text-primary">
             Was belastet Sie?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="typ-lead text-muted-foreground max-w-3xl mx-auto">
             Das Leben im Ausland bringt besondere Herausforderungen mit sich. Oft zeigen sich 
             seelische Belastungen auch körperlich. Erkennen Sie sich hier wieder?
           </p>
@@ -45,10 +45,10 @@ export const ChallengesSection = () => {
                 <div className="mb-6">
                   <Icon className="w-12 h-12 text-accent" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-heading text-2xl mb-4 text-primary">
+                <h3 className="typ-h3 mb-4 text-primary">
                   {challenge.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="typ-body text-muted-foreground">
                   {challenge.description}
                 </p>
               </Card>
