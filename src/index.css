@@ -135,6 +135,19 @@ All colors MUST be HSL.
     overflow-x: hidden;
   }
 
+  /* Hide the vertical scrollbar (keep scrolling enabled) */
+  html,
+  body {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge legacy */
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
   #root {
     overflow-x: clip;
   }
