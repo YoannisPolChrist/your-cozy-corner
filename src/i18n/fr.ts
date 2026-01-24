@@ -8,7 +8,7 @@ export const fr: Translations = {
     ueberMich: 'À propos',
     kontakt: 'Contact',
     subtitle1: 'Gestalt-thérapeute, Coach,',
-    subtitle2: 'M.Sc. Psychologie (en formation)',
+    subtitle2: 'Personal Trainer',
   },
 
   hero: {
@@ -20,7 +20,7 @@ export const fr: Translations = {
 
   meet: {
     title: 'Le changement arrive –',
-    description: 'Idéalement dans un cadre qui soutient et offre de la sécurité. Que ce cadre soit souvent absent est bien sûr compréhensible. En tant que Gestalt-thérapeute, coach et M.Sc. en Psychologie (en formation), je t\'offre – par ma présence, ma compétence et une touche d\'humour – l\'espace nécessaire pour que le changement que tu souhaites puisse se produire !\n\nSalut - Je suis Johannes.',
+    description: 'Idéalement dans un cadre qui soutient et offre de la sécurité. Que ce cadre soit souvent absent est bien sûr compréhensible. En tant que Gestalt-thérapeute, coach et Personal Trainer, je t\'offre – par ma présence, ma compétence et une touche d\'humour – l\'espace nécessaire pour que le changement que tu souhaites puisse se produire !\n\nSalut - Je suis Johannes.',
   },
 
   painPoints: {
@@ -170,7 +170,7 @@ export const fr: Translations = {
     title: 'Prêt pour la prochaine étape ?',
     description: 'Réserve un appel découverte gratuit ou appelle-moi simplement pour découvrir si une collaboration fait sens.',
     button: 'Me contacter',
-    buttonAlt: 'Explorons ensemble ce qui fait sens pour toi',
+    buttonAlt: 'Discutons ensemble',
   },
 
   gestalttherapie: {
@@ -289,7 +289,7 @@ export const fr: Translations = {
       einzelbegleitung: {
         label: 'Séance découverte ou entraînement individuel',
         price: '50€',
-        priceLabel: '60 Minutes',
+        priceLabel: '50 Minutes',
         title: 'Séance individuelle',
         description: 'Pour le changement, que ce soit par la Gestalt-thérapie, le coaching ou le Personal Training – selon vos besoins.',
         cta: 'Prendre rendez-vous',
@@ -350,7 +350,7 @@ export const fr: Translations = {
 
   ueberMich: {
     hero: {
-      label: 'JOHANNES CHRIST — GESTALT-THÉRAPEUTE, THÉRAPIE PAR LE MOUVEMENT & PRÉVENTION (B.A.), PSYCHOLOGIE (M.SC.) (EN FORMATION)',
+      label: 'JOHANNES CHRIST — GESTALT-THÉRAPEUTE, THÉRAPIE PAR LE MOUVEMENT & PRÉVENTION (B.A.), PERSONAL TRAINER',
       title: 'Vécu, pas seulement appris.',
       description1: 'Mon parcours a commencé il y a quelques années par ma propre crise existentielle. C\'est alors que j\'ai rencontré pour la première fois la Gestalt-thérapie, qui ne m\'a plus quitté depuis. Par le travail intérieur et extérieur, je me suis battu pour sortir de la dépression avec l\'aide des autres et je me tiens aujourd\'hui plus fort que jamais.\n\nÀ Leipzig puis à Innsbruck, en plus de la Gestalt-thérapie et de nombreuses autres formations, j\'ai obtenu un diplôme en Thérapie par le Mouvement et Prévention (B.A.).',
       description2: 'Dans mon travail aujourd\'hui, je réunis les connaissances de la science actuelle avec celles de la Gestalt. Un Master en Psychologie (M.Sc.) soutient cela encore davantage, pour que tu puisses bénéficier de toute ma puissance et mes connaissances pour toi et ton chemin.',
@@ -509,7 +509,7 @@ export const fr: Translations = {
       single: {
         label: 'Séance Unique',
         price: '50€',
-        priceLabel: '60 Minutes',
+        priceLabel: '50 Minutes',
         title: 'Séance de Coaching Sportif',
         description: 'Une séance d\'entraînement intensive, individuellement adaptée à tes besoins.',
         cta: 'Réserver une séance',

@@ -8,7 +8,7 @@ export const de: Translations = {
     ueberMich: 'Über mich',
     kontakt: 'Kontakt',
     subtitle1: 'Gestalttherapeut, Coach,',
-    subtitle2: 'M.Sc. Psychologie (i.A.)',
+    subtitle2: 'Personal Trainer',
   },
 
   hero: {
@@ -20,7 +20,7 @@ export const de: Translations = {
 
   meet: {
     title: 'Veränderung passiert –',
-    description: 'Optimalerweise in einem Rahmen, der hält und Sicherheit bietet. Dass dieser Rahmen meistens nicht vorhanden ist, ist natürlich selbstverständlich. Als Gestalttherapeut, Coach und M.Sc. Psychologie (i.A.) biete ich dir durch Präsenz, Kompetenz und Witz, den Raum den es braucht, damit die Veränderung geschehen kann, die du dir wünschst!\n\nHi - Ich bin Johannes.',
+    description: 'Optimalerweise in einem Rahmen, der hält und Sicherheit bietet. Dass dieser Rahmen meistens nicht vorhanden ist, ist natürlich selbstverständlich. Als Gestalttherapeut, Coach und Personal Trainer biete ich dir durch Präsenz, Kompetenz und Witz, den Raum den es braucht, damit die Veränderung geschehen kann, die du dir wünschst!\n\nHi - Ich bin Johannes.',
   },
 
   painPoints: {
@@ -174,7 +174,7 @@ export const de: Translations = {
     title: 'Bereit für den nächsten Schritt?',
     description: 'Vereinbare ein kostenloses Kennenlerngespräch oder ruf einfach durch, um herauszufinden, ob eine Zusammenarbeit sinnvoll ist.',
     button: 'Kontakt aufnehmen',
-    buttonAlt: 'Lass uns schauen, was für dich Sinn ergibt',
+    buttonAlt: 'Lass uns sprechen',
   },
 
   gestalttherapie: {
@@ -293,7 +293,7 @@ export const de: Translations = {
       einzelbegleitung: {
         label: 'Probe-Stunde oder Einzeltraining',
         price: '50€',
-        priceLabel: '60 Minuten',
+        priceLabel: '50 Minuten',
         title: 'Einzelsitzung',
         description: 'Für Veränderung, sei es durch Gestalttherapie, Coaching oder Personal Training – ganz nach deinem Bedarf.',
         cta: 'Termin buchen',
@@ -354,7 +354,7 @@ export const de: Translations = {
 
   ueberMich: {
     hero: {
-      label: 'JOHANNES CHRIST — GESTALTTHERAPEUT, BEWEGUNGSTHERAPIE UND PRÄVENTION (B.A.), PSYCHOLOGIE (M.SC.) (i.A.)',
+      label: 'JOHANNES CHRIST — GESTALTTHERAPEUT, BEWEGUNGSTHERAPIE UND PRÄVENTION (B.A.), PERSONAL TRAINER',
       title: 'Gelebt, nicht nur gelernt.',
       description1: 'Mein Weg begann vor einigen Jahren durch eine eigene existenzielle Krise. Damals kam ich zum erstenmal mit der Gestalttherapie in Kontakt, welche mich seither nicht mehr loslässt. Durch innere und äußere Arbeit, habe ich mich mit Hilfe Anderer aus der Drepression gekämpft und stehe so kraftvoll da wie noch nie.\n\nIn Leipzig und später in Innsbruck, habe ich neben der Gestalttherapie und vielen anderen Fortbildungen, ein Studium in der Bewegungstherapie und Prävention (B.A.) abgeschlossen.',
       description2: 'In meiner Arbeit heute vereine ich das Wissen aus der aktuellen Wissenschaft mit der der Gestalt. Ein Master in Psychologie (M.Sc.) unterstützt dies einmal mehr, sodass du meine geballte Power und Wissen für dich und deinen Weg nutzen kannst.',
@@ -513,7 +513,7 @@ export const de: Translations = {
       single: {
         label: 'Einzelsession',
         price: '50€',
-        priceLabel: '60 Minuten',
+        priceLabel: '50 Minuten',
         title: 'Personal Training Session',
         description: 'Eine intensive Trainingseinheit, individuell auf dich abgestimmt.',
         cta: 'Termin buchen',

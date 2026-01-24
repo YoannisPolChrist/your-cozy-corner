@@ -8,7 +8,7 @@ export const en: Translations = {
     ueberMich: 'About Me',
     kontakt: 'Contact',
     subtitle1: 'Gestalt Therapist, Coach,',
-    subtitle2: 'M.Sc. Psychology (in training)',
+    subtitle2: 'Personal Trainer',
   },
 
   hero: {
@@ -20,7 +20,7 @@ export const en: Translations = {
 
   meet: {
     title: 'Change happens –',
-    description: 'Ideally within a framework that holds and provides safety. That this framework is often missing is, of course, understandable. As a Gestalt therapist, coach and M.Sc. Psychology (in training), I offer you – through presence, competence and a touch of humor – the space needed for the change you desire to happen!\n\nHi - I\'m Johannes.',
+    description: 'Ideally within a framework that holds and provides safety. That this framework is often missing is, of course, understandable. As a Gestalt therapist, coach and Personal Trainer, I offer you – through presence, competence and a touch of humor – the space needed for the change you desire to happen!\n\nHi - I\'m Johannes.',
   },
 
   painPoints: {
@@ -289,7 +289,7 @@ export const en: Translations = {
       einzelbegleitung: {
         label: 'Trial Session or Individual Training',
         price: '€50',
-        priceLabel: '60 Minutes',
+        priceLabel: '50 Minutes',
         title: 'Individual Session',
         description: 'For change, be it through Gestalt therapy, coaching, or personal training – entirely according to your needs.',
         cta: 'Book appointment',
@@ -350,7 +350,7 @@ export const en: Translations = {
 
   ueberMich: {
     hero: {
-      label: 'JOHANNES CHRIST — GESTALT THERAPIST, MOVEMENT THERAPY & PREVENTION (B.A.), PSYCHOLOGY (M.SC.) (IN TRAINING)',
+      label: 'JOHANNES CHRIST — GESTALT THERAPIST, MOVEMENT THERAPY & PREVENTION (B.A.), PERSONAL TRAINER',
       title: 'Lived, not just learned.',
       description1: 'My journey began a few years ago through my own existential crisis. That\'s when I first encountered Gestalt therapy, which has never let go of me since. Through inner and outer work, I fought my way out of depression with the help of others and now stand stronger than ever.\n\nIn Leipzig and later in Innsbruck, alongside Gestalt therapy and many other trainings, I completed a degree in Movement Therapy and Prevention (B.A.).',
       description2: 'In my work today, I unite knowledge from current science with that of Gestalt. A Master\'s in Psychology (M.Sc.) supports this even more, so you can benefit from my full power and knowledge for yourself and your journey.',
@@ -509,7 +509,7 @@ export const en: Translations = {
       single: {
         label: 'Single Session',
         price: '€50',
-        priceLabel: '60 Minutes',
+        priceLabel: '50 Minutes',
         title: 'Personal Training Session',
         description: 'An intensive training session, individually tailored to you.',
         cta: 'Book Session',
