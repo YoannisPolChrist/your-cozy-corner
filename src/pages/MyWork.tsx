@@ -429,7 +429,7 @@ const MyWork = () => {
           <div className="container mx-auto px-4 relative z-10">
             <AnimatedSection className="max-w-5xl mx-auto">
               <motion.div
-                className="p-6 md:p-16 rounded-3xl bg-white shadow-2xl border border-accent/15 relative overflow-hidden"
+                className="p-6 sm:p-10 md:p-16 rounded-3xl bg-white shadow-2xl border border-accent/15 relative overflow-hidden"
                 initial={{ opacity: 0, y: 40, scale: 0.98 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
@@ -442,47 +442,47 @@ const MyWork = () => {
 
                 {/* Dumbbell icon with animation */}
                 <motion.div
-                  className="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center mb-6 mx-auto relative z-10"
+                  className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent/10 flex items-center justify-center mb-5 sm:mb-6 mx-auto relative z-10"
                   initial={{ scale: 0.8, opacity: 0, rotate: -10 }}
                   whileInView={{ scale: 1, opacity: 1, rotate: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  <Dumbbell className="w-10 h-10 text-accent" strokeWidth={1.5} />
+                  <Dumbbell className="w-8 h-8 sm:w-10 sm:h-10 text-accent" strokeWidth={1.5} />
                 </motion.div>
 
-                <span className="text-gold-accent text-sm uppercase tracking-[0.2em] font-medium mb-3 block text-center relative z-10">
+                <span className="text-gold-accent text-[11px] sm:text-sm uppercase tracking-[0.2em] font-medium mb-2 sm:mb-3 block text-center relative z-10">
                   {t.personalTraining?.approach?.label || "Athletik & Performance"}
                 </span>
-                <h2 className="font-heading text-3xl md:text-5xl font-bold text-primary mb-6 md:mb-10 text-center relative z-10">
+                <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl font-bold text-primary mb-4 sm:mb-6 md:mb-10 text-center relative z-10">
                   {t.personalTraining?.hero?.title || "Personal Training"}
                 </h2>
-                <p className="text-muted-foreground text-base md:text-lg leading-relaxed md:leading-loose mb-14 text-center whitespace-pre-line max-w-3xl mx-auto relative z-10">
+                <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed md:leading-loose mb-10 sm:mb-12 md:mb-14 text-center whitespace-pre-line max-w-3xl mx-auto relative z-10">
                   {t.personalTraining?.approach?.description || "Als ausgebildeter Athletiktrainer..."}
                 </p>
 
-                <StaggerContainer className="grid md:grid-cols-3 gap-6 mb-14 relative z-10">
+                <StaggerContainer className="grid md:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-12 md:mb-14 relative z-10">
                   {t.personalTraining?.services?.map((service, index) => {
                     const Icon = [Dumbbell, Heart, Target][index];
                     return (
                       <AnimatedItem key={index}>
                         <motion.div
-                          className="p-5 md:p-7 bg-gradient-to-br from-off-white to-white border border-accent/15 rounded-2xl h-full transition-all duration-300 relative overflow-hidden group"
+                          className="p-5 sm:p-6 md:p-7 bg-gradient-to-br from-off-white to-white border border-accent/15 rounded-2xl h-full transition-all duration-300 relative overflow-hidden group"
                           whileHover={{ y: -5, boxShadow: '0 20px 40px -15px rgba(0, 0, 0, 0.15)' }}
                         >
                           {/* Hover gradient */}
                           <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                          <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/15 transition-colors duration-300">
-                            <Icon className="w-7 h-7 text-accent" strokeWidth={1.5} />
+                          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4 sm:mb-5 group-hover:bg-accent/15 transition-colors duration-300">
+                            <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-accent" strokeWidth={1.5} />
                           </div>
-                          <span className="text-xs uppercase tracking-wider text-accent font-semibold block mb-2 relative z-10">
+                          <span className="text-[11px] sm:text-xs uppercase tracking-wider text-accent font-semibold block mb-2 relative z-10">
                             {service.subline}
                           </span>
-                          <h3 className="font-heading text-xl mb-3 text-primary relative z-10">
+                          <h3 className="font-heading text-lg sm:text-xl mb-2 sm:mb-3 text-primary relative z-10">
                             {service.title}
                           </h3>
-                          <p className="text-muted-foreground leading-relaxed text-sm relative z-10">
+                          <p className="text-muted-foreground leading-relaxed text-sm sm:text-base relative z-10">
                             {service.description}
                           </p>
                         </motion.div>
