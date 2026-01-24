@@ -60,11 +60,11 @@ const PersonalTraining = () => {
                                 <span className="text-white/90 text-sm font-medium">{t.personalTraining.location.city}</span>
                             </motion.div>
 
-                            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
+                            <h1 className="typ-h1 text-white mb-6">
                                 {t.personalTraining.hero.title}
                             </h1>
 
-                            <p className="text-white/85 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                            <p className="typ-lead text-white/85 max-w-2xl mx-auto mb-10">
                                 {t.personalTraining.hero.subtitle}
                             </p>
 
@@ -89,10 +89,10 @@ const PersonalTraining = () => {
                                     <span className="text-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">
                                         {t.personalTraining.approach.title}
                                     </span>
-                                    <h2 className="font-heading text-3xl md:text-4xl text-primary mb-6 leading-tight">
+                                    <h2 className="typ-h2 text-primary mb-6">
                                         Körper &amp; Geist in Bewegung
                                     </h2>
-                                    <p className="text-muted-foreground text-lg leading-relaxed whitespace-pre-line">
+                                    <p className="typ-body text-muted-foreground whitespace-pre-line">
                                         {t.personalTraining.approach.description}
                                     </p>
                                 </AnimatedItem>
@@ -102,13 +102,13 @@ const PersonalTraining = () => {
                                     <Card className="p-8 bg-white border border-accent/20 shadow-lg">
                                         <div className="flex items-center gap-3 mb-6">
                                             <Award className="w-8 h-8 text-accent" />
-                                            <h3 className="font-heading text-xl text-primary">{t.personalTraining.qualifications.title}</h3>
+                                            <h3 className="typ-h4 text-primary">{t.personalTraining.qualifications.title}</h3>
                                         </div>
                                         <ul className="space-y-3">
                                             {t.personalTraining.qualifications.items.map((item, index) => (
                                                 <li key={index} className="flex items-start gap-3">
                                                     <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                                                    <span className="text-muted-foreground">{item}</span>
+                                                    <span className="typ-body text-muted-foreground">{item}</span>
                                                 </li>
                                             ))}
                                         </ul>
@@ -123,10 +123,10 @@ const PersonalTraining = () => {
                 <AnimatedSection className="py-24 md:py-32 bg-secondary/30">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
-                            <h2 className="font-heading text-3xl md:text-4xl text-primary mb-4">
+                            <h2 className="typ-h2 text-primary mb-4">
                                 Mein Angebot
                             </h2>
-                            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                            <p className="typ-body text-muted-foreground max-w-2xl mx-auto">
                                 Drei Säulen für deine körperliche Transformation
                             </p>
                         </div>
@@ -143,10 +143,10 @@ const PersonalTraining = () => {
                                             <span className="text-xs uppercase tracking-wider text-accent font-semibold block mb-2">
                                                 {service.subline}
                                             </span>
-                                            <h3 className="font-heading text-xl mb-4 text-primary">
+                                            <h3 className="typ-h4 mb-4 text-primary">
                                                 {service.title}
                                             </h3>
-                                            <p className="text-muted-foreground leading-relaxed">
+                                            <p className="typ-body text-muted-foreground">
                                                 {service.description}
                                             </p>
                                         </Card>
@@ -170,13 +170,13 @@ const PersonalTraining = () => {
                             >
                                 <MapPin className="w-10 h-10 text-primary" />
                             </motion.div>
-                            <h2 className="font-heading text-3xl md:text-4xl text-primary mb-4">
+                            <h2 className="typ-h2 text-primary mb-4">
                                 {t.personalTraining.location.title}
                             </h2>
-                            <p className="text-2xl font-heading text-accent mb-4">
+                            <p className="typ-h3 font-heading text-accent mb-4">
                                 {t.personalTraining.location.city}
                             </p>
-                            <p className="text-muted-foreground text-lg">
+                            <p className="typ-body text-muted-foreground">
                                 {t.personalTraining.location.description}
                             </p>
                         </div>
@@ -187,7 +187,7 @@ const PersonalTraining = () => {
                 <section className="py-24 md:py-32 bg-secondary/30" id="pricing">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
-                            <h2 className="font-heading text-3xl md:text-4xl text-primary mb-4">
+                            <h2 className="typ-h2 text-primary mb-4">
                                 {t.personalTraining.pricing.title}
                             </h2>
                         </div>
@@ -199,14 +199,14 @@ const PersonalTraining = () => {
                                     <span className="text-xs uppercase tracking-wider text-accent font-semibold block mb-4">
                                         {t.personalTraining.pricing.single.label}
                                     </span>
-                                    <h3 className="font-heading text-2xl text-primary mb-2">
+                                    <h3 className="typ-h3 text-primary mb-2">
                                         {t.personalTraining.pricing.single.title}
                                     </h3>
                                     <div className="flex items-baseline gap-2 mb-4">
-                                        <span className="font-heading text-4xl text-accent">{t.personalTraining.pricing.single.price}</span>
+                                        <span className="font-heading typ-h2 text-accent">{t.personalTraining.pricing.single.price}</span>
                                         <span className="text-muted-foreground">/ {t.personalTraining.pricing.single.priceLabel}</span>
                                     </div>
-                                    <p className="text-muted-foreground mb-8">
+                                    <p className="typ-body text-muted-foreground mb-8">
                                         {t.personalTraining.pricing.single.description}
                                     </p>
                                     <Link to={getLocalizedPath('/kontakt')} onClick={scrollToTop}>
@@ -229,17 +229,17 @@ const PersonalTraining = () => {
                                     <span className="text-gold-accent text-xs uppercase tracking-wider font-semibold block mb-4">
                                         {t.personalTraining.pricing.package.label}
                                     </span>
-                                    <h3 className="font-heading text-2xl text-white mb-2">
+                                    <h3 className="typ-h3 text-white mb-2">
                                         {t.personalTraining.pricing.package.title}
                                     </h3>
                                     <div className="flex items-baseline gap-2 mb-2">
-                                        <span className="font-heading text-4xl text-gold-accent">{t.personalTraining.pricing.package.price}</span>
+                                        <span className="font-heading typ-h2 text-gold-accent">{t.personalTraining.pricing.package.price}</span>
                                         <span className="text-white/70">/ {t.personalTraining.pricing.package.priceLabel}</span>
                                     </div>
-                                    <p className="text-white/70 text-sm mb-4">
+                                    <p className="typ-small text-white/70 mb-4">
                                         {t.personalTraining.pricing.package.discountPrice}
                                     </p>
-                                    <p className="text-white/85 mb-8">
+                                    <p className="typ-body text-white/85 mb-8">
                                         {t.personalTraining.pricing.package.description}
                                     </p>
                                     <Link to={getLocalizedPath('/kontakt')} onClick={scrollToTop}>
@@ -259,12 +259,12 @@ const PersonalTraining = () => {
                     <div className="container mx-auto px-4 text-center relative z-10">
                         <StaggerContainer className="max-w-2xl mx-auto">
                             <AnimatedItem>
-                                <h2 className="font-heading text-3xl md:text-4xl mb-8 text-white">
+                                <h2 className="typ-h2 mb-8 text-white">
                                     {t.personalTraining.cta.title}
                                 </h2>
                             </AnimatedItem>
                             <AnimatedItem>
-                                <p className="text-white/85 text-lg mb-10">
+                                <p className="typ-body text-white/85 mb-10">
                                     {t.personalTraining.cta.description}
                                 </p>
                             </AnimatedItem>

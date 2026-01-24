@@ -98,7 +98,7 @@ const Kontakt = () => {
                 {/* Contact Form */}
                 <motion.div variants={cardItem}>
                   <Card className="p-8 shadow-soft">
-                    <h2 className="font-heading text-2xl mb-6 text-primary">
+                    <h2 className="typ-h3 mb-6 text-primary">
                       {t.kontakt.form.title}
                     </h2>
                     <form onSubmit={handleSubmit} className="space-y-6">

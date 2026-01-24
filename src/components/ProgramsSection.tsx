@@ -7,10 +7,10 @@ export const ProgramsSection = () => {
     <section className="py-20 bg-off-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="font-heading text-4xl md:text-5xl mb-4 text-primary">
+          <h2 className="typ-h2 mb-4 text-primary">
             Meine Programme
           </h2>
-          <p className="text-xl text-muted-foreground italic">
+          <p className="typ-lead text-muted-foreground italic">
             Strukturierte Programme für Ihre persönliche Entwicklung
           </p>
         </div>
@@ -25,11 +25,11 @@ export const ProgramsSection = () => {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-heading text-2xl mb-2 text-primary">
+                  <h3 className="typ-h3 mb-2 text-primary">
                     Gestalt-Impuls: 4 Wochen zur Klarheit
                   </h3>
                   <p className="text-gold-accent font-semibold mb-4">4 Wochen</p>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <p className="typ-body text-muted-foreground mb-6">
                     Ein intensives Kurzprogramm zur ersten Orientierung und Stärkung Ihrer inneren Ressourcen. 
                     Dieses 4-wöchige Programm bietet Ihnen einen ersten tiefen Einblick in die Gestalttherapie. 
                     Durch wöchentliche Einzelsitzungen und gezielte Übungen lernen Sie, Ihre aktuellen 

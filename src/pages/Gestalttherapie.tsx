@@ -73,10 +73,10 @@ const VideoSection = ({
             background: 'rgba(255, 255, 255, 0.95)',
             boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
           }}>
-              <h2 className="font-heading text-xl md:text-2xl font-bold text-primary mb-4 text-center">
+              <h2 className="typ-h3 font-bold text-primary mb-4 text-center">
                 {title}
               </h2>
-              <div className="text-foreground/80 text-sm md:text-base leading-relaxed">
+              <div className="typ-body text-foreground/80">
                 {content}
               </div>
             </div>
@@ -143,22 +143,22 @@ const Gestalttherapie = () => {
               duration: 0.8,
               delay: 0.2
             }}>
-                <h2 className="font-heading text-2xl md:text-4xl font-bold text-primary mb-4 md:mb-8">
+                <h2 className="typ-h2 font-bold text-primary mb-4 md:mb-8">
                   {t.gestalttherapie.kontaktzyklus.title}
                 </h2>
-                <p className="text-foreground/80 text-base md:text-lg leading-relaxed md:leading-loose mb-6 md:mb-10">
+                <p className="typ-body text-foreground/80 mb-6 md:mb-10">
                   {t.gestalttherapie.kontaktzyklus.intro}
                 </p>
                 <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5 mb-6 md:mb-10">
                   {t.gestalttherapie.kontaktzyklus.phases.map((phase, index) => <AnimatedItem key={index}>
                       <div className="p-3 md:p-5 rounded-xl border-l-[3px] border-accent bg-primary/[0.04]">
                         <p className="text-foreground/80">
-                          <span className="text-accent font-semibold text-base md:text-lg">
+                          <span className="typ-h4 text-accent font-semibold">
                             {phase.title}
                           </span>
                           {phase.subtitle && <span className="text-xs md:text-sm text-foreground/50"> ({phase.subtitle})</span>}
                           <br />
-                          <span className="text-xs md:text-sm text-foreground/70">{phase.description}</span>
+                          <span className="typ-small text-foreground/70">{phase.description}</span>
                         </p>
                       </div>
                     </AnimatedItem>)}
@@ -175,7 +175,7 @@ const Gestalttherapie = () => {
                 duration: 0.6,
                 delay: 0.4
               }}>
-                  <p className="text-foreground/80 text-sm md:text-base leading-relaxed">
+                  <p className="typ-body text-foreground/80">
                     {t.gestalttherapie.kontaktzyklus.summary}
                   </p>
                 </motion.div>
@@ -219,10 +219,10 @@ const Gestalttherapie = () => {
               duration: 0.8,
               delay: 0.2
             }}>
-                <h2 className="font-heading text-2xl md:text-4xl font-bold text-primary mb-4 md:mb-8">
+                <h2 className="typ-h2 font-bold text-primary mb-4 md:mb-8">
                   {t.gestalttherapie.ressourcen.title}
                 </h2>
-                <p className="text-foreground/80 text-base md:text-lg leading-relaxed md:leading-loose mb-6 md:mb-10">
+                <p className="typ-body text-foreground/80 mb-6 md:mb-10">
                   {t.gestalttherapie.ressourcen.intro}
                 </p>
                 <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
@@ -233,10 +233,10 @@ const Gestalttherapie = () => {
                           <div className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-5 bg-accent/15">
                             <Icon className="w-6 h-6 md:w-7 md:h-7 text-accent" />
                           </div>
-                          <h3 className="font-heading font-bold text-primary mb-2 md:mb-4 text-lg md:text-xl">
+                          <h3 className="typ-h3 font-bold text-primary mb-2 md:mb-4">
                             {item.title}
                           </h3>
-                          <p className="text-foreground/70 leading-relaxed text-sm">
+                          <p className="typ-small text-foreground/70">
                             {item.description}
                           </p>
                         </div>
@@ -254,12 +254,12 @@ const Gestalttherapie = () => {
           <div className="container mx-auto px-4 text-center relative z-10">
             <StaggerContainer className="max-w-2xl mx-auto">
               <AnimatedItem>
-                <h2 className="font-heading text-2xl md:text-4xl mb-4 md:mb-8 text-white">
+                <h2 className="typ-h2 mb-4 md:mb-8 text-white">
                   {t.gestalttherapie.cta.title}
                 </h2>
               </AnimatedItem>
               <AnimatedItem>
-                <p className="text-white/85 text-base md:text-lg mb-6 md:mb-10">
+                <p className="typ-body text-white/85 mb-6 md:mb-10">
                   {t.gestalttherapie.cta.description}
                 </p>
               </AnimatedItem>

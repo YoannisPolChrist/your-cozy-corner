@@ -24,10 +24,10 @@ export const ServiceCards = () => {
     <section className="py-20 bg-off-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-heading text-4xl md:text-5xl mb-4 text-primary">
+          <h2 className="typ-h2 mb-4 text-primary">
             Mein Angebot
           </h2>
-          <p className="text-xl text-muted-foreground italic">
+          <p className="typ-lead text-muted-foreground italic">
             Spezialisierte Unterstützung in Gestalttherapie, Coaching und Diagnostik
           </p>
         </div>
@@ -44,10 +44,10 @@ export const ServiceCards = () => {
                 <div className="mb-6">
                   <Icon className="w-12 h-12 text-accent" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-heading text-2xl mb-4 text-primary">
+                <h3 className="typ-h3 mb-4 text-primary">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="typ-body text-muted-foreground">
                   {service.description}
                 </p>
               </Card>

@@ -156,10 +156,10 @@ const MyWork = () => {
                   <span className="text-gold-accent text-sm uppercase tracking-widest font-medium mb-4 block">
                     Das Herzstück meiner Arbeit
                   </span>
-                  <h2 className="font-heading text-3xl md:text-5xl font-bold text-white mb-4 md:mb-8">
+                  <h2 className="typ-h2 font-bold text-white mb-4 md:mb-8">
                     {t.gestalttherapie?.gestaltIntro?.title || "Die Gestalttherapie"}
                   </h2>
-                  <p className="text-white/85 text-base md:text-lg leading-relaxed md:leading-loose mx-auto max-w-3xl mb-12">
+                  <p className="typ-body text-white/85 mx-auto max-w-3xl mb-12">
                     {t.gestalttherapie?.gestaltIntro?.description || "Gestalttherapie ist ein humanistischer, erlebnisorientierter Therapieansatz, der den Menschen als Ganzes betrachtet."}
                   </p>
 
@@ -174,14 +174,14 @@ const MyWork = () => {
                           {/* Hover gradient */}
                           <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                          <h3 className="text-primary font-heading text-xl mb-3 relative z-10">{item.title}</h3>
-                          <p className="text-foreground/80 text-sm leading-relaxed relative z-10">{item.description}</p>
+                          <h3 className="typ-h3 text-primary mb-3 relative z-10">{item.title}</h3>
+                          <p className="typ-small text-foreground/80 relative z-10">{item.description}</p>
                         </motion.div>
                       </AnimatedItem>
                     ))}
                   </StaggerContainer>
 
-                  <p className="text-white/90 text-lg md:text-xl font-medium max-w-2xl mx-auto">
+                  <p className="typ-lead text-white/90 font-medium max-w-2xl mx-auto">
                     {t.gestalttherapie?.gestaltIntro?.additionalInfo}
                   </p>
                 </motion.div>
@@ -217,10 +217,10 @@ const MyWork = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  <h2 className="font-heading text-2xl md:text-4xl font-bold text-primary mb-4 md:mb-8">
+                  <h2 className="typ-h2 font-bold text-primary mb-4 md:mb-8">
                     {t.gestalttherapie.kontaktzyklus.title}
                   </h2>
-                  <p className="text-foreground/80 text-base md:text-lg leading-relaxed md:leading-loose mb-6 md:mb-10">
+                  <p className="typ-body text-foreground/80 mb-6 md:mb-10">
                     {t.gestalttherapie.kontaktzyklus.intro}
                   </p>
                   <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-10">
@@ -254,7 +254,7 @@ const MyWork = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.4 }}
                   >
-                    <p className="text-foreground/80 text-sm md:text-base leading-relaxed">
+                    <p className="typ-body text-foreground/80">
                       {t.gestalttherapie.kontaktzyklus.summary}
                     </p>
                   </motion.div>
@@ -290,10 +290,10 @@ const MyWork = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  <h2 className="font-heading text-2xl md:text-4xl font-bold text-primary mb-4 md:mb-8">
+                  <h2 className="typ-h2 font-bold text-primary mb-4 md:mb-8">
                     {t.gestalttherapie.ressourcen.title}
                   </h2>
-                  <p className="text-foreground/80 text-base md:text-lg leading-relaxed md:leading-loose mb-6 md:mb-10">
+                  <p className="typ-body text-foreground/80 mb-6 md:mb-10">
                     {t.gestalttherapie.ressourcen.intro}
                   </p>
                   <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
@@ -312,10 +312,10 @@ const MyWork = () => {
                             <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/15 transition-colors duration-300">
                               <Icon className="w-7 h-7 text-accent" strokeWidth={1.5} />
                             </div>
-                            <h3 className="font-heading text-xl mb-3 text-primary relative z-10">
+                            <h3 className="typ-h3 mb-3 text-primary relative z-10">
                               {item.title}
                             </h3>
-                            <p className="text-foreground/80 leading-relaxed text-sm relative z-10">
+                            <p className="typ-small text-foreground/80 relative z-10">
                               {item.description}
                             </p>
                           </motion.div>
