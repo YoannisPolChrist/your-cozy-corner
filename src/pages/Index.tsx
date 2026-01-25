@@ -305,42 +305,56 @@ const Index = () => {
       {/* About Preview - Editorial Layout */}
       <AnimatedSection className="py-28 md:py-40 bg-off-white overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center max-w-6xl mx-auto">
-            {/* Left Side - Text */}
-            <StaggerContainer className="order-1">
-              <AnimatedItem>
-                <span className="text-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">
-                  {t.aboutPreview.label}
-                </span>
-              </AnimatedItem>
-              <AnimatedItem>
-                <h2 className="font-heading text-4xl md:text-5xl mb-4 text-primary">
-                  {t.aboutPreview.whyTitle}
-                </h2>
-              </AnimatedItem>
-              <AnimatedItem>
-                <p className="text-muted-foreground text-lg mb-4 leading-loose">
-                  {t.aboutPreview.whyDescription1}
-                </p>
-              </AnimatedItem>
-              <AnimatedItem>
-                <p className="text-muted-foreground text-lg mb-6 leading-loose">
-                  {t.aboutPreview.whyDescription2}
-                </p>
-              </AnimatedItem>
-              <AnimatedItem>
-                <Link to={getLocalizedPath('/ueber-mich')} onClick={scrollToTop} className="inline-flex items-center text-primary font-semibold text-lg group relative">
-                  <span className="relative">
-                    {t.aboutPreview.link}
-                    <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300" />
+          <div className="max-w-6xl mx-auto">
+            {/* Mobile: Heading first, then image, then text */}
+            {/* Desktop: Two columns side by side */}
+            <div className="grid md:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center">
+              {/* Left Side - Text (Desktop) */}
+              <StaggerContainer className="order-1 md:order-1">
+                {/* Label + Heading - Always first */}
+                <AnimatedItem>
+                  <span className="text-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">
+                    {t.aboutPreview.label}
                   </span>
-                  <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-2" />
-                </Link>
-              </AnimatedItem>
-            </StaggerContainer>
+                </AnimatedItem>
+                <AnimatedItem>
+                  <h2 className="font-heading text-4xl md:text-5xl mb-4 md:mb-4 text-primary">
+                    {t.aboutPreview.whyTitle}
+                  </h2>
+                </AnimatedItem>
 
-            {/* Right Side - Image with Gold Frame Effect - Cinematic Parallax */}
-            <AboutParallaxImage />
+                {/* Image - Mobile only (appears after heading) */}
+                <div className="block md:hidden my-8">
+                  <AboutParallaxImage />
+                </div>
+
+                {/* Description paragraphs + Link */}
+                <AnimatedItem>
+                  <p className="text-muted-foreground text-lg mb-4 leading-loose">
+                    {t.aboutPreview.whyDescription1}
+                  </p>
+                </AnimatedItem>
+                <AnimatedItem>
+                  <p className="text-muted-foreground text-lg mb-6 leading-loose">
+                    {t.aboutPreview.whyDescription2}
+                  </p>
+                </AnimatedItem>
+                <AnimatedItem>
+                  <Link to={getLocalizedPath('/ueber-mich')} onClick={scrollToTop} className="inline-flex items-center text-primary font-semibold text-lg group relative">
+                    <span className="relative">
+                      {t.aboutPreview.link}
+                      <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300" />
+                    </span>
+                    <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-2" />
+                  </Link>
+                </AnimatedItem>
+              </StaggerContainer>
+
+              {/* Right Side - Image (Desktop only) */}
+              <div className="hidden md:block order-2">
+                <AboutParallaxImage />
+              </div>
+            </div>
           </div>
         </div>
       </AnimatedSection>
