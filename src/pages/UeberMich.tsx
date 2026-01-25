@@ -2,12 +2,15 @@ import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, GraduationCap, Sparkles, Dumbbell } from "lucide-react";
 import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { useRef, useState } from "react";
 import johannesHeroPortrait from "@/assets/johannes-hero-portrait.png";
 import conversationWindow from "@/assets/conversation-window.webp";
 import johannesPersoenlich from "@/assets/johannes-persoenlich-neu.webp";
-import johannesMeet from "@/assets/johannes-meet.webp";
+import johannesSpeed from "@/assets/johannes-speed.jpg";
+import johannesCyclingFriends from "@/assets/johannes-cycling-friends.jpg";
+import johannesBodywork1 from "@/assets/johannes-bodywork-1.jpg";
+import johannesBodywork2 from "@/assets/johannes-bodywork-2.jpg";
 import { Footer } from "@/components/Footer";
 import {
   fadeUp,
@@ -23,6 +26,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 // Parallax wrapper component for images
 const ParallaxImageWrapper = ({
@@ -62,6 +73,9 @@ const ParallaxImageWrapper = ({
 
 const UeberMich = () => {
   const { t, getLocalizedPath } = useLanguage();
+  const plugin = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: true })
+  );
 
   return (
     <div className="min-h-screen bg-background">
@@ -286,18 +300,63 @@ const UeberMich = () => {
                   </motion.h2>
                 </motion.div>
 
-                {/* Image with Gold Frame - Shows after title on mobile, left on desktop */}
-                <motion.div className="relative order-2 md:order-1 max-w-sm md:max-w-md mx-auto md:mx-0">
+                {/* Carousel with Gold Frame - Left on desktop */}
+                <motion.div className="relative order-2 md:order-1 max-w-sm md:max-w-md mx-auto md:mx-0 w-full">
                   <motion.div
                     variants={goldFrameVariants}
                     className="absolute bottom-[8px] right-[8px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-xl md:rounded-2xl"
                   />
-                  <ParallaxImageWrapper
-                    src={johannesMeet}
-                    alt="Johannes Christ - Personal Training"
-                    className="object-cover"
-                    aspectRatio="aspect-[4/3]"
-                  />
+
+                  {/* Carousel Implementation with Autoplay */}
+                  <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4] group">
+                    <Carousel
+                      plugins={[plugin.current]}
+                      className="w-full h-full"
+                      onMouseEnter={plugin.current.stop}
+                      onMouseLeave={plugin.current.reset}
+                    >
+                      <CarouselContent className="h-full -ml-0">
+                        <CarouselItem className="h-full pl-0">
+                          <img
+                            src={johannesSpeed}
+                            alt="Johannes Christ - Triathlon Performance"
+                            className="w-full h-full object-cover"
+                          />
+                        </CarouselItem>
+                        <CarouselItem className="h-full pl-0">
+                          <img
+                            src={johannesCyclingFriends}
+                            alt="Johannes Christ - Cycling with Friends"
+                            className="w-full h-full object-cover"
+                          />
+                        </CarouselItem>
+                        <CarouselItem className="h-full pl-0">
+                          <img
+                            src={johannesBodywork1}
+                            alt="Johannes Christ - Manual Therapy & Bodywork"
+                            className="w-full h-full object-cover"
+                          />
+                        </CarouselItem>
+                        <CarouselItem className="h-full pl-0">
+                          <img
+                            src={johannesBodywork2}
+                            alt="Johannes Christ - Mobility Training"
+                            className="w-full h-full object-cover"
+                          />
+                        </CarouselItem>
+                      </CarouselContent>
+
+                      {/* Centered Navigation Arrows - Always visible, no pulse */}
+                      <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 h-12 w-12 bg-black/40 hover:bg-black/60 border-white/30 text-white backdrop-blur-sm transition-all shadow-lg" />
+                      <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 h-12 w-12 bg-black/40 hover:bg-black/60 border-white/30 text-white backdrop-blur-sm transition-all shadow-lg" />
+
+                      {/* Slide Indicators - Always visible */}
+                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-md border border-white/10">
+                        <div className="w-2 h-2 rounded-full bg-white shadow-sm transition-all" />
+                        <div className="w-2 h-2 rounded-full bg-white/50 shadow-sm transition-all" />
+                      </div>
+                    </Carousel>
+                  </div>
                 </motion.div>
 
                 {/* Text Content - after image on mobile, right on desktop */}
