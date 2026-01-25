@@ -387,22 +387,24 @@ const MyWork = () => {
                       return (
                         <AnimatedItem key={index}>
                           <motion.div
-                            className="p-6 md:p-8 rounded-2xl bg-primary shadow-xl border border-accent/30 h-full flex flex-col relative overflow-hidden group"
-                            whileHover={{ y: -5, boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.35)' }}
+                            className="p-5 md:p-6 rounded-2xl bg-primary shadow-xl border border-accent/30 h-full flex flex-row items-start gap-4 md:gap-5 relative overflow-hidden group"
+                            whileHover={{ y: -4, boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.35)' }}
                             transition={{ duration: 0.3 }}
                           >
                             {/* Subtle gradient overlay on hover */}
                             <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                            <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-5 bg-white/10 backdrop-blur-sm border border-white/10 group-hover:bg-white/15 transition-colors duration-300">
-                              <Icon className="w-7 h-7 text-gold-accent" />
+                            <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl flex-shrink-0 flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/10 group-hover:bg-white/15 transition-colors duration-300">
+                              <Icon className="w-6 h-6 md:w-7 md:h-7 text-gold-accent" />
                             </div>
-                            <h3 className="font-heading font-semibold text-white mb-4 text-lg md:text-xl tracking-tight relative z-10">
-                              {item.title}
-                            </h3>
-                            <p className="text-white/85 leading-relaxed text-sm md:text-base relative z-10">
-                              {item.description}
-                            </p>
+                            <div className="flex flex-col relative z-10">
+                              <h3 className="font-heading font-semibold text-white mb-2 text-base md:text-lg tracking-tight">
+                                {item.title}
+                              </h3>
+                              <p className="text-white/80 leading-relaxed text-sm">
+                                {item.description}
+                              </p>
+                            </div>
                           </motion.div>
                         </AnimatedItem>
                       );
