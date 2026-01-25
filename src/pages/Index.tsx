@@ -306,11 +306,8 @@ const Index = () => {
       <AnimatedSection className="py-28 md:py-40 bg-off-white overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center max-w-6xl mx-auto">
-            {/* Left Side - Image with Gold Frame Effect - Cinematic Parallax */}
-            <AboutParallaxImage />
-
-            {/* Right Side - Text */}
-            <StaggerContainer className="order-1 md:order-2">
+            {/* Left Side - Text */}
+            <StaggerContainer className="order-1">
               <AnimatedItem>
                 <span className="text-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">
                   {t.aboutPreview.label}
@@ -341,6 +338,9 @@ const Index = () => {
                 </Link>
               </AnimatedItem>
             </StaggerContainer>
+
+            {/* Right Side - Image with Gold Frame Effect - Cinematic Parallax */}
+            <AboutParallaxImage />
           </div>
         </div>
       </AnimatedSection>
