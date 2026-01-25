@@ -85,7 +85,8 @@ export const de: Translations = {
       iconDescriptions: {
         diagnostik: 'Strategische Klarheit',
         gestalt: 'Das Herz meiner Arbeit',
-        coaching: 'Inkl. Diagnostik',
+        coaching: 'Inkl. Diagnostischen Elementen',
+        personalTraining: 'Performanceoptimierung / Bewegungstherapie',
       },
       iconCards: {
         diagnostik: {
@@ -535,31 +536,48 @@ export const de: Translations = {
     impressum: {
       title: 'Impressum',
       angaben: {
-        title: 'Angaben gemäß § 5 TMG / Mentions Légales',
+        title: 'Angaben gemäß § 5 TMG',
         name: 'Johannes Christ',
         address: 'Toulouse, Frankreich',
         contact: 'Kontakt',
         email: 'Email: [Email-Adresse]',
         phone: 'Telefon: [Telefonnummer]',
+        businessId: 'SIRET: [Ihre SIRET-Nummer]',
+      },
+      publication: {
+        title: 'Verantwortlich für den Inhalt nach § 18 MStV',
+        name: 'Johannes Christ',
+      },
+      dispute: {
+        title: 'Streitbeilegung',
+        content: 'Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr. Unsere E-Mail-Adresse finden Sie oben im Impressum. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.',
       },
       disclaimer: {
-        title: 'Haftungsausschluss',
-        content: 'Die Inhalte dieser Seite wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.',
+        title: 'Haftung und Urheberrecht',
+        content: 'Haftung für Inhalte: Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. \n\nHaftung für Links: Mein Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen.\n\nUrheberrecht: Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung.',
       },
     },
     datenschutz: {
       title: 'Datenschutzerklärung',
       intro: {
-        title: 'Allgemeine Hinweise',
+        title: '1. Datenschutz auf einen Blick',
         content: 'Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Da ich in Frankreich ansässig bin, gilt primär die DSGVO (GDPR) sowie französisches Recht.',
       },
       rights: {
-        title: 'Ihre Rechte',
-        content: 'Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.',
+        title: '2. Ihre Rechte',
+        content: 'Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu (in Frankreich die CNIL).',
       },
       hosting: {
-        title: 'Hosting',
-        content: 'Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters (z.B. Vercel/Netlify/Github Pages) gespeichert. Die Nutzung erfolgt zum Zwecke der Vertragserfüllung gegenüber meinen potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung meines Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).',
+        title: '3. Hosting',
+        content: 'Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. \n\nHoster: [Name des Hosters, z.B. Vercel Inc.] \nAdresse: [Adresse des Hosters] \nKontakt: [Telefon/Email des Hosters]',
+      },
+      googleFonts: {
+        title: '4. Google Fonts',
+        content: 'Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Fonts, die von Google bereitgestellt werden. Hierzu muss der von Ihnen verwendete Browser Verbindung zu den Servern von Google aufnehmen. Die Nutzung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).',
+      },
+      encryption: {
+        title: '5. SSL- bzw. TLS-Verschlüsselung',
+        content: 'Diese Seite nutzt eine SSL- bzw. TLS-Verschlüsselung zum Schutz vertraulicher Inhalte, wie zum Beispiel Anfragen über das Kontaktformular.',
       },
     },
   },

@@ -85,7 +85,8 @@ export const fr: Translations = {
       iconDescriptions: {
         diagnostik: 'Clarté stratégique',
         gestalt: 'Le cœur de mon travail',
-        coaching: 'Incl. diagnostic',
+        coaching: 'Éléments diagnostiques inclus',
+        personalTraining: 'Optimisation de la performance / Thérapie par le mouvement',
       },
       iconCards: {
         diagnostik: {
@@ -535,31 +536,48 @@ export const fr: Translations = {
     impressum: {
       title: 'Mentions Légales',
       angaben: {
-        title: 'Mentions Légales / Angaben gemäß § 5 TMG',
+        title: 'Mentions Légales et Coordonnées',
         name: 'Johannes Christ',
         address: 'Toulouse, France',
         contact: 'Contact',
         email: 'Email: [Votre Email]',
         phone: 'Téléphone: [Votre Numéro]',
+        businessId: 'SIRET: [Votre numéro SIRET]',
+      },
+      publication: {
+        title: 'Directeur de la publication',
+        name: 'Johannes Christ',
+      },
+      dispute: {
+        title: 'Règlement des litiges',
+        content: 'La Commission européenne fournit une plateforme de règlement des litiges en ligne (OS) : https://ec.europa.eu/consumers/odr. Médiation de la consommation : conformément aux articles L.611-1 et suivants du Code de la consommation, vous pouvez recourir gratuitement à un médiateur de la consommation.',
       },
       disclaimer: {
-        title: 'Clause de non-responsabilité',
-        content: 'Les contenus de ce site ont été créés avec le plus grand soin. Cependant, nous ne pouvons garantir l\'exactitude, l\'exhaustivité et l\'actualité des contenus. En tant que prestataire de services, nous sommes responsables de nos propres contenus sur ces pages selon les lois générales.',
+        title: 'Hébergeur et Propriété',
+        content: 'Hébergeur : [Nom de l\'hébergeur] \nAdresse : [Adresse de l\'hébergeur] \nContact : [Numéro/Email de l\'hébergeur] \n\nPropriété intellectuelle : L’ensemble de ce site relève des législations françaises et internationales sur le droit d’auteur et la propriété intellectuelle.',
       },
     },
     datenschutz: {
       title: 'Politique de Confidentialité',
       intro: {
-        title: 'Informations Générales',
-        content: 'Les remarques suivantes donnent un aperçu simple de ce qui arrive à vos données personnelles lorsque vous visitez ce site web. Les données personnelles sont toutes les données avec lesquelles vous pouvez être personnellement identifié. Basé en France, le RGPD et le droit français s\'appliquent.',
+        title: '1. Aperçu de la protection des données',
+        content: 'Les informations suivantes donnent un aperçu simple de ce qui arrive à vos données personnelles lorsque vous visitez ce site web. Les données personnelles sont toutes les données avec lesquelles vous pouvez être personnellement identifié. Le RGPD et le droit français s\'appliquent.',
       },
       rights: {
-        title: 'Vos Droits',
-        content: 'Vous avez le droit de demander à tout moment des informations sur l\'origine, le destinataire et la finalité de vos données personnelles stockées. Vous avez également le droit de demander la rectification ou la suppression de ces données. Vous pouvez révoquer votre consentement au traitement des données à tout moment.',
+        title: '2. Vos droits',
+        content: 'Vous avez le droit de demander à tout moment des informations sur vos données personnelles stockées, ainsi que leur rectification ou suppression. Vous disposez également d\'un droit de recours auprès de l\'autorité de contrôle compétente (la CNIL en France).',
       },
       hosting: {
-        title: 'Hébergement',
-        content: 'Ce site est hébergé en externe. Les données personnelles collectées sur ce site sont stockées sur les serveurs de l\'hébergeur (par ex. Vercel/Netlify/Github Pages).',
+        title: '3. Hébergement',
+        content: 'Ce site web est hébergé en externe. Les données personnelles collectées sont stockées sur les serveurs de l\'hébergeur. \n\nHébergeur : [Nom de l\'hébergeur] \nAdresse : [Adresse de l\'hébergeur]',
+      },
+      googleFonts: {
+        title: '4. Google Fonts',
+        content: 'Ce site utilise des polices de caractères Google Fonts (Art. 6 al. 1 lit. f RGPD - intérêt légitime). Votre navigateur charge les polices nécessaires dans son cache en se connectant aux serveurs de Google.',
+      },
+      encryption: {
+        title: '5. Chiffrement SSL/TLS',
+        content: 'Ce site utilise un chiffrement SSL ou TLS pour des raisons de sécurité et pour protéger la transmission de contenus confidentiels.',
       },
     },
   },

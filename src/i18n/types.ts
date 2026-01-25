@@ -74,6 +74,7 @@ export interface Translations {
         diagnostik: string;
         gestalt: string;
         coaching: string;
+        personalTraining: string;
       };
       iconCards?: {
         diagnostik: {
@@ -460,6 +461,15 @@ export interface Translations {
         contact: string;
         email: string;
         phone: string;
+        businessId?: string; // SIRET for France
+      };
+      publication: {
+        title: string;
+        name: string;
+      };
+      dispute: {
+        title: string;
+        content: string;
       };
       disclaimer: {
         title: string;
@@ -477,6 +487,14 @@ export interface Translations {
         content: string;
       };
       hosting: {
+        title: string;
+        content: string;
+      };
+      googleFonts: {
+        title: string;
+        content: string;
+      };
+      encryption: {
         title: string;
         content: string;
       };

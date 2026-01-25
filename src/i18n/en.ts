@@ -85,7 +85,8 @@ export const en: Translations = {
       iconDescriptions: {
         diagnostik: 'Strategic clarity',
         gestalt: 'The heart of my work',
-        coaching: 'Incl. diagnostics',
+        coaching: 'Incl. diagnostic elements',
+        personalTraining: 'Performance Optimization / Movement Therapy',
       },
       iconCards: {
         diagnostik: {
@@ -536,31 +537,48 @@ export const en: Translations = {
     impressum: {
       title: 'Legal Notice',
       angaben: {
-        title: 'Information according to § 5 TMG / Mentions Légales',
+        title: 'Information according to § 5 TMG',
         name: 'Johannes Christ',
         address: 'Toulouse, France',
         contact: 'Contact',
         email: 'Email: [Email Address]',
         phone: 'Phone: [Phone Number]',
+        businessId: 'SIRET: [Your SIRET number]',
+      },
+      publication: {
+        title: 'Responsible for Content according to § 18 MStV',
+        name: 'Johannes Christ',
+      },
+      dispute: {
+        title: 'Dispute Resolution',
+        content: 'The European Commission provides a platform for online dispute resolution (OS): https://ec.europa.eu/consumers/odr. Consumer mediation: We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.',
       },
       disclaimer: {
-        title: 'Disclaimer',
-        content: 'The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents\' accuracy, completeness or topicality. According to statutory provisions, we are furthermore responsible for our own content on these web pages. In this context, please note that we are accordingly not obliged to monitor merely the transmitted or saved information of third parties, or investigate circumstances pointing to illegal activity.',
+        title: 'Liability and Copyright',
+        content: 'Liability for Content: As a service provider, I am responsible for my own content on these pages according to general laws. \n\nLiability for Links: My offer contains links to external websites of third parties, on whose content I have no influence. \n\nCopyright: The content and works on these pages created by the site operator are subject to copyright law.',
       },
     },
     datenschutz: {
       title: 'Privacy Policy',
       intro: {
-        title: 'General Information',
-        content: 'The following gives a simple overview of what happens to your personal information when you visit our website. Personal data is all data with which you can be personally identified. Since I am based in France, the GDPR (DSGVO) and French law apply.',
+        title: '1. Privacy at a Glance',
+        content: 'The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data with which you can be personally identified. GDPR and French law apply.',
       },
       rights: {
-        title: 'Your Rights',
-        content: 'You have the right to request information about the origin, recipient, and purpose of your stored personal data at any time. You also have the right to request modification or deletion of this data. If you have given consent for data processing, you can revoke this at any time for the future.',
+        title: '2. Your Rights',
+        content: 'You have the right to request information about your stored personal data, as well as its correction or deletion, at any time free of charge. You also have a right of appeal to the competent supervisory authority (CNIL in France).',
       },
       hosting: {
-        title: 'Hosting',
-        content: 'This website is hosted externally. The personal data collected on this website are stored on the hoster\'s servers (e.g., Vercel/Netlify/Github Pages).',
+        title: '3. Hosting',
+        content: 'This website is hosted externally. The personal data collected is stored on the servers of the hoster. \n\nHoster: [Hoster Name] \nAddress: [Hoster Address]',
+      },
+      googleFonts: {
+        title: '4. Google Fonts',
+        content: 'This site uses Google Fonts (Art. 6 para. 1 lit. f GDPR - legitimate interest). Your browser loads the required fonts into its browser cache by connecting to Google servers.',
+      },
+      encryption: {
+        title: '5. SSL or TLS Encryption',
+        content: 'For security reasons and to protect the transmission of confidential content, this site uses SSL or TLS encryption.',
       },
     },
   },

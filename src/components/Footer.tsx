@@ -1,8 +1,9 @@
 import { MapPin, Phone, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n";
 
 export const Footer = () => {
-  const { t, language } = useLanguage();
+  const { t, language, getLocalizedPath } = useLanguage();
 
   return (
     <footer className="bg-background border-t border-primary/10 py-8 overflow-x-clip">
@@ -35,12 +36,12 @@ export const Footer = () => {
             <div className="md:text-right">
               <p className="font-heading text-base text-primary font-semibold mb-3">{t.footer.rechtliches}</p>
               <nav className="space-y-2 text-sm">
-                <a href="#" className="block text-primary hover:text-accent transition-colors">
+                <Link to={getLocalizedPath('/datenschutz')} className="block text-primary hover:text-accent transition-colors">
                   {t.footer.datenschutz}
-                </a>
-                <a href="#" className="block text-primary hover:text-accent transition-colors">
+                </Link>
+                <Link to={getLocalizedPath('/impressum')} className="block text-primary hover:text-accent transition-colors">
                   {t.footer.impressum}
-                </a>
+                </Link>
               </nav>
             </div>
           </div>

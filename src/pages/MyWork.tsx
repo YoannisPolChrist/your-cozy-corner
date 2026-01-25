@@ -118,7 +118,7 @@ const MyWork = () => {
                   {t.personalTraining?.nav || "Personal Training"}
                 </span>
                 <span className="text-xs sm:text-sm text-white/80 text-center leading-relaxed px-2">
-                  Körperarbeit in Toulouse
+                  {t.myWork?.hero?.iconDescriptions?.personalTraining || "Performanceoptimierung / Bewegungstherapie"}
                 </span>
               </a>
             </motion.div>
