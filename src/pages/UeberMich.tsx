@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 import johannesHeroPortrait from "@/assets/johannes-hero-portrait.png";
-import conversationWindow from "@/assets/conversation-window.webp";
+import johannesCoachingTalk from "@/assets/johannes-coaching-talk.jpg";
 import johannesPersoenlich from "@/assets/johannes-persoenlich-neu.webp";
 import johannesSpeed from "@/assets/johannes-speed.jpg";
 import johannesCyclingFriends from "@/assets/johannes-cycling-friends.jpg";
@@ -186,7 +186,7 @@ const UeberMich = () => {
                     className="absolute bottom-[8px] left-[8px] md:bottom-[20px] md:left-[20px] w-full h-full bg-[#c5a065] rounded-xl md:rounded-2xl"
                   />
                   <ParallaxImageWrapper
-                    src={conversationWindow}
+                    src={johannesCoachingTalk}
                     alt="Therapeutische Arbeit"
                     className="object-cover"
                     aspectRatio="aspect-[4/3]"
