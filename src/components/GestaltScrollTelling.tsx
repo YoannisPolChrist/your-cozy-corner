@@ -14,18 +14,18 @@ export const GestaltScrollTelling = () => {
     <div className="container mx-auto px-4">
       <AnimatedSection className="max-w-5xl mx-auto">
         <motion.img {...imgFetchPriorityProps} alt={t.gestalttherapie.scrollTelling.title} className="w-full rounded-xl mb-6 md:mb-12" loading="eager" decoding="async" initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true
-          }} transition={{
-            duration: 0.8
-          }} style={{
-            boxShadow: '0 10px 40px rgba(30, 95, 116, 0.1)'
-          }} src="/lovable-uploads/a1f9adf6-b700-4003-a692-6327154bf5bc.png" />
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.8
+        }} style={{
+          boxShadow: '0 10px 40px rgba(30, 95, 116, 0.1)'
+        }} src="/lovable-uploads/a1f9adf6-b700-4003-a692-6327154bf5bc.webp" />
 
         {/* Gold connector line from image to cards - hidden on mobile */}
         <div className="hidden md:flex justify-center mb-8">

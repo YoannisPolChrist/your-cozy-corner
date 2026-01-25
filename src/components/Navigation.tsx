@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.webp";
 import { useLanguage } from "@/i18n";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 

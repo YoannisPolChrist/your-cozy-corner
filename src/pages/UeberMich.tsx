@@ -4,13 +4,13 @@ import { ArrowRight, GraduationCap, Sparkles, Dumbbell } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
-import johannesHeroPortrait from "@/assets/johannes-hero-portrait.png";
-import johannesCoachingTalk from "@/assets/johannes-coaching-talk.jpg";
+import johannesHeroPortrait from "@/assets/johannes-hero-portrait.webp";
+import johannesCoachingTalk from "@/assets/johannes-coaching-talk.webp";
 import johannesPersoenlich from "@/assets/johannes-persoenlich-neu.webp";
-import johannesSpeed from "@/assets/johannes-speed.jpg";
-import johannesCyclingFriends from "@/assets/johannes-cycling-friends.jpg";
-import johannesBodywork1 from "@/assets/johannes-bodywork-1.jpg";
-import johannesBodywork2 from "@/assets/johannes-bodywork-2.jpg";
+import johannesSpeed from "@/assets/johannes-speed.webp";
+import johannesCyclingFriends from "@/assets/johannes-cycling-friends.webp";
+import johannesBodywork1 from "@/assets/johannes-bodywork-1.webp";
+import johannesBodywork2 from "@/assets/johannes-bodywork-2.webp";
 import { Footer } from "@/components/Footer";
 import {
   fadeUp,
