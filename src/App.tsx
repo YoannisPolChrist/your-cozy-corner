@@ -14,6 +14,8 @@ const Angebot = lazy(() => import("./pages/Angebot"));
 const UeberMich = lazy(() => import("./pages/UeberMich"));
 const Kontakt = lazy(() => import("./pages/Kontakt"));
 const PersonalTraining = lazy(() => import("./pages/PersonalTraining"));
+const Impressum = lazy(() => import("./pages/Impressum"));
+const Datenschutz = lazy(() => import("./pages/Datenschutz"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -60,10 +62,22 @@ const AppRoutes = () => (
       <Route path="/fr/coaching-sportif" element={<PersonalTraining />} />
 
       {/* Legacy routes - redirect to German */}
-      <Route path="/gestalttherapie" element={<Navigate to="/de/gestalttherapie" replace />} />
-      <Route path="/angebot" element={<Navigate to="/de/angebot" replace />} />
       <Route path="/ueber-mich" element={<Navigate to="/de/ueber-mich" replace />} />
       <Route path="/kontakt" element={<Navigate to="/de/kontakt" replace />} />
+      <Route path="/impressum" element={<Navigate to="/de/impressum" replace />} />
+      <Route path="/datenschutz" element={<Navigate to="/de/datenschutz" replace />} />
+
+      {/* Legal Pages (DE) */}
+      <Route path="/de/impressum" element={<Impressum />} />
+      <Route path="/de/datenschutz" element={<Datenschutz />} />
+
+      {/* Legal Pages (EN) */}
+      <Route path="/en/legal-notice" element={<Impressum />} />
+      <Route path="/en/privacy-policy" element={<Datenschutz />} />
+
+      {/* Legal Pages (FR) */}
+      <Route path="/fr/mentions-legales" element={<Impressum />} />
+      <Route path="/fr/politique-confidentialite" element={<Datenschutz />} />
 
       <Route path="*" element={<NotFound />} />
     </Routes>

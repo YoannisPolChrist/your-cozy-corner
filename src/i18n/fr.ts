@@ -56,7 +56,7 @@ export const fr: Translations = {
       },
       {
         title: 'Entraînement Personnel',
-        description: 'Travail corporel pour la performance, la prévention et la réhabilitation.',
+        description: 'Entraînement en Sciences du Sport pour la performance, la prévention et la réhabilitation.',
       },
     ],
     cta: 'Découvrir les services',
@@ -401,10 +401,10 @@ export const fr: Translations = {
     },
     training: {
       label: 'LA TROISIÈME DIMENSION',
-      title: 'Et si tu n\'arrives simplement pas à te bouger ?',
-      description1: 'Parfois, tu n\'as pas besoin de conversations profondes – parfois tu as juste besoin de transpirer. Quand la flemme gagne, que la motivation manque ou que tu veux simplement mieux performer, le chemin direct par le corps est souvent le plus efficace.',
-      description2: 'Le mouvement change tout : ton énergie, ton état d\'esprit, ton image de toi. Ceux qui s\'entraînent régulièrement le savent : Le corps n\'est pas un appendice de l\'esprit – il EST l\'esprit. Et parfois il faut d\'abord s\'épuiser physiquement avant que la tête ne s\'éclaircisse.',
-      description3: 'Que tu veuilles prendre du muscle, perdre du poids ou soulager ton dos – en tant qu\'entraîneur athlétique diplômé et thérapeute du mouvement, je te prends là où tu es. Pas de blabla ésotérique, pas de jargon coaching. Juste un entraînement honnête et intense pour t\'amener là où tu veux aller.',
+      title: 'Le mouvement plutôt que les mots',
+      description1: 'Tous les problèmes ne se règlent pas en parlant – parfois, il faut de la sueur, du mouvement et de l\'intensité. Le corps n\'est pas une annexe de l\'esprit – il le façonne. Se dépenser permet de se vider la tête.',
+      description2: 'Personal Training à Toulouse – en extérieur, en salle ou chez toi.',
+      description3: 'Prendre du muscle, perdre du poids ou revenir après une blessure – en tant qu\'entraîneur athlétique et thérapeute du mouvement (B.A.), nous travaillons avec ton corps, pas contre lui.',
     },
     cta: {
       title: 'Curieux d\'en savoir plus ?',
@@ -482,12 +482,12 @@ export const fr: Translations = {
       {
         title: 'Prévention & Réhab',
         subline: 'LE MOUVEMENT COMME MÉDECINE',
-        description: 'Douleurs dorsales, déséquilibres posturaux, surcharge – beaucoup de problèmes peuvent être résolus ou évités par un entraînement ciblé. Je travaille sur la cause, pas le symptôme. Mobilité et stabilité forment la base.',
+        description: 'Douleurs dorsales, déséquilibres posturaux, surcharge – beaucoup de problèmes peuvent être résolus ou évités par un entraînement ciblé. Selon votre objectif, nous travaillons sur le renforcement musculaire, la perte de poids ou la rééducation fonctionnelle après blessure.',
       },
       {
-        title: 'Personal Training',
-        subline: 'LOOKING GOOD NAKED',
-        description: '...n\'est qu\'une partie de la promesse. Avec un accompagnement personnalisé, tu atteins tes objectifs plus rapidement et durablement. La combinaison d\'entraînement fonctionnel et de coaching nutritionnel fait la différence.',
+        title: 'Composition Corporelle',
+        subline: 'BIEN DANS SON CORPS',
+        description: 'Un corps fort peut aussi en avoir l\'air. Nous travaillons sur ta composition corporelle (prise de muscle & perte de gras) – Pour une sensation corporelle saine et puissante que tu ressens chaque jour.',
       },
     ],
     qualifications: {
@@ -529,6 +529,38 @@ export const fr: Translations = {
       title: 'Prêt à commencer ?',
       description: 'Prends rendez-vous pour une première consultation gratuite afin de discuter de tes objectifs.',
       button: 'Prendre rendez-vous',
+    },
+  },
+  legal: {
+    impressum: {
+      title: 'Mentions Légales',
+      angaben: {
+        title: 'Mentions Légales / Angaben gemäß § 5 TMG',
+        name: 'Johannes Christ',
+        address: 'Toulouse, France',
+        contact: 'Contact',
+        email: 'Email: [Votre Email]',
+        phone: 'Téléphone: [Votre Numéro]',
+      },
+      disclaimer: {
+        title: 'Clause de non-responsabilité',
+        content: 'Les contenus de ce site ont été créés avec le plus grand soin. Cependant, nous ne pouvons garantir l\'exactitude, l\'exhaustivité et l\'actualité des contenus. En tant que prestataire de services, nous sommes responsables de nos propres contenus sur ces pages selon les lois générales.',
+      },
+    },
+    datenschutz: {
+      title: 'Politique de Confidentialité',
+      intro: {
+        title: 'Informations Générales',
+        content: 'Les remarques suivantes donnent un aperçu simple de ce qui arrive à vos données personnelles lorsque vous visitez ce site web. Les données personnelles sont toutes les données avec lesquelles vous pouvez être personnellement identifié. Basé en France, le RGPD et le droit français s\'appliquent.',
+      },
+      rights: {
+        title: 'Vos Droits',
+        content: 'Vous avez le droit de demander à tout moment des informations sur l\'origine, le destinataire et la finalité de vos données personnelles stockées. Vous avez également le droit de demander la rectification ou la suppression de ces données. Vous pouvez révoquer votre consentement au traitement des données à tout moment.',
+      },
+      hosting: {
+        title: 'Hébergement',
+        content: 'Ce site est hébergé en externe. Les données personnelles collectées sur ce site sont stockées sur les serveurs de l\'hébergeur (par ex. Vercel/Netlify/Github Pages).',
+      },
     },
   },
 };

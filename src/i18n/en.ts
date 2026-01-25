@@ -56,7 +56,7 @@ export const en: Translations = {
       },
       {
         title: 'Personal Training',
-        description: 'Bodywork for performance, prevention, and rehabilitation.',
+        description: 'Sports Science Training for performance, prevention, and rehabilitation.',
       },
     ],
     cta: 'Discover services',
@@ -267,6 +267,7 @@ export const en: Translations = {
         subline: 'INCL. DIAGNOSTICS',
         description: 'Strategy meets intuition. We combine cognitive planning with the wisdom of your body. Thorough baseline assessment, blood and movement analyses – for decisions that feel right in your gut.',
       },
+
       {
         title: 'Personal Training',
         subline: 'BODY IN MOTION',
@@ -401,10 +402,10 @@ export const en: Translations = {
     },
     training: {
       label: 'THE THIRD DIMENSION',
-      title: 'And when you just can\'t get going?',
-      description1: 'Sometimes you don\'t need deep conversations – sometimes you just need to sweat. When your inner resistance wins, motivation is lacking, or you simply want to perform better, the direct path through the body is often the most effective.',
-      description2: 'Movement changes everything: your energy, your mindset, your self-image. Those who train regularly know: The body is not an appendage of the mind – it IS the mind. And sometimes you need to push yourself physically before your head clears up.',
-      description3: 'Whether you want to build muscle, lose weight, or tackle back problems – as a certified athletic trainer and movement therapist, I meet you where you are. No esoteric talk, no coaching jargon. Just honest, sweat-inducing training that gets you where you want to go.',
+      title: 'Movement over Words',
+      description1: 'Not every problem can be solved by talking – sometimes you need sweat, movement, and intensity. The body is not an appendage of the mind – it shapes it. Those who exert themselves clear their heads.',
+      description2: 'Personal Training in Toulouse – outdoors, at the studio, or at your place.',
+      description3: 'Building muscle, losing weight, or coming back after an injury – as an athletic trainer and movement therapist (B.A.), we work with your body, not against it.',
     },
     cta: {
       title: 'Curious to learn more?',
@@ -482,12 +483,12 @@ export const en: Translations = {
       {
         title: 'Prevention & Rehab',
         subline: 'MOVEMENT AS MEDICINE',
-        description: 'Back pain, postural imbalances, overuse – many issues can be fixed or prevented through targeted training. I work on the cause, not the symptom. Mobility and stability form the foundation.',
+        description: 'Back pain, poor posture, overuse – many issues can be fixed or prevented through targeted training. Depending on your goal, we work on muscle building, weight loss, or functional restoration after injury.',
       },
       {
-        title: 'Personal Training',
-        subline: 'LOOKING GOOD NAKED',
-        description: '...is only part of the promise. With personalized coaching, you reach your goals faster and more sustainably. The combination of functional training and nutrition coaching makes the difference.',
+        title: 'Body Composition',
+        subline: 'FEEL GOOD IN YOUR BODY',
+        description: 'A strong body can look the part. We work on your body composition (muscle building & fat loss) – For a healthy, powerful body feeling that you experience every day.',
       },
     ],
     qualifications: {
@@ -529,6 +530,38 @@ export const en: Translations = {
       title: 'Ready to Start?',
       description: 'Schedule a free initial consultation to discuss your goals.',
       button: 'Book Appointment',
+    },
+  },
+  legal: {
+    impressum: {
+      title: 'Legal Notice',
+      angaben: {
+        title: 'Information according to § 5 TMG / Mentions Légales',
+        name: 'Johannes Christ',
+        address: 'Toulouse, France',
+        contact: 'Contact',
+        email: 'Email: [Email Address]',
+        phone: 'Phone: [Phone Number]',
+      },
+      disclaimer: {
+        title: 'Disclaimer',
+        content: 'The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents\' accuracy, completeness or topicality. According to statutory provisions, we are furthermore responsible for our own content on these web pages. In this context, please note that we are accordingly not obliged to monitor merely the transmitted or saved information of third parties, or investigate circumstances pointing to illegal activity.',
+      },
+    },
+    datenschutz: {
+      title: 'Privacy Policy',
+      intro: {
+        title: 'General Information',
+        content: 'The following gives a simple overview of what happens to your personal information when you visit our website. Personal data is all data with which you can be personally identified. Since I am based in France, the GDPR (DSGVO) and French law apply.',
+      },
+      rights: {
+        title: 'Your Rights',
+        content: 'You have the right to request information about the origin, recipient, and purpose of your stored personal data at any time. You also have the right to request modification or deletion of this data. If you have given consent for data processing, you can revoke this at any time for the future.',
+      },
+      hosting: {
+        title: 'Hosting',
+        content: 'This website is hosted externally. The personal data collected on this website are stored on the hoster\'s servers (e.g., Vercel/Netlify/Github Pages).',
+      },
     },
   },
 };

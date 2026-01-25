@@ -365,7 +365,7 @@ const UeberMich = () => {
                 </motion.div>
 
                 {/* Image with Gold Frame - Shows after title on mobile */}
-                <motion.div className="relative order-2 md:order-2">
+                <motion.div className="relative order-2 md:order-2 max-w-sm md:max-w-md mx-auto md:mx-0">
                   <motion.div
                     variants={goldFrameVariants}
                     className="absolute bottom-[8px] left-[8px] md:bottom-[20px] md:left-[20px] w-full h-full bg-[#c5a065] rounded-xl md:rounded-2xl"
@@ -412,21 +412,18 @@ const UeberMich = () => {
           whileInView="visible"
           viewport={viewportSettings}
           variants={staggerContainer}
-          className="py-28 md:py-36 relative overflow-hidden bg-gradient-cta"
+          className="py-28 md:py-36 bg-off-white"
         >
-          {/* Subtle gradient overlay for depth */}
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-teal-navy/30" />
-
-          <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="container mx-auto px-4 text-center">
             <motion.h2
               variants={fadeUp}
-              className="font-heading text-4xl md:text-5xl mb-8 text-white"
+              className="font-heading text-4xl md:text-5xl mb-8 text-primary"
             >
               {t.ueberMich.cta.title}
             </motion.h2>
             <motion.p
               variants={fadeUp}
-              className="text-base md:text-lg leading-relaxed text-white/85 mb-10 max-w-2xl mx-auto"
+              className="text-base md:text-lg leading-relaxed text-muted-foreground mb-10 max-w-2xl mx-auto"
             >
               {t.ueberMich.cta.description}
             </motion.p>

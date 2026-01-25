@@ -131,19 +131,19 @@ const PersonalTraining = () => {
                             </p>
                         </div>
 
-                        <StaggerContainer className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                        <StaggerContainer className="grid md:grid-cols-3 gap-4 max-w-7xl mx-auto">
                             {t.personalTraining.services.map((service, index) => {
                                 const Icon = serviceIcons[index];
                                 return (
                                     <AnimatedItem key={index}>
-                                        <Card className="p-8 bg-off-white border border-accent/20 h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group">
-                                            <div className="mb-6">
+                                        <Card className="!py-3 !px-1.5 bg-off-white border border-accent/20 h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group">
+                                            <div className="mb-4">
                                                 <Icon className="w-12 h-12 text-accent group-hover:text-primary transition-colors duration-300" strokeWidth={1.5} />
                                             </div>
-                                            <span className="text-xs uppercase tracking-wider text-accent font-semibold block mb-2">
+                                            <span className="text-[10px] uppercase font-semibold block mb-2 text-accent min-h-[3em] flex items-end tracking-tight">
                                                 {service.subline}
                                             </span>
-                                            <h3 className="typ-h4 mb-4 text-primary">
+                                            <h3 className="text-xl font-bold mb-4 text-primary min-h-[2.5em] flex items-start">
                                                 {service.title}
                                             </h3>
                                             <p className="typ-body text-muted-foreground">

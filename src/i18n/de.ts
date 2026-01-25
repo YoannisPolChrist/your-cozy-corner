@@ -56,7 +56,7 @@ export const de: Translations = {
       },
       {
         title: 'Personal Training',
-        description: 'Körperarbeit für Performance, Prävention und Rehabilitation.',
+        description: 'Sportwissenschaftliches Training für Performance, Prävention und Rehabilitation.',
       },
     ],
     cta: 'Angebot entdecken',
@@ -268,9 +268,9 @@ export const de: Translations = {
         description: 'Strategie trifft Intuition. Wir kombinieren kognitive Planung mit der Weisheit deines Körpers. Fundierte Standortbestimmung, Blut- und Bewegungsanalysen – für Entscheidungen, die im Bauch richtig anfühlen.',
       },
       {
-        title: 'Personal Training',
-        subline: 'KÖRPER IN BEWEGUNG',
-        description: 'Und wenn dir das alles zu viel Kopf ist? Dann bringen wir deinen Körper in Bewegung – der Rest folgt. Performance, Bewegungstherapie und Motivation in Toulouse.',
+        title: 'Körperkomposition',
+        subline: 'WOHLFÜHLEN IM EIGENEN KÖRPER',
+        description: 'Ein starker Körper darf auch so aussehen. Wir arbeiten an deiner Körperzusammensetzung (Muskelaufbau & Fettreduktion) – Für ein gesundes, kraftvolles Körpergefühl, das du jeden Tag spürst.',
       },
     ],
     checkup: {
@@ -401,10 +401,10 @@ export const de: Translations = {
     },
     training: {
       label: 'DIE DRITTE DIMENSION',
-      title: 'Und wenn du einfach nicht in die Gänge kommst?',
-      description1: 'Manchmal braucht es keine tiefen Gespräche – manchmal braucht es Schweiß. Wenn der innere Schweinehund gewinnt, die Motivation fehlt oder du einfach besser performen willst, dann ist der direkte Weg über den Körper oft der effektivste.',
-      description2: 'Bewegung verändert alles: deine Energie, dein Mindset, dein Selbstbild. Wer regelmäßig trainiert, weiß: Der Körper ist kein Anhängsel des Geistes – er IST der Geist. Und manchmal muss man sich erstmal auspowern, bevor der Kopf wieder klar wird.',
-      description3: 'Ob du Muskeln aufbauen, Gewicht verlieren oder Rückenprobleme angehen willst – als ausgebildeter Athletiktrainer und Bewegungstherapeut hole ich dich da ab, wo du stehst. Kein Eso-Gerede, kein Coaching-Sprech. Einfach ehrliches, schweißtreibendes Training, das dich dahin bringt, wo du hinwillst.',
+      title: 'Bewegung statt Worte',
+      description1: 'Nicht jedes Problem löst sich im Gespräch – manchmal braucht es Schweiß, Bewegung und Intensität. Der Körper ist kein Anhängsel des Geistes – er formt ihn. Wer sich auspowert, bekommt den Kopf frei.',
+      description2: 'Personal Training in Toulouse – outdoor, im Studio oder bei dir.',
+      description3: 'Muskeln aufbauen, Gewicht verlieren oder nach einer Verletzung zurückkommen – als Athletiktrainer und Bewegungstherapeut (B.A.) arbeiten wir mit deinem Körper, nicht gegen ihn.',
     },
     cta: {
       title: 'Neugierig geworden?',
@@ -471,7 +471,7 @@ export const de: Translations = {
     approach: {
       label: 'Athletik & Performance',
       title: 'Personal Training',
-      description: 'Als Sportwissenschaftler (B.A. Prävention und Bewegungstherapie) und Diplom-Athletiktrainer arbeite ich evidenzbasiert. Kein Rätselraten, keine Standardpläne. Wir starten mit einer funktionellen Diagnostik, identifizieren deine Schwachstellen und bauen darauf ein Training auf, das zu deinem Alltag passt.\n\nOb du nach einer Verletzung zurückkommen willst, präventiv an deiner Haltung arbeiten oder deine sportliche Leistung auf das nächste Level bringen möchtest – wir finden den Weg.',
+      description: 'Manchmal ist genug geredet. Genug gefühlt. Manchmal braucht Veränderung keine weitere Analyse, sondern einfach Schweiß und Handlung.\n\nAls Sportwissenschaftler (B.A.) und Diplom-Athletiktrainer arbeiten wir evidenzbasiert. D.h. wir starten mit einer funktionellen Diagnostik und bauen darauf ein Training auf, das dich fordert und fördert. Der Körper wird zum Anker: Wenn du hier Stärke und Durchhaltevermögen spürst, nimmst du das auch in den Rest deines Lebens mit.',
     },
     services: [
       {
@@ -482,12 +482,12 @@ export const de: Translations = {
       {
         title: 'Prävention & Reha',
         subline: 'BEWEGUNG ALS MEDIZIN',
-        description: 'Rückenschmerzen, Haltungsschwächen, Überlastung – viele Beschwerden lassen sich durch gezieltes Training beheben oder verhindern. Ich arbeite an der Ursache, nicht am Symptom. Mobilität und Stabilität bilden die Grundlage.',
+        description: 'Rückenschmerzen, Haltungsschwächen, Überlastung – viele Beschwerden lassen sich durch gezieltes Training beheben oder verhindern. Je nach Ziel arbeiten wir an Muskelaufbau, Gewichtsreduktion, Funktionswiederherstellung nach Verletzung.',
       },
       {
-        title: 'Personal Training',
-        subline: 'LOOKING GOOD NAKED',
-        description: '...ist nur ein Teil des Versprechens. Mit individueller Betreuung erreichst du deine Ziele schneller und nachhaltiger. Die Kombination aus funktionellem Training und Ernährungscoaching macht den Unterschied.',
+        title: 'Körperkomposition',
+        subline: 'WOHLFÜHLEN IM EIGENEN KÖRPER',
+        description: 'Ein starker Körper darf auch so aussehen. Wir arbeiten an deiner Körperzusammensetzung (Muskelaufbau & Fettreduktion) – Für ein gesundes, kraftvolles Körpergefühl, das du jeden Tag spürst.',
       },
     ],
     qualifications: {
@@ -529,6 +529,38 @@ export const de: Translations = {
       title: 'Bereit loszulegen?',
       description: 'Vereinbare ein kostenloses Erstgespräch, um deine Ziele zu besprechen.',
       button: 'Termin vereinbaren',
+    },
+  },
+  legal: {
+    impressum: {
+      title: 'Impressum',
+      angaben: {
+        title: 'Angaben gemäß § 5 TMG / Mentions Légales',
+        name: 'Johannes Christ',
+        address: 'Toulouse, Frankreich',
+        contact: 'Kontakt',
+        email: 'Email: [Email-Adresse]',
+        phone: 'Telefon: [Telefonnummer]',
+      },
+      disclaimer: {
+        title: 'Haftungsausschluss',
+        content: 'Die Inhalte dieser Seite wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.',
+      },
+    },
+    datenschutz: {
+      title: 'Datenschutzerklärung',
+      intro: {
+        title: 'Allgemeine Hinweise',
+        content: 'Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Da ich in Frankreich ansässig bin, gilt primär die DSGVO (GDPR) sowie französisches Recht.',
+      },
+      rights: {
+        title: 'Ihre Rechte',
+        content: 'Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.',
+      },
+      hosting: {
+        title: 'Hosting',
+        content: 'Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters (z.B. Vercel/Netlify/Github Pages) gespeichert. Die Nutzung erfolgt zum Zwecke der Vertragserfüllung gegenüber meinen potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung meines Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).',
+      },
     },
   },
 };

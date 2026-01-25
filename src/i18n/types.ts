@@ -450,4 +450,36 @@ export interface Translations {
       button: string;
     };
   };
+  legal: {
+    impressum: {
+      title: string;
+      angaben: {
+        title: string;
+        name: string;
+        address: string;
+        contact: string;
+        email: string;
+        phone: string;
+      };
+      disclaimer: {
+        title: string;
+        content: string;
+      };
+    };
+    datenschutz: {
+      title: string;
+      intro: {
+        title: string;
+        content: string;
+      };
+      rights: {
+        title: string;
+        content: string;
+      };
+      hosting: {
+        title: string;
+        content: string;
+      };
+    };
+  };
 }
