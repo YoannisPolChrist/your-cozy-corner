@@ -29,15 +29,15 @@ export const en: Translations = {
     items: [
       {
         title: 'Burnout & Loss of Meaning',
-        description: 'When exhaustion runs deeper than tiredness. The system still functions, but the sense of purpose has been lost.',
+        description: 'When frustration and stagnation take over. The feeling of being stuck. Through awareness and process, we find meaning again.',
       },
       {
-        title: 'Phases of Transition',
-        description: 'When the new still frightens and the old no longer fits. The old compass no longer works, but the new path remains shrouded in fog.',
+        title: 'Transition & Clarity',
+        description: 'When the new still frightens and the old no longer fits. We develop concrete steps to move from standstill into action.',
       },
       {
-        title: 'Couples & Communication',
-        description: 'When conversations go in circles and genuine connection is missing. Moving away from entrenched patterns toward authentic encounter.',
+        title: 'Performance & Motivation',
+        description: 'When your inner resistance wins and performance stagnates. Stop overthinking, start moving – get up and do it!',
       },
     ],
   },

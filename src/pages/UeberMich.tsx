@@ -88,7 +88,7 @@ const UeberMich = () => {
                   </motion.span>
                   <motion.h1
                     variants={fadeUp}
-                    className="typ-h1 text-primary"
+                    className="font-heading text-4xl md:text-5xl leading-tight text-primary"
                   >
                     {t.ueberMich.hero.title}
                   </motion.h1>
@@ -121,13 +121,13 @@ const UeberMich = () => {
                   </motion.span>
                   <motion.h1
                     variants={fadeUp}
-                    className="hidden md:block typ-h1 text-primary"
+                    className="hidden md:block font-heading text-4xl md:text-5xl leading-tight text-primary"
                   >
                     {t.ueberMich.hero.title}
                   </motion.h1>
                   <motion.div
                     variants={fadeUp}
-                    className="typ-body space-y-3 md:space-y-4 text-muted-foreground"
+                    className="text-base md:text-lg leading-relaxed space-y-3 md:space-y-4 text-muted-foreground"
                   >
                     <p className="whitespace-pre-line">{t.ueberMich.hero.description1}</p>
                     <p>{t.ueberMich.hero.description2}</p>
@@ -159,7 +159,7 @@ const UeberMich = () => {
                   </motion.span>
                   <motion.h2
                     variants={fadeUp}
-                    className="typ-h2 text-white"
+                    className="font-heading text-4xl md:text-5xl leading-tight text-white"
                   >
                     {t.ueberMich.arbeitsweise.title}
                   </motion.h2>
@@ -190,24 +190,24 @@ const UeberMich = () => {
                   </motion.span>
                   <motion.h2
                     variants={fadeUp}
-                    className="hidden md:block typ-h2 text-white"
+                    className="hidden md:block font-heading text-4xl md:text-5xl leading-tight text-white"
                   >
                     {t.ueberMich.arbeitsweise.title}
                   </motion.h2>
                   <motion.div
                     variants={fadeUp}
-                    className="typ-body space-y-3 md:space-y-4 text-white/90"
+                    className="text-base md:text-lg leading-relaxed space-y-3 md:space-y-4 text-white/90"
                   >
                     <p>{t.ueberMich.arbeitsweise.description1}</p>
                     <p>{t.ueberMich.arbeitsweise.description2}</p>
-                    <p className="italic text-[#c5a065] font-heading typ-lead">{t.ueberMich.arbeitsweise.quote}</p>
+                    <p className="italic text-[#c5a065] font-heading text-base md:text-lg italic">{t.ueberMich.arbeitsweise.quote}</p>
                   </motion.div>
 
                   {/* Qualifications Accordion */}
                   <motion.div variants={fadeUp} className="pt-4">
                     <Accordion type="single" collapsible className="w-full">
                       <AccordionItem value="qualifikationen" className="border-[#c5a065]/30">
-                        <AccordionTrigger className="text-white hover:text-[#c5a065] font-heading typ-h4">
+                        <AccordionTrigger className="text-white hover:text-[#c5a065] font-heading text-lg md:text-xl">
                           {t.ueberMich.qualifikationen.title}
                         </AccordionTrigger>
                         <AccordionContent className="space-y-6 pt-4">
@@ -259,7 +259,7 @@ const UeberMich = () => {
           </div>
         </motion.section>
 
-        {/* Section 3: Persönlich - White Background */}
+        {/* Section 3: Training - Deep Teal Background */}
         <motion.section
           initial="hidden"
           whileInView="visible"
@@ -276,38 +276,14 @@ const UeberMich = () => {
                     variants={fadeUp}
                     className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-xs"
                   >
-                    {t.ueberMich.persoenlich.label}
+                    {t.ueberMich.training?.label}
                   </motion.span>
                   <motion.h2
                     variants={fadeUp}
-                    className="typ-h2 text-primary"
+                    className="font-heading text-4xl md:text-5xl leading-tight text-primary"
                   >
-                    {t.ueberMich.persoenlich.title}
+                    {t.ueberMich.training?.title}
                   </motion.h2>
-                </motion.div>
-
-                {/* Text Content - right on desktop, after title on mobile */}
-                <motion.div variants={staggerContainer} className="space-y-4 md:space-y-6 order-3 md:order-2">
-                  {/* Desktop-only: Title */}
-                  <motion.span
-                    variants={fadeUp}
-                    className="hidden md:block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
-                  >
-                    {t.ueberMich.persoenlich.label}
-                  </motion.span>
-                  <motion.h2
-                    variants={fadeUp}
-                    className="hidden md:block typ-h2 text-primary"
-                  >
-                    {t.ueberMich.persoenlich.title}
-                  </motion.h2>
-                  <motion.div
-                    variants={fadeUp}
-                    className="typ-body space-y-3 md:space-y-4 text-muted-foreground"
-                  >
-                    <p>{t.ueberMich.persoenlich.description1}</p>
-                    <p>{t.ueberMich.persoenlich.description2}</p>
-                  </motion.div>
                 </motion.div>
 
                 {/* Image with Gold Frame - Shows after title on mobile, left on desktop */}
@@ -317,18 +293,51 @@ const UeberMich = () => {
                     className="absolute bottom-[8px] right-[8px] md:bottom-[20px] md:right-[20px] w-full h-full bg-[#c5a065] rounded-xl md:rounded-2xl"
                   />
                   <ParallaxImageWrapper
-                    src={johannesPersoenlich}
-                    alt="Johannes Christ"
+                    src={johannesMeet}
+                    alt="Johannes Christ - Personal Training"
                     className="object-cover"
-                    aspectRatio="aspect-[3/4]"
+                    aspectRatio="aspect-[4/3]"
                   />
+                </motion.div>
+
+                {/* Text Content - after image on mobile, right on desktop */}
+                <motion.div variants={staggerContainer} className="space-y-4 md:space-y-6 order-3 md:order-2 text-left">
+                  {/* Desktop-only: Title */}
+                  <motion.span
+                    variants={fadeUp}
+                    className="hidden md:block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
+                  >
+                    {t.ueberMich.training?.label}
+                  </motion.span>
+                  <motion.h2
+                    variants={fadeUp}
+                    className="hidden md:block font-heading text-4xl md:text-5xl leading-tight text-primary"
+                  >
+                    {t.ueberMich.training?.title}
+                  </motion.h2>
+                  <motion.div
+                    variants={fadeUp}
+                    className="text-base md:text-lg leading-relaxed space-y-3 md:space-y-4 text-muted-foreground"
+                  >
+                    <p>{t.ueberMich.training?.description1}</p>
+                    <p>{t.ueberMich.training?.description2}</p>
+                    {t.ueberMich.training?.description3 && <p>{t.ueberMich.training.description3}</p>}
+                  </motion.div>
+
+                  <motion.div variants={fadeUp} className="pt-4">
+                    <Link to={getLocalizedPath('/angebot')}>
+                      <Button variant="gold" className="font-semibold">
+                        Personal Training <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </motion.div>
                 </motion.div>
               </div>
             </div>
           </div>
         </motion.section>
 
-        {/* Section 4: Training - Deep Teal Background */}
+        {/* Section 4: Persönlich - White Background */}
         <motion.section
           initial="hidden"
           whileInView="visible"
@@ -345,13 +354,13 @@ const UeberMich = () => {
                     variants={fadeUp}
                     className="block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-xs"
                   >
-                    {t.ueberMich.training?.label}
+                    {t.ueberMich.persoenlich.label}
                   </motion.span>
                   <motion.h2
                     variants={fadeUp}
-                    className="typ-h2 text-white"
+                    className="font-heading text-4xl md:text-5xl leading-tight text-white"
                   >
-                    {t.ueberMich.training?.title}
+                    {t.ueberMich.persoenlich.title}
                   </motion.h2>
                 </motion.div>
 
@@ -362,10 +371,10 @@ const UeberMich = () => {
                     className="absolute bottom-[8px] left-[8px] md:bottom-[20px] md:left-[20px] w-full h-full bg-[#c5a065] rounded-xl md:rounded-2xl"
                   />
                   <ParallaxImageWrapper
-                    src={johannesMeet}
-                    alt="Johannes Christ - Personal Training"
+                    src={johannesPersoenlich}
+                    alt="Johannes Christ"
                     className="object-cover"
-                    aspectRatio="aspect-[4/3]"
+                    aspectRatio="aspect-[3/4]"
                   />
                 </motion.div>
 
@@ -376,29 +385,20 @@ const UeberMich = () => {
                     variants={fadeUp}
                     className="hidden md:block text-[#c5a065] font-medium tracking-[0.2em] uppercase text-sm"
                   >
-                    {t.ueberMich.training?.label}
+                    {t.ueberMich.persoenlich.label}
                   </motion.span>
                   <motion.h2
                     variants={fadeUp}
-                    className="hidden md:block typ-h2 text-white"
+                    className="hidden md:block font-heading text-4xl md:text-5xl leading-tight text-white"
                   >
-                    {t.ueberMich.training?.title}
+                    {t.ueberMich.persoenlich.title}
                   </motion.h2>
                   <motion.div
                     variants={fadeUp}
-                    className="typ-body space-y-3 md:space-y-4 text-white/90"
+                    className="text-base md:text-lg leading-relaxed space-y-3 md:space-y-4 text-white/90"
                   >
-                    <p>{t.ueberMich.training?.description1}</p>
-                    <p>{t.ueberMich.training?.description2}</p>
-                    {t.ueberMich.training?.description3 && <p>{t.ueberMich.training.description3}</p>}
-                  </motion.div>
-
-                  <motion.div variants={fadeUp} className="pt-4">
-                    <Link to={getLocalizedPath('/angebot')}>
-                      <Button variant="gold" className="font-semibold">
-                        Personal Training <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </Link>
+                    <p>{t.ueberMich.persoenlich.description1}</p>
+                    <p>{t.ueberMich.persoenlich.description2}</p>
                   </motion.div>
                 </motion.div>
               </div>
@@ -420,13 +420,13 @@ const UeberMich = () => {
           <div className="container mx-auto px-4 text-center relative z-10">
             <motion.h2
               variants={fadeUp}
-              className="typ-h2 mb-8 text-white"
+              className="font-heading text-4xl md:text-5xl mb-8 text-white"
             >
               {t.ueberMich.cta.title}
             </motion.h2>
             <motion.p
               variants={fadeUp}
-              className="typ-body text-white/85 mb-10 max-w-2xl mx-auto"
+              className="text-base md:text-lg leading-relaxed text-white/85 mb-10 max-w-2xl mx-auto"
             >
               {t.ueberMich.cta.description}
             </motion.p>
@@ -442,7 +442,7 @@ const UeberMich = () => {
       </main>
 
       <Footer />
-    </div>
+    </div >
   );
 };
 

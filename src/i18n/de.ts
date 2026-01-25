@@ -29,15 +29,15 @@ export const de: Translations = {
     items: [
       {
         title: 'Burnout & Sinnverlust',
-        description: 'Wenn die Erschöpfung tiefer sitzt als Müdigkeit. Das System funktioniert noch, aber der Sinn ist verloren gegangen.',
+        description: 'Wenn Frust und Stagnation überhandnehmen. Das Gefühl, nicht weiterzukommen. Durch Bewusstsein und Prozess finden wir den Sinn zurück.',
       },
       {
-        title: 'Umbruchphasen',
-        description: 'Wenn das Neue noch Angst macht und das Alte nicht mehr passt. Der alte Kompass funktioniert nicht mehr, aber der neue Weg liegt noch im Nebel.',
+        title: 'Umbruchphasen & Klarheit',
+        description: 'Wenn das Neue noch Angst macht und das Alte nicht mehr passt. Wir erarbeiten konkrete Schritte, um vom Stillstand ins Tun zu kommen.',
       },
       {
-        title: 'Paare & Kommunikation',
-        description: 'Wenn Gespräche im Kreis laufen und echte Begegnung fehlt. Weg von festgefahrenen Mustern hin zu echter Begegnung.',
+        title: 'Performance & Motivation',
+        description: 'Wenn der innere Schweinehund gewinnt und die Leistung stagniert. Weg vom ewigen Zerdenken, rein in die Bewegung – Arsch hoch und machen!',
       },
     ],
   },
@@ -53,10 +53,6 @@ export const de: Translations = {
       {
         title: 'Coaching',
         description: 'Fokussierte Entwicklung mit Diagnostik & Strategie',
-      },
-      {
-        title: 'Personal Training',
-        description: 'Körperliche Stärke als Fundament für Veränderung',
       },
       {
         title: 'Personal Training',

@@ -29,15 +29,15 @@ export const fr: Translations = {
     items: [
       {
         title: 'Burnout & Perte de sens',
-        description: 'Quand l\'épuisement est plus profond que la fatigue. Le système fonctionne encore, mais le sens s\'est perdu.',
+        description: 'Quand la frustration et la stagnation prennent le dessus. Ce sentiment de ne pas avancer. Par la prise de conscience et le processus, nous retrouvons le sens.',
       },
       {
-        title: 'Phases de transition',
-        description: 'Quand le nouveau fait encore peur et que l\'ancien ne convient plus. L\'ancienne boussole ne fonctionne plus, mais le nouveau chemin reste dans le brouillard.',
+        title: 'Transition & Clarté',
+        description: 'Quand le nouveau fait encore peur et que l\'ancien ne convient plus. Nous élaborons des étapes concrètes pour passer de l\'immobilisme à l\'action.',
       },
       {
-        title: 'Couples & Communication',
-        description: 'Quand les conversations tournent en rond et que la vraie connexion manque. S\'éloigner des schémas figés vers une rencontre authentique.',
+        title: 'Performance & Motivation',
+        description: 'Quand ta résistance intérieure gagne et que la performance stagne. Arrête de trop réfléchir, mets-toi en mouvement – bouge-toi et agis !',
       },
     ],
   },
