@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import coachingImg from "@/assets/johannes-coaching-new.jpg";
 
 export const AboutSection = () => {
   return (
@@ -11,7 +12,7 @@ export const AboutSection = () => {
             <div className="order-2 md:order-1">
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="/src/assets/johannes-coaching-new.jpg"
+                  src={coachingImg}
                   alt="Johannes Christ im Gespräch"
                   className="w-full h-full object-cover"
                 />
