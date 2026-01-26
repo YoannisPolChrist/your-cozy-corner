@@ -4,24 +4,24 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
 import { LanguageProvider } from "@/i18n";
 
-// Lazy load pages for better performance (code splitting)
-const Index = lazy(() => import("./pages/Index"));
-const Gestalttherapie = lazy(() => import("./pages/Gestalttherapie"));
-const MyWork = lazy(() => import("./pages/MyWork"));
-const Angebot = lazy(() => import("./pages/Angebot"));
-const UeberMich = lazy(() => import("./pages/UeberMich"));
-const Kontakt = lazy(() => import("./pages/Kontakt"));
-const PersonalTraining = lazy(() => import("./pages/PersonalTraining"));
-const Impressum = lazy(() => import("./pages/Impressum"));
-const Datenschutz = lazy(() => import("./pages/Datenschutz"));
-const NotFound = lazy(() => import("./pages/NotFound"));
+// Eager load pages to prevent white screen / loading issues on navigation
+import Index from "./pages/Index";
+import Gestalttherapie from "./pages/Gestalttherapie";
+import MyWork from "./pages/MyWork";
+import Angebot from "./pages/Angebot";
+import UeberMich from "./pages/UeberMich";
+import Kontakt from "./pages/Kontakt";
+import PersonalTraining from "./pages/PersonalTraining";
+import Impressum from "./pages/Impressum";
+import Datenschutz from "./pages/Datenschutz";
+import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-// Simple loading fallback
+// Simple loading fallback (still useful for initial hydration if needed, or non-critical lazy parts)
 const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center bg-background">
     <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
