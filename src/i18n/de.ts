@@ -329,19 +329,23 @@ export const de: Translations = {
       items: [
         {
           question: 'Wie läuft eine Session konkret ab?',
-          answer: 'Wir arbeiten im Hier und Jetzt. Es ist ein dynamischer Prozess aus Gespräch und Erleben, ganz ohne starres Abfragen.',
+          answer: 'Wir arbeiten im Hier und Jetzt. Ob im Gespräch oder in Bewegung – es ist ein dynamischer Prozess, der genau das nutzt, was du gerade brauchst.',
         },
         {
           question: 'Warum dieser Mix?',
-          answer: 'Die Psychologie (M.Sc.) gibt uns das Fundament und die Daten (Diagnostik), die Gestalttherapie gibt uns die emotionale Tiefe für echte Veränderung.',
+          answer: 'Weil wir oft im Kopf verstehen, aber das Gefühl oder der Körper nicht mitkommt. Die Psychologie bietet den Rahmen, die Gestalttherapie löst emotionale Blockaden und das körperliche Training verankert die neue Haltung physisch. So wird Veränderung ganzheitlich und nachhaltig.',
         },
         {
           question: 'Bezahlt die Krankenkasse die Sessions?',
-          answer: 'Als M.Sc. Psychologie und Gestalttherapeut arbeite ich in privater Praxis. Das bedeutet in der Regel, dass die Kosten von den gesetzlichen Krankenkassen nicht übernommen werden. Private Zusatzversicherungen oder private Kassen erstatten je nach Tarif einen Teil. Der Vorteil für dich: Wir können sofort ohne bürokratische Hürden starten und die Dauer sowie Frequenz der Sitzungen flexibel an deinen Prozess anpassen.',
+          answer: 'Als M.Sc. Psychologie, Gestalttherapeut und Trainer arbeite ich in privater Praxis. Das bedeutet in der Regel, dass die Kosten von den gesetzlichen Krankenkassen nicht übernommen werden. Private Zusatzversicherungen oder private Kassen erstatten je nach Tarif einen Teil. Der Vorteil für dich: Wir können sofort ohne bürokratische Hürden starten und die Dauer sowie Frequenz der Sitzungen flexibel an deinen Prozess anpassen.',
         },
         {
-          question: 'Was genau bringen mir die „Daten" und Vitalwerte in der Therapie?',
-          answer: 'Daten (wie Schlafqualität, Stresslevel oder HRV) sind für mich kein Selbstzweck, sondern eine objektive „Landkarte". Sie helfen uns zu sehen, wie dein Körper auf Belastungen reagiert, auch wenn der Kopf es vielleicht noch ignoriert. Es ist die perfekte Ergänzung zur emotionalen Arbeit: Wir sehen schwarz auf weiß, wo das System unter Spannung steht, und nutzen die Gestalttherapie, um diese Spannung im Inneren zu lösen.',
+          question: 'Muss ich für das Training sportlich sein?',
+          answer: 'Nein, überhaupt nicht. Wir starten genau da, wo du stehst – ob Anfänger oder Athlet. Der Fokus liegt nicht auf Höchstleistung, sondern auf einem guten Körpergefühl und gesunder Bewegung.',
+        },
+        {
+          question: 'Kann ich auch nur Beratung oder nur Training buchen?',
+          answer: 'Ja, absolut. Viele Klienten kommen mit einem spezifischen Anliegen. Wir schauen gemeinsam, was du brauchst – oft fließen die Bereiche natürlich ineinander über, aber der Schwerpunkt liegt dort, wo er dir am meisten hilft.',
         },
         {
           question: 'In welchen Sprachen können wir arbeiten?',

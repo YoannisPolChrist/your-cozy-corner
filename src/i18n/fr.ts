@@ -329,19 +329,23 @@ export const fr: Translations = {
       items: [
         {
           question: 'Comment se déroule concrètement une séance ?',
-          answer: 'Nous travaillons dans l\'ici et maintenant. C\'est un processus dynamique de conversation et d\'expérience, sans questionnement rigide.',
+          answer: "Nous travaillions dans l'ici et maintenant. Que ce soit en conversation ou en mouvement, c'est un processus dynamique qui utilise exactement ce dont vous avez besoin sur le moment.",
         },
         {
-          question: 'Pourquoi ce mélange d\'approches ?',
-          answer: 'La psychologie (M.Sc.) nous donne le fondement et les données (diagnostic), la Gestalt-thérapie nous donne la profondeur émotionnelle pour un vrai changement.',
+          question: 'Pourquoi ce mélange ?',
+          answer: "Parce que nous comprenons souvent avec la tête, mais les sentiments ou le corps ne suivent pas. La psychologie offre le cadre, la Gestalt-thérapie dissout les blocages émotionnels et l'entraînement physique ancre la nouvelle attitude physiquement. Ainsi, le changement devient holistique et durable.",
         },
         {
-          question: 'L\'assurance maladie couvre-t-elle les séances ?',
-          answer: 'En tant que M.Sc. Psychologie et Gestalt-thérapeute, je travaille en pratique privée. Cela signifie généralement que les coûts ne sont pas couverts par l\'assurance maladie obligatoire. Les assurances complémentaires privées ou les assureurs privés remboursent une partie des coûts selon le contrat. L\'avantage pour toi : nous pouvons commencer immédiatement sans obstacles bureaucratiques et adapter la durée et la fréquence des séances de manière flexible à ton processus.',
+          question: 'L\'assurance maladie paie-t-elle les séances ?',
+          answer: "En tant que M.Sc. Psychologie, Gestalt-thérapeute et entraîneur, je travaille en cabinet privé. Cela signifie généralement que les coûts ne sont pas pris en charge par l'assurance maladie légale. Les assurances complémentaires privées ou les caisses privées remboursent une partie selon le tarif. L'avantage pour vous : nous pouvons commencer immédiatement sans obstacles bureaucratiques et adapter la durée et la fréquence des séances à votre processus.",
         },
         {
-          question: 'Qu\'apportent exactement les « données » et les signes vitaux à la thérapie ?',
-          answer: 'Les données (comme la qualité du sommeil, le niveau de stress ou la VFC) ne sont pas une fin en soi pour moi, mais une « carte » objective. Elles nous aident à voir comment ton corps réagit au stress, même si ton esprit l\'ignore peut-être encore. C\'est le complément parfait au travail émotionnel : nous voyons noir sur blanc où le système est sous tension, et utilisons la Gestalt-thérapie pour libérer cette tension intérieurement.',
+          question: "Dois-je être sportif pour l'entraînement ?",
+          answer: "Non, pas du tout. Nous commençons exactement là où vous en êtes – que vous soyez débutant ou athlète. L'accent n'est pas mis sur la performance maximale, mais sur une bonne sensation corporelle et un mouvement sain.",
+        },
+        {
+          question: 'Puis-je réserver uniquement du conseil ou uniquement de l\'entraînement ?',
+          answer: 'Oui, absolument. De nombreux clients viennent avec une demande spécifique. Nous regardons ensemble ce dont vous avez besoin – souvent les domaines s\'imbriquent naturellement, mais l\'accent est mis là où cela vous aide le plus.',
         },
         {
           question: 'Dans quelles langues pouvons-nous travailler ?',

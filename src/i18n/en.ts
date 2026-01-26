@@ -329,20 +329,24 @@ export const en: Translations = {
       title: 'Frequently Asked Questions',
       items: [
         {
-          question: 'What does a session actually look like?',
-          answer: 'We work in the here and now. It\'s a dynamic process of conversation and experience, without rigid questioning.',
+          question: 'What does a session specifically work?',
+          answer: 'We work in the here and now. Whether in conversation or in movement – it is a dynamic process using exactly what you need in the moment.',
         },
         {
-          question: 'Why this mix of approaches?',
-          answer: 'Psychology (M.Sc.) gives us the foundation and the data (diagnostics), Gestalt therapy gives us the emotional depth for real change.',
+          question: 'Why this mix?',
+          answer: 'Because we often understand in our heads, but our feelings or bodies don\'t follow. Psychology provides the framework, Gestalt therapy dissolves emotional blockages, and physical training anchors the new attitude physically. This makes change holistic and sustainable.',
         },
         {
-          question: 'Does health insurance cover the sessions?',
-          answer: 'As M.Sc. Psychology and Gestalt therapist, I work in private practice. This typically means that statutory health insurance does not cover the costs. Private supplementary insurance or private insurers reimburse part of the costs depending on the plan. The advantage for you: We can start immediately without bureaucratic hurdles and flexibly adapt the duration and frequency of sessions to your process.',
+          question: 'Does health insurance pay for the sessions?',
+          answer: 'As an M.Sc. Psychology, Gestalt therapist, and trainer, I work in private practice. This generally means costs are not covered by statutory health insurance. Private supplementary insurance or private funds may reimburse part depending on the tariff. The advantage for you: We can start immediately without bureaucratic hurdles and flexibly adapt duration and frequency of sessions to your process.',
         },
         {
-          question: 'What exactly do the "data" and vital signs bring to therapy?',
-          answer: 'Data (such as sleep quality, stress levels or HRV) are not an end in themselves for me, but an objective "map". They help us see how your body reacts to stress, even if your mind might still be ignoring it. It\'s the perfect complement to emotional work: We see in black and white where the system is under tension, and use Gestalt therapy to release that tension internally.',
+          question: 'Do I need to be athletic/fit for the training?',
+          answer: 'No, not at all. We start exactly where you are – whether beginner or athlete. The focus is not on peak performance, but on a good body feeling and healthy movement.',
+        },
+        {
+          question: 'Can I book only counseling or only training?',
+          answer: 'Yes, absolutely. Many clients come with a specific request. We look together at what you need – often the areas naturally flow into each other, but the focus lies where it helps you most.',
         },
         {
           question: 'In which languages can we work?',
