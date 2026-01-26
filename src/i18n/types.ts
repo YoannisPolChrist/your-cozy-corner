@@ -129,6 +129,14 @@ export interface Translations {
     link: string;
   };
 
+  // Landing Page About Section
+  landingAbout: {
+    title: string;
+    description: string;
+    cardText: string;
+    button: string;
+  };
+
   // Focus Areas / Schwerpunkte Section
   focusAreas: {
     title: string;

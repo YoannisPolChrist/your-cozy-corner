@@ -133,6 +133,13 @@ export const en: Translations = {
     },
   },
 
+  landingAbout: {
+    title: 'About Me',
+    description: 'I am Johannes Christ, Gestalt therapist, coach and M.Sc. Psychology. My work is based on the conviction that real change happens when we understand the connection between our thoughts, feelings and our body.',
+    cardText: 'With my experience in Gestalt therapy and coaching, I accompany you on your path to more clarity, well-being and fulfillment.',
+    button: 'Learn more about me',
+  },
+
   aboutPreview: {
     label: 'Your companion',
     title: 'About Me',

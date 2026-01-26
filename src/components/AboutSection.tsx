@@ -1,9 +1,13 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import coachingImg from "@/assets/johannes-coaching-new.jpg";
+import coachingImg from "@/assets/johannes-coaching-new.webp";
+import { useLanguage } from "@/i18n";
+import { Link } from "react-router-dom";
 
 export const AboutSection = () => {
+  const { t, getLocalizedPath } = useLanguage();
+
   return (
     <section id="uebermich" className="py-20 bg-off-white">
       <div className="container mx-auto px-4">
@@ -13,7 +17,7 @@ export const AboutSection = () => {
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src={coachingImg}
-                  alt="Johannes Christ im Gespräch"
+                  alt={t.landingAbout.title}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -21,25 +25,24 @@ export const AboutSection = () => {
 
             <div className="order-1 md:order-2">
               <h2 className="typ-h2 mb-6 text-primary">
-                Über mich
+                {t.landingAbout.title}
               </h2>
 
               <p className="typ-lead text-muted-foreground italic mb-8">
-                Ich bin Johannes Christ, Gestalttherapeut, Coach und M.Sc. Psychologie.
-                Meine Arbeit basiert auf der Überzeugung, dass echte Veränderung entsteht,
-                wenn wir die Verbindung zwischen unseren Gedanken, Gefühlen und unserem Körper verstehen.
+                {t.landingAbout.description}
               </p>
 
               <Card className="p-6 bg-background mb-8">
                 <p className="typ-body text-foreground">
-                  Mit meiner Erfahrung in Gestalttherapie und Coaching begleite ich Sie auf dem Weg zu
-                  mehr Klarheit, Wohlbefinden und Erfüllung.
+                  {t.landingAbout.cardText}
                 </p>
               </Card>
 
-              <Button variant="gold" className="font-semibold">
-                Mehr über mich erfahren <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link to={getLocalizedPath('/ueber-mich')}>
+                <Button variant="gold" className="font-semibold">
+                  {t.landingAbout.button} <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
