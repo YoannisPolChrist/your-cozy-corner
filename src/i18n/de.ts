@@ -20,7 +20,7 @@ export const de: Translations = {
 
   meet: {
     title: 'Veränderung passiert –',
-    description: 'Optimalerweise in einem Rahmen, der hält und Sicherheit bietet. Dass dieser Rahmen meistens nicht vorhanden ist, ist natürlich selbstverständlich. Als Gestalttherapeut, Coach und Personal Trainer biete ich dir durch Präsenz, Kompetenz und Witz, den Raum den es braucht, damit die Veränderung geschehen kann, die du dir wünschst!\n\nHi - Ich bin Johannes.',
+    description: 'Optimalerweise in einem Rahmen, der hält und Sicherheit bietet.\n\nDass dieser Rahmen meistens nicht vorhanden ist, ist natürlich selbstverständlich. Als Gestalttherapeut, Coach und Personal Trainer biete ich dir durch Präsenz, Kompetenz und Witz, den Raum den es braucht, damit die Veränderung geschehen kann, die du dir wünschst!\n\nHi - Ich bin Johannes.',
   },
 
   painPoints: {
@@ -266,19 +266,19 @@ export const de: Translations = {
     },
     services: [
       {
-        title: 'Gestalttherapie',
-        subline: 'DAS HERZ MEINER ARBEIT',
-        description: 'Wir lösen alte Muster dort auf, wo sie entstanden sind: im Kontakt und im Körper. Statt jahrelangem \'Darüber-Reden\' nutzen wir das Hier und Jetzt, um emotionale Blockaden spürbar und veränderbar zu machen.',
+        title: 'Integrative Gestalttherapie',
+        subline: 'WENN VERSTEHEN NICHT REICHT',
+        description: 'Gestalttherapie ist ein humanistischer Ansatz, der Körper, Geist und Seele verbindet. Wir arbeiten im Hier und Jetzt, um unbewusste Muster spürbar zu machen und aufzulösen. Das ermöglicht echte Transformation und inneren Frieden.',
       },
       {
-        title: 'Coaching',
-        subline: 'INKL. DIAGNOSTIK',
-        description: 'Strategie trifft Intuition. Wir kombinieren kognitive Planung mit der Weisheit deines Körpers. Fundierte Standortbestimmung, Blut- und Bewegungsanalysen – für Entscheidungen, die im Bauch richtig anfühlen.',
+        title: 'Holomotion Coaching',
+        subline: 'KLARHEIT DURCH KÖRPERINTELLIGENZ',
+        description: 'Während die Therapie in die Tiefe geht, sorgt das Coaching für strategische Klarheit und konkrete Schritte. Wir verbinden deinen Verstand mit deiner Körperintelligenz, um stimmige Entscheidungen zu treffen und nachhaltige Routinen zu schaffen. So kommst du vom Nachdenken ins Tun.',
       },
       {
-        title: 'Körperkomposition',
-        subline: 'WOHLFÜHLEN IM EIGENEN KÖRPER',
-        description: 'Ein starker Körper darf auch so aussehen. Wir arbeiten an deiner Körperzusammensetzung (Muskelaufbau & Fettreduktion) – Für ein gesundes, kraftvolles Körpergefühl, das du jeden Tag spürst.',
+        title: 'Personal Training',
+        subline: 'BEWEGUNG STATT WORTE',
+        description: 'Veränderung braucht oft keine weitere Analyse, sondern Schweiß und Handlung. Wir arbeiten evidenzbasiert mit funktioneller Diagnostik und individuellem Training. So wird dein Körper zum Fundament deiner inneren Stärke – spürbar in jedem Moment.',
       },
     ],
     checkup: {
@@ -299,7 +299,7 @@ export const de: Translations = {
         price: '50€',
         priceLabel: '50 Minuten',
         title: 'Einzelsitzung',
-        description: 'Für Veränderung, sei es durch Gestalttherapie, Coaching oder Personal Training – ganz nach deinem Bedarf.',
+        description: 'Manchmal reichen schon ein paar Stunden.\nSei es Gestalttherapie, Coaching oder Personal Training – ganz nach deinem Bedarf.',
         cta: 'Termin buchen',
       },
       intensiv: {

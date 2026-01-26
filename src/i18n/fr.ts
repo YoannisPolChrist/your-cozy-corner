@@ -268,17 +268,17 @@ export const fr: Translations = {
       {
         title: 'Gestalt-thérapie',
         subline: 'LE CŒUR DE MON TRAVAIL',
-        description: 'Nous résolvons les anciens schémas là où ils sont nés : dans le contact et dans le corps. Au lieu d\'années à \'en parler\', nous utilisons l\'ici et maintenant pour rendre les blocages émotionnels tangibles et transformables.',
+        description: "La Gestalt-thérapie est une approche humaniste qui relie le corps, l'esprit et l'âme. Nous travaillons dans l'ici et maintenant pour rendre les schémas inconscients tangibles et les résoudre. Cela permet une véritable transformation et la paix intérieure.",
       },
       {
         title: 'Coaching',
         subline: 'INCL. DIAGNOSTIC',
-        description: 'La stratégie rencontre l\'intuition. Nous combinons la planification cognitive avec la sagesse de votre corps. Bilan initial, analyses sanguines et de mouvement – pour des décisions qui se sentent justes.',
+        description: "Alors que la thérapie va en profondeur, le coaching apporte une clarté stratégique et des étapes concrètes. Nous relions votre intellect à l'intelligence de votre corps pour prendre des décisions cohérentes et créer des routines durables. Vous passez ainsi de la réflexion à l'action.",
       },
       {
-        title: 'Coaching Sportif',
-        subline: 'CORPS EN MOUVEMENT',
-        description: 'Et si tout ça te paraît trop mental ? On met ton corps en mouvement – le reste suivra. Performance, thérapie par le mouvement et motivation à Toulouse.',
+        title: 'Personal Training',
+        subline: 'LE MOUVEMENT PLUTÔT QUE LES MOTS',
+        description: "Le changement ne nécessite souvent pas d'analyse supplémentaire, mais de la sueur et de l'action. Nous travaillons sur une base scientifique avec des diagnostics fonctionnels et un entraînement individuel. Ainsi, votre corps devient le fondement de votre force intérieure – ressenti à chaque instant.",
       },
     ],
     checkup: {
@@ -299,7 +299,7 @@ export const fr: Translations = {
         price: '50€',
         priceLabel: '50 Minutes',
         title: 'Séance individuelle',
-        description: 'Pour le changement, que ce soit par la Gestalt-thérapie, le coaching ou le Personal Training – selon vos besoins.',
+        description: "Parfois, quelques heures suffisent. Que ce soit pour la Gestalt-thérapie, le coaching ou l'entraînement personnel – selon vos besoins.",
         cta: 'Prendre rendez-vous',
       },
       intensiv: {

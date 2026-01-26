@@ -138,7 +138,7 @@ const Angebot = () => {
                       {t.angebot.konditionen.einzelbegleitung.label}
                     </p>
                     {/* Description */}
-                    <p className="text-muted-foreground leading-relaxed text-center mb-8 flex-grow">
+                    <p className="text-muted-foreground leading-relaxed text-center mb-8 flex-grow whitespace-pre-line">
                       {t.angebot.konditionen.einzelbegleitung.description}
                     </p>
                     <a href="https://calendly.com/johanneschrist/neues-meeting" target="_blank" rel="noopener noreferrer" className="block mt-auto">

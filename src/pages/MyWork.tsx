@@ -434,7 +434,7 @@ const MyWork = () => {
           <div className="container mx-auto px-4 relative z-10">
             <AnimatedSection className="max-w-5xl mx-auto">
               <motion.div
-                className="p-6 sm:p-10 md:p-16 rounded-3xl bg-white shadow-2xl border border-accent/15 relative overflow-hidden"
+                className="p-6 sm:p-8 md:p-10 rounded-3xl bg-white shadow-2xl border border-accent/15 relative overflow-hidden"
                 initial={{ opacity: 0, y: 40, scale: 0.98 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}

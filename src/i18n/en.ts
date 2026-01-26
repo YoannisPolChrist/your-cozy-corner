@@ -268,18 +268,18 @@ export const en: Translations = {
       {
         title: 'Gestalt Therapy',
         subline: 'THE HEART OF MY WORK',
-        description: 'We resolve old patterns where they originated: in contact and in the body. Instead of years of \'talking about it\', we use the here and now to make emotional blockages tangible and changeable.',
+        description: 'Gestalt therapy is a humanistic approach that connects body, mind, and soul. We work in the here and now to make unconscious patterns tangible and resolve them. This enables true transformation and inner peace.',
       },
       {
         title: 'Coaching',
         subline: 'INCL. DIAGNOSTICS',
-        description: 'Strategy meets intuition. We combine cognitive planning with the wisdom of your body. Thorough baseline assessment, blood and movement analyses – for decisions that feel right in your gut.',
+        description: 'While therapy goes deep, coaching provides strategic clarity and concrete steps. We connect your intellect with your body intelligence to make coherent decisions and create sustainable routines. This takes you from thinking to doing.',
       },
 
       {
         title: 'Personal Training',
-        subline: 'BODY IN MOTION',
-        description: 'And if all this feels too heady? We get your body moving – the rest follows. Performance, movement therapy, and motivation in Toulouse.',
+        subline: 'MOVEMENT INSTEAD OF WORDS',
+        description: 'Change often requires no further analysis, but sweat and action. We work evidence-based with functional diagnostics and individual training. Thus, your body becomes the foundation of your inner strength – palpable in every moment.',
       },
     ],
     checkup: {
@@ -300,7 +300,7 @@ export const en: Translations = {
         price: '€50',
         priceLabel: '50 Minutes',
         title: 'Individual Session',
-        description: 'For change, be it through Gestalt therapy, coaching, or personal training – entirely according to your needs.',
+        description: 'Sometimes a few hours are enough. Whether it\'s Gestalt therapy, coaching, or personal training – entirely according to your needs.',
         cta: 'Book appointment',
       },
       intensiv: {
