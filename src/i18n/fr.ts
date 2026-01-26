@@ -329,7 +329,7 @@ export const fr: Translations = {
       items: [
         {
           question: 'Comment se déroule concrètement une séance ?',
-          answer: "Nous travaillions dans l'ici et maintenant. Que ce soit en conversation ou en mouvement, c'est un processus dynamique qui utilise exactement ce dont vous avez besoin sur le moment.",
+          answer: "Cela dépend fortement du domaine choisi (thérapie, coaching ou entraînement). En principe, nous définissons un objectif clair au début et travaillons ensuite de manière ciblée dans l'un des trois domaines.",
         },
         {
           question: 'Pourquoi ce mélange ?',

@@ -329,7 +329,7 @@ export const de: Translations = {
       items: [
         {
           question: 'Wie läuft eine Session konkret ab?',
-          answer: 'Wir arbeiten im Hier und Jetzt. Ob im Gespräch oder in Bewegung – es ist ein dynamischer Prozess, der genau das nutzt, was du gerade brauchst.',
+          answer: 'Das hängt stark vom gewählten Bereich ab (Therapie, Coaching oder Training). Grundsätzlich spezifizieren wir zu Beginn ein klares Ziel und arbeiten dann entsprechend fokussiert in einem der drei Bereiche.',
         },
         {
           question: 'Warum dieser Mix?',

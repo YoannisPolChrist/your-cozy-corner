@@ -330,7 +330,7 @@ export const en: Translations = {
       items: [
         {
           question: 'What does a session specifically work?',
-          answer: 'We work in the here and now. Whether in conversation or in movement – it is a dynamic process using exactly what you need in the moment.',
+          answer: 'This depends heavily on the chosen area (Therapy, Coaching, or Training). Basically, we specify a clear goal at the beginning and then work focused in one of the three areas accordingly.',
         },
         {
           question: 'Why this mix?',
