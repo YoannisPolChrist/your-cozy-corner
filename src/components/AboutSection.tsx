@@ -9,7 +9,13 @@ export const AboutSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
-              <div className="aspect-[3/4] bg-gradient-to-br from-primary/20 to-gold-accent/20 rounded-2xl"></div>
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src="/src/assets/johannes-coaching-new.jpg"
+                  alt="Johannes Christ im Gespräch"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
 
             <div className="order-1 md:order-2">
