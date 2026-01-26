@@ -36,6 +36,57 @@
   <link rel="preload" href="/src/assets/gestalt-video.mp4" as="video" type="video/mp4" />
   <link rel="preload" href="/src/assets/gestalt-video-2.mp4" as="video" type="video/mp4" />
   <link rel="preload" href="/src/assets/gestalt-video-3.mp4" as="video" type="video/mp4" />
+
+  <!-- Structured Data (JSON-LD) for Local Business & Person -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://johanneschrist-website.web.app/#johannes",
+          "name": "Johannes Christ",
+          "jobTitle": "Gestalttherapeut & Coach",
+          "image": "https://johanneschrist-website.web.app/assets/johannes-portrait.webp",
+          "url": "https://johanneschrist-website.web.app",
+          "sameAs": [
+            "https://www.linkedin.com/in/johannes-christ-b5417326b/"
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "Johannes Christ - Gestalttherapie & Coaching",
+          "image": "https://johanneschrist-website.web.app/assets/logo.webp",
+          "@id": "https://johanneschrist-website.web.app",
+          "url": "https://johanneschrist-website.web.app",
+          "telephone": "", 
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Toulouse",
+            "addressCountry": "FR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 43.6047,
+            "longitude": 1.4442
+          },
+          "priceRange": "€€",
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        }
+      ]
+    }
+  </script>
 </head>
 
 <body>

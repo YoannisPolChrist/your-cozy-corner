@@ -1,4 +1,5 @@
 import { Toaster } from "@/components/ui/toaster";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -31,8 +32,8 @@ const PageLoader = () => (
 const AppRoutes = () => (
   <Suspense fallback={<PageLoader />}>
     <Routes>
-      {/* Redirect root to language-prefixed route */}
-      <Route path="/" element={<Navigate to="/en" replace />} />
+      {/* Root is handled by LanguageProvider redirect, but we provide a fallback */}
+      <Route path="/" element={<PageLoader />} />
 
       {/* German routes */}
       <Route path="/de" element={<Index />} />
@@ -91,7 +92,9 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <LanguageProvider>
-          <AppRoutes />
+          <ErrorBoundary>
+            <AppRoutes />
+          </ErrorBoundary>
         </LanguageProvider>
       </BrowserRouter>
     </TooltipProvider>
