@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 import johannesHeroPortrait from "@/assets/johannes-hero-portrait.webp";
-import johannesCoachingTalk from "@/assets/johannes-coaching-v4.jpg";
+import johannesCoachingTalk from "@/assets/johannes-coaching-new.jpg";
 import johannesPersoenlich from "@/assets/johannes-persoenlich-neu.webp";
 import johannesSpeed from "@/assets/johannes-speed.webp";
 import johannesCyclingFriends from "@/assets/johannes-cycling-friends.webp";
