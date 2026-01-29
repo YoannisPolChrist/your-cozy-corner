@@ -3,48 +3,33 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-import heroVideo from "@/assets/hero-video.mp4";
-import { useLanguage } from "@/i18n";
+import heroBackground from "@/assets/hero-background.webp";
+
+// ... existing imports
 
 export const Hero = () => {
-  const { t, getLocalizedPath } = useLanguage();
-  const [isRevealed, setIsRevealed] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], [0, 150]);
-  const opacity = useTransform(scrollY, [0, 400], [1, 0]);
-  const scale = useTransform(scrollY, [0, 500], [1, 1.1]);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsRevealed(true);
-    }, 500);
-    return () => clearTimeout(timer);
-  }, []);
+  // ... existing code
 
   return (
     <section ref={containerRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Reveal Cover Animation */}
-      <motion.div
-        initial={{ opacity: 1 }}
-        animate={{ opacity: isRevealed ? 0 : 1 }}
-        transition={{ duration: 1.2, ease: "easeInOut" }}
-        className="absolute inset-0 z-50 bg-primary pointer-events-none"
-      />
+      {/* ... existing code */}
 
       {/* Video Background with Parallax */}
       <motion.div style={{ y, scale }} className="absolute inset-0 w-full h-full">
-        <video autoPlay muted loop playsInline preload="metadata" className="absolute inset-0 w-full h-full object-cover">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={heroBackground}
+          className="absolute inset-0 w-full h-full object-cover"
+        >
           <source src={heroVideo} type="video/mp4" />
         </video>
       </motion.div>
+
+      {/* ... existing code */}
 
       {/* Gradient Overlay - Darker for readability */}
       <div
