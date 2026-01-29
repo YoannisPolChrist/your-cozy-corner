@@ -20,7 +20,7 @@ export const en: Translations = {
 
   meet: {
     title: 'Change happens –',
-    description: 'Ideally within a framework that holds and provides safety. That this framework is often missing is, of course, understandable. As a Gestalt therapist, coach and Personal Trainer, I offer you – through presence, competence and a touch of humor – the space needed for the change you desire to happen!\n\nHi - I\'m Johannes.',
+    description: 'Ideally within a framework that holds and provides safety.\n\nThat this framework is often missing is, of course, understandable. As a Gestalt therapist, coach and Personal Trainer, I offer you – through presence, competence and a touch of humor – the space needed for the change you desire to happen!\n\nHi - I\'m Johannes.',
   },
 
   painPoints: {

@@ -20,7 +20,7 @@ export const fr: Translations = {
 
   meet: {
     title: 'Le changement arrive –',
-    description: 'Idéalement dans un cadre qui soutient et offre de la sécurité. Que ce cadre soit souvent absent est bien sûr compréhensible. En tant que Gestalt-thérapeute, coach et Personal Trainer, je t\'offre – par ma présence, ma compétence et une touche d\'humour – l\'espace nécessaire pour que le changement que tu souhaites puisse se produire !\n\nSalut - Je suis Johannes.',
+    description: 'Idéalement dans un cadre qui soutient et offre de la sécurité.\n\nQue ce cadre soit souvent absent est bien sûr compréhensible. En tant que Gestalt-thérapeute, coach et Personal Trainer, je t\'offre – par ma présence, ma compétence et une touche d\'humour – l\'espace nécessaire pour que le changement que tu souhaites puisse se produire !\n\nSalut - Je suis Johannes.',
   },
 
   painPoints: {
