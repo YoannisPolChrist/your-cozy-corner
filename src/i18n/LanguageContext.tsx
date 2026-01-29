@@ -39,9 +39,23 @@ Object.entries(routeMap).forEach(([baseRoute, langRoutes]) => {
 });
 
 function detectBrowserLanguage(): Language {
-  const browserLang = navigator.language.toLowerCase();
-  if (browserLang.startsWith('de')) return 'de';
-  if (browserLang.startsWith('fr')) return 'fr';
+  // Check navigator.languages for priority list support
+  if (typeof navigator !== 'undefined' && navigator.languages && navigator.languages.length > 0) {
+    for (const lang of navigator.languages) {
+      const lower = lang.toLowerCase();
+      if (lower.startsWith('de')) return 'de';
+      if (lower.startsWith('fr')) return 'fr';
+      if (lower.startsWith('en')) return 'en';
+    }
+  }
+
+  // Fallback to single navigator.language
+  if (typeof navigator !== 'undefined' && navigator.language) {
+    const browserLang = navigator.language.toLowerCase();
+    if (browserLang.startsWith('de')) return 'de';
+    if (browserLang.startsWith('fr')) return 'fr';
+  }
+
   return 'en'; // Default to English for all other languages
 }
 
@@ -142,6 +156,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       localStorage.setItem(STORAGE_KEY, urlLang);
     }
   }, [location.pathname, language, navigate]);
+
+  // Sync html lang attribute
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
 
   return (
     <LanguageContext.Provider value={{ language, t, setLanguage, getLocalizedPath }}>
