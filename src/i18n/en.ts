@@ -14,7 +14,7 @@ export const en: Translations = {
   hero: {
     title: 'Change happens in the',
     titleHighlight: 'Here and Now',
-    subtitle: 'Guidance on your path to greater clarity, fulfillment and inner peace – through humanistic Gestalt therapy, counseling and coaching.',
+    subtitle: 'Guidance on your path to greater clarity, fulfillment and inner peace – through humanistic Gestalt therapy, coaching and Personal Training.',
     cta: 'Book a discovery call',
   },
 
@@ -63,7 +63,7 @@ export const en: Translations = {
   },
 
   gestaltSection: {
-    label: 'The therapeutic approach',
+    label: 'The therapeutic background',
     title: 'My Mission',
     titleHighlight: '',
     description: 'Change requires more than understanding. Real growth happens where feeling and thought interweave. My work is about touching points that pure talking cannot reach – so that change doesn\'t just appear logical, but also feels right. Because only what makes sense truly moves us.',
@@ -95,12 +95,12 @@ export const en: Translations = {
           description: 'Based on Gestalt therapy and scientific practices, we conduct a fundamental assessment. This includes blood, movement, or nutritional analyses as needed.',
         },
         gestalt: {
-          title: 'Integrative Gestalt Therapy',
+          title: 'Gestalt Therapy',
           subline: 'WHEN UNDERSTANDING ISN\'T ENOUGH',
           description: 'We resolve old patterns where they originated: in contact and in the body. Instead of years of \'talking about it\', we use the here and now to make emotional blockages tangible and changeable.',
         },
         coaching: {
-          title: 'Holomotion Coaching',
+          title: 'Coaching',
           subline: 'CLARITY THROUGH BODY INTELLIGENCE',
           description: 'Strategy meets intuition. We combine cognitive planning with the wisdom of your body. For decisions that not only sound logical but also feel right in your gut.',
         },
@@ -363,7 +363,7 @@ export const en: Translations = {
 
   ueberMich: {
     hero: {
-      label: 'JOHANNES CHRIST — GESTALT THERAPIST, MOVEMENT THERAPY & PREVENTION (B.A.), PERSONAL TRAINER',
+      label: 'JOHANNES CHRIST — GESTALT THERAPIST, COACHING, PERSONAL TRAINER',
       title: 'Lived, not just learned.',
       description1: 'My journey began a few years ago through my own existential crisis. That\'s when I first encountered Gestalt therapy, which has never let go of me since. Through inner and outer work, I fought my way out of depression with the help of others and now stand stronger than ever.\n\nIn Leipzig and later in Innsbruck, alongside Gestalt therapy and many other trainings, I completed a degree in Movement Therapy and Prevention (B.A.).',
       description2: 'In my work today, I unite knowledge from current science with that of Gestalt. A Master\'s in Psychology (M.Sc.) supports this even more, so you can benefit from my full power and knowledge for yourself and your journey.',

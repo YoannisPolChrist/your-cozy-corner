@@ -14,7 +14,7 @@ export const fr: Translations = {
   hero: {
     title: 'Le changement se produit',
     titleHighlight: 'Ici et Maintenant',
-    subtitle: 'Accompagnement sur ton chemin vers plus de clarté, d\'épanouissement et de paix intérieure – à travers la Gestalt-thérapie humaniste, le conseil et le coaching.',
+    subtitle: 'Accompagnement sur ton chemin vers plus de clarté, d\'épanouissement et de paix intérieure – à travers la Gestalt-thérapie humaniste, le coaching et le Personal Training.',
     cta: 'Prendre rendez-vous',
   },
 
@@ -63,7 +63,7 @@ export const fr: Translations = {
   },
 
   gestaltSection: {
-    label: 'L\'approche thérapeutique',
+    label: 'Le fondement thérapeutique',
     title: 'Ma Mission',
     titleHighlight: '',
     description: 'Le changement demande plus que la compréhension. La vraie croissance naît là où le ressenti et l\'intellect se tissent ensemble. Mon travail consiste à toucher des points que la simple parole ne peut atteindre – pour que le changement ne paraisse pas seulement logique, mais se sente aussi juste. Car seul ce qui fait sens nous met vraiment en mouvement.',
@@ -95,12 +95,12 @@ export const fr: Translations = {
           description: 'Basé sur la Gestalt-thérapie et des pratiques scientifiques, nous effectuons une évaluation fondamentale. Cela inclut des analyses sanguines, de mouvement ou nutritionnelles selon les besoins.',
         },
         gestalt: {
-          title: 'Gestalt-thérapie Intégrative',
+          title: 'Gestalt-thérapie',
           subline: 'QUAND COMPRENDRE NE SUFFIT PAS',
           description: 'Nous résolvons les anciens schémas là où ils sont nés : dans le contact et dans le corps. Au lieu d\'années à \'en parler\', nous utilisons l\'ici et maintenant pour rendre les blocages émotionnels tangibles et transformables.',
         },
         coaching: {
-          title: 'Coaching Holomotion',
+          title: 'Coaching',
           subline: 'CLARTÉ PAR L\'INTELLIGENCE CORPORELLE',
           description: 'La stratégie rencontre l\'intuition. Nous combinons la planification cognitive avec la sagesse de votre corps. Pour des décisions qui sonnent non seulement logiques mais se sentent aussi justes au plus profond de vous.',
         },
@@ -362,7 +362,7 @@ export const fr: Translations = {
 
   ueberMich: {
     hero: {
-      label: 'JOHANNES CHRIST — GESTALT-THÉRAPEUTE, THÉRAPIE PAR LE MOUVEMENT & PRÉVENTION (B.A.), PERSONAL TRAINER',
+      label: 'JOHANNES CHRIST — GESTALT-THÉRAPEUTE, COACHING, PERSONAL TRAINER',
       title: 'Vécu, pas seulement appris.',
       description1: 'Mon parcours a commencé il y a quelques années par ma propre crise existentielle. C\'est alors que j\'ai rencontré pour la première fois la Gestalt-thérapie, qui ne m\'a plus quitté depuis. Par le travail intérieur et extérieur, je me suis battu pour sortir de la dépression avec l\'aide des autres et je me tiens aujourd\'hui plus fort que jamais.\n\nÀ Leipzig puis à Innsbruck, en plus de la Gestalt-thérapie et de nombreuses autres formations, j\'ai obtenu un diplôme en Thérapie par le Mouvement et Prévention (B.A.).',
       description2: 'Dans mon travail aujourd\'hui, je réunis les connaissances de la science actuelle avec celles de la Gestalt. Un Master en Psychologie (M.Sc.) soutient cela encore davantage, pour que tu puisses bénéficier de toute ma puissance et mes connaissances pour toi et ton chemin.',

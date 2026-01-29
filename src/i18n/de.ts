@@ -14,7 +14,7 @@ export const de: Translations = {
   hero: {
     title: 'Veränderung geschieht im',
     titleHighlight: 'Hier und Jetzt',
-    subtitle: 'Begleitung auf deinem Weg zu mehr Klarheit, Erfüllung und innerem Frieden – durch humanistische Gestalttherapie, Beratung und Coaching.',
+    subtitle: 'Begleitung auf deinem Weg zu mehr Klarheit, Erfüllung und innerem Frieden – durch humanistische Gestalttherapie, Coaching, Personal Training.',
     cta: 'Kennenlerngespräch vereinbaren',
   },
 
@@ -63,7 +63,7 @@ export const de: Translations = {
   },
 
   gestaltSection: {
-    label: 'Der therapeutische Ansatz',
+    label: 'Der therapeutische Hintergrund',
     title: 'Meine Mission',
     titleHighlight: '',
     description: 'Veränderung braucht mehr als Verstehen. Echtes Wachstum entsteht dort, wo Gefühl und Verstand sich verweben. In meiner Arbeit geht es darum, Punkte zu berühren, die reines Sprechen nicht erreicht – damit Veränderung nicht nur logisch erscheint, sondern sich auch richtig anfühlt. Denn nur was Sinn ergibt, bewegt uns wirklich.',
@@ -95,12 +95,12 @@ export const de: Translations = {
           description: 'Auf Basis der Gestalttherapie, sowie wissenschaftlicher Praktiken, führen wir eine fundierte Standortbestimmung durch. Dazu gehören je nach Bedarf Blut-, Bewegungs- oder Nährstoffanalysen.',
         },
         gestalt: {
-          title: 'Integrative Gestalttherapie',
+          title: 'Gestalttherapie',
           subline: 'WENN VERSTEHEN NICHT REICHT',
           description: 'Wir lösen alte Muster dort auf, wo sie entstanden sind: im Kontakt und im Körper. Statt jahrelangem \'Darüber-Reden\' nutzen wir das Hier und Jetzt, um emotionale Blockaden spürbar und veränderbar zu machen.',
         },
         coaching: {
-          title: 'Holomotion Coaching',
+          title: 'Coaching',
           subline: 'KLARHEIT DURCH KÖRPERINTELLIGENZ',
           description: 'Strategie trifft Intuition. Wir kombinieren kognitive Planung mit der Weisheit deines Körpers. Für Entscheidungen, die sich nicht nur logisch anhören, sondern auch im Bauch richtig anfühlen.',
         },
@@ -266,12 +266,12 @@ export const de: Translations = {
     },
     services: [
       {
-        title: 'Integrative Gestalttherapie',
+        title: 'Gestalttherapie',
         subline: 'WENN VERSTEHEN NICHT REICHT',
         description: 'Gestalttherapie ist ein humanistischer Ansatz, der Körper, Geist und Seele verbindet. Wir arbeiten im Hier und Jetzt, um unbewusste Muster spürbar zu machen und aufzulösen. Das ermöglicht echte Transformation und inneren Frieden.',
       },
       {
-        title: 'Holomotion Coaching',
+        title: 'Coaching',
         subline: 'KLARHEIT DURCH KÖRPERINTELLIGENZ',
         description: 'Während die Therapie in die Tiefe geht, sorgt das Coaching für strategische Klarheit und konkrete Schritte. Wir verbinden deinen Verstand mit deiner Körperintelligenz, um stimmige Entscheidungen zu treffen und nachhaltige Routinen zu schaffen. So kommst du vom Nachdenken ins Tun.',
       },
@@ -362,7 +362,7 @@ export const de: Translations = {
 
   ueberMich: {
     hero: {
-      label: 'JOHANNES CHRIST — GESTALTTHERAPEUT, BEWEGUNGSTHERAPIE UND PRÄVENTION (B.A.), PERSONAL TRAINER',
+      label: 'JOHANNES CHRIST — GESTALTTHERAPEUT, COACHING, PERSONAL TRAINER',
       title: 'Gelebt, nicht nur gelernt.',
       description1: 'Mein Weg begann vor einigen Jahren durch eine eigene existenzielle Krise. Damals kam ich zum erstenmal mit der Gestalttherapie in Kontakt, welche mich seither nicht mehr loslässt. Durch innere und äußere Arbeit, habe ich mich mit Hilfe Anderer aus der Drepression gekämpft und stehe so kraftvoll da wie noch nie.\n\nIn Leipzig und später in Innsbruck, habe ich neben der Gestalttherapie und vielen anderen Fortbildungen, ein Studium in der Bewegungstherapie und Prävention (B.A.) abgeschlossen.',
       description2: 'In meiner Arbeit heute vereine ich das Wissen aus der aktuellen Wissenschaft mit der der Gestalt. Ein Master in Psychologie (M.Sc.) unterstützt dies einmal mehr, sodass du meine geballte Power und Wissen für dich und deinen Weg nutzen kannst.',
