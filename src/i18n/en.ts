@@ -11,6 +11,14 @@ export const en: Translations = {
     subtitle2: 'Personal Trainer',
   },
 
+  seo: {
+    index: {
+      title: 'Gestalt Therapist in Toulouse & Coaching',
+      description: 'Holistic support in Toulouse: Gestalt Therapy, Coaching & Personal Training with Johannes Christ. Sessions in English, German, and French.',
+      keywords: 'Gestalt Therapist Toulouse, Psychologist Toulouse, Coaching Toulouse, Personal Trainer Toulouse, Therapy Toulouse, German, French',
+    },
+  },
+
   hero: {
     title: 'Change happens in the',
     titleHighlight: 'Here and Now',
@@ -552,7 +560,7 @@ export const en: Translations = {
         name: 'Johannes Christ',
         address: 'Toulouse, France',
         contact: 'Contact',
-        email: 'Email: [Email Address]',
+        email: 'Email: contact@johanneschrist.com',
         phone: 'Phone: [Phone Number]',
         businessId: 'SIRET: [Your SIRET number]',
       },

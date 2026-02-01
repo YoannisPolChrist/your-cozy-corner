@@ -4,16 +4,34 @@ import { ArrowRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import heroBackground from "@/assets/hero-background.webp";
-
-// ... existing imports
+import logo from "@/assets/logo.webp";
+import heroVideo from "@/assets/hero-video.mp4";
+import { useLanguage } from "@/i18n";
 
 export const Hero = () => {
-  // ... existing code
+  const { t, getLocalizedPath } = useLanguage();
+  const containerRef = useRef<HTMLElement>(null);
+  const [isRevealed, setIsRevealed] = useState(false);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
+  useEffect(() => {
+    // Reveal text immediately after a short delay for animation
+    const timer = setTimeout(() => {
+      setIsRevealed(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <section ref={containerRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* ... existing code */}
-
       {/* Video Background with Parallax */}
       <motion.div style={{ y, scale }} className="absolute inset-0 w-full h-full">
         <video
@@ -29,8 +47,6 @@ export const Hero = () => {
         </video>
       </motion.div>
 
-      {/* ... existing code */}
-
       {/* Gradient Overlay - Darker for readability */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -40,22 +56,37 @@ export const Hero = () => {
       />
 
       {/* Content */}
-      <motion.div style={{ opacity }} className="relative z-10 container mx-auto px-4 py-24 mb-20">
+      <motion.div style={{ opacity }} className="relative z-10 container mx-auto px-4 py-20 mb-10 -mt-20 md:-mt-24">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Approach Badges */}
+          {/* Approach Badges - Optional/Placeholder */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isRevealed ? 1 : 0, y: isRevealed ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-wrap justify-center gap-3 mb-10"
+            className="flex flex-wrap justify-center gap-3 mb-6"
           >
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: isRevealed ? 1 : 0, scale: isRevealed ? 1 : 0.9 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex justify-center mb-3"
+          >
+            <img
+              src={logo}
+              alt="Johannes Christ Logo"
+              className="w-20 md:w-24 lg:w-32 h-auto object-contain drop-shadow-2xl"
+              width={160}
+              height={160}
+            />
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isRevealed ? 1 : 0, y: isRevealed ? 0 : 30 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="font-heading text-4xl md:text-5xl lg:text-6xl mb-6 text-white leading-tight drop-shadow-lg"
+            className="font-heading text-3xl md:text-4xl lg:text-5xl mb-6 text-white leading-tight drop-shadow-lg"
             style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}
           >
             <span className="block mb-4 md:mb-6">{t.hero.title}</span>
@@ -66,7 +97,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isRevealed ? 1 : 0, y: isRevealed ? 0 : 30 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-lg md:text-xl mb-12 text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-md"
+            className="text-lg md:text-xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-md"
             style={{ textShadow: '0 1px 10px rgba(0,0,0,0.4)' }}
           >
             {t.hero.subtitle}
@@ -77,7 +108,7 @@ export const Hero = () => {
             animate={{ opacity: isRevealed ? 1 : 0, y: isRevealed ? 0 : 30 }}
             transition={{ duration: 0.8, delay: 1.0 }}
           >
-            <Link to={getLocalizedPath('/kontakt')} onClick={scrollToTop}>
+            <Link to={getLocalizedPath('/kontakt')} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <Button
                 size="default"
                 className="text-white font-medium px-6 py-3 text-base shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"

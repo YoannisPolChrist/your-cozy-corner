@@ -61,7 +61,7 @@ const Kontakt = () => {
           whileInView="visible"
           viewport={viewportSettings}
           variants={staggerContainer}
-          className="py-20 bg-off-white"
+          className="pt-20 pb-8 bg-off-white"
         >
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
@@ -87,7 +87,7 @@ const Kontakt = () => {
           whileInView="visible"
           viewport={viewportSettings}
           variants={staggerContainer}
-          className="py-20 bg-background"
+          className="pt-8 pb-20 bg-background"
         >
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
@@ -187,7 +187,7 @@ const Kontakt = () => {
                           <Mail className="w-6 h-6 flex-shrink-0 mt-1" />
                           <div>
                             <p className="font-semibold mb-1">E-Mail</p>
-                            <p className="break-all">ps.johanneschrist@gmail.com</p>
+                            <p className="break-all">contact@johanneschrist.com</p>
                           </div>
                         </div>
 

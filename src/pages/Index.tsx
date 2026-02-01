@@ -11,6 +11,8 @@ import johannesMeet from "@/assets/johannes-meet.webp";
 import { goldFrameVariants, imageVariants, viewportSettings } from "@/lib/animations";
 import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/i18n";
+import { SEO } from "@/components/SEO";
+
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
@@ -41,13 +43,94 @@ const AboutParallaxImage = () => {
     </div>
   </motion.div>;
 };
+
 const Index = () => {
   const {
     t,
-    getLocalizedPath
+    getLocalizedPath,
+    language
   } = useLanguage();
   const serviceIcons = [Heart, Brain, Dumbbell];
+
+  // Dynamic Schema Generation
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://johanneschrist-website.web.app/#johannes",
+        "name": "Johannes Christ",
+        "jobTitle": language === 'fr' ? "Gestalt-thérapeute & Coach" : "Gestalttherapeut & Coach",
+        "image": "https://johanneschrist-website.web.app/assets/johannes-portrait.webp",
+        "url": "https://johanneschrist-website.web.app",
+        "sameAs": [
+          "https://www.linkedin.com/in/johannes-christ-57b59a203/"
+        ]
+      },
+      {
+        "@type": language === 'fr' ? "MedicalBusiness" : "LocalBusiness", // Stronger signal for therapy in FR
+        "name": "Johannes Christ - Gestalttherapie & Coaching",
+        "image": "https://johanneschrist-website.web.app/assets/logo.webp",
+        "@id": "https://johanneschrist-website.web.app",
+        "url": "https://johanneschrist-website.web.app",
+        "telephone": "",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Toulouse",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 43.6047,
+          "longitude": 1.4442
+        },
+        "priceRange": "€€",
+        "medicalSpecialty": language === 'fr' ? ["Psychotherapy", "PhysicalTherapy"] : undefined,
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": language === 'fr' ? "Thérapie Gestalt" : "Gestalttherapie"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Coaching"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": language === 'fr' ? "Thérapie en ligne" : "Online Therapy"
+            }
+          }
+        ]
+      }
+    ]
+  };
   return <div className="min-h-screen bg-background overflow-x-clip">
+    <SEO
+      title={t.seo?.index.title}
+      description={t.seo?.index.description}
+      keywords={t.seo?.index.keywords}
+      schema={schema}
+    />
     <Navigation />
     <main className="overflow-x-clip">
       <Hero />

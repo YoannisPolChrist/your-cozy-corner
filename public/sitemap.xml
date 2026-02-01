@@ -131,4 +131,56 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Gestalt Therapy -->
+  <url>
+    <loc>https://johanneschrist-website.web.app/de/gestalttherapie</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://johanneschrist-website.web.app/de/gestalttherapie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://johanneschrist-website.web.app/en/gestalt-therapy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://johanneschrist-website.web.app/fr/gestalt-therapie" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://johanneschrist-website.web.app/en/gestalt-therapy</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://johanneschrist-website.web.app/de/gestalttherapie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://johanneschrist-website.web.app/en/gestalt-therapy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://johanneschrist-website.web.app/fr/gestalt-therapie" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://johanneschrist-website.web.app/fr/gestalt-therapie</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://johanneschrist-website.web.app/de/gestalttherapie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://johanneschrist-website.web.app/en/gestalt-therapy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://johanneschrist-website.web.app/fr/gestalt-therapie" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Personal Training -->
+  <url>
+    <loc>https://johanneschrist-website.web.app/de/personal-training</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://johanneschrist-website.web.app/de/personal-training" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://johanneschrist-website.web.app/en/personal-training" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://johanneschrist-website.web.app/fr/coaching-sportif" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://johanneschrist-website.web.app/en/personal-training</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://johanneschrist-website.web.app/de/personal-training" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://johanneschrist-website.web.app/en/personal-training" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://johanneschrist-website.web.app/fr/coaching-sportif" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://johanneschrist-website.web.app/fr/coaching-sportif</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://johanneschrist-website.web.app/de/personal-training" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://johanneschrist-website.web.app/en/personal-training" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://johanneschrist-website.web.app/fr/coaching-sportif" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>

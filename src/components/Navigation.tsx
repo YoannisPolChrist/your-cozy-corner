@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.webp";
 import { useLanguage } from "@/i18n";
@@ -8,8 +8,30 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const { t, getLocalizedPath } = useLanguage();
   const location = useLocation();
+
+  // Handle scroll visibility
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if we are on specific pages where nav should always be visible
+      const isAlwaysVisiblePage = ['ansatz', 'approach', 'approche', 'kontakt', 'contact'].some(path => location.pathname.includes(path));
+
+      if (isAlwaysVisiblePage) {
+        setIsVisible(true);
+      } else {
+        const scrollPosition = window.scrollY;
+        setIsVisible(scrollPosition > 50);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    // Check initial state
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [location.pathname]);
 
   // Check if current path matches the nav link
   const isActive = (to: string) => {
@@ -38,7 +60,7 @@ export const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+    <nav className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border transition-transform duration-500 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link to={getLocalizedPath('/')} className="flex items-center gap-2 md:gap-3" onClick={scrollToTop}>
           <img src={logo} alt="Johannes Christ Therapie Logo" className="w-10 h-10 md:w-14 md:h-14 object-contain" width={56} height={56} decoding="async" />

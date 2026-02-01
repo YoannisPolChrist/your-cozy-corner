@@ -106,7 +106,7 @@ export const ContactSection = () => {
                     <Mail className="w-6 h-6 flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold mb-1">EMAIL</p>
-                      <p className="break-all">ps.johanenschirst@gmail.com</p>
+                      <p className="break-all">contact@johanneschrist.com</p>
                     </div>
                   </div>
                 </div>
@@ -114,8 +114,8 @@ export const ContactSection = () => {
 
               <Card className="p-5 sm:p-6 bg-gray-light border-none">
                 <p className="typ-body text-muted-foreground">
-                  Ich biete Online-Sitzungen und persönliche Termine an. 
-                  Vereinbaren Sie ein kostenloses 20-minütiges Kennenlerngespräch, 
+                  Ich biete Online-Sitzungen und persönliche Termine an.
+                  Vereinbaren Sie ein kostenloses 20-minütiges Kennenlerngespräch,
                   um herauszufinden, wie ich Sie unterstützen kann.
                 </p>
               </Card>

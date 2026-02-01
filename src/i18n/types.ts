@@ -12,6 +12,14 @@ export interface Translations {
     subtitle2: string;
   };
 
+  seo?: {
+    index: {
+      title: string;
+      description: string;
+      keywords: string;
+    };
+  };
+
   // Hero
   hero: {
     title: string;

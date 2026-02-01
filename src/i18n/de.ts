@@ -11,6 +11,14 @@ export const de: Translations = {
     subtitle2: 'Personal Trainer',
   },
 
+  seo: {
+    index: {
+      title: 'Gestalttherapie, Coaching & Training',
+      description: 'Ganzheitliche Begleitung in Toulouse: Gestalttherapie, Coaching und Personal Training. M.Sc. Psychologe & Sportwissenschaftler Johannes Christ. Termine in Präsenz & Online.',
+      keywords: 'Gestalttherapie, Coaching, Personal Training, Toulouse, Psychologe, Therapie, Beratung, Online Coaching, Deutsch, Englisch, Französisch',
+    },
+  },
+
   hero: {
     title: 'Veränderung geschieht im',
     titleHighlight: 'Hier und Jetzt',
@@ -551,7 +559,7 @@ export const de: Translations = {
         name: 'Johannes Christ',
         address: 'Toulouse, Frankreich',
         contact: 'Kontakt',
-        email: 'Email: [Email-Adresse]',
+        email: 'E-Mail: contact@johanneschrist.com',
         phone: 'Telefon: [Telefonnummer]',
         businessId: 'SIRET: [Ihre SIRET-Nummer]',
       },

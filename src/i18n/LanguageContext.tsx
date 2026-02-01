@@ -19,7 +19,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 const STORAGE_KEY = 'preferred-language';
 
 // Map route names between languages
-const routeMap: Record<string, Record<Language, string>> = {
+export const routeMap: Record<string, Record<Language, string>> = {
   gestalttherapie: { de: 'gestalttherapie', en: 'gestalt-therapy', fr: 'gestalt-therapie' },
   ansatz: { de: 'ansatz', en: 'approach', fr: 'approche' },
   angebot: { de: 'angebot', en: 'services', fr: 'services' },
@@ -31,7 +31,7 @@ const routeMap: Record<string, Record<Language, string>> = {
 };
 
 // Reverse map for finding the base route
-const reverseRouteMap: Record<string, string> = {};
+export const reverseRouteMap: Record<string, string> = {};
 Object.entries(routeMap).forEach(([baseRoute, langRoutes]) => {
   Object.values(langRoutes).forEach(localizedRoute => {
     reverseRouteMap[localizedRoute] = baseRoute;
