@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-import heroBackground from "@/assets/hero-background.webp";
+import heroBackground from "@/assets/hero-poster.webp";
 import logo from "@/assets/logo.webp";
 import heroVideo from "@/assets/hero-video.mp4";
 import { useLanguage } from "@/i18n";
