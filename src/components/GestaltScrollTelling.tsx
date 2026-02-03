@@ -25,7 +25,7 @@ export const GestaltScrollTelling = () => {
           duration: 0.8
         }} style={{
           boxShadow: '0 10px 40px rgba(30, 95, 116, 0.1)'
-        }} src="/lovable-uploads/a1f9adf6-b700-4003-a692-6327154bf5bc.webp" />
+        }} src="/assets/images/a1f9adf6-b700-4003-a692-6327154bf5bc.webp" />
 
         {/* Gold connector line from image to cards - hidden on mobile */}
         <div className="hidden md:flex justify-center mb-8">
