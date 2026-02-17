@@ -8,13 +8,17 @@ import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import gestaltKontaktzyklus from "@/assets/gestalt-kontaktzyklus.webp";
 import ressourcenUnterstuetzung from "@/assets/ressourcen-unterstuetzung.webp";
+import gestaltKontaktzyklusEn from "@/assets/gestalt-kontaktzyklus-en.jpg";
+import gestaltKontaktzyklusFr from "@/assets/gestalt-kontaktzyklus-fr.jpg";
+import ressourcenUnterstuetzungEn from "@/assets/ressourcen-unterstuetzung-en.jpg";
+import ressourcenUnterstuetzungFr from "@/assets/ressourcen-unterstuetzung-fr.jpg";
 import { viewportSettings } from "@/lib/animations";
 import { Footer } from "@/components/Footer";
 import { GestaltScrollTelling } from "@/components/GestaltScrollTelling";
 import { useLanguage } from "@/i18n";
 
 const MyWork = () => {
-  const { t, getLocalizedPath } = useLanguage();
+  const { t, getLocalizedPath, language } = useLanguage();
   const location = useLocation();
 
   // Handle smooth scroll to section on page load
@@ -40,6 +44,18 @@ const MyWork = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  };
+
+  const contactCycleImages: Record<string, string> = {
+    de: gestaltKontaktzyklus,
+    en: gestaltKontaktzyklusEn,
+    fr: gestaltKontaktzyklusFr,
+  };
+
+  const resourcesImages: Record<string, string> = {
+    de: ressourcenUnterstuetzung,
+    en: ressourcenUnterstuetzungEn,
+    fr: ressourcenUnterstuetzungFr,
   };
 
   return (
@@ -196,7 +212,7 @@ const MyWork = () => {
             <div className="container mx-auto px-4">
               <AnimatedSection className="max-w-5xl mx-auto">
                 <motion.img
-                  src={gestaltKontaktzyklus}
+                  src={contactCycleImages[language]}
                   alt={t.gestalttherapie.kontaktzyklus.title}
                   className="w-full rounded-xl mb-6 md:mb-12"
                   initial={{ opacity: 0, y: 20 }}
@@ -268,7 +284,7 @@ const MyWork = () => {
             <div className="container mx-auto px-4">
               <AnimatedSection className="max-w-5xl mx-auto">
                 <motion.img
-                  src={ressourcenUnterstuetzung}
+                  src={resourcesImages[language]}
                   alt={t.gestalttherapie.ressourcen.title}
                   className="w-full rounded-xl mb-6 md:mb-8"
                   initial={{ opacity: 0, y: 20 }}

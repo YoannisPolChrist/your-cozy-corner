@@ -15,10 +15,10 @@ export const Navigation = () => {
   // Handle scroll visibility
   useEffect(() => {
     const handleScroll = () => {
-      // Check if we are on specific pages where nav should always be visible
-      const isAlwaysVisiblePage = ['ansatz', 'approach', 'approche', 'kontakt', 'contact'].some(path => location.pathname.includes(path));
+      // Hide nav on home/start page until user scrolls, show immediately on all other pages
+      const isHomePage = ['/', '/de', '/en', '/fr'].includes(location.pathname);
 
-      if (isAlwaysVisiblePage) {
+      if (!isHomePage) {
         setIsVisible(true);
       } else {
         const scrollPosition = window.scrollY;
