@@ -10,8 +10,10 @@ import gestaltKontaktzyklus from "@/assets/gestalt-kontaktzyklus.webp";
 import ressourcenUnterstuetzung from "@/assets/ressourcen-unterstuetzung.webp";
 import gestaltKontaktzyklusEn from "@/assets/gestalt-kontaktzyklus-en.jpg";
 import gestaltKontaktzyklusFr from "@/assets/gestalt-kontaktzyklus-fr.jpg";
+import gestaltKontaktzyklusDe from "@/assets/gestalt-kontaktzyklus-de.jpg";
 import ressourcenUnterstuetzungEn from "@/assets/ressourcen-unterstuetzung-en.jpg";
 import ressourcenUnterstuetzungFr from "@/assets/ressourcen-unterstuetzung-fr.jpg";
+import ressourcenUnterstuetzungDe from "@/assets/ressourcen-unterstuetzung-de.jpg";
 import { viewportSettings } from "@/lib/animations";
 import { Footer } from "@/components/Footer";
 import { GestaltScrollTelling } from "@/components/GestaltScrollTelling";
@@ -47,13 +49,13 @@ const MyWork = () => {
   };
 
   const contactCycleImages: Record<string, string> = {
-    de: gestaltKontaktzyklus,
+    de: gestaltKontaktzyklusDe,
     en: gestaltKontaktzyklusEn,
     fr: gestaltKontaktzyklusFr,
   };
 
   const resourcesImages: Record<string, string> = {
-    de: ressourcenUnterstuetzung,
+    de: ressourcenUnterstuetzungDe,
     en: ressourcenUnterstuetzungEn,
     fr: ressourcenUnterstuetzungFr,
   };
@@ -403,7 +405,7 @@ const MyWork = () => {
                       return (
                         <AnimatedItem key={index}>
                           <motion.div
-                            className="p-5 md:p-6 rounded-2xl bg-primary shadow-xl border border-accent/30 h-full flex flex-col relative overflow-hidden group"
+                            className="p-5 md:p-6 rounded-2xl bg-primary shadow-xl border border-accent/30 h-full flex flex-col relative overflow-hidden group text-left"
                             whileHover={{ y: -4, boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.35)' }}
                             transition={{ duration: 0.3 }}
                           >

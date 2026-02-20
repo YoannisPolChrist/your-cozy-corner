@@ -332,6 +332,17 @@ export const en: Translations = {
         title: 'In-Person',
         description: 'In Toulouse.',
       },
+      map: {
+        title: 'Locations in Toulouse',
+        therapie: {
+          title: 'Gestalt Therapy & Coaching',
+          description: 'Sessions take place here in a safe and confidential setting.',
+        },
+        training: {
+          title: 'Personal Training',
+          description: 'Outdoors, at the studio, or at your place – depending on your goals.',
+        }
+      }
     },
     faq: {
       title: 'Frequently Asked Questions',

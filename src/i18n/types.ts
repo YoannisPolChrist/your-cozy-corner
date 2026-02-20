@@ -292,6 +292,17 @@ export interface Translations {
         title: string;
         description: string;
       };
+      map: {
+        title: string;
+        therapie: {
+          title: string;
+          description: string;
+        };
+        training: {
+          title: string;
+          description: string;
+        };
+      };
     };
     faq: {
       title: string;

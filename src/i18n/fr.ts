@@ -331,6 +331,17 @@ export const fr: Translations = {
         title: 'En présentiel',
         description: 'À Toulouse.',
       },
+      map: {
+        title: 'Lieux à Toulouse',
+        therapie: {
+          title: 'Gestalt-thérapie & Coaching',
+          description: 'Les séances ont lieu ici dans un cadre sûr et confidentiel.',
+        },
+        training: {
+          title: 'Personal Training',
+          description: 'En extérieur, en salle ou chez toi – selon tes objectifs.',
+        }
+      }
     },
     faq: {
       title: 'Questions Fréquentes',

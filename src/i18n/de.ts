@@ -331,6 +331,17 @@ export const de: Translations = {
         title: 'Präsenz',
         description: 'In Toulouse.',
       },
+      map: {
+        title: 'Standorte in Toulouse',
+        therapie: {
+          title: 'Gestalttherapie & Coaching',
+          description: 'Hier finden die Sitzungen in einem sicheren und geschlossenen Rahmen statt.',
+        },
+        training: {
+          title: 'Personal Training',
+          description: 'Outdoor, im Studio oder bei dir zu Hause – je nach Ziel und Absprache.',
+        }
+      }
     },
     faq: {
       title: 'Häufige Fragen',

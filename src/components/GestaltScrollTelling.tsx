@@ -1,11 +1,21 @@
 import { motion } from "framer-motion";
 import { AnimatedSection, AnimatedItem, StaggerContainer } from "@/components/AnimatedSection";
-import gestalttherapieIntro from "@/assets/gestalttherapie-intro.webp";
+import gestalttherapieEn from "@/assets/gestalttherapie-en.jpg";
+import gestalttherapieFr from "@/assets/gestalttherapie-fr.jpg";
+import gestalttherapieDe from "@/assets/gestalttherapie-de.jpg";
 import { useLanguage } from "@/i18n";
+
 export const GestaltScrollTelling = () => {
   const {
-    t
+    t, language
   } = useLanguage();
+
+  const gestaltImages: Record<string, string> = {
+    de: gestalttherapieDe,
+    en: gestalttherapieEn,
+    fr: gestalttherapieFr,
+  };
+
   // React expects the lowercase attribute (`fetchpriority`), but framer-motion's TS types don't include it.
   const imgFetchPriorityProps = {
     fetchpriority: "high",
@@ -25,7 +35,7 @@ export const GestaltScrollTelling = () => {
           duration: 0.8
         }} style={{
           boxShadow: '0 10px 40px rgba(30, 95, 116, 0.1)'
-        }} src="/assets/images/a1f9adf6-b700-4003-a692-6327154bf5bc.webp" />
+        }} src={gestaltImages[language]} />
 
         {/* Gold connector line from image to cards - hidden on mobile */}
         <div className="hidden md:flex justify-center mb-8">

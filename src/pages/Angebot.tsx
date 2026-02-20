@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Heart, Brain, Compass, Activity, BarChart3, Map, Video, MapPin, ArrowRight, Dumbbell } from "lucide-react";
+import { Heart, Brain, Compass, Activity, BarChart3, Map, Video, ArrowRight, Dumbbell } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Footer } from "@/components/Footer";
@@ -197,50 +197,111 @@ const Angebot = () => {
         </section>
 
         {/* Section 4: Flexible Formats */}
-        <section className="py-32 bg-primary">
+        <section className="py-16 sm:py-24 md:py-32 bg-primary">
           <div className="container mx-auto px-4">
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={viewportSettings}
               variants={staggerContainer}
-              className="max-w-4xl mx-auto"
+              className="max-w-5xl xl:max-w-6xl mx-auto"
             >
               <motion.h2
                 variants={fadeUp}
-                className="font-heading text-[2.25rem] md:text-[3.1875rem] text-white text-center mb-16"
+                className="font-heading text-[1.75rem] sm:text-[2.25rem] md:text-[3.1875rem] text-white text-center mb-8 sm:mb-12 md:mb-16"
               >
                 {t.angebot.formate.title}
               </motion.h2>
 
-              <motion.div variants={cardStagger} className="grid md:grid-cols-2 gap-8 md:gap-16">
-                <motion.div variants={cardItem} className="flex items-start gap-6">
-                  <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                    <Video className="w-7 h-7 text-accent stroke-[1.5]" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading text-xl text-white mb-2">
-                      {t.angebot.formate.online.title}
-                    </h3>
-                    <p className="text-white/80 leading-relaxed">
-                      {t.angebot.formate.online.description}
+              <motion.div variants={fadeUp} className="text-center mb-6 sm:mb-10 md:mb-12 mt-2 sm:mt-4">
+                <h3 className="font-heading text-xl sm:text-2xl md:text-3xl text-white mb-2 sm:mb-3">
+                  {t.angebot.formate.map.title}
+                </h3>
+              </motion.div>
+
+              <motion.div variants={staggerContainer} className="grid md:grid-cols-2 gap-5 sm:gap-8 md:gap-12 lg:gap-16">
+                {/* Karte Gestalttherapie (Links) */}
+                <motion.div variants={fadeUp} className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl border border-accent/10 flex flex-col h-full transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                  <div className="text-center mb-4 sm:mb-6">
+                    <h4 className="font-heading text-lg sm:text-xl md:text-2xl text-primary mb-1.5 sm:mb-2 flex items-center justify-center gap-2 sm:gap-3">
+                      <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" />
+                      {t.angebot.formate.map.therapie.title}
+                    </h4>
+                    <p className="text-muted-foreground text-xs sm:text-sm mb-3 sm:mb-4">
+                      {t.angebot.formate.map.therapie.description}
                     </p>
+                    <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 text-accent font-medium text-xs sm:text-sm rounded-lg mb-4 sm:mb-6 break-words">
+                      IZICure, 47 Allées Jean Jaurès, 31000 Toulouse
+                    </div>
+                  </div>
+                  <div className="flex-grow w-full h-[250px] sm:h-[350px] md:h-[400px] rounded-xl sm:rounded-2xl overflow-hidden shadow-inner border border-accent/20 relative bg-muted/20">
+                    <iframe
+                      src="https://maps.google.com/maps?q=IZICure,+47+All.+Jean+Jaur%C3%A8s,+31000+Toulouse&t=m&z=17&output=embed&iwloc=Near"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen={true}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="IZICure Location"
+                    ></iframe>
                   </div>
                 </motion.div>
 
-                <motion.div variants={cardItem} className="flex items-start gap-6">
-                  <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-7 h-7 text-accent stroke-[1.5]" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading text-xl text-white mb-2">
-                      {t.angebot.formate.praesenz.title}
-                    </h3>
-                    <p className="text-white/80 leading-relaxed">
-                      {t.angebot.formate.praesenz.description}
+                {/* Karte Personal Training (Rechts) */}
+                <motion.div variants={fadeUp} className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl border border-accent/10 flex flex-col h-full transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                  <div className="text-center mb-4 sm:mb-6">
+                    <h4 className="font-heading text-lg sm:text-xl md:text-2xl text-primary mb-1.5 sm:mb-2 flex items-center justify-center gap-2 sm:gap-3">
+                      <Dumbbell className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" />
+                      {t.angebot.formate.map.training.title}
+                    </h4>
+                    <p className="text-muted-foreground text-xs sm:text-sm mb-3 sm:mb-4">
+                      {t.angebot.formate.map.training.description}
                     </p>
+                    <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 text-accent font-medium text-xs sm:text-sm rounded-lg mb-4 sm:mb-6 break-words">
+                      12 Rue Jean-Palaprat, 31000 Toulouse
+                    </div>
+                  </div>
+                  <div className="flex-grow w-full h-[250px] sm:h-[350px] md:h-[400px] rounded-xl sm:rounded-2xl overflow-hidden shadow-inner border border-accent/20 relative bg-muted/20">
+                    <iframe
+                      src="https://maps.google.com/maps?q=12+Rue+Jean-Palaprat,+31000+Toulouse&t=m&z=17&output=embed&iwloc=Near"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen={true}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Personal Training Location"
+                    ></iframe>
                   </div>
                 </motion.div>
+              </motion.div>
+
+              {/* + Symbol and Online Option */}
+              <motion.div variants={fadeUp} className="flex flex-col items-center mt-8 sm:mt-12 relative z-10 w-full px-2 sm:px-4">
+                <motion.div
+                  initial={{ scale: 0, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
+                  viewport={viewportSettings}
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/20 bg-primary/80 backdrop-blur-sm shadow-soft flex items-center justify-center mb-6 sm:mb-10 mt-1 sm:mt-2 z-20"
+                >
+                  <span className="text-white text-xl sm:text-2xl font-light font-heading leading-none mt-0.5 sm:mt-1">+</span>
+                </motion.div>
+
+                <div className="bg-white/10 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.12)] rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 max-w-2xl w-full flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 sm:gap-6 backdrop-blur-md transition-all hover:bg-white/15 hover:-translate-y-1">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 shadow-inner border border-accent/20">
+                    <Video className="w-6 h-6 sm:w-8 sm:h-8 text-accent stroke-[1.5]" />
+                  </div>
+                  <div className="mt-0.5 sm:mt-1">
+                    <h3 className="font-heading text-lg sm:text-xl md:text-2xl text-white mb-1.5 sm:mb-2 tracking-wide">
+                      {t.angebot.formate.online.title}
+                    </h3>
+                    <p className="text-white/80 leading-relaxed text-xs sm:text-sm md:text-base">
+                      {t.angebot.formate.online.description}
+                    </p>
+                  </div>
+                </div>
               </motion.div>
             </motion.div>
           </div>
