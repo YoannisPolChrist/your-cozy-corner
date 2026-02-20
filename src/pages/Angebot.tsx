@@ -221,7 +221,7 @@ const Angebot = () => {
 
               <motion.div variants={staggerContainer} className="grid md:grid-cols-2 gap-5 sm:gap-8 md:gap-12 lg:gap-16">
                 {/* Karte Gestalttherapie (Links) */}
-                <motion.div variants={fadeUp} className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl border border-accent/10 flex flex-col h-full transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                <motion.div variants={fadeUp} className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl border border-accent/10 flex flex-col h-full transition-shadow duration-200 hover:shadow-2xl">
                   <div className="text-center mb-4 sm:mb-6">
                     <h4 className="font-heading text-lg sm:text-xl md:text-2xl text-primary mb-1.5 sm:mb-2 flex items-center justify-center gap-2 sm:gap-3">
                       <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" />
@@ -249,7 +249,7 @@ const Angebot = () => {
                 </motion.div>
 
                 {/* Karte Personal Training (Rechts) */}
-                <motion.div variants={fadeUp} className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl border border-accent/10 flex flex-col h-full transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                <motion.div variants={fadeUp} className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl border border-accent/10 flex flex-col h-full transition-shadow duration-200 hover:shadow-2xl">
                   <div className="text-center mb-4 sm:mb-6">
                     <h4 className="font-heading text-lg sm:text-xl md:text-2xl text-primary mb-1.5 sm:mb-2 flex items-center justify-center gap-2 sm:gap-3">
                       <Dumbbell className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" />

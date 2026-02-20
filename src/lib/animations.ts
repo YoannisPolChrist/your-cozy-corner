@@ -1,19 +1,19 @@
 import { Variants } from "framer-motion";
 
-// Cinematic easing curve - heavy, expensive, smooth
-export const cinematicEase = [0.2, 0.8, 0.2, 1] as const;
+// Performance-optimized easing - GPU-friendly
+export const cinematicEase = [0.25, 0.1, 0.25, 1] as const;
 
 // Standard fade up animation - The primary movement
 export const fadeUp: Variants = {
-  hidden: { 
-    opacity: 0, 
-    y: 20 
+  hidden: {
+    opacity: 0,
+    y: 12
   },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.35,
       ease: cinematicEase,
     }
   }
@@ -21,15 +21,15 @@ export const fadeUp: Variants = {
 
 // Mobile-optimized fade up (reduced y distance)
 export const fadeUpMobile: Variants = {
-  hidden: { 
-    opacity: 0, 
-    y: 20 
+  hidden: {
+    opacity: 0,
+    y: 10
   },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: {
-      duration: 0.9,
+      duration: 0.4,
       ease: cinematicEase,
     }
   }
@@ -37,20 +37,20 @@ export const fadeUpMobile: Variants = {
 
 // Gold frame parallax - delayed slide out effect
 export const goldFrameVariants: Variants = {
-  hidden: { 
+  hidden: {
     opacity: 0,
-    x: -30,
-    y: -30,
-    scale: 0.95
+    x: -15,
+    y: -15,
+    scale: 0.97
   },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     x: 0,
     y: 0,
     scale: 1,
     transition: {
-      duration: 1.0,
-      delay: 0.3,
+      duration: 0.5,
+      delay: 0.15,
       ease: cinematicEase,
     }
   }
@@ -58,15 +58,15 @@ export const goldFrameVariants: Variants = {
 
 // Image fade in (slightly faster than gold frame)
 export const imageVariants: Variants = {
-  hidden: { 
-    opacity: 0, 
-    scale: 0.98 
+  hidden: {
+    opacity: 0,
+    scale: 0.99
   },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     scale: 1,
     transition: {
-      duration: 0.8,
+      duration: 0.4,
       ease: cinematicEase,
     }
   }
@@ -78,23 +78,23 @@ export const staggerContainer: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.05,
+      staggerChildren: 0.06,
+      delayChildren: 0.02,
     }
   }
 };
 
 // Stagger item for children
 export const staggerItem: Variants = {
-  hidden: { 
-    opacity: 0, 
-    y: 20 
+  hidden: {
+    opacity: 0,
+    y: 12
   },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.35,
       ease: cinematicEase,
     }
   }
@@ -106,25 +106,23 @@ export const cardStagger: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.1,
+      staggerChildren: 0.07,
+      delayChildren: 0.03,
     }
   }
 };
 
 // Card item animation
 export const cardItem: Variants = {
-  hidden: { 
-    opacity: 0, 
-    y: 25,
-    scale: 0.98
+  hidden: {
+    opacity: 0,
+    y: 15,
   },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
-    scale: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.35,
       ease: cinematicEase,
     }
   }
@@ -133,7 +131,7 @@ export const cardItem: Variants = {
 // Subtle scale for hover effects
 export const scaleOnHover = {
   scale: 1.02,
-  transition: { duration: 0.4, ease: cinematicEase }
+  transition: { duration: 0.25, ease: "easeOut" }
 };
 
 // Icon stagger animation
@@ -142,25 +140,23 @@ export const iconStagger: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.15,
+      staggerChildren: 0.06,
+      delayChildren: 0.05,
     }
   }
 };
 
 // Icon item animation
 export const iconItem: Variants = {
-  hidden: { 
-    opacity: 0, 
-    y: 15,
-    scale: 0.9
+  hidden: {
+    opacity: 0,
+    y: 8,
   },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
-    scale: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.3,
       ease: cinematicEase,
     }
   }
@@ -168,15 +164,15 @@ export const iconItem: Variants = {
 
 // Text reveal animation
 export const textReveal: Variants = {
-  hidden: { 
+  hidden: {
     opacity: 0,
-    y: 20,
+    y: 10,
   },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
+      duration: 0.4,
       ease: cinematicEase,
     }
   }
@@ -185,13 +181,13 @@ export const textReveal: Variants = {
 // Viewport settings for scroll trigger - trigger earlier for smoother experience
 export const viewportSettings = {
   once: true,
-  amount: 0.05,
-  margin: "0px"
+  amount: 0.02 as const,
+  margin: "-50px" as const
 };
 
 // Mobile viewport settings (trigger even earlier)
 export const mobileViewportSettings = {
   once: true,
-  amount: 0.02,
-  margin: "50px"
+  amount: 0.01 as const,
+  margin: "-80px" as const
 };
