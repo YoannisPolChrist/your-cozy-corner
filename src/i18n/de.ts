@@ -191,6 +191,7 @@ export const de: Translations = {
 
   gestalttherapie: {
     gestaltIntro: {
+      label: 'Das Herzstück meiner Arbeit',
       title: 'Die Gestalttherapie',
       description: 'Gestalttherapie ist ein humanistischer, erlebnisorientierter Therapieansatz, der den Menschen als Ganzes betrachtet – Körper, Geist und Seele im Zusammenspiel mit seiner Umwelt. Im Zentrum steht das bewusste Wahrnehmen und Erleben im gegenwärtigen Moment. Anstatt nur über Probleme zu sprechen, arbeiten wir daran, sie im Hier und Jetzt spürbar und veränderbar zu machen. So entsteht echte, nachhaltige Transformation.',
       essence: [
@@ -571,8 +572,8 @@ export const de: Translations = {
         address: 'Toulouse, Frankreich',
         contact: 'Kontakt',
         email: 'E-Mail: contact@johanneschrist.com',
-        phone: 'Telefon: [Telefonnummer]',
-        businessId: 'SIRET: [Ihre SIRET-Nummer]',
+        phone: 'Telefon: +49 162 170 9979',
+        businessId: 'SIRET: 934 987 882 00010',
       },
       publication: {
         title: 'Verantwortlich für den Inhalt nach § 18 MStV',

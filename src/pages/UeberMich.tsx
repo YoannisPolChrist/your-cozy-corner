@@ -12,6 +12,7 @@ import johannesCyclingFriends from "@/assets/johannes-cycling-friends.webp";
 import johannesBodywork1 from "@/assets/johannes-bodywork-new-1.jpg";
 import johannesBodywork2 from "@/assets/johannes-bodywork-new-2.jpg";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 import {
   fadeUp,
   staggerContainer,
@@ -72,13 +73,36 @@ const ParallaxImageWrapper = ({
 };
 
 const UeberMich = () => {
-  const { t, getLocalizedPath } = useLanguage();
+  const { t, language, getLocalizedPath } = useLanguage();
   const plugin = useRef(
     Autoplay({ delay: 4000, stopOnInteraction: true })
   );
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={t.seo?.ueberMich?.title || "Über Mich | Johannes Christ"}
+        description={t.seo?.ueberMich?.description || "Erfahren Sie mehr über Johannes Christ, Gestalttherapeut und Coach in Toulouse."}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Johannes Christ",
+          "jobTitle": language === 'fr' ? "Gestalt-thérapeute & Coach" : "Gestalttherapeut & Coach",
+          "hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "degree",
+              "recognizedBy": { "@type": "Organization", "name": "Akademie für Handgemachte Psychotherapie / Symbolon Institut" }
+            }
+          ],
+          "knowsAbout": ["Gestalttherapie", "Körperarbeit", "Coaching", "Achtsamkeit", "Psychologie"]
+        }}
+        breadcrumbs={[
+          { name: "Home", url: `/${language}` },
+          { name: t.nav.ueberMich, url: `/${language}/ueber-mich` }
+        ]}
+        dateModified="2026-02-25"
+      />
       <Navigation />
       <main className="pt-20">
         {/* Section 1: About Me - Off-White Background */}
@@ -88,9 +112,15 @@ const UeberMich = () => {
           viewport={viewportSettings}
           variants={staggerContainer}
           className="pt-12 md:pt-[68px] pb-16 md:pb-32 bg-off-white"
+          style={{ perspective: "1200px" }}
         >
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
+          <motion.div
+            className="container mx-auto px-4"
+            initial={{ opacity: 0, z: -200, rotateX: 8 }}
+            animate={{ opacity: 1, z: 0, rotateX: 0 }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            style={{ transformStyle: "preserve-3d" }}
+          >            <div className="max-w-6xl mx-auto">
               <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-16 items-center">
                 {/* Mobile-only: Title at top */}
                 <motion.div variants={staggerContainer} className="space-y-2 md:hidden order-1">
@@ -139,6 +169,10 @@ const UeberMich = () => {
                   >
                     {t.ueberMich.hero.title}
                   </motion.h1>
+                  {/* Credentials / Author Byline for GEO trust signal */}
+                  <motion.p variants={fadeUp} className="text-[#c5a065] font-medium mt-1 mb-4">
+                    Gestalttherapeut, Coach & Körperarbeiter
+                  </motion.p>
                   <motion.div
                     variants={fadeUp}
                     className="text-base md:text-lg leading-relaxed space-y-3 md:space-y-4 text-muted-foreground"
@@ -149,7 +183,7 @@ const UeberMich = () => {
                 </motion.div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </motion.section>
 
         {/* Section 2: Arbeitsweise - Deep Teal Background */}
@@ -319,29 +353,45 @@ const UeberMich = () => {
                         <CarouselItem className="h-full pl-0">
                           <img
                             src={johannesSpeed}
-                            alt="Johannes Christ - Triathlon Performance"
+                            alt="Johannes Christ - Triathlon Performance auf dem Rennrad"
+                            width={600}
+                            height={800}
                             className="w-full h-full object-cover"
+                            loading="lazy"
+                            decoding="async"
                           />
                         </CarouselItem>
                         <CarouselItem className="h-full pl-0">
                           <img
                             src={johannesCyclingFriends}
-                            alt="Johannes Christ - Cycling with Friends"
+                            alt="Johannes Christ - Rennradfahren mit Freunden in der Natur"
+                            width={600}
+                            height={800}
                             className="w-full h-full object-cover"
+                            loading="lazy"
+                            decoding="async"
                           />
                         </CarouselItem>
                         <CarouselItem className="h-full pl-0">
                           <img
                             src={johannesBodywork1}
-                            alt="Johannes Christ - Manual Therapy & Bodywork"
+                            alt="Johannes Christ - Manual Therapy und Bodywork Behandlung"
+                            width={600}
+                            height={800}
                             className="w-full h-full object-cover"
+                            loading="lazy"
+                            decoding="async"
                           />
                         </CarouselItem>
                         <CarouselItem className="h-full pl-0">
                           <img
                             src={johannesBodywork2}
-                            alt="Johannes Christ - Mobility Training"
+                            alt="Johannes Christ - Mobility Training und körperliche Begleitung"
+                            width={600}
+                            height={800}
                             className="w-full h-full object-cover"
+                            loading="lazy"
+                            decoding="async"
                           />
                         </CarouselItem>
                       </CarouselContent>
@@ -384,7 +434,7 @@ const UeberMich = () => {
                   </motion.div>
 
                   <motion.div variants={fadeUp} className="pt-4">
-                    <Link to={getLocalizedPath('/angebot')}>
+                    <Link to={getLocalizedPath('/angebot')} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                       <Button variant="gold" className="font-semibold">
                         Personal Training <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
@@ -423,22 +473,8 @@ const UeberMich = () => {
                   </motion.h2>
                 </motion.div>
 
-                {/* Image with Gold Frame - Shows after title on mobile */}
-                <motion.div className="relative order-2 md:order-2 max-w-sm md:max-w-md mx-auto md:mx-0">
-                  <motion.div
-                    variants={goldFrameVariants}
-                    className="absolute bottom-[8px] left-[8px] md:bottom-[20px] md:left-[20px] w-full h-full bg-[#c5a065] rounded-xl md:rounded-2xl"
-                  />
-                  <ParallaxImageWrapper
-                    src={johannesPersoenlich}
-                    alt="Johannes Christ"
-                    className="object-cover"
-                    aspectRatio="aspect-[3/4]"
-                  />
-                </motion.div>
-
                 {/* Text Content - after image on mobile, left on desktop */}
-                <motion.div variants={staggerContainer} className="space-y-4 md:space-y-6 order-3 md:order-1 text-left">
+                <motion.div variants={staggerContainer} className="space-y-4 md:space-y-6 order-3 md:order-1 text-left md:pr-8">
                   {/* Desktop-only: Title */}
                   <motion.span
                     variants={fadeUp}
@@ -448,17 +484,31 @@ const UeberMich = () => {
                   </motion.span>
                   <motion.h2
                     variants={fadeUp}
-                    className="hidden md:block font-heading text-4xl md:text-5xl leading-tight text-white"
+                    className="hidden md:block font-heading text-4xl md:text-5xl leading-tight text-white mb-8"
                   >
                     {t.ueberMich.persoenlich.title}
                   </motion.h2>
                   <motion.div
                     variants={fadeUp}
-                    className="text-base md:text-lg leading-relaxed space-y-3 md:space-y-4 text-white/90"
+                    className="text-base md:text-lg leading-relaxed space-y-8 text-white/90"
                   >
                     <p>{t.ueberMich.persoenlich.description1}</p>
                     <p>{t.ueberMich.persoenlich.description2}</p>
                   </motion.div>
+                </motion.div>
+
+                {/* Image with Gold Frame - Shows after title on mobile. STICKY on desktop for scrolling story effect */}
+                <motion.div className="relative order-2 md:order-2 max-w-sm md:max-w-md mx-auto md:mx-0 md:sticky md:top-32 self-start w-full">
+                  <motion.div
+                    variants={goldFrameVariants}
+                    className="absolute bottom-[8px] left-[8px] md:bottom-[20px] md:left-[20px] w-full h-full bg-[#c5a065] rounded-xl md:rounded-2xl"
+                  />
+                  <ParallaxImageWrapper
+                    src={johannesPersoenlich}
+                    alt="Johannes Christ Persönlich Profil"
+                    className="object-cover"
+                    aspectRatio="aspect-[3/4]"
+                  />
                 </motion.div>
               </div>
             </div>
@@ -487,10 +537,18 @@ const UeberMich = () => {
               {t.ueberMich.cta.description}
             </motion.p>
             <motion.div variants={fadeUp}>
-              <Link to={getLocalizedPath('/kontakt')}>
-                <Button variant="gold" size="lg" className="font-semibold">
-                  {t.ueberMich.cta.button} <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+              <Link to={getLocalizedPath('/kontakt')} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                <div className="relative inline-block group mt-2">
+                  {/* Organic Breathing Aura behind button */}
+                  <motion.div
+                    className="absolute -inset-1 rounded-full bg-gold-accent opacity-20 blur-lg group-hover:opacity-40 transition-opacity duration-700 pointer-events-none"
+                    animate={{ scale: [1, 1.05, 1], opacity: [0.15, 0.35, 0.15] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                  <Button variant="gold" size="lg" className="font-semibold relative z-10 transition-transform duration-300 hover:scale-[1.02]">
+                    {t.ueberMich.cta.button} <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </div>
               </Link>
             </motion.div>
           </div>

@@ -8,6 +8,9 @@ import { Footer } from "@/components/Footer";
 import { fadeUp, staggerContainer, cardStagger, cardItem, iconStagger, iconItem, viewportSettings } from "@/lib/animations";
 import { useLanguage } from "@/i18n";
 import { useEffect } from "react";
+import { ThreeDIcon } from "@/components/ui/three-d-icon";
+
+import { SEO } from "@/components/SEO";
 import {
   Accordion,
   AccordionContent,
@@ -16,7 +19,7 @@ import {
 } from "@/components/ui/accordion";
 
 const Angebot = () => {
-  const { t, getLocalizedPath } = useLanguage();
+  const { t, language, getLocalizedPath } = useLanguage();
   const location = useLocation();
   const serviceIcons = [Heart, Brain, Dumbbell];
   const checkupIcons = [Activity, BarChart3, Map];
@@ -47,11 +50,41 @@ const Angebot = () => {
 
   return (
     <div className="min-h-screen bg-background overflow-x-clip">
+      <SEO
+        title={t.seo?.angebot?.title || "Angebot & Preise | Johannes Christ"}
+        description={t.seo?.angebot?.description || "Gestalttherapie, Coaching und Personal Training in Toulouse. Tarife und Formate (Online & Vor Ort)."}
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              "name": "Gestalttherapie",
+              "provider": { "@type": "Person", "name": "Johannes Christ" },
+              "serviceType": "Psychotherapy",
+              "areaServed": "Toulouse & Online"
+            },
+            {
+              "@type": "Service",
+              "name": "Personal Training",
+              "provider": { "@type": "Person", "name": "Johannes Christ" },
+              "serviceType": "Physical Training",
+              "areaServed": "Toulouse"
+            }
+          ]
+        }}
+        breadcrumbs={[
+          { name: "Home", url: `/${language}` },
+          { name: t.nav.angebot, url: `/${language}/angebot` }
+        ]}
+        faqs={t.angebot.faq.items.map(i => ({ question: i.question as string, answer: i.answer as string }))}
+        dateModified="2026-02-25"
+      />
       <Navigation />
       <main className="pt-20 overflow-x-clip">
         {/* Section 1: The 3 Pillars */}
-        <section className="pt-[68px] pb-20 sm:pb-28 md:pb-32 bg-primary overflow-x-clip">
-          <div className="container mx-auto px-4">
+        <section className="pt-[68px] pb-20 sm:pb-28 md:pb-32 bg-primary overflow-x-clip relative overflow-hidden">
+
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -75,7 +108,13 @@ const Angebot = () => {
                       <Card className="p-6 sm:p-8 h-full bg-off-white shadow-soft hover:shadow-teal transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden border border-accent/20">
                         <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                         <div className="mb-6">
-                          <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-accent stroke-[1.5]" />
+                          <ThreeDIcon
+                            icon={Icon}
+                            size={48}
+                            delay={index * 0.3}
+                            color="hsl(var(--accent))"
+                            strokeWidth={1.5}
+                          />
                         </div>
                         <h3 className="font-heading text-xl sm:text-2xl text-primary mb-2">
                           {service.title}
@@ -184,7 +223,7 @@ const Angebot = () => {
                     <p className="text-muted-foreground leading-relaxed text-center mb-8 flex-grow">
                       {t.angebot.konditionen.intensiv.description}
                     </p>
-                    <Link to={`${getLocalizedPath('/kontakt')}?subject=Individuelle+Beratung`} className="block mt-auto">
+                    <Link to={`${getLocalizedPath('/kontakt')}?subject=Individuelle+Beratung`} className="block mt-auto" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                       <Button variant="gold" className="w-full font-semibold">
                         {t.angebot.konditionen.intensiv.cta}
                       </Button>
@@ -197,8 +236,9 @@ const Angebot = () => {
         </section>
 
         {/* Section 4: Flexible Formats */}
-        <section className="py-16 sm:py-24 md:py-32 bg-primary">
-          <div className="container mx-auto px-4">
+        <section className="py-16 sm:py-24 md:py-32 bg-primary relative overflow-hidden">
+
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -223,7 +263,7 @@ const Angebot = () => {
                 {/* Karte Gestalttherapie (Links) */}
                 <motion.div variants={fadeUp} className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl border border-accent/10 flex flex-col h-full transition-shadow duration-200 hover:shadow-2xl">
                   <div className="text-center mb-4 sm:mb-6">
-                    <h4 className="font-heading text-lg sm:text-xl md:text-2xl text-primary mb-1.5 sm:mb-2 flex items-center justify-center gap-2 sm:gap-3">
+                    <h4 className="font-heading text-[21px] sm:text-xl md:text-2xl text-primary mb-1.5 sm:mb-2 flex items-center justify-center gap-2 sm:gap-3">
                       <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" />
                       {t.angebot.formate.map.therapie.title}
                     </h4>
@@ -251,7 +291,7 @@ const Angebot = () => {
                 {/* Karte Personal Training (Rechts) */}
                 <motion.div variants={fadeUp} className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl border border-accent/10 flex flex-col h-full transition-shadow duration-200 hover:shadow-2xl">
                   <div className="text-center mb-4 sm:mb-6">
-                    <h4 className="font-heading text-lg sm:text-xl md:text-2xl text-primary mb-1.5 sm:mb-2 flex items-center justify-center gap-2 sm:gap-3">
+                    <h4 className="font-heading text-[21px] sm:text-xl md:text-2xl text-primary mb-1.5 sm:mb-2 flex items-center justify-center gap-2 sm:gap-3">
                       <Dumbbell className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" />
                       {t.angebot.formate.map.training.title}
                     </h4>

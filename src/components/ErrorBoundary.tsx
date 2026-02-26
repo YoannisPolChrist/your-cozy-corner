@@ -49,15 +49,20 @@ export class ErrorBoundary extends Component<Props, State> {
             // or we are in the "showing error" state after reload.
             // We can show a more specific message if we want, or keep the generic one.
 
+            const isDev = import.meta.env.DEV;
             return (
                 <div className="min-h-screen flex flex-col items-center justify-center bg-background p-4 text-center">
                     <h1 className="text-2xl font-bold mb-4">Ein Update ist verfügbar</h1>
                     <p className="text-muted-foreground mb-6 max-w-md">
                         Eine neue Version der Webseite wurde veröffentlicht. Bitte laden Sie die Seite neu, um die neueste Version zu erhalten.
                     </p>
-                    <div className="hidden bg-slate-100 p-4 rounded-md mb-6 text-left overflow-auto max-w-lg w-full text-xs font-mono">
-                        {this.state.error?.toString()}
-                    </div>
+                    {isDev && (
+                        <div className="bg-red-50 border border-red-200 p-4 rounded-md mb-6 text-left overflow-auto max-w-lg w-full text-xs font-mono text-red-800">
+                            <strong>Dev Error:</strong><br />
+                            {this.state.error?.toString()}<br /><br />
+                            {this.state.error?.stack}
+                        </div>
+                    )}
                     <Button onClick={() => {
                         sessionStorage.removeItem("chunk_load_error_reload");
                         window.location.reload();

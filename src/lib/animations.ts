@@ -178,11 +178,10 @@ export const textReveal: Variants = {
   }
 };
 
-// Viewport settings for scroll trigger - trigger earlier for smoother experience
 export const viewportSettings = {
   once: true,
-  amount: 0.02 as const,
-  margin: "-50px" as const
+  amount: 0.15 as const,
+  margin: "0px" as const
 };
 
 // Mobile viewport settings (trigger even earlier)

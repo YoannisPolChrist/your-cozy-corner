@@ -30,8 +30,8 @@ const Impressum = () => {
                     <section>
                         <h3 className="typ-h4 font-bold text-primary mb-3 uppercase tracking-wider">{t.legal?.impressum?.angaben?.contact}</h3>
                         <div className="typ-body text-foreground/80 space-y-1">
-                            <p>{t.legal?.impressum?.angaben?.phone}</p>
-                            <p>{t.legal?.impressum?.angaben?.email}</p>
+                            <a href="tel:+491621709979" className="block hover:text-primary transition-colors">{t.legal?.impressum?.angaben?.phone}</a>
+                            <a href="mailto:contact@johanneschrist.com" className="block hover:text-primary transition-colors">{t.legal?.impressum?.angaben?.email}</a>
                         </div>
                     </section>
 

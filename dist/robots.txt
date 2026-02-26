@@ -1,3 +1,22 @@
 User-agent: *
 Allow: /
 Sitemap: https://johanneschrist.com/sitemap.xml
+
+# Allow AI search engine crawlers (GEO - Generative Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /

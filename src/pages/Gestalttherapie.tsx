@@ -67,26 +67,26 @@ const VideoSection = ({
   };
   if (isMobile) {
     return <section ref={sectionRef} id={sectionId} className="relative py-16 bg-primary">
-        <div className="container mx-auto px-4">
-          <div className="max-w-lg mx-auto">
-            <div className="p-6 rounded-2xl shadow-2xl" style={{
+      <div className="container mx-auto px-4">
+        <div className="max-w-lg mx-auto">
+          <div className="p-6 rounded-2xl shadow-2xl" style={{
             background: 'rgba(255, 255, 255, 0.95)',
             boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
           }}>
-              <h2 className="typ-h3 font-bold text-primary mb-4 text-center">
-                {title}
-              </h2>
-              <div className="typ-body text-foreground/80">
-                {content}
-              </div>
+            <h2 className="typ-h3 font-bold text-primary mb-4 text-center">
+              {title}
+            </h2>
+            <div className="typ-body text-foreground/80">
+              {content}
             </div>
           </div>
         </div>
-      </section>;
+      </div>
+    </section>;
   }
   return <section ref={sectionRef} id={sectionId} className="relative h-[350vh]">
-      
-    </section>;
+
+  </section>;
 };
 const Gestalttherapie = () => {
   const {
@@ -95,25 +95,25 @@ const Gestalttherapie = () => {
   } = useLanguage();
   const ressourcenIcons = [Hand, Brain, Palette];
   return <div className="min-h-screen bg-background">
-      <Navigation />
-      <main className="pt-24">
-        {/* Scroll-Telling: Was ist Gestalttherapie? */}
-        <GestaltScrollTelling />
+    <Navigation />
+    <main className="pt-24">
+      {/* Scroll-Telling: Was ist Gestalttherapie? */}
+      <GestaltScrollTelling />
 
-        {/* Video 1: Offene Gestalt */}
-        
+      {/* Video 1: Offene Gestalt */}
 
-        {/* Video 2: Kontaktunterbrechungen */}
-        
 
-        {/* Video 3: Geschlossene Gestalt */}
-        
+      {/* Video 2: Kontaktunterbrechungen */}
 
-        {/* Image 2: Gestalt-Kontaktzyklus */}
-        <section className="py-12 md:py-32 bg-off-white">
-          <div className="container mx-auto px-4">
-            <AnimatedSection className="max-w-5xl mx-auto">
-              <motion.img src={gestaltKontaktzyklus} alt={t.gestalttherapie.kontaktzyklus.title} className="w-full rounded-xl mb-6 md:mb-12" initial={{
+
+      {/* Video 3: Geschlossene Gestalt */}
+
+
+      {/* Image 2: Gestalt-Kontaktzyklus */}
+      <section className="py-12 md:py-32 bg-off-white">
+        <div className="container mx-auto px-4">
+          <AnimatedSection className="max-w-5xl mx-auto">
+            <motion.img src={gestaltKontaktzyklus} alt={t.gestalttherapie.kontaktzyklus.title} className="w-full rounded-xl mb-6 md:mb-12" initial={{
               opacity: 0,
               y: 20
             }} whileInView={{
@@ -127,11 +127,11 @@ const Gestalttherapie = () => {
               boxShadow: '0 10px 40px rgba(30, 95, 116, 0.1)'
             }} />
 
-              <div className="hidden md:flex justify-center mb-8">
-                <div className="w-px h-12 bg-gradient-to-b from-accent to-accent/30" />
-              </div>
+            <div className="hidden md:flex justify-center mb-8">
+              <div className="w-px h-12 bg-gradient-to-b from-accent to-accent/30" />
+            </div>
 
-              <motion.div className="p-5 md:p-14 rounded-2xl bg-secondary" initial={{
+            <motion.div className="p-5 md:p-14 rounded-2xl bg-secondary" initial={{
               opacity: 0,
               y: 30
             }} whileInView={{
@@ -143,27 +143,27 @@ const Gestalttherapie = () => {
               duration: 0.8,
               delay: 0.2
             }}>
-                <h2 className="typ-h2 font-bold text-primary mb-4 md:mb-8">
-                  {t.gestalttherapie.kontaktzyklus.title}
-                </h2>
-                <p className="typ-body text-foreground/80 mb-6 md:mb-10">
-                  {t.gestalttherapie.kontaktzyklus.intro}
-                </p>
-                <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5 mb-6 md:mb-10">
-                  {t.gestalttherapie.kontaktzyklus.phases.map((phase, index) => <AnimatedItem key={index}>
-                      <div className="p-3 md:p-5 rounded-xl border-l-[3px] border-accent bg-primary/[0.04]">
-                        <p className="text-foreground/80">
-                          <span className="typ-h4 text-accent font-semibold">
-                            {phase.title}
-                          </span>
-                          {phase.subtitle && <span className="text-xs md:text-sm text-foreground/50"> ({phase.subtitle})</span>}
-                          <br />
-                          <span className="typ-small text-foreground/70">{phase.description}</span>
-                        </p>
-                      </div>
-                    </AnimatedItem>)}
-                </StaggerContainer>
-                <motion.div className="p-4 md:p-6 rounded-xl border-l-4 border-primary bg-primary/[0.08]" initial={{
+              <h2 className="typ-h2 font-bold text-primary mb-4 md:mb-8">
+                {t.gestalttherapie.kontaktzyklus.title}
+              </h2>
+              <p className="typ-body text-foreground/80 mb-6 md:mb-10">
+                {t.gestalttherapie.kontaktzyklus.intro}
+              </p>
+              <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5 mb-6 md:mb-10">
+                {t.gestalttherapie.kontaktzyklus.phases.map((phase, index) => <AnimatedItem key={index}>
+                  <div className="p-3 md:p-5 rounded-xl border-l-[3px] border-accent bg-primary/[0.04]">
+                    <p className="text-foreground/80">
+                      <span className="typ-h4 text-accent font-semibold">
+                        {phase.title}
+                      </span>
+                      {phase.subtitle && <span className="text-xs md:text-sm text-foreground/50"> ({phase.subtitle})</span>}
+                      <br />
+                      <span className="typ-small text-foreground/70">{phase.description}</span>
+                    </p>
+                  </div>
+                </AnimatedItem>)}
+              </StaggerContainer>
+              <motion.div className="p-4 md:p-6 rounded-xl border-l-4 border-primary bg-primary/[0.08]" initial={{
                 opacity: 0,
                 x: -20
               }} whileInView={{
@@ -175,20 +175,20 @@ const Gestalttherapie = () => {
                 duration: 0.6,
                 delay: 0.4
               }}>
-                  <p className="typ-body text-foreground/80">
-                    {t.gestalttherapie.kontaktzyklus.summary}
-                  </p>
-                </motion.div>
+                <p className="typ-body text-foreground/80">
+                  {t.gestalttherapie.kontaktzyklus.summary}
+                </p>
               </motion.div>
-            </AnimatedSection>
-          </div>
-        </section>
+            </motion.div>
+          </AnimatedSection>
+        </div>
+      </section>
 
-        {/* Image 3: Ressourcen & Unterstützung */}
-        <section className="py-12 md:py-32 bg-background">
-          <div className="container mx-auto px-4">
-            <AnimatedSection className="max-w-5xl mx-auto">
-              <motion.img src={ressourcenUnterstuetzung} alt={t.gestalttherapie.ressourcen.title} className="w-full rounded-xl mb-6 md:mb-8" initial={{
+      {/* Image 3: Ressourcen & Unterstützung */}
+      <section className="py-12 md:py-32 bg-background">
+        <div className="container mx-auto px-4">
+          <AnimatedSection className="max-w-5xl mx-auto">
+            <motion.img src={ressourcenUnterstuetzung} alt={t.gestalttherapie.ressourcen.title} className="w-full rounded-xl mb-6 md:mb-8" initial={{
               opacity: 0,
               y: 20
             }} whileInView={{
@@ -202,12 +202,12 @@ const Gestalttherapie = () => {
               boxShadow: '0 10px 40px rgba(30, 95, 116, 0.1)'
             }} />
 
-              <div className="hidden md:flex flex-col items-center mb-8">
-                <div className="w-px h-8 bg-gradient-to-b from-accent to-accent/50" />
-                <div className="w-3 h-3 border-b-2 border-r-2 border-accent rotate-45 -mt-1" />
-              </div>
+            <div className="hidden md:flex flex-col items-center mb-8">
+              <div className="w-px h-8 bg-gradient-to-b from-accent to-accent/50" />
+              <div className="w-3 h-3 border-b-2 border-r-2 border-accent rotate-45 -mt-1" />
+            </div>
 
-              <motion.div className="p-5 md:p-14 rounded-2xl bg-secondary" initial={{
+            <motion.div className="p-5 md:p-14 rounded-2xl bg-secondary" initial={{
               opacity: 0,
               y: 30
             }} whileInView={{
@@ -219,63 +219,63 @@ const Gestalttherapie = () => {
               duration: 0.8,
               delay: 0.2
             }}>
-                <h2 className="typ-h2 font-bold text-primary mb-4 md:mb-8">
-                  {t.gestalttherapie.ressourcen.title}
-                </h2>
-                <p className="typ-body text-foreground/80 mb-6 md:mb-10">
-                  {t.gestalttherapie.ressourcen.intro}
-                </p>
-                <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-                  {t.gestalttherapie.ressourcen.items.map((item, index) => {
+              <h2 className="typ-h2 font-bold text-primary mb-4 md:mb-8">
+                {t.gestalttherapie.ressourcen.title}
+              </h2>
+              <p className="typ-body text-foreground/80 mb-6 md:mb-10">
+                {t.gestalttherapie.ressourcen.intro}
+              </p>
+              <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                {t.gestalttherapie.ressourcen.items.map((item, index) => {
                   const Icon = ressourcenIcons[index];
                   return <AnimatedItem key={index}>
-                        <div className="text-center p-4 md:p-6 rounded-2xl transition-all duration-300 md:hover:-translate-y-1 bg-primary/[0.04]">
-                          <div className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-5 bg-accent/15">
-                            <Icon className="w-6 h-6 md:w-7 md:h-7 text-accent" />
-                          </div>
-                          <h3 className="typ-h3 font-bold text-primary mb-2 md:mb-4">
-                            {item.title}
-                          </h3>
-                          <p className="typ-small text-foreground/70">
-                            {item.description}
-                          </p>
-                        </div>
-                      </AnimatedItem>;
+                    <div className="text-center p-4 md:p-6 rounded-2xl transition-all duration-300 md:hover:-translate-y-1 bg-primary/[0.04]">
+                      <div className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-5 bg-accent/15">
+                        <Icon className="w-6 h-6 md:w-7 md:h-7 text-accent" />
+                      </div>
+                      <h3 className="typ-h3 font-bold text-primary mb-2 md:mb-4">
+                        {item.title}
+                      </h3>
+                      <p className="typ-small text-foreground/70">
+                        {item.description}
+                      </p>
+                    </div>
+                  </AnimatedItem>;
                 })}
-                </StaggerContainer>
-              </motion.div>
-            </AnimatedSection>
-          </div>
-        </section>
+              </StaggerContainer>
+            </motion.div>
+          </AnimatedSection>
+        </div>
+      </section>
 
-        {/* CTA with gradient */}
-        <AnimatedSection className="py-16 md:py-36 bg-gradient-cta text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-teal-navy/30" />
-          <div className="container mx-auto px-4 text-center relative z-10">
-            <StaggerContainer className="max-w-2xl mx-auto">
-              <AnimatedItem>
-                <h2 className="typ-h2 mb-4 md:mb-8 text-white">
-                  {t.gestalttherapie.cta.title}
-                </h2>
-              </AnimatedItem>
-              <AnimatedItem>
-                <p className="typ-body text-white/85 mb-6 md:mb-10">
-                  {t.gestalttherapie.cta.description}
-                </p>
-              </AnimatedItem>
-              <AnimatedItem>
-                <Link to={getLocalizedPath('/kontakt')}>
-                  <Button variant="gold" size="default" className="font-semibold">
-                    {t.gestalttherapie.cta.button} <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </AnimatedItem>
-            </StaggerContainer>
-          </div>
-        </AnimatedSection>
-      </main>
+      {/* CTA with gradient */}
+      <AnimatedSection className="py-16 md:py-36 bg-gradient-cta text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-teal-navy/30" />
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <StaggerContainer className="max-w-2xl mx-auto">
+            <AnimatedItem>
+              <h2 className="typ-h2 mb-4 md:mb-8 text-white">
+                {t.gestalttherapie.cta.title}
+              </h2>
+            </AnimatedItem>
+            <AnimatedItem>
+              <p className="typ-body text-white/85 mb-6 md:mb-10">
+                {t.gestalttherapie.cta.description}
+              </p>
+            </AnimatedItem>
+            <AnimatedItem>
+              <Link to={getLocalizedPath('/kontakt')} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                <Button variant="gold" size="default" className="font-semibold">
+                  {t.gestalttherapie.cta.button} <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </AnimatedItem>
+          </StaggerContainer>
+        </div>
+      </AnimatedSection>
+    </main>
 
-      <Footer />
-    </div>;
+    <Footer />
+  </div>;
 };
 export default Gestalttherapie;

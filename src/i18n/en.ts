@@ -191,6 +191,7 @@ export const en: Translations = {
 
   gestalttherapie: {
     gestaltIntro: {
+      label: 'The Heart of My Work',
       title: 'Gestalt Therapy',
       description: 'Gestalt Therapy is a humanistic, experiential approach that views the person as a whole – body, mind, and soul in interaction with their environment. At its core is conscious awareness and experiencing in the present moment. Instead of just talking about problems, we work to make them tangible and changeable in the here and now. This is how genuine, lasting transformation emerges.',
       essence: [
@@ -572,8 +573,8 @@ export const en: Translations = {
         address: 'Toulouse, France',
         contact: 'Contact',
         email: 'Email: contact@johanneschrist.com',
-        phone: 'Phone: [Phone Number]',
-        businessId: 'SIRET: [Your SIRET number]',
+        phone: 'Phone: +49 162 170 9979',
+        businessId: 'SIRET: 934 987 882 00010',
       },
       publication: {
         title: 'Responsible for Content according to § 18 MStV',

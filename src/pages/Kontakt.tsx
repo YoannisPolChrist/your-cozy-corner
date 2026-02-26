@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { useState, useEffect } from "react";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Brain, Dumbbell } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Footer } from "@/components/Footer";
@@ -95,70 +95,94 @@ const Kontakt = () => {
                 variants={cardStagger}
                 className="grid md:grid-cols-2 gap-8"
               >
-                {/* Contact Form */}
-                <motion.div variants={cardItem}>
-                  <Card className="p-8 shadow-soft">
-                    <h2 className="typ-h3 mb-6 text-primary">
-                      {t.kontakt.form.title}
-                    </h2>
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">{t.kontakt.form.name}</Label>
-                        <Input
-                          id="name"
-                          value={formData.name}
-                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          required
-                          className="transition-all focus:ring-2 focus:ring-primary"
-                        />
-                      </div>
+                {/* Left Column: Contact Form & Info Cards */}
+                <motion.div variants={cardStagger} className="space-y-6">
+                  {/* Contact Form */}
+                  <motion.div variants={cardItem}>
+                    <Card className="p-8 shadow-soft">
+                      <h2 className="typ-h3 mb-6 text-primary">
+                        {t.kontakt.form.title}
+                      </h2>
+                      <form onSubmit={handleSubmit} className="space-y-6">
+                        <div className="space-y-2">
+                          <Label htmlFor="name">{t.kontakt.form.name}</Label>
+                          <Input
+                            id="name"
+                            value={formData.name}
+                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                            required
+                            className="transition-all focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
 
-                      <div className="space-y-2">
-                        <Label htmlFor="email">{t.kontakt.form.email}</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          required
-                          className="transition-all focus:ring-2 focus:ring-primary"
-                        />
-                      </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="email">{t.kontakt.form.email}</Label>
+                          <Input
+                            id="email"
+                            type="email"
+                            value={formData.email}
+                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                            required
+                            className="transition-all focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
 
-                      <div className="space-y-2">
-                        <Label htmlFor="phone">{t.kontakt.form.phone}</Label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="transition-all focus:ring-2 focus:ring-primary"
-                        />
-                      </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="phone">{t.kontakt.form.phone}</Label>
+                          <Input
+                            id="phone"
+                            type="tel"
+                            value={formData.phone}
+                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                            className="transition-all focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
 
-                      <div className="space-y-2">
-                        <Label htmlFor="message">{t.kontakt.form.message}</Label>
-                        <Textarea
-                          id="message"
-                          value={formData.message}
-                          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                          required
-                          rows={5}
-                          placeholder={t.kontakt.form.messagePlaceholder}
-                          className="transition-all focus:ring-2 focus:ring-primary resize-none"
-                        />
-                      </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="message">{t.kontakt.form.message}</Label>
+                          <Textarea
+                            id="message"
+                            value={formData.message}
+                            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                            required
+                            rows={5}
+                            placeholder={t.kontakt.form.messagePlaceholder}
+                            className="transition-all focus:ring-2 focus:ring-primary resize-none"
+                          />
+                        </div>
 
-                      <Button
-                        type="submit"
-                        variant="gold"
-                        size="lg"
-                        className="w-full font-semibold"
-                      >
-                        {t.kontakt.form.submit}
-                      </Button>
-                    </form>
-                  </Card>
+                        <Button
+                          type="submit"
+                          variant="gold"
+                          size="lg"
+                          className="w-full font-semibold"
+                        >
+                          {t.kontakt.form.submit}
+                        </Button>
+                      </form>
+                    </Card>
+                  </motion.div>
+
+                  {/* Erstgespräch & Online Info */}
+                  <motion.div variants={cardItem} className="flex flex-col gap-6">
+                    <Card className="p-6 bg-primary border-none shadow-soft text-white transition-all hover:shadow-xl hover:-translate-y-1">
+                      <h3 className="font-heading text-lg mb-3 text-white">
+                        {t.kontakt.erstgespraech.title}
+                      </h3>
+                      <p className="text-white/90 leading-relaxed">
+                        {t.kontakt.erstgespraech.description}
+                      </p>
+                    </Card>
+
+                    <Card className="p-6 bg-primary border-none shadow-soft text-white transition-all hover:shadow-xl hover:-translate-y-1">
+                      <h3 className="font-heading text-lg mb-3 text-white">
+                        {t.kontakt.online.title}
+                      </h3>
+                      <p className="text-white/90 leading-relaxed">
+                        {t.kontakt.online.description}
+                      </p>
+                    </Card>
+                  </motion.div>
                 </motion.div>
 
                 {/* Contact Info */}
@@ -203,25 +227,63 @@ const Kontakt = () => {
                     </Card>
                   </motion.div>
 
+                  {/* Karte Gestalttherapie */}
                   <motion.div variants={cardItem}>
-                    <Card className="p-6 bg-gray-light border-none">
-                      <h3 className="font-heading text-lg mb-3 text-primary">
-                        {t.kontakt.erstgespraech.title}
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {t.kontakt.erstgespraech.description}
-                      </p>
+                    <Card className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl border border-accent/10 flex flex-col transition-shadow duration-200 hover:shadow-2xl">
+                      <div className="text-center mb-4">
+                        <h4 className="font-heading text-[21px] sm:text-xl md:text-2xl text-primary mb-1.5 flex items-center justify-center gap-2">
+                          <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" />
+                          {t.angebot?.formate?.map?.therapie?.title || "Gestalttherapie & Coaching"}
+                        </h4>
+                        <p className="text-muted-foreground text-xs sm:text-sm mb-3">
+                          {t.angebot?.formate?.map?.therapie?.description || "Hier finden die Sitzungen in einem sicheren Rahmen statt."}
+                        </p>
+                        <div className="inline-block px-3 py-1.5 bg-accent/10 text-accent font-medium text-xs sm:text-sm rounded-lg mb-4 break-words">
+                          IZICure, 47 Allées Jean Jaurès, 31000 Toulouse
+                        </div>
+                      </div>
+                      <div className="w-full h-[200px] sm:h-[250px] rounded-xl overflow-hidden shadow-inner border border-accent/20 relative bg-muted/20">
+                        <iframe
+                          src="https://maps.google.com/maps?q=IZICure,+47+All.+Jean+Jaur%C3%A8s,+31000+Toulouse&t=m&z=17&output=embed&iwloc=Near"
+                          width="100%"
+                          height="100%"
+                          style={{ border: 0 }}
+                          allowFullScreen={true}
+                          loading="lazy"
+                          referrerPolicy="no-referrer-when-downgrade"
+                          title="IZICure Location"
+                        ></iframe>
+                      </div>
                     </Card>
                   </motion.div>
 
+                  {/* Karte Personal Training */}
                   <motion.div variants={cardItem}>
-                    <Card className="p-6 bg-gray-light border-none">
-                      <h3 className="font-heading text-lg mb-3 text-primary">
-                        {t.kontakt.online.title}
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {t.kontakt.online.description}
-                      </p>
+                    <Card className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl border border-accent/10 flex flex-col transition-shadow duration-200 hover:shadow-2xl">
+                      <div className="text-center mb-4">
+                        <h4 className="font-heading text-[21px] sm:text-xl md:text-2xl text-primary mb-1.5 flex items-center justify-center gap-2">
+                          <Dumbbell className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" />
+                          {t.angebot?.formate?.map?.training?.title || "Personal Training"}
+                        </h4>
+                        <p className="text-muted-foreground text-xs sm:text-sm mb-3">
+                          {t.angebot?.formate?.map?.training?.description || "Outdoor, im Studio oder bei dir zu Hause."}
+                        </p>
+                        <div className="inline-block px-3 py-1.5 bg-accent/10 text-accent font-medium text-xs sm:text-sm rounded-lg mb-4 break-words">
+                          12 Rue Jean-Palaprat, 31000 Toulouse
+                        </div>
+                      </div>
+                      <div className="w-full h-[200px] sm:h-[250px] rounded-xl overflow-hidden shadow-inner border border-accent/20 relative bg-muted/20">
+                        <iframe
+                          src="https://maps.google.com/maps?q=12+Rue+Jean-Palaprat,+31000+Toulouse&t=m&z=17&output=embed&iwloc=Near"
+                          width="100%"
+                          height="100%"
+                          style={{ border: 0 }}
+                          allowFullScreen={true}
+                          loading="lazy"
+                          referrerPolicy="no-referrer-when-downgrade"
+                          title="Personal Training Location"
+                        ></iframe>
+                      </div>
                     </Card>
                   </motion.div>
                 </motion.div>

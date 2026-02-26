@@ -17,7 +17,9 @@ export const AboutSection = () => {
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src={coachingImg}
-                  alt={t.landingAbout.title}
+                  alt="Portrait Johannes Christ Coaching und Therapie in Toulouse"
+                  width={600}
+                  height={800}
                   className="w-full h-full object-cover"
                 />
               </div>

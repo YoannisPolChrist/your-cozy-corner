@@ -18,6 +18,7 @@ import { viewportSettings } from "@/lib/animations";
 import { Footer } from "@/components/Footer";
 import { GestaltScrollTelling } from "@/components/GestaltScrollTelling";
 import { useLanguage } from "@/i18n";
+import { TiltCard } from "@/components/ui/tilt-card";
 
 const MyWork = () => {
   const { t, getLocalizedPath, language } = useLanguage();
@@ -91,54 +92,60 @@ const MyWork = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col items-center gap-4 sm:gap-5 md:flex-row md:justify-center md:items-stretch md:gap-10 lg:gap-20"
             >
-              <a
-                href="#gestalt"
-                onClick={(e) => handleSmoothScroll(e, 'gestalt')}
-                className="flex flex-col items-center gap-3 sm:gap-4 p-5 sm:p-6 md:p-8 rounded-2xl bg-primary border border-accent/20 shadow-xl transition-all duration-300 hover:shadow-2xl md:hover:-translate-y-2 group relative overflow-hidden cursor-pointer w-full max-w-[460px] md:w-[240px]"
-              >
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-white shadow-sm group-hover:border-accent/30 group-hover:shadow-md flex items-center justify-center transition-all duration-300">
-                  <Heart className="w-9 h-9 md:w-11 md:h-11 text-accent transition-colors duration-300" strokeWidth={1.5} />
-                </div>
-                <span className="text-base sm:text-lg font-heading font-semibold text-white text-center">
-                  Gestalttherapie
-                </span>
-                <span className="text-xs sm:text-sm text-white/80 text-center leading-relaxed px-2">
-                  {t.myWork?.hero?.iconDescriptions?.gestalt || "Das Herz meiner Arbeit"}
-                </span>
-              </a>
-              <a
-                href="#coaching"
-                onClick={(e) => handleSmoothScroll(e, 'coaching')}
-                className="flex flex-col items-center gap-3 sm:gap-4 p-5 sm:p-6 md:p-8 rounded-2xl bg-primary border border-accent/20 shadow-xl transition-all duration-300 hover:shadow-2xl md:hover:-translate-y-2 group relative overflow-hidden cursor-pointer w-full max-w-[460px] md:w-[240px]"
-              >
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-white shadow-sm group-hover:border-accent/30 group-hover:shadow-md flex items-center justify-center transition-all duration-300">
-                  <Brain className="w-9 h-9 md:w-11 md:h-11 text-accent transition-colors duration-300" strokeWidth={1.5} />
-                </div>
-                <span className="text-base sm:text-lg font-heading font-semibold text-white text-center">
-                  Coaching
-                </span>
-                <span className="text-xs sm:text-sm text-white/80 text-center leading-relaxed px-2">
-                  {t.myWork?.hero?.iconDescriptions?.coaching || "Inkl. Diagnostik"}
-                </span>
-              </a>
-              <a
-                href="#personal-training"
-                onClick={(e) => handleSmoothScroll(e, 'personal-training')}
-                className="flex flex-col items-center gap-3 sm:gap-4 p-5 sm:p-6 md:p-8 rounded-2xl bg-primary border border-accent/20 shadow-xl transition-all duration-300 hover:shadow-2xl md:hover:-translate-y-2 group relative overflow-hidden cursor-pointer w-full max-w-[460px] md:w-[240px]"
-              >
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-white shadow-sm group-hover:border-accent/30 group-hover:shadow-md flex items-center justify-center transition-all duration-300">
-                  <Dumbbell className="w-9 h-9 md:w-11 md:h-11 text-accent transition-colors duration-300" strokeWidth={1.5} />
-                </div>
-                <span className="text-base sm:text-lg font-heading font-semibold text-white text-center">
-                  {t.personalTraining?.nav || "Personal Training"}
-                </span>
-                <span className="text-xs sm:text-sm text-white/80 text-center leading-relaxed px-2">
-                  {t.myWork?.hero?.iconDescriptions?.personalTraining || "Performanceoptimierung / Bewegungstherapie"}
-                </span>
-              </a>
+              <TiltCard className="w-full max-w-[460px] md:w-[240px]" tiltStrength={12}>
+                <a
+                  href="#gestalt"
+                  onClick={(e) => handleSmoothScroll(e, 'gestalt')}
+                  className="flex flex-col items-center gap-3 sm:gap-4 p-5 sm:p-6 md:p-8 rounded-2xl bg-primary border border-accent/20 shadow-xl transition-all duration-300 hover:shadow-2xl group relative overflow-hidden cursor-pointer w-full h-full"
+                >
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-white shadow-sm group-hover:border-accent/30 group-hover:shadow-md flex items-center justify-center transition-all duration-300">
+                    <Heart className="w-9 h-9 md:w-11 md:h-11 text-accent transition-colors duration-300" strokeWidth={1.5} />
+                  </div>
+                  <span className="text-base sm:text-lg font-heading font-semibold text-white text-center">
+                    Gestalttherapie
+                  </span>
+                  <span className="text-xs sm:text-sm text-white/80 text-center leading-relaxed px-2">
+                    {t.myWork?.hero?.iconDescriptions?.gestalt || "Das Herz meiner Arbeit"}
+                  </span>
+                </a>
+              </TiltCard>
+              <TiltCard className="w-full max-w-[460px] md:w-[240px]" tiltStrength={12}>
+                <a
+                  href="#coaching"
+                  onClick={(e) => handleSmoothScroll(e, 'coaching')}
+                  className="flex flex-col items-center gap-3 sm:gap-4 p-5 sm:p-6 md:p-8 rounded-2xl bg-primary border border-accent/20 shadow-xl transition-all duration-300 hover:shadow-2xl group relative overflow-hidden cursor-pointer w-full h-full"
+                >
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-white shadow-sm group-hover:border-accent/30 group-hover:shadow-md flex items-center justify-center transition-all duration-300">
+                    <Brain className="w-9 h-9 md:w-11 md:h-11 text-accent transition-colors duration-300" strokeWidth={1.5} />
+                  </div>
+                  <span className="text-base sm:text-lg font-heading font-semibold text-white text-center">
+                    Coaching
+                  </span>
+                  <span className="text-xs sm:text-sm text-white/80 text-center leading-relaxed px-2">
+                    {t.myWork?.hero?.iconDescriptions?.coaching || "Inkl. Diagnostik"}
+                  </span>
+                </a>
+              </TiltCard>
+              <TiltCard className="w-full max-w-[460px] md:w-[240px]" tiltStrength={12}>
+                <a
+                  href="#personal-training"
+                  onClick={(e) => handleSmoothScroll(e, 'personal-training')}
+                  className="flex flex-col items-center gap-3 sm:gap-4 p-5 sm:p-6 md:p-8 rounded-2xl bg-primary border border-accent/20 shadow-xl transition-all duration-300 hover:shadow-2xl group relative overflow-hidden cursor-pointer w-full h-full"
+                >
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-white shadow-sm group-hover:border-accent/30 group-hover:shadow-md flex items-center justify-center transition-all duration-300">
+                    <Dumbbell className="w-9 h-9 md:w-11 md:h-11 text-accent transition-colors duration-300" strokeWidth={1.5} />
+                  </div>
+                  <span className="text-base sm:text-lg font-heading font-semibold text-white text-center">
+                    {t.personalTraining?.nav || "Personal Training"}
+                  </span>
+                  <span className="text-xs sm:text-sm text-white/80 text-center leading-relaxed px-2">
+                    {t.myWork?.hero?.iconDescriptions?.personalTraining || "Performanceoptimierung / Bewegungstherapie"}
+                  </span>
+                </a>
+              </TiltCard>
             </motion.div>
           </div>
         </section>
@@ -162,6 +169,8 @@ const MyWork = () => {
               <path d="M760,-30 C790,40 830,90 830,160 S800,260 840,340 S820,410 850,490 S850,590 1100,690" stroke="rgba(180,80,60,0.35)" strokeWidth="3" fill="none" strokeLinecap="round" />
             </svg>
 
+
+
             <div className="container mx-auto px-4 relative z-30">
               <AnimatedSection className="max-w-5xl mx-auto">
                 <motion.div
@@ -172,7 +181,7 @@ const MyWork = () => {
                   transition={{ duration: 0.8 }}
                 >
                   <span className="text-gold-accent text-sm uppercase tracking-widest font-medium mb-4 block">
-                    Das Herzstück meiner Arbeit
+                    {t.gestalttherapie?.gestaltIntro?.label || "Das Herzstück meiner Arbeit"}
                   </span>
                   <h2 className="font-heading text-4xl md:text-5xl font-bold text-white mb-4 md:mb-8">
                     {t.gestalttherapie?.gestaltIntro?.title || "Die Gestalttherapie"}
@@ -357,8 +366,10 @@ const MyWork = () => {
           </svg>
 
           {/* Glowing orbs */}
-          <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-gold-accent/10 blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-accent/8 blur-3xl" />
+          <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-gold-accent/10 blur-3xl pointer-events-none" />
+          <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-accent/8 blur-3xl pointer-events-none" />
+
+
 
           <div className="container mx-auto px-4 relative z-10">
             <AnimatedSection className="max-w-5xl mx-auto">
@@ -539,10 +550,18 @@ const MyWork = () => {
                 </p>
               </AnimatedItem>
               <AnimatedItem>
-                <Link to={getLocalizedPath('/angebot#konditionen')}>
-                  <Button variant="gold" size="lg" className="font-semibold">
-                    {t.myWork?.cta?.button || "Zum Angebot"} <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                <Link to={getLocalizedPath('/angebot')} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                  <div className="relative inline-block group mt-2">
+                    {/* Organic Breathing Aura behind button */}
+                    <motion.div
+                      className="absolute -inset-1 rounded-full bg-gold-accent opacity-20 blur-lg group-hover:opacity-40 transition-opacity duration-700 pointer-events-none"
+                      animate={{ scale: [1, 1.05, 1], opacity: [0.15, 0.35, 0.15] }}
+                      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    />
+                    <Button variant="gold" size="lg" className="font-semibold relative z-10 transition-transform duration-300 hover:scale-[1.02]">
+                      {t.myWork?.cta?.button || "Zum Angebot"} <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </div>
                 </Link>
               </AnimatedItem>
             </StaggerContainer>

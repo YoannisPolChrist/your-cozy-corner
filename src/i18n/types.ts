@@ -173,6 +173,7 @@ export interface Translations {
   // Gestalttherapie Page
   gestalttherapie: {
     gestaltIntro?: {
+      label?: string;
       title: string;
       description: string;
       essence?: Array<{

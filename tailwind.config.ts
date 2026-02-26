@@ -80,6 +80,14 @@ export default {
         'soft': 'var(--shadow-soft)',
         'teal': 'var(--shadow-teal)',
         'gold': 'var(--shadow-gold)',
+        'premium': 'var(--shadow-premium)',
+        'premium-hover': 'var(--shadow-premium-hover)',
+      },
+      backgroundColor: {
+        glass: 'var(--glass-bg)',
+      },
+      borderColor: {
+        glass: 'var(--glass-border)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -103,10 +111,15 @@ export default {
             height: "0",
           },
         },
+        "shimmer": {
+          "0%": { backgroundPosition: "200% 0" },
+          "100%": { backgroundPosition: "-200% 0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "shimmer": "shimmer 2s infinite linear",
       },
     },
   },

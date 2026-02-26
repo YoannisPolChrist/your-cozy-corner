@@ -69,9 +69,17 @@ const PersonalTraining = () => {
                             </p>
 
                             <Link to={getLocalizedPath('/kontakt')} onClick={scrollToTop}>
-                                <Button variant="gold" size="lg" className="font-semibold text-lg px-8">
-                                    {t.personalTraining.hero.cta} <ArrowRight className="ml-2 h-5 w-5" />
-                                </Button>
+                                <div className="relative inline-block group mt-2">
+                                    {/* Organic Breathing Aura behind button */}
+                                    <motion.div
+                                        className="absolute -inset-1 rounded-full bg-gold-accent opacity-20 blur-lg group-hover:opacity-40 transition-opacity duration-700 pointer-events-none"
+                                        animate={{ scale: [1, 1.05, 1], opacity: [0.15, 0.35, 0.15] }}
+                                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                                    />
+                                    <Button variant="gold" size="lg" className="font-semibold text-lg px-8 relative z-10 transition-transform duration-300 hover:scale-[1.02]">
+                                        {t.personalTraining.hero.cta} <ArrowRight className="ml-2 h-5 w-5" />
+                                    </Button>
+                                </div>
                             </Link>
                         </motion.div>
                     </div>
@@ -270,9 +278,17 @@ const PersonalTraining = () => {
                             </AnimatedItem>
                             <AnimatedItem>
                                 <Link to={getLocalizedPath('/kontakt')} onClick={scrollToTop}>
-                                    <Button variant="gold" size="lg" className="font-semibold">
-                                        {t.personalTraining.cta.button} <ArrowRight className="ml-2 h-4 w-4" />
-                                    </Button>
+                                    <div className="relative inline-block group mt-2">
+                                        {/* Organic Breathing Aura behind button */}
+                                        <motion.div
+                                            className="absolute -inset-1 rounded-full bg-gold-accent opacity-20 blur-lg group-hover:opacity-40 transition-opacity duration-700 pointer-events-none"
+                                            animate={{ scale: [1, 1.05, 1], opacity: [0.15, 0.35, 0.15] }}
+                                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                                        />
+                                        <Button variant="gold" size="lg" className="font-semibold relative z-10 transition-transform duration-300 hover:scale-[1.02]">
+                                            {t.personalTraining.cta.button} <ArrowRight className="ml-2 h-4 w-4" />
+                                        </Button>
+                                    </div>
                                 </Link>
                             </AnimatedItem>
                         </StaggerContainer>

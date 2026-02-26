@@ -191,6 +191,7 @@ export const fr: Translations = {
 
   gestalttherapie: {
     gestaltIntro: {
+      label: 'Le cœur de mon travail',
       title: 'La Gestalt-thérapie',
       description: "La Gestalt-thérapie est une approche humaniste et expérientielle qui considère la personne dans sa globalité – corps, esprit et âme en interaction avec son environnement. Au cœur de cette approche se trouve la prise de conscience et le vécu dans le moment présent. Au lieu de simplement parler des problèmes, nous travaillons à les rendre tangibles et modifiables dans l'ici et maintenant. C'est ainsi qu'émerge une transformation authentique et durable.",
       essence: [
@@ -571,8 +572,8 @@ export const fr: Translations = {
         address: 'Toulouse, France',
         contact: 'Contact',
         email: 'Email: contact@johanneschrist.com',
-        phone: 'Téléphone: [Votre Numéro]',
-        businessId: 'SIRET: [Votre numéro SIRET]',
+        phone: 'Téléphone: +49 162 170 9979',
+        businessId: 'SIRET: 934 987 882 00010',
       },
       publication: {
         title: 'Directeur de la publication',

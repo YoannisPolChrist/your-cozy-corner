@@ -8,6 +8,18 @@
         ],
         "rewrites": [
             {
+                "source": "/Eingangsdiagnostik",
+                "destination": "/eingangsdiagnostik/index.html"
+            },
+            {
+                "source": "/intake-assessment",
+                "destination": "/eingangsdiagnostik/index.html"
+            },
+            {
+                "source": "/diagnostic-initial",
+                "destination": "/eingangsdiagnostik/index.html"
+            },
+            {
                 "source": "**",
                 "destination": "/index.html"
             }
