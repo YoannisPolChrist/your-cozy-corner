@@ -218,16 +218,16 @@ function generateAnamesePDF(gatherFormData, tFunc, currentLang) {
         y += 4;
     });
 
-    // ── SUMMARY CHART PAGE ──
+    // ── SUMMARY CHART PAGE (Triage View) ──
     doc.addPage();
     y = margin;
 
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(16);
     doc.setTextColor(blue[0], blue[1], blue[2]);
-    var chartTitle = currentLang === 'en' ? 'Graphical Overall Assessment'
-        : currentLang === 'fr' ? 'Evaluation graphique globale'
-            : 'Grafische Gesamtauswertung';
+    var chartTitle = currentLang === 'en' ? 'Triage & Burden Mapping'
+        : currentLang === 'fr' ? 'Cartographie de la Charge'
+            : 'Triage & Belastungsauswertung';
     doc.text(chartTitle, pageW / 2, y + 8, { align: 'center' });
     y += 16;
     doc.setDrawColor(gold[0], gold[1], gold[2]);
@@ -235,23 +235,77 @@ function generateAnamesePDF(gatherFormData, tFunc, currentLang) {
     doc.line(margin, y, pageW - margin, y);
     y += 8;
 
-    // Gather all scale data
-    var scaleData = [];
+    // Data Storytelling mapping: Keys normalize values so that 10 = Max Burden
+    var psychKeys = {
+        'scale_depression': { invert: false, label: 'Niedergeschlagenheit' },
+        'scale_concentration': { invert: false, label: 'Konzentrationsverlust' },
+        'scale_burnout': { invert: false, label: 'Burnout & Erschöpfung' },
+        'scale_finance': { invert: true, label: 'Finanzielle Unsicherheit' },
+        'scale_emot_eating': { invert: false, label: 'Emotionales Essen' }
+    };
+
+    var somaticKeys = {
+        'scale_headache': { invert: false, label: 'Kopfschmerz / Schwindel' },
+        'scale_jaw': { invert: false, label: 'Kiefer- & Nackenverspannungen' },
+        'scale_hormones': { invert: false, label: 'Hormonelle Belastung' },
+        'scale_sleep': { invert: true, label: 'Regenerationsdefizit (Schlaf)' },
+        'scale_digestion': { invert: false, label: 'Verdauungsprobleme' }
+    };
+
+    var mainComplaintKeys = {
+        'intensitaet': { invert: false, label: 'Hauptbeschwerde' }
+    };
+
+    var psychData = [];
+    var somaticData = [];
+    var mainComplaintData = [];
+
     document.querySelectorAll('input[type="range"]').forEach(function (input) {
-        var container = input.closest('.mini-slider-container, .slider-container');
-        if (!container) return;
-        var labelEl = container.querySelector('.mini-slider-label');
-        var label = labelEl ? labelEl.textContent.trim() : input.name;
-        scaleData.push({ label: label, value: parseInt(input.value) || 0 });
+        var rawVal = parseInt(input.value) || 0;
+        var name = input.name || input.id;
+
+        var isPsych = psychKeys[name];
+        var isSomat = somaticKeys[name];
+        var isMain = mainComplaintKeys[name];
+
+        if (isPsych) {
+            var normVal = isPsych.invert ? (10 - rawVal) : rawVal;
+            psychData.push({ label: isPsych.label, value: normVal });
+        } else if (isSomat) {
+            var normVal = isSomat.invert ? (10 - rawVal) : rawVal;
+            somaticData.push({ label: isSomat.label, value: normVal });
+        } else if (isMain) {
+            var normVal = isMain.invert ? (10 - rawVal) : rawVal;
+            mainComplaintData.push({ label: isMain.label, value: normVal });
+        } else {
+            // General fallback
+            var container = input.closest('.mini-slider-container, .slider-container');
+            var labelEl = container ? container.querySelector('.mini-slider-label') : null;
+            var label = labelEl ? labelEl.textContent.trim() : name;
+            somaticData.push({ label: label, value: rawVal });
+        }
     });
 
-    if (scaleData.length > 0) {
-        var barH = 10;
-        var gap = 5;
-        var labelW = 75;
-        var barMaxW = contentW - labelW - 15;
+    // Sort descending by burden severity (10 to 0)
+    psychData.sort((a, b) => b.value - a.value);
+    somaticData.sort((a, b) => b.value - a.value);
 
-        scaleData.forEach(function (item) {
+    var barH = 10;
+    var gap = 5;
+    var labelW = 75;
+    var barMaxW = contentW - labelW - 15;
+
+    function renderCategory(title, data) {
+        if (data.length === 0) return;
+
+        checkPage(15);
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(11);
+        doc.setTextColor(blue[0], blue[1], blue[2]);
+        doc.text(title, margin, y + 5);
+        y += 8;
+
+        data.forEach(function (item) {
             checkPage(barH + gap + 2);
 
             doc.setFont('helvetica', 'normal');
@@ -261,7 +315,7 @@ function generateAnamesePDF(gatherFormData, tFunc, currentLang) {
             doc.text(shortLabel, margin, y + barH / 2 + 1);
 
             var barX = margin + labelW;
-            doc.setFillColor(235, 235, 235);
+            doc.setFillColor(240, 240, 240);
             doc.roundedRect(barX, y, barMaxW, barH, 2, 2, 'F');
 
             var fillW = (item.value / 10) * barMaxW;
@@ -272,32 +326,48 @@ function generateAnamesePDF(gatherFormData, tFunc, currentLang) {
             }
 
             doc.setFont('helvetica', 'bold');
-            doc.setFontSize(10);
+            doc.setFontSize(9);
             doc.setTextColor(60, 60, 60);
-            doc.text(item.value.toString(), barX + Math.max(fillW, 3) + 3, y + barH / 2 + 1.5);
+            doc.text(item.value.toString() + '/10', barX + Math.max(fillW, 3) + 3, y + barH / 2 + 1.5);
 
             y += barH + gap;
         });
-
-        // Legend
-        y += 5;
-        checkPage(12);
-        doc.setFontSize(8);
-        doc.setFont('helvetica', 'normal');
-        var legendItems = [
-            { color: [76, 175, 80], label: '0-3: ' + (currentLang === 'en' ? 'Low' : currentLang === 'fr' ? 'Faible' : 'Gering') },
-            { color: [255, 193, 7], label: '4-6: ' + (currentLang === 'en' ? 'Moderate' : currentLang === 'fr' ? 'Modere' : 'Mittel') },
-            { color: [244, 67, 54], label: '7-10: ' + (currentLang === 'en' ? 'High' : currentLang === 'fr' ? 'Eleve' : 'Hoch') },
-        ];
-        var legendX = margin + labelW;
-        legendItems.forEach(function (li) {
-            doc.setFillColor(li.color[0], li.color[1], li.color[2]);
-            doc.roundedRect(legendX, y, 6, 4, 1, 1, 'F');
-            doc.setTextColor(80, 80, 80);
-            doc.text(li.label, legendX + 8, y + 3.5);
-            legendX += 40;
-        });
+        y += 4;
     }
+
+    renderCategory(currentLang === 'en' ? 'Main Complaint' : 'Initiale Hauptbeschwerde', mainComplaintData);
+    y += 4;
+    renderCategory(currentLang === 'en' ? 'Psychological & Emotional' : '1. Psychisch & Emotionale Marker', psychData);
+    y += 2;
+    renderCategory(currentLang === 'en' ? 'Physical & Somatic' : '2. Physische & Somatische Marker', somaticData);
+
+    // Legend & Explainer
+    y += 4;
+    checkPage(16);
+
+    // Note explaining normalization
+    doc.setFontSize(7.5);
+    doc.setFont('helvetica', 'italic');
+    doc.setTextColor(120, 120, 120);
+    var normNote = currentLang === 'en' ? '* Normalized: 10 = maximum burden (e.g. 10 = max sleep deprivation).' : '* Normalisiert: 10 entspricht immer der maximalen Belastung (z.B. hohe Schlafdefizite).';
+    doc.text(normNote, margin, y);
+    y += 6;
+
+    doc.setFontSize(8);
+    doc.setFont('helvetica', 'bold');
+    var legendItems = [
+        { color: [76, 175, 80], label: '0-3: ' + (currentLang === 'en' ? 'Low' : currentLang === 'fr' ? 'Faible' : 'Gering') },
+        { color: [255, 152, 0], label: '4-8: ' + (currentLang === 'en' ? 'Moderate/High' : 'Mittel/Hoch') },
+        { color: [244, 67, 54], label: '9-10: ' + (currentLang === 'en' ? 'Critical' : 'Kritisch') },
+    ];
+    var legendX = margin;
+    legendItems.forEach(function (li) {
+        doc.setFillColor(li.color[0], li.color[1], li.color[2]);
+        doc.roundedRect(legendX, y, 6, 4, 1, 1, 'F');
+        doc.setTextColor(80, 80, 80);
+        doc.text(li.label, legendX + 8, y + 3.5);
+        legendX += 45;
+    });
 
     // Footer on each page
     var totalPages = doc.internal.getNumberOfPages();

@@ -7,14 +7,24 @@
     --christ-gray: #6B7280;
     --christ-white: #FFFFFF;
 
-    --transition-smooth: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-    --transition-bounce: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-fast: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+/* WCAG - Clear Focus states for keyboard navigation */
+*:focus-visible {
+    outline: 2px solid var(--christ-blue);
+    outline-offset: 3px;
+    border-radius: 4px;
+    /* Default for non-rounded items */
+    z-index: 10;
 }
 
 body {
@@ -179,7 +189,7 @@ body {
     background: var(--christ-blue);
     border-color: var(--christ-blue);
     color: var(--christ-white);
-    transform: scale(1.15);
+    transform: scale(1.1);
     box-shadow: 0 4px 12px rgba(31, 58, 95, 0.25);
     font-weight: 600;
 }
@@ -193,37 +203,37 @@ body {
 
 .form-step.active {
     display: block;
-    animation: fadeSlideUp 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Stagger children inside active step */
 .form-step.active>* {
     opacity: 0;
-    animation: fadeSlideUpChild 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation: fadeSlideUpChild 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .form-step.active>*:nth-child(1) {
-    animation-delay: 0.1s;
+    animation-delay: 0.05s;
 }
 
 .form-step.active>*:nth-child(2) {
-    animation-delay: 0.15s;
+    animation-delay: 0.08s;
 }
 
 .form-step.active>*:nth-child(3) {
-    animation-delay: 0.2s;
+    animation-delay: 0.11s;
 }
 
 .form-step.active>*:nth-child(4) {
-    animation-delay: 0.25s;
+    animation-delay: 0.14s;
 }
 
 .form-step.active>*:nth-child(5) {
-    animation-delay: 0.3s;
+    animation-delay: 0.17s;
 }
 
 .form-step.active>*:nth-child(n+6) {
-    animation-delay: 0.35s;
+    animation-delay: 0.2s;
 }
 
 @keyframes fadeSlideUp {
@@ -242,11 +252,13 @@ body {
     0% {
         opacity: 0;
         transform: translateY(15px);
+        filter: blur(8px);
     }
 
     100% {
         opacity: 1;
         transform: translateY(0);
+        filter: blur(0);
     }
 }
 
@@ -299,7 +311,7 @@ body {
     border: 1px solid var(--christ-line);
     border-radius: 12px;
     outline: none;
-    transition: var(--transition-smooth);
+    transition: var(--transition-fast);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
 }
 
@@ -313,7 +325,7 @@ body {
     border: 1px solid var(--christ-line);
     border-radius: 12px;
     outline: none;
-    transition: var(--transition-smooth);
+    transition: var(--transition-fast);
     resize: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
     min-height: 5rem;
@@ -335,7 +347,7 @@ body {
     font-size: 0.9rem;
     line-height: 1.3;
     pointer-events: none;
-    transition: var(--transition-smooth);
+    transition: var(--transition-fast);
 }
 
 .input-group textarea+label {
@@ -394,10 +406,14 @@ body {
     cursor: pointer;
     font-weight: 500;
     color: var(--christ-gray);
-    transition: var(--transition-smooth);
+    transition: var(--transition-fast);
     text-align: center;
-    height: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
+}
+
+.radio-card input:focus-visible+.card-content {
+    outline: 2px solid var(--christ-blue);
+    outline-offset: 2px;
 }
 
 .radio-card input:checked+.card-content {
@@ -418,7 +434,7 @@ body {
     display: none;
     opacity: 0;
     transform: translateY(-15px);
-    transition: opacity 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     margin-top: 1rem;
 }
 
@@ -426,7 +442,7 @@ body {
     display: block;
     opacity: 1;
     transform: translateY(0);
-    animation: conditionalReveal 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation: conditionalReveal 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes conditionalReveal {
@@ -507,7 +523,7 @@ body {
     font-weight: 600;
     border-radius: 50px;
     cursor: pointer;
-    transition: var(--transition-smooth);
+    transition: var(--transition-fast);
     border: none;
     font-family: inherit;
     letter-spacing: 0.5px;
@@ -586,7 +602,7 @@ body {
     cursor: pointer;
     background: transparent;
     color: var(--christ-gray);
-    transition: var(--transition-smooth);
+    transition: var(--transition-fast);
     letter-spacing: 0.5px;
 }
 
@@ -660,9 +676,42 @@ body {
     .yn-options {
         max-width: 100%;
     }
+}
 
-    .lang-toggles {
-        top: 0.8rem;
-        right: 0.8rem;
+/* Close media query */
+
+/* Custom Spinner for Premium Loading State */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 0.8s ease-in-out infinite;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
     }
+}
+
+/* Trust Badge Styling */
+.trust-badge {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: var(--christ-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    opacity: 0.8;
+}
+
+.trust-badge svg {
+    color: var(--christ-gold);
 }
