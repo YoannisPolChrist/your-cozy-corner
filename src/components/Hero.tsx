@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Dumbbell } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/i18n";
 import { TextReveal } from "@/components/ui/text-reveal";
@@ -11,6 +11,16 @@ import logo from "@/assets/logo.webp";
 import therapyImage from "@/assets/johannes-coaching-new.jpg";
 import trainingImage from "@/assets/johannes-cycling-friends.webp";
 
+const panelContentVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1], staggerChildren: 0.15 } }
+};
+
+const itemVariant = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
+};
+
 export const Hero = () => {
   const { t, getLocalizedPath } = useLanguage();
   const [hoveredPanel, setHoveredPanel] = useState<'left' | 'right' | null>(null);
@@ -19,57 +29,170 @@ export const Hero = () => {
 
   return (
     <section className="relative h-[100dvh] w-full flex flex-col md:flex-row overflow-hidden bg-black" aria-label="Hero">
-      <ThreeDBackground className="absolute inset-0 z-[1] opacity-70 transition-opacity duration-1000" />
-      <motion.div initial={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }} animate={{ opacity: isRevealed ? 1 : 0, scale: isRevealed ? 1 : 0.8, filter: isRevealed ? "blur(0px)" : "blur(10px)" }} transition={{ duration: 1.2, delay: 0.5 }} className="absolute top-8 md:top-12 inset-x-0 z-50 flex flex-col items-center pointer-events-none">
-        <div className="relative group mt-4 md:mt-0">
-          <div className="absolute inset-0 bg-gold-accent/40 rounded-full blur-2xl opacity-50"></div>
-          <img src={logo} alt="Johannes Christ Logo" className="relative z-10 w-20 md:w-32 h-auto object-contain drop-shadow-[0_0_15px_rgba(0,0,0,0.8)]" />
+      <ThreeDBackground className="absolute inset-0 z-[1] opacity-50 transition-opacity duration-1000" />
+
+      {/* Logo – centered at the split between panels */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.6, filter: "blur(12px)" }}
+        animate={{
+          opacity: isRevealed ? 1 : 0,
+          scale: isRevealed ? 1 : 0.6,
+          filter: isRevealed ? "blur(0px)" : "blur(12px)"
+        }}
+        transition={{ duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+        className="absolute z-50 pointer-events-none
+          left-1/2 -translate-x-1/2
+          bottom-0 md:bottom-auto
+          md:top-1/2 md:-translate-y-1/2
+          translate-y-[-50%] md:translate-y-[-50%]"
+        style={{ 
+          /* On mobile: at the border between stacked panels. On desktop: at the vertical split */
+        }}
+      >
+        <div className="relative">
+          <motion.div 
+            className="absolute inset-0 bg-gold-accent/50 rounded-full blur-3xl"
+            animate={{ scale: [1, 1.3, 1], opacity: [0.4, 0.7, 0.4] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <img src={logo} alt="Johannes Christ Logo" className="relative z-10 w-16 h-16 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain drop-shadow-[0_0_20px_rgba(0,0,0,0.9)]" />
         </div>
+        {/* Subtitle under logo */}
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: isRevealed ? 1 : 0, y: isRevealed ? 0 : 8 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="text-center mt-2 md:mt-3"
+        >
+          <p className="text-white/60 text-[9px] md:text-xs uppercase tracking-[0.25em] font-light">{t.nav.subtitle1}</p>
+          <p className="text-white/60 text-[9px] md:text-xs uppercase tracking-[0.25em] font-light">{t.nav.subtitle2}</p>
+        </motion.div>
       </motion.div>
 
-      {/* LEFT PANEL */}
-      <motion.div className="relative w-full md:h-full flex-1 flex items-center justify-center cursor-pointer border-b md:border-b-0 md:border-r border-white/10 overflow-hidden z-10" onMouseEnter={() => setHoveredPanel('left')} onMouseLeave={() => setHoveredPanel(null)} animate={{ flexGrow: hoveredPanel === 'left' ? 1.4 : hoveredPanel === 'right' ? 0.6 : 1 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
-        <motion.div className="absolute inset-0 bg-[#0e100f]" animate={{ scale: hoveredPanel === 'left' ? 1.05 : 1 }} transition={{ duration: 6 }}>
-          <img src={therapyImage} alt="Gestalttherapie" className="w-full h-full object-cover object-center opacity-40 md:opacity-60" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/80" />
+      {/* LEFT PANEL – Gestalttherapie */}
+      <motion.div
+        className="relative w-full h-1/2 md:h-full flex-1 flex items-center justify-center cursor-pointer overflow-hidden z-10"
+        onMouseEnter={() => setHoveredPanel('left')}
+        onMouseLeave={() => setHoveredPanel(null)}
+        onClick={() => { if (window.innerWidth < 768) window.location.href = getLocalizedPath('/gestalttherapie'); }}
+        animate={{ flexGrow: hoveredPanel === 'left' ? 1.5 : hoveredPanel === 'right' ? 0.5 : 1 }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <motion.div
+          className="absolute inset-0 bg-[#0e100f]"
+          animate={{ scale: hoveredPanel === 'left' ? 1.08 : 1 }}
+          transition={{ duration: 8, ease: "easeOut" }}
+        >
+          <img src={therapyImage} alt="Gestalttherapie" className="w-full h-full object-cover object-center opacity-50 md:opacity-70 transition-opacity duration-700" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/60" />
+          {/* Animated overlay on hover */}
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-br from-gold-accent/10 to-transparent"
+            animate={{ opacity: hoveredPanel === 'left' ? 1 : 0 }}
+            transition={{ duration: 0.6 }}
+          />
         </motion.div>
-        <div className="relative z-10 text-center px-6 md:px-12 w-full max-w-xl">
-          <motion.div animate={{ y: hoveredPanel === 'left' ? -10 : 0 }} transition={{ duration: 0.8 }}>
-            <Brain className="w-8 h-8 md:w-12 md:h-12 mx-auto mb-4 text-gold-accent opacity-80" strokeWidth={1.5} />
-            <TextReveal text="Gestalttherapie" className="typ-h1 text-white mb-3" delay={0.7} />
-            <p className="text-white/70 text-sm md:text-lg mb-8 font-light max-w-sm mx-auto">{t.gestalttherapie.hero.subtitle}</p>
+
+        <motion.div
+          className="relative z-10 text-center px-6 md:px-12 w-full max-w-xl"
+          variants={panelContentVariants}
+          initial="hidden"
+          animate={isRevealed ? "visible" : "hidden"}
+        >
+          <motion.div
+            animate={{ y: hoveredPanel === 'left' ? -12 : 0 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <motion.div variants={itemVariant}>
+              <Brain className="w-8 h-8 md:w-12 md:h-12 mx-auto mb-4 text-gold-accent" strokeWidth={1.5} />
+            </motion.div>
+            <motion.div variants={itemVariant}>
+              <TextReveal text={t.nav.gestalttherapie} className="typ-h1 text-white mb-3" delay={0.7} />
+            </motion.div>
+            <motion.p variants={itemVariant} className="text-white/70 text-sm md:text-lg mb-8 font-light max-w-sm mx-auto leading-relaxed">
+              {t.gestalttherapie.hero.subtitle}
+            </motion.p>
           </motion.div>
-          <motion.div animate={{ opacity: hoveredPanel === 'left' ? 1 : 0.4, y: hoveredPanel === 'left' ? 0 : 10 }} className="flex justify-center">
+          <motion.div
+            animate={{ opacity: hoveredPanel === 'left' ? 1 : 0.3, y: hoveredPanel === 'left' ? 0 : 10, scale: hoveredPanel === 'left' ? 1 : 0.95 }}
+            transition={{ duration: 0.5 }}
+            className="flex justify-center"
+          >
             <Link to={getLocalizedPath('/gestalttherapie')} className="block">
               <MagneticButton strength={0.25}>
-                <Button variant="outline" className="border-gold-accent/50 text-white hover:bg-gold-accent hover:text-black rounded-full px-8 py-6 bg-black/20 backdrop-blur-sm uppercase tracking-widest text-xs font-semibold">{t.gestalttherapie.hero.cta} <ArrowRight className="ml-2 w-4 h-4" /></Button>
+                <Button variant="outline" className="border-gold-accent/50 text-white hover:bg-gold-accent hover:text-black rounded-full px-8 py-6 bg-black/30 backdrop-blur-md uppercase tracking-widest text-xs font-semibold transition-all duration-300">
+                  {t.gestalttherapie.hero.cta} <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
               </MagneticButton>
             </Link>
           </motion.div>
-        </div>
+        </motion.div>
+
+        {/* Decorative line at panel edge */}
+        <div className="hidden md:block absolute right-0 top-[15%] bottom-[15%] w-px bg-gradient-to-b from-transparent via-white/20 to-transparent z-20" />
       </motion.div>
 
-      {/* RIGHT PANEL */}
-      <motion.div className="relative w-full md:h-full flex-1 flex items-center justify-center cursor-pointer overflow-hidden z-10" onMouseEnter={() => setHoveredPanel('right')} onMouseLeave={() => setHoveredPanel(null)} animate={{ flexGrow: hoveredPanel === 'right' ? 1.4 : hoveredPanel === 'left' ? 0.6 : 1 }} transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}>
-        <motion.div className="absolute inset-0 bg-[#0a0005]" animate={{ scale: hoveredPanel === 'right' ? 1.05 : 1 }} transition={{ duration: 8 }}>
-          <img src={trainingImage} alt="Personal Training" className="w-full h-full object-cover object-[center_30%] opacity-40 md:opacity-60" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/80" />
+      {/* RIGHT PANEL – Personal Training */}
+      <motion.div
+        className="relative w-full h-1/2 md:h-full flex-1 flex items-center justify-center cursor-pointer overflow-hidden z-10"
+        onMouseEnter={() => setHoveredPanel('right')}
+        onMouseLeave={() => setHoveredPanel(null)}
+        onClick={() => { if (window.innerWidth < 768) window.location.href = getLocalizedPath('/personal-training'); }}
+        animate={{ flexGrow: hoveredPanel === 'right' ? 1.5 : hoveredPanel === 'left' ? 0.5 : 1 }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <motion.div
+          className="absolute inset-0 bg-[#0a0005]"
+          animate={{ scale: hoveredPanel === 'right' ? 1.08 : 1 }}
+          transition={{ duration: 8, ease: "easeOut" }}
+        >
+          <img src={trainingImage} alt="Personal Training" className="w-full h-full object-cover object-[center_30%] opacity-50 md:opacity-70 transition-opacity duration-700" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/60" />
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-bl from-destructive/10 to-transparent"
+            animate={{ opacity: hoveredPanel === 'right' ? 1 : 0 }}
+            transition={{ duration: 0.6 }}
+          />
         </motion.div>
-        <div className="relative z-10 text-center px-6 md:px-12 w-full max-w-xl mt-10 md:mt-0">
-          <motion.div animate={{ y: hoveredPanel === 'right' ? -10 : 0 }} transition={{ duration: 0.8 }}>
-            <Dumbbell className="w-8 h-8 md:w-12 md:h-12 mx-auto mb-4 text-destructive opacity-80" strokeWidth={1.5} />
-            <TextReveal text="Personal Training" className="typ-h1 text-white mb-3" delay={0.8} />
-            <p className="text-white/70 text-sm md:text-lg mb-8 font-light max-w-sm mx-auto">{t.personalTraining.hero.subtitle}</p>
+
+        <motion.div
+          className="relative z-10 text-center px-6 md:px-12 w-full max-w-xl"
+          variants={panelContentVariants}
+          initial="hidden"
+          animate={isRevealed ? "visible" : "hidden"}
+        >
+          <motion.div
+            animate={{ y: hoveredPanel === 'right' ? -12 : 0 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <motion.div variants={itemVariant}>
+              <Dumbbell className="w-8 h-8 md:w-12 md:h-12 mx-auto mb-4 text-destructive" strokeWidth={1.5} />
+            </motion.div>
+            <motion.div variants={itemVariant}>
+              <TextReveal text="Personal Training" className="typ-h1 text-white mb-3" delay={0.8} />
+            </motion.div>
+            <motion.p variants={itemVariant} className="text-white/70 text-sm md:text-lg mb-8 font-light max-w-sm mx-auto leading-relaxed">
+              {t.personalTraining.hero.subtitle}
+            </motion.p>
           </motion.div>
-          <motion.div animate={{ opacity: hoveredPanel === 'right' ? 1 : 0.4, y: hoveredPanel === 'right' ? 0 : 10 }} className="flex justify-center">
+          <motion.div
+            animate={{ opacity: hoveredPanel === 'right' ? 1 : 0.3, y: hoveredPanel === 'right' ? 0 : 10, scale: hoveredPanel === 'right' ? 1 : 0.95 }}
+            transition={{ duration: 0.5 }}
+            className="flex justify-center"
+          >
             <Link to={getLocalizedPath('/personal-training')} className="block">
               <MagneticButton strength={0.25}>
-                <Button variant="outline" className="border-destructive/50 text-white hover:bg-destructive hover:text-white rounded-full px-8 py-6 bg-black/20 backdrop-blur-sm uppercase tracking-widest text-xs font-semibold">{t.personalTraining.hero.cta} <ArrowRight className="ml-2 w-4 h-4" /></Button>
+                <Button variant="outline" className="border-destructive/50 text-white hover:bg-destructive hover:text-white rounded-full px-8 py-6 bg-black/30 backdrop-blur-md uppercase tracking-widest text-xs font-semibold transition-all duration-300">
+                  {t.personalTraining.hero.cta} <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
               </MagneticButton>
             </Link>
           </motion.div>
-        </div>
+        </motion.div>
       </motion.div>
+
+      {/* Mobile horizontal divider line */}
+      <div className="md:hidden absolute left-[15%] right-[15%] top-1/2 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent z-20" />
     </section>
   );
 };
