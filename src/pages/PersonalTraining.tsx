@@ -296,7 +296,7 @@ const PersonalTraining = () => {
                   <div className="flex-shrink-0 mt-6 md:mt-0 w-full md:w-auto">
                     <Link to={getLocalizedPath('/gestalttherapie')} onClick={scrollToTop} className="block w-full">
                       <Button variant="red" size="lg" className="w-full md:w-auto font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
-                        Zur Gestalttherapie <ArrowRight className="ml-2 w-5 h-5" />
+                        {t.shared?.crossLinkGestaltButton ?? 'To Gestalt Therapy'} <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
                     </Link>
                   </div>
