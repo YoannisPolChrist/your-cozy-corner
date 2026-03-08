@@ -150,7 +150,7 @@ export const Hero = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/60" />
           <motion.div
             className="absolute inset-0 bg-gradient-to-bl from-destructive/10 to-transparent"
-            animate={{ opacity: hoveredPanel === 'right' ? 1 : 0 }}
+            animate={{ opacity: effectivePanel === 'right' ? 1 : 0 }}
             transition={{ duration: 0.6 }}
           />
         </motion.div>
