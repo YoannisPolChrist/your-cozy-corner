@@ -42,8 +42,8 @@ const UeberMich = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="Über Mich | Johannes Christ" description="Erfahren Sie mehr über Johannes Christ, Gestalttherapeut und Coach in Toulouse."
-        schema={{ "@context": "https://schema.org", "@type": "Person", "name": "Johannes Christ", "jobTitle": language === 'fr' ? "Gestalt-thérapeute & Coach" : "Gestalttherapeut & Coach", "hasCredential": [{ "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "recognizedBy": { "@type": "Organization", "name": "Akademie für Handgemachte Psychotherapie / Symbolon Institut" } }], "knowsAbout": ["Gestalttherapie", "Körperarbeit", "Coaching", "Achtsamkeit", "Psychologie"] }}
+      <SEO title={`${t.nav.ueberMich} | Johannes Christ`} description={t.ueberMich.hero.description1}
+        schema={{ "@context": "https://schema.org", "@type": "Person", "name": "Johannes Christ", "jobTitle": t.ueberMich.hero.byline ?? 'Gestalt Therapist & Coach', "hasCredential": [{ "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "recognizedBy": { "@type": "Organization", "name": "Akademie für Handgemachte Psychotherapie / Symbolon Institut" } }], "knowsAbout": ["Gestalttherapie", "Körperarbeit", "Coaching", "Achtsamkeit", "Psychologie"] }}
         breadcrumbs={[{ name: "Home", url: `/${language}` }, { name: t.nav.ueberMich, url: `/${language}/ueber-mich` }]}
         dateModified="2026-02-25"
       />
