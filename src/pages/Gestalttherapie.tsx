@@ -200,7 +200,7 @@ const Gestalttherapie = () => {
           </div>
         </AnimatedSection>
 
-        {/* 5. Pricing */}
+        {/* 6. Pricing */}
         <section className="py-24 md:py-32 bg-secondary/30" id="pricing">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -244,7 +244,7 @@ const Gestalttherapie = () => {
           </div>
         </section>
 
-        {/* 6. Location */}
+        {/* 7. Location */}
         <AnimatedSection className="py-20 md:py-28 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
