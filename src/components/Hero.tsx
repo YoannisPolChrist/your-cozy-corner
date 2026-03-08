@@ -42,7 +42,7 @@ export const Hero = () => {
           <motion.div animate={{ opacity: hoveredPanel === 'left' ? 1 : 0.4, y: hoveredPanel === 'left' ? 0 : 10 }} className="flex justify-center">
             <Link to={getLocalizedPath('/gestalttherapie')} className="block">
               <MagneticButton strength={0.25}>
-                <Button variant="outline" className="border-gold-accent/50 text-white hover:bg-gold-accent hover:text-black rounded-full px-8 py-6 bg-black/20 backdrop-blur-sm uppercase tracking-widest text-xs font-semibold">Emotionale Klarheit finden <ArrowRight className="ml-2 w-4 h-4" /></Button>
+                <Button variant="outline" className="border-gold-accent/50 text-white hover:bg-gold-accent hover:text-black rounded-full px-8 py-6 bg-black/20 backdrop-blur-sm uppercase tracking-widest text-xs font-semibold">{t.gestalttherapie.hero.cta} <ArrowRight className="ml-2 w-4 h-4" /></Button>
               </MagneticButton>
             </Link>
           </motion.div>
