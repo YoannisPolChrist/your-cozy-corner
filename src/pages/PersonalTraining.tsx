@@ -289,9 +289,9 @@ const PersonalTraining = () => {
                     </div>
                   </div>
                   <div className="text-center md:text-left flex-grow">
-                    <span className="text-red-accent text-sm uppercase tracking-[0.2em] font-semibold mb-3 block">Die andere Dimension</span>
-                    <h3 className="typ-h3 text-white mb-4">Eigentlich auf der Suche nach Orientierung im Kopf?</h3>
-                    <p className="text-white/80 text-lg leading-relaxed max-w-xl">Manchmal sitzt das Problem nicht im Körper, sondern tiefer. Entdecke meinen therapeutischen Ansatz für echte emotionale Klarheit.</p>
+                    <span className="text-red-accent text-sm uppercase tracking-[0.2em] font-semibold mb-3 block">{t.shared?.crossLinkLabel ?? 'The Other Dimension'}</span>
+                    <h3 className="typ-h3 text-white mb-4">{t.shared?.crossLinkGestaltTitle ?? 'Looking for clarity in your head?'}</h3>
+                    <p className="text-white/80 text-lg leading-relaxed max-w-xl">{t.shared?.crossLinkGestaltDescription ?? 'Sometimes the problem is deeper.'}</p>
                   </div>
                   <div className="flex-shrink-0 mt-6 md:mt-0 w-full md:w-auto">
                     <Link to={getLocalizedPath('/gestalttherapie')} onClick={scrollToTop} className="block w-full">
