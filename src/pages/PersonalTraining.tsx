@@ -184,7 +184,7 @@ const PersonalTraining = () => {
               ))}
             </StaggerContainer>
             <div className="text-center mt-10 opacity-60">
-              <p className="text-sm text-muted-foreground italic">(Mehr Einblicke und Ergebnisse folgen in Kürze)</p>
+              <p className="text-sm text-muted-foreground italic">({t.shared?.moreReviewsComingSoon ?? 'More testimonials coming soon'})</p>
             </div>
           </div>
         </AnimatedSection>
