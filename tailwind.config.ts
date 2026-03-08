@@ -57,6 +57,40 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "teal-primary": "hsl(var(--teal-primary))",
+        "teal-dark": "hsl(var(--teal-dark))",
+        "teal-navy": "hsl(var(--teal-navy))",
+        "gold-accent": "hsl(var(--gold-accent))",
+        "gold-dark": "hsl(var(--gold-dark))",
+        "red-accent": "hsl(var(--red-accent))",
+        "red-dark": "hsl(var(--red-dark))",
+        "gray-light": "hsl(var(--gray-light))",
+        "off-white": "hsl(var(--off-white))",
+        "warm-sand": "hsl(var(--warm-sand))",
+        "warm-cream": "hsl(var(--warm-cream))",
+      },
+      fontFamily: {
+        heading: ['Playfair Display', 'serif'],
+        sans: ['Inter', 'sans-serif'],
+      },
+      backgroundImage: {
+        'gradient-teal': 'var(--gradient-teal)',
+        'gradient-cta': 'var(--gradient-cta)',
+        'gradient-gold': 'var(--gradient-gold)',
+      },
+      boxShadow: {
+        'soft': 'var(--shadow-soft)',
+        'teal': 'var(--shadow-teal)',
+        'gold': 'var(--shadow-gold)',
+        'red': 'var(--shadow-red)',
+        'premium': 'var(--shadow-premium)',
+        'premium-hover': 'var(--shadow-premium-hover)',
+      },
+      backgroundColor: {
+        glass: 'var(--glass-bg)',
+      },
+      borderColor: {
+        glass: 'var(--glass-border)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,25 +99,22 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "shimmer": {
+          "0%": { backgroundPosition: "200% 0" },
+          "100%": { backgroundPosition: "-200% 0" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "shimmer": "shimmer 2s infinite linear",
       },
     },
   },
