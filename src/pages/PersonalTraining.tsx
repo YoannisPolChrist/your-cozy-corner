@@ -22,14 +22,13 @@ const scrollToTop = () => { window.scrollTo({ top: 0, behavior: 'smooth' }); };
 const PersonalTraining = () => {
   const { t, getLocalizedPath } = useLanguage();
   const serviceIcons = [Dumbbell, Heart, Target];
-
   const testimonials = t.testimonials?.personalTraining ?? [];
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       <main>
-        {/* Hero */}
+        {/* 1. Hero */}
         <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-20">
           <div className="absolute inset-0 bg-primary/90">
             <img src={johannesSpeed} alt="Personal Training" className="w-full h-full object-cover object-[center_30%] opacity-60" />
@@ -62,7 +61,7 @@ const PersonalTraining = () => {
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-off-white to-transparent" />
         </section>
 
-        {/* Pain Points */}
+        {/* 2. Pain Points */}
         <AnimatedSection className="py-24 md:py-32 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -91,7 +90,7 @@ const PersonalTraining = () => {
           </div>
         </AnimatedSection>
 
-        {/* Approach Section with Masonry Grid */}
+        {/* 3. Approach & Qualifications */}
         <AnimatedSection className="py-24 md:py-32 bg-off-white">
           <div className="container mx-auto px-6 md:px-4">
             <div className="max-w-5xl mx-auto">
@@ -134,7 +133,7 @@ const PersonalTraining = () => {
           </div>
         </AnimatedSection>
 
-        {/* Services */}
+        {/* 4. Services */}
         <AnimatedSection className="py-24 md:py-32 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -160,7 +159,7 @@ const PersonalTraining = () => {
           </div>
         </AnimatedSection>
 
-        {/* Testimonials */}
+        {/* 5. Testimonials */}
         <AnimatedSection className="py-24 md:py-32 bg-off-white relative overflow-hidden">
           <div className="absolute inset-0 bg-primary/[0.02]" />
           <div className="container mx-auto px-4 relative z-10">
@@ -189,24 +188,7 @@ const PersonalTraining = () => {
           </div>
         </AnimatedSection>
 
-        {/* Location */}
-        <AnimatedSection className="py-20 md:py-28 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-8">
-                <MapPin className="w-10 h-10 text-primary" />
-              </motion.div>
-              <h2 className="typ-h2 text-primary mb-4">{t.personalTraining.location.title}</h2>
-              <p className="typ-h3 font-heading text-red-accent mb-4">{t.personalTraining.location.city}</p>
-              <p className="typ-body text-muted-foreground">{t.personalTraining.location.description}</p>
-              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="mt-8 rounded-2xl overflow-hidden shadow-lg border border-red-accent/10 h-[350px] w-full">
-                <iframe src="https://maps.google.com/maps?q=12+Rue+Jean-Palaprat,+31000+Toulouse&t=m&z=17&output=embed&iwloc=Near" width="100%" height="100%" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
-              </motion.div>
-            </div>
-          </div>
-        </AnimatedSection>
-
-        {/* Pricing */}
+        {/* 6. Pricing */}
         <section className="py-24 md:py-32 bg-secondary/30" id="pricing">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -250,7 +232,7 @@ const PersonalTraining = () => {
           </div>
         </section>
 
-        {/* CTA */}
+        {/* 7. CTA */}
         <AnimatedSection className="py-24 md:py-32 bg-gradient-cta text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-teal-navy/30" />
           <div className="container mx-auto px-4 text-center relative z-10">
@@ -271,7 +253,24 @@ const PersonalTraining = () => {
           </div>
         </AnimatedSection>
 
-        {/* Cross-Link to Gestalttherapie */}
+        {/* 8. Location */}
+        <AnimatedSection className="py-20 md:py-28 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-8">
+                <MapPin className="w-10 h-10 text-primary" />
+              </motion.div>
+              <h2 className="typ-h2 text-primary mb-4">{t.personalTraining.location.title}</h2>
+              <p className="typ-h3 font-heading text-red-accent mb-4">{t.personalTraining.location.city}</p>
+              <p className="typ-body text-muted-foreground">{t.personalTraining.location.description}</p>
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="mt-8 rounded-2xl overflow-hidden shadow-lg border border-red-accent/10 h-[350px] w-full">
+                <iframe src="https://maps.google.com/maps?q=12+Rue+Jean-Palaprat,+31000+Toulouse&t=m&z=17&output=embed&iwloc=Near" width="100%" height="100%" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+              </motion.div>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* 9. Cross-Link to Gestalttherapie */}
         <AnimatedSection className="py-24 md:py-32 bg-off-white relative overflow-hidden">
           <div className="absolute inset-0 bg-primary/[0.02]" />
           <div className="container mx-auto px-4 relative z-10">

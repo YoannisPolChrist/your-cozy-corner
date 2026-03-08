@@ -32,7 +32,7 @@ const Gestalttherapie = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <main>
-        {/* Hero Section */}
+        {/* 1. Hero Section */}
         <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-20">
           <div className="absolute inset-0 bg-primary/90">
             <img src={heroImage} alt="Gestalttherapie" className="w-full h-full object-cover object-top opacity-60" />
@@ -68,7 +68,7 @@ const Gestalttherapie = () => {
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-off-white to-transparent" />
         </section>
 
-        {/* Pain Points */}
+        {/* 2. Pain Points */}
         <AnimatedSection className="py-24 md:py-32 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -96,7 +96,7 @@ const Gestalttherapie = () => {
           </div>
         </AnimatedSection>
 
-        {/* Approach & Qualifications */}
+        {/* 3. Approach & Qualifications */}
         <AnimatedSection className="py-24 md:py-32 bg-off-white">
           <div className="container mx-auto px-6 md:px-4">
             <div className="max-w-5xl mx-auto">
@@ -141,99 +141,7 @@ const Gestalttherapie = () => {
           </div>
         </AnimatedSection>
 
-        <GestaltScrollTelling />
-
-        {/* Philosophy */}
-        <section className="py-24 md:py-32 bg-primary text-white relative overflow-hidden">
-          <div className="container mx-auto px-4 relative z-10">
-            <AnimatedSection className="max-w-4xl mx-auto space-y-12">
-              <div className="text-center">
-                <span className="text-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">{t.gestalttherapie.philosophy.label}</span>
-                <div className="flex flex-wrap justify-center gap-3 mb-6">
-                  {t.gestalttherapie.philosophy.badges.map((badge, idx) => (
-                    <span key={idx} className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/30 bg-accent/10 text-accent text-xs font-semibold uppercase tracking-wider">{badge}</span>
-                  ))}
-                </div>
-                <h2 className="typ-h2 mb-10">{t.gestalttherapie.philosophy.title}</h2>
-                <div className="space-y-6 text-base md:text-lg text-white/80 text-left md:text-center max-w-3xl mx-auto">
-                  <p>{t.gestalttherapie.philosophy.p1}</p>
-                  <p dangerouslySetInnerHTML={{ __html: t.gestalttherapie.philosophy.p2 }}></p>
-                </div>
-                <div className="mt-16 md:mt-24 p-8 md:p-12 border border-accent/20 rounded-2xl bg-white/5 relative">
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-primary flex items-center justify-center rounded-full border border-accent/20">
-                    <span className="text-accent text-3xl font-serif">"</span>
-                  </div>
-                  <p className="typ-h4 text-accent font-light leading-relaxed">{t.gestalttherapie.philosophy.quote}</p>
-                </div>
-              </div>
-            </AnimatedSection>
-          </div>
-        </section>
-
-        {/* Kontaktzyklus */}
-        <section className="py-12 md:py-32 bg-off-white">
-          <div className="container mx-auto px-4">
-            <AnimatedSection className="max-w-5xl mx-auto">
-              <motion.img src={gestaltKontaktzyklus} alt={t.gestalttherapie.kontaktzyklus.title} className="w-full rounded-xl mb-6 md:mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ boxShadow: '0 10px 40px rgba(30, 95, 116, 0.1)' }} />
-              <div className="hidden md:flex justify-center mb-8"><div className="w-px h-12 bg-gradient-to-b from-accent to-accent/30" /></div>
-              <motion.div className="p-5 md:p-14 rounded-2xl bg-secondary" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}>
-                <h2 className="typ-h2 font-bold text-primary mb-4 md:mb-8">{t.gestalttherapie.kontaktzyklus.title}</h2>
-                <p className="typ-body text-foreground/80 mb-6 md:mb-10">{t.gestalttherapie.kontaktzyklus.intro}</p>
-                <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5 mb-6 md:mb-10">
-                  {t.gestalttherapie.kontaktzyklus.phases.map((phase, index) => (
-                    <AnimatedItem key={index}>
-                      <div className="p-3 md:p-5 rounded-xl border-l-[3px] border-accent bg-primary/[0.04]">
-                        <p className="text-foreground/80">
-                          <span className="typ-h4 text-accent font-semibold">{phase.title}</span>
-                          {phase.subtitle && <span className="text-xs md:text-sm text-foreground/50"> ({phase.subtitle})</span>}
-                          <br /><span className="typ-small text-foreground/70">{phase.description}</span>
-                        </p>
-                      </div>
-                    </AnimatedItem>
-                  ))}
-                </StaggerContainer>
-                <motion.div className="p-4 md:p-6 rounded-xl border-l-4 border-primary bg-primary/[0.08]" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}>
-                  <p className="typ-body text-foreground/80">{t.gestalttherapie.kontaktzyklus.summary}</p>
-                </motion.div>
-              </motion.div>
-            </AnimatedSection>
-          </div>
-        </section>
-
-        {/* Ressourcen */}
-        <section className="py-12 md:py-32 bg-background">
-          <div className="container mx-auto px-4">
-            <AnimatedSection className="max-w-5xl mx-auto">
-              <motion.img src={ressourcenUnterstuetzung} alt={t.gestalttherapie.ressourcen.title} className="w-full rounded-xl mb-6 md:mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ boxShadow: '0 10px 40px rgba(30, 95, 116, 0.1)' }} />
-              <div className="hidden md:flex flex-col items-center mb-8">
-                <div className="w-px h-8 bg-gradient-to-b from-accent to-accent/50" />
-                <div className="w-3 h-3 border-b-2 border-r-2 border-accent rotate-45 -mt-1" />
-              </div>
-              <motion.div className="p-5 md:p-14 rounded-2xl bg-secondary" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}>
-                <h2 className="typ-h2 font-bold text-primary mb-4 md:mb-8">{t.gestalttherapie.ressourcen.title}</h2>
-                <p className="typ-body text-foreground/80 mb-6 md:mb-10">{t.gestalttherapie.ressourcen.intro}</p>
-                <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-                  {t.gestalttherapie.ressourcen.items.map((item, index) => {
-                    const Icon = ressourcenIcons[index];
-                    return (
-                      <AnimatedItem key={index}>
-                        <div className="text-center p-4 md:p-6 rounded-2xl transition-all duration-300 md:hover:-translate-y-1 bg-primary/[0.04]">
-                          <div className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-5 bg-accent/15">
-                            <Icon className="w-6 h-6 md:w-7 md:h-7 text-accent" />
-                          </div>
-                          <h3 className="typ-h3 font-bold text-primary mb-2 md:mb-4">{item.title}</h3>
-                          <p className="typ-small text-foreground/70">{item.description}</p>
-                        </div>
-                      </AnimatedItem>
-                    );
-                  })}
-                </StaggerContainer>
-              </motion.div>
-            </AnimatedSection>
-          </div>
-        </section>
-
-        {/* Testimonials */}
+        {/* 4. Testimonials */}
         <AnimatedSection className="py-24 md:py-32 bg-off-white relative overflow-hidden">
           <div className="absolute inset-0 bg-primary/[0.02]" />
           <div className="container mx-auto px-4 relative z-10">
@@ -262,24 +170,7 @@ const Gestalttherapie = () => {
           </div>
         </AnimatedSection>
 
-        {/* Location */}
-        <AnimatedSection className="py-20 md:py-28 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-8">
-                <MapPin className="w-10 h-10 text-primary" />
-              </motion.div>
-              <h2 className="typ-h2 text-primary mb-4">{t.shared?.gestaltLocationTitle ?? 'Praxis für Gestalttherapie'}</h2>
-              <p className="typ-h3 font-heading text-accent mb-4">{t.gestalttherapie.location?.city ?? 'Toulouse Zentrum'}</p>
-              <p className="typ-body text-muted-foreground">{t.gestalttherapie.location?.description ?? 'IZICure, 47 Allées Jean Jaurès, 31000 Toulouse'}</p>
-              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="mt-8 rounded-2xl overflow-hidden shadow-lg border border-accent/10 h-[350px] w-full">
-                <iframe src="https://maps.google.com/maps?q=IZICure,+47+All.+Jean+Jaur%C3%A8s,+31000+Toulouse&t=m&z=17&output=embed&iwloc=Near" width="100%" height="100%" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
-              </motion.div>
-            </div>
-          </div>
-        </AnimatedSection>
-
-        {/* Pricing */}
+        {/* 5. Pricing */}
         <section className="py-24 md:py-32 bg-secondary/30" id="pricing">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -323,7 +214,7 @@ const Gestalttherapie = () => {
           </div>
         </section>
 
-        {/* CTA */}
+        {/* 6. CTA */}
         <AnimatedSection className="py-16 md:py-36 bg-gradient-cta text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-teal-navy/30" />
           <div className="container mx-auto px-4 text-center relative z-10">
@@ -344,7 +235,117 @@ const Gestalttherapie = () => {
           </div>
         </AnimatedSection>
 
-        {/* Cross-Link to Personal Training */}
+        {/* 7. ScrollTelling: Was ist Gestalttherapie? (Theorie) */}
+        <GestaltScrollTelling />
+
+        {/* 8. Philosophy */}
+        <section className="py-24 md:py-32 bg-primary text-white relative overflow-hidden">
+          <div className="container mx-auto px-4 relative z-10">
+            <AnimatedSection className="max-w-4xl mx-auto space-y-12">
+              <div className="text-center">
+                <span className="text-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">{t.gestalttherapie.philosophy.label}</span>
+                <div className="flex flex-wrap justify-center gap-3 mb-6">
+                  {t.gestalttherapie.philosophy.badges.map((badge, idx) => (
+                    <span key={idx} className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/30 bg-accent/10 text-accent text-xs font-semibold uppercase tracking-wider">{badge}</span>
+                  ))}
+                </div>
+                <h2 className="typ-h2 mb-10">{t.gestalttherapie.philosophy.title}</h2>
+                <div className="space-y-6 text-base md:text-lg text-white/80 text-left md:text-center max-w-3xl mx-auto">
+                  <p>{t.gestalttherapie.philosophy.p1}</p>
+                  <p dangerouslySetInnerHTML={{ __html: t.gestalttherapie.philosophy.p2 }}></p>
+                </div>
+                <div className="mt-16 md:mt-24 p-8 md:p-12 border border-accent/20 rounded-2xl bg-white/5 relative">
+                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-primary flex items-center justify-center rounded-full border border-accent/20">
+                    <span className="text-accent text-3xl font-serif">"</span>
+                  </div>
+                  <p className="typ-h4 text-accent font-light leading-relaxed">{t.gestalttherapie.philosophy.quote}</p>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* 9. Kontaktzyklus */}
+        <section className="py-12 md:py-32 bg-off-white">
+          <div className="container mx-auto px-4">
+            <AnimatedSection className="max-w-5xl mx-auto">
+              <motion.img src={gestaltKontaktzyklus} alt={t.gestalttherapie.kontaktzyklus.title} className="w-full rounded-xl mb-6 md:mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ boxShadow: '0 10px 40px rgba(30, 95, 116, 0.1)' }} />
+              <div className="hidden md:flex justify-center mb-8"><div className="w-px h-12 bg-gradient-to-b from-accent to-accent/30" /></div>
+              <motion.div className="p-5 md:p-14 rounded-2xl bg-secondary" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}>
+                <h2 className="typ-h2 font-bold text-primary mb-4 md:mb-8">{t.gestalttherapie.kontaktzyklus.title}</h2>
+                <p className="typ-body text-foreground/80 mb-6 md:mb-10">{t.gestalttherapie.kontaktzyklus.intro}</p>
+                <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5 mb-6 md:mb-10">
+                  {t.gestalttherapie.kontaktzyklus.phases.map((phase, index) => (
+                    <AnimatedItem key={index}>
+                      <div className="p-3 md:p-5 rounded-xl border-l-[3px] border-accent bg-primary/[0.04]">
+                        <p className="text-foreground/80">
+                          <span className="typ-h4 text-accent font-semibold">{phase.title}</span>
+                          {phase.subtitle && <span className="text-xs md:text-sm text-foreground/50"> ({phase.subtitle})</span>}
+                          <br /><span className="typ-small text-foreground/70">{phase.description}</span>
+                        </p>
+                      </div>
+                    </AnimatedItem>
+                  ))}
+                </StaggerContainer>
+                <motion.div className="p-4 md:p-6 rounded-xl border-l-4 border-primary bg-primary/[0.08]" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}>
+                  <p className="typ-body text-foreground/80">{t.gestalttherapie.kontaktzyklus.summary}</p>
+                </motion.div>
+              </motion.div>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* 10. Ressourcen */}
+        <section className="py-12 md:py-32 bg-background">
+          <div className="container mx-auto px-4">
+            <AnimatedSection className="max-w-5xl mx-auto">
+              <motion.img src={ressourcenUnterstuetzung} alt={t.gestalttherapie.ressourcen.title} className="w-full rounded-xl mb-6 md:mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ boxShadow: '0 10px 40px rgba(30, 95, 116, 0.1)' }} />
+              <div className="hidden md:flex flex-col items-center mb-8">
+                <div className="w-px h-8 bg-gradient-to-b from-accent to-accent/50" />
+                <div className="w-3 h-3 border-b-2 border-r-2 border-accent rotate-45 -mt-1" />
+              </div>
+              <motion.div className="p-5 md:p-14 rounded-2xl bg-secondary" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}>
+                <h2 className="typ-h2 font-bold text-primary mb-4 md:mb-8">{t.gestalttherapie.ressourcen.title}</h2>
+                <p className="typ-body text-foreground/80 mb-6 md:mb-10">{t.gestalttherapie.ressourcen.intro}</p>
+                <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                  {t.gestalttherapie.ressourcen.items.map((item, index) => {
+                    const Icon = ressourcenIcons[index];
+                    return (
+                      <AnimatedItem key={index}>
+                        <div className="text-center p-4 md:p-6 rounded-2xl transition-all duration-300 md:hover:-translate-y-1 bg-primary/[0.04]">
+                          <div className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-5 bg-accent/15">
+                            <Icon className="w-6 h-6 md:w-7 md:h-7 text-accent" />
+                          </div>
+                          <h3 className="typ-h3 font-bold text-primary mb-2 md:mb-4">{item.title}</h3>
+                          <p className="typ-small text-foreground/70">{item.description}</p>
+                        </div>
+                      </AnimatedItem>
+                    );
+                  })}
+                </StaggerContainer>
+              </motion.div>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* 11. Location */}
+        <AnimatedSection className="py-20 md:py-28 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-8">
+                <MapPin className="w-10 h-10 text-primary" />
+              </motion.div>
+              <h2 className="typ-h2 text-primary mb-4">{t.shared?.gestaltLocationTitle ?? 'Praxis für Gestalttherapie'}</h2>
+              <p className="typ-h3 font-heading text-accent mb-4">{t.gestalttherapie.location?.city ?? 'Toulouse Zentrum'}</p>
+              <p className="typ-body text-muted-foreground">{t.gestalttherapie.location?.description ?? 'IZICure, 47 Allées Jean Jaurès, 31000 Toulouse'}</p>
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="mt-8 rounded-2xl overflow-hidden shadow-lg border border-accent/10 h-[350px] w-full">
+                <iframe src="https://maps.google.com/maps?q=IZICure,+47+All.+Jean+Jaur%C3%A8s,+31000+Toulouse&t=m&z=17&output=embed&iwloc=Near" width="100%" height="100%" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+              </motion.div>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* 12. Cross-Link to Personal Training */}
         <AnimatedSection className="py-24 md:py-32 bg-off-white relative overflow-hidden">
           <div className="absolute inset-0 bg-primary/[0.02]" />
           <div className="container mx-auto px-4 relative z-10">
