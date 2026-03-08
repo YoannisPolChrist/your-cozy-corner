@@ -53,18 +53,8 @@ export const Hero = () => {
             animate={{ scale: [1, 1.3, 1], opacity: [0.4, 0.7, 0.4] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
           />
-          <img src={logo} alt="Johannes Christ Logo" className="relative z-10 w-16 h-16 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain drop-shadow-[0_0_20px_rgba(0,0,0,0.9)]" />
+          <img src={logo} alt="Johannes Christ Logo" className="relative z-10 w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain drop-shadow-[0_0_20px_rgba(0,0,0,0.9)]" />
         </div>
-        {/* Subtitle under logo */}
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: isRevealed ? 1 : 0, y: isRevealed ? 0 : 8 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="text-center mt-2 md:mt-3"
-        >
-          <p className="text-white/60 text-[9px] md:text-xs uppercase tracking-[0.25em] font-light">{t.nav.subtitle1}</p>
-          <p className="text-white/60 text-[9px] md:text-xs uppercase tracking-[0.25em] font-light">{t.nav.subtitle2}</p>
-        </motion.div>
       </motion.div>
 
       {/* LEFT PANEL – Gestalttherapie */}

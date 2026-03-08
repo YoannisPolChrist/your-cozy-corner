@@ -229,7 +229,7 @@ const PersonalTraining = () => {
                 </Card>
               </AnimatedItem>
               <AnimatedItem>
-                <Card className="p-8 bg-primary text-white shadow-xl h-full relative overflow-hidden border-0 flex flex-col">
+                <Card className="p-8 pt-12 bg-primary text-white shadow-xl h-full relative overflow-hidden border-0 flex flex-col">
                   <div className="absolute top-4 right-4">
                     <span className="px-3 py-1 bg-red-accent text-primary text-xs font-semibold rounded-full">{t.personalTraining.pricing.package.discount}</span>
                   </div>
