@@ -17,6 +17,10 @@ export interface Translations {
       description: string;
       keywords: string;
     };
+    angebot?: {
+      title: string;
+      description: string;
+    };
   };
   hero: {
     title: string;

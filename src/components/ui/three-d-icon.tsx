@@ -1,7 +1,8 @@
-import { type ElementType } from "react";
+import { type ComponentType } from "react";
 import { motion } from "framer-motion";
+import { type LucideProps } from "lucide-react";
 
-interface ThreeDIconProps { icon: ElementType; className?: string; color?: string; size?: number; delay?: number; strokeWidth?: number; }
+interface ThreeDIconProps { icon: ComponentType<LucideProps>; className?: string; color?: string; size?: number; delay?: number; strokeWidth?: number; }
 
 export function ThreeDIcon({ icon: Icon, className = "", color = "currentColor", size = 48, delay = 0, strokeWidth = 1.5 }: ThreeDIconProps) {
   return (
