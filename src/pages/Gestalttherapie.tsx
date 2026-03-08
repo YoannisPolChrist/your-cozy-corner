@@ -13,7 +13,7 @@ import { useLanguage } from "@/i18n";
 import { TextReveal } from "@/components/ui/text-reveal";
 import { ThreeDBackground } from "@/components/ThreeDBackground";
 import { MagneticButton } from "@/components/ui/magnetic-button";
-import heroImage from "@/assets/GestaltHero.svg";
+import heroImage from "@/assets/Gestalt Header.png";
 import johannesCoachingTalk from "@/assets/johannes-coaching-talk.webp";
 import johannesMeet from "@/assets/johannes-meet.webp";
 import johannesCoachingNew from "@/assets/johannes-coaching-new.webp";
