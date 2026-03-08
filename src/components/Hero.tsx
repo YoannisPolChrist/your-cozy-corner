@@ -37,7 +37,7 @@ export const Hero = () => {
           <motion.div animate={{ y: hoveredPanel === 'left' ? -10 : 0 }} transition={{ duration: 0.8 }}>
             <Brain className="w-8 h-8 md:w-12 md:h-12 mx-auto mb-4 text-gold-accent opacity-80" strokeWidth={1.5} />
             <TextReveal text="Gestalttherapie" className="typ-h1 text-white mb-3" delay={0.7} />
-            <p className="text-white/70 text-sm md:text-lg mb-8 font-light max-w-sm mx-auto">Psychologische Beratung. Raus aus dem Kopf, rein ins Erleben.</p>
+            <p className="text-white/70 text-sm md:text-lg mb-8 font-light max-w-sm mx-auto">{t.gestalttherapie.hero.subtitle}</p>
           </motion.div>
           <motion.div animate={{ opacity: hoveredPanel === 'left' ? 1 : 0.4, y: hoveredPanel === 'left' ? 0 : 10 }} className="flex justify-center">
             <Link to={getLocalizedPath('/gestalttherapie')} className="block">
