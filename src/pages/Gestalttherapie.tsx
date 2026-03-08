@@ -98,7 +98,7 @@ const Gestalttherapie = () => {
 
         {/* Approach & Qualifications */}
         <AnimatedSection className="py-24 md:py-32 bg-off-white">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6 md:px-4">
             <div className="max-w-5xl mx-auto">
               <StaggerContainer className="grid lg:grid-cols-2 gap-12 items-center">
                 <AnimatedItem className="space-y-8">
