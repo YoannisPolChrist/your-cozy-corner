@@ -27,8 +27,22 @@ const itemVariant: Variants = {
 export const Hero = () => {
   const { t, getLocalizedPath } = useLanguage();
   const [hoveredPanel, setHoveredPanel] = useState<'left' | 'right' | null>(null);
+  const [activePanel, setActivePanel] = useState<'left' | 'right' | null>(null);
   const [isRevealed, setIsRevealed] = useState(false);
   useEffect(() => { const timer = setTimeout(() => setIsRevealed(true), 100); return () => clearTimeout(timer); }, []);
+
+  // On mobile, activePanel drives the visual state; on desktop, hoveredPanel does
+  const effectivePanel = hoveredPanel ?? activePanel;
+
+  const handlePanelTap = (panel: 'left' | 'right', path: string) => {
+    if (window.innerWidth >= 768) return; // desktop uses hover
+    if (activePanel === panel) {
+      // Second tap → navigate
+      window.location.href = path;
+    } else {
+      setActivePanel(panel);
+    }
+  };
 
   return (
     <section className="relative h-[100dvh] w-full flex flex-col md:flex-row overflow-hidden bg-black" aria-label="Hero">
@@ -60,13 +74,13 @@ export const Hero = () => {
         className="relative w-full h-1/2 md:h-full flex-1 flex items-center justify-center cursor-pointer overflow-hidden z-10"
         onMouseEnter={() => setHoveredPanel('left')}
         onMouseLeave={() => setHoveredPanel(null)}
-        onClick={() => { if (window.innerWidth < 768) window.location.href = getLocalizedPath('/gestalttherapie'); }}
-        animate={{ flexGrow: hoveredPanel === 'left' ? 1.5 : hoveredPanel === 'right' ? 0.5 : 1 }}
+        onClick={() => handlePanelTap('left', getLocalizedPath('/gestalttherapie'))}
+        animate={{ flexGrow: effectivePanel === 'left' ? 1.5 : effectivePanel === 'right' ? 0.5 : 1 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
         <motion.div
           className="absolute inset-0 bg-[#0e100f]"
-          animate={{ scale: hoveredPanel === 'left' ? 1.08 : 1 }}
+          animate={{ scale: effectivePanel === 'left' ? 1.08 : 1 }}
           transition={{ duration: 8, ease: "easeOut" }}
         >
           <img src={therapyImage} alt="Gestalttherapie" className="w-full h-full object-cover object-center opacity-50 md:opacity-70 transition-opacity duration-700" />
@@ -74,7 +88,7 @@ export const Hero = () => {
           {/* Animated overlay on hover */}
           <motion.div
             className="absolute inset-0 bg-gradient-to-br from-gold-accent/10 to-transparent"
-            animate={{ opacity: hoveredPanel === 'left' ? 1 : 0 }}
+            animate={{ opacity: effectivePanel === 'left' ? 1 : 0 }}
             transition={{ duration: 0.6 }}
           />
         </motion.div>
@@ -86,7 +100,7 @@ export const Hero = () => {
           animate={isRevealed ? "visible" : "hidden"}
         >
           <motion.div
-            animate={{ y: hoveredPanel === 'left' ? -12 : 0 }}
+            animate={{ y: effectivePanel === 'left' ? -12 : 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
             <motion.div variants={itemVariant}>
@@ -100,7 +114,7 @@ export const Hero = () => {
             </motion.p>
           </motion.div>
           <motion.div
-            animate={{ opacity: hoveredPanel === 'left' ? 1 : 0.3, y: hoveredPanel === 'left' ? 0 : 10, scale: hoveredPanel === 'left' ? 1 : 0.95 }}
+            animate={{ opacity: effectivePanel === 'left' ? 1 : 0.3, y: effectivePanel === 'left' ? 0 : 10, scale: effectivePanel === 'left' ? 1 : 0.95 }}
             transition={{ duration: 0.5 }}
             className="flex justify-center"
           >
@@ -123,20 +137,20 @@ export const Hero = () => {
         className="relative w-full h-1/2 md:h-full flex-1 flex items-center justify-center cursor-pointer overflow-hidden z-10"
         onMouseEnter={() => setHoveredPanel('right')}
         onMouseLeave={() => setHoveredPanel(null)}
-        onClick={() => { if (window.innerWidth < 768) window.location.href = getLocalizedPath('/personal-training'); }}
-        animate={{ flexGrow: hoveredPanel === 'right' ? 1.5 : hoveredPanel === 'left' ? 0.5 : 1 }}
+        onClick={() => handlePanelTap('right', getLocalizedPath('/personal-training'))}
+        animate={{ flexGrow: effectivePanel === 'right' ? 1.5 : effectivePanel === 'left' ? 0.5 : 1 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
         <motion.div
           className="absolute inset-0 bg-[#0a0005]"
-          animate={{ scale: hoveredPanel === 'right' ? 1.08 : 1 }}
+          animate={{ scale: effectivePanel === 'right' ? 1.08 : 1 }}
           transition={{ duration: 8, ease: "easeOut" }}
         >
           <img src={trainingImage} alt="Personal Training" className="w-full h-full object-cover object-[center_30%] opacity-50 md:opacity-70 transition-opacity duration-700" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/60" />
           <motion.div
             className="absolute inset-0 bg-gradient-to-bl from-destructive/10 to-transparent"
-            animate={{ opacity: hoveredPanel === 'right' ? 1 : 0 }}
+            animate={{ opacity: effectivePanel === 'right' ? 1 : 0 }}
             transition={{ duration: 0.6 }}
           />
         </motion.div>
@@ -148,7 +162,7 @@ export const Hero = () => {
           animate={isRevealed ? "visible" : "hidden"}
         >
           <motion.div
-            animate={{ y: hoveredPanel === 'right' ? -12 : 0 }}
+            animate={{ y: effectivePanel === 'right' ? -12 : 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
             <motion.div variants={itemVariant}>
@@ -162,7 +176,7 @@ export const Hero = () => {
             </motion.p>
           </motion.div>
           <motion.div
-            animate={{ opacity: hoveredPanel === 'right' ? 1 : 0.3, y: hoveredPanel === 'right' ? 0 : 10, scale: hoveredPanel === 'right' ? 1 : 0.95 }}
+            animate={{ opacity: effectivePanel === 'right' ? 1 : 0.3, y: effectivePanel === 'right' ? 0 : 10, scale: effectivePanel === 'right' ? 1 : 0.95 }}
             transition={{ duration: 0.5 }}
             className="flex justify-center"
           >
