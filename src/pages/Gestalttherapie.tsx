@@ -96,7 +96,10 @@ const Gestalttherapie = () => {
           </div>
         </AnimatedSection>
 
-        {/* 3. Approach & Qualifications */}
+        {/* 3. Was ist Gestalttherapie? (moved up – answers the "how" right after the pain) */}
+        <GestaltScrollTelling />
+
+        {/* 4. Approach & Qualifications */}
         <AnimatedSection className="py-24 md:py-32 bg-off-white">
           <div className="container mx-auto px-6 md:px-4">
             <div className="max-w-5xl mx-auto">
@@ -235,8 +238,7 @@ const Gestalttherapie = () => {
           </div>
         </AnimatedSection>
 
-        {/* 7. ScrollTelling: Was ist Gestalttherapie? (Theorie) */}
-        <GestaltScrollTelling />
+        {/* Deeper Theory */}
 
         {/* 8. Philosophy */}
         <section className="py-24 md:py-32 bg-primary text-white relative overflow-hidden">
