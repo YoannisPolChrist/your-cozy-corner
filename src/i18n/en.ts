@@ -3,6 +3,7 @@ import { Translations } from './types';
 export const en: Translations = {
   nav: {
     gestalttherapie: 'Gestalt Therapy',
+    personalTraining: 'Personal Training',
     approach: 'My Approach',
     angebot: 'Services',
     ueberMich: 'About Me',
@@ -190,6 +191,10 @@ export const en: Translations = {
   },
 
   gestalttherapie: {
+    hero: {
+      subtitle: 'Psychological Counseling. Get out of your head, into your experience.',
+      cta: 'Free Discovery Call'
+    },
     gestaltIntro: {
       label: 'The Heart of My Work',
       title: 'Gestalt Therapy',
@@ -200,6 +205,20 @@ export const en: Translations = {
         { title: 'Contact', description: 'Healing happens in genuine connection – with yourself and the other.' },
       ],
       additionalInfo: 'Since Gestalt therapy is the heart of my work, here is some additional information:',
+    },
+    approach: {
+      label: 'Therapeutic Attitude',
+      title: 'Training & Background',
+      description: 'My work is based on a profound and multi-year Gestalt therapy training as well as continuous further education. The combination of academic psychology and depth-psychological Gestalt work allows us to address your issues where real change happens.',
+    },
+    qualifications: {
+      title: 'Gestalt Therapy Qualifications',
+      items: [
+        'Gestalt Therapist | 7-year intensive training at Institute for Gestalt and Experience, Heldenweg Institute & Prana Leipzig',
+        'M.Sc. Applied Psychology and Counseling | IU International University (in training, expected 2027)',
+        'Hero\'s Journey Facilitator (Paul Rebillot method) | Heldenweg Institute – Facilitation of structured Gestalt work and group processes',
+        'Systemic Family Constellations & Gestalt Practitioner | Prana Leipzig',
+      ],
     },
     scrollTelling: {
       title: 'Gestalt Therapy (The Heart of My Work)',
@@ -260,10 +279,44 @@ export const en: Translations = {
         { title: 'Creative Methods', description: 'Painting, writing, movement and music for authentic self-expression.' },
       ],
     },
+    painPoints: {
+      label: 'The Status Quo',
+      title: 'Is this your reality?',
+      items: [
+        {
+          title: 'The Feeling of Emptiness',
+          description: '"I feel somehow lost, sometimes lonely or disconnected – with myself, my own body, and my true feelings."'
+        },
+        {
+          title: 'Feeling Stuck & Disoriented',
+          description: '"Actually, I don\'t really know what I want or where my life path should go. I\'m just kind of stuck."'
+        },
+        {
+          title: 'In Your Head & Alienated',
+          description: '"I can perfectly analyze my entire life, but I\'ve lost true, tangible contact with myself. I want to get out of my head and feel something again."'
+        }
+      ]
+    },
+    philosophy: {
+      label: 'The Heart of the Work',
+      badges: [
+        '8 years in Gestalt therapy practice & training',
+        'M.Sc. Psychology & Counseling (in training)'
+      ],
+      title: 'Not more self-optimization. But peace.',
+      p1: 'We live in an age of absolute sensory overload. Often we wake up in the morning and aren\'t really there. We feel disconnected, powerless, and sometimes downright hopeless because everything seems so futile. Our mind tries to solve this emptiness through constant analysis – which only increases the restlessness.',
+      p2: 'The most effective way to interrupt this carousel of thoughts is <strong className="font-semibold text-primary">awareness</strong> in the here and now. It is about finding creative ways to no longer suppress your own life force. We process what remains unresolved from the past so that you can reconnect with yourself.',
+      quote: 'The ultimate goal is a deep inner peace that surpasses everything. A peace that gives you the feeling: No matter what happens, it is okay. And if it hurts, then that is okay too.'
+    },
     cta: {
       title: 'Curious to learn more?',
       description: 'Book a free discovery call or simply give me a ring to find out if working together makes sense.',
       button: 'Get in touch',
+    },
+    location: {
+      title: 'Location',
+      city: 'Toulouse Center',
+      description: 'IZICure, 47 Allées Jean Jaurès, 31000 Toulouse',
     },
   },
 
@@ -276,15 +329,14 @@ export const en: Translations = {
     services: [
       {
         title: 'Gestalt Therapy',
-        subline: 'THE HEART OF MY WORK',
+        subline: 'WHEN UNDERSTANDING IS NOT ENOUGH',
         description: 'Gestalt therapy is a humanistic approach that connects body, mind, and soul. We work in the here and now to make unconscious patterns tangible and resolve them. This enables true transformation and inner peace.',
       },
       {
         title: 'Coaching',
-        subline: 'INCL. DIAGNOSTICS',
+        subline: 'CLARITY THROUGH BODY INTELLIGENCE',
         description: 'While therapy goes deep, coaching provides strategic clarity and concrete steps. We connect your intellect with your body intelligence to make coherent decisions and create sustainable routines. This takes you from thinking to doing.',
       },
-
       {
         title: 'Personal Training',
         subline: 'MOVEMENT INSTEAD OF WORDS',
@@ -309,7 +361,7 @@ export const en: Translations = {
         price: '€50',
         priceLabel: '50 Minutes',
         title: 'Individual Session',
-        description: 'Sometimes a few hours are enough. Whether it\'s Gestalt therapy, coaching, or personal training – entirely according to your needs.',
+        description: 'Sometimes a few hours are enough.\nWhether it\'s Gestalt therapy, coaching, or personal training – entirely according to your needs.',
         cta: 'Book appointment',
       },
       intensiv: {
@@ -385,6 +437,11 @@ export const en: Translations = {
     hero: {
       label: 'JOHANNES CHRIST — GESTALT THERAPIST, COACHING, PERSONAL TRAINER',
       title: 'Lived, not just learned.',
+      byline: 'Gestalt Therapist, Coach & Bodyworker',
+      badges: [
+        '8 years of practice & training in Gestalt therapy',
+        'M.Sc. Psychology & Counseling (in training)'
+      ],
       description1: 'My journey began a few years ago through my own existential crisis. That\'s when I first encountered Gestalt therapy, which has never let go of me since. Through inner and outer work, I fought my way out of depression with the help of others and now stand stronger than ever.\n\nIn Leipzig and later in Innsbruck, alongside Gestalt therapy and many other trainings, I completed a degree in Movement Therapy and Prevention (B.A.).',
       description2: 'In my work today, I unite knowledge from current science with that of Gestalt. A Master\'s in Psychology (M.Sc.) supports this even more, so you can benefit from my full power and knowledge for yourself and your journey.',
     },
@@ -417,6 +474,12 @@ export const en: Translations = {
     arbeitsweise: {
       label: 'MY APPROACH',
       title: 'Space for what is.',
+      bodyP1: 'We live in an age of information overload. Often we wake up in the morning and aren\'t really present. We feel disconnected, powerless, sometimes even hopeless in the face of the constant stream of information and the pace of daily life.',
+      bodyP2Prefix: 'In my work as a therapist and coach, this is exactly the point: ',
+      bodyP2Strong: 'Pausing in the Here and Now',
+      bodyP2Suffix: '. We look at what still echoes unprocessed from the past – emotional pain or ingrained patterns – and find ways to stop suppressing your own creative life force.',
+      bodyP3: 'The goal is neither perfection nor constant performance, but a deeper peace. A peace that gives you the feeling: ',
+      bodyP3Italic: 'Whatever happens, it is okay. And if it hurts, then it may.',
       description1: 'Through exceptionally personal guidance that unites scientific physiological and psychological approaches, we create the change you desire.',
       description2: 'Whether before as a trainer and coach or today as a Gestalt therapist: I\'m your sparring partner! I hold the space for what has had no space before and bring movement to what has been stuck!',
       quote: '"What is, may be – and what can be, may change."',
@@ -504,7 +567,29 @@ export const en: Translations = {
     approach: {
       label: 'Athletics & Performance',
       title: 'Personal Training',
-      description: 'As a sports scientist (B.A. Prevention and Movement Therapy) and certified athletic trainer, I work evidence-based. No guessing, no cookie-cutter plans. We start with a functional assessment, identify your weak points, and build a training program that fits your lifestyle.\n\nWhether you want to come back from an injury, work preventively on your posture, or take your athletic performance to the next level – we find the way.',
+      description: 'Sometimes enough has been said. Enough felt. Sometimes change needs no further analysis, but simply sweat and action.\n\nAs a sports scientist (B.A.) and certified athletic trainer, we work evidence-based. This means we start with functional diagnostics and build a training program on that foundation that challenges and supports you. The body becomes an anchor: When you feel strength and endurance here, you carry this into the rest of your life.',
+    },
+    painPoints: {
+      label: 'The Status Quo',
+      title: 'Are you struggling with these hurdles?',
+      items: [
+        {
+          title: 'Lacking Drive',
+          description: '"I sit too much, often can\'t get moving on my own, and need someone to kick my butt occasionally."'
+        },
+        {
+          title: 'Physical Ailments',
+          description: '"Neck, back or knees hurt. Everyday life is often tiring. I just want to be pain-free, resilient and healthy again."'
+        },
+        {
+          title: 'Appearance & Well-being',
+          description: '"Sometimes I feel uncomfortable in my skin. I want to lose weight, build muscle, and feel really good (even naked) again."'
+        },
+        {
+          title: 'Athletic Performance',
+          description: '"Whether it\'s the next competition or the next level in training: I need professional and structured guidance to get the most out of myself."'
+        }
+      ]
     },
     services: [
       {
@@ -534,8 +619,8 @@ export const en: Translations = {
     },
     location: {
       title: 'Location',
-      city: 'Toulouse, France',
-      description: 'On-site training in Toulouse – outdoors, at a studio, or at your place.',
+      city: '12 Rue Jean Palaprat, 31000 Toulouse',
+      description: 'On-site training in Toulouse – outdoors, at the gym, or at your home.',
     },
     pricing: {
       title: 'Pricing',
@@ -564,6 +649,59 @@ export const en: Translations = {
       button: 'Book Appointment',
     },
   },
+
+  shared: {
+    pricingLabel: 'Transparency',
+    regularPrice: 'Regular',
+    testimonialsLabel: 'Testimonials',
+    testimonialsTitle: 'Voices of My Clients',
+    gestaltTestimonialsSubtitle: 'Integrity and confidentiality are top priorities. Here are a few anonymized insights.',
+    personalTrainingTestimonialsSubtitle: 'What others say about working together and the results.',
+    moreTestimonialsComingSoon: 'More insights and results coming soon',
+    moreReviewsComingSoon: 'More testimonials coming soon',
+    crossLinkLabel: 'The Other Dimension',
+    crossLinkGestaltTitle: 'Actually looking for clarity in your head?',
+    crossLinkGestaltDescription: 'Sometimes the problem is not in the body, but deeper. Discover my therapeutic approach for genuine emotional clarity.',
+    crossLinkGestaltButton: 'To Gestalt Therapy',
+    crossLinkTrainingTitle: 'More interested in physical change?',
+    crossLinkTrainingDescription: 'Sometimes mental transformation begins best through the physical body. Discover my evidence-based Personal Training.',
+    crossLinkTrainingButton: 'To Personal Training',
+    approachSectionTitle: 'Body & Mind in Motion',
+    servicesSectionLabel: 'Building Blocks',
+    servicesSectionTitle: 'My Services',
+    servicesSectionSubtitle: 'Evidence-based pillars for your physical transformation',
+    gestaltLocationTitle: 'Gestalt Therapy Practice',
+    gestaltPainLabel: 'The Starting Point',
+    gestaltPricingTitle: 'Pricing & Investment',
+  },
+
+  testimonials: {
+    gestalt: [
+      {
+        text: 'Genuine support at eye level. After countless talk therapy sessions, I finally felt in Gestalt therapy what it is really about. Out of the head, into experiencing.',
+        name: 'Anna M.',
+        role: 'Project Manager',
+      },
+      {
+        text: 'An absolutely transformative experience. Working with what is present in the moment dissolves deep-seated blockages.',
+        name: 'Thomas B.',
+        role: 'Freelancer',
+      },
+    ],
+    personalTraining: [
+      {
+        text: 'Training with Johannes has changed my life. I not only gained performance, but also got rid of pain.',
+        name: 'Michael S.',
+        role: 'Triathlete',
+      },
+      {
+        text: 'Evidence-based and incredibly motivating. The combination of athletic training and solid knowledge makes the difference.',
+        name: 'Sarah K.',
+        role: 'Entrepreneur',
+      },
+    ],
+  },
+
   legal: {
     impressum: {
       title: 'Legal Notice',

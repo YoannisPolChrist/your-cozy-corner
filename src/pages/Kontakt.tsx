@@ -233,7 +233,7 @@ const Kontakt = () => {
                       <div className="text-center mb-4">
                         <h4 className="font-heading text-[21px] sm:text-xl md:text-2xl text-primary mb-1.5 flex items-center justify-center gap-2">
                           <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" />
-                          {t.angebot?.formate?.map?.therapie?.title || "Gestalttherapie & Coaching"}
+                          {t.angebot?.formate?.map?.therapie?.title || "Gestalttherapie"}
                         </h4>
                         <p className="text-muted-foreground text-xs sm:text-sm mb-3">
                           {t.angebot?.formate?.map?.therapie?.description || "Hier finden die Sitzungen in einem sicheren Rahmen statt."}

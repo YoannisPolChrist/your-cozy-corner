@@ -57,8 +57,8 @@ export const Navigation = () => {
   };
 
   const navLinks = [
-    { to: 'ansatz', label: t.nav.approach },
-    { to: 'angebot', label: t.nav.angebot },
+    { to: 'gestalttherapie', label: t.nav.gestalttherapie },
+    { to: 'personal-training', label: t.nav.personalTraining },
     { to: 'ueber-mich', label: t.nav.ueberMich },
     { to: 'kontakt', label: t.nav.kontakt },
   ];

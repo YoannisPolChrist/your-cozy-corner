@@ -9,6 +9,10 @@ import { LanguageProvider } from "@/i18n";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { AnimatePresence } from "framer-motion";
 
+const ExternalRedirect = ({ to }: { to: string }) => {
+  window.location.replace(to);
+  return null;
+};
 
 // Eager load pages to prevent white screen / loading issues on navigation
 const Index = lazy(() => import("./pages/Index"));
@@ -32,9 +36,12 @@ const PageLoader = () => (
 );
 
 // Routes wrapped in language provider
+import { ScrollProgress } from "@/components/ui/scroll-progress";
+
 const AppRoutes = () => (
   <Suspense fallback={<PageLoader />}>
     <SmoothScroll>
+      <ScrollProgress />
       <AnimatePresence mode="wait">
         <Routes>
           {/* Root is handled by LanguageProvider redirect, but we provide a fallback */}
@@ -72,6 +79,11 @@ const AppRoutes = () => (
           <Route path="/kontakt" element={<Navigate to="/de/kontakt" replace />} />
           <Route path="/impressum" element={<Navigate to="/de/impressum" replace />} />
           <Route path="/datenschutz" element={<Navigate to="/de/datenschutz" replace />} />
+
+          {/* Anamnese External Redirects for cached Service Workers */}
+          {["/eingangsdiagnostik", "/Eingangsdiagnostik", "/de/eingangsdiagnostik", "/de/Eingangsdiagnostik", "/fr/eingangsdiagnostik", "/fr/Eingangsdiagnostik", "/en/eingangsdiagnostik", "/en/Eingangsdiagnostik", "/intake-assessment", "/en/intake-assessment", "/diagnostic-initial", "/fr/diagnostic-initial"].map(p => (
+            <Route key={p} path={p} element={<ExternalRedirect to="/Anamnese" />} />
+          ))}
 
           {/* Legal Pages (DE) */}
           <Route path="/de/impressum" element={<Impressum />} />

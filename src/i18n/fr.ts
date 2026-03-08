@@ -2,13 +2,14 @@ import { Translations } from './types';
 
 export const fr: Translations = {
   nav: {
-    gestalttherapie: 'Gestalt-thérapie',
+    gestalttherapie: 'Thérapie Gestalt',
+    personalTraining: 'Personal Training',
     approach: 'Mon Approche',
     angebot: 'Services',
-    ueberMich: 'À propos',
+    ueberMich: 'À Propos',
     kontakt: 'Contact',
     subtitle1: 'Gestalt-thérapeute, Coach,',
-    subtitle2: 'Personal Trainer',
+    subtitle2: 'Entraîneur Personnel',
   },
 
   seo: {
@@ -190,6 +191,10 @@ export const fr: Translations = {
   },
 
   gestalttherapie: {
+    hero: {
+      subtitle: 'Conseil psychologique. Sortir du mental pour revenir à l\'expérience.',
+      cta: 'Premier entretien gratuit'
+    },
     gestaltIntro: {
       label: 'Le cœur de mon travail',
       title: 'La Gestalt-thérapie',
@@ -200,6 +205,20 @@ export const fr: Translations = {
         { title: 'Contact', description: 'La guérison se produit dans une rencontre authentique – avec soi-même et avec l\'autre.' },
       ],
       additionalInfo: 'Comme la Gestalt-thérapie est le cœur de mon travail, voici quelques informations supplémentaires :',
+    },
+    approach: {
+      label: 'Attitude Thérapeutique',
+      title: 'Formation & Parcours',
+      description: 'Mon travail se base sur une formation approfondie de plusieurs années en Gestalt-thérapie ainsi qu\'une formation continue. La combinaison de la psychologie académique et du travail gestaltiste des profondeurs nous permet d\'aborder tes problématiques là où se produit le véritable changement.',
+    },
+    qualifications: {
+      title: 'Qualifications en Gestalt-thérapie',
+      items: [
+        'Gestalt-thérapeute | Formation intensive de 7 ans à l\'Institut de Gestalt et d\'Expérience, Institut Heldenweg & Prana Leipzig',
+        'M.Sc. Psychologie Appliquée et Conseil | IU Université Internationale (en formation, prévu 2027)',
+        'Facilitateur du Voyage du Héros (méthode Paul Rebillot) | Institut Heldenweg – Animation de processus de groupe',
+        'Constellations Familiales Systémiques & Praticien Gestalt | Prana Leipzig',
+      ],
     },
     scrollTelling: {
       title: 'Gestalt-thérapie (Le cœur de mon travail)',
@@ -260,10 +279,44 @@ export const fr: Translations = {
         { title: 'Méthodes créatives', description: 'Peinture, écriture, mouvement et musique pour une expression de soi authentique.' },
       ],
     },
+    painPoints: {
+      label: 'Le Status Quo',
+      title: 'Est-ce votre réalité ?',
+      items: [
+        {
+          title: 'Le sentiment de vide',
+          description: '"Je me sens un peu perdu, parfois seul ou déconnecté – de moi-même, de mon propre corps et de mes vrais sentiments."'
+        },
+        {
+          title: 'Blocage & Perte de repères',
+          description: '"En fait, je ne sais pas vraiment ce que je veux ni quelle direction ma vie devrait prendre. Je suis juste bloqué."'
+        },
+        {
+          title: 'Déconnecté & Trop dans le mental',
+          description: '"Je peux analyser parfaitement toute ma vie, mais j\'ai perdu le vrai contact avec moi-même. Je veux sortir de ma tête et ressentir à nouveau."'
+        }
+      ]
+    },
+    philosophy: {
+      label: 'Le cœur du travail',
+      badges: [
+        '8 ans de pratique & formation en Gestalt-thérapie',
+        'M.Sc. Psychologie & Conseil (en formation)'
+      ],
+      title: 'Pas encore plus d\'optimisation de soi. Mais de la paix.',
+      p1: 'Nous vivons à une époque de surcharge sensorielle absolue. Souvent, nous nous réveillons le matin sans être vraiment là. Nous nous sentons déconnectés, impuissants et parfois presque désespérés car tout semble si vain. Notre esprit essaie de résoudre ce vide par une analyse constante – ce qui ne fait qu\'augmenter l\'agitation.',
+      p2: 'Le moyen le plus efficace d\'interrompre ce carrousel de pensées est l\'<strong className="font-semibold text-primary">awareness</strong> (la pleine conscience de ce qui est là) dans l\'ici et maintenant. Il s\'agit de trouver des moyens créatifs de ne plus réprimer votre propre force vitale. Nous traitons ce qui reste inachevé et non résolu du passé afin que vous puissiez renouer avec vous-même et raviver cette frontière-contact.',
+      quote: 'Le but ultime est une paix intérieure profonde, qui dépasse tout le reste. Une paix qui donne le sentiment : peu importe ce qui arrive, c\'est ok. Et si ça a fait mal, c\'est ok aussi.'
+    },
     cta: {
       title: 'Curieux d\'en savoir plus ?',
       description: 'Réserve un appel découverte gratuit ou appelle-moi simplement pour découvrir si une collaboration fait sens.',
       button: 'Me contacter',
+    },
+    location: {
+      title: 'Lieu',
+      city: 'Toulouse Centre',
+      description: 'IZICure, 47 Allées Jean Jaurès, 31000 Toulouse',
     },
   },
 
@@ -384,6 +437,11 @@ export const fr: Translations = {
     hero: {
       label: 'JOHANNES CHRIST — GESTALT-THÉRAPEUTE, COACHING, PERSONAL TRAINER',
       title: 'Vécu, pas seulement appris.',
+      byline: 'Gestalt-thérapeute, Coach & Praticien Corporel',
+      badges: [
+        '8 ans de pratique & formation en Gestalt-thérapie',
+        'M.Sc. Psychologie & Conseil (en formation)'
+      ],
       description1: 'Mon parcours a commencé il y a quelques années par ma propre crise existentielle. C\'est alors que j\'ai rencontré pour la première fois la Gestalt-thérapie, qui ne m\'a plus quitté depuis. Par le travail intérieur et extérieur, je me suis battu pour sortir de la dépression avec l\'aide des autres et je me tiens aujourd\'hui plus fort que jamais.\n\nÀ Leipzig puis à Innsbruck, en plus de la Gestalt-thérapie et de nombreuses autres formations, j\'ai obtenu un diplôme en Thérapie par le Mouvement et Prévention (B.A.).',
       description2: 'Dans mon travail aujourd\'hui, je réunis les connaissances de la science actuelle avec celles de la Gestalt. Un Master en Psychologie (M.Sc.) soutient cela encore davantage, pour que tu puisses bénéficier de toute ma puissance et mes connaissances pour toi et ton chemin.',
     },
@@ -416,6 +474,12 @@ export const fr: Translations = {
     arbeitsweise: {
       label: 'MON APPROCHE',
       title: 'Espace pour ce qui est.',
+      bodyP1: 'Nous vivons à une époque de surcharge d\'informations. Souvent, nous nous réveillons le matin sans être vraiment présents. Nous nous sentons déconnectés, impuissants, parfois même désespérés face au flux constant d\'informations et au rythme de la vie quotidienne.',
+      bodyP2Prefix: 'Dans mon travail de thérapeute et coach, c\'est exactement ce point qui est au cœur : ',
+      bodyP2Strong: 'S\'arrêter dans l\'Ici et Maintenant',
+      bodyP2Suffix: '. Nous regardons ce qui continue de résonner non traité depuis le passé – douleur émotionnelle ou schémas ancrés – et trouvons des moyens de ne plus réprimer ta propre force de vie créative.',
+      bodyP3: 'L\'objectif n\'est ni la perfection ni la performance constante, mais une paix plus profonde. Une paix qui te donne le sentiment : ',
+      bodyP3Italic: 'Quoi qu\'il arrive, c\'est okay. Et si ça fait mal, alors c\'est permis.',
       description1: 'Grâce à un accompagnement exceptionnellement personnel qui unit les approches scientifiques physiologiques et psychologiques, nous créons le changement que tu désires.',
       description2: 'Qu\'il s\'agisse d\'avant en tant qu\'entraîneur et coach ou aujourd\'hui en tant que Gestalt-thérapeute : je suis ton partenaire d\'entraînement ! Je maintiens l\'espace pour ce qui n\'a jamais eu d\'espace et je mets en mouvement ce qui était bloqué !',
       quote: '« Ce qui est, peut être – et ce qui peut être, peut changer. »',
@@ -505,6 +569,28 @@ export const fr: Translations = {
       title: 'Personal Training',
       description: 'En tant que scientifique du sport (B.A. Prévention et Thérapie par le Mouvement) et entraîneur athlétique diplômé, je travaille sur une base scientifique. Pas de devinettes, pas de programmes standards. On commence par un bilan fonctionnel, on identifie tes points faibles et on construit un programme adapté à ton quotidien.\n\nQue tu veuilles revenir après une blessure, travailler préventivement sur ta posture ou amener ta performance sportive au niveau supérieur – on trouve le chemin.',
     },
+    painPoints: {
+      label: 'Le Status Quo',
+      title: 'Luttez-vous contre ces obstacles ?',
+      items: [
+        {
+          title: 'Manque de motivation',
+          description: '"Je suis trop souvent assis, j\'ai du mal à me mettre en mouvement seul, et j\'ai parfois besoin de quelqu\'un pour me donner un coup de pied aux fesses."'
+        },
+        {
+          title: 'Douleurs physiques',
+          description: '"La nuque, le dos ou les genoux font mal. Le quotidien est souvent épuisant. Je veux simplement être à nouveau sans douleur, résistant et en bonne santé."'
+        },
+        {
+          title: 'Apparence & Bien-être',
+          description: '"Parfois, je ne me sens pas à l\'aise dans ma peau. Je veux perdre du poids, développer mes muscles et me sentir vraiment bien (même nu) à nouveau."'
+        },
+        {
+          title: 'Performance sportive',
+          description: '"Que ce soit pour la prochaine compétition ou le prochain niveau d\'entraînement : j\'ai besoin d\'un accompagnement professionnel et structuré pour donner le meilleur de moi-même."'
+        }
+      ]
+    },
     services: [
       {
         title: 'Athlétisme & Performance',
@@ -532,9 +618,9 @@ export const fr: Translations = {
       ],
     },
     location: {
-      title: 'Localisation',
-      city: 'Toulouse, France',
-      description: 'Entraînement sur place à Toulouse – en extérieur, en salle ou chez toi.',
+      title: 'Lieu',
+      city: '12 Rue Jean Palaprat, 31000 Toulouse',
+      description: 'Entraînement sur place à Toulouse – en extérieur, en salle ou chez vous.',
     },
     pricing: {
       title: 'Tarifs',
@@ -563,6 +649,59 @@ export const fr: Translations = {
       button: 'Prendre rendez-vous',
     },
   },
+
+  shared: {
+    pricingLabel: 'Transparence',
+    regularPrice: 'Régulier',
+    testimonialsLabel: 'Témoignages',
+    testimonialsTitle: 'Voix de mes clients',
+    gestaltTestimonialsSubtitle: 'L\'intégrité et la confidentialité sont des priorités absolues. Voici quelques aperçus anonymisés.',
+    personalTrainingTestimonialsSubtitle: 'Ce que les autres disent de la collaboration et des résultats.',
+    moreTestimonialsComingSoon: 'Plus d\'aperçus et de résultats à venir',
+    moreReviewsComingSoon: 'D\'autres témoignages à venir',
+    crossLinkLabel: 'L\'Autre Dimension',
+    crossLinkGestaltTitle: 'En fait à la recherche de clarté dans la tête ?',
+    crossLinkGestaltDescription: 'Parfois, le problème n\'est pas dans le corps, mais plus profond. Découvre mon approche thérapeutique pour une vraie clarté émotionnelle.',
+    crossLinkGestaltButton: 'Vers la Gestalt-thérapie',
+    crossLinkTrainingTitle: 'Plus intéressé par le changement physique ?',
+    crossLinkTrainingDescription: 'Parfois, la transformation mentale commence mieux par le corps physique. Découvre mon coaching sportif basé sur les preuves.',
+    crossLinkTrainingButton: 'Vers le Personal Training',
+    approachSectionTitle: 'Corps & Esprit en Mouvement',
+    servicesSectionLabel: 'Les Piliers',
+    servicesSectionTitle: 'Mes Services',
+    servicesSectionSubtitle: 'Piliers basés sur les preuves pour ta transformation physique',
+    gestaltLocationTitle: 'Cabinet de Gestalt-thérapie',
+    gestaltPainLabel: 'Le Point de Départ',
+    gestaltPricingTitle: 'Tarifs & Investissement',
+  },
+
+  testimonials: {
+    gestalt: [
+      {
+        text: 'Un vrai accompagnement d\'égal à égal. Après d\'innombrables séances de thérapie par la parole, j\'ai enfin ressenti en Gestalt-thérapie ce dont il s\'agit vraiment. Sortir de la tête, entrer dans l\'expérience.',
+        name: 'Anna M.',
+        role: 'Cheffe de projet',
+      },
+      {
+        text: 'Une expérience absolument transformatrice. Travailler avec ce qui est présent dans le moment dissout les blocages profondément enracinés.',
+        name: 'Thomas B.',
+        role: 'Freelance',
+      },
+    ],
+    personalTraining: [
+      {
+        text: 'L\'entraînement avec Johannes a changé ma vie. J\'ai non seulement gagné en performance, mais je me suis aussi débarrassé des douleurs.',
+        name: 'Michael S.',
+        role: 'Triathlète',
+      },
+      {
+        text: 'Basé sur les preuves et incroyablement motivant. La combinaison d\'entraînement athlétique et de connaissances solides fait la différence.',
+        name: 'Sarah K.',
+        role: 'Entrepreneuse',
+      },
+    ],
+  },
+
   legal: {
     impressum: {
       title: 'Mentions Légales',

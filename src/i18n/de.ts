@@ -3,6 +3,7 @@ import { Translations } from './types';
 export const de: Translations = {
   nav: {
     gestalttherapie: 'Gestalttherapie',
+    personalTraining: 'Personal Training',
     approach: 'Mein Ansatz',
     angebot: 'Angebot',
     ueberMich: 'Über mich',
@@ -13,7 +14,7 @@ export const de: Translations = {
 
   seo: {
     index: {
-      title: 'Gestalttherapie, Coaching & Training',
+      title: 'Gestalttherapie & Training',
       description: 'Ganzheitliche Begleitung in Toulouse: Gestalttherapie, Coaching und Personal Training. M.Sc. Psychologe & Sportwissenschaftler Johannes Christ. Termine in Präsenz & Online.',
       keywords: 'Gestalttherapie, Coaching, Personal Training, Toulouse, Psychologe, Therapie, Beratung, Online Coaching, Deutsch, Englisch, Französisch',
     },
@@ -190,6 +191,10 @@ export const de: Translations = {
   },
 
   gestalttherapie: {
+    hero: {
+      subtitle: 'Psychologische Beratung. Raus aus dem Kopf, rein ins Erleben.',
+      cta: 'Kostenloses Erstgespräch'
+    },
     gestaltIntro: {
       label: 'Das Herzstück meiner Arbeit',
       title: 'Die Gestalttherapie',
@@ -200,6 +205,20 @@ export const de: Translations = {
         { title: 'Kontakt', description: 'Heilung geschieht in der echten Begegnung – mit sich selbst und dem Gegenüber.' },
       ],
       additionalInfo: 'Da die Gestalttherapie das Herzstück meiner Arbeit darstellt, hier noch zusätzliche Infos:',
+    },
+    approach: {
+      label: 'Therapeutische Haltung',
+      title: 'Ausbildung & Hintergrund',
+      description: 'Meine Arbeit basiert auf einer fundierten und langjährigen gestalttherapeutischen Ausbildung sowie kontinuierlicher Weiterbildung. Die Kombination aus akademischer Psychologie und tiefenpsychologischer Gestaltarbeit ermöglicht es uns, deine Themen dort anzugehen, wo wirkliche Veränderung passiert.',
+    },
+    qualifications: {
+      title: 'Gestalttherapeutische Qualifikationen',
+      items: [
+        'Gestalttherapeut | 7-jährige Intensivausbildung Institut für Gestalt und Erfahrung, Heldenweginstitut & Prana Leipzig',
+        'M.Sc. Angewandte Psychologie und Beratung | IU Internationale Hochschule (i.A., vsl. 2027)',
+        'Heldenreiseleiter (nach Paul Rebillot) | Heldenweg-Institut – Leitung von strukturierter Gestaltarbeit und Gruppenprozessen',
+        'Systemisches Familienstellen & Gestaltpractitioner | Prana Leipzig',
+      ],
     },
     scrollTelling: {
       title: 'Gestalttherapie',
@@ -260,10 +279,44 @@ export const de: Translations = {
         { title: 'Kreative Methoden', description: 'Malen, Schreiben, Bewegung und Musik für authentischen Selbstausdruck.' },
       ],
     },
+    painPoints: {
+      label: 'Der Status Quo',
+      title: 'Womöglich deine Realität.',
+      items: [
+        {
+          title: 'Das Gefühl von Enge',
+          description: '"Ich fühle mich irgendwie verloren, manchmal einsam oder unverbunden – mit mir selbst, meinem eigenen Körper und meinen echten Gefühlen."'
+        },
+        {
+          title: 'Feststecken & Orientierungslosigkeit',
+          description: '"Eigentlich weiß ich gar nicht genau, was ich will oder wohin mein Lebensweg gehen soll. Ich stecke einfach irgendwie fest."'
+        },
+        {
+          title: 'Verkopft & Entfremdet',
+          description: '"Ich kann mein ganzes Leben perfekt analysieren, aber ich habe den echten, spürbaren Kontakt zu mir verloren. Ich will aus dem Kopf raus und wieder etwas fühlen."'
+        }
+      ]
+    },
+    philosophy: {
+      label: 'Der Kern der Arbeit',
+      badges: [
+        'Seit 8 Jahren in gestalttherapeutischer Praxis & Fortbildung',
+        'M.Sc. Psychologie & Beratung (i.A.)'
+      ],
+      title: 'Nicht noch mehr Selbstoptimierung. Sondern Frieden.',
+      p1: 'Wir leben in einer Zeit der absoluten Reizüberflutung. Oft wachen wir morgens auf und sind gar nicht richtig da. Wir fühlen uns abgetrennt, ohnmächtig und manchmal geradezu hoffnungslos, weil alles so ausweglos erscheint. Unser Verstand versucht diese Leere durch ständiges Analysieren zu lösen – was die Unruhe nur vergrößert.',
+      p2: 'Die wirksamste Möglichkeit, dieses Gedankenkarussell zu unterbrechen, ist das <strong className="font-semibold text-primary">Gewahrwerden</strong> im Hier und Jetzt. Es geht darum, kreative Wege zu finden, deine eigene Lebenskraft nicht länger zu unterdrücken. Wir arbeiten das auf, was von früher noch unverarbeitet nachwirkt, damit du wieder in Verbindung mit dir selbst kommst.',
+      quote: 'Das eigentliche Ziel ist ein tiefer innerer Frieden, der alles übersteigt. Ein Frieden, der dir das Gefühl gibt: Egal was passiert, es ist okay. Und wenn es wehgetan hat, dann ist auch das okay.'
+    },
     cta: {
       title: 'Neugierig geworden?',
       description: 'Vereinbare ein kostenloses Kennenlerngespräch oder ruf einfach durch, um herauszufinden, ob eine Zusammenarbeit sinnvoll ist.',
       button: 'Kontakt aufnehmen',
+    },
+    location: {
+      title: 'Standort',
+      city: 'Toulouse Zentrum',
+      description: 'IZICure, 47 Allées Jean Jaurès, 31000 Toulouse',
     },
   },
 
@@ -384,6 +437,11 @@ export const de: Translations = {
     hero: {
       label: 'JOHANNES CHRIST — GESTALTTHERAPEUT, COACHING, PERSONAL TRAINER',
       title: 'Gelebt, nicht nur gelernt.',
+      byline: 'Gestalttherapeut, Coach & Körperarbeiter',
+      badges: [
+        'Seit 8 Jahren Praxis & Fortbildung',
+        'M.Sc. Psychologie & Beratung (i.A.)'
+      ],
       description1: 'Mein Weg begann vor einigen Jahren durch eine eigene existenzielle Krise. Damals kam ich zum erstenmal mit der Gestalttherapie in Kontakt, welche mich seither nicht mehr loslässt. Durch innere und äußere Arbeit, habe ich mich mit Hilfe Anderer aus der Drepression gekämpft und stehe so kraftvoll da wie noch nie.\n\nIn Leipzig und später in Innsbruck, habe ich neben der Gestalttherapie und vielen anderen Fortbildungen, ein Studium in der Bewegungstherapie und Prävention (B.A.) abgeschlossen.',
       description2: 'In meiner Arbeit heute vereine ich das Wissen aus der aktuellen Wissenschaft mit der der Gestalt. Ein Master in Psychologie (M.Sc.) unterstützt dies einmal mehr, sodass du meine geballte Power und Wissen für dich und deinen Weg nutzen kannst.',
     },
@@ -416,6 +474,12 @@ export const de: Translations = {
     arbeitsweise: {
       label: 'MEINE ARBEITSWEISE',
       title: 'Raum für das, was ist.',
+      bodyP1: 'Wir leben in einer Zeit der Reizüberflutung. Oft wachen wir morgens schon auf und sind gar nicht richtig da. Wir fühlen uns abgetrennt, machtlos, manchmal sogar hoffnungslos angesichts der Informationsflut und der Geschwindigkeit unseres Alltags.',
+      bodyP2Prefix: 'In meiner Arbeit als Therapeut und Coach geht es genau um diesen Punkt: ',
+      bodyP2Strong: 'Das Innehalten im Hier und Jetzt',
+      bodyP2Suffix: '. Wir schauen uns an, was von früher noch unverarbeitet nachwirkt – emotionaler Schmerz oder festgefahrene Muster – und finden Wege, deine eigene kreative Lebenskraft nicht länger zu unterdrücken.',
+      bodyP3: 'Das Ziel ist weder Perfektion noch ständige Leistung, sondern ein tieferer Frieden. Ein Frieden, der dir das Gefühl gibt: ',
+      bodyP3Italic: 'Egal was passiert, es ist okay. Und wenn es wehtut, dann darf es das.',
       description1: 'Durch eine außergewöhnlich persönliche Begleitung, die wissenschaftliche physio- & psychologische Ansätze vereint, schaffen wir die Veränderung, die du dir wünschst.',
       description2: 'Ob früher als Trainer und Coach oder heute als Gestalttherapeut: Ich bin dein Sparringspartner! Ich halte den Raum für das, was bisher keinen Raum hatte und bringe mit dir das in Bewegung, was bisher feststeckt!',
       quote: '„Das, was ist, darf sein – und was sein kann, darf sich verändern."',
@@ -429,7 +493,7 @@ export const de: Translations = {
       label: 'PERSÖNLICH',
       title: 'Und sonst so?',
       description1: 'Wer mich kennt, weiß: Ich nehme meine Arbeit ernst. Wenn wir aber irgendwann nichts mehr zum Lachen haben, dann wird\'s kritisch. Dann stimmt was nicht. Ich glaube an die Kraft von Humor, Leichtigkeit und echten Begegnungen.',
-      description2: 'Abseits der Therapie findest du mich beim Sport, unterwegs mit Freunden oder bei meinen Rhetorikclubs. Ein erfülltes Leben besteht, zumindest für mich, aus vielen kleinen Momenten der Verbundenheit – mit uns selbst, mit anderen und dem Universum als Ganzem.',
+      description2: 'Abseits der Therapie findest du mich beim Sport, unterwegs mit Freunden oder bei meinen Rhetorikclubs. Ein erfülltes Leben besteht, zumindest für mich, aus vielen kleinen Momenten der Verbundenheit – mit uns selbst, mit anderen und dem Universum als Ganzes.',
     },
     training: {
       label: 'DIE DRITTE DIMENSION',
@@ -505,6 +569,28 @@ export const de: Translations = {
       title: 'Personal Training',
       description: 'Manchmal ist genug geredet. Genug gefühlt. Manchmal braucht Veränderung keine weitere Analyse, sondern einfach Schweiß und Handlung.\n\nAls Sportwissenschaftler (B.A.) und Diplom-Athletiktrainer arbeiten wir evidenzbasiert. D.h. wir starten mit einer funktionellen Diagnostik und bauen darauf ein Training auf, das dich fordert und fördert. Der Körper wird zum Anker: Wenn du hier Stärke und Durchhaltevermögen spürst, nimmst du das auch in den Rest deines Lebens mit.',
     },
+    painPoints: {
+      label: 'Der Status Quo',
+      title: 'Kämpfst du mit diesen Hürden?',
+      items: [
+        {
+          title: 'Der Antrieb fehlt',
+          description: '"Ich sitze zu viel, komme von alleine oft nicht in Bewegung und brauche jemanden, der mir ab und zu auch mal in den Hintern tritt."'
+        },
+        {
+          title: 'Körperliche Beschwerden',
+          description: '"Nacken, Rücken oder Knie tun weh. Der Alltag ist oftmals anstrengend. Ich will einfach wieder schmerzfrei, belastbar und gesund sein."'
+        },
+        {
+          title: 'Optik & Wohlbefinden',
+          description: '"Ich fühle mich manchmal unwohl in meiner Haut. Ich möchte Gewicht verlieren, Muskeln aufbauen und mich (auch nackt) wieder richtig gut fühlen."'
+        },
+        {
+          title: 'Sportliche Performance',
+          description: '"Ob nächster Wettkampf oder das nächste Level im Training: Ich brauche professionelle und strukturierte Begleitung, um alles aus mir herauszuholen."'
+        }
+      ]
+    },
     services: [
       {
         title: 'Athletik & Performance',
@@ -533,7 +619,7 @@ export const de: Translations = {
     },
     location: {
       title: 'Standort',
-      city: 'Toulouse, Frankreich',
+      city: '12 Rue Jean Palaprat, 31000 Toulouse',
       description: 'Training vor Ort in Toulouse – draußen, im Studio oder bei dir zu Hause.',
     },
     pricing: {
@@ -563,6 +649,59 @@ export const de: Translations = {
       button: 'Termin vereinbaren',
     },
   },
+
+  shared: {
+    pricingLabel: 'Transparenz',
+    regularPrice: 'Regulär',
+    testimonialsLabel: 'Erfahrungen',
+    testimonialsTitle: 'Stimmen meiner Klienten',
+    gestaltTestimonialsSubtitle: 'Integrität und Vertraulichkeit haben höchste Priorität. Hier ein paar anonymisierte Einblicke.',
+    personalTrainingTestimonialsSubtitle: 'Was andere über die Zusammenarbeit und Ergebnisse sagen.',
+    moreTestimonialsComingSoon: 'Mehr Einblicke und Ergebnisse folgen in Kürze',
+    moreReviewsComingSoon: 'Weitere Erfahrungsberichte folgen',
+    crossLinkLabel: 'Die andere Dimension',
+    crossLinkGestaltTitle: 'Eigentlich auf der Suche nach Orientierung im Kopf?',
+    crossLinkGestaltDescription: 'Manchmal sitzt das Problem nicht im Körper, sondern tiefer. Entdecke meinen therapeutischen Ansatz für echte emotionale Klarheit.',
+    crossLinkGestaltButton: 'Zur Gestalttherapie',
+    crossLinkTrainingTitle: 'Eher auf der Suche nach körperlicher Veränderung?',
+    crossLinkTrainingDescription: 'Manchmal beginnt die mentale Transformation am besten über den eigenen physischen Körper. Entdecke mein evidenzbasiertes Personal Training.',
+    crossLinkTrainingButton: 'Zum Personal Training',
+    approachSectionTitle: 'Körper & Geist in Bewegung',
+    servicesSectionLabel: 'Bausteine',
+    servicesSectionTitle: 'Mein Angebot',
+    servicesSectionSubtitle: 'Evidenzbasierte Säulen für deine körperliche Transformation',
+    gestaltLocationTitle: 'Praxis für Gestalttherapie',
+    gestaltPainLabel: 'Die Ausgangslage',
+    gestaltPricingTitle: 'Konditionen & Investition',
+  },
+
+  testimonials: {
+    gestalt: [
+      {
+        text: 'Echte Begleitung auf Augenhöhe. Nach unzähligen Gesprächstherapien habe ich in der Gestalttherapie endlich gespürt, worum es wirklich geht. Raus aus dem Kopf, rein ins Erleben.',
+        name: 'Anna M.',
+        role: 'Projektleiterin',
+      },
+      {
+        text: 'Eine absolut transformative Erfahrung. Die Arbeit mit dem, was im Moment da ist, löst tiefliegende Blockaden.',
+        name: 'Thomas B.',
+        role: 'Freiberufler',
+      },
+    ],
+    personalTraining: [
+      {
+        text: 'Das Training mit Johannes hat mein Leben verändert. Ich habe nicht nur an Leistung gewonnen, sondern auch Schmerzen losgeworden.',
+        name: 'Michael S.',
+        role: 'Triathlet',
+      },
+      {
+        text: 'Evidenzbasiert und wahnsinnig motivierend. Die Kombination aus Athletiktraining und fundiertem Wissen macht den Unterschied.',
+        name: 'Sarah K.',
+        role: 'Unternehmerin',
+      },
+    ],
+  },
+
   legal: {
     impressum: {
       title: 'Impressum',

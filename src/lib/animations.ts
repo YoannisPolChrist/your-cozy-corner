@@ -1,19 +1,19 @@
 import { Variants } from "framer-motion";
 
-// Performance-optimized easing - GPU-friendly
-export const cinematicEase = [0.25, 0.1, 0.25, 1] as const;
+// Performance-optimized easing - Ultra Smooth Apple-style
+export const cinematicEase = [0.16, 1, 0.3, 1] as const;
 
 // Standard fade up animation - The primary movement
 export const fadeUp: Variants = {
   hidden: {
     opacity: 0,
-    y: 12
+    y: 20
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.35,
+      duration: 0.8,
       ease: cinematicEase,
     }
   }
@@ -88,13 +88,13 @@ export const staggerContainer: Variants = {
 export const staggerItem: Variants = {
   hidden: {
     opacity: 0,
-    y: 12
+    y: 24
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.35,
+      duration: 0.8,
       ease: cinematicEase,
     }
   }
@@ -106,8 +106,8 @@ export const cardStagger: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.07,
-      delayChildren: 0.03,
+      staggerChildren: 0.1,
+      delayChildren: 0.05,
     }
   }
 };
@@ -116,13 +116,13 @@ export const cardStagger: Variants = {
 export const cardItem: Variants = {
   hidden: {
     opacity: 0,
-    y: 15,
+    y: 30,
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.35,
+      duration: 0.8,
       ease: cinematicEase,
     }
   }

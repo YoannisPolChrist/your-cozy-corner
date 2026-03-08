@@ -4,6 +4,7 @@ export interface Translations {
   // Navigation
   nav: {
     gestalttherapie: string;
+    personalTraining: string;
     approach: string;
     angebot: string;
     ueberMich: string;
@@ -172,6 +173,10 @@ export interface Translations {
 
   // Gestalttherapie Page
   gestalttherapie: {
+    hero: {
+      subtitle: string;
+      cta: string;
+    };
     gestaltIntro?: {
       label?: string;
       title: string;
@@ -181,6 +186,15 @@ export interface Translations {
         description: string;
       }>;
       additionalInfo?: string;
+    };
+    approach?: {
+      label: string;
+      title: string;
+      description: string;
+    };
+    qualifications?: {
+      title: string;
+      items: string[];
     };
     scrollTelling: {
       title: string;
@@ -225,10 +239,31 @@ export interface Translations {
         description: string;
       }>;
     };
+    painPoints: {
+      label: string;
+      title: string;
+      items: Array<{
+        title: string;
+        description: string;
+      }>;
+    };
+    philosophy: {
+      label: string;
+      badges: string[];
+      title: string;
+      p1: string;
+      p2: string;
+      quote: string;
+    };
     cta: {
       title: string;
       description: string;
       button: string;
+    };
+    location?: {
+      title: string;
+      city: string;
+      description: string;
     };
   };
 
@@ -324,6 +359,8 @@ export interface Translations {
     hero: {
       label: string;
       title: string;
+      byline?: string;
+      badges?: string[];
       description1: string;
       description2: string;
     };
@@ -345,6 +382,12 @@ export interface Translations {
     arbeitsweise: {
       label: string;
       title: string;
+      bodyP1?: string;
+      bodyP2Prefix?: string;
+      bodyP2Strong?: string;
+      bodyP2Suffix?: string;
+      bodyP3?: string;
+      bodyP3Italic?: string;
       description1: string;
       description2: string;
       quote: string;
@@ -372,6 +415,46 @@ export interface Translations {
       description: string;
       button: string;
     };
+  };
+
+  // Shared UI strings used across multiple pages
+  shared?: {
+    pricingLabel: string;
+    regularPrice: string;
+    testimonialsLabel: string;
+    testimonialsTitle: string;
+    gestaltTestimonialsSubtitle: string;
+    personalTrainingTestimonialsSubtitle: string;
+    moreTestimonialsComingSoon: string;
+    moreReviewsComingSoon: string;
+    crossLinkLabel: string;
+    crossLinkGestaltTitle: string;
+    crossLinkGestaltDescription: string;
+    crossLinkGestaltButton: string;
+    crossLinkTrainingTitle: string;
+    crossLinkTrainingDescription: string;
+    crossLinkTrainingButton: string;
+    approachSectionTitle: string;
+    servicesSectionLabel: string;
+    servicesSectionTitle: string;
+    servicesSectionSubtitle: string;
+    gestaltLocationTitle: string;
+    gestaltPainLabel: string;
+    gestaltPricingTitle: string;
+  };
+
+  // Testimonials
+  testimonials?: {
+    gestalt: Array<{
+      text: string;
+      name: string;
+      role: string;
+    }>;
+    personalTraining: Array<{
+      text: string;
+      name: string;
+      role: string;
+    }>;
   };
 
   // Kontakt Page
@@ -437,6 +520,14 @@ export interface Translations {
       label?: string;
       title: string;
       description: string;
+    };
+    painPoints: {
+      label: string;
+      title: string;
+      items: Array<{
+        title: string;
+        description: string;
+      }>;
     };
     services: Array<{
       title: string;
