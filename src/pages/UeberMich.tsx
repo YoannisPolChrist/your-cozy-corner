@@ -308,7 +308,7 @@ const UeberMich = () => {
                 </motion.div>
 
                 {/* Image with Gold Frame */}
-                <motion.div className="relative order-2 md:order-2 max-w-sm md:max-w-lg mx-auto md:mx-0">
+                <motion.div className="relative order-2 md:order-2 w-full mx-auto md:mx-0">
                   <motion.div
                     variants={goldFrameVariants}
                     className="absolute -bottom-4 right-4 md:-bottom-6 md:right-6 w-full h-full bg-accent rounded-2xl"
@@ -317,7 +317,7 @@ const UeberMich = () => {
                     src={johannesCoachingTalk}
                     alt="Therapeutische Arbeit"
                     className="object-cover relative z-10"
-                    aspectRatio="aspect-[4/3]"
+                    aspectRatio="aspect-[3/4]"
                   />
                 </motion.div>
               </div>
