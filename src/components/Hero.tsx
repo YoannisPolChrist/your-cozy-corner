@@ -27,8 +27,22 @@ const itemVariant: Variants = {
 export const Hero = () => {
   const { t, getLocalizedPath } = useLanguage();
   const [hoveredPanel, setHoveredPanel] = useState<'left' | 'right' | null>(null);
+  const [activePanel, setActivePanel] = useState<'left' | 'right' | null>(null);
   const [isRevealed, setIsRevealed] = useState(false);
   useEffect(() => { const timer = setTimeout(() => setIsRevealed(true), 100); return () => clearTimeout(timer); }, []);
+
+  // On mobile, activePanel drives the visual state; on desktop, hoveredPanel does
+  const effectivePanel = hoveredPanel ?? activePanel;
+
+  const handlePanelTap = (panel: 'left' | 'right', path: string) => {
+    if (window.innerWidth >= 768) return; // desktop uses hover
+    if (activePanel === panel) {
+      // Second tap → navigate
+      window.location.href = path;
+    } else {
+      setActivePanel(panel);
+    }
+  };
 
   return (
     <section className="relative h-[100dvh] w-full flex flex-col md:flex-row overflow-hidden bg-black" aria-label="Hero">
