@@ -187,12 +187,12 @@ export const de: Translations = {
       ],
     },
     painPoints: {
-      label: 'Der Status Quo',
-      title: 'Womöglich deine Realität.',
+      label: 'Die Welt, in der wir leben',
+      title: 'Zwischen Dauerkrise und innerem Stillstand.',
       items: [
-        { title: 'Das Gefühl von Enge', description: '"Ich fühle mich irgendwie verloren, manchmal einsam oder unverbunden."' },
-        { title: 'Feststecken & Orientierungslosigkeit', description: '"Eigentlich weiß ich gar nicht genau, was ich will oder wohin mein Lebensweg gehen soll."' },
-        { title: 'Verkopft & Entfremdet', description: '"Ich kann mein ganzes Leben perfekt analysieren, aber ich habe den echten Kontakt zu mir verloren."' },
+        { title: 'Einsamkeit in einer vernetzten Welt', description: 'Kriege, Polarisierung, Reizüberflutung – die Welt da draußen wird lauter, aber die Verbindung zu sich selbst und zu anderen wird leiser. Einsamkeit ist laut WHO zur globalen Gesundheitskrise geworden.' },
+        { title: 'Orientierungslos im Überangebot', description: 'Zu viele Optionen, zu wenig Klarheit. Zwischen Karrieredruck, gesellschaftlichem Wandel und der Frage "Was soll das alles?" bleibt ein Gefühl zurück: Ich funktioniere – aber ich lebe nicht wirklich.' },
+        { title: 'Abgeschnitten vom eigenen Erleben', description: 'Wir analysieren, optimieren, scrollen – und verlieren dabei den Kontakt zu dem, was wirklich zählt. Der Körper signalisiert längst, was der Kopf noch nicht wahrhaben will.' },
       ],
     },
     philosophy: {
@@ -352,7 +352,7 @@ export const de: Translations = {
     servicesSectionLabel: 'Bausteine', servicesSectionTitle: 'Mein Angebot',
     servicesSectionSubtitle: 'Evidenzbasierte Säulen für deine körperliche Transformation',
     gestaltLocationTitle: 'Praxis für Gestalttherapie',
-    gestaltPainLabel: 'Die Ausgangslage', gestaltPricingTitle: 'Konditionen & Investition',
+    gestaltPainLabel: 'Die Welt, in der wir leben', gestaltPricingTitle: 'Konditionen & Investition',
   },
   testimonials: {
     gestalt: [
