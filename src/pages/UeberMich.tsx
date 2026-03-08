@@ -70,7 +70,7 @@ const UeberMich = () => {
                   <div className="mx-auto lg:mx-0 max-w-xl break-words">
                     <TextReveal text={t.ueberMich.hero.title} className="font-heading text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-white leading-[1.15] mb-2" />
                   </div>
-                  <motion.p variants={fadeUp} className="text-accent font-medium text-lg md:text-xl break-words">Gestalttherapeut, Coach & Körperarbeiter</motion.p>
+                  <motion.p variants={fadeUp} className="text-accent font-medium text-lg md:text-xl break-words">{t.ueberMich.hero.byline ?? 'Gestalt Therapist, Coach & Bodyworker'}</motion.p>
                   <motion.div variants={fadeUp} className="text-base md:text-lg text-white/90 leading-relaxed font-light max-w-xl mx-auto lg:mx-0 break-words hyphens-auto">
                     <p className="whitespace-pre-line">{t.ueberMich.hero.description1}</p>
                     <p>{t.ueberMich.hero.description2}</p>
@@ -97,17 +97,17 @@ const UeberMich = () => {
                   <motion.div variants={fadeUp} className="flex flex-col gap-4 pt-2 pb-6">
                     <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl border border-teal-navy/10 bg-teal-navy/5 shadow-sm text-teal-navy font-medium hover:bg-white transition-colors w-fit">
                       <div className="w-8 h-8 rounded-full bg-gold-accent/20 flex items-center justify-center"><Sparkles className="w-4 h-4 text-gold-accent" /></div>
-                      Seit 8 Jahren Praxis & Fortbildung
+                      {t.ueberMich.hero.badges?.[0] ?? '8 years of practice & training'}
                     </div>
                     <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl border border-teal-navy/10 bg-teal-navy/5 shadow-sm text-teal-navy font-medium hover:bg-white transition-colors w-fit">
                       <div className="w-8 h-8 rounded-full bg-teal-navy/10 flex items-center justify-center"><GraduationCap className="w-4 h-4 text-teal-navy" /></div>
-                      <span className="text-teal-navy">M.Sc. Psychologie & Beratung (i.A.)</span>
+                      <span className="text-teal-navy">{t.ueberMich.hero.badges?.[1] ?? 'M.Sc. Psychology & Counseling (in training)'}</span>
                     </div>
                   </motion.div>
                   <motion.div variants={fadeUp} className="text-base md:text-lg leading-relaxed space-y-6 text-teal-navy">
-                    <p>Wir leben in einer Zeit der Reizüberflutung. Oft wachen wir morgens schon auf und sind gar nicht richtig da. Wir fühlen uns abgetrennt, machtlos, manchmal sogar hoffnungslos angesichts der Informationsflut und der Geschwindigkeit unseres Alltags.</p>
-                    <p>In meiner Arbeit als Therapeut und Coach geht es genau um diesen Punkt: <strong className="text-accent font-semibold">Das Innehalten im Hier und Jetzt</strong>. Wir schauen uns an, was von früher noch unverarbeitet nachwirkt – emotionaler Schmerz oder festgefahrene Muster – und finden Wege, deine eigene kreative Lebenskraft nicht länger zu unterdrücken.</p>
-                    <p>Das Ziel ist weder Perfektion noch ständige Leistung, sondern ein tieferer Frieden. Ein Frieden, der dir das Gefühl gibt: <span className="italic">Egal was passiert, es ist okay. Und wenn es wehtut, dann darf es das.</span></p>
+                    <p>{t.ueberMich.arbeitsweise.bodyP1}</p>
+                    <p>{t.ueberMich.arbeitsweise.bodyP2Prefix}<strong className="text-accent font-semibold">{t.ueberMich.arbeitsweise.bodyP2Strong}</strong>{t.ueberMich.arbeitsweise.bodyP2Suffix}</p>
+                    <p>{t.ueberMich.arbeitsweise.bodyP3} <span className="italic">{t.ueberMich.arbeitsweise.bodyP3Italic}</span></p>
                   </motion.div>
                   <motion.div variants={fadeUp} className="pt-6">
                     <Accordion type="single" collapsible className="w-full bg-off-white rounded-2xl border border-teal-navy/10 px-6 py-2 shadow-sm">

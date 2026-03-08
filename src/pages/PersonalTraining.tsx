@@ -23,18 +23,7 @@ const PersonalTraining = () => {
   const { t, getLocalizedPath } = useLanguage();
   const serviceIcons = [Dumbbell, Heart, Target];
 
-  const testimonials = [
-    {
-      text: "Das Training mit Johannes hat mein Leben verändert. Ich habe nicht nur an Leistung gewonnen, sondern auch Schmerzen losgeworden.",
-      name: "Michael S.",
-      role: "Triathlet"
-    },
-    {
-      text: "Evidenzbasiert und wahnsinnig motivierend. Die Kombination aus Athletiktraining und fundiertem Wissen macht den Unterschied.",
-      name: "Sarah K.",
-      role: "Unternehmerin"
-    }
-  ];
+  const testimonials = t.testimonials?.personalTraining ?? [];
 
   return (
     <div className="min-h-screen bg-background">
@@ -43,7 +32,7 @@ const PersonalTraining = () => {
         {/* Hero */}
         <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-20">
           <div className="absolute inset-0 bg-primary/90">
-            <img src={heroImage} alt="Personal Training" className="w-full h-full object-cover object-[center_30%] opacity-60" />
+            <img src={johannesSpeed} alt="Personal Training" className="w-full h-full object-cover object-[center_30%] opacity-60" />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent mix-blend-multiply opacity-60" />
           </div>
           <ThreeDBackground className="absolute inset-0 z-0 opacity-40 mix-blend-screen" />
@@ -110,7 +99,7 @@ const PersonalTraining = () => {
                 <AnimatedItem className="space-y-8">
                   <div>
                     <span className="text-red-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">{t.personalTraining.approach.title}</span>
-                    <h2 className="typ-h2 text-primary mb-6">Körper &amp; Geist in Bewegung</h2>
+                    <h2 className="typ-h2 text-primary mb-6">{t.shared?.approachSectionTitle ?? 'Body & Mind in Motion'}</h2>
                     <p className="typ-body text-muted-foreground whitespace-pre-line mb-8">{t.personalTraining.approach.description}</p>
                   </div>
                   <div className="p-6 bg-white rounded-2xl shadow-sm border border-red-accent/10">
@@ -149,9 +138,9 @@ const PersonalTraining = () => {
         <AnimatedSection className="py-24 md:py-32 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <span className="text-red-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">Bausteine</span>
-              <h2 className="typ-h2 text-primary mb-4">Mein Angebot</h2>
-              <p className="typ-body text-muted-foreground max-w-2xl mx-auto">Evidenzbasierte Säulen für deine körperliche Transformation</p>
+              <span className="text-red-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">{t.shared?.servicesSectionLabel ?? 'Building Blocks'}</span>
+              <h2 className="typ-h2 text-primary mb-4">{t.shared?.servicesSectionTitle ?? 'My Services'}</h2>
+              <p className="typ-body text-muted-foreground max-w-2xl mx-auto">{t.shared?.servicesSectionSubtitle ?? 'Evidence-based pillars for your transformation'}</p>
             </div>
             <StaggerContainer className="grid md:grid-cols-3 gap-4 max-w-7xl mx-auto">
               {t.personalTraining.services.map((service, index) => {
@@ -176,9 +165,9 @@ const PersonalTraining = () => {
           <div className="absolute inset-0 bg-primary/[0.02]" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-16">
-              <span className="text-red-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">Erfahrungen</span>
-              <h2 className="typ-h2 text-primary mb-4">Stimmen meiner Klienten</h2>
-              <p className="typ-body text-muted-foreground max-w-2xl mx-auto">Was andere über die Zusammenarbeit und Ergebnisse sagen.</p>
+              <span className="text-red-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">{t.shared?.testimonialsLabel ?? 'Testimonials'}</span>
+              <h2 className="typ-h2 text-primary mb-4">{t.shared?.testimonialsTitle ?? 'Voices of My Clients'}</h2>
+              <p className="typ-body text-muted-foreground max-w-2xl mx-auto">{t.shared?.personalTrainingTestimonialsSubtitle ?? 'What others say about working together.'}</p>
             </div>
             <StaggerContainer className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
               {testimonials.map((testimonial, index) => (
@@ -195,7 +184,7 @@ const PersonalTraining = () => {
               ))}
             </StaggerContainer>
             <div className="text-center mt-10 opacity-60">
-              <p className="text-sm text-muted-foreground italic">(Mehr Einblicke und Ergebnisse folgen in Kürze)</p>
+              <p className="text-sm text-muted-foreground italic">({t.shared?.moreReviewsComingSoon ?? 'More testimonials coming soon'})</p>
             </div>
           </div>
         </AnimatedSection>
@@ -221,7 +210,7 @@ const PersonalTraining = () => {
         <section className="py-24 md:py-32 bg-secondary/30" id="pricing">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <span className="text-red-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">Transparenz</span>
+              <span className="text-red-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">{t.shared?.pricingLabel ?? 'Transparency'}</span>
               <h2 className="typ-h2 text-primary mb-4">{t.personalTraining.pricing.title}</h2>
             </div>
             <StaggerContainer className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -250,7 +239,7 @@ const PersonalTraining = () => {
                     <span className="font-heading typ-h2 text-red-accent">{t.angebot.konditionen.intensiv.discountPrice}</span>
                     <span className="text-white/70">/ {t.angebot.konditionen.intensiv.priceLabel}</span>
                   </div>
-                  <p className="typ-small text-white/70 mb-4 line-through">Regulär {t.angebot.konditionen.einzelbegleitung.price}</p>
+                  <p className="typ-small text-white/70 mb-4 line-through">{t.shared?.regularPrice ?? 'Regular'} {t.angebot.konditionen.einzelbegleitung.price}</p>
                   <p className="typ-body text-white/85 mb-8 text-left whitespace-pre-line flex-grow">{t.angebot.konditionen.intensiv.description}</p>
                   <Link to={getLocalizedPath('/kontakt')} onClick={scrollToTop} className="mt-auto w-full">
                     <Button variant="red" className="w-full">{t.angebot.konditionen.intensiv.cta}</Button>
@@ -300,14 +289,14 @@ const PersonalTraining = () => {
                     </div>
                   </div>
                   <div className="text-center md:text-left flex-grow">
-                    <span className="text-red-accent text-sm uppercase tracking-[0.2em] font-semibold mb-3 block">Die andere Dimension</span>
-                    <h3 className="typ-h3 text-white mb-4">Eigentlich auf der Suche nach Orientierung im Kopf?</h3>
-                    <p className="text-white/80 text-lg leading-relaxed max-w-xl">Manchmal sitzt das Problem nicht im Körper, sondern tiefer. Entdecke meinen therapeutischen Ansatz für echte emotionale Klarheit.</p>
+                    <span className="text-red-accent text-sm uppercase tracking-[0.2em] font-semibold mb-3 block">{t.shared?.crossLinkLabel ?? 'The Other Dimension'}</span>
+                    <h3 className="typ-h3 text-white mb-4">{t.shared?.crossLinkGestaltTitle ?? 'Looking for clarity in your head?'}</h3>
+                    <p className="text-white/80 text-lg leading-relaxed max-w-xl">{t.shared?.crossLinkGestaltDescription ?? 'Sometimes the problem is deeper.'}</p>
                   </div>
                   <div className="flex-shrink-0 mt-6 md:mt-0 w-full md:w-auto">
                     <Link to={getLocalizedPath('/gestalttherapie')} onClick={scrollToTop} className="block w-full">
                       <Button variant="red" size="lg" className="w-full md:w-auto font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
-                        Zur Gestalttherapie <ArrowRight className="ml-2 w-5 h-5" />
+                        {t.shared?.crossLinkGestaltButton ?? 'To Gestalt Therapy'} <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
                     </Link>
                   </div>

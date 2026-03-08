@@ -37,12 +37,12 @@ export const Hero = () => {
           <motion.div animate={{ y: hoveredPanel === 'left' ? -10 : 0 }} transition={{ duration: 0.8 }}>
             <Brain className="w-8 h-8 md:w-12 md:h-12 mx-auto mb-4 text-gold-accent opacity-80" strokeWidth={1.5} />
             <TextReveal text="Gestalttherapie" className="typ-h1 text-white mb-3" delay={0.7} />
-            <p className="text-white/70 text-sm md:text-lg mb-8 font-light max-w-sm mx-auto">Psychologische Beratung. Raus aus dem Kopf, rein ins Erleben.</p>
+            <p className="text-white/70 text-sm md:text-lg mb-8 font-light max-w-sm mx-auto">{t.gestalttherapie.hero.subtitle}</p>
           </motion.div>
           <motion.div animate={{ opacity: hoveredPanel === 'left' ? 1 : 0.4, y: hoveredPanel === 'left' ? 0 : 10 }} className="flex justify-center">
             <Link to={getLocalizedPath('/gestalttherapie')} className="block">
               <MagneticButton strength={0.25}>
-                <Button variant="outline" className="border-gold-accent/50 text-white hover:bg-gold-accent hover:text-black rounded-full px-8 py-6 bg-black/20 backdrop-blur-sm uppercase tracking-widest text-xs font-semibold">Emotionale Klarheit finden <ArrowRight className="ml-2 w-4 h-4" /></Button>
+                <Button variant="outline" className="border-gold-accent/50 text-white hover:bg-gold-accent hover:text-black rounded-full px-8 py-6 bg-black/20 backdrop-blur-sm uppercase tracking-widest text-xs font-semibold">{t.gestalttherapie.hero.cta} <ArrowRight className="ml-2 w-4 h-4" /></Button>
               </MagneticButton>
             </Link>
           </motion.div>
@@ -59,12 +59,12 @@ export const Hero = () => {
           <motion.div animate={{ y: hoveredPanel === 'right' ? -10 : 0 }} transition={{ duration: 0.8 }}>
             <Dumbbell className="w-8 h-8 md:w-12 md:h-12 mx-auto mb-4 text-destructive opacity-80" strokeWidth={1.5} />
             <TextReveal text="Personal Training" className="typ-h1 text-white mb-3" delay={0.8} />
-            <p className="text-white/70 text-sm md:text-lg mb-8 font-light max-w-sm mx-auto">Personal Training. Stärke aufbauen, wo sie gebraucht wird.</p>
+            <p className="text-white/70 text-sm md:text-lg mb-8 font-light max-w-sm mx-auto">{t.personalTraining.hero.subtitle}</p>
           </motion.div>
           <motion.div animate={{ opacity: hoveredPanel === 'right' ? 1 : 0.4, y: hoveredPanel === 'right' ? 0 : 10 }} className="flex justify-center">
             <Link to={getLocalizedPath('/personal-training')} className="block">
               <MagneticButton strength={0.25}>
-                <Button variant="outline" className="border-destructive/50 text-white hover:bg-destructive hover:text-white rounded-full px-8 py-6 bg-black/20 backdrop-blur-sm uppercase tracking-widest text-xs font-semibold">Körperliche Kraft aufbauen <ArrowRight className="ml-2 w-4 h-4" /></Button>
+                <Button variant="outline" className="border-destructive/50 text-white hover:bg-destructive hover:text-white rounded-full px-8 py-6 bg-black/20 backdrop-blur-sm uppercase tracking-widest text-xs font-semibold">{t.personalTraining.hero.cta} <ArrowRight className="ml-2 w-4 h-4" /></Button>
               </MagneticButton>
             </Link>
           </motion.div>
