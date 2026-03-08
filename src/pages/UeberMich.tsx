@@ -70,7 +70,7 @@ const UeberMich = () => {
                   <div className="mx-auto lg:mx-0 max-w-xl break-words">
                     <TextReveal text={t.ueberMich.hero.title} className="font-heading text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-white leading-[1.15] mb-2" />
                   </div>
-                  <motion.p variants={fadeUp} className="text-accent font-medium text-lg md:text-xl break-words">Gestalttherapeut, Coach & Körperarbeiter</motion.p>
+                  <motion.p variants={fadeUp} className="text-accent font-medium text-lg md:text-xl break-words">{t.ueberMich.hero.byline ?? 'Gestalt Therapist, Coach & Bodyworker'}</motion.p>
                   <motion.div variants={fadeUp} className="text-base md:text-lg text-white/90 leading-relaxed font-light max-w-xl mx-auto lg:mx-0 break-words hyphens-auto">
                     <p className="whitespace-pre-line">{t.ueberMich.hero.description1}</p>
                     <p>{t.ueberMich.hero.description2}</p>
