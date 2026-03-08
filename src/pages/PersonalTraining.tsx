@@ -99,7 +99,7 @@ const PersonalTraining = () => {
                 <AnimatedItem className="space-y-8">
                   <div>
                     <span className="text-red-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">{t.personalTraining.approach.title}</span>
-                    <h2 className="typ-h2 text-primary mb-6">Körper &amp; Geist in Bewegung</h2>
+                    <h2 className="typ-h2 text-primary mb-6">{t.shared?.approachSectionTitle ?? 'Body & Mind in Motion'}</h2>
                     <p className="typ-body text-muted-foreground whitespace-pre-line mb-8">{t.personalTraining.approach.description}</p>
                   </div>
                   <div className="p-6 bg-white rounded-2xl shadow-sm border border-red-accent/10">
