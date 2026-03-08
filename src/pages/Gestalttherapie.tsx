@@ -45,7 +45,7 @@ const Gestalttherapie = () => {
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} className="max-w-4xl mx-auto text-center">
-              <TextReveal text={t.gestalttherapie.scrollTelling.title} className="typ-h1 text-white mb-4" delay={0.2} />
+              <TextReveal text={t.nav.gestalttherapie} className="typ-h1 text-white mb-4" delay={0.2} />
               <p className="typ-lead text-white/85 max-w-2xl mx-auto mb-6">{t.gestalttherapie.hero.subtitle}</p>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
                 <MapPin className="w-4 h-4 text-gold-accent" />
