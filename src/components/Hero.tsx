@@ -162,7 +162,7 @@ export const Hero = () => {
           animate={isRevealed ? "visible" : "hidden"}
         >
           <motion.div
-            animate={{ y: hoveredPanel === 'right' ? -12 : 0 }}
+            animate={{ y: effectivePanel === 'right' ? -12 : 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
             <motion.div variants={itemVariant}>
