@@ -66,7 +66,11 @@ export const Hero = () => {
               ? effectivePanel === 'left' ? '25vh' : effectivePanel === 'right' ? '-25vh' : 0
               : 0,
           }}
-          transition={{ duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          transition={{
+            opacity: { duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] },
+            scale: { duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] },
+            y: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
+          }}
         >
           <div className="relative">
             <motion.div 
