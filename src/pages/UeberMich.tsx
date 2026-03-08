@@ -151,34 +151,37 @@ const UeberMich = () => {
           <motion.div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold-accent/5 rounded-full blur-[120px] pointer-events-none" animate={{ scale: [1, 1.05, 1] }} transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }} />
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-                <motion.div variants={staggerContainer} className="space-y-6 md:space-y-8 order-1 md:order-2 text-center md:text-left pt-8 md:pt-0">
-                  <motion.span variants={fadeUp} className="block text-accent font-medium tracking-[0.2em] uppercase text-sm md:text-sm">{t.ueberMich.training?.label}</motion.span>
-                  <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl leading-tight text-primary pb-2">{t.ueberMich.training?.title}</motion.h2>
-                  <motion.div variants={fadeUp} className="text-base md:text-lg leading-relaxed space-y-5 text-muted-foreground mx-auto md:mx-0 max-w-xl">
-                    <p className="whitespace-pre-line">{t.ueberMich.training?.description1}</p>
-                    <p className="whitespace-pre-line">{t.ueberMich.training?.description2}</p>
-                    <p className="whitespace-pre-line">{t.ueberMich.training?.description3}</p>
-                  </motion.div>
-                </motion.div>
-                <motion.div className="relative order-2 md:order-1 max-w-sm md:max-w-md mx-auto md:mx-0">
-                  <motion.div variants={goldFrameVariants} className="absolute bottom-4 -left-4 md:bottom-6 md:-left-6 w-full h-full bg-accent rounded-2xl" />
-                  <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4] group z-10">
-                    <Carousel plugins={[plugin.current]} className="w-full h-full" onMouseEnter={plugin.current.stop} onMouseLeave={plugin.current.reset}>
-                      <CarouselContent className="h-full -ml-0">
-                        <CarouselItem className="h-full pl-0"><img src={johannesSpeed} alt="Johannes Christ - Triathlon Performance auf dem Rennrad" width={600} height={800} className="w-full h-full object-cover" loading="lazy" decoding="async" /></CarouselItem>
-                        <CarouselItem className="h-full pl-0"><img src={johannesCyclingFriends} alt="Johannes Christ - Rennradfahren mit Freunden in der Natur" width={600} height={800} className="w-full h-full object-cover" loading="lazy" decoding="async" /></CarouselItem>
-                        <CarouselItem className="h-full pl-0"><img src={johannesBodywork1} alt="Johannes Christ bodywork" width={600} height={800} className="w-full h-full object-cover" loading="lazy" decoding="async" /></CarouselItem>
-                        <CarouselItem className="h-full pl-0"><img src={johannesBodywork2} alt="Johannes Christ bodywork practice" width={600} height={800} className="w-full h-full object-cover" loading="lazy" decoding="async" /></CarouselItem>
-                      </CarouselContent>
-                      <div className="absolute bottom-4 right-4 flex gap-2">
-                        <CarouselPrevious className="relative inset-0 translate-y-0 h-8 w-8 bg-white/80 hover:bg-white text-primary border-none opacity-0 group-hover:opacity-100 transition-opacity" />
-                        <CarouselNext className="relative inset-0 translate-y-0 h-8 w-8 bg-white/80 hover:bg-white text-primary border-none opacity-0 group-hover:opacity-100 transition-opacity" />
-                      </div>
-                    </Carousel>
-                  </div>
-                </motion.div>
-              </div>
+              {/* Heading */}
+              <motion.div variants={staggerContainer} className="text-center mb-12">
+                <motion.span variants={fadeUp} className="block text-accent font-medium tracking-[0.2em] uppercase text-sm mb-4">{t.ueberMich.training?.label}</motion.span>
+                <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl leading-tight text-primary pb-2">{t.ueberMich.training?.title}</motion.h2>
+              </motion.div>
+
+              {/* Image Carousel */}
+              <motion.div className="relative max-w-lg mx-auto mb-12">
+                <motion.div variants={goldFrameVariants} className="absolute bottom-4 -left-4 md:bottom-6 md:-left-6 w-full h-full bg-accent rounded-2xl" />
+                <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4] group z-10">
+                  <Carousel plugins={[plugin.current]} className="w-full h-full" onMouseEnter={plugin.current.stop} onMouseLeave={plugin.current.reset}>
+                    <CarouselContent className="h-full -ml-0">
+                      <CarouselItem className="h-full pl-0"><img src={johannesSpeed} alt="Johannes Christ - Triathlon Performance auf dem Rennrad" width={600} height={800} className="w-full h-full object-cover" loading="lazy" decoding="async" /></CarouselItem>
+                      <CarouselItem className="h-full pl-0"><img src={johannesCyclingFriends} alt="Johannes Christ - Rennradfahren mit Freunden in der Natur" width={600} height={800} className="w-full h-full object-cover" loading="lazy" decoding="async" /></CarouselItem>
+                      <CarouselItem className="h-full pl-0"><img src={johannesBodywork1} alt="Johannes Christ bodywork" width={600} height={800} className="w-full h-full object-cover" loading="lazy" decoding="async" /></CarouselItem>
+                      <CarouselItem className="h-full pl-0"><img src={johannesBodywork2} alt="Johannes Christ bodywork practice" width={600} height={800} className="w-full h-full object-cover" loading="lazy" decoding="async" /></CarouselItem>
+                    </CarouselContent>
+                    <div className="absolute bottom-4 right-4 flex gap-2">
+                      <CarouselPrevious className="relative inset-0 translate-y-0 h-8 w-8 bg-white/80 hover:bg-white text-primary border-none opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <CarouselNext className="relative inset-0 translate-y-0 h-8 w-8 bg-white/80 hover:bg-white text-primary border-none opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                  </Carousel>
+                </div>
+              </motion.div>
+
+              {/* Text */}
+              <motion.div variants={fadeUp} className="text-base md:text-lg leading-relaxed space-y-5 text-muted-foreground max-w-3xl mx-auto text-center">
+                <p className="whitespace-pre-line">{t.ueberMich.training?.description1}</p>
+                <p className="whitespace-pre-line">{t.ueberMich.training?.description2}</p>
+                <p className="whitespace-pre-line">{t.ueberMich.training?.description3}</p>
+              </motion.div>
             </div>
           </div>
         </motion.section>
