@@ -88,7 +88,7 @@ export const Hero = () => {
           {/* Animated overlay on hover */}
           <motion.div
             className="absolute inset-0 bg-gradient-to-br from-gold-accent/10 to-transparent"
-            animate={{ opacity: hoveredPanel === 'left' ? 1 : 0 }}
+            animate={{ opacity: effectivePanel === 'left' ? 1 : 0 }}
             transition={{ duration: 0.6 }}
           />
         </motion.div>
