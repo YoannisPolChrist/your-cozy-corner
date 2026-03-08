@@ -59,7 +59,7 @@ export const Hero = () => {
           <motion.div animate={{ y: hoveredPanel === 'right' ? -10 : 0 }} transition={{ duration: 0.8 }}>
             <Dumbbell className="w-8 h-8 md:w-12 md:h-12 mx-auto mb-4 text-destructive opacity-80" strokeWidth={1.5} />
             <TextReveal text="Personal Training" className="typ-h1 text-white mb-3" delay={0.8} />
-            <p className="text-white/70 text-sm md:text-lg mb-8 font-light max-w-sm mx-auto">Personal Training. Stärke aufbauen, wo sie gebraucht wird.</p>
+            <p className="text-white/70 text-sm md:text-lg mb-8 font-light max-w-sm mx-auto">{t.personalTraining.hero.subtitle}</p>
           </motion.div>
           <motion.div animate={{ opacity: hoveredPanel === 'right' ? 1 : 0.4, y: hoveredPanel === 'right' ? 0 : 10 }} className="flex justify-center">
             <Link to={getLocalizedPath('/personal-training')} className="block">
