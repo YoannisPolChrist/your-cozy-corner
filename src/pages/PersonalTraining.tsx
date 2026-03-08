@@ -165,9 +165,9 @@ const PersonalTraining = () => {
           <div className="absolute inset-0 bg-primary/[0.02]" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-16">
-              <span className="text-red-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">Erfahrungen</span>
-              <h2 className="typ-h2 text-primary mb-4">Stimmen meiner Klienten</h2>
-              <p className="typ-body text-muted-foreground max-w-2xl mx-auto">Was andere über die Zusammenarbeit und Ergebnisse sagen.</p>
+              <span className="text-red-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">{t.shared?.testimonialsLabel ?? 'Testimonials'}</span>
+              <h2 className="typ-h2 text-primary mb-4">{t.shared?.testimonialsTitle ?? 'Voices of My Clients'}</h2>
+              <p className="typ-body text-muted-foreground max-w-2xl mx-auto">{t.shared?.personalTrainingTestimonialsSubtitle ?? 'What others say about working together.'}</p>
             </div>
             <StaggerContainer className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
               {testimonials.map((testimonial, index) => (
