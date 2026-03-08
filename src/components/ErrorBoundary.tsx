@@ -23,21 +23,17 @@ export class ErrorBoundary extends Component<Props, State> {
     public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
         console.error("Uncaught error:", error, errorInfo);
 
-        // Chunk load error detection
         const isChunkError = error.message.includes("Failed to fetch dynamically imported module") ||
             error.message.includes("Importing a module script failed");
 
         if (isChunkError) {
-            // Check if we already tried to reload
             const storageKey = "chunk_load_error_reload";
             const lastReload = sessionStorage.getItem(storageKey);
 
             if (!lastReload) {
-                // Set flag and reload
                 sessionStorage.setItem(storageKey, "true");
                 window.location.reload();
             } else {
-                // We already tried to reload, clear the flag for next time
                 sessionStorage.removeItem(storageKey);
             }
         }
@@ -45,10 +41,6 @@ export class ErrorBoundary extends Component<Props, State> {
 
     public render() {
         if (this.state.hasError) {
-            // If it's a chunk error specifically and we are here, it means the reload failed 
-            // or we are in the "showing error" state after reload.
-            // We can show a more specific message if we want, or keep the generic one.
-
             const isDev = import.meta.env.DEV;
             return (
                 <div className="min-h-screen flex flex-col items-center justify-center bg-background p-4 text-center">

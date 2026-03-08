@@ -1,754 +1,91 @@
 import { Translations } from './types';
 
 export const fr: Translations = {
-  nav: {
-    gestalttherapie: 'Thérapie Gestalt',
-    personalTraining: 'Personal Training',
-    approach: 'Mon Approche',
-    angebot: 'Services',
-    ueberMich: 'À Propos',
-    kontakt: 'Contact',
-    subtitle1: 'Gestalt-thérapeute, Coach,',
-    subtitle2: 'Entraîneur Personnel',
-  },
-
-  seo: {
-    index: {
-      title: 'Gestalt-thérapeute à Toulouse & Coaching',
-      description: 'Accompagnement holistique à Toulouse : Gestalt-thérapie, Coaching & Personal Training avec Johannes Christ. Séances en français, allemand et anglais.',
-      keywords: 'Gestalt-thérapeute Toulouse, Psychologue Toulouse, Coaching Toulouse, Personal Trainer Toulouse, Thérapie Toulouse, Allemand, Anglais',
-    },
-  },
-
-  hero: {
-    title: 'Le changement se produit',
-    titleHighlight: 'Ici et Maintenant',
-    subtitle: 'Accompagnement sur ton chemin vers plus de clarté, d\'épanouissement et de paix intérieure – à travers la Gestalt-thérapie humaniste, le coaching et le Personal Training.',
-    cta: 'Prendre rendez-vous',
-  },
-
-  meet: {
-    title: 'Le changement arrive –',
-    description: 'Idéalement dans un cadre qui soutient et offre de la sécurité.\n\nQue ce cadre soit souvent absent est bien sûr compréhensible. En tant que Gestalt-thérapeute, coach et Personal Trainer, je t\'offre – par ma présence, ma compétence et une touche d\'humour – l\'espace nécessaire pour que le changement que tu souhaites puisse se produire !\n\nSalut - Je suis Johannes.',
-  },
-
-  painPoints: {
-    title: 'Quand la boussole intérieure s\'arrête',
-    subtitle: 'Souvent, nous sentons que quelque chose manque, mais nous n\'arrivons pas vraiment à mettre le doigt dessus.',
-    items: [
-      {
-        title: 'Burnout & Perte de sens',
-        description: 'Quand la frustration et la stagnation prennent le dessus. Ce sentiment de ne pas avancer. Par la prise de conscience et le processus, nous retrouvons le sens.',
-      },
-      {
-        title: 'Transition & Clarté',
-        description: 'Quand le nouveau fait encore peur et que l\'ancien ne convient plus. Nous élaborons des étapes concrètes pour passer de l\'immobilisme à l\'action.',
-      },
-      {
-        title: 'Performance & Motivation',
-        description: 'Quand ta résistance intérieure gagne et que la performance stagne. Arrête de trop réfléchir, mets-toi en mouvement – bouge-toi et agis !',
-      },
-    ],
-  },
-
-  services: {
-    title: 'Mes services',
-    subtitle: 'Des espaces individuels pour ton développement',
-    items: [
-      {
-        title: 'Gestalt-thérapie',
-        description: 'Travail en profondeur sur les thèmes émotionnels',
-      },
-      {
-        title: 'Coaching',
-        description: 'Développement ciblé, orienté objectifs, pratique',
-      },
-      {
-        title: 'Entraînement Personnel',
-        description: 'Entraînement en Sciences du Sport pour la performance, la prévention et la réhabilitation.',
-      },
-    ],
-    cta: 'Découvrir les services',
-  },
-
-  gestaltSection: {
-    label: 'Le fondement thérapeutique',
-    title: 'Ma Mission',
-    titleHighlight: '',
-    description: 'Le changement demande plus que la compréhension. La vraie croissance naît là où le ressenti et l\'intellect se tissent ensemble. Mon travail consiste à toucher des points que la simple parole ne peut atteindre – pour que le changement ne paraisse pas seulement logique, mais se sente aussi juste. Car seul ce qui fait sens nous met vraiment en mouvement.',
-    link: 'En savoir plus sur la Gestalt-thérapie',
-    quote: 'Être pleinement ici, pleinement maintenant – le reste suivra.',
-  },
-
-  myWorkSection: {
-    title: 'Mon Approche',
-    description: 'Le changement a trois dimensions : La profondeur émotionnelle de la Gestalt-thérapie (cœur), la clarté stratégique du coaching (tête), et la présence physique de l\'entraînement (corps). Ces trois piliers travaillent ensemble – car la vraie transformation se produit dans l\'interaction des trois.',
-    link: 'Découvrir les trois piliers',
-    quote: 'Le changement survient lorsqu\'une personne devient ce qu\'elle est, non lorsqu\'elle essaie de devenir ce qu\'elle n\'est pas.\n\n— Arnold Beisser',
-  },
-
+  nav: { gestalttherapie: 'Thérapie Gestalt', personalTraining: 'Personal Training', approach: 'Mon Approche', angebot: 'Services', ueberMich: 'À Propos', kontakt: 'Contact', subtitle1: 'Gestalt-thérapeute, Coach,', subtitle2: 'Entraîneur Personnel' },
+  seo: { index: { title: 'Gestalt-thérapeute à Toulouse & Coaching', description: 'Accompagnement holistique à Toulouse : Gestalt-thérapie, Coaching & Personal Training avec Johannes Christ.', keywords: 'Gestalt-thérapeute Toulouse, Psychologue Toulouse, Coaching Toulouse' } },
+  hero: { title: 'Le changement se produit', titleHighlight: 'Ici et Maintenant', subtitle: 'Accompagnement sur ton chemin vers plus de clarté, d\'épanouissement et de paix intérieure – à travers la Gestalt-thérapie humaniste, le coaching et le Personal Training.', cta: 'Prendre rendez-vous' },
+  meet: { title: 'Le changement arrive –', description: 'Idéalement dans un cadre qui soutient et offre de la sécurité.\n\nEn tant que Gestalt-thérapeute, coach et Personal Trainer, je t\'offre l\'espace nécessaire pour que le changement que tu souhaites puisse se produire !\n\nSalut - Je suis Johannes.' },
+  painPoints: { title: 'Quand la boussole intérieure s\'arrête', subtitle: 'Souvent, nous sentons que quelque chose manque, mais nous n\'arrivons pas à mettre le doigt dessus.', items: [
+    { title: 'Burnout & Perte de sens', description: 'Quand la frustration et la stagnation prennent le dessus.' },
+    { title: 'Transition & Clarté', description: 'Quand le nouveau fait encore peur et que l\'ancien ne convient plus.' },
+    { title: 'Performance & Motivation', description: 'Quand ta résistance intérieure gagne. Arrête de trop réfléchir, mets-toi en mouvement !' },
+  ] },
+  services: { title: 'Mes services', subtitle: 'Des espaces individuels pour ton développement', items: [
+    { title: 'Gestalt-thérapie', description: 'Travail en profondeur sur les thèmes émotionnels' },
+    { title: 'Coaching', description: 'Développement ciblé, orienté objectifs, pratique' },
+    { title: 'Entraînement Personnel', description: 'Entraînement en Sciences du Sport pour la performance, la prévention et la réhabilitation.' },
+  ], cta: 'Découvrir les services' },
+  gestaltSection: { label: 'Le fondement thérapeutique', title: 'Ma Mission', titleHighlight: '', description: 'Le changement demande plus que la compréhension. La vraie croissance naît là où le ressenti et l\'intellect se tissent ensemble.', link: 'En savoir plus sur la Gestalt-thérapie', quote: 'Être pleinement ici, pleinement maintenant – le reste suivra.' },
+  myWorkSection: { title: 'Mon Approche', description: 'Le changement a trois dimensions : La profondeur émotionnelle (cœur), la clarté stratégique (tête), et la présence physique (corps).', link: 'Découvrir les trois piliers', quote: 'Le changement survient lorsqu\'une personne devient ce qu\'elle est.\n\n— Arnold Beisser' },
   myWork: {
-    hero: {
-      title: 'Mon Approche',
-      subtitle: 'Le changement a trois dimensions : La profondeur émotionnelle de la Gestalt-thérapie, la clarté stratégique du coaching, et la présence physique dans l\'entraînement. Ces trois piliers forment un système holistique – car la vraie transformation se produit dans l\'interaction du cœur, de la tête et du corps.',
-      iconDescriptions: {
-        diagnostik: 'Clarté stratégique',
-        gestalt: 'Le cœur de mon travail',
-        coaching: 'Éléments diagnostiques inclus',
-        personalTraining: 'Optimisation de la performance / Thérapie par le mouvement',
-      },
-      iconCards: {
-        diagnostik: {
-          title: 'Diagnostic Holistique',
-          subline: 'PRÉCISION PLUTÔT QU\'INTUITION',
-          description: 'Basé sur la Gestalt-thérapie et des pratiques scientifiques, nous effectuons une évaluation fondamentale. Cela inclut des analyses sanguines, de mouvement ou nutritionnelles selon les besoins.',
-        },
-        gestalt: {
-          title: 'Gestalt-thérapie',
-          subline: 'QUAND COMPRENDRE NE SUFFIT PAS',
-          description: 'Nous résolvons les anciens schémas là où ils sont nés : dans le contact et dans le corps. Au lieu d\'années à \'en parler\', nous utilisons l\'ici et maintenant pour rendre les blocages émotionnels tangibles et transformables.',
-        },
-        coaching: {
-          title: 'Coaching',
-          subline: 'CLARTÉ PAR L\'INTELLIGENCE CORPORELLE',
-          description: 'La stratégie rencontre l\'intuition. Nous combinons la planification cognitive avec la sagesse de votre corps. Pour des décisions qui sonnent non seulement logiques mais se sentent aussi justes au plus profond de vous.',
-        },
-      },
-    },
-    diagnostics: {
-      label: 'Évaluation basée sur les preuves',
-      title: 'Diagnostic',
-      intro: 'Précision grâce aux questionnaires, à l\'observation comportementale et au suivi des données vitales. Nous utilisons des méthodes scientifiquement validées pour créer une base objective pour ton parcours de transformation.',
-      items: [
-        { title: 'Questionnaires', description: 'Évaluations psychologiques validées pour une évaluation systématique de ta situation actuelle. Ces instruments standardisés nous aident à saisir objectivement les schémas contraignants, les facteurs de stress et les ressources.' },
-        { title: 'Observation comportementale', description: 'Analyse professionnelle des schémas et dynamiques de ta vie quotidienne. Nous regardons ensemble où l\'énergie se perd et quelles routines te soutiennent ou te pèsent.' },
-        { title: 'Biomarqueurs & Données Vitales', description: 'Mesure objective des valeurs sanguines, de la qualité du sommeil et de la santé intestinale. Nous utilisons des diagnostics de laboratoire et le suivi pour visualiser les causes physiques et les connexions.' },
-      ],
-    },
-    coaching: {
-      label: 'Structure & Clarté',
-      title: 'Coaching',
-      intro: 'Alors que la Gestalt-thérapie se concentre principalement sur le processus intérieur, le coaching vise à élaborer des étapes concrètes. Nous regardons comment les nouvelles prises de conscience, les sentiments et les expériences peuvent être mis en œuvre de manière optimale pour se rapprocher de votre propre objectif.',
-      items: [
-        { title: 'Structure quotidienne', description: 'Stratégies pratiques pour ta vie quotidienne, immédiatement applicables. Nous développons des routines qui utilisent au mieux ton énergie et s\'adaptent à ta vie.' },
-        { title: 'Formation d\'habitudes', description: 'Établir pas à pas de nouveaux schémas qui te correspondent. De petits changements durables au lieu de bouleversements radicaux qui ne tiennent pas.' },
-        { title: 'Changement durable', description: 'Construire des routines qui durent sur le long terme. Grâce à une réflexion et une adaptation régulières, tu développes une structure qui grandit avec toi.' },
-      ],
-    },
-    cta: {
-      title: 'Curieux ?',
-      description: "Découvre mon offre et trouve la forme d'accompagnement qui te convient le mieux.",
-      button: "Voir l'offre",
-    },
+    hero: { title: 'Mon Approche', subtitle: 'Le changement a trois dimensions : émotionnelle, stratégique et physique.', iconDescriptions: { diagnostik: 'Clarté stratégique', gestalt: 'Le cœur de mon travail', coaching: 'Éléments diagnostiques inclus', personalTraining: 'Optimisation de la performance' }, iconCards: { diagnostik: { title: 'Diagnostic Holistique', subline: 'PRÉCISION PLUTÔT QU\'INTUITION', description: 'Évaluation fondamentale basée sur la Gestalt-thérapie et la science.' }, gestalt: { title: 'Gestalt-thérapie', subline: 'QUAND COMPRENDRE NE SUFFIT PAS', description: 'Nous résolvons les anciens schémas dans le contact et le corps.' }, coaching: { title: 'Coaching', subline: 'CLARTÉ PAR L\'INTELLIGENCE CORPORELLE', description: 'La stratégie rencontre l\'intuition.' } } },
+    diagnostics: { label: 'Évaluation basée sur les preuves', title: 'Diagnostic', intro: 'Précision grâce aux questionnaires et au suivi des données vitales.', items: [{ title: 'Questionnaires', description: 'Évaluations psychologiques validées.' }, { title: 'Observation comportementale', description: 'Analyse professionnelle des schémas.' }, { title: 'Biomarqueurs & Données Vitales', description: 'Mesure objective des valeurs sanguines.' }] },
+    coaching: { label: 'Structure & Clarté', title: 'Coaching', intro: 'Le coaching vise à élaborer des étapes concrètes.', items: [{ title: 'Structure quotidienne', description: 'Stratégies pratiques immédiatement applicables.' }, { title: 'Formation d\'habitudes', description: 'De petits changements durables.' }, { title: 'Changement durable', description: 'Construire des routines qui durent.' }] },
+    cta: { title: 'Curieux ?', description: 'Découvre mon offre et trouve la forme d\'accompagnement qui te convient.', button: 'Voir l\'offre' },
   },
-
-  landingAbout: {
-    title: 'À propos de moi',
-    description: 'Je suis Johannes Christ, Gestalt-thérapeute, coach et M.Sc. Psychologie. Mon travail se base sur la conviction que le vrai changement survient lorsque nous comprenons le lien entre nos pensées, nos sentiments et notre corps.',
-    cardText: 'Avec mon expérience en Gestalt-thérapie et en coaching, je vous accompagne sur le chemin de plus de clarté, de bien-être et d\'épanouissement.',
-    button: 'En savoir plus sur moi',
-  },
-
-  aboutPreview: {
-    label: 'Ton accompagnateur',
-    title: 'À propos de moi',
-    whyTitle: 'Pourquoi je fais ce que je fais',
-    whyDescription1: 'Dans mon propre parcours, j\'ai clairement reconnu une chose : nous pouvons parler de problèmes pendant des années sans que rien ne bouge vraiment. L\'esprit comprend tout, mais le point où le vrai changement commence n\'est souvent pas touché.',
-    whyDescription2: 'Ce qui me fascine dans la Gestalt-thérapie encore aujourd\'hui, et ce que je vis comme si profondément efficace, c\'est cette transition de la simple parole au vécu global. Il y a un niveau qui va plus profond que la logique. Quand nous tissons vraiment ensemble l\'esprit et le ressenti, une expérience émerge qui est durable. Le changement ne se produit alors plus par l\'effort, mais parce qu\'il fait enfin sens. Car tant que quelque chose n\'a pas de sens pour nous, nous ne bougeons pas.',
-    link: 'En savoir plus sur moi',
-  },
-
-  focusAreas: {
-    title: 'Axes de mon accompagnement',
-    items: [
-      {
-        title: 'Prévention du burnout & Épuisement',
-        description: 'Quand le système ne fait que fonctionner, mais que le sens s\'est perdu. Nous travaillons à rendre la connexion à tes besoins à nouveau perceptible.',
-      },
-      {
-        title: 'Personnes en transition',
-        description: 'Quand l\'ancienne boussole ne fonctionne plus, mais que le nouveau chemin est encore dans le brouillard. Nous trouvons la clarté dans le vécu, pas seulement dans la réflexion.',
-      },
-      {
-        title: 'Relations & Communication',
-        description: 'S\'éloigner des schémas figés vers une rencontre authentique. Nous regardons ce qui se passe entre les personnes dans l\'ici et maintenant.',
-      },
-    ],
-  },
-
-  personalTrainingPreview: {
-    label: 'La Troisième Dimension',
-    title: 'Le corps comme porte vers le changement',
-    description: 'La transformation commence souvent là où les mots s\'arrêtent : dans le corps. Le mouvement crée de nouveaux schémas, libère les blocages et ancre ce que nous travaillons en thérapie et en coaching. Coaching sportif à Toulouse.',
-    link: 'Découvrir le Coaching Sportif',
-  },
-
-  cta: {
-    title: 'Prêt pour la prochaine étape ?',
-    description: 'Réserve un appel découverte gratuit ou appelle-moi simplement pour découvrir si une collaboration fait sens.',
-    button: 'Me contacter',
-    buttonAlt: 'Discutons ensemble',
-  },
-
+  landingAbout: { title: 'À propos de moi', description: 'Je suis Johannes Christ, Gestalt-thérapeute, coach et M.Sc. Psychologie.', cardText: 'Avec mon expérience, je vous accompagne sur le chemin de plus de clarté.', button: 'En savoir plus sur moi' },
+  aboutPreview: { label: 'Ton accompagnateur', title: 'À propos de moi', whyTitle: 'Pourquoi je fais ce que je fais', whyDescription1: 'Dans mon propre parcours, j\'ai clairement reconnu : nous pouvons parler pendant des années sans que rien ne bouge.', whyDescription2: 'Ce qui me fascine dans la Gestalt-thérapie : cette transition de la parole au vécu.', link: 'En savoir plus sur moi' },
+  focusAreas: { title: 'Axes de mon accompagnement', items: [{ title: 'Prévention du burnout & Épuisement', description: 'Quand le système ne fait que fonctionner.' }, { title: 'Personnes en transition', description: 'Quand l\'ancienne boussole ne fonctionne plus.' }, { title: 'Relations & Communication', description: 'S\'éloigner des schémas figés vers une rencontre authentique.' }] },
+  personalTrainingPreview: { label: 'La Troisième Dimension', title: 'Le corps comme porte vers le changement', description: 'La transformation commence souvent là où les mots s\'arrêtent : dans le corps.', link: 'Découvrir le Coaching Sportif' },
+  cta: { title: 'Prêt pour la prochaine étape ?', description: 'Réserve un appel découverte gratuit.', button: 'Me contacter', buttonAlt: 'Discutons ensemble' },
   gestalttherapie: {
-    hero: {
-      subtitle: 'Conseil psychologique. Sortir du mental pour revenir à l\'expérience.',
-      cta: 'Premier entretien gratuit'
-    },
-    gestaltIntro: {
-      label: 'Le cœur de mon travail',
-      title: 'La Gestalt-thérapie',
-      description: "La Gestalt-thérapie est une approche humaniste et expérientielle qui considère la personne dans sa globalité – corps, esprit et âme en interaction avec son environnement. Au cœur de cette approche se trouve la prise de conscience et le vécu dans le moment présent. Au lieu de simplement parler des problèmes, nous travaillons à les rendre tangibles et modifiables dans l'ici et maintenant. C'est ainsi qu'émerge une transformation authentique et durable.",
-      essence: [
-        { title: 'Ici & Maintenant', description: 'La vie se déroule dans l\'instant présent. Nous travaillons avec ce qui émerge maintenant.' },
-        { title: 'Conscience', description: 'La perception consciente du corps et des sentiments comme clé du changement.' },
-        { title: 'Contact', description: 'La guérison se produit dans une rencontre authentique – avec soi-même et avec l\'autre.' },
-      ],
-      additionalInfo: 'Comme la Gestalt-thérapie est le cœur de mon travail, voici quelques informations supplémentaires :',
-    },
-    approach: {
-      label: 'Attitude Thérapeutique',
-      title: 'Formation & Parcours',
-      description: 'Mon travail se base sur une formation approfondie de plusieurs années en Gestalt-thérapie ainsi qu\'une formation continue. La combinaison de la psychologie académique et du travail gestaltiste des profondeurs nous permet d\'aborder tes problématiques là où se produit le véritable changement.',
-    },
-    qualifications: {
-      title: 'Qualifications en Gestalt-thérapie',
-      items: [
-        'Gestalt-thérapeute | Formation intensive de 7 ans à l\'Institut de Gestalt et d\'Expérience, Institut Heldenweg & Prana Leipzig',
-        'M.Sc. Psychologie Appliquée et Conseil | IU Université Internationale (en formation, prévu 2027)',
-        'Facilitateur du Voyage du Héros (méthode Paul Rebillot) | Institut Heldenweg – Animation de processus de groupe',
-        'Constellations Familiales Systémiques & Praticien Gestalt | Prana Leipzig',
-      ],
-    },
-    scrollTelling: {
-      title: 'Gestalt-thérapie (Le cœur de mon travail)',
-      intro: 'La Gestalt-thérapie est une approche thérapeutique humaniste qui repose sur trois piliers essentiels :',
-      pillars: [
-        {
-          title: '1. L\'Awareness',
-          subtitle: 'Ressentir plutôt que penser',
-          description: 'Percevoir consciemment le corps et les émotions. Être ancré dans l\'instant présent.',
-        },
-        {
-          title: '2. La Globalité',
-          subtitle: 'Corps, âme, esprit & environnement',
-          description: 'Considérer tous les aspects de l\'être humain comme une unité indissociable.',
-        },
-        {
-          title: '3. Contact & Dialogue',
-          subtitle: 'Rencontre authentique d\'égal à égal',
-          description: 'La guérison se produit dans le dialogue authentique entre le thérapeute et le client.',
-        },
-      ],
-      summary: 'La Gestalt-thérapie signifie être pleinement présent dans l\'instant et affiner sa propre perception. Par l\'expérience de soi consciente, les anciens schémas sont reconnus et transformés.',
-    },
-    offeneGestalt: {
-      title: 'Gestalt inachevée',
-      description: 'Une Gestalt inachevée est une expérience non terminée – un conflit non résolu ou une émotion refoulée.',
-      tagline: 'En thérapie, nous fermons ces Gestalts ouvertes.',
-    },
-    kontaktunterbrechungen: {
-      title: 'Interruptions du contact',
-      description: 'Les interruptions du contact sont les mécanismes de protection qui nous ont autrefois aidés mais qui maintenant nous freinent.',
-      tagline: 'Nous apprenons à les reconnaître et à les libérer.',
-    },
-    geschlosseneGestalt: {
-      title: 'Gestalt achevée',
-      description: 'La guérison survient lorsque nous intégrons l\'inachevé. Une Gestalt achevée apporte la paix intérieure et permet de se sentir à nouveau « entier ».',
-      tagline: 'L\'épanouissement, la paix et le calme reviennent.',
-    },
-    kontaktzyklus: {
-      title: 'Le cycle du contact',
-      intro: 'Le cycle du contact décrit le rythme naturel du besoin et de l\'action – en six phases :',
-      phases: [
-        { title: '1. Sensation', subtitle: 'Corps', description: 'Percevoir un besoin intérieur' },
-        { title: '2. Awareness', subtitle: 'Esprit', description: 'Prise de conscience et insight' },
-        { title: '3. Mobilisation', subtitle: 'Action', description: 'Développer l\'énergie et la motivation' },
-        { title: '4. Contact', subtitle: '', description: 'Expérience complète dans l\'instant' },
-        { title: '5. Intégration', subtitle: 'Assimilation', description: 'Traitement et intégration' },
-        { title: '6. Retrait', subtitle: 'Repos', description: 'Régénération et réorientation' },
-      ],
-      summary: 'Les interruptions de ce cycle peuvent entraîner des difficultés psychologiques et physiques. En thérapie, nous travaillons à les reconnaître et à explorer de nouvelles façons d\'être.',
-    },
-    ressourcen: {
-      title: 'Ressources & Soutien',
-      intro: 'Dans le processus thérapeutique, nous utilisons des ressources pour soutenir le processus de changement, diverses ressources servant à la stabilisation.',
-      items: [
-        { title: 'Soutien externe', description: 'La relation thérapeutique ainsi que la famille et les groupes comme réseau stable.' },
-        { title: 'Ressources internes', description: 'Conscience corporelle, centrage et résilience pour la stabilité intérieure.' },
-        { title: 'Méthodes créatives', description: 'Peinture, écriture, mouvement et musique pour une expression de soi authentique.' },
-      ],
-    },
-    painPoints: {
-      label: 'Le Status Quo',
-      title: 'Est-ce votre réalité ?',
-      items: [
-        {
-          title: 'Le sentiment de vide',
-          description: '"Je me sens un peu perdu, parfois seul ou déconnecté – de moi-même, de mon propre corps et de mes vrais sentiments."'
-        },
-        {
-          title: 'Blocage & Perte de repères',
-          description: '"En fait, je ne sais pas vraiment ce que je veux ni quelle direction ma vie devrait prendre. Je suis juste bloqué."'
-        },
-        {
-          title: 'Déconnecté & Trop dans le mental',
-          description: '"Je peux analyser parfaitement toute ma vie, mais j\'ai perdu le vrai contact avec moi-même. Je veux sortir de ma tête et ressentir à nouveau."'
-        }
-      ]
-    },
-    philosophy: {
-      label: 'Le cœur du travail',
-      badges: [
-        '8 ans de pratique & formation en Gestalt-thérapie',
-        'M.Sc. Psychologie & Conseil (en formation)'
-      ],
-      title: 'Pas encore plus d\'optimisation de soi. Mais de la paix.',
-      p1: 'Nous vivons à une époque de surcharge sensorielle absolue. Souvent, nous nous réveillons le matin sans être vraiment là. Nous nous sentons déconnectés, impuissants et parfois presque désespérés car tout semble si vain. Notre esprit essaie de résoudre ce vide par une analyse constante – ce qui ne fait qu\'augmenter l\'agitation.',
-      p2: 'Le moyen le plus efficace d\'interrompre ce carrousel de pensées est l\'<strong className="font-semibold text-primary">awareness</strong> (la pleine conscience de ce qui est là) dans l\'ici et maintenant. Il s\'agit de trouver des moyens créatifs de ne plus réprimer votre propre force vitale. Nous traitons ce qui reste inachevé et non résolu du passé afin que vous puissiez renouer avec vous-même et raviver cette frontière-contact.',
-      quote: 'Le but ultime est une paix intérieure profonde, qui dépasse tout le reste. Une paix qui donne le sentiment : peu importe ce qui arrive, c\'est ok. Et si ça a fait mal, c\'est ok aussi.'
-    },
-    cta: {
-      title: 'Curieux d\'en savoir plus ?',
-      description: 'Réserve un appel découverte gratuit ou appelle-moi simplement pour découvrir si une collaboration fait sens.',
-      button: 'Me contacter',
-    },
-    location: {
-      title: 'Lieu',
-      city: 'Toulouse Centre',
-      description: 'IZICure, 47 Allées Jean Jaurès, 31000 Toulouse',
-    },
+    hero: { subtitle: 'Conseil psychologique. Sortir du mental pour revenir à l\'expérience.', cta: 'Premier entretien gratuit' },
+    gestaltIntro: { label: 'Le cœur de mon travail', title: 'La Gestalt-thérapie', description: 'La Gestalt-thérapie est une approche humaniste et expérientielle qui considère la personne dans sa globalité.', essence: [{ title: 'Ici & Maintenant', description: 'La vie se déroule dans l\'instant présent.' }, { title: 'Conscience', description: 'La perception consciente du corps et des sentiments.' }, { title: 'Contact', description: 'La guérison se produit dans une rencontre authentique.' }], additionalInfo: 'Comme la Gestalt-thérapie est le cœur de mon travail, voici quelques informations supplémentaires :' },
+    approach: { label: 'Attitude Thérapeutique', title: 'Formation & Parcours', description: 'Mon travail se base sur une formation approfondie en Gestalt-thérapie.' },
+    qualifications: { title: 'Qualifications en Gestalt-thérapie', items: ['Gestalt-thérapeute | Formation intensive de 7 ans', 'M.Sc. Psychologie Appliquée et Conseil | IU (en formation)', 'Facilitateur du Voyage du Héros', 'Constellations Familiales Systémiques & Praticien Gestalt'] },
+    scrollTelling: { title: 'Gestalt-thérapie (Le cœur de mon travail)', intro: 'La Gestalt-thérapie repose sur trois piliers essentiels :', pillars: [{ title: '1. L\'Awareness', subtitle: 'Ressentir plutôt que penser', description: 'Percevoir consciemment le corps et les émotions.' }, { title: '2. La Globalité', subtitle: 'Corps, âme, esprit & environnement', description: 'Considérer tous les aspects comme une unité.' }, { title: '3. Contact & Dialogue', subtitle: 'Rencontre authentique d\'égal à égal', description: 'La guérison dans le dialogue authentique.' }], summary: 'La Gestalt-thérapie signifie être pleinement présent dans l\'instant.' },
+    offeneGestalt: { title: 'Gestalt inachevée', description: 'Une expérience non terminée.', tagline: 'En thérapie, nous fermons ces Gestalts ouvertes.' },
+    kontaktunterbrechungen: { title: 'Interruptions du contact', description: 'Les mécanismes de protection qui nous freinent.', tagline: 'Nous apprenons à les reconnaître et à les libérer.' },
+    geschlosseneGestalt: { title: 'Gestalt achevée', description: 'La guérison survient lorsque nous intégrons l\'inachevé.', tagline: 'L\'épanouissement, la paix et le calme reviennent.' },
+    kontaktzyklus: { title: 'Le cycle du contact', intro: 'Le cycle du contact décrit le rythme naturel – en six phases :', phases: [{ title: '1. Sensation', subtitle: 'Corps', description: 'Percevoir un besoin intérieur' }, { title: '2. Awareness', subtitle: 'Esprit', description: 'Prise de conscience' }, { title: '3. Mobilisation', subtitle: 'Action', description: 'Développer l\'énergie' }, { title: '4. Contact', subtitle: '', description: 'Expérience complète' }, { title: '5. Intégration', subtitle: 'Assimilation', description: 'Traitement' }, { title: '6. Retrait', subtitle: 'Repos', description: 'Régénération' }], summary: 'Les interruptions peuvent entraîner des difficultés psychologiques et physiques.' },
+    ressourcen: { title: 'Ressources & Soutien', intro: 'Nous utilisons des ressources pour soutenir le processus de changement.', items: [{ title: 'Soutien externe', description: 'La relation thérapeutique et la famille.' }, { title: 'Ressources internes', description: 'Conscience corporelle et résilience.' }, { title: 'Méthodes créatives', description: 'Peinture, écriture, mouvement et musique.' }] },
+    painPoints: { label: 'Le Status Quo', title: 'Est-ce votre réalité ?', items: [{ title: 'Le sentiment de vide', description: '"Je me sens un peu perdu."' }, { title: 'Blocage & Perte de repères', description: '"Je ne sais pas quelle direction prendre."' }, { title: 'Déconnecté & Trop dans le mental', description: '"J\'ai perdu le vrai contact avec moi-même."' }] },
+    philosophy: { label: 'Le cœur du travail', badges: ['8 ans de pratique & formation', 'M.Sc. Psychologie & Conseil (en formation)'], title: 'Pas encore plus d\'optimisation de soi. Mais de la paix.', p1: 'Nous vivons à une époque de surcharge sensorielle.', p2: 'Le moyen le plus efficace d\'interrompre ce carrousel est l\'<strong className="font-semibold text-primary">awareness</strong> dans l\'ici et maintenant.', quote: 'Le but ultime est une paix intérieure profonde.' },
+    cta: { title: 'Curieux d\'en savoir plus ?', description: 'Réserve un appel découverte gratuit.', button: 'Me contacter' },
+    location: { title: 'Lieu', city: 'Toulouse Centre', description: 'IZICure, 47 Allées Jean Jaurès, 31000 Toulouse' },
   },
-
   angebot: {
     title: 'Services',
-    process: {
-      title: 'Le Processus',
-      description: 'Nous partons de tes besoins et de ce qui te frustre. À partir de là, nous décidons ensemble quels outils (diagnostic, coaching ou thérapie) te mèneront le mieux vers ton objectif.',
-    },
-    services: [
-      {
-        title: 'Gestalt-thérapie',
-        subline: 'LE CŒUR DE MON TRAVAIL',
-        description: "La Gestalt-thérapie est une approche humaniste qui relie le corps, l'esprit et l'âme. Nous travaillons dans l'ici et maintenant pour rendre les schémas inconscients tangibles et les résoudre. Cela permet une véritable transformation et la paix intérieure.",
-      },
-      {
-        title: 'Coaching',
-        subline: 'INCL. DIAGNOSTIC',
-        description: "Alors que la thérapie va en profondeur, le coaching apporte une clarté stratégique et des étapes concrètes. Nous relions votre intellect à l'intelligence de votre corps pour prendre des décisions cohérentes et créer des routines durables. Vous passez ainsi de la réflexion à l'action.",
-      },
-      {
-        title: 'Personal Training',
-        subline: 'LE MOUVEMENT PLUTÔT QUE LES MOTS',
-        description: "Le changement ne nécessite souvent pas d'analyse supplémentaire, mais de la sueur et de l'action. Nous travaillons sur une base scientifique avec des diagnostics fonctionnels et un entraînement individuel. Ainsi, votre corps devient le fondement de votre force intérieure – ressenti à chaque instant.",
-      },
-    ],
-    checkup: {
-      label: 'Le Bilan Initial',
-      title: 'Comprendre comme base du changement',
-      intro: "Le bilan initial relie les connaissances objectives du diagnostic à ton vécu subjectif. Ainsi se crée une image complète – la base d'un chemin qui te correspond vraiment.",
-      features: [
-        { title: 'Analyse', description: 'Nous évaluons tes données diagnostiques et identifions les schémas récurrents.' },
-        { title: 'Réflexion', description: 'Ensemble, nous explorons ce que ces insights signifient pour ta vie et tes objectifs.' },
-        { title: 'Direction', description: 'Nous développons une feuille de route claire et personnalisée pour tes prochaines étapes.' },
-      ],
-      diagnosticIntegration: 'Les données nous donnent la carte, mais parcourir le chemin est une expérience émotionnelle.',
-    },
-    konditionen: {
-      title: 'Tarifs & Collaboration',
-      einzelbegleitung: {
-        label: 'Séance découverte ou entraînement individuel',
-        price: '50€',
-        priceLabel: '50 Minutes',
-        title: 'Séance individuelle',
-        description: "Parfois, quelques heures suffisent. Que ce soit pour la Gestalt-thérapie, le coaching ou l'entraînement personnel – selon vos besoins.",
-        cta: 'Prendre rendez-vous',
-      },
-      intensiv: {
-        label: 'Pour un changement durable',
-        price: 'Cadre sur mesure',
-        priceLabel: '3-6 Mois',
-        title: 'Accompagnement individuel',
-        description: 'Le changement prend du temps. Pour les thèmes profonds, nous établissons un rythme régulier sur 3-6 mois.',
-        discount: '10% de réduction par séance',
-        discountPrice: '45€',
-        cta: 'Premier entretien gratuit',
-      },
-    },
-    formate: {
-      title: 'Formats flexibles',
-      online: {
-        title: 'En ligne (Zoom)',
-        description: 'Indépendant du lieu pour les clients du monde entier.',
-      },
-      praesenz: {
-        title: 'En présentiel',
-        description: 'À Toulouse.',
-      },
-      map: {
-        title: 'Lieux à Toulouse',
-        therapie: {
-          title: 'Gestalt-thérapie & Coaching',
-          description: 'Les séances ont lieu ici dans un cadre sûr et confidentiel.',
-        },
-        training: {
-          title: 'Personal Training',
-          description: 'En extérieur, en salle ou chez toi – selon tes objectifs.',
-        }
-      }
-    },
-    faq: {
-      title: 'Questions Fréquentes',
-      items: [
-        {
-          question: 'Comment se déroule concrètement une séance ?',
-          answer: "Cela dépend fortement du domaine choisi (thérapie, coaching ou entraînement). En principe, nous définissons un objectif clair au début et travaillons ensuite de manière ciblée dans l'un des trois domaines.",
-        },
-        {
-          question: 'Pourquoi ce mélange ?',
-          answer: "Parce que nous comprenons souvent avec la tête, mais les sentiments ou le corps ne suivent pas. La psychologie offre le cadre, la Gestalt-thérapie dissout les blocages émotionnels et l'entraînement physique ancre la nouvelle attitude physiquement. Ainsi, le changement devient holistique et durable.",
-        },
-        {
-          question: 'L\'assurance maladie paie-t-elle les séances ?',
-          answer: "En tant que M.Sc. Psychologie, Gestalt-thérapeute et entraîneur, je travaille en cabinet privé. Cela signifie généralement que les coûts ne sont pas pris en charge par l'assurance maladie légale. Les assurances complémentaires privées ou les caisses privées remboursent une partie selon le tarif. L'avantage pour vous : nous pouvons commencer immédiatement sans obstacles bureaucratiques et adapter la durée et la fréquence des séances à votre processus.",
-        },
-        {
-          question: "Dois-je être sportif pour l'entraînement ?",
-          answer: "Non, pas du tout. Nous commençons exactement là où vous en êtes – que vous soyez débutant ou athlète. L'accent n'est pas mis sur la performance maximale, mais sur une bonne sensation corporelle et un mouvement sain.",
-        },
-        {
-          question: 'Puis-je réserver uniquement du conseil ou uniquement de l\'entraînement ?',
-          answer: 'Oui, absolument. De nombreux clients viennent avec une demande spécifique. Nous regardons ensemble ce dont vous avez besoin – souvent les domaines s\'imbriquent naturellement, mais l\'accent est mis là où cela vous aide le plus.',
-        },
-        {
-          question: 'Dans quelles langues pouvons-nous travailler ?',
-          answer: 'Je travaille couramment en allemand, anglais et français. Il est souvent fascinant de voir comment l\'expérience émotionnelle change quand on parle dans sa langue maternelle ou une langue choisie. Nous utilisons la langue dans laquelle tu te sens le plus en sécurité pour atteindre le cœur de tes problèmes.',
-        },
-      ],
-    },
-    cta: {
-      title: 'Prêt pour la prochaine étape ?',
-      description: 'Réserve un appel découverte gratuit ou appelle-moi simplement pour découvrir si une collaboration fait sens.',
-      button: 'Me contacter',
-    },
+    process: { title: 'Le Processus', description: 'Nous partons de tes besoins et de ce qui te frustre.' },
+    services: [{ title: 'Gestalt-thérapie', subline: 'LE CŒUR DE MON TRAVAIL', description: 'Approche humaniste reliant corps, esprit et âme.' }, { title: 'Coaching', subline: 'INCL. DIAGNOSTIC', description: 'Clarté stratégique et étapes concrètes.' }, { title: 'Personal Training', subline: 'LE MOUVEMENT PLUTÔT QUE LES MOTS', description: 'Entraînement sur base scientifique.' }],
+    checkup: { label: 'Le Bilan Initial', title: 'Comprendre comme base du changement', intro: 'Le bilan relie les connaissances objectives à ton vécu subjectif.', features: [{ title: 'Analyse', description: 'Nous évaluons tes données diagnostiques.' }, { title: 'Réflexion', description: 'Ensemble, nous explorons ce que ces insights signifient.' }, { title: 'Direction', description: 'Nous développons une feuille de route personnalisée.' }], diagnosticIntegration: 'Les données nous donnent la carte, mais parcourir le chemin est une expérience émotionnelle.' },
+    konditionen: { title: 'Tarifs & Collaboration', einzelbegleitung: { label: 'Séance découverte ou entraînement individuel', price: '50€', priceLabel: '50 Minutes', title: 'Séance individuelle', description: 'Parfois, quelques heures suffisent.', cta: 'Prendre rendez-vous' }, intensiv: { label: 'Pour un changement durable', price: 'Cadre sur mesure', priceLabel: '3-6 Mois', title: 'Accompagnement individuel', description: 'Le changement prend du temps.', discount: '10% de réduction', discountPrice: '45€', cta: 'Premier entretien gratuit' } },
+    formate: { title: 'Formats flexibles', online: { title: 'En ligne (Zoom)', description: 'Indépendant du lieu.' }, praesenz: { title: 'En présentiel', description: 'À Toulouse.' }, map: { title: 'Lieux à Toulouse', therapie: { title: 'Gestalt-thérapie & Coaching', description: 'Cadre sûr et confidentiel.' }, training: { title: 'Personal Training', description: 'En extérieur, en salle ou chez toi.' } } },
+    faq: { title: 'Questions Fréquentes', items: [{ question: 'Comment se déroule une séance ?', answer: 'Cela dépend du domaine choisi.' }, { question: 'Pourquoi ce mélange ?', answer: 'Parce que nous comprenons souvent avec la tête, mais les sentiments ne suivent pas.' }, { question: 'L\'assurance maladie paie-t-elle ?', answer: 'Je travaille en cabinet privé.' }, { question: 'Dois-je être sportif ?', answer: 'Non, pas du tout.' }, { question: 'Puis-je réserver uniquement du conseil ?', answer: 'Oui, absolument.' }, { question: 'Dans quelles langues ?', answer: 'Je travaille en allemand, anglais et français.' }] },
+    cta: { title: 'Prêt pour la prochaine étape ?', description: 'Réserve un appel découverte gratuit.', button: 'Me contacter' },
   },
-
   ueberMich: {
-    hero: {
-      label: 'JOHANNES CHRIST — GESTALT-THÉRAPEUTE, COACHING, PERSONAL TRAINER',
-      title: 'Vécu, pas seulement appris.',
-      byline: 'Gestalt-thérapeute, Coach & Praticien Corporel',
-      badges: [
-        '8 ans de pratique & formation en Gestalt-thérapie',
-        'M.Sc. Psychologie & Conseil (en formation)'
-      ],
-      description1: 'Mon parcours a commencé il y a quelques années par ma propre crise existentielle. C\'est alors que j\'ai rencontré pour la première fois la Gestalt-thérapie, qui ne m\'a plus quitté depuis. Par le travail intérieur et extérieur, je me suis battu pour sortir de la dépression avec l\'aide des autres et je me tiens aujourd\'hui plus fort que jamais.\n\nÀ Leipzig puis à Innsbruck, en plus de la Gestalt-thérapie et de nombreuses autres formations, j\'ai obtenu un diplôme en Thérapie par le Mouvement et Prévention (B.A.).',
-      description2: 'Dans mon travail aujourd\'hui, je réunis les connaissances de la science actuelle avec celles de la Gestalt. Un Master en Psychologie (M.Sc.) soutient cela encore davantage, pour que tu puisses bénéficier de toute ma puissance et mes connaissances pour toi et ton chemin.',
-    },
-    qualifikationen: {
-      title: 'Formation & Qualifications',
-      akademisch: {
-        title: 'Parcours académique',
-        items: [
-          'M.Sc. Psychologie Appliquée et Conseil | IU Université Internationale (en formation, prévu 2027)',
-          'B.A. Prévention et Thérapie par le Mouvement | Académie Professionnelle Allemande du Sport et de la Santé',
-        ],
-      },
-      therapeutisch: {
-        title: 'Formation thérapeutique',
-        items: [
-          'Gestalt-thérapeute | Formation intensive de 7 ans à l\'Institut de Gestalt et d\'Expérience, Institut Heldenweg & Prana Leipzig',
-          'Facilitateur du Voyage du Héros (méthode Paul Rebillot) | Institut Heldenweg – Animation de travail Gestalt structuré et processus de groupe',
-          'Constellations Familiales Systémiques & Praticien Gestalt | Prana Leipzig',
-        ],
-      },
-      coaching: {
-        title: 'Coaching & Travail corporel',
-        items: [
-          'Coach Holobody | Mindvalley',
-          'Entraîneur Athlétique Diplômé | Académie Professionnelle Allemande du Sport et de la Santé',
-          'Licence d\'Entraîneur A | Académie Professionnelle Allemande du Sport et de la Santé',
-        ],
-      },
-    },
-    arbeitsweise: {
-      label: 'MON APPROCHE',
-      title: 'Espace pour ce qui est.',
-      bodyP1: 'Nous vivons à une époque de surcharge d\'informations. Souvent, nous nous réveillons le matin sans être vraiment présents. Nous nous sentons déconnectés, impuissants, parfois même désespérés face au flux constant d\'informations et au rythme de la vie quotidienne.',
-      bodyP2Prefix: 'Dans mon travail de thérapeute et coach, c\'est exactement ce point qui est au cœur : ',
-      bodyP2Strong: 'S\'arrêter dans l\'Ici et Maintenant',
-      bodyP2Suffix: '. Nous regardons ce qui continue de résonner non traité depuis le passé – douleur émotionnelle ou schémas ancrés – et trouvons des moyens de ne plus réprimer ta propre force de vie créative.',
-      bodyP3: 'L\'objectif n\'est ni la perfection ni la performance constante, mais une paix plus profonde. Une paix qui te donne le sentiment : ',
-      bodyP3Italic: 'Quoi qu\'il arrive, c\'est okay. Et si ça fait mal, alors c\'est permis.',
-      description1: 'Grâce à un accompagnement exceptionnellement personnel qui unit les approches scientifiques physiologiques et psychologiques, nous créons le changement que tu désires.',
-      description2: 'Qu\'il s\'agisse d\'avant en tant qu\'entraîneur et coach ou aujourd\'hui en tant que Gestalt-thérapeute : je suis ton partenaire d\'entraînement ! Je maintiens l\'espace pour ce qui n\'a jamais eu d\'espace et je mets en mouvement ce qui était bloqué !',
-      quote: '« Ce qui est, peut être – et ce qui peut être, peut changer. »',
-      icons: {
-        koerper: 'Corps',
-        psyche: 'Psyché',
-        resonanz: 'Changement',
-      },
-    },
-    persoenlich: {
-      label: 'PERSONNEL',
-      title: 'Et sinon ?',
-      description1: 'Ceux qui me connaissent le savent : je prends mon travail au sérieux. Mais si à un moment donné nous n\'avons plus rien à rire, alors ça devient critique. Alors quelque chose ne va pas. Je crois au pouvoir de l\'humour, de la légèreté et des rencontres authentiques.',
-      description2: 'En dehors de la thérapie, tu me trouveras en train de faire du sport, en sortie avec des amis ou dans mes clubs de rhétorique. Une vie épanouissante se compose, du moins pour moi, de nombreux petits moments de connexion – avec nous-mêmes, avec les autres et avec l\'univers dans son ensemble.',
-    },
-    training: {
-      label: 'LA TROISIÈME DIMENSION',
-      title: 'Le mouvement plutôt que les mots',
-      description1: 'Tous les problèmes ne se règlent pas en parlant – parfois, il faut de la sueur, du mouvement et de l\'intensité. Le corps n\'est pas une annexe de l\'esprit – il le façonne. Se dépenser permet de se vider la tête.',
-      description2: 'Personal Training à Toulouse – en extérieur, en salle ou chez toi.',
-      description3: 'Prendre du muscle, perdre du poids ou revenir après une blessure – en tant qu\'entraîneur athlétique et thérapeute du mouvement (B.A.), nous travaillons avec ton corps, pas contre lui.',
-    },
-    cta: {
-      title: 'Curieux d\'en savoir plus ?',
-      description: 'Réserve un appel découverte gratuit ou appelle-moi simplement pour découvrir si une collaboration fait sens.',
-      button: 'Me contacter',
-    },
+    hero: { label: 'JOHANNES CHRIST — GESTALT-THÉRAPEUTE, COACHING, PERSONAL TRAINER', title: 'Vécu, pas seulement appris.', byline: 'Gestalt-thérapeute, Coach & Praticien Corporel', badges: ['8 ans de pratique & formation', 'M.Sc. Psychologie & Conseil (en formation)'], description1: 'Mon parcours a commencé par ma propre crise existentielle.', description2: 'Dans mon travail aujourd\'hui, je réunis la science et la Gestalt.' },
+    qualifikationen: { title: 'Formation & Qualifications', akademisch: { title: 'Parcours académique', items: ['M.Sc. Psychologie Appliquée et Conseil | IU (en formation)', 'B.A. Prévention et Thérapie par le Mouvement'] }, therapeutisch: { title: 'Formation thérapeutique', items: ['Gestalt-thérapeute | Formation intensive de 7 ans', 'Facilitateur du Voyage du Héros', 'Constellations Familiales Systémiques'] }, coaching: { title: 'Coaching & Travail corporel', items: ['Coach Holobody | Mindvalley', 'Entraîneur Athlétique Diplômé', 'Licence d\'Entraîneur A'] } },
+    arbeitsweise: { label: 'MON APPROCHE', title: 'Espace pour ce qui est.', bodyP1: 'Nous vivons à une époque de surcharge d\'informations.', bodyP2Prefix: 'Dans mon travail, c\'est exactement le point central : ', bodyP2Strong: 'S\'arrêter dans l\'Ici et Maintenant', bodyP2Suffix: '.', bodyP3: 'L\'objectif n\'est ni la perfection ni la performance, mais une paix plus profonde.', bodyP3Italic: 'Quoi qu\'il arrive, c\'est okay.', description1: 'Grâce à un accompagnement exceptionnellement personnel nous créons le changement.', description2: 'Je suis ton partenaire d\'entraînement !', quote: '« Ce qui est, peut être – et ce qui peut être, peut changer. »', icons: { koerper: 'Corps', psyche: 'Psyché', resonanz: 'Changement' } },
+    persoenlich: { label: 'PERSONNEL', title: 'Et sinon ?', description1: 'Je prends mon travail au sérieux. Mais je crois au pouvoir de l\'humour.', description2: 'En dehors de la thérapie, tu me trouveras au sport ou avec des amis.' },
+    training: { label: 'LA TROISIÈME DIMENSION', title: 'Le mouvement plutôt que les mots', description1: 'Tous les problèmes ne se règlent pas en parlant.', description2: 'Personal Training à Toulouse.', description3: 'Prendre du muscle, perdre du poids ou revenir après une blessure.' },
+    cta: { title: 'Curieux d\'en savoir plus ?', description: 'Réserve un appel découverte gratuit.', button: 'Me contacter' },
   },
-
   kontakt: {
-    hero: {
-      title: 'Contact',
-      subtitle: 'Tu as des questions ou tu souhaites prendre rendez-vous ? J\'ai hâte de recevoir ton message.',
-    },
-    form: {
-      title: 'Écris-moi',
-      name: 'Nom *',
-      email: 'Email *',
-      phone: 'Téléphone (optionnel)',
-      message: 'Ton message *',
-      messagePlaceholder: 'Décris brièvement ta préoccupation...',
-      submit: 'Envoyer le message',
-      successTitle: 'Message envoyé',
-      successMessage: 'Merci pour ton message. Je te répondrai bientôt.',
-    },
-    info: {
-      title: 'Coordonnées',
-      standort: 'Lieu',
-      telefon: 'Téléphone',
-      erreichbarkeit: 'Disponibilité',
-      erreichbarkeitZeiten: 'Lun-Ven : 9h00 - 18h00',
-      erreichbarkeitTermine: 'Rendez-vous sur arrangement',
-    },
-    erstgespraech: {
-      title: 'Première consultation gratuite',
-      description: 'Je propose un appel découverte gratuit de 30 minutes où nous pouvons explorer ensemble si et comment une collaboration serait pertinente. N\'hésite pas à me contacter !',
-    },
-    online: {
-      title: 'Séances en ligne',
-      description: 'Toutes les séances peuvent également avoir lieu en ligne par vidéo.',
-    },
+    hero: { title: 'Contact', subtitle: 'Tu as des questions ou tu souhaites prendre rendez-vous ?' },
+    form: { title: 'Écris-moi', name: 'Nom *', email: 'Email *', phone: 'Téléphone (optionnel)', message: 'Ton message *', messagePlaceholder: 'Décris brièvement ta préoccupation...', submit: 'Envoyer le message', successTitle: 'Message envoyé', successMessage: 'Merci pour ton message. Je te répondrai bientôt.' },
+    info: { title: 'Coordonnées', standort: 'Lieu', telefon: 'Téléphone', erreichbarkeit: 'Disponibilité', erreichbarkeitZeiten: 'Lun-Ven : 9h00 - 18h00', erreichbarkeitTermine: 'Rendez-vous sur arrangement' },
+    erstgespraech: { title: 'Première consultation gratuite', description: 'Je propose un appel découverte gratuit de 30 minutes.' },
+    online: { title: 'Séances en ligne', description: 'Toutes les séances peuvent avoir lieu en ligne.' },
   },
-
-  footer: {
-    kontakt: 'Contact',
-    rechtliches: 'Mentions légales',
-    datenschutz: 'Politique de confidentialité',
-    impressum: 'Mentions légales',
-    copyright: 'Johannes Christ · Gestalt-thérapie & Coaching',
-  },
-
-  common: {
-    learnMore: 'En savoir plus',
-    bookAppointment: 'Prendre rendez-vous',
-    freeConsultation: 'Première consultation gratuite',
-  },
-
+  footer: { kontakt: 'Contact', rechtliches: 'Mentions légales', datenschutz: 'Politique de confidentialité', impressum: 'Mentions légales', copyright: 'Johannes Christ · Gestalt-thérapie & Coaching' },
+  common: { learnMore: 'En savoir plus', bookAppointment: 'Prendre rendez-vous', freeConsultation: 'Première consultation gratuite' },
   personalTraining: {
     nav: 'Coaching Sportif',
-    hero: {
-      title: 'Personal Training',
-      subtitle: 'Entraînement scientifiquement fondé pour ceux qui veulent des résultats. Performance, prévention ou réhabilitation – à Toulouse.',
-      cta: 'Premier rendez-vous gratuit',
-    },
-    approach: {
-      label: 'Athlétisme & Performance',
-      title: 'Personal Training',
-      description: 'En tant que scientifique du sport (B.A. Prévention et Thérapie par le Mouvement) et entraîneur athlétique diplômé, je travaille sur une base scientifique. Pas de devinettes, pas de programmes standards. On commence par un bilan fonctionnel, on identifie tes points faibles et on construit un programme adapté à ton quotidien.\n\nQue tu veuilles revenir après une blessure, travailler préventivement sur ta posture ou amener ta performance sportive au niveau supérieur – on trouve le chemin.',
-    },
-    painPoints: {
-      label: 'Le Status Quo',
-      title: 'Luttez-vous contre ces obstacles ?',
-      items: [
-        {
-          title: 'Manque de motivation',
-          description: '"Je suis trop souvent assis, j\'ai du mal à me mettre en mouvement seul, et j\'ai parfois besoin de quelqu\'un pour me donner un coup de pied aux fesses."'
-        },
-        {
-          title: 'Douleurs physiques',
-          description: '"La nuque, le dos ou les genoux font mal. Le quotidien est souvent épuisant. Je veux simplement être à nouveau sans douleur, résistant et en bonne santé."'
-        },
-        {
-          title: 'Apparence & Bien-être',
-          description: '"Parfois, je ne me sens pas à l\'aise dans ma peau. Je veux perdre du poids, développer mes muscles et me sentir vraiment bien (même nu) à nouveau."'
-        },
-        {
-          title: 'Performance sportive',
-          description: '"Que ce soit pour la prochaine compétition ou le prochain niveau d\'entraînement : j\'ai besoin d\'un accompagnement professionnel et structuré pour donner le meilleur de moi-même."'
-        }
-      ]
-    },
-    services: [
-      {
-        title: 'Athlétisme & Performance',
-        subline: 'PLUS FORT. PLUS RAPIDE. PLUS RÉSISTANT.',
-        description: 'Entraînement ciblé pour athlètes et sportifs amateurs. Force, vitesse, endurance – adapté à ton sport et tes objectifs. Une exécution correcte des exercices est la base pour éviter les blessures et progresser.',
-      },
-      {
-        title: 'Prévention & Réhab',
-        subline: 'LE MOUVEMENT COMME MÉDECINE',
-        description: 'Douleurs dorsales, déséquilibres posturaux, surcharge – beaucoup de problèmes peuvent être résolus ou évités par un entraînement ciblé. Selon votre objectif, nous travaillons sur le renforcement musculaire, la perte de poids ou la rééducation fonctionnelle après blessure.',
-      },
-      {
-        title: 'Composition Corporelle',
-        subline: 'BIEN DANS SON CORPS',
-        description: 'Un corps fort peut aussi en avoir l\'air. Nous travaillons sur ta composition corporelle (prise de muscle & perte de gras) – Pour une sensation corporelle saine et puissante que tu ressens chaque jour.',
-      },
-    ],
-    qualifications: {
-      title: 'Qualifications',
-      items: [
-        'B.A. Prévention et Thérapie par le Mouvement',
-        'Entraîneur Athlétique Diplômé',
-        'Licence d\'Entraîneur A',
-        'Coach Holobody (Mindvalley)',
-      ],
-    },
-    location: {
-      title: 'Lieu',
-      city: '12 Rue Jean Palaprat, 31000 Toulouse',
-      description: 'Entraînement sur place à Toulouse – en extérieur, en salle ou chez vous.',
-    },
-    pricing: {
-      title: 'Tarifs',
-      single: {
-        label: 'Séance Unique',
-        price: '50€',
-        priceLabel: '50 Minutes',
-        title: 'Séance de Coaching Sportif',
-        description: 'Une séance d\'entraînement intensive, individuellement adaptée à tes besoins.',
-        cta: 'Réserver une séance',
-      },
-      package: {
-        label: 'Pour un entraînement régulier',
-        price: '180€',
-        priceLabel: '4 Séances',
-        title: 'Forfait 4 Séances',
-        description: 'Quatre séances pour un progrès durable. Idéal pour bien démarrer.',
-        discount: '10% d\'économie',
-        discountPrice: '45€ par séance',
-        cta: 'Réserver le forfait',
-      },
-    },
-    cta: {
-      title: 'Prêt à commencer ?',
-      description: 'Prends rendez-vous pour une première consultation gratuite afin de discuter de tes objectifs.',
-      button: 'Prendre rendez-vous',
-    },
+    hero: { title: 'Personal Training', subtitle: 'Entraînement scientifiquement fondé pour ceux qui veulent des résultats.', cta: 'Premier rendez-vous gratuit' },
+    approach: { label: 'Athlétisme & Performance', title: 'Personal Training', description: 'Parfois il faut de la sueur et de l\'action, pas plus d\'analyse.' },
+    painPoints: { label: 'Le Status Quo', title: 'Luttez-vous contre ces obstacles ?', items: [{ title: 'Manque de motivation', description: '"Je suis trop souvent assis."' }, { title: 'Douleurs physiques', description: '"La nuque, le dos font mal."' }, { title: 'Apparence & Bien-être', description: '"Je ne me sens pas à l\'aise dans ma peau."' }, { title: 'Performance sportive', description: '"J\'ai besoin d\'un accompagnement professionnel."' }] },
+    services: [{ title: 'Athlétisme & Performance', subline: 'PLUS FORT. PLUS RAPIDE. PLUS RÉSISTANT.', description: 'Entraînement ciblé pour athlètes.' }, { title: 'Prévention & Réhab', subline: 'LE MOUVEMENT COMME MÉDECINE', description: 'Beaucoup de problèmes peuvent être résolus par l\'entraînement.' }, { title: 'Composition Corporelle', subline: 'BIEN DANS SON CORPS', description: 'Nous travaillons sur ta composition corporelle.' }],
+    qualifications: { title: 'Qualifications', items: ['B.A. Prévention et Thérapie par le Mouvement', 'Entraîneur Athlétique Diplômé', 'Licence d\'Entraîneur A', 'Coach Holobody (Mindvalley)'] },
+    location: { title: 'Lieu', city: '12 Rue Jean Palaprat, 31000 Toulouse', description: 'Entraînement sur place à Toulouse.' },
+    pricing: { title: 'Tarifs', single: { label: 'Séance Unique', price: '50€', priceLabel: '50 Minutes', title: 'Séance de Coaching Sportif', description: 'Une séance intensive.', cta: 'Réserver une séance' }, package: { label: 'Pour un entraînement régulier', price: '180€', priceLabel: '4 Séances', title: 'Forfait 4 Séances', description: 'Quatre séances pour un progrès durable.', discount: '10% d\'économie', discountPrice: '45€ par séance', cta: 'Réserver le forfait' } },
+    cta: { title: 'Prêt à commencer ?', description: 'Prends rendez-vous pour une première consultation gratuite.', button: 'Prendre rendez-vous' },
   },
-
-  shared: {
-    pricingLabel: 'Transparence',
-    regularPrice: 'Régulier',
-    testimonialsLabel: 'Témoignages',
-    testimonialsTitle: 'Voix de mes clients',
-    gestaltTestimonialsSubtitle: 'L\'intégrité et la confidentialité sont des priorités absolues. Voici quelques aperçus anonymisés.',
-    personalTrainingTestimonialsSubtitle: 'Ce que les autres disent de la collaboration et des résultats.',
-    moreTestimonialsComingSoon: 'Plus d\'aperçus et de résultats à venir',
-    moreReviewsComingSoon: 'D\'autres témoignages à venir',
-    crossLinkLabel: 'L\'Autre Dimension',
-    crossLinkGestaltTitle: 'En fait à la recherche de clarté dans la tête ?',
-    crossLinkGestaltDescription: 'Parfois, le problème n\'est pas dans le corps, mais plus profond. Découvre mon approche thérapeutique pour une vraie clarté émotionnelle.',
-    crossLinkGestaltButton: 'Vers la Gestalt-thérapie',
-    crossLinkTrainingTitle: 'Plus intéressé par le changement physique ?',
-    crossLinkTrainingDescription: 'Parfois, la transformation mentale commence mieux par le corps physique. Découvre mon coaching sportif basé sur les preuves.',
-    crossLinkTrainingButton: 'Vers le Personal Training',
-    approachSectionTitle: 'Corps & Esprit en Mouvement',
-    servicesSectionLabel: 'Les Piliers',
-    servicesSectionTitle: 'Mes Services',
-    servicesSectionSubtitle: 'Piliers basés sur les preuves pour ta transformation physique',
-    gestaltLocationTitle: 'Cabinet de Gestalt-thérapie',
-    gestaltPainLabel: 'Le Point de Départ',
-    gestaltPricingTitle: 'Tarifs & Investissement',
-  },
-
-  testimonials: {
-    gestalt: [
-      {
-        text: 'Un vrai accompagnement d\'égal à égal. Après d\'innombrables séances de thérapie par la parole, j\'ai enfin ressenti en Gestalt-thérapie ce dont il s\'agit vraiment. Sortir de la tête, entrer dans l\'expérience.',
-        name: 'Anna M.',
-        role: 'Cheffe de projet',
-      },
-      {
-        text: 'Une expérience absolument transformatrice. Travailler avec ce qui est présent dans le moment dissout les blocages profondément enracinés.',
-        name: 'Thomas B.',
-        role: 'Freelance',
-      },
-    ],
-    personalTraining: [
-      {
-        text: 'L\'entraînement avec Johannes a changé ma vie. J\'ai non seulement gagné en performance, mais je me suis aussi débarrassé des douleurs.',
-        name: 'Michael S.',
-        role: 'Triathlète',
-      },
-      {
-        text: 'Basé sur les preuves et incroyablement motivant. La combinaison d\'entraînement athlétique et de connaissances solides fait la différence.',
-        name: 'Sarah K.',
-        role: 'Entrepreneuse',
-      },
-    ],
-  },
-
+  shared: { pricingLabel: 'Transparence', regularPrice: 'Régulier', testimonialsLabel: 'Témoignages', testimonialsTitle: 'Voix de mes clients', gestaltTestimonialsSubtitle: 'L\'intégrité et la confidentialité sont des priorités.', personalTrainingTestimonialsSubtitle: 'Ce que les autres disent de la collaboration.', moreTestimonialsComingSoon: 'Plus d\'aperçus à venir', moreReviewsComingSoon: 'D\'autres témoignages à venir', crossLinkLabel: 'L\'Autre Dimension', crossLinkGestaltTitle: 'À la recherche de clarté dans la tête ?', crossLinkGestaltDescription: 'Parfois, le problème est plus profond.', crossLinkGestaltButton: 'Vers la Gestalt-thérapie', crossLinkTrainingTitle: 'Plus intéressé par le changement physique ?', crossLinkTrainingDescription: 'Parfois, la transformation commence par le corps.', crossLinkTrainingButton: 'Vers le Personal Training', approachSectionTitle: 'Corps & Esprit en Mouvement', servicesSectionLabel: 'Les Piliers', servicesSectionTitle: 'Mes Services', servicesSectionSubtitle: 'Piliers basés sur les preuves pour ta transformation', gestaltLocationTitle: 'Cabinet de Gestalt-thérapie', gestaltPainLabel: 'Le Point de Départ', gestaltPricingTitle: 'Tarifs & Investissement' },
+  testimonials: { gestalt: [{ text: 'Un vrai accompagnement d\'égal à égal.', name: 'Anna M.', role: 'Cheffe de projet' }, { text: 'Une expérience absolument transformatrice.', name: 'Thomas B.', role: 'Freelance' }], personalTraining: [{ text: 'L\'entraînement avec Johannes a changé ma vie.', name: 'Michael S.', role: 'Triathlète' }, { text: 'Basé sur les preuves et incroyablement motivant.', name: 'Sarah K.', role: 'Entrepreneuse' }] },
   legal: {
-    impressum: {
-      title: 'Mentions Légales',
-      angaben: {
-        title: 'Mentions Légales et Coordonnées',
-        name: 'Johannes Christ',
-        address: 'Toulouse, France',
-        contact: 'Contact',
-        email: 'Email: contact@johanneschrist.com',
-        phone: 'Téléphone: +49 162 170 9979',
-        businessId: 'SIRET: 934 987 882 00010',
-      },
-      publication: {
-        title: 'Directeur de la publication',
-        name: 'Johannes Christ',
-      },
-      dispute: {
-        title: 'Règlement des litiges',
-        content: 'La Commission européenne fournit une plateforme de règlement des litiges en ligne (OS) : https://ec.europa.eu/consumers/odr. Médiation de la consommation : conformément aux articles L.611-1 et suivants du Code de la consommation, vous pouvez recourir gratuitement à un médiateur de la consommation.',
-      },
-      disclaimer: {
-        title: 'Hébergeur et Propriété',
-        content: 'Hébergeur : [Nom de l\'hébergeur] \nAdresse : [Adresse de l\'hébergeur] \nContact : [Numéro/Email de l\'hébergeur] \n\nPropriété intellectuelle : L’ensemble de ce site relève des législations françaises et internationales sur le droit d’auteur et la propriété intellectuelle.',
-      },
-    },
-    datenschutz: {
-      title: 'Politique de Confidentialité',
-      intro: {
-        title: '1. Aperçu de la protection des données',
-        content: 'Les informations suivantes donnent un aperçu simple de ce qui arrive à vos données personnelles lorsque vous visitez ce site web. Les données personnelles sont toutes les données avec lesquelles vous pouvez être personnellement identifié. Le RGPD et le droit français s\'appliquent.',
-      },
-      rights: {
-        title: '2. Vos droits',
-        content: 'Vous avez le droit de demander à tout moment des informations sur vos données personnelles stockées, ainsi que leur rectification ou suppression. Vous disposez également d\'un droit de recours auprès de l\'autorité de contrôle compétente (la CNIL en France).',
-      },
-      hosting: {
-        title: '3. Hébergement',
-        content: 'Ce site web est hébergé en externe. Les données personnelles collectées sont stockées sur les serveurs de l\'hébergeur. \n\nHébergeur : [Nom de l\'hébergeur] \nAdresse : [Adresse de l\'hébergeur]',
-      },
-      googleFonts: {
-        title: '4. Google Fonts',
-        content: 'Ce site utilise des polices de caractères Google Fonts (Art. 6 al. 1 lit. f RGPD - intérêt légitime). Votre navigateur charge les polices nécessaires dans son cache en se connectant aux serveurs de Google.',
-      },
-      encryption: {
-        title: '5. Chiffrement SSL/TLS',
-        content: 'Ce site utilise un chiffrement SSL ou TLS pour des raisons de sécurité et pour protéger la transmission de contenus confidentiels.',
-      },
-    },
+    impressum: { title: 'Mentions Légales', angaben: { title: 'Mentions Légales et Coordonnées', name: 'Johannes Christ', address: 'Toulouse, France', contact: 'Contact', email: 'Email: contact@johanneschrist.com', phone: 'Téléphone: +49 162 170 9979', businessId: 'SIRET: 934 987 882 00010' }, publication: { title: 'Directeur de la publication', name: 'Johannes Christ' }, dispute: { title: 'Règlement des litiges', content: 'La Commission européenne fournit une plateforme de règlement des litiges en ligne.' }, disclaimer: { title: 'Hébergeur et Propriété', content: 'Propriété intellectuelle : L\'ensemble de ce site relève du droit d\'auteur.' } },
+    datenschutz: { title: 'Politique de Confidentialité', intro: { title: '1. Aperçu de la protection des données', content: 'Aperçu de ce qui arrive à vos données personnelles.' }, rights: { title: '2. Vos droits', content: 'Vous avez le droit de demander des informations sur vos données.' }, hosting: { title: '3. Hébergement', content: 'Ce site web est hébergé en externe.' }, googleFonts: { title: '4. Google Fonts', content: 'Ce site utilise Google Fonts.' }, encryption: { title: '5. Chiffrement SSL/TLS', content: 'Ce site utilise le chiffrement SSL/TLS.' } },
   },
 };
