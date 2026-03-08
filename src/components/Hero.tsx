@@ -137,13 +137,13 @@ export const Hero = () => {
         className="relative w-full h-1/2 md:h-full flex-1 flex items-center justify-center cursor-pointer overflow-hidden z-10"
         onMouseEnter={() => setHoveredPanel('right')}
         onMouseLeave={() => setHoveredPanel(null)}
-        onClick={() => { if (window.innerWidth < 768) window.location.href = getLocalizedPath('/personal-training'); }}
-        animate={{ flexGrow: hoveredPanel === 'right' ? 1.5 : hoveredPanel === 'left' ? 0.5 : 1 }}
+        onClick={() => handlePanelTap('right', getLocalizedPath('/personal-training'))}
+        animate={{ flexGrow: effectivePanel === 'right' ? 1.5 : effectivePanel === 'left' ? 0.5 : 1 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
         <motion.div
           className="absolute inset-0 bg-[#0a0005]"
-          animate={{ scale: hoveredPanel === 'right' ? 1.08 : 1 }}
+          animate={{ scale: effectivePanel === 'right' ? 1.08 : 1 }}
           transition={{ duration: 8, ease: "easeOut" }}
         >
           <img src={trainingImage} alt="Personal Training" className="w-full h-full object-cover object-[center_30%] opacity-50 md:opacity-70 transition-opacity duration-700" />
