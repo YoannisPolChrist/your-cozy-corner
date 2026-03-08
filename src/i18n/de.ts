@@ -352,7 +352,7 @@ export const de: Translations = {
     servicesSectionLabel: 'Bausteine', servicesSectionTitle: 'Mein Angebot',
     servicesSectionSubtitle: 'Evidenzbasierte Säulen für deine körperliche Transformation',
     gestaltLocationTitle: 'Praxis für Gestalttherapie',
-    gestaltPainLabel: 'Die Ausgangslage', gestaltPricingTitle: 'Konditionen & Investition',
+    gestaltPainLabel: 'Die Welt, in der wir leben', gestaltPricingTitle: 'Konditionen & Investition',
   },
   testimonials: {
     gestalt: [
