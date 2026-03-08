@@ -45,12 +45,7 @@ export const Hero = () => {
         transition={{ duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
         className="absolute z-50 pointer-events-none
           left-1/2 -translate-x-1/2
-          bottom-0 md:bottom-auto
-          md:top-1/2 md:-translate-y-1/2
-          translate-y-[-50%] md:translate-y-[-50%]"
-        style={{ 
-          /* On mobile: at the border between stacked panels. On desktop: at the vertical split */
-        }}
+          top-1/2 -translate-y-1/2"
       >
         <div className="relative">
           <motion.div 
