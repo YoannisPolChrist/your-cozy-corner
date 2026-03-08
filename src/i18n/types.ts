@@ -153,6 +153,12 @@ export interface Translations {
       title: string;
       items: Array<{ title: string; description: string }>;
     };
+    transformation?: {
+      label: string;
+      title: string;
+      subtitle: string;
+      items: Array<{ title: string; description: string }>;
+    };
     philosophy: {
       label: string;
       badges: string[];
