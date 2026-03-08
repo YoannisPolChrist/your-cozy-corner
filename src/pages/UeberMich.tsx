@@ -97,11 +97,11 @@ const UeberMich = () => {
                   <motion.div variants={fadeUp} className="flex flex-col gap-4 pt-2 pb-6">
                     <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl border border-teal-navy/10 bg-teal-navy/5 shadow-sm text-teal-navy font-medium hover:bg-white transition-colors w-fit">
                       <div className="w-8 h-8 rounded-full bg-gold-accent/20 flex items-center justify-center"><Sparkles className="w-4 h-4 text-gold-accent" /></div>
-                      Seit 8 Jahren Praxis & Fortbildung
+                      {t.ueberMich.hero.badges?.[0] ?? '8 years of practice & training'}
                     </div>
                     <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl border border-teal-navy/10 bg-teal-navy/5 shadow-sm text-teal-navy font-medium hover:bg-white transition-colors w-fit">
                       <div className="w-8 h-8 rounded-full bg-teal-navy/10 flex items-center justify-center"><GraduationCap className="w-4 h-4 text-teal-navy" /></div>
-                      <span className="text-teal-navy">M.Sc. Psychologie & Beratung (i.A.)</span>
+                      <span className="text-teal-navy">{t.ueberMich.hero.badges?.[1] ?? 'M.Sc. Psychology & Counseling (in training)'}</span>
                     </div>
                   </motion.div>
                   <motion.div variants={fadeUp} className="text-base md:text-lg leading-relaxed space-y-6 text-teal-navy">
