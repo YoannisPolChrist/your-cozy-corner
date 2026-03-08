@@ -35,27 +35,25 @@ export const Hero = () => {
       <ThreeDBackground className="absolute inset-0 z-[1] opacity-50 transition-opacity duration-1000" />
 
       {/* Logo – centered at the split between panels */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.6, filter: "blur(12px)" }}
-        animate={{
-          opacity: isRevealed ? 1 : 0,
-          scale: isRevealed ? 1 : 0.6,
-          filter: isRevealed ? "blur(0px)" : "blur(12px)"
-        }}
-        transition={{ duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute z-50 pointer-events-none
-          left-1/2 -translate-x-1/2
-          top-1/2 -translate-y-1/2"
-      >
-        <div className="relative">
-          <motion.div 
-            className="absolute inset-0 bg-gold-accent/50 rounded-full blur-3xl"
-            animate={{ scale: [1, 1.3, 1], opacity: [0.4, 0.7, 0.4] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <img src={logo} alt="Johannes Christ Logo" className="relative z-10 w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain drop-shadow-[0_0_20px_rgba(0,0,0,0.9)]" />
-        </div>
-      </motion.div>
+      <div className="absolute inset-0 z-50 flex items-center justify-center pointer-events-none">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.6 }}
+          animate={{
+            opacity: isRevealed ? 1 : 0,
+            scale: isRevealed ? 1 : 0.6,
+          }}
+          transition={{ duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <div className="relative">
+            <motion.div 
+              className="absolute inset-0 bg-gold-accent/50 rounded-full blur-3xl"
+              animate={{ scale: [1, 1.3, 1], opacity: [0.4, 0.7, 0.4] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            />
+            <img src={logo} alt="Johannes Christ Logo" className="relative z-10 w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain drop-shadow-[0_0_20px_rgba(0,0,0,0.9)]" />
+          </div>
+        </motion.div>
+      </div>
 
       {/* LEFT PANEL – Gestalttherapie */}
       <motion.div
