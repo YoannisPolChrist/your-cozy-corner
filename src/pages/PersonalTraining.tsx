@@ -23,18 +23,7 @@ const PersonalTraining = () => {
   const { t, getLocalizedPath } = useLanguage();
   const serviceIcons = [Dumbbell, Heart, Target];
 
-  const testimonials = [
-    {
-      text: "Das Training mit Johannes hat mein Leben verändert. Ich habe nicht nur an Leistung gewonnen, sondern auch Schmerzen losgeworden.",
-      name: "Michael S.",
-      role: "Triathlet"
-    },
-    {
-      text: "Evidenzbasiert und wahnsinnig motivierend. Die Kombination aus Athletiktraining und fundiertem Wissen macht den Unterschied.",
-      name: "Sarah K.",
-      role: "Unternehmerin"
-    }
-  ];
+  const testimonials = t.testimonials?.personalTraining ?? [];
 
   return (
     <div className="min-h-screen bg-background">
