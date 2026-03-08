@@ -35,7 +35,7 @@ const Gestalttherapie = () => {
         {/* Hero Section */}
         <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-20">
           <div className="absolute inset-0 bg-primary/90">
-            <img src={johannesCoachingTalk} alt="Gestalttherapie" className="w-full h-full object-cover object-center opacity-60" />
+            <img src={heroImage} alt="Gestalttherapie" className="w-full h-full object-cover object-top opacity-60" />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent mix-blend-multiply opacity-60" />
           </div>
           <ThreeDBackground className="absolute inset-0 z-0 opacity-40 mix-blend-screen" />
