@@ -29,7 +29,14 @@ export const Hero = () => {
   const [hoveredPanel, setHoveredPanel] = useState<'left' | 'right' | null>(null);
   const [activePanel, setActivePanel] = useState<'left' | 'right' | null>(null);
   const [isRevealed, setIsRevealed] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   useEffect(() => { const timer = setTimeout(() => setIsRevealed(true), 100); return () => clearTimeout(timer); }, []);
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
 
   // On mobile, activePanel drives the visual state; on desktop, hoveredPanel does
   const effectivePanel = hoveredPanel ?? activePanel;
@@ -55,6 +62,9 @@ export const Hero = () => {
           animate={{
             opacity: isRevealed ? 1 : 0,
             scale: isRevealed ? 1 : 0.6,
+            y: isMobile
+              ? effectivePanel === 'left' ? '25vh' : effectivePanel === 'right' ? '-25vh' : 0
+              : 0,
           }}
           transition={{ duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
         >
