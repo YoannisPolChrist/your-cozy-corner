@@ -278,23 +278,23 @@ const PersonalTraining = () => {
               <motion.div className="relative rounded-3xl overflow-hidden shadow-2xl" whileHover={{ scale: 1.01 }} transition={{ duration: 0.5, ease: "easeOut" }}>
                 <div className="absolute inset-0 bg-primary">
                   <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-teal-navy/80 mix-blend-multiply" />
-                  <motion.div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-red-accent/20 blur-[100px]" animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }} transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }} />
-                  <motion.div className="absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-teal-highlight/20 blur-[80px]" animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.5, 0.2] }} transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }} />
+                  <motion.div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-gold-accent/20 blur-[100px]" animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }} transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }} />
+                  <motion.div className="absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-accent/15 blur-[80px]" animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.5, 0.2] }} transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }} />
                 </div>
                 <div className="relative z-10 p-10 md:p-16 flex flex-col md:flex-row items-center gap-8 md:gap-12">
                   <div className="flex-shrink-0 relative">
-                    <div className="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 shadow-inner">
-                      <Brain className="w-10 h-10 text-red-accent" strokeWidth={1.5} />
+                    <div className="w-20 h-20 rounded-2xl bg-gold-accent/10 backdrop-blur-md flex items-center justify-center border border-gold-accent/20 shadow-inner">
+                      <Brain className="w-10 h-10 text-gold-accent" strokeWidth={1.5} />
                     </div>
                   </div>
                   <div className="text-center md:text-left flex-grow">
-                    <span className="text-red-accent text-sm uppercase tracking-[0.2em] font-semibold mb-3 block">{t.shared?.crossLinkLabel ?? 'The Other Dimension'}</span>
+                    <span className="text-gold-accent text-sm uppercase tracking-[0.2em] font-semibold mb-3 block">{t.shared?.crossLinkLabel ?? 'The Other Dimension'}</span>
                     <h3 className="typ-h3 text-white mb-4">{t.shared?.crossLinkGestaltTitle ?? 'Looking for clarity in your head?'}</h3>
                     <p className="text-white/80 text-lg leading-relaxed max-w-xl">{t.shared?.crossLinkGestaltDescription ?? 'Sometimes the problem is deeper.'}</p>
                   </div>
                   <div className="flex-shrink-0 mt-6 md:mt-0 w-full md:w-auto">
                     <Link to={getLocalizedPath('/gestalttherapie')} onClick={scrollToTop} className="block w-full">
-                      <Button variant="red" size="lg" className="w-full md:w-auto font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+                      <Button variant="gold" size="lg" className="w-full md:w-auto font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
                         {t.shared?.crossLinkGestaltButton ?? 'To Gestalt Therapy'} <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
                     </Link>
