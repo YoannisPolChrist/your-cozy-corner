@@ -74,13 +74,13 @@ export const Hero = () => {
         className="relative w-full h-1/2 md:h-full flex-1 flex items-center justify-center cursor-pointer overflow-hidden z-10"
         onMouseEnter={() => setHoveredPanel('left')}
         onMouseLeave={() => setHoveredPanel(null)}
-        onClick={() => { if (window.innerWidth < 768) window.location.href = getLocalizedPath('/gestalttherapie'); }}
-        animate={{ flexGrow: hoveredPanel === 'left' ? 1.5 : hoveredPanel === 'right' ? 0.5 : 1 }}
+        onClick={() => handlePanelTap('left', getLocalizedPath('/gestalttherapie'))}
+        animate={{ flexGrow: effectivePanel === 'left' ? 1.5 : effectivePanel === 'right' ? 0.5 : 1 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
         <motion.div
           className="absolute inset-0 bg-[#0e100f]"
-          animate={{ scale: hoveredPanel === 'left' ? 1.08 : 1 }}
+          animate={{ scale: effectivePanel === 'left' ? 1.08 : 1 }}
           transition={{ duration: 8, ease: "easeOut" }}
         >
           <img src={therapyImage} alt="Gestalttherapie" className="w-full h-full object-cover object-center opacity-50 md:opacity-70 transition-opacity duration-700" />
