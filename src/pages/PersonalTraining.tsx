@@ -216,33 +216,33 @@ const PersonalTraining = () => {
             <StaggerContainer className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <AnimatedItem>
                 <Card className="p-8 bg-white shadow-soft border-none h-full relative overflow-hidden flex flex-col">
-                  <span className="text-xs uppercase tracking-wider text-red-accent font-semibold block mb-4">{t.angebot.konditionen.einzelbegleitung.label}</span>
-                  <h3 className="typ-h3 text-primary mb-2">{t.angebot.konditionen.einzelbegleitung.title}</h3>
+                  <span className="text-xs uppercase tracking-wider text-red-accent font-semibold block mb-4">{t.personalTraining.pricing.single.label}</span>
+                  <h3 className="typ-h3 text-primary mb-2">{t.personalTraining.pricing.single.title}</h3>
                   <div className="flex items-baseline gap-2 mb-4">
-                    <span className="font-heading typ-h2 text-red-accent">{t.angebot.konditionen.einzelbegleitung.price}</span>
-                    <span className="text-muted-foreground">/ {t.angebot.konditionen.einzelbegleitung.priceLabel}</span>
+                    <span className="font-heading typ-h2 text-red-accent">{t.personalTraining.pricing.single.price}</span>
+                    <span className="text-muted-foreground">/ {t.personalTraining.pricing.single.priceLabel}</span>
                   </div>
-                  <p className="typ-body text-muted-foreground mb-8 text-left whitespace-pre-line flex-grow">{t.angebot.konditionen.einzelbegleitung.description}</p>
+                  <p className="typ-body text-muted-foreground mb-8 text-left whitespace-pre-line flex-grow">{t.personalTraining.pricing.single.description}</p>
                   <Link to={getLocalizedPath('/kontakt')} onClick={scrollToTop} className="mt-auto w-full">
-                    <Button variant="outline" className="w-full">{t.angebot.konditionen.einzelbegleitung.cta}</Button>
+                    <Button variant="outline" className="w-full">{t.personalTraining.pricing.single.cta}</Button>
                   </Link>
                 </Card>
               </AnimatedItem>
               <AnimatedItem>
                 <Card className="p-8 bg-primary text-white shadow-xl h-full relative overflow-hidden border-0 flex flex-col">
                   <div className="absolute top-4 right-4">
-                    <span className="px-3 py-1 bg-red-accent text-primary text-xs font-semibold rounded-full">{t.angebot.konditionen.intensiv.discount}</span>
+                    <span className="px-3 py-1 bg-red-accent text-primary text-xs font-semibold rounded-full">{t.personalTraining.pricing.package.discount}</span>
                   </div>
-                  <span className="text-red-accent text-xs uppercase tracking-wider font-semibold block mb-4">{t.angebot.konditionen.intensiv.label}</span>
-                  <h3 className="typ-h3 text-white mb-2">{t.angebot.konditionen.intensiv.title}</h3>
+                  <span className="text-red-accent text-xs uppercase tracking-wider font-semibold block mb-4">{t.personalTraining.pricing.package.label}</span>
+                  <h3 className="typ-h3 text-white mb-2">{t.personalTraining.pricing.package.title}</h3>
                   <div className="flex items-baseline gap-2 mb-2">
-                    <span className="font-heading typ-h2 text-red-accent">{t.angebot.konditionen.intensiv.discountPrice}</span>
-                    <span className="text-white/70">/ {t.angebot.konditionen.intensiv.priceLabel}</span>
+                    <span className="font-heading typ-h2 text-red-accent">{t.personalTraining.pricing.package.discountPrice}</span>
+                    <span className="text-white/70">/ {t.personalTraining.pricing.package.priceLabel}</span>
                   </div>
-                  <p className="typ-small text-white/70 mb-4 line-through">{t.shared?.regularPrice ?? 'Regular'} {t.angebot.konditionen.einzelbegleitung.price}</p>
-                  <p className="typ-body text-white/85 mb-8 text-left whitespace-pre-line flex-grow">{t.angebot.konditionen.intensiv.description}</p>
+                  <p className="typ-small text-white/70 mb-4 line-through">{t.shared?.regularPrice ?? 'Regular'} {t.personalTraining.pricing.single.price}</p>
+                  <p className="typ-body text-white/85 mb-8 text-left whitespace-pre-line flex-grow">{t.personalTraining.pricing.package.description}</p>
                   <Link to={getLocalizedPath('/kontakt')} onClick={scrollToTop} className="mt-auto w-full">
-                    <Button variant="red" className="w-full">{t.angebot.konditionen.intensiv.cta}</Button>
+                    <Button variant="red" className="w-full">{t.personalTraining.pricing.package.cta}</Button>
                   </Link>
                 </Card>
               </AnimatedItem>
