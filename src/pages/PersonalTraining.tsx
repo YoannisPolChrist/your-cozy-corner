@@ -210,7 +210,7 @@ const PersonalTraining = () => {
         <section className="py-24 md:py-32 bg-secondary/30" id="pricing">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <span className="text-red-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">Transparenz</span>
+              <span className="text-red-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">{t.shared?.pricingLabel ?? 'Transparency'}</span>
               <h2 className="typ-h2 text-primary mb-4">{t.personalTraining.pricing.title}</h2>
             </div>
             <StaggerContainer className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
