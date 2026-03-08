@@ -138,9 +138,9 @@ const PersonalTraining = () => {
         <AnimatedSection className="py-24 md:py-32 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <span className="text-red-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">Bausteine</span>
-              <h2 className="typ-h2 text-primary mb-4">Mein Angebot</h2>
-              <p className="typ-body text-muted-foreground max-w-2xl mx-auto">Evidenzbasierte Säulen für deine körperliche Transformation</p>
+              <span className="text-red-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">{t.shared?.servicesSectionLabel ?? 'Building Blocks'}</span>
+              <h2 className="typ-h2 text-primary mb-4">{t.shared?.servicesSectionTitle ?? 'My Services'}</h2>
+              <p className="typ-body text-muted-foreground max-w-2xl mx-auto">{t.shared?.servicesSectionSubtitle ?? 'Evidence-based pillars for your transformation'}</p>
             </div>
             <StaggerContainer className="grid md:grid-cols-3 gap-4 max-w-7xl mx-auto">
               {t.personalTraining.services.map((service, index) => {
