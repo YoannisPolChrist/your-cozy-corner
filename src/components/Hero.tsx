@@ -62,6 +62,9 @@ export const Hero = () => {
           animate={{
             opacity: isRevealed ? 1 : 0,
             scale: isRevealed ? 1 : 0.6,
+            y: isMobile
+              ? effectivePanel === 'left' ? '25vh' : effectivePanel === 'right' ? '-25vh' : 0
+              : 0,
           }}
           transition={{ duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
         >
