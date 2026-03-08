@@ -64,7 +64,7 @@ export const Hero = () => {
           <motion.div animate={{ opacity: hoveredPanel === 'right' ? 1 : 0.4, y: hoveredPanel === 'right' ? 0 : 10 }} className="flex justify-center">
             <Link to={getLocalizedPath('/personal-training')} className="block">
               <MagneticButton strength={0.25}>
-                <Button variant="outline" className="border-destructive/50 text-white hover:bg-destructive hover:text-white rounded-full px-8 py-6 bg-black/20 backdrop-blur-sm uppercase tracking-widest text-xs font-semibold">Körperliche Kraft aufbauen <ArrowRight className="ml-2 w-4 h-4" /></Button>
+                <Button variant="outline" className="border-destructive/50 text-white hover:bg-destructive hover:text-white rounded-full px-8 py-6 bg-black/20 backdrop-blur-sm uppercase tracking-widest text-xs font-semibold">{t.personalTraining.hero.cta} <ArrowRight className="ml-2 w-4 h-4" /></Button>
               </MagneticButton>
             </Link>
           </motion.div>

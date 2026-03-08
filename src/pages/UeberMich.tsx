@@ -105,9 +105,9 @@ const UeberMich = () => {
                     </div>
                   </motion.div>
                   <motion.div variants={fadeUp} className="text-base md:text-lg leading-relaxed space-y-6 text-teal-navy">
-                    <p>Wir leben in einer Zeit der Reizüberflutung. Oft wachen wir morgens schon auf und sind gar nicht richtig da. Wir fühlen uns abgetrennt, machtlos, manchmal sogar hoffnungslos angesichts der Informationsflut und der Geschwindigkeit unseres Alltags.</p>
-                    <p>In meiner Arbeit als Therapeut und Coach geht es genau um diesen Punkt: <strong className="text-accent font-semibold">Das Innehalten im Hier und Jetzt</strong>. Wir schauen uns an, was von früher noch unverarbeitet nachwirkt – emotionaler Schmerz oder festgefahrene Muster – und finden Wege, deine eigene kreative Lebenskraft nicht länger zu unterdrücken.</p>
-                    <p>Das Ziel ist weder Perfektion noch ständige Leistung, sondern ein tieferer Frieden. Ein Frieden, der dir das Gefühl gibt: <span className="italic">Egal was passiert, es ist okay. Und wenn es wehtut, dann darf es das.</span></p>
+                    <p>{t.ueberMich.arbeitsweise.bodyP1}</p>
+                    <p>{t.ueberMich.arbeitsweise.bodyP2Prefix}<strong className="text-accent font-semibold">{t.ueberMich.arbeitsweise.bodyP2Strong}</strong>{t.ueberMich.arbeitsweise.bodyP2Suffix}</p>
+                    <p>{t.ueberMich.arbeitsweise.bodyP3} <span className="italic">{t.ueberMich.arbeitsweise.bodyP3Italic}</span></p>
                   </motion.div>
                   <motion.div variants={fadeUp} className="pt-6">
                     <Accordion type="single" collapsible className="w-full bg-off-white rounded-2xl border border-teal-navy/10 px-6 py-2 shadow-sm">
