@@ -239,7 +239,7 @@ const PersonalTraining = () => {
                     <span className="font-heading typ-h2 text-red-accent">{t.angebot.konditionen.intensiv.discountPrice}</span>
                     <span className="text-white/70">/ {t.angebot.konditionen.intensiv.priceLabel}</span>
                   </div>
-                  <p className="typ-small text-white/70 mb-4 line-through">Regulär {t.angebot.konditionen.einzelbegleitung.price}</p>
+                  <p className="typ-small text-white/70 mb-4 line-through">{t.shared?.regularPrice ?? 'Regular'} {t.angebot.konditionen.einzelbegleitung.price}</p>
                   <p className="typ-body text-white/85 mb-8 text-left whitespace-pre-line flex-grow">{t.angebot.konditionen.intensiv.description}</p>
                   <Link to={getLocalizedPath('/kontakt')} onClick={scrollToTop} className="mt-auto w-full">
                     <Button variant="red" className="w-full">{t.angebot.konditionen.intensiv.cta}</Button>
