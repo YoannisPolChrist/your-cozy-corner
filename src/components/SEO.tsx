@@ -36,9 +36,9 @@ export const SEO = ({ title, description, keywords, image, schema, faqs, breadcr
       {keywords && <meta name="keywords" content={keywords} />}
       {dateModified && <meta name="article:modified_time" content={dateModified} />}
       <link rel="canonical" href={canonicalUrl} />
-      <link rel="alternate" hreflang="de" href={getUrlForLang('de')} />
-      <link rel="alternate" hreflang="en" href={getUrlForLang('en')} />
-      <link rel="alternate" hreflang="fr" href={getUrlForLang('fr')} />
+      <link rel="alternate" hrefLang="de" href={getUrlForLang('de')} />
+      <link rel="alternate" hrefLang="en" href={getUrlForLang('en')} />
+      <link rel="alternate" hrefLang="fr" href={getUrlForLang('fr')} />
       <meta property="og:type" content="website" /><meta property="og:title" content={fullTitle} /><meta property="og:description" content={description} /><meta property="og:url" content={canonicalUrl} /><meta property="og:image" content={shareImage} />
       <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={fullTitle} /><meta name="twitter:description" content={description} /><meta name="twitter:image" content={shareImage} />
       {allSchemas.map((s, i) => <script key={i} type="application/ld+json">{JSON.stringify(s)}</script>)}
