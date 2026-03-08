@@ -128,7 +128,29 @@ const Gestalttherapie = () => {
           </div>
         </AnimatedSection>
 
-        {/* 4. ScrollTelling – Die 3 Säulen (how Gestalt answers the pain) */}
+        {/* 4. Philosophy – Emotional core: the "why" */}
+        <section className="py-24 md:py-32 bg-primary text-white relative overflow-hidden">
+          <div className="container mx-auto px-4 relative z-10">
+            <AnimatedSection className="max-w-3xl mx-auto text-center space-y-10">
+              <div>
+                <span className="text-accent text-sm uppercase tracking-[0.2em] font-medium mb-6 block">{t.gestalttherapie.philosophy.label}</span>
+                <h2 className="typ-h2 mb-8">{t.gestalttherapie.philosophy.title}</h2>
+                <div className="space-y-6 text-base md:text-lg text-white/80 leading-relaxed">
+                  <p>{t.gestalttherapie.philosophy.p1}</p>
+                  <p dangerouslySetInnerHTML={{ __html: t.gestalttherapie.philosophy.p2 }}></p>
+                </div>
+              </div>
+              <div className="p-8 md:p-10 border border-accent/20 rounded-2xl bg-white/5 relative">
+                <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 bg-primary flex items-center justify-center rounded-full border border-accent/20">
+                  <span className="text-accent text-2xl font-serif">"</span>
+                </div>
+                <p className="typ-h4 text-accent font-light leading-relaxed">{t.gestalttherapie.philosophy.quote}</p>
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* 5. ScrollTelling – Die 3 Säulen (how Gestalt answers the pain) */}
         <GestaltScrollTelling />
 
         {/* 5. Ressourcen – What you gain (transformation/outcome) */}
