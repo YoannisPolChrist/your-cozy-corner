@@ -6,13 +6,13 @@ export const fr: Translations = {
   hero: { title: 'Le changement se produit', titleHighlight: 'Ici et Maintenant', subtitle: 'Accompagnement sur ton chemin vers plus de clarté, d\'épanouissement et de paix intérieure – à travers la Gestalt-thérapie humaniste, le coaching et le Personal Training.', cta: 'Prendre rendez-vous' },
   meet: { title: 'Le changement arrive –', description: 'Idéalement dans un cadre qui soutient et offre de la sécurité.\n\nEn tant que Gestalt-thérapeute, coach et Personal Trainer, je t\'offre l\'espace nécessaire pour que le changement que tu souhaites puisse se produire !\n\nSalut - Je suis Johannes.' },
   painPoints: { title: 'Quand la boussole intérieure s\'arrête', subtitle: 'Souvent, nous sentons que quelque chose manque, mais nous n\'arrivons pas à mettre le doigt dessus.', items: [
-    { title: 'Burnout & Perte de sens', description: 'Quand la frustration et la stagnation prennent le dessus.' },
-    { title: 'Transition & Clarté', description: 'Quand le nouveau fait encore peur et que l\'ancien ne convient plus.' },
-    { title: 'Performance & Motivation', description: 'Quand ta résistance intérieure gagne. Arrête de trop réfléchir, mets-toi en mouvement !' },
+    { title: 'Burnout & Perte de sens', description: 'Quand la frustration et la stagnation prennent le dessus. Le sentiment de ne pas avancer. Par la conscience et le processus, nous retrouvons le sens.' },
+    { title: 'Transition & Clarté', description: 'Quand le nouveau fait encore peur et que l\'ancien ne convient plus. Nous élaborons des étapes concrètes pour passer de l\'immobilisme à l\'action.' },
+    { title: 'Performance & Motivation', description: 'Quand ta résistance intérieure gagne et que la performance stagne. Arrête de trop réfléchir, mets-toi en mouvement – lève-toi et fais-le !' },
   ] },
   services: { title: 'Mes services', subtitle: 'Des espaces individuels pour ton développement', items: [
     { title: 'Gestalt-thérapie', description: 'Travail en profondeur sur les thèmes émotionnels' },
-    { title: 'Coaching', description: 'Développement ciblé, orienté objectifs, pratique' },
+    { title: 'Coaching', description: 'Développement ciblé avec diagnostic & stratégie' },
     { title: 'Entraînement Personnel', description: 'Entraînement en Sciences du Sport pour la performance, la prévention et la réhabilitation.' },
   ], cta: 'Découvrir les services' },
   gestaltSection: { label: 'Le fondement thérapeutique', title: 'Ma Mission', titleHighlight: '', description: 'Le changement demande plus que la compréhension. La vraie croissance naît là où le ressenti et l\'intellect se tissent ensemble.', link: 'En savoir plus sur la Gestalt-thérapie', quote: 'Être pleinement ici, pleinement maintenant – le reste suivra.' },
