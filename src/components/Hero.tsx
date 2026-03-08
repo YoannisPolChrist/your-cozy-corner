@@ -114,7 +114,7 @@ export const Hero = () => {
             </motion.p>
           </motion.div>
           <motion.div
-            animate={{ opacity: hoveredPanel === 'left' ? 1 : 0.3, y: hoveredPanel === 'left' ? 0 : 10, scale: hoveredPanel === 'left' ? 1 : 0.95 }}
+            animate={{ opacity: effectivePanel === 'left' ? 1 : 0.3, y: effectivePanel === 'left' ? 0 : 10, scale: effectivePanel === 'left' ? 1 : 0.95 }}
             transition={{ duration: 0.5 }}
             className="flex justify-center"
           >
