@@ -191,22 +191,25 @@ const UeberMich = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-teal-navy/30 pointer-events-none" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-                <motion.div variants={staggerContainer} className="space-y-6 md:space-y-8 order-1 md:order-1 text-center md:text-left pt-8 md:pt-0 pb-8 md:pb-0">
-                  <motion.span variants={fadeUp} className="block text-accent font-medium tracking-[0.2em] uppercase text-sm md:text-sm">{t.ueberMich.persoenlich?.label}</motion.span>
-                  <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl leading-tight text-white pb-2">{t.ueberMich.persoenlich?.title}</motion.h2>
-                  <motion.div variants={fadeUp} className="text-base md:text-lg leading-relaxed space-y-5 text-white/80 mx-auto md:mx-0 max-w-xl">
-                    <p>{t.ueberMich.persoenlich?.description1}</p>
-                    <p className="italic text-white font-medium">{t.ueberMich.persoenlich?.description2}</p>
-                  </motion.div>
-                </motion.div>
-                <motion.div variants={fadeUp} className="relative order-2 md:order-2 px-4 sm:px-0">
-                  <motion.div variants={goldFrameVariants} className="absolute bottom-4 -left-4 md:bottom-6 md:-left-6 w-full h-full bg-accent rounded-3xl" />
-                  <div className="relative z-10 w-full overflow-hidden rounded-3xl shadow-xl border border-primary/5">
-                    <ParallaxImageWrapper src={johannesPersoenlich} alt="Johannes Christ - Persönlich" className="object-cover object-center w-full" aspectRatio="aspect-[4/5]" />
-                  </div>
-                </motion.div>
-              </div>
+              {/* Heading */}
+              <motion.div variants={staggerContainer} className="text-center mb-12">
+                <motion.span variants={fadeUp} className="block text-accent font-medium tracking-[0.2em] uppercase text-sm mb-4">{t.ueberMich.persoenlich?.label}</motion.span>
+                <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl leading-tight text-white pb-2">{t.ueberMich.persoenlich?.title}</motion.h2>
+              </motion.div>
+
+              {/* Image */}
+              <motion.div variants={fadeUp} className="relative max-w-lg mx-auto mb-12 px-4 sm:px-0">
+                <motion.div variants={goldFrameVariants} className="absolute bottom-4 -left-4 md:bottom-6 md:-left-6 w-full h-full bg-accent rounded-3xl" />
+                <div className="relative z-10 w-full overflow-hidden rounded-3xl shadow-xl border border-primary/5">
+                  <ParallaxImageWrapper src={johannesPersoenlich} alt="Johannes Christ - Persönlich" className="object-cover object-center w-full" aspectRatio="aspect-[4/5]" />
+                </div>
+              </motion.div>
+
+              {/* Text */}
+              <motion.div variants={fadeUp} className="text-base md:text-lg leading-relaxed space-y-5 text-white/80 max-w-3xl mx-auto text-center">
+                <p>{t.ueberMich.persoenlich?.description1}</p>
+                <p className="italic text-white font-medium">{t.ueberMich.persoenlich?.description2}</p>
+              </motion.div>
             </div>
           </div>
         </motion.section>
