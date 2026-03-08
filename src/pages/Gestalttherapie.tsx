@@ -43,7 +43,7 @@ const Gestalttherapie = () => {
         <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-20">
           {/* Background with image and overlay */}
           <div className="absolute inset-0 bg-primary/90">
-            <img src={heroImage} alt="Gestalttherapie" className="w-full h-full object-cover object-center opacity-60" />
+            <img src={heroImage} alt="Gestalttherapie" className="w-full h-full object-cover object-top opacity-60" />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent mix-blend-multiply opacity-60" />
           </div>
 
@@ -71,22 +71,22 @@ const Gestalttherapie = () => {
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="max-w-4xl mx-auto text-center"
             >
+              <TextReveal text={t.gestalttherapie.scrollTelling.title} className="typ-h1 text-white mb-4" delay={0.2} />
+
+              <p className="typ-lead text-white/85 max-w-2xl mx-auto mb-6">
+                {t.gestalttherapie.hero.subtitle}
+              </p>
+
               {/* Location badge */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8"
               >
                 <MapPin className="w-4 h-4 text-gold-accent" />
                 <span className="text-white/90 text-sm font-medium">Toulouse & Online</span>
               </motion.div>
-
-              <TextReveal text={t.gestalttherapie.scrollTelling.title} className="typ-h1 text-white mb-6" delay={0.4} />
-
-              <p className="typ-lead text-white/85 max-w-2xl mx-auto mb-10">
-                {t.gestalttherapie.hero.subtitle}
-              </p>
 
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
