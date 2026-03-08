@@ -195,6 +195,16 @@ export const de: Translations = {
         { title: 'Abgeschnitten vom eigenen Erleben', description: 'Wir analysieren, optimieren, scrollen – und verlieren dabei den Kontakt zu dem, was wirklich zählt. Der Körper signalisiert längst, was der Kopf noch nicht wahrhaben will.' },
       ],
     },
+    transformation: {
+      label: 'Was dann möglich wird',
+      title: 'Von der Krise zur Klarheit',
+      subtitle: 'Stell dir vor, du wachst morgens auf und spürst: Das Leben fühlt sich wieder stimmig an. Du kennst deine Richtung und gehst sie mit Vertrauen.',
+      items: [
+        { title: 'Echte Verbindung', description: 'Du entwickelst die Fähigkeit, dich selbst und andere wirklich zu spüren. Beziehungen werden tiefer, authentischer – und du fühlst dich weniger allein, auch wenn du allein bist.' },
+        { title: 'Innere Klarheit', description: 'Die Stimme deiner Intuition wird lauter als der Lärm der Optionen. Du triffst Entscheidungen, die sich richtig anfühlen – und bleibst dabei, auch wenn es mal schwer wird.' },
+        { title: 'Lebendige Präsenz', description: 'Dein Körper wird wieder zu einem verlässlichen Kompass. Du spürst deine Grenzen, erkennst deine Bedürfnisse und handelst entsprechend – ohne schlechtes Gewissen.' },
+      ],
+    },
     philosophy: {
       label: 'Der Kern der Arbeit',
       badges: ['Seit 8 Jahren in gestalttherapeutischer Praxis & Fortbildung', 'M.Sc. Psychologie & Beratung (i.A.)'],
