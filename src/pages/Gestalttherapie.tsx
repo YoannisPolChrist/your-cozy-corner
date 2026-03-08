@@ -272,7 +272,7 @@ const Gestalttherapie = () => {
           </div>
         </section>
 
-        {/* 7. Gestalt Intro – "Das Herzstück" */}
+        {/* 8. Gestalt Intro – "Das Herzstück" */}
         {t.gestalttherapie.gestaltIntro && (
           <AnimatedSection className="py-20 md:py-28 bg-off-white">
             <div className="container mx-auto px-6 md:px-4">
