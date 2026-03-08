@@ -88,54 +88,59 @@ const UeberMich = () => {
           <motion.div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gold-accent/5 rounded-full blur-[120px] pointer-events-none" animate={{ scale: [1.2, 1, 1.2], opacity: [0.3, 0.5, 0.3] }} transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }} />
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-                <motion.div variants={staggerContainer} className="space-y-6 md:space-y-8 order-1 md:order-1 text-center md:text-left pt-8 md:pt-0">
-                  <motion.span variants={fadeUp} className="block text-accent font-medium tracking-[0.2em] uppercase text-sm md:text-sm">{t.ueberMich.arbeitsweise.label}</motion.span>
-                  <div className="mx-auto md:mx-0 max-w-md md:max-w-none">
-                    <TextReveal text={t.ueberMich.arbeitsweise.title} className="font-heading text-4xl md:text-5xl leading-tight text-teal-navy m-0" />
+              {/* Heading */}
+              <motion.div variants={staggerContainer} className="text-center mb-12">
+                <motion.span variants={fadeUp} className="block text-accent font-medium tracking-[0.2em] uppercase text-sm mb-4">{t.ueberMich.arbeitsweise.label}</motion.span>
+                <div className="max-w-2xl mx-auto">
+                  <TextReveal text={t.ueberMich.arbeitsweise.title} className="font-heading text-4xl md:text-5xl leading-tight text-teal-navy m-0" />
+                </div>
+              </motion.div>
+
+              {/* Image */}
+              <motion.div className="relative max-w-lg mx-auto mb-12">
+                <motion.div variants={goldFrameVariants} className="absolute -bottom-4 right-4 md:-bottom-6 md:right-6 w-full h-full bg-accent rounded-2xl" />
+                <ParallaxImageWrapper src={johannesCoachingTalk} alt="Therapeutische Arbeit" className="object-cover relative z-10" aspectRatio="aspect-[3/4]" />
+              </motion.div>
+
+              {/* Text */}
+              <motion.div variants={staggerContainer} className="max-w-3xl mx-auto space-y-6 md:space-y-8 text-center">
+                <motion.div variants={fadeUp} className="flex flex-col items-center gap-4 pt-2 pb-6">
+                  <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl border border-teal-navy/10 bg-teal-navy/5 shadow-sm text-teal-navy font-medium hover:bg-white transition-colors w-fit">
+                    <div className="w-8 h-8 rounded-full bg-gold-accent/20 flex items-center justify-center"><Sparkles className="w-4 h-4 text-gold-accent" /></div>
+                    {t.ueberMich.hero.badges?.[0] ?? '8 years of practice & training'}
                   </div>
-                  <motion.div variants={fadeUp} className="flex flex-col gap-4 pt-2 pb-6">
-                    <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl border border-teal-navy/10 bg-teal-navy/5 shadow-sm text-teal-navy font-medium hover:bg-white transition-colors w-fit">
-                      <div className="w-8 h-8 rounded-full bg-gold-accent/20 flex items-center justify-center"><Sparkles className="w-4 h-4 text-gold-accent" /></div>
-                      {t.ueberMich.hero.badges?.[0] ?? '8 years of practice & training'}
-                    </div>
-                    <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl border border-teal-navy/10 bg-teal-navy/5 shadow-sm text-teal-navy font-medium hover:bg-white transition-colors w-fit">
-                      <div className="w-8 h-8 rounded-full bg-teal-navy/10 flex items-center justify-center"><GraduationCap className="w-4 h-4 text-teal-navy" /></div>
-                      <span className="text-teal-navy">{t.ueberMich.hero.badges?.[1] ?? 'M.Sc. Psychology & Counseling (in training)'}</span>
-                    </div>
-                  </motion.div>
-                  <motion.div variants={fadeUp} className="text-base md:text-lg leading-relaxed space-y-6 text-teal-navy">
-                    <p>{t.ueberMich.arbeitsweise.bodyP1}</p>
-                    <p>{t.ueberMich.arbeitsweise.bodyP2Prefix}<strong className="text-accent font-semibold">{t.ueberMich.arbeitsweise.bodyP2Strong}</strong>{t.ueberMich.arbeitsweise.bodyP2Suffix}</p>
-                    <p>{t.ueberMich.arbeitsweise.bodyP3} <span className="italic">{t.ueberMich.arbeitsweise.bodyP3Italic}</span></p>
-                  </motion.div>
-                  <motion.div variants={fadeUp} className="pt-6">
-                    <Accordion type="single" collapsible className="w-full bg-off-white rounded-2xl border border-teal-navy/10 px-6 py-2 shadow-sm">
-                      <AccordionItem value="qualifikationen" className="border-none">
-                        <AccordionTrigger className="text-teal-navy hover:text-accent font-heading text-xl md:text-2xl transition-colors py-4">{t.ueberMich.qualifikationen.title}</AccordionTrigger>
-                        <AccordionContent className="space-y-8 pt-6 pb-6 border-t border-teal-navy/10 mt-2">
-                          <div className="space-y-2">
-                            <div className="flex items-center gap-2 text-accent"><GraduationCap className="w-5 h-5" /><h4 className="font-semibold text-teal-navy">{t.ueberMich.qualifikationen.akademisch.title}</h4></div>
-                            <ul className="space-y-1 text-teal-navy text-sm pl-7">{t.ueberMich.qualifikationen.akademisch.items.map((item, idx) => (<li key={idx}>{item}</li>))}</ul>
-                          </div>
-                          <div className="space-y-2">
-                            <div className="flex items-center gap-2 text-accent"><Sparkles className="w-5 h-5" /><h4 className="font-semibold text-teal-navy">{t.ueberMich.qualifikationen.therapeutisch.title}</h4></div>
-                            <ul className="space-y-1 text-teal-navy text-sm pl-7">{t.ueberMich.qualifikationen.therapeutisch.items.map((item, idx) => (<li key={idx}>{item}</li>))}</ul>
-                          </div>
-                          <div className="space-y-2">
-                            <div className="flex items-center gap-2 text-accent"><Dumbbell className="w-5 h-5" /><h4 className="font-semibold text-teal-navy">{t.ueberMich.qualifikationen.coaching.title}</h4></div>
-                            <ul className="space-y-1 text-teal-navy text-sm pl-7">{t.ueberMich.qualifikationen.coaching.items.map((item, idx) => (<li key={idx}>{item}</li>))}</ul>
-                          </div>
-                        </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
-                  </motion.div>
+                  <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl border border-teal-navy/10 bg-teal-navy/5 shadow-sm text-teal-navy font-medium hover:bg-white transition-colors w-fit">
+                    <div className="w-8 h-8 rounded-full bg-teal-navy/10 flex items-center justify-center"><GraduationCap className="w-4 h-4 text-teal-navy" /></div>
+                    <span className="text-teal-navy">{t.ueberMich.hero.badges?.[1] ?? 'M.Sc. Psychology & Counseling (in training)'}</span>
+                  </div>
                 </motion.div>
-                <motion.div className="relative order-2 md:order-2 w-full mx-auto md:mx-0">
-                  <motion.div variants={goldFrameVariants} className="absolute -bottom-4 right-4 md:-bottom-6 md:right-6 w-full h-full bg-accent rounded-2xl" />
-                  <ParallaxImageWrapper src={johannesCoachingTalk} alt="Therapeutische Arbeit" className="object-cover relative z-10" aspectRatio="aspect-[3/4]" />
+                <motion.div variants={fadeUp} className="text-base md:text-lg leading-relaxed space-y-6 text-teal-navy text-left md:text-center">
+                  <p>{t.ueberMich.arbeitsweise.bodyP1}</p>
+                  <p>{t.ueberMich.arbeitsweise.bodyP2Prefix}<strong className="text-accent font-semibold">{t.ueberMich.arbeitsweise.bodyP2Strong}</strong>{t.ueberMich.arbeitsweise.bodyP2Suffix}</p>
+                  <p>{t.ueberMich.arbeitsweise.bodyP3} <span className="italic">{t.ueberMich.arbeitsweise.bodyP3Italic}</span></p>
                 </motion.div>
-              </div>
+                <motion.div variants={fadeUp} className="pt-6 max-w-2xl mx-auto">
+                  <Accordion type="single" collapsible className="w-full bg-off-white rounded-2xl border border-teal-navy/10 px-6 py-2 shadow-sm">
+                    <AccordionItem value="qualifikationen" className="border-none">
+                      <AccordionTrigger className="text-teal-navy hover:text-accent font-heading text-xl md:text-2xl transition-colors py-4">{t.ueberMich.qualifikationen.title}</AccordionTrigger>
+                      <AccordionContent className="space-y-8 pt-6 pb-6 border-t border-teal-navy/10 mt-2">
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2 text-accent"><GraduationCap className="w-5 h-5" /><h4 className="font-semibold text-teal-navy">{t.ueberMich.qualifikationen.akademisch.title}</h4></div>
+                          <ul className="space-y-1 text-teal-navy text-sm pl-7 text-left">{t.ueberMich.qualifikationen.akademisch.items.map((item, idx) => (<li key={idx}>{item}</li>))}</ul>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2 text-accent"><Sparkles className="w-5 h-5" /><h4 className="font-semibold text-teal-navy">{t.ueberMich.qualifikationen.therapeutisch.title}</h4></div>
+                          <ul className="space-y-1 text-teal-navy text-sm pl-7 text-left">{t.ueberMich.qualifikationen.therapeutisch.items.map((item, idx) => (<li key={idx}>{item}</li>))}</ul>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2 text-accent"><Dumbbell className="w-5 h-5" /><h4 className="font-semibold text-teal-navy">{t.ueberMich.qualifikationen.coaching.title}</h4></div>
+                          <ul className="space-y-1 text-teal-navy text-sm pl-7 text-left">{t.ueberMich.qualifikationen.coaching.items.map((item, idx) => (<li key={idx}>{item}</li>))}</ul>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                </motion.div>
+              </motion.div>
             </div>
           </div>
         </motion.section>
