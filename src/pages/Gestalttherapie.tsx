@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
 import { AnimatedSection, AnimatedItem, StaggerContainer } from "@/components/AnimatedSection";
-import { Hand, Brain, Palette, ArrowRight, Star, Dumbbell, MapPin, CheckCircle, UserMinus, Compass, Award } from "lucide-react";
+import { Hand, Brain, Palette, ArrowRight, Star, Dumbbell, MapPin, CheckCircle, UserMinus, Compass, Award, Sparkles } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -27,12 +27,13 @@ const Gestalttherapie = () => {
   const { t, getLocalizedPath } = useLanguage();
   const ressourcenIcons = [Hand, Brain, Palette];
   const testimonials = t.testimonials?.gestalt ?? [];
+  const essenceIcons = [Sparkles, Brain, Hand];
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       <main>
-        {/* 1. Hero Section */}
+        {/* 1. Hero */}
         <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-20">
           <div className="absolute inset-0 bg-primary/90">
             <img src={heroImage} alt="Gestalttherapie" className="w-full h-full object-cover object-top opacity-60" />
@@ -68,7 +69,38 @@ const Gestalttherapie = () => {
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-off-white to-transparent" />
         </section>
 
-        {/* 2. Pain Points */}
+        {/* 2. Gestalt Intro – "Das Herzstück" bridge: what IS Gestalttherapie */}
+        {t.gestalttherapie.gestaltIntro && (
+          <AnimatedSection className="py-20 md:py-28 bg-off-white">
+            <div className="container mx-auto px-6 md:px-4">
+              <div className="max-w-4xl mx-auto text-center">
+                <span className="text-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">{t.gestalttherapie.gestaltIntro.label}</span>
+                <h2 className="typ-h2 text-primary mb-6">{t.gestalttherapie.gestaltIntro.title}</h2>
+                <p className="typ-lead text-muted-foreground max-w-3xl mx-auto mb-12">{t.gestalttherapie.gestaltIntro.description}</p>
+                {t.gestalttherapie.gestaltIntro.essence && (
+                  <StaggerContainer className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                    {t.gestalttherapie.gestaltIntro.essence.map((item, idx) => {
+                      const Icon = essenceIcons[idx];
+                      return (
+                        <AnimatedItem key={idx}>
+                          <div className="p-6 rounded-2xl bg-white shadow-sm border border-accent/10 text-center">
+                            <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                              <Icon className="w-6 h-6 text-accent" />
+                            </div>
+                            <h3 className="typ-h4 text-primary font-semibold mb-2">{item.title}</h3>
+                            <p className="typ-small text-muted-foreground">{item.description}</p>
+                          </div>
+                        </AnimatedItem>
+                      );
+                    })}
+                  </StaggerContainer>
+                )}
+              </div>
+            </div>
+          </AnimatedSection>
+        )}
+
+        {/* 3. Pain Points – "Erkennst du dich wieder?" */}
         <AnimatedSection className="py-24 md:py-32 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -96,10 +128,43 @@ const Gestalttherapie = () => {
           </div>
         </AnimatedSection>
 
-        {/* 3. Was ist Gestalttherapie? (moved up – answers the "how" right after the pain) */}
+        {/* 4. ScrollTelling – Die 3 Säulen (how Gestalt answers the pain) */}
         <GestaltScrollTelling />
 
-        {/* 4. Approach & Qualifications */}
+        {/* 5. Ressourcen – What you gain (transformation/outcome) */}
+        <section className="py-16 md:py-32 bg-background">
+          <div className="container mx-auto px-4">
+            <AnimatedSection className="max-w-5xl mx-auto">
+              <motion.img src={ressourcenUnterstuetzung} alt={t.gestalttherapie.ressourcen.title} className="w-full rounded-xl mb-6 md:mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ boxShadow: '0 10px 40px rgba(30, 95, 116, 0.1)' }} />
+              <div className="hidden md:flex flex-col items-center mb-8">
+                <div className="w-px h-8 bg-gradient-to-b from-accent to-accent/50" />
+                <div className="w-3 h-3 border-b-2 border-r-2 border-accent rotate-45 -mt-1" />
+              </div>
+              <motion.div className="p-5 md:p-14 rounded-2xl bg-secondary" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}>
+                <h2 className="typ-h2 font-bold text-primary mb-4 md:mb-8">{t.gestalttherapie.ressourcen.title}</h2>
+                <p className="typ-body text-foreground/80 mb-6 md:mb-10">{t.gestalttherapie.ressourcen.intro}</p>
+                <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                  {t.gestalttherapie.ressourcen.items.map((item, index) => {
+                    const Icon = ressourcenIcons[index];
+                    return (
+                      <AnimatedItem key={index}>
+                        <div className="text-center p-4 md:p-6 rounded-2xl transition-all duration-300 md:hover:-translate-y-1 bg-primary/[0.04]">
+                          <div className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-5 bg-accent/15">
+                            <Icon className="w-6 h-6 md:w-7 md:h-7 text-accent" />
+                          </div>
+                          <h3 className="typ-h3 font-bold text-primary mb-2 md:mb-4">{item.title}</h3>
+                          <p className="typ-small text-foreground/70">{item.description}</p>
+                        </div>
+                      </AnimatedItem>
+                    );
+                  })}
+                </StaggerContainer>
+              </motion.div>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* 6. Approach & Qualifications – Why trust me */}
         <AnimatedSection className="py-24 md:py-32 bg-off-white">
           <div className="container mx-auto px-6 md:px-4">
             <div className="max-w-5xl mx-auto">
@@ -144,7 +209,7 @@ const Gestalttherapie = () => {
           </div>
         </AnimatedSection>
 
-        {/* 4. Testimonials */}
+        {/* 7. Testimonials – Social proof */}
         <AnimatedSection className="py-24 md:py-32 bg-off-white relative overflow-hidden">
           <div className="absolute inset-0 bg-primary/[0.02]" />
           <div className="container mx-auto px-4 relative z-10">
@@ -173,7 +238,7 @@ const Gestalttherapie = () => {
           </div>
         </AnimatedSection>
 
-        {/* 5. Pricing */}
+        {/* 8. Pricing */}
         <section className="py-24 md:py-32 bg-secondary/30" id="pricing">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -217,7 +282,7 @@ const Gestalttherapie = () => {
           </div>
         </section>
 
-        {/* 6. CTA */}
+        {/* 9. CTA – Convert */}
         <AnimatedSection className="py-16 md:py-36 bg-gradient-cta text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-teal-navy/30" />
           <div className="container mx-auto px-4 text-center relative z-10">
@@ -238,9 +303,9 @@ const Gestalttherapie = () => {
           </div>
         </AnimatedSection>
 
-        {/* Deeper Theory */}
+        {/* ── Deeper Theory (for the curious) ── */}
 
-        {/* 8. Philosophy */}
+        {/* 10. Philosophy */}
         <section className="py-24 md:py-32 bg-primary text-white relative overflow-hidden">
           <div className="container mx-auto px-4 relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto space-y-12">
@@ -267,7 +332,7 @@ const Gestalttherapie = () => {
           </div>
         </section>
 
-        {/* 9. Kontaktzyklus */}
+        {/* 11. Kontaktzyklus */}
         <section className="py-12 md:py-32 bg-off-white">
           <div className="container mx-auto px-4">
             <AnimatedSection className="max-w-5xl mx-auto">
@@ -297,40 +362,7 @@ const Gestalttherapie = () => {
           </div>
         </section>
 
-        {/* 10. Ressourcen */}
-        <section className="py-12 md:py-32 bg-background">
-          <div className="container mx-auto px-4">
-            <AnimatedSection className="max-w-5xl mx-auto">
-              <motion.img src={ressourcenUnterstuetzung} alt={t.gestalttherapie.ressourcen.title} className="w-full rounded-xl mb-6 md:mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ boxShadow: '0 10px 40px rgba(30, 95, 116, 0.1)' }} />
-              <div className="hidden md:flex flex-col items-center mb-8">
-                <div className="w-px h-8 bg-gradient-to-b from-accent to-accent/50" />
-                <div className="w-3 h-3 border-b-2 border-r-2 border-accent rotate-45 -mt-1" />
-              </div>
-              <motion.div className="p-5 md:p-14 rounded-2xl bg-secondary" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}>
-                <h2 className="typ-h2 font-bold text-primary mb-4 md:mb-8">{t.gestalttherapie.ressourcen.title}</h2>
-                <p className="typ-body text-foreground/80 mb-6 md:mb-10">{t.gestalttherapie.ressourcen.intro}</p>
-                <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-                  {t.gestalttherapie.ressourcen.items.map((item, index) => {
-                    const Icon = ressourcenIcons[index];
-                    return (
-                      <AnimatedItem key={index}>
-                        <div className="text-center p-4 md:p-6 rounded-2xl transition-all duration-300 md:hover:-translate-y-1 bg-primary/[0.04]">
-                          <div className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-5 bg-accent/15">
-                            <Icon className="w-6 h-6 md:w-7 md:h-7 text-accent" />
-                          </div>
-                          <h3 className="typ-h3 font-bold text-primary mb-2 md:mb-4">{item.title}</h3>
-                          <p className="typ-small text-foreground/70">{item.description}</p>
-                        </div>
-                      </AnimatedItem>
-                    );
-                  })}
-                </StaggerContainer>
-              </motion.div>
-            </AnimatedSection>
-          </div>
-        </section>
-
-        {/* 11. Location */}
+        {/* 12. Location */}
         <AnimatedSection className="py-20 md:py-28 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
@@ -347,9 +379,9 @@ const Gestalttherapie = () => {
           </div>
         </AnimatedSection>
 
-        {/* 12. Cross-Link to Personal Training */}
+        {/* 13. Cross-Link to Personal Training */}
         <AnimatedSection className="py-24 md:py-32 bg-off-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-primary/[0.02]" />
+          <div className="absolute inset-0 bg-destructive/[0.02]" />
           <div className="container mx-auto px-4 relative z-10">
             <StaggerContainer className="max-w-4xl mx-auto">
               <motion.div className="relative rounded-3xl overflow-hidden shadow-2xl" whileHover={{ scale: 1.01 }} transition={{ duration: 0.5, ease: "easeOut" }}>
