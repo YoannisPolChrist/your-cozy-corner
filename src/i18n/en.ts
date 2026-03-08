@@ -74,7 +74,7 @@ export const en: Translations = {
   personalTraining: {
     nav: 'Personal Training',
     hero: { title: 'Personal Training', subtitle: 'Science-based training for those who want results.', cta: 'Free Consultation' },
-    approach: { label: 'Athletics & Performance', title: 'Personal Training', description: 'Sometimes enough has been said. Sometimes change needs sweat and action.' },
+    approach: { label: 'Athletics & Performance', title: 'Personal Training', description: 'Sometimes enough has been said. Sometimes change needs sweat and action, not more analysis. As a sports scientist and athletic trainer, I offer evidence-based training in Toulouse – for performance, prevention, and rehabilitation.' },
     painPoints: { label: 'The Status Quo', title: 'Are you struggling with these hurdles?', items: [{ title: 'Lacking Drive', description: '"I sit too much."' }, { title: 'Physical Ailments', description: '"Neck, back or knees hurt."' }, { title: 'Appearance & Well-being', description: '"I feel uncomfortable in my skin."' }, { title: 'Athletic Performance', description: '"I need professional guidance."' }] },
     services: [{ title: 'Athletics & Performance', subline: 'STRONGER. FASTER. MORE RESILIENT.', description: 'Targeted training for athletes.' }, { title: 'Prevention & Rehab', subline: 'MOVEMENT AS MEDICINE', description: 'Many issues can be fixed through targeted training.' }, { title: 'Body Composition', subline: 'FEEL GOOD IN YOUR BODY', description: 'We work on your body composition.' }],
     qualifications: { title: 'Qualifications', items: ['B.A. Prevention and Movement Therapy', 'Certified Athletic Trainer', 'Trainer A-License', 'Holobody Coach (Mindvalley)'] },
