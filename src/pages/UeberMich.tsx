@@ -157,8 +157,7 @@ const UeberMich = () => {
 
               {/* Image Carousel */}
               <motion.div className="relative max-w-lg mx-auto mb-12">
-                <motion.div variants={goldFrameVariants} className="absolute bottom-4 -left-4 md:bottom-6 md:-left-6 w-full h-full bg-accent rounded-2xl" />
-                <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4] group z-10">
+                <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4] group">
                   <Carousel plugins={[plugin.current]} className="w-full h-full" onMouseEnter={plugin.current.stop} onMouseLeave={plugin.current.reset}>
                     <CarouselContent className="h-full -ml-0">
                       <CarouselItem className="h-full pl-0"><img src={johannesSpeed} alt="Johannes Christ - Triathlon Performance auf dem Rennrad" width={600} height={800} className="w-full h-full object-cover" loading="lazy" decoding="async" /></CarouselItem>
