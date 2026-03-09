@@ -58,14 +58,12 @@ const UeberMich = () => {
             <div className="max-w-4xl mx-auto">
               {/* Title first */}
               <motion.div variants={staggerContainer} className="text-center mb-12">
-                <motion.span variants={fadeUp} className="block text-accent font-medium tracking-[0.1em] md:tracking-[0.2em] uppercase text-xs md:text-sm mb-4">{t.ueberMich.hero.label}</motion.span>
                 <TextReveal text={t.ueberMich.hero.title} className="font-heading text-4xl md:text-5xl lg:text-6xl text-white leading-[1.15] mb-4" />
-                <motion.p variants={fadeUp} className="text-accent font-medium text-lg md:text-xl">{t.ueberMich.hero.byline ?? 'Gestalt Therapist, Coach & Bodyworker'}</motion.p>
+                <motion.p variants={fadeUp} className="text-accent font-medium text-lg md:text-xl">{t.ueberMich.hero.byline ?? 'Gestalttherapeut, Coach & Körperarbeit'}</motion.p>
               </motion.div>
 
               {/* Image below title */}
               <motion.div variants={fadeUp} className="relative w-full max-w-md mx-auto mb-12">
-                <motion.div variants={goldFrameVariants} className="absolute bottom-4 left-4 md:bottom-6 md:-left-6 w-full h-full bg-accent rounded-2xl" />
                 <div className="relative z-10 w-full rounded-2xl overflow-hidden shadow-2xl">
                   <ParallaxImageWrapper src={johannesHeroPortrait} alt="Johannes Christ - Gestalttherapeut" className="object-cover object-center w-full" aspectRatio="aspect-[4/5]" />
                 </div>
