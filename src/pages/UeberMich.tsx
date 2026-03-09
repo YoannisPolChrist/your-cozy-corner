@@ -55,28 +55,27 @@ const UeberMich = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-teal-navy/80 pointer-events-none" />
           <motion.div className="absolute top-20 -left-20 w-96 h-96 bg-gold-accent/10 rounded-full blur-[100px] pointer-events-none" animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }} transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }} />
           <motion.div className="container mx-auto px-4 relative z-10" initial="hidden" whileInView="visible" viewport={viewportSettings} variants={staggerContainer}>
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-                <motion.div variants={fadeUp} className="w-full lg:col-span-5 relative order-2 lg:order-1 px-4 sm:px-0">
-                  <div className="relative w-full max-w-sm lg:max-w-md mx-auto">
-                    <motion.div variants={goldFrameVariants} className="absolute bottom-4 left-4 md:bottom-6 md:-left-6 w-full h-full bg-accent rounded-2xl" />
-                    <div className="relative z-10 w-full rounded-2xl overflow-hidden shadow-2xl">
-                      <ParallaxImageWrapper src={johannesHeroPortrait} alt="Johannes Christ - Gestalttherapeut" className="object-cover object-center w-full" aspectRatio="aspect-[4/5]" />
-                    </div>
-                  </div>
-                </motion.div>
-                <motion.div variants={staggerContainer} className="w-full lg:col-span-7 space-y-6 order-1 lg:order-2 z-10 text-center lg:text-left pt-8 lg:pt-0 lg:pr-8 xl:pr-12">
-                  <motion.span variants={fadeUp} className="block text-accent font-medium tracking-[0.1em] md:tracking-[0.2em] uppercase text-xs md:text-sm break-words hyphens-auto">{t.ueberMich.hero.label}</motion.span>
-                  <div className="mx-auto lg:mx-0 max-w-xl break-words">
-                    <TextReveal text={t.ueberMich.hero.title} className="font-heading text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-white leading-[1.15] mb-2" />
-                  </div>
-                  <motion.p variants={fadeUp} className="text-accent font-medium text-lg md:text-xl break-words">{t.ueberMich.hero.byline ?? 'Gestalt Therapist, Coach & Bodyworker'}</motion.p>
-                  <motion.div variants={fadeUp} className="text-base md:text-lg text-white/90 leading-relaxed font-light max-w-xl mx-auto lg:mx-0 break-words hyphens-auto">
-                    <p className="whitespace-pre-line">{t.ueberMich.hero.description1}</p>
-                    <p>{t.ueberMich.hero.description2}</p>
-                  </motion.div>
-                </motion.div>
-              </div>
+            <div className="max-w-4xl mx-auto">
+              {/* Title first */}
+              <motion.div variants={staggerContainer} className="text-center mb-12">
+                <motion.span variants={fadeUp} className="block text-accent font-medium tracking-[0.1em] md:tracking-[0.2em] uppercase text-xs md:text-sm mb-4">{t.ueberMich.hero.label}</motion.span>
+                <TextReveal text={t.ueberMich.hero.title} className="font-heading text-4xl md:text-5xl lg:text-6xl text-white leading-[1.15] mb-4" />
+                <motion.p variants={fadeUp} className="text-accent font-medium text-lg md:text-xl">{t.ueberMich.hero.byline ?? 'Gestalt Therapist, Coach & Bodyworker'}</motion.p>
+              </motion.div>
+
+              {/* Image below title */}
+              <motion.div variants={fadeUp} className="relative w-full max-w-md mx-auto mb-12">
+                <motion.div variants={goldFrameVariants} className="absolute bottom-4 left-4 md:bottom-6 md:-left-6 w-full h-full bg-accent rounded-2xl" />
+                <div className="relative z-10 w-full rounded-2xl overflow-hidden shadow-2xl">
+                  <ParallaxImageWrapper src={johannesHeroPortrait} alt="Johannes Christ - Gestalttherapeut" className="object-cover object-center w-full" aspectRatio="aspect-[4/5]" />
+                </div>
+              </motion.div>
+
+              {/* Text below image */}
+              <motion.div variants={fadeUp} className="text-base md:text-lg text-white/90 leading-relaxed font-light max-w-2xl mx-auto text-center space-y-4">
+                <p className="whitespace-pre-line">{t.ueberMich.hero.description1}</p>
+                <p>{t.ueberMich.hero.description2}</p>
+              </motion.div>
             </div>
           </motion.div>
           <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-primary to-transparent" />
