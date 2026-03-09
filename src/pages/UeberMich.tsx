@@ -95,8 +95,7 @@ const UeberMich = () => {
 
               {/* Image */}
               <motion.div className="relative max-w-sm mx-auto mb-12">
-                <motion.div variants={goldFrameVariants} className="absolute -bottom-4 right-4 md:-bottom-6 md:right-6 w-full h-full bg-accent rounded-2xl" />
-                <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
+                <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl aspect-[2/3]">
                   <img src={johannesCoachingTalk} alt="Therapeutische Arbeit" className="w-full h-full object-cover object-top" />
                 </div>
               </motion.div>
