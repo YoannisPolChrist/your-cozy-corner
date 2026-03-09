@@ -196,8 +196,7 @@ const UeberMich = () => {
 
               {/* Image */}
               <motion.div variants={fadeUp} className="relative max-w-lg mx-auto mb-12 px-4 sm:px-0">
-                <motion.div variants={goldFrameVariants} className="absolute bottom-4 -left-4 md:bottom-6 md:-left-6 w-full h-full bg-accent rounded-3xl" />
-                <div className="relative z-10 w-full overflow-hidden rounded-3xl shadow-xl border border-primary/5">
+                <div className="relative w-full overflow-hidden rounded-3xl shadow-xl border border-primary/5">
                   <ParallaxImageWrapper src={johannesPersoenlich} alt="Johannes Christ - Persönlich" className="object-cover object-center w-full" aspectRatio="aspect-[4/5]" />
                 </div>
               </motion.div>
