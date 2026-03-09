@@ -100,12 +100,29 @@ const Gestalttherapie = () => {
         {/* 3. Transformation – Was wird möglich? */}
         <AnimatedSection className="py-24 md:py-32 bg-gradient-to-br from-gold-accent/5 via-white to-accent/5">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <span className="text-gold-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">{t.gestalttherapie.transformation?.label}</span>
               <h2 className="typ-h2 text-primary mb-4">{t.gestalttherapie.transformation?.title}</h2>
               <p className="typ-lead text-muted-foreground max-w-3xl mx-auto">{t.gestalttherapie.transformation?.subtitle}</p>
             </div>
-            <StaggerContainer className="grid md:grid-cols-3 gap-8 mt-12 max-w-5xl mx-auto">
+            
+            {/* Image after headline */}
+            <motion.div 
+              className="max-w-4xl mx-auto mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <img 
+                src={johannesCoachingTalk} 
+                alt="Gestalttherapie Gespräch" 
+                className="w-full rounded-2xl shadow-xl object-cover"
+                loading="lazy"
+              />
+            </motion.div>
+
+            <StaggerContainer className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {t.gestalttherapie.transformation?.items.map((item, idx) => (
                 <AnimatedItem key={idx}>
                   <Card className="p-8 bg-white border-none shadow-sm hover:shadow-lg transition-all h-full relative group">
@@ -125,26 +142,6 @@ const Gestalttherapie = () => {
             </StaggerContainer>
           </div>
         </AnimatedSection>
-
-        {/* 3b. Image Break */}
-        <section className="py-16 md:py-24 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div 
-              className="max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <img 
-                src={johannesCoachingTalk} 
-                alt="Gestalttherapie Gespräch" 
-                className="w-full rounded-2xl shadow-xl object-cover"
-                loading="lazy"
-              />
-            </motion.div>
-          </div>
-        </section>
 
         {/* 4. Approach & Qualifications */}
         <AnimatedSection className="py-24 md:py-32 bg-off-white">
