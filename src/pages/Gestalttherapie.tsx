@@ -126,6 +126,26 @@ const Gestalttherapie = () => {
           </div>
         </AnimatedSection>
 
+        {/* 3b. Image Break */}
+        <section className="py-16 md:py-24 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div 
+              className="max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <img 
+                src={johannesCoachingTalk} 
+                alt="Gestalttherapie Gespräch" 
+                className="w-full rounded-2xl shadow-xl object-cover"
+                loading="lazy"
+              />
+            </motion.div>
+          </div>
+        </section>
+
         {/* 4. Approach & Qualifications */}
         <AnimatedSection className="py-24 md:py-32 bg-off-white">
           <div className="container mx-auto px-6 md:px-4">
