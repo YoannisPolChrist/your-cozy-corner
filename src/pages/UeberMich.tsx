@@ -58,14 +58,12 @@ const UeberMich = () => {
             <div className="max-w-4xl mx-auto">
               {/* Title first */}
               <motion.div variants={staggerContainer} className="text-center mb-12">
-                <motion.span variants={fadeUp} className="block text-accent font-medium tracking-[0.1em] md:tracking-[0.2em] uppercase text-xs md:text-sm mb-4">{t.ueberMich.hero.label}</motion.span>
                 <TextReveal text={t.ueberMich.hero.title} className="font-heading text-4xl md:text-5xl lg:text-6xl text-white leading-[1.15] mb-4" />
-                <motion.p variants={fadeUp} className="text-accent font-medium text-lg md:text-xl">{t.ueberMich.hero.byline ?? 'Gestalt Therapist, Coach & Bodyworker'}</motion.p>
+                <motion.p variants={fadeUp} className="text-accent font-medium text-lg md:text-xl">{t.ueberMich.hero.byline ?? 'Gestalttherapeut, Coach & Körperarbeit'}</motion.p>
               </motion.div>
 
               {/* Image below title */}
               <motion.div variants={fadeUp} className="relative w-full max-w-md mx-auto mb-12">
-                <motion.div variants={goldFrameVariants} className="absolute bottom-4 left-4 md:bottom-6 md:-left-6 w-full h-full bg-accent rounded-2xl" />
                 <div className="relative z-10 w-full rounded-2xl overflow-hidden shadow-2xl">
                   <ParallaxImageWrapper src={johannesHeroPortrait} alt="Johannes Christ - Gestalttherapeut" className="object-cover object-center w-full" aspectRatio="aspect-[4/5]" />
                 </div>
@@ -97,8 +95,7 @@ const UeberMich = () => {
 
               {/* Image */}
               <motion.div className="relative max-w-sm mx-auto mb-12">
-                <motion.div variants={goldFrameVariants} className="absolute -bottom-4 right-4 md:-bottom-6 md:right-6 w-full h-full bg-accent rounded-2xl" />
-                <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
+                <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl aspect-[2/3]">
                   <img src={johannesCoachingTalk} alt="Therapeutische Arbeit" className="w-full h-full object-cover object-top" />
                 </div>
               </motion.div>
@@ -160,8 +157,7 @@ const UeberMich = () => {
 
               {/* Image Carousel */}
               <motion.div className="relative max-w-lg mx-auto mb-12">
-                <motion.div variants={goldFrameVariants} className="absolute bottom-4 -left-4 md:bottom-6 md:-left-6 w-full h-full bg-accent rounded-2xl" />
-                <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4] group z-10">
+                <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4] group">
                   <Carousel plugins={[plugin.current]} className="w-full h-full" onMouseEnter={plugin.current.stop} onMouseLeave={plugin.current.reset}>
                     <CarouselContent className="h-full -ml-0">
                       <CarouselItem className="h-full pl-0"><img src={johannesSpeed} alt="Johannes Christ - Triathlon Performance auf dem Rennrad" width={600} height={800} className="w-full h-full object-cover" loading="lazy" decoding="async" /></CarouselItem>
@@ -200,8 +196,7 @@ const UeberMich = () => {
 
               {/* Image */}
               <motion.div variants={fadeUp} className="relative max-w-lg mx-auto mb-12 px-4 sm:px-0">
-                <motion.div variants={goldFrameVariants} className="absolute bottom-4 -left-4 md:bottom-6 md:-left-6 w-full h-full bg-accent rounded-3xl" />
-                <div className="relative z-10 w-full overflow-hidden rounded-3xl shadow-xl border border-primary/5">
+                <div className="relative w-full overflow-hidden rounded-3xl shadow-xl border border-primary/5">
                   <ParallaxImageWrapper src={johannesPersoenlich} alt="Johannes Christ - Persönlich" className="object-cover object-center w-full" aspectRatio="aspect-[4/5]" />
                 </div>
               </motion.div>
