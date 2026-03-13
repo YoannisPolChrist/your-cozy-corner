@@ -1,11 +1,21 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/i18n";
+import { SEO } from "@/components/SEO";
 
 const Impressum = () => {
-    const { t } = useLanguage();
+    const { t, getLocalizedPath } = useLanguage();
     return (
         <div className="min-h-screen bg-background text-foreground">
+            <SEO
+                title={t.seo.impressum.title}
+                description={t.seo.impressum.description}
+                breadcrumbs={[
+                    { name: t.nav.home || (t.shared?.homeLabel ?? "Home"), url: getLocalizedPath("/") },
+                    { name: t.legal?.impressum?.title ?? t.seo.impressum.title, url: getLocalizedPath("/impressum") },
+                ]}
+                dateModified="2026-03-13"
+            />
             <Navigation />
             <main className="pt-24 pb-16 container mx-auto px-4 max-w-4xl">
                 <header className="mb-12 border-b border-primary/10 pb-8">

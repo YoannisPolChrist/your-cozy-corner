@@ -10,9 +10,10 @@ export const SEO = ({ title, description, keywords, image, schema, faqs, breadcr
   const location = useLocation();
   const domain = "https://johanneschrist-website.web.app";
   const baseTitle = "Johannes Christ - Gestalttherapie, Coaching & Personal Training";
-  const defaultImage = `${domain}/assets/johannes-portrait.webp`;
+  const defaultImage = `${domain}/assets/images/e688c494-51b1-4167-a52c-840cab4d93c5.webp`;
   const shareImage = image ? (image.startsWith('http') ? image : `${domain}${image}`) : defaultImage;
   const fullTitle = title ? `${title} | Johannes Christ` : baseTitle;
+  const metaDescription = description ?? "";
 
   const getBaseRoute = (pathname: string): string => {
     const withoutLang = pathname.replace(/^\/(de|en|fr)/, '') || '/';
@@ -23,7 +24,7 @@ export const SEO = ({ title, description, keywords, image, schema, faqs, breadcr
 
   const baseRoute = getBaseRoute(location.pathname);
   const getUrlForLang = (lang: Language) => baseRoute ? `${domain}/${lang}/${routeMap[baseRoute]?.[lang] || baseRoute}` : `${domain}/${lang}`;
-  const canonicalUrl = getUrlForLang(language);
+  const canonicalUrl = location.pathname === "/" ? getUrlForLang(language) : `${domain}${location.pathname}`;
 
   const allSchemas: object[] = [];
   if (schema) allSchemas.push(schema);
@@ -32,15 +33,16 @@ export const SEO = ({ title, description, keywords, image, schema, faqs, breadcr
 
   return (
     <Helmet>
-      <html lang={language} /><title>{fullTitle}</title><meta name="description" content={description} />
+      <html lang={language} /><title>{fullTitle}</title><meta name="description" content={metaDescription} />
       {keywords && <meta name="keywords" content={keywords} />}
       {dateModified && <meta name="article:modified_time" content={dateModified} />}
       <link rel="canonical" href={canonicalUrl} />
       <link rel="alternate" hrefLang="de" href={getUrlForLang('de')} />
       <link rel="alternate" hrefLang="en" href={getUrlForLang('en')} />
       <link rel="alternate" hrefLang="fr" href={getUrlForLang('fr')} />
-      <meta property="og:type" content="website" /><meta property="og:title" content={fullTitle} /><meta property="og:description" content={description} /><meta property="og:url" content={canonicalUrl} /><meta property="og:image" content={shareImage} />
-      <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={fullTitle} /><meta name="twitter:description" content={description} /><meta name="twitter:image" content={shareImage} />
+      <link rel="alternate" hrefLang="x-default" href={getUrlForLang('de')} />
+      <meta property="og:type" content="website" /><meta property="og:title" content={fullTitle} /><meta property="og:description" content={metaDescription} /><meta property="og:url" content={canonicalUrl} /><meta property="og:image" content={shareImage} />
+      <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={fullTitle} /><meta name="twitter:description" content={metaDescription} /><meta name="twitter:image" content={shareImage} />
       {allSchemas.map((s, i) => <script key={i} type="application/ld+json">{JSON.stringify(s)}</script>)}
     </Helmet>
   );

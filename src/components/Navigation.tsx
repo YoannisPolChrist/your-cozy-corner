@@ -15,6 +15,10 @@ export const Navigation = () => {
   const location = useLocation();
 
   useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       setIsScrolled(scrollPosition > 20);
@@ -45,9 +49,9 @@ export const Navigation = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'} ${isScrolled ? 'bg-glass backdrop-blur-xl shadow-premium border-b border-glass py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex items-center justify-between transition-all duration-300">
-        <Link to={getLocalizedPath('/')} className="flex items-center gap-2 md:gap-3 group" onClick={scrollToTop}>
+        <Link to={getLocalizedPath('/')} className="flex items-center gap-2 md:gap-3 group" onClick={handleNavClick}>
           <div className="relative">
-            <img src={logo} alt="Johannes Christ Therapie Logo" className="w-10 h-10 md:w-14 md:h-14 object-contain transition-transform duration-500 group-hover:scale-110" width={56} height={56} decoding="async" />
+            <img src={logo} alt={t.ui.logoAlt} className="w-10 h-10 md:w-14 md:h-14 object-contain transition-transform duration-500 group-hover:scale-110" width={56} height={56} decoding="async" />
           </div>
           <div className="min-w-0">
             <div className="font-heading font-bold text-gold-accent text-sm md:text-lg tracking-wide whitespace-nowrap">JOHANNES CHRIST</div>
@@ -70,7 +74,7 @@ export const Navigation = () => {
         </div>
         <div className="flex items-center gap-2 md:hidden">
           <LanguageSwitcher />
-          <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)} aria-label="Menü öffnen" className={isScrolled ? 'text-foreground' : 'text-foreground/80'}><Menu className="h-6 w-6" /></Button>
+          <Button variant="ghost" size="icon" type="button" onClick={() => setIsOpen(!isOpen)} aria-label={t.ui.menuOpen} aria-expanded={isOpen} className={isScrolled ? 'text-foreground' : 'text-foreground/80'}><Menu className="h-6 w-6" /></Button>
         </div>
       </div>
       <AnimatePresence>

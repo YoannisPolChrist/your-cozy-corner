@@ -16,6 +16,7 @@ const Angebot = () => {
   const { t, language, getLocalizedPath } = useLanguage();
   const location = useLocation();
   const serviceIcons = [Heart, Brain, Dumbbell];
+  const homeLabel = language === 'de' ? 'Startseite' : language === 'fr' ? 'Accueil' : 'Home';
 
   useEffect(() => {
     if (location.hash) {
@@ -27,7 +28,7 @@ const Angebot = () => {
 
   return (
     <div className="min-h-screen bg-background overflow-x-clip">
-      <SEO title={t.seo?.angebot?.title} description={t.seo?.angebot?.description} faqs={t.angebot.faq.items.map(i => ({ question: i.question as string, answer: i.answer as string }))} dateModified="2026-02-25" />
+      <SEO title={t.seo?.angebot?.title} description={t.seo?.angebot?.description} keywords={t.seo?.angebot?.keywords} faqs={t.angebot.faq.items.map(i => ({ question: i.question as string, answer: i.answer as string }))} breadcrumbs={[{ name: homeLabel, url: `/${language}` }, { name: t.nav.angebot, url: getLocalizedPath('/angebot') }]} dateModified="2026-02-25" />
       <Navigation />
       <main className="pt-20 overflow-x-clip">
         {/* Pillars */}
@@ -83,7 +84,7 @@ const Angebot = () => {
                       <p className="text-accent text-sm mt-2">{t.angebot.konditionen.intensiv.discount}</p>
                     </div>
                     <p className="text-muted-foreground leading-relaxed text-center mb-8 flex-grow">{t.angebot.konditionen.intensiv.description}</p>
-                    <Link to={`${getLocalizedPath('/kontakt')}?subject=Individuelle+Beratung`} className="block mt-auto" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                    <Link to={`${getLocalizedPath('/kontakt')}?subject=individual-guidance`} className="block mt-auto" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                       <Button variant="gold" className="w-full font-semibold">{t.angebot.konditionen.intensiv.cta}</Button>
                     </Link>
                   </Card>

@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local Firebase state
+.firebase/
+
+# Local build/debug artifacts
+build_log.txt

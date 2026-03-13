@@ -2,7 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { AnimatedSection, StaggerContainer, AnimatedItem } from "@/components/AnimatedSection";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Dumbbell, Heart, Target, MapPin, Award, CheckCircle, Star, Brain, BatteryWarning, ShieldAlert, Activity, Flame } from "lucide-react";
+import { ArrowRight, Dumbbell, Heart, Target, MapPin, Award, CheckCircle, Brain, BatteryWarning, ShieldAlert, Activity, Flame } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Footer } from "@/components/Footer";
@@ -10,12 +10,14 @@ import { useLanguage } from "@/i18n";
 import { TextReveal } from "@/components/ui/text-reveal";
 import { ThreeDBackground } from "@/components/ThreeDBackground";
 import { MagneticButton } from "@/components/ui/magnetic-button";
-import heroImage from "@/assets/TrainingHero.svg";
 import johannesSpeed from "@/assets/johannes-speed.webp";
 import johannesCyclingFriends from "@/assets/johannes-cycling-friends.webp";
 import johannesBodywork1 from "@/assets/johannes-bodywork-new-1.jpg";
 import johannesBodywork2 from "@/assets/johannes-bodywork-new-2.jpg";
-import { goldFrameVariants } from "@/lib/animations";
+import saschaImage from "@/assets/sascha-testimonial.jpeg";
+import { SEO } from "@/components/SEO";
+
+const profileImages: Record<string, string> = { sascha: saschaImage };
 
 const scrollToTop = () => { window.scrollTo({ top: 0, behavior: 'smooth' }); };
 
@@ -23,16 +25,33 @@ const PersonalTraining = () => {
   const { t, getLocalizedPath } = useLanguage();
   const serviceIcons = [Dumbbell, Heart, Target];
   const testimonials = t.testimonials?.personalTraining ?? [];
+  const homeLabel = t.nav.home || (t.shared?.homeLabel ?? "Home");
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={t.seo.personalTraining.title}
+        description={t.seo.personalTraining.description}
+        keywords={t.seo.personalTraining.keywords}
+        breadcrumbs={[
+          { name: homeLabel, url: getLocalizedPath("/") },
+          { name: t.nav.personalTraining, url: getLocalizedPath("/personal-training") },
+        ]}
+        dateModified="2026-03-13"
+      />
       <Navigation />
       <main>
         {/* 1. Hero */}
-        <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-20">
-          <div className="absolute inset-0 bg-primary/90">
-            <img src={johannesSpeed} alt="Personal Training" className="w-full h-full object-cover object-[center_30%] opacity-60" />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent mix-blend-multiply opacity-60" />
+        <section className="relative min-h-[100svh] md:min-h-[85vh] lg:min-h-[70vh] flex flex-col items-center justify-center overflow-hidden pt-20">
+          <div className="absolute inset-0 bg-primary">
+            <img
+              src="/PT_Header.jpg"
+              alt={t.personalTraining.hero.title}
+              loading="eager"
+              fetchPriority="high"
+              className="w-full h-full object-cover object-[center_45%] md:object-[center_35%] opacity-80 scale-[1.25]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent mix-blend-multiply opacity-70" />
           </div>
           <ThreeDBackground className="absolute inset-0 z-0 opacity-40 mix-blend-screen" />
           <div className="absolute inset-0 overflow-hidden">
@@ -42,7 +61,7 @@ const PersonalTraining = () => {
           <div className="container mx-auto px-4 relative z-10">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} className="max-w-4xl mx-auto text-center">
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
-                <MapPin className="w-4 h-4 text-red-accent" /><span className="text-white/90 text-sm font-medium">{t.personalTraining.location.city}</span>
+                <MapPin className="w-4 h-4 text-red-accent" /><span className="text-white/90 text-sm font-medium">{t.personalTraining.hero.badge ?? t.personalTraining.location.city}</span>
               </motion.div>
               <TextReveal text={t.personalTraining.hero.title} className="typ-h1 text-white mb-6" delay={0.4} />
               <p className="typ-lead text-white/85 max-w-2xl mx-auto mb-10">{t.personalTraining.hero.subtitle}</p>
@@ -119,12 +138,12 @@ const PersonalTraining = () => {
                 <AnimatedItem className="relative w-full">
                   <div className="grid grid-cols-2 gap-4 md:gap-6">
                     <div className="space-y-4 md:space-y-6 pt-8 md:pt-12">
-                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesBodywork1} alt="Manual Therapy" className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
-                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesSpeed} alt="Performance Training" className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
+                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesBodywork1} alt={t.personalTraining.approach.title} className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
+                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesSpeed} alt={t.personalTraining.services[0]?.title ?? t.personalTraining.hero.title} className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
                     </div>
                     <div className="space-y-4 md:space-y-6">
-                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesCyclingFriends} alt="Community Training" className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
-                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesBodywork2} alt="Mobility" className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
+                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesCyclingFriends} alt={t.personalTraining.services[1]?.title ?? t.personalTraining.hero.title} className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
+                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesBodywork2} alt={t.personalTraining.services[2]?.title ?? t.personalTraining.hero.title} className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
                     </div>
                   </div>
                 </AnimatedItem>
@@ -172,11 +191,19 @@ const PersonalTraining = () => {
               {testimonials.map((testimonial, index) => (
                 <AnimatedItem key={index}>
                   <Card className="p-8 bg-white shadow-soft border-none h-full flex flex-col">
-                    <div className="flex gap-1 mb-6">{[...Array(5)].map((_, i) => (<Star key={i} className="w-5 h-5 text-red-accent fill-gold-accent" />))}</div>
                     <p className="text-lg text-primary italic leading-relaxed mb-8 flex-grow">"{testimonial.text}"</p>
-                    <div className="mt-auto">
-                      <p className="font-semibold text-primary">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    <div className="mt-auto flex items-center gap-4">
+                      {testimonial.imageId && profileImages[testimonial.imageId] ? (
+                        <img src={profileImages[testimonial.imageId]} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover flex-shrink-0" />
+                      ) : (
+                        <div className="w-12 h-12 rounded-full bg-red-accent/10 flex items-center justify-center flex-shrink-0">
+                          <span className="text-red-accent font-bold text-lg">{testimonial.name.charAt(0)}</span>
+                        </div>
+                      )}
+                      <div>
+                        <p className="font-semibold text-primary">{testimonial.name}</p>
+                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                      </div>
                     </div>
                   </Card>
                 </AnimatedItem>
@@ -205,7 +232,7 @@ const PersonalTraining = () => {
                     <span className="text-muted-foreground">/ {t.personalTraining.pricing.single.priceLabel}</span>
                   </div>
                   <p className="typ-body text-muted-foreground mb-8 text-left whitespace-pre-line flex-grow">{t.personalTraining.pricing.single.description}</p>
-                  <Link to={getLocalizedPath('/kontakt')} onClick={scrollToTop} className="mt-auto w-full">
+                  <Link to={`${getLocalizedPath('/kontakt')}?subject=individual-guidance`} onClick={scrollToTop} className="mt-auto w-full">
                     <Button variant="outline" className="w-full">{t.personalTraining.pricing.single.cta}</Button>
                   </Link>
                 </Card>
@@ -223,7 +250,7 @@ const PersonalTraining = () => {
                   </div>
                   <p className="typ-small text-white/70 mb-4 line-through">{t.shared?.regularPrice ?? 'Regular'} {t.personalTraining.pricing.single.price}</p>
                   <p className="typ-body text-white/85 mb-8 text-left whitespace-pre-line flex-grow">{t.personalTraining.pricing.package.description}</p>
-                  <Link to={getLocalizedPath('/kontakt')} onClick={scrollToTop} className="mt-auto w-full">
+                  <Link to={`${getLocalizedPath('/kontakt')}?subject=individual-guidance`} onClick={scrollToTop} className="mt-auto w-full">
                     <Button variant="red" className="w-full">{t.personalTraining.pricing.package.cta}</Button>
                   </Link>
                 </Card>
@@ -264,7 +291,7 @@ const PersonalTraining = () => {
               <p className="typ-h3 font-heading text-red-accent mb-4">{t.personalTraining.location.city}</p>
               <p className="typ-body text-muted-foreground">{t.personalTraining.location.description}</p>
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="mt-8 rounded-2xl overflow-hidden shadow-lg border border-red-accent/10 h-[350px] w-full">
-                <iframe src="https://maps.google.com/maps?q=12+Rue+Jean-Palaprat,+31000+Toulouse&t=m&z=17&output=embed&iwloc=Near" width="100%" height="100%" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+                <iframe title={t.ui.trainingMapTitle} src="https://maps.google.com/maps?q=12+Rue+Jean-Palaprat,+31000+Toulouse&t=m&z=17&output=embed&iwloc=Near" width="100%" height="100%" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
               </motion.div>
             </div>
           </div>

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 
 export const Footer = () => {
-  const { t, language, getLocalizedPath } = useLanguage();
+  const { t, getLocalizedPath } = useLanguage();
   return (
     <footer className="bg-background relative pt-16 pb-8 overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-primary via-gold-accent to-teal-navy opacity-50"></div>
@@ -15,7 +15,7 @@ export const Footer = () => {
             <div>
               <p className="font-heading text-lg text-primary font-bold mb-6 relative inline-block">{t.footer.kontakt}<span className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gold-accent rounded-full"></span></p>
               <div className="space-y-4 text-sm">
-                <div className="flex items-start gap-3 text-muted-foreground group"><div className="w-8 h-8 rounded-full bg-primary/5 flex items-center justify-center"><MapPin className="w-4 h-4 text-gold-accent" /></div><span className="mt-1.5">Toulouse, {language === 'en' ? 'France' : 'Frankreich'}</span></div>
+                <div className="flex items-start gap-3 text-muted-foreground group"><div className="w-8 h-8 rounded-full bg-primary/5 flex items-center justify-center"><MapPin className="w-4 h-4 text-gold-accent" /></div><span className="mt-1.5">{t.footer.location}</span></div>
                 <MagneticButton strength={0.15} className="!block"><a href="tel:+491621709979" className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors"><div className="w-8 h-8 rounded-full bg-primary/5 flex items-center justify-center"><Phone className="w-4 h-4 text-gold-accent" /></div><span className="mt-1.5">+49 162 170 9979</span></a></MagneticButton>
                 <MagneticButton strength={0.15} className="!block mt-2"><a href="mailto:contact@johanneschrist.com" className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors"><div className="w-8 h-8 rounded-full bg-primary/5 flex items-center justify-center"><Mail className="w-4 h-4 text-gold-accent" /></div><span className="mt-1.5">contact@johanneschrist.com</span></a></MagneticButton>
               </div>

@@ -1,0 +1,12 @@
+{
+  "name": "your-cozy-corner-functions",
+  "private": true,
+  "main": "index.js",
+  "engines": {
+    "node": "20"
+  },
+  "dependencies": {
+    "firebase-functions": "^6.5.0",
+    "resend": "^6.4.0"
+  }
+}

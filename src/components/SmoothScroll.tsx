@@ -16,16 +16,19 @@ export const SmoothScroll = ({ children }: { children: ReactNode }) => {
             smoothTouch: false,
             touchMultiplier: 2,
             infinite: false,
-        } as any);
+        });
+
+        let animationFrameId = 0;
 
         function raf(time: number) {
             lenis.raf(time);
-            requestAnimationFrame(raf);
+            animationFrameId = requestAnimationFrame(raf);
         }
 
-        requestAnimationFrame(raf);
+        animationFrameId = requestAnimationFrame(raf);
 
         return () => {
+            cancelAnimationFrame(animationFrameId);
             lenis.destroy();
         };
     }, []);

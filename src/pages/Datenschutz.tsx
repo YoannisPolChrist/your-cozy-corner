@@ -1,11 +1,21 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/i18n";
+import { SEO } from "@/components/SEO";
 
 const Datenschutz = () => {
-    const { t } = useLanguage();
+    const { t, getLocalizedPath } = useLanguage();
     return (
         <div className="min-h-screen bg-background text-foreground">
+            <SEO
+                title={t.seo.datenschutz.title}
+                description={t.seo.datenschutz.description}
+                breadcrumbs={[
+                    { name: t.nav.home || (t.shared?.homeLabel ?? "Home"), url: getLocalizedPath("/") },
+                    { name: t.legal?.datenschutz?.title ?? t.seo.datenschutz.title, url: getLocalizedPath("/datenschutz") },
+                ]}
+                dateModified="2026-03-13"
+            />
             <Navigation />
             <main className="pt-24 pb-16 container mx-auto px-4 max-w-4xl">
                 <header className="mb-12 border-b border-primary/10 pb-8">

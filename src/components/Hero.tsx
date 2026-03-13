@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Dumbbell } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/i18n";
 import { TextReveal } from "@/components/ui/text-reveal";
@@ -27,9 +27,9 @@ const itemVariant: Variants = {
 export const Hero = () => {
   const { t, getLocalizedPath } = useLanguage();
   const [hoveredPanel, setHoveredPanel] = useState<'left' | 'right' | null>(null);
-  const [activePanel, setActivePanel] = useState<'left' | 'right' | null>(null);
   const [isRevealed, setIsRevealed] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
   useEffect(() => { const timer = setTimeout(() => setIsRevealed(true), 100); return () => clearTimeout(timer); }, []);
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768);
@@ -38,66 +38,52 @@ export const Hero = () => {
     return () => window.removeEventListener('resize', check);
   }, []);
 
-  // On mobile, activePanel drives the visual state; on desktop, hoveredPanel does
-  const effectivePanel = hoveredPanel ?? activePanel;
-
-  const handlePanelTap = (panel: 'left' | 'right', path: string) => {
-    if (window.innerWidth >= 768) return; // desktop uses hover
-    if (activePanel === panel) {
-      // Second tap → navigate
-      window.location.href = path;
-    } else {
-      setActivePanel(panel);
-    }
-  };
+  const effectivePanel = isMobile ? null : hoveredPanel;
 
   return (
-    <section className="relative h-[100dvh] w-full flex flex-col md:flex-row overflow-hidden bg-black" aria-label="Hero">
-      <ThreeDBackground className="absolute inset-0 z-[1] opacity-50 transition-opacity duration-1000" />
+    <section className="relative min-h-[100svh] md:h-[100dvh] w-full flex flex-col md:flex-row overflow-hidden bg-black">
+      <ThreeDBackground className="absolute inset-0 z-[1] opacity-35 md:opacity-50 transition-opacity duration-1000" />
 
       {/* Logo – centered at the split between panels */}
       <div className="absolute inset-0 z-50 flex items-center justify-center pointer-events-none">
         <motion.div
           initial={{ opacity: 0, scale: 0.6 }}
-          animate={{
-            opacity: isRevealed ? 1 : 0,
-            scale: isRevealed ? 1 : 0.6,
-            y: isMobile
-              ? effectivePanel === 'left' ? '25vh' : effectivePanel === 'right' ? '-25vh' : 0
-              : 0,
-          }}
-          transition={{
-            opacity: { duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] },
-            scale: { duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] },
-            y: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
-          }}
-        >
+            animate={{
+              opacity: isRevealed ? 1 : 0,
+              scale: isRevealed ? 1 : 0.6,
+              y: 0,
+            }}
+            transition={{
+              opacity: { duration: shouldReduceMotion ? 0 : 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] },
+              scale: { duration: shouldReduceMotion ? 0 : 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] },
+              y: { duration: shouldReduceMotion ? 0 : 0.8, ease: [0.22, 1, 0.36, 1] },
+            }}
+          >
           <div className="relative">
             <motion.div 
               className="absolute inset-0 bg-gold-accent/50 rounded-full blur-3xl"
-              animate={{ scale: [1, 1.3, 1], opacity: [0.4, 0.7, 0.4] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              animate={shouldReduceMotion ? { opacity: 0.4 } : { scale: [1, 1.3, 1], opacity: [0.4, 0.7, 0.4] }}
+              transition={{ duration: 5, repeat: shouldReduceMotion ? 0 : Infinity, ease: "easeInOut" }}
             />
-            <img src={logo} alt="Johannes Christ Logo" className="relative z-10 w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain drop-shadow-[0_0_20px_rgba(0,0,0,0.9)]" />
+            <img src={logo} alt={t.ui.logoAlt} className="relative z-10 w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain drop-shadow-[0_0_20px_rgba(0,0,0,0.9)]" />
           </div>
         </motion.div>
       </div>
 
       {/* LEFT PANEL – Gestalttherapie */}
       <motion.div
-        className="relative w-full h-1/2 md:h-full flex-1 flex items-center justify-center cursor-pointer overflow-hidden z-10"
-        onMouseEnter={() => setHoveredPanel('left')}
-        onMouseLeave={() => setHoveredPanel(null)}
-        onClick={() => handlePanelTap('left', getLocalizedPath('/gestalttherapie'))}
-        animate={{ flexGrow: effectivePanel === 'left' ? 1.5 : effectivePanel === 'right' ? 0.5 : 1 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        className="relative w-full min-h-[50svh] md:min-h-0 md:h-full flex-1 flex items-center justify-center overflow-hidden z-10"
+        onMouseEnter={() => !isMobile && setHoveredPanel('left')}
+        onMouseLeave={() => !isMobile && setHoveredPanel(null)}
+        animate={{ flexGrow: !shouldReduceMotion && effectivePanel === 'left' ? 1.35 : !shouldReduceMotion && effectivePanel === 'right' ? 0.65 : 1 }}
+        transition={{ duration: shouldReduceMotion ? 0 : 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
         <motion.div
           className="absolute inset-0 bg-[#0e100f]"
           animate={{ scale: effectivePanel === 'left' ? 1.08 : 1 }}
           transition={{ duration: 8, ease: "easeOut" }}
         >
-          <img src={therapyImage} alt="Gestalttherapie" className="w-full h-full object-cover object-center opacity-50 md:opacity-70 transition-opacity duration-700" />
+          <img src={therapyImage} alt={t.nav.gestalttherapie} className="w-full h-full object-cover object-center opacity-55 md:opacity-70 transition-opacity duration-700" loading="eager" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/60" />
           {/* Animated overlay on hover */}
           <motion.div
@@ -114,8 +100,8 @@ export const Hero = () => {
           animate={isRevealed ? "visible" : "hidden"}
         >
           <motion.div
-            animate={{ y: effectivePanel === 'left' ? -12 : 0 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            animate={{ y: !shouldReduceMotion && effectivePanel === 'left' ? -12 : 0 }}
+            transition={{ duration: shouldReduceMotion ? 0 : 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
             <motion.div variants={itemVariant}>
               <Brain className="w-8 h-8 md:w-12 md:h-12 mx-auto mb-4 text-gold-accent" strokeWidth={1.5} />
@@ -123,18 +109,18 @@ export const Hero = () => {
             <motion.div variants={itemVariant}>
               <TextReveal text={t.nav.gestalttherapie} className="typ-h1 text-white mb-3" delay={0.7} />
             </motion.div>
-            <motion.p variants={itemVariant} className="text-white/70 text-sm md:text-lg mb-8 font-light max-w-sm mx-auto leading-relaxed">
+            <motion.p variants={itemVariant} className="text-white/70 text-sm md:text-lg mb-6 md:mb-8 font-light max-w-sm mx-auto leading-relaxed">
               {t.gestalttherapie.hero.subtitle}
             </motion.p>
           </motion.div>
           <motion.div
-            animate={{ opacity: effectivePanel === 'left' ? 1 : 0.3, y: effectivePanel === 'left' ? 0 : 10, scale: effectivePanel === 'left' ? 1 : 0.95 }}
-            transition={{ duration: 0.5 }}
+            animate={{ opacity: isMobile || effectivePanel === 'left' ? 1 : 0.45, y: !isMobile && effectivePanel === 'left' ? 0 : 10, scale: !isMobile && effectivePanel === 'left' ? 1 : 0.98 }}
+            transition={{ duration: shouldReduceMotion ? 0 : 0.5 }}
             className="flex justify-center"
           >
             <Link to={getLocalizedPath('/gestalttherapie')} className="block">
               <MagneticButton strength={0.25}>
-                <Button variant="outline" className="border-gold-accent/50 text-white hover:bg-gold-accent hover:text-black rounded-full px-8 py-6 bg-black/30 backdrop-blur-md uppercase tracking-widest text-xs font-semibold transition-all duration-300">
+                <Button variant="outline" className="border-gold-accent/50 text-white hover:bg-gold-accent hover:text-black rounded-full px-8 py-6 bg-black/30 backdrop-blur-md uppercase tracking-widest text-xs font-semibold transition-all duration-300 w-full max-w-xs">
                   {t.gestalttherapie.hero.cta} <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </MagneticButton>
@@ -148,19 +134,18 @@ export const Hero = () => {
 
       {/* RIGHT PANEL – Personal Training */}
       <motion.div
-        className="relative w-full h-1/2 md:h-full flex-1 flex items-center justify-center cursor-pointer overflow-hidden z-10"
-        onMouseEnter={() => setHoveredPanel('right')}
-        onMouseLeave={() => setHoveredPanel(null)}
-        onClick={() => handlePanelTap('right', getLocalizedPath('/personal-training'))}
-        animate={{ flexGrow: effectivePanel === 'right' ? 1.5 : effectivePanel === 'left' ? 0.5 : 1 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        className="relative w-full min-h-[50svh] md:min-h-0 md:h-full flex-1 flex items-center justify-center overflow-hidden z-10"
+        onMouseEnter={() => !isMobile && setHoveredPanel('right')}
+        onMouseLeave={() => !isMobile && setHoveredPanel(null)}
+        animate={{ flexGrow: !shouldReduceMotion && effectivePanel === 'right' ? 1.35 : !shouldReduceMotion && effectivePanel === 'left' ? 0.65 : 1 }}
+        transition={{ duration: shouldReduceMotion ? 0 : 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
         <motion.div
           className="absolute inset-0 bg-[#0a0005]"
           animate={{ scale: effectivePanel === 'right' ? 1.08 : 1 }}
           transition={{ duration: 8, ease: "easeOut" }}
         >
-          <img src={trainingImage} alt="Personal Training" className="w-full h-full object-cover object-[center_30%] opacity-50 md:opacity-70 transition-opacity duration-700" />
+          <img src={trainingImage} alt={t.nav.personalTraining} className="w-full h-full object-cover object-[center_30%] opacity-55 md:opacity-70 transition-opacity duration-700" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/60" />
           <motion.div
             className="absolute inset-0 bg-gradient-to-bl from-destructive/10 to-transparent"
@@ -176,27 +161,27 @@ export const Hero = () => {
           animate={isRevealed ? "visible" : "hidden"}
         >
           <motion.div
-            animate={{ y: effectivePanel === 'right' ? -12 : 0 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            animate={{ y: !shouldReduceMotion && effectivePanel === 'right' ? -12 : 0 }}
+            transition={{ duration: shouldReduceMotion ? 0 : 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
             <motion.div variants={itemVariant}>
               <Dumbbell className="w-8 h-8 md:w-12 md:h-12 mx-auto mb-4 text-destructive" strokeWidth={1.5} />
             </motion.div>
             <motion.div variants={itemVariant}>
-              <TextReveal text="Personal Training" className="typ-h1 text-white mb-3" delay={0.8} />
+              <TextReveal text={t.nav.personalTraining} className="typ-h1 text-white mb-3" delay={0.8} />
             </motion.div>
-            <motion.p variants={itemVariant} className="text-white/70 text-sm md:text-lg mb-8 font-light max-w-sm mx-auto leading-relaxed">
+            <motion.p variants={itemVariant} className="text-white/70 text-sm md:text-lg mb-6 md:mb-8 font-light max-w-sm mx-auto leading-relaxed">
               {t.personalTraining.hero.subtitle}
             </motion.p>
           </motion.div>
           <motion.div
-            animate={{ opacity: effectivePanel === 'right' ? 1 : 0.3, y: effectivePanel === 'right' ? 0 : 10, scale: effectivePanel === 'right' ? 1 : 0.95 }}
-            transition={{ duration: 0.5 }}
+            animate={{ opacity: isMobile || effectivePanel === 'right' ? 1 : 0.45, y: !isMobile && effectivePanel === 'right' ? 0 : 10, scale: !isMobile && effectivePanel === 'right' ? 1 : 0.98 }}
+            transition={{ duration: shouldReduceMotion ? 0 : 0.5 }}
             className="flex justify-center"
           >
             <Link to={getLocalizedPath('/personal-training')} className="block">
               <MagneticButton strength={0.25}>
-                <Button variant="outline" className="border-destructive/50 text-white hover:bg-destructive hover:text-white rounded-full px-8 py-6 bg-black/30 backdrop-blur-md uppercase tracking-widest text-xs font-semibold transition-all duration-300">
+                <Button variant="outline" className="border-destructive/50 text-white hover:bg-destructive hover:text-white rounded-full px-8 py-6 bg-black/30 backdrop-blur-md uppercase tracking-widest text-xs font-semibold transition-all duration-300 w-full max-w-xs">
                   {t.personalTraining.hero.cta} <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </MagneticButton>

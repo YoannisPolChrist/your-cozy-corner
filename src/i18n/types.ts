@@ -1,5 +1,11 @@
 export type Language = 'de' | 'en' | 'fr';
 
+interface SeoEntry {
+  title: string;
+  description: string;
+  keywords?: string;
+}
+
 export interface Translations {
   nav: {
     gestalttherapie: string;
@@ -12,15 +18,23 @@ export interface Translations {
     subtitle2: string;
   };
   seo?: {
-    index: {
-      title: string;
-      description: string;
-      keywords: string;
-    };
-    angebot?: {
-      title: string;
-      description: string;
-    };
+    index: SeoEntry;
+    myWork: SeoEntry;
+    gestalttherapie: SeoEntry;
+    angebot: SeoEntry;
+    ueberMich: SeoEntry;
+    kontakt: SeoEntry;
+    personalTraining: SeoEntry;
+    impressum: SeoEntry;
+    datenschutz: SeoEntry;
+  };
+  ui: {
+    menuOpen: string;
+    languageMenuLabel: string;
+    switchLanguagePrefix: string;
+    logoAlt: string;
+    therapyMapTitle: string;
+    trainingMapTitle: string;
   };
   hero: {
     title: string;
@@ -118,7 +132,7 @@ export interface Translations {
     buttonAlt: string;
   };
   gestalttherapie: {
-    hero: { subtitle: string; cta: string };
+    hero: { subtitle: string; cta: string; badge: string };
     gestaltIntro?: {
       label?: string;
       title: string;
@@ -250,29 +264,40 @@ export interface Translations {
   };
   testimonials?: {
     gestalt: Array<{ text: string; name: string; role: string }>;
-    personalTraining: Array<{ text: string; name: string; role: string }>;
+    personalTraining: Array<{ text: string; name: string; role: string; imageId?: string }>;
   };
   kontakt: {
     hero: { title: string; subtitle: string };
     form: {
       title: string; name: string; email: string; phone: string;
       message: string; messagePlaceholder: string; submit: string;
+      honeypot: string; submitting: string;
       successTitle: string; successMessage: string;
+      errorTitle: string;
+      errors: {
+        generic: string;
+        invalidPayload: string;
+        emailSendFailed: string;
+        missingConfig: string;
+      };
+      subjectPrefillPrefix: string;
+      subjects: Record<'individual-guidance', string>;
     };
     info: {
       title: string; standort: string; telefon: string;
+      email: string; locationValue: string;
       erreichbarkeit: string; erreichbarkeitZeiten: string; erreichbarkeitTermine: string;
     };
     erstgespraech: { title: string; description: string };
     online: { title: string; description: string };
   };
   footer: {
-    kontakt: string; rechtliches: string; datenschutz: string; impressum: string; copyright: string;
+    kontakt: string; rechtliches: string; datenschutz: string; impressum: string; copyright: string; location: string;
   };
   common: { learnMore: string; bookAppointment: string; freeConsultation: string };
   personalTraining: {
     nav: string;
-    hero: { title: string; subtitle: string; cta: string };
+    hero: { title: string; subtitle: string; cta: string; badge?: string };
     approach: { label?: string; title: string; description: string };
     painPoints: {
       label: string; title: string;

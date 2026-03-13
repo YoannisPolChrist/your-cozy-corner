@@ -6,23 +6,17 @@ import { Heart, Brain, Palette, ArrowRight, Activity, Compass, HeartPulse, Dumbb
 import { Link as RouterLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
-import gestaltKontaktzyklus from "@/assets/gestalt-kontaktzyklus.webp";
-import ressourcenUnterstuetzung from "@/assets/ressourcen-unterstuetzung.webp";
-import gestaltKontaktzyklusEn from "@/assets/gestalt-kontaktzyklus-en.jpg";
-import gestaltKontaktzyklusFr from "@/assets/gestalt-kontaktzyklus-fr.jpg";
-import gestaltKontaktzyklusDe from "@/assets/gestalt-kontaktzyklus-de.jpg";
-import ressourcenUnterstuetzungEn from "@/assets/ressourcen-unterstuetzung-en.jpg";
-import ressourcenUnterstuetzungFr from "@/assets/ressourcen-unterstuetzung-fr.jpg";
-import ressourcenUnterstuetzungDe from "@/assets/ressourcen-unterstuetzung-de.jpg";
 import { viewportSettings } from "@/lib/animations";
 import { Footer } from "@/components/Footer";
 import { GestaltScrollTelling } from "@/components/GestaltScrollTelling";
 import { useLanguage } from "@/i18n";
 import { TiltCard } from "@/components/ui/tilt-card";
+import { SEO } from "@/components/SEO";
 
 const MyWork = () => {
   const { t, getLocalizedPath, language } = useLanguage();
   const location = useLocation();
+  const homeLabel = t.nav.home || (t.shared?.homeLabel ?? "Home");
 
   useEffect(() => {
     if (location.hash) {
@@ -41,19 +35,20 @@ const MyWork = () => {
   };
 
   const contactCycleImages: Record<string, string> = {
-    de: gestaltKontaktzyklusDe,
-    en: gestaltKontaktzyklusEn,
-    fr: gestaltKontaktzyklusFr,
+    de: "/localized-graphics/gestalt-kontaktzyklus-de.webp",
+    en: "/localized-graphics/gestalt-kontaktzyklus-en.webp",
+    fr: "/localized-graphics/gestalt-kontaktzyklus-fr.webp",
   };
 
   const resourcesImages: Record<string, string> = {
-    de: ressourcenUnterstuetzungDe,
-    en: ressourcenUnterstuetzungEn,
-    fr: ressourcenUnterstuetzungFr,
+    de: "/localized-graphics/ressourcen-unterstuetzung-de.webp",
+    en: "/localized-graphics/ressourcen-unterstuetzung-en.webp",
+    fr: "/localized-graphics/ressourcen-unterstuetzung-fr.webp",
   };
 
   return (
     <div className="min-h-screen bg-background overflow-x-clip">
+      <SEO title={t.seo?.myWork.title} description={t.seo?.myWork.description} keywords={t.seo?.myWork.keywords} breadcrumbs={[{ name: homeLabel, url: `/${language}` }, { name: t.nav.approach, url: getLocalizedPath('/ansatz') }]} dateModified="2026-02-25" />
       <Navigation />
       <main className="pt-24 overflow-x-clip">
         {/* Hero */}
@@ -74,7 +69,7 @@ const MyWork = () => {
                   <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-white shadow-sm flex items-center justify-center transition-all duration-300">
                     <Heart className="w-9 h-9 md:w-11 md:h-11 text-accent" strokeWidth={1.5} />
                   </div>
-                  <span className="text-base sm:text-lg font-heading font-semibold text-white text-center">Gestalttherapie</span>
+                  <span className="text-base sm:text-lg font-heading font-semibold text-white text-center">{t.nav.gestalttherapie}</span>
                   <span className="text-xs sm:text-sm text-white/80 text-center leading-relaxed px-2">{t.myWork?.hero?.iconDescriptions?.gestalt || "Das Herz meiner Arbeit"}</span>
                 </a>
               </TiltCard>
@@ -84,7 +79,7 @@ const MyWork = () => {
                   <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-white shadow-sm flex items-center justify-center transition-all duration-300">
                     <Brain className="w-9 h-9 md:w-11 md:h-11 text-accent" strokeWidth={1.5} />
                   </div>
-                  <span className="text-base sm:text-lg font-heading font-semibold text-white text-center">Coaching</span>
+                  <span className="text-base sm:text-lg font-heading font-semibold text-white text-center">{t.myWork?.coaching?.title || "Coaching"}</span>
                   <span className="text-xs sm:text-sm text-white/80 text-center leading-relaxed px-2">{t.myWork?.hero?.iconDescriptions?.coaching || "Inkl. Diagnostik"}</span>
                 </a>
               </TiltCard>

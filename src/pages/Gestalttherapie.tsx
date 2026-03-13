@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
 import { AnimatedSection, AnimatedItem, StaggerContainer } from "@/components/AnimatedSection";
-import { Hand, Brain, Palette, ArrowRight, Star, Dumbbell, MapPin, CheckCircle, UserMinus, Compass, Award, Sparkles } from "lucide-react";
+import { Hand, Brain, Palette, ArrowRight, Dumbbell, MapPin, CheckCircle, UserMinus, Compass, Award, Sparkles } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -13,7 +13,7 @@ import { useLanguage } from "@/i18n";
 import { TextReveal } from "@/components/ui/text-reveal";
 import { ThreeDBackground } from "@/components/ThreeDBackground";
 import { MagneticButton } from "@/components/ui/magnetic-button";
-import heroImage from "@/assets/Gestalt Header.png";
+import { SEO } from "@/components/SEO";
 import johannesCoachingTalk from "@/assets/johannes-coaching-talk.webp";
 import johannesMeet from "@/assets/johannes-meet.webp";
 import johannesCoachingNew from "@/assets/johannes-coaching-new.webp";
@@ -28,15 +28,26 @@ const Gestalttherapie = () => {
   const ressourcenIcons = [Hand, Brain, Palette];
   const testimonials = t.testimonials?.gestalt ?? [];
   const essenceIcons = [Sparkles, Brain, Hand];
+  const homeLabel = t.nav.home || (t.shared?.homeLabel ?? "Home");
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={t.seo.gestalttherapie.title}
+        description={t.seo.gestalttherapie.description}
+        keywords={t.seo.gestalttherapie.keywords}
+        breadcrumbs={[
+          { name: homeLabel, url: getLocalizedPath("/") },
+          { name: t.nav.gestalttherapie, url: getLocalizedPath("/gestalttherapie") },
+        ]}
+        dateModified="2026-03-13"
+      />
       <Navigation />
       <main>
         {/* 1. Hero */}
-        <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-20">
+        <section className="relative min-h-[100svh] md:min-h-[85vh] flex items-center justify-center overflow-hidden pt-20">
           <div className="absolute inset-0 bg-primary/90">
-            <img src={heroImage} alt="Gestalttherapie" className="w-full h-full object-cover object-top opacity-60" />
+            <img src="/gestalt-header.webp" alt={t.nav.gestalttherapie} className="w-full h-full object-cover object-top opacity-60" loading="eager" fetchPriority="high" />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent mix-blend-multiply opacity-60" />
           </div>
           <ThreeDBackground className="absolute inset-0 z-0 opacity-40 mix-blend-screen" />
@@ -50,7 +61,7 @@ const Gestalttherapie = () => {
               <p className="typ-lead text-white/85 max-w-2xl mx-auto mb-6">{t.gestalttherapie.hero.subtitle}</p>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
                 <MapPin className="w-4 h-4 text-gold-accent" />
-                <span className="text-white/90 text-sm font-medium">Toulouse & Online</span>
+                <span className="text-white/90 text-sm font-medium">{t.gestalttherapie.hero.badge}</span>
               </motion.div>
               <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.4 }} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link to={getLocalizedPath('/kontakt')} onClick={scrollToTop}>
@@ -100,46 +111,60 @@ const Gestalttherapie = () => {
         {/* 3. Transformation – Was wird möglich? */}
         <AnimatedSection className="py-24 md:py-32 bg-gradient-to-br from-gold-accent/5 via-white to-accent/5">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <span className="text-gold-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">{t.gestalttherapie.transformation?.label}</span>
-              <h2 className="typ-h2 text-primary mb-4">{t.gestalttherapie.transformation?.title}</h2>
-              <p className="typ-lead text-muted-foreground max-w-3xl mx-auto">{t.gestalttherapie.transformation?.subtitle}</p>
-            </div>
-            
-            {/* Image after headline */}
-            <motion.div 
-              className="max-w-4xl mx-auto mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <img 
-                src={johannesCoachingTalk} 
-                alt="Gestalttherapie Gespräch" 
-                className="w-full rounded-2xl shadow-xl object-cover"
-                loading="lazy"
-              />
-            </motion.div>
 
-            <StaggerContainer className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {t.gestalttherapie.transformation?.items.map((item, idx) => (
-                <AnimatedItem key={idx}>
-                  <Card className="p-8 bg-white border-none shadow-sm hover:shadow-lg transition-all h-full relative group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-gold-accent/5 to-accent/5 rounded-2xl blur-xl group-hover:from-gold-accent/10 group-hover:to-accent/10 transition-colors" />
-                    <div className="relative z-10">
-                      <div className="w-14 h-14 rounded-full bg-gold-accent/10 flex items-center justify-center mb-6">
-                        {idx === 0 && <Hand className="w-7 h-7 text-gold-accent" />}
-                        {idx === 1 && <Brain className="w-7 h-7 text-gold-accent" />}
-                        {idx === 2 && <Sparkles className="w-7 h-7 text-gold-accent" />}
+            <div className="max-w-6xl mx-auto flex flex-col md:grid md:grid-cols-2 md:gap-12 items-start">
+              {/* Text & Items (Left on Desktop) */}
+              <motion.div
+                className="space-y-12 md:order-1 order-2 text-center md:text-left mt-12 md:mt-0"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <div>
+                  <span className="text-gold-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">{t.gestalttherapie.transformation?.label}</span>
+                  <h2 className="typ-h2 text-primary mb-4">{t.gestalttherapie.transformation?.title}</h2>
+                  <p className="typ-lead text-muted-foreground">{t.gestalttherapie.transformation?.subtitle}</p>
+                </div>
+
+                <div className="space-y-6">
+                  {t.gestalttherapie.transformation?.items.map((item, idx) => (
+                    <div key={idx} className="bg-white p-6 rounded-2xl shadow-sm border border-accent/10 relative group hover:shadow-md transition-all text-left">
+                      <div className="absolute inset-0 bg-gradient-to-br from-gold-accent/5 to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <div className="relative z-10 flex gap-4">
+                        <div className="w-12 h-12 rounded-full bg-gold-accent/10 flex items-center justify-center shrink-0">
+                          {idx === 0 && <Hand className="w-6 h-6 text-gold-accent" />}
+                          {idx === 1 && <Brain className="w-6 h-6 text-gold-accent" />}
+                          {idx === 2 && <Sparkles className="w-6 h-6 text-gold-accent" />}
+                        </div>
+                        <div>
+                          <h3 className="typ-h4 text-primary mb-2">{item.title}</h3>
+                          <p className="typ-body text-muted-foreground">{item.description}</p>
+                        </div>
                       </div>
-                      <h3 className="typ-h4 text-primary mb-3">{item.title}</h3>
-                      <p className="typ-body text-muted-foreground">{item.description}</p>
                     </div>
-                  </Card>
-                </AnimatedItem>
-              ))}
-            </StaggerContainer>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Image (Right on Desktop) */}
+              <motion.div
+                className="relative w-full max-w-sm mx-auto md:max-w-md md:order-2 order-1"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl aspect-[2/3]">
+                  <img
+                    src={johannesCoachingTalk}
+                    alt={t.gestalttherapie.transformation?.title ?? t.nav.gestalttherapie}
+                    className="w-full h-full object-cover object-top"
+                    loading="lazy"
+                  />
+                </div>
+              </motion.div>
+            </div>
           </div>
         </AnimatedSection>
 
@@ -174,12 +199,12 @@ const Gestalttherapie = () => {
                 <AnimatedItem className="relative w-full">
                   <div className="grid grid-cols-2 gap-4 md:gap-6">
                     <div className="space-y-4 md:space-y-6 pt-8 md:pt-12">
-                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesCoachingTalk} alt="Gestalttherapie Coaching" className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
-                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesMeet} alt="Gestalttherapie Kontakt" className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
+                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesCoachingTalk} alt={t.gestalttherapie.approach?.title ?? t.nav.gestalttherapie} className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
+                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesMeet} alt={t.gestalttherapie.qualifications?.title ?? t.nav.gestalttherapie} className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
                     </div>
                     <div className="space-y-4 md:space-y-6">
-                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesPortrait} alt="Gestalttherapeut Johannes Christ" className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
-                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesCoachingNew} alt="Gestalttherapie Sitzung" className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
+                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesPortrait} alt={t.nav.gestalttherapie} className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
+                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesCoachingNew} alt={t.gestalttherapie.cta.title} className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
                     </div>
                   </div>
                 </AnimatedItem>
@@ -201,7 +226,6 @@ const Gestalttherapie = () => {
               {testimonials.map((testimonial, index) => (
                 <AnimatedItem key={index}>
                   <Card className="p-8 bg-white shadow-soft border-none h-full flex flex-col">
-                    <div className="flex gap-1 mb-6">{[...Array(5)].map((_, i) => (<Star key={i} className="w-5 h-5 text-gold-accent fill-gold-accent" />))}</div>
                     <p className="text-lg text-primary italic leading-relaxed mb-8 flex-grow">"{testimonial.text}"</p>
                     <div className="mt-auto">
                       <p className="font-semibold text-primary">{testimonial.name}</p>
@@ -234,7 +258,7 @@ const Gestalttherapie = () => {
                     <span className="text-muted-foreground">/ {t.angebot.konditionen.einzelbegleitung.priceLabel}</span>
                   </div>
                   <p className="typ-body text-muted-foreground mb-8 text-left whitespace-pre-line flex-grow">{t.angebot.konditionen.einzelbegleitung.description}</p>
-                  <Link to={getLocalizedPath('/kontakt')} onClick={scrollToTop} className="mt-auto w-full">
+                  <Link to={`${getLocalizedPath('/kontakt')}?subject=individual-guidance`} onClick={scrollToTop} className="mt-auto w-full">
                     <Button variant="outline" className="w-full">{t.angebot.konditionen.einzelbegleitung.cta}</Button>
                   </Link>
                 </Card>
@@ -252,7 +276,7 @@ const Gestalttherapie = () => {
                   </div>
                   <p className="typ-small text-white/70 mb-4 line-through">{t.shared?.regularPrice ?? 'Regulär'} {t.angebot.konditionen.einzelbegleitung.price}</p>
                   <p className="typ-body text-white/85 mb-8 flex-grow">{t.angebot.konditionen.intensiv.description}</p>
-                  <Link to={`${getLocalizedPath('/kontakt')}?subject=Individuelle+Beratung`} onClick={scrollToTop} className="mt-auto w-full">
+                  <Link to={`${getLocalizedPath('/kontakt')}?subject=individual-guidance`} onClick={scrollToTop} className="mt-auto w-full">
                     <Button variant="gold" className="w-full">{t.angebot.konditionen.intensiv.cta}</Button>
                   </Link>
                 </Card>
@@ -272,7 +296,7 @@ const Gestalttherapie = () => {
               <p className="typ-h3 font-heading text-accent mb-4">{t.gestalttherapie.location?.city ?? 'Toulouse Zentrum'}</p>
               <p className="typ-body text-muted-foreground">{t.gestalttherapie.location?.description ?? 'IZICure, 47 Allées Jean Jaurès, 31000 Toulouse'}</p>
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="mt-8 rounded-2xl overflow-hidden shadow-lg border border-accent/10 h-[350px] w-full">
-                <iframe src="https://maps.google.com/maps?q=IZICure,+47+All.+Jean+Jaur%C3%A8s,+31000+Toulouse&t=m&z=17&output=embed&iwloc=Near" width="100%" height="100%" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+                <iframe title={t.ui.therapyMapTitle} src="https://maps.google.com/maps?q=IZICure,+47+All.+Jean+Jaur%C3%A8s,+31000+Toulouse&t=m&z=17&output=embed&iwloc=Near" width="100%" height="100%" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
               </motion.div>
             </div>
           </div>

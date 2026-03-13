@@ -16,7 +16,7 @@ import johannesBodywork2 from "@/assets/johannes-bodywork-new-2.jpg";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection, AnimatedItem, StaggerContainer } from "@/components/AnimatedSection";
-import { fadeUp, staggerContainer, goldFrameVariants, imageVariants, viewportSettings } from "@/lib/animations";
+import { fadeUp, staggerContainer, imageVariants, viewportSettings } from "@/lib/animations";
 import { useLanguage } from "@/i18n";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -37,15 +37,15 @@ const ParallaxImageWrapper = ({ src, alt, className = "", aspectRatio = "aspect-
 };
 
 const UeberMich = () => {
-  const { t, language, getLocalizedPath } = useLanguage();
+  const { t, getLocalizedPath } = useLanguage();
   const plugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: true }));
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title={`${t.nav.ueberMich} | Johannes Christ`} description={t.ueberMich.hero.description1}
+      <SEO title={t.seo.ueberMich.title} description={t.seo.ueberMich.description} keywords={t.seo.ueberMich.keywords}
         schema={{ "@context": "https://schema.org", "@type": "Person", "name": "Johannes Christ", "jobTitle": t.ueberMich.hero.byline ?? 'Gestalt Therapist & Coach', "hasCredential": [{ "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "recognizedBy": { "@type": "Organization", "name": "Akademie für Handgemachte Psychotherapie / Symbolon Institut" } }], "knowsAbout": ["Gestalttherapie", "Körperarbeit", "Coaching", "Achtsamkeit", "Psychologie"] }}
-        breadcrumbs={[{ name: "Home", url: `/${language}` }, { name: t.nav.ueberMich, url: `/${language}/ueber-mich` }]}
-        dateModified="2026-02-25"
+        breadcrumbs={[{ name: t.nav.home || (t.shared?.homeLabel ?? "Home"), url: getLocalizedPath("/") }, { name: t.nav.ueberMich, url: getLocalizedPath("/ueber-mich") }]}
+        dateModified="2026-03-13"
       />
       <Navigation />
       <main className="pt-20">
@@ -62,18 +62,23 @@ const UeberMich = () => {
                 <motion.p variants={fadeUp} className="text-accent font-medium text-lg md:text-xl">{t.ueberMich.hero.byline ?? 'Gestalttherapeut, Coach & Körperarbeit'}</motion.p>
               </motion.div>
 
-              {/* Image below title */}
-              <motion.div variants={fadeUp} className="relative w-full max-w-md mx-auto mb-12">
-                <div className="relative z-10 w-full rounded-2xl overflow-hidden shadow-2xl">
-                  <ParallaxImageWrapper src={johannesHeroPortrait} alt="Johannes Christ - Gestalttherapeut" className="object-cover object-center w-full" aspectRatio="aspect-[4/5]" />
-                </div>
-              </motion.div>
+              {/* Grid layout for Desktop, Stacked for Mobile */}
+              <div className="flex flex-col md:grid md:grid-cols-2 md:gap-12 md:items-center">
 
-              {/* Text below image */}
-              <motion.div variants={fadeUp} className="text-base md:text-lg text-white/90 leading-relaxed font-light max-w-2xl mx-auto text-center space-y-4">
-                <p className="whitespace-pre-line">{t.ueberMich.hero.description1}</p>
-                <p>{t.ueberMich.hero.description2}</p>
-              </motion.div>
+                {/* Image (Left on Desktop) */}
+                <motion.div variants={fadeUp} className="relative w-full max-w-md mx-auto mb-8 md:mb-0 md:order-1 order-2">
+                  <div className="relative z-10 w-full rounded-2xl overflow-hidden shadow-2xl">
+                    <ParallaxImageWrapper src={johannesHeroPortrait} alt={t.ueberMich.hero.title} className="object-cover object-center w-full" aspectRatio="aspect-[4/5]" />
+                  </div>
+                </motion.div>
+
+                {/* Text (Right on Desktop) */}
+                <motion.div variants={fadeUp} className="text-base md:text-lg text-white/90 leading-relaxed font-light text-center md:text-left space-y-4 md:order-2 order-1">
+                  <p className="whitespace-pre-line">{t.ueberMich.hero.description1}</p>
+                  <p>{t.ueberMich.hero.description2}</p>
+                </motion.div>
+
+              </div>
             </div>
           </motion.div>
           <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-primary to-transparent" />
@@ -93,51 +98,58 @@ const UeberMich = () => {
                 </div>
               </motion.div>
 
-              {/* Image */}
-              <motion.div className="relative max-w-sm mx-auto mb-12">
-                <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl aspect-[2/3]">
-                  <img src={johannesCoachingTalk} alt="Therapeutische Arbeit" className="w-full h-full object-cover object-top" />
-                </div>
-              </motion.div>
+              <div className="flex flex-col md:grid md:grid-cols-2 md:gap-12 md:items-center">
 
-              {/* Text */}
-              <motion.div variants={staggerContainer} className="max-w-3xl mx-auto space-y-6 md:space-y-8 text-center">
-                <motion.div variants={fadeUp} className="flex flex-col items-center gap-4 pt-2 pb-6">
-                  <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl border border-teal-navy/10 bg-teal-navy/5 shadow-sm text-teal-navy font-medium hover:bg-white transition-colors w-fit">
-                    <div className="w-8 h-8 rounded-full bg-gold-accent/20 flex items-center justify-center"><Sparkles className="w-4 h-4 text-gold-accent" /></div>
-                    {t.ueberMich.hero.badges?.[0] ?? '8 years of practice & training'}
+                {/* Text (Left on Desktop, Right in Grid -> order-1 on MD, order-2 on Mobile so Image is first? No, let's keep text left, image right on Desktop) */}
+                {/* Wait, alternating: Hero was Image Left, Text Right. Let's make this one Text Left, Image Right. */}
+                <motion.div variants={staggerContainer} className="space-y-6 md:space-y-8 text-center md:text-left md:order-1 order-2">
+                  <motion.div variants={fadeUp} className="flex flex-col md:items-start items-center gap-4 pt-2 pb-6">
+                    <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl border border-teal-navy/10 bg-teal-navy/5 shadow-sm text-teal-navy font-medium hover:bg-white transition-colors w-fit text-left">
+                      <div className="w-8 h-8 rounded-full bg-gold-accent/20 flex items-center justify-center shrink-0"><Sparkles className="w-4 h-4 text-gold-accent" /></div>
+                      {t.ueberMich.hero.badges?.[0] ?? '8 years of practice & training'}
+                    </div>
+                    <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl border border-teal-navy/10 bg-teal-navy/5 shadow-sm text-teal-navy font-medium hover:bg-white transition-colors w-fit text-left">
+                      <div className="w-8 h-8 rounded-full bg-teal-navy/10 flex items-center justify-center shrink-0"><GraduationCap className="w-4 h-4 text-teal-navy" /></div>
+                      <span className="text-teal-navy">{t.ueberMich.hero.badges?.[1] ?? 'M.Sc. Psychology & Counseling (in training)'}</span>
+                    </div>
+                  </motion.div>
+                  <motion.div variants={fadeUp} className="text-base md:text-lg leading-relaxed space-y-6 text-teal-navy text-left">
+                    <p>{t.ueberMich.arbeitsweise.bodyP1}</p>
+                    <p>{t.ueberMich.arbeitsweise.bodyP2Prefix}<strong className="text-accent font-semibold">{t.ueberMich.arbeitsweise.bodyP2Strong}</strong>{t.ueberMich.arbeitsweise.bodyP2Suffix}</p>
+                    <p>{t.ueberMich.arbeitsweise.bodyP3} <span className="italic">{t.ueberMich.arbeitsweise.bodyP3Italic}</span></p>
+                  </motion.div>
+                </motion.div>
+
+                {/* Image (Right on Desktop) */}
+                <motion.div className="relative w-full max-w-sm mx-auto mb-8 md:mb-0 md:order-2 order-1">
+                  <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl aspect-[2/3]">
+                    <img src={johannesCoachingTalk} alt={t.ueberMich.arbeitsweise.title} className="w-full h-full object-cover object-top" />
                   </div>
-                  <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl border border-teal-navy/10 bg-teal-navy/5 shadow-sm text-teal-navy font-medium hover:bg-white transition-colors w-fit">
-                    <div className="w-8 h-8 rounded-full bg-teal-navy/10 flex items-center justify-center"><GraduationCap className="w-4 h-4 text-teal-navy" /></div>
-                    <span className="text-teal-navy">{t.ueberMich.hero.badges?.[1] ?? 'M.Sc. Psychology & Counseling (in training)'}</span>
-                  </div>
                 </motion.div>
-                <motion.div variants={fadeUp} className="text-base md:text-lg leading-relaxed space-y-6 text-teal-navy text-left md:text-center">
-                  <p>{t.ueberMich.arbeitsweise.bodyP1}</p>
-                  <p>{t.ueberMich.arbeitsweise.bodyP2Prefix}<strong className="text-accent font-semibold">{t.ueberMich.arbeitsweise.bodyP2Strong}</strong>{t.ueberMich.arbeitsweise.bodyP2Suffix}</p>
-                  <p>{t.ueberMich.arbeitsweise.bodyP3} <span className="italic">{t.ueberMich.arbeitsweise.bodyP3Italic}</span></p>
-                </motion.div>
-                <motion.div variants={fadeUp} className="pt-6 max-w-2xl mx-auto">
-                  <Accordion type="single" collapsible className="w-full bg-off-white rounded-2xl border border-teal-navy/10 px-6 py-2 shadow-sm">
-                    <AccordionItem value="qualifikationen" className="border-none">
-                      <AccordionTrigger className="text-teal-navy hover:text-accent font-heading text-xl md:text-2xl transition-colors py-4">{t.ueberMich.qualifikationen.title}</AccordionTrigger>
-                      <AccordionContent className="space-y-8 pt-6 pb-6 border-t border-teal-navy/10 mt-2">
-                        <div className="space-y-2">
-                          <div className="flex items-center gap-2 text-accent"><GraduationCap className="w-5 h-5" /><h4 className="font-semibold text-teal-navy">{t.ueberMich.qualifikationen.akademisch.title}</h4></div>
-                          <ul className="space-y-1 text-teal-navy text-sm pl-7 text-left">{t.ueberMich.qualifikationen.akademisch.items.map((item, idx) => (<li key={idx}>{item}</li>))}</ul>
-                        </div>
-                        <div className="space-y-2">
-                          <div className="flex items-center gap-2 text-accent"><Sparkles className="w-5 h-5" /><h4 className="font-semibold text-teal-navy">{t.ueberMich.qualifikationen.therapeutisch.title}</h4></div>
-                          <ul className="space-y-1 text-teal-navy text-sm pl-7 text-left">{t.ueberMich.qualifikationen.therapeutisch.items.map((item, idx) => (<li key={idx}>{item}</li>))}</ul>
-                        </div>
-                        <div className="space-y-2">
-                          <div className="flex items-center gap-2 text-accent"><Dumbbell className="w-5 h-5" /><h4 className="font-semibold text-teal-navy">{t.ueberMich.qualifikationen.coaching.title}</h4></div>
-                          <ul className="space-y-1 text-teal-navy text-sm pl-7 text-left">{t.ueberMich.qualifikationen.coaching.items.map((item, idx) => (<li key={idx}>{item}</li>))}</ul>
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
-                </motion.div>
+
+              </div>
+
+              {/* Accordion below grid */}
+              <motion.div variants={fadeUp} className="pt-12 md:pt-16 max-w-4xl mx-auto">
+                <Accordion type="single" collapsible className="w-full bg-off-white rounded-2xl border border-teal-navy/10 px-6 py-2 shadow-sm">
+                  <AccordionItem value="qualifikationen" className="border-none">
+                    <AccordionTrigger className="text-teal-navy hover:text-accent font-heading text-xl md:text-2xl transition-colors py-4">{t.ueberMich.qualifikationen.title}</AccordionTrigger>
+                    <AccordionContent className="space-y-8 pt-6 pb-6 border-t border-teal-navy/10 mt-2">
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2 text-accent"><GraduationCap className="w-5 h-5" /><h4 className="font-semibold text-teal-navy">{t.ueberMich.qualifikationen.akademisch.title}</h4></div>
+                        <ul className="space-y-1 text-teal-navy text-sm pl-7 text-left">{t.ueberMich.qualifikationen.akademisch.items.map((item, idx) => (<li key={idx}>{item}</li>))}</ul>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2 text-accent"><Sparkles className="w-5 h-5" /><h4 className="font-semibold text-teal-navy">{t.ueberMich.qualifikationen.therapeutisch.title}</h4></div>
+                        <ul className="space-y-1 text-teal-navy text-sm pl-7 text-left">{t.ueberMich.qualifikationen.therapeutisch.items.map((item, idx) => (<li key={idx}>{item}</li>))}</ul>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2 text-accent"><Dumbbell className="w-5 h-5" /><h4 className="font-semibold text-teal-navy">{t.ueberMich.qualifikationen.coaching.title}</h4></div>
+                        <ul className="space-y-1 text-teal-navy text-sm pl-7 text-left">{t.ueberMich.qualifikationen.coaching.items.map((item, idx) => (<li key={idx}>{item}</li>))}</ul>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               </motion.div>
             </div>
           </div>
@@ -155,30 +167,34 @@ const UeberMich = () => {
                 <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl leading-tight text-primary pb-2">{t.ueberMich.training?.title}</motion.h2>
               </motion.div>
 
-              {/* Image Carousel */}
-              <motion.div className="relative max-w-lg mx-auto mb-12">
-                <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4] group">
-                  <Carousel plugins={[plugin.current]} className="w-full h-full" onMouseEnter={plugin.current.stop} onMouseLeave={plugin.current.reset}>
-                    <CarouselContent className="h-full -ml-0">
-                      <CarouselItem className="h-full pl-0"><img src={johannesSpeed} alt="Johannes Christ - Triathlon Performance auf dem Rennrad" width={600} height={800} className="w-full h-full object-cover" loading="lazy" decoding="async" /></CarouselItem>
-                      <CarouselItem className="h-full pl-0"><img src={johannesCyclingFriends} alt="Johannes Christ - Rennradfahren mit Freunden in der Natur" width={600} height={800} className="w-full h-full object-cover" loading="lazy" decoding="async" /></CarouselItem>
-                      <CarouselItem className="h-full pl-0"><img src={johannesBodywork1} alt="Johannes Christ bodywork" width={600} height={800} className="w-full h-full object-cover" loading="lazy" decoding="async" /></CarouselItem>
-                      <CarouselItem className="h-full pl-0"><img src={johannesBodywork2} alt="Johannes Christ bodywork practice" width={600} height={800} className="w-full h-full object-cover" loading="lazy" decoding="async" /></CarouselItem>
-                    </CarouselContent>
-                    <div className="absolute bottom-4 right-4 flex gap-2">
-                      <CarouselPrevious className="relative inset-0 translate-y-0 h-8 w-8 bg-white/80 hover:bg-white text-primary border-none opacity-0 group-hover:opacity-100 transition-opacity" />
-                      <CarouselNext className="relative inset-0 translate-y-0 h-8 w-8 bg-white/80 hover:bg-white text-primary border-none opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </div>
-                  </Carousel>
-                </div>
-              </motion.div>
+              <div className="flex flex-col md:grid md:grid-cols-2 md:gap-12 md:items-center">
 
-              {/* Text */}
-              <motion.div variants={fadeUp} className="text-base md:text-lg leading-relaxed space-y-5 text-muted-foreground max-w-3xl mx-auto text-center">
-                <p className="whitespace-pre-line">{t.ueberMich.training?.description1}</p>
-                <p className="whitespace-pre-line">{t.ueberMich.training?.description2}</p>
-                <p className="whitespace-pre-line">{t.ueberMich.training?.description3}</p>
-              </motion.div>
+                {/* Image Carousel (Left on Desktop, Image -> Text -> Image -> Text) */}
+                <motion.div className="relative w-full max-w-lg mx-auto mb-8 md:mb-0 md:order-1 order-2">
+                  <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4] group">
+                    <Carousel plugins={[plugin.current]} className="w-full h-full" onMouseEnter={plugin.current.stop} onMouseLeave={plugin.current.reset}>
+                      <CarouselContent className="h-full -ml-0">
+                        <CarouselItem className="h-full pl-0"><img src={johannesSpeed} alt={t.ueberMich.training?.title ?? t.ueberMich.hero.title} width={600} height={800} className="w-full h-full object-cover" loading="lazy" decoding="async" /></CarouselItem>
+                        <CarouselItem className="h-full pl-0"><img src={johannesCyclingFriends} alt={t.ueberMich.training?.label ?? t.ueberMich.hero.title} width={600} height={800} className="w-full h-full object-cover" loading="lazy" decoding="async" /></CarouselItem>
+                        <CarouselItem className="h-full pl-0"><img src={johannesBodywork1} alt={t.ueberMich.training?.description1 ?? t.ueberMich.hero.title} width={600} height={800} className="w-full h-full object-cover" loading="lazy" decoding="async" /></CarouselItem>
+                        <CarouselItem className="h-full pl-0"><img src={johannesBodywork2} alt={t.ueberMich.training?.description2 ?? t.ueberMich.hero.title} width={600} height={800} className="w-full h-full object-cover" loading="lazy" decoding="async" /></CarouselItem>
+                      </CarouselContent>
+                      <div className="absolute bottom-4 right-4 flex gap-2">
+                        <CarouselPrevious className="relative inset-0 translate-y-0 h-8 w-8 bg-white/80 hover:bg-white text-primary border-none opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <CarouselNext className="relative inset-0 translate-y-0 h-8 w-8 bg-white/80 hover:bg-white text-primary border-none opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </div>
+                    </Carousel>
+                  </div>
+                </motion.div>
+
+                {/* Text (Right on Desktop) */}
+                <motion.div variants={fadeUp} className="text-base md:text-lg leading-relaxed space-y-5 text-muted-foreground text-center md:text-left md:order-2 order-1">
+                  <p className="whitespace-pre-line">{t.ueberMich.training?.description1}</p>
+                  <p className="whitespace-pre-line">{t.ueberMich.training?.description2}</p>
+                  <p className="whitespace-pre-line">{t.ueberMich.training?.description3}</p>
+                </motion.div>
+
+              </div>
             </div>
           </div>
         </motion.section>
@@ -194,18 +210,22 @@ const UeberMich = () => {
                 <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl leading-tight text-white pb-2">{t.ueberMich.persoenlich?.title}</motion.h2>
               </motion.div>
 
-              {/* Image */}
-              <motion.div variants={fadeUp} className="relative max-w-lg mx-auto mb-12 px-4 sm:px-0">
-                <div className="relative w-full overflow-hidden rounded-3xl shadow-xl border border-primary/5">
-                  <ParallaxImageWrapper src={johannesPersoenlich} alt="Johannes Christ - Persönlich" className="object-cover object-center w-full" aspectRatio="aspect-[4/5]" />
-                </div>
-              </motion.div>
+              <div className="flex flex-col md:grid md:grid-cols-2 md:gap-12 md:items-center">
 
-              {/* Text */}
-              <motion.div variants={fadeUp} className="text-base md:text-lg leading-relaxed space-y-5 text-white/80 max-w-3xl mx-auto text-center">
-                <p>{t.ueberMich.persoenlich?.description1}</p>
-                <p className="italic text-white font-medium">{t.ueberMich.persoenlich?.description2}</p>
-              </motion.div>
+                {/* Text (Left on Desktop, Right on previous section) */}
+                <motion.div variants={fadeUp} className="text-base md:text-lg leading-relaxed space-y-5 text-white/80 text-center md:text-left md:order-1 order-1">
+                  <p>{t.ueberMich.persoenlich?.description1}</p>
+                  <p className="italic text-white font-medium">{t.ueberMich.persoenlich?.description2}</p>
+                </motion.div>
+
+                {/* Image (Right on Desktop) */}
+                <motion.div variants={fadeUp} className="relative w-full max-w-lg mx-auto mt-8 md:mt-0 px-4 sm:px-0 md:order-2 order-2">
+                  <div className="relative w-full overflow-hidden rounded-3xl shadow-xl border border-primary/5">
+                    <ParallaxImageWrapper src={johannesPersoenlich} alt={t.ueberMich.persoenlich?.title ?? t.ueberMich.hero.title} className="object-cover object-center w-full" aspectRatio="aspect-[4/5]" />
+                  </div>
+                </motion.div>
+
+              </div>
             </div>
           </div>
         </motion.section>
