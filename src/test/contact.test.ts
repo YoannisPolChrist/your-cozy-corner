@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
 
-import { buildContactPrefill, getLocalizedSubjectLabel, isContactSubjectId } from "@/lib/contact";
 import { de } from "@/i18n/de";
 import { en } from "@/i18n/en";
 import { fr } from "@/i18n/fr";
+import { buildContactPrefill, getLocalizedSubjectLabel, isContactSubjectId } from "@/lib/contact";
 
 describe("contact helpers", () => {
   it("recognizes supported subject ids", () => {
@@ -12,9 +12,9 @@ describe("contact helpers", () => {
   });
 
   it("builds localized prefills", () => {
-    expect(buildContactPrefill(de, "individual-guidance")).toContain("Ich interessiere mich für");
-    expect(buildContactPrefill(en, "individual-guidance")).toContain("I am interested in");
-    expect(buildContactPrefill(fr, "individual-guidance")).toContain("Je m’intéresse à");
+    expect(buildContactPrefill(de, "individual-guidance")).toContain("Ich interessiere mich besonders für");
+    expect(buildContactPrefill(en, "individual-guidance")).toContain("I’m especially interested in");
+    expect(buildContactPrefill(fr, "individual-guidance")).toContain("Je m’intéresse surtout à");
   });
 
   it("returns localized subject labels", () => {
