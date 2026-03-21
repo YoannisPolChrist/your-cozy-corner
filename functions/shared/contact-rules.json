@@ -1,0 +1,19 @@
+{
+  "languages": ["de", "en", "fr"],
+  "maxLengths": {
+    "name": 120,
+    "email": 160,
+    "phone": 40,
+    "message": 5000,
+    "subject": 120,
+    "sourcePage": 160
+  },
+  "minLengths": {
+    "name": 2,
+    "message": 10
+  },
+  "patterns": {
+    "email": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$",
+    "phone": "^[+()\\d\\s-]{0,40}$"
+  }
+}

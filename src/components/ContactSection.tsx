@@ -89,7 +89,7 @@ export const ContactSection = () => {
               <Card className="p-6 sm:p-8 bg-gradient-teal text-white">
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <MapPin className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <MapPin className="w-6 h-6 flex-shrink-0 mt-1" aria-hidden="true" />
                     <div>
                       <p className="font-semibold mb-1">ORT</p>
                       <p>Toulouse</p>
@@ -97,7 +97,7 @@ export const ContactSection = () => {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <Phone className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <Phone className="w-6 h-6 flex-shrink-0 mt-1" aria-hidden="true" />
                     <div>
                       <p className="font-semibold mb-1">TELEFON</p>
                       <a href="tel:+491621709979" className="hover:underline">+49 162 170 9979</a>
@@ -105,7 +105,7 @@ export const ContactSection = () => {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <Mail className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <Mail className="w-6 h-6 flex-shrink-0 mt-1" aria-hidden="true" />
                     <div>
                       <p className="font-semibold mb-1">EMAIL</p>
                       <a href="mailto:contact@johanneschrist.com" className="break-all hover:underline">contact@johanneschrist.com</a>
@@ -118,7 +118,7 @@ export const ContactSection = () => {
               <Card className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl border border-accent/10 flex flex-col transition-shadow duration-200 hover:shadow-2xl">
                 <div className="text-center mb-4">
                   <h4 className="font-heading text-[21px] sm:text-xl md:text-2xl text-primary mb-1.5 flex items-center justify-center gap-2">
-                    <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" />
+                    <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" aria-hidden="true" />
                     {t.angebot?.formate?.map?.therapie?.title || "Gestalttherapie"}
                   </h4>
                   <p className="text-muted-foreground text-xs sm:text-sm mb-3">
@@ -146,7 +146,7 @@ export const ContactSection = () => {
               <Card className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl border border-accent/10 flex flex-col transition-shadow duration-200 hover:shadow-2xl">
                 <div className="text-center mb-4">
                   <h4 className="font-heading text-[21px] sm:text-xl md:text-2xl text-primary mb-1.5 flex items-center justify-center gap-2">
-                    <Dumbbell className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" />
+                    <Dumbbell className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" aria-hidden="true" />
                     {t.angebot?.formate?.map?.training?.title || "Personal Training"}
                   </h4>
                   <p className="text-muted-foreground text-xs sm:text-sm mb-3">

@@ -2,7 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, GraduationCap, Sparkles, Dumbbell } from "lucide-react";
 import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
 import { ThreeDBackground } from "@/components/ThreeDBackground";
 import { TextReveal } from "@/components/ui/text-reveal";
@@ -21,17 +21,12 @@ import { useLanguage } from "@/i18n";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-
-const scrollToTop = () => { window.scrollTo({ top: 0, behavior: 'smooth' }); };
+import { scrollToTop } from "@/lib/scroll";
 
 const ParallaxImageWrapper = ({ src, alt, className = "", aspectRatio = "aspect-[3/4]" }: { src: string; alt: string; className?: string; aspectRatio?: string }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], ["5%", "-5%"]);
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.08, 1, 1.08]);
   return (
-    <motion.div ref={ref} variants={imageVariants} className={`relative ${aspectRatio} rounded-2xl overflow-hidden shadow-xl`}>
-      <motion.img src={src} alt={alt} className={`w-full h-full ${className}`} style={{ y, scale }} />
+    <motion.div variants={imageVariants} className={`relative ${aspectRatio} rounded-2xl overflow-hidden shadow-xl`}>
+      <img src={src} alt={alt} className={`w-full h-full ${className}`} />
     </motion.div>
   );
 };
@@ -48,7 +43,7 @@ const UeberMich = () => {
         dateModified="2026-03-13"
       />
       <Navigation />
-      <main className="pt-20">
+      <main id="main-content" className="pt-20">
         {/* Hero */}
         <section className="relative min-h-[90vh] flex items-center pt-24 md:pt-[100px] pb-16 md:pb-32 bg-primary overflow-hidden">
           <ThreeDBackground />

@@ -6,13 +6,39 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { LanguageProvider } from "@/i18n";
-import { SmoothScroll } from "@/components/SmoothScroll";
 import { AnimatePresence } from "framer-motion";
+import { SkipToContent } from "@/components/SkipToContent";
 
 const ExternalRedirect = ({ to }: { to: string }) => {
   window.location.replace(to);
   return null;
 };
+
+const intakeRedirectTargets = {
+  de: "/de/kontakt?subject=individual-guidance",
+  en: "/en/contact?subject=individual-guidance",
+  fr: "/fr/contact?subject=individual-guidance",
+} as const;
+
+export const intakeRedirectAliases = [
+  { path: "/eingangsdiagnostik", language: "de" },
+  { path: "/Eingangsdiagnostik", language: "de" },
+  { path: "/de/eingangsdiagnostik", language: "de" },
+  { path: "/de/Eingangsdiagnostik", language: "de" },
+  { path: "/fr/eingangsdiagnostik", language: "fr" },
+  { path: "/fr/Eingangsdiagnostik", language: "fr" },
+  { path: "/en/eingangsdiagnostik", language: "en" },
+  { path: "/en/Eingangsdiagnostik", language: "en" },
+  { path: "/intake-assessment", language: "en" },
+  { path: "/en/intake-assessment", language: "en" },
+  { path: "/diagnostic-initial", language: "fr" },
+  { path: "/fr/diagnostic-initial", language: "fr" },
+] as const;
+
+export function getIntakeRedirectTarget(path: string) {
+  const match = intakeRedirectAliases.find((alias) => alias.path === path);
+  return match ? intakeRedirectTargets[match.language] : null;
+}
 
 const Index = lazy(() => import("./pages/Index"));
 const Gestalttherapie = lazy(() => import("./pages/Gestalttherapie"));
@@ -33,14 +59,11 @@ const PageLoader = () => (
   </div>
 );
 
-import { ScrollProgress } from "@/components/ui/scroll-progress";
-
 const AppRoutes = () => (
   <Suspense fallback={<PageLoader />}>
-    <SmoothScroll>
-      <ScrollProgress />
-      <AnimatePresence mode="wait">
-        <Routes>
+    <SkipToContent />
+    <AnimatePresence mode="wait">
+      <Routes>
           <Route path="/" element={<PageLoader />} />
 
           {/* German routes */}
@@ -76,9 +99,9 @@ const AppRoutes = () => (
           <Route path="/impressum" element={<Navigate to="/de/impressum" replace />} />
           <Route path="/datenschutz" element={<Navigate to="/de/datenschutz" replace />} />
 
-          {/* Anamnese External Redirects */}
-          {["/eingangsdiagnostik", "/Eingangsdiagnostik", "/de/eingangsdiagnostik", "/de/Eingangsdiagnostik", "/fr/eingangsdiagnostik", "/fr/Eingangsdiagnostik", "/en/eingangsdiagnostik", "/en/Eingangsdiagnostik", "/intake-assessment", "/en/intake-assessment", "/diagnostic-initial", "/fr/diagnostic-initial"].map(p => (
-            <Route key={p} path={p} element={<ExternalRedirect to="/Anamnese" />} />
+          {/* Intake aliases route into the existing localized contact funnel. */}
+          {intakeRedirectAliases.map(({ path }) => (
+            <Route key={path} path={path} element={<ExternalRedirect to={getIntakeRedirectTarget(path) ?? intakeRedirectTargets.de} />} />
           ))}
 
           {/* Legal Pages (DE) */}
@@ -94,9 +117,8 @@ const AppRoutes = () => (
           <Route path="/fr/politique-confidentialite" element={<Datenschutz />} />
 
           <Route path="*" element={<NotFound />} />
-        </Routes>
-      </AnimatePresence>
-    </SmoothScroll>
+      </Routes>
+    </AnimatePresence>
   </Suspense>
 );
 

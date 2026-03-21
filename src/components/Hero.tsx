@@ -45,25 +45,45 @@ export const Hero = () => {
       <ThreeDBackground className="absolute inset-0 z-[1] opacity-35 md:opacity-50 transition-opacity duration-1000" />
 
       {/* Logo – centered at the split between panels */}
-      <div className="absolute inset-0 z-50 flex items-center justify-center pointer-events-none">
+      <div className="pointer-events-none absolute left-1/2 top-1/2 z-50 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center md:top-6 md:-translate-y-0 lg:top-8">
         <motion.div
           initial={{ opacity: 0, scale: 0.6 }}
             animate={{
               opacity: isRevealed ? 1 : 0,
-              scale: isRevealed ? 1 : 0.6,
+              scale: isRevealed ? (!isMobile && effectivePanel ? 1.06 : 1) : 0.6,
               y: 0,
             }}
             transition={{
               opacity: { duration: shouldReduceMotion ? 0 : 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] },
-              scale: { duration: shouldReduceMotion ? 0 : 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] },
+              scale: { duration: shouldReduceMotion ? 0 : 0.45, delay: 0.3, ease: [0.16, 1, 0.3, 1] },
               y: { duration: shouldReduceMotion ? 0 : 0.8, ease: [0.22, 1, 0.36, 1] },
             }}
           >
           <div className="relative">
-            <motion.div 
-              className="absolute inset-0 bg-gold-accent/50 rounded-full blur-3xl"
-              animate={shouldReduceMotion ? { opacity: 0.4 } : { scale: [1, 1.3, 1], opacity: [0.4, 0.7, 0.4] }}
-              transition={{ duration: 5, repeat: shouldReduceMotion ? 0 : Infinity, ease: "easeInOut" }}
+            <motion.div
+              className="absolute inset-0 rounded-full bg-white/20 blur-3xl"
+              animate={
+                shouldReduceMotion
+                  ? { opacity: effectivePanel ? 0.55 : 0.35, scale: effectivePanel ? 1.2 : 1.05 }
+                  : { opacity: effectivePanel ? 0.55 : 0.3, scale: effectivePanel ? 1.28 : [1, 1.12, 1] }
+              }
+              transition={{ duration: shouldReduceMotion ? 0 : 4.5, repeat: shouldReduceMotion || effectivePanel ? 0 : Infinity, ease: "easeInOut" }}
+            />
+            <motion.div
+              className="absolute inset-0 rounded-full bg-gold-accent/60 blur-3xl"
+              animate={{
+                opacity: effectivePanel === 'left' ? 0.9 : 0.25,
+                scale: effectivePanel === 'left' ? 1.45 : 1.05,
+              }}
+              transition={{ duration: shouldReduceMotion ? 0 : 0.35, ease: "easeOut" }}
+            />
+            <motion.div
+              className="absolute inset-0 rounded-full bg-red-accent/60 blur-3xl"
+              animate={{
+                opacity: effectivePanel === 'right' ? 0.9 : 0,
+                scale: effectivePanel === 'right' ? 1.45 : 1.05,
+              }}
+              transition={{ duration: shouldReduceMotion ? 0 : 0.35, ease: "easeOut" }}
             />
             <img src={logo} alt={t.ui.logoAlt} className="relative z-10 w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain drop-shadow-[0_0_20px_rgba(0,0,0,0.9)]" />
           </div>
@@ -145,7 +165,13 @@ export const Hero = () => {
           animate={{ scale: effectivePanel === 'right' ? 1.08 : 1 }}
           transition={{ duration: 8, ease: "easeOut" }}
         >
-          <img src={trainingImage} alt={t.nav.personalTraining} className="w-full h-full object-cover object-[center_30%] opacity-55 md:opacity-70 transition-opacity duration-700" loading="eager" />
+          <img
+            src={trainingImage}
+            alt={t.nav.personalTraining}
+            className="w-full h-full object-cover opacity-55 md:opacity-70 transition-opacity duration-700"
+            style={{ objectPosition: "calc(50% - 50px) 30%" }}
+            loading="eager"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/60" />
           <motion.div
             className="absolute inset-0 bg-gradient-to-bl from-destructive/10 to-transparent"

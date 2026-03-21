@@ -13,3 +13,26 @@ Object.defineProperty(window, "matchMedia", {
     dispatchEvent: () => {},
   }),
 });
+
+class IntersectionObserverMock {
+  observe() {
+    return null;
+  }
+  unobserve() {
+    return null;
+  }
+  disconnect() {
+    return null;
+  }
+  takeRecords() {
+    return [];
+  }
+}
+
+Object.defineProperty(window, "IntersectionObserver", {
+  writable: true,
+  value: IntersectionObserverMock,
+});
+
+// @ts-expect-error jsdom global
+global.IntersectionObserver = IntersectionObserverMock;

@@ -18,10 +18,7 @@ import johannesCoachingTalk from "@/assets/johannes-coaching-talk.webp";
 import johannesMeet from "@/assets/johannes-meet.webp";
 import johannesCoachingNew from "@/assets/johannes-coaching-new.webp";
 import johannesPortrait from "@/assets/johannes-hero-portrait.webp";
-
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-};
+import { scrollToTop } from "@/lib/scroll";
 
 const Gestalttherapie = () => {
   const { t, getLocalizedPath } = useLanguage();
@@ -43,7 +40,7 @@ const Gestalttherapie = () => {
         dateModified="2026-03-13"
       />
       <Navigation />
-      <main>
+      <main id="main-content">
         {/* 1. Hero */}
         <section className="relative min-h-[100svh] md:min-h-[85vh] flex items-center justify-center overflow-hidden pt-20">
           <div className="absolute inset-0 bg-primary/90">

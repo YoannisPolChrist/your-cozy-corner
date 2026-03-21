@@ -19,6 +19,9 @@ import {
   isContactSubjectId,
   submitContactForm,
 } from "@/lib/contact";
+import { fieldOrder, type ContactField, type ContactValidationErrorMap, validateContactForm } from "@/lib/contactSchema";
+import { useCallback, useRef } from "react";
+import { scrollNodeIntoView } from "@/lib/scroll";
 
 const initialFormData = {
   name: "",
@@ -35,6 +38,14 @@ const Kontakt = () => {
   const [formData, setFormData] = useState(initialFormData);
   const [status, setStatus] = useState<"idle" | "submitting">("idle");
   const [lastPrefill, setLastPrefill] = useState("");
+  const [errors, setErrors] = useState<Partial<Record<ContactField, string>>>({});
+  const fieldRefs = useRef<Record<ContactField, HTMLInputElement | HTMLTextAreaElement | null>>({
+    name: null,
+    email: null,
+    phone: null,
+    message: null,
+    website: null,
+  });
 
   const homeLabel = t.nav.home || (t.shared?.homeLabel ?? "Home");
   const subjectId = useMemo(() => {
@@ -60,21 +71,68 @@ const Kontakt = () => {
     setLastPrefill(nextPrefill);
   }, [lastPrefill, subjectId, t]);
 
+  const inlineErrorMessages = t.kontakt.form.inlineErrors || {};
+
+  const resolveInlineError = useCallback(
+    (key?: string) => {
+      if (!key) {
+        return inlineErrorMessages.generic || "";
+      }
+      return inlineErrorMessages[key as keyof typeof inlineErrorMessages] || inlineErrorMessages.generic || "";
+    },
+    [inlineErrorMessages],
+  );
+
+  const focusFirstError = useCallback((errorMap: Partial<Record<ContactField, string>>) => {
+    for (const field of fieldOrder) {
+      if (errorMap[field]) {
+        const node = fieldRefs.current[field];
+        if (node) {
+          node.focus();
+          scrollNodeIntoView(node, { block: "center" });
+        }
+        break;
+      }
+    }
+  }, []);
+
+  const handleInputChange = (field: keyof typeof formData) => (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const value = event.target.value;
+    setFormData((current) => ({ ...current, [field]: value }));
+    if (errors[field as ContactField]) {
+      setErrors((current) => {
+        const next = { ...current };
+        next[field as ContactField] = undefined;
+        return next;
+      });
+    }
+  };
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setStatus("submitting");
 
+    const validationInput = {
+      ...formData,
+      language,
+      sourcePage: location.pathname,
+      subject: subjectId ? getLocalizedSubjectLabel(t, subjectId) : undefined,
+    };
+
+    const validation = validateContactForm(validationInput);
+    if (!validation.success) {
+      const localizedErrors = Object.entries(validation.errors).reduce((acc, [field, code]) => {
+        acc[field as ContactField] = resolveInlineError(code);
+        return acc;
+      }, {} as Partial<Record<ContactField, string>>);
+      setErrors(localizedErrors);
+      focusFirstError(localizedErrors);
+      setStatus("idle");
+      return;
+    }
+
     try {
-      await submitContactForm({
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone || undefined,
-        message: formData.message,
-        language,
-        sourcePage: location.pathname,
-        subject: subjectId ? getLocalizedSubjectLabel(t, subjectId) : undefined,
-        website: formData.website,
-      });
+      await submitContactForm(validation.data);
 
       toast({
         title: t.kontakt.form.successTitle,
@@ -84,8 +142,19 @@ const Kontakt = () => {
       const resetPrefill = subjectId ? buildContactPrefill(t, subjectId) : "";
       setLastPrefill(resetPrefill);
       setFormData({ ...initialFormData, message: resetPrefill });
+      setErrors({});
     } catch (error) {
       const errorCode = typeof error === "object" && error && "code" in error ? String(error.code) : "";
+      const errorField = typeof error === "object" && error && "field" in error ? String(error.field) : "";
+
+      if (errorField) {
+        const mappedField = errorField as ContactField;
+        const inlineMessage = resolveInlineError();
+        const nextErrors: Partial<Record<ContactField, string>> = { [mappedField]: inlineMessage };
+        setErrors((current) => ({ ...current, ...nextErrors }));
+        focusFirstError(nextErrors);
+      }
+
       const errorMessage =
         errorCode === "invalid-payload"
           ? t.kontakt.form.errors.invalidPayload
@@ -118,7 +187,7 @@ const Kontakt = () => {
         dateModified="2026-03-13"
       />
       <Navigation />
-      <main className="pt-20">
+      <main id="main-content" className="pt-20">
         <motion.section initial="hidden" whileInView="visible" viewport={viewportSettings} variants={staggerContainer} className="pt-20 pb-8 bg-off-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
@@ -136,26 +205,110 @@ const Kontakt = () => {
                   <motion.div variants={cardItem}>
                     <Card className="p-8 shadow-soft">
                       <h2 className="typ-h3 mb-6 text-primary">{t.kontakt.form.title}</h2>
-                      <form onSubmit={handleSubmit} className="space-y-6" aria-busy={status === "submitting"}>
+                      <form onSubmit={handleSubmit} className="space-y-6" aria-busy={status === "submitting"} noValidate>
                         <div className="space-y-2">
                           <Label htmlFor="name">{t.kontakt.form.name}</Label>
-                          <Input id="name" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required className="transition-all focus:ring-2 focus:ring-primary" />
+                          <Input
+                            id="name"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleInputChange("name")}
+                            required
+                            ref={(node) => {
+                              fieldRefs.current.name = node;
+                            }}
+                            autoComplete="name"
+                            aria-invalid={Boolean(errors.name)}
+                            aria-describedby={errors.name ? "contact-name-error" : undefined}
+                            className="transition-all focus:ring-2 focus:ring-primary"
+                          />
+                          {errors.name && (
+                            <p id="contact-name-error" className="text-sm text-destructive" role="alert">
+                              {errors.name}
+                            </p>
+                          )}
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="email">{t.kontakt.form.email}</Label>
-                          <Input id="email" type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} required className="transition-all focus:ring-2 focus:ring-primary" />
+                          <Input
+                            id="email"
+                            name="email"
+                            type="email"
+                            value={formData.email}
+                            onChange={handleInputChange("email")}
+                            required
+                            ref={(node) => {
+                              fieldRefs.current.email = node;
+                            }}
+                            autoComplete="email"
+                            aria-invalid={Boolean(errors.email)}
+                            aria-describedby={errors.email ? "contact-email-error" : undefined}
+                            className="transition-all focus:ring-2 focus:ring-primary"
+                          />
+                          {errors.email && (
+                            <p id="contact-email-error" className="text-sm text-destructive" role="alert">
+                              {errors.email}
+                            </p>
+                          )}
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="phone">{t.kontakt.form.phone}</Label>
-                          <Input id="phone" type="tel" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} className="transition-all focus:ring-2 focus:ring-primary" />
+                          <Input
+                            id="phone"
+                            name="phone"
+                            type="tel"
+                            value={formData.phone}
+                            onChange={handleInputChange("phone")}
+                            ref={(node) => {
+                              fieldRefs.current.phone = node;
+                            }}
+                            autoComplete="tel"
+                            aria-invalid={Boolean(errors.phone)}
+                            aria-describedby={errors.phone ? "contact-phone-error" : undefined}
+                            className="transition-all focus:ring-2 focus:ring-primary"
+                          />
+                          {errors.phone && (
+                            <p id="contact-phone-error" className="text-sm text-destructive" role="alert">
+                              {errors.phone}
+                            </p>
+                          )}
                         </div>
                         <div className="space-y-2 sr-only" aria-hidden="true">
                           <Label htmlFor="website">{t.kontakt.form.honeypot}</Label>
-                          <Input id="website" name="website" value={formData.website} onChange={(e) => setFormData({ ...formData, website: e.target.value })} autoComplete="off" tabIndex={-1} />
+                          <Input
+                            id="website"
+                            name="website"
+                            value={formData.website}
+                            onChange={handleInputChange("website")}
+                            autoComplete="off"
+                            tabIndex={-1}
+                            ref={(node) => {
+                              fieldRefs.current.website = node;
+                            }}
+                          />
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="message">{t.kontakt.form.message}</Label>
-                          <Textarea id="message" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} required rows={5} placeholder={t.kontakt.form.messagePlaceholder} className="transition-all focus:ring-2 focus:ring-primary resize-none" />
+                          <Textarea
+                            id="message"
+                            name="message"
+                            value={formData.message}
+                            onChange={handleInputChange("message")}
+                            required
+                            rows={5}
+                            placeholder={t.kontakt.form.messagePlaceholder}
+                            ref={(node) => {
+                              fieldRefs.current.message = node;
+                            }}
+                            aria-invalid={Boolean(errors.message)}
+                            aria-describedby={errors.message ? "contact-message-error" : undefined}
+                            className="transition-all focus:ring-2 focus:ring-primary resize-none"
+                          />
+                          {errors.message && (
+                            <p id="contact-message-error" className="text-sm text-destructive" role="alert">
+                              {errors.message}
+                            </p>
+                          )}
                         </div>
                         <Button type="submit" variant="gold" size="lg" className="w-full font-semibold" disabled={status === "submitting"}>
                           {status === "submitting" ? t.kontakt.form.submitting : t.kontakt.form.submit}
@@ -180,17 +333,42 @@ const Kontakt = () => {
                     <Card className="p-8 bg-gradient-teal text-white">
                       <h2 className="font-heading text-2xl mb-6">{t.kontakt.info.title}</h2>
                       <div className="space-y-6">
-                        <div className="flex items-start gap-4"><MapPin className="w-6 h-6 flex-shrink-0 mt-1" /><div><p className="font-semibold mb-1">{t.kontakt.info.standort}</p><p>{t.kontakt.info.locationValue}</p></div></div>
-                        <div className="flex items-start gap-4"><Phone className="w-6 h-6 flex-shrink-0 mt-1" /><div><p className="font-semibold mb-1">{t.kontakt.info.telefon}</p><a href="tel:+491621709979" className="hover:underline">+49 162 170 9979</a></div></div>
-                        <div className="flex items-start gap-4"><Mail className="w-6 h-6 flex-shrink-0 mt-1" /><div><p className="font-semibold mb-1">{t.kontakt.info.email}</p><a href="mailto:contact@johanneschrist.com" className="break-all hover:underline">contact@johanneschrist.com</a></div></div>
-                        <div className="flex items-start gap-4"><Clock className="w-6 h-6 flex-shrink-0 mt-1" /><div><p className="font-semibold mb-1">{t.kontakt.info.erreichbarkeit}</p><p>{t.kontakt.info.erreichbarkeitZeiten}</p><p className="text-white/80 text-sm">{t.kontakt.info.erreichbarkeitTermine}</p></div></div>
+                        <div className="flex items-start gap-4">
+                          <MapPin className="w-6 h-6 flex-shrink-0 mt-1" aria-hidden="true" />
+                          <div>
+                            <p className="font-semibold mb-1">{t.kontakt.info.standort}</p>
+                            <p>{t.kontakt.info.locationValue}</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-4">
+                          <Phone className="w-6 h-6 flex-shrink-0 mt-1" aria-hidden="true" />
+                          <div>
+                            <p className="font-semibold mb-1">{t.kontakt.info.telefon}</p>
+                            <a href="tel:+491621709979" className="hover:underline">+49 162 170 9979</a>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-4">
+                          <Mail className="w-6 h-6 flex-shrink-0 mt-1" aria-hidden="true" />
+                          <div>
+                            <p className="font-semibold mb-1">{t.kontakt.info.email}</p>
+                            <a href="mailto:contact@johanneschrist.com" className="break-all hover:underline">contact@johanneschrist.com</a>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-4">
+                          <Clock className="w-6 h-6 flex-shrink-0 mt-1" aria-hidden="true" />
+                          <div>
+                            <p className="font-semibold mb-1">{t.kontakt.info.erreichbarkeit}</p>
+                            <p>{t.kontakt.info.erreichbarkeitZeiten}</p>
+                            <p className="text-white/80 text-sm">{t.kontakt.info.erreichbarkeitTermine}</p>
+                          </div>
+                        </div>
                       </div>
                     </Card>
                   </motion.div>
                   <motion.div variants={cardItem}>
                     <Card className="bg-white rounded-2xl p-4 sm:p-6 shadow-xl border border-accent/10">
                       <div className="text-center mb-4">
-                        <h4 className="font-heading text-xl text-primary mb-1.5 flex items-center justify-center gap-2"><Brain className="w-5 h-5 text-accent" />{t.angebot.formate.map.therapie.title}</h4>
+                        <h4 className="font-heading text-xl text-primary mb-1.5 flex items-center justify-center gap-2"><Brain className="w-5 h-5 text-accent" aria-hidden="true" />{t.angebot.formate.map.therapie.title}</h4>
                         <div className="inline-block px-3 py-1.5 bg-accent/10 text-accent font-medium text-xs rounded-lg mb-4">{t.gestalttherapie.location?.description}</div>
                       </div>
                       <div className="w-full h-[200px] rounded-xl overflow-hidden shadow-inner border border-accent/20">
@@ -201,7 +379,7 @@ const Kontakt = () => {
                   <motion.div variants={cardItem}>
                     <Card className="bg-white rounded-2xl p-4 sm:p-6 shadow-xl border border-accent/10">
                       <div className="text-center mb-4">
-                        <h4 className="font-heading text-xl text-primary mb-1.5 flex items-center justify-center gap-2"><Dumbbell className="w-5 h-5 text-accent" />{t.angebot.formate.map.training.title}</h4>
+                        <h4 className="font-heading text-xl text-primary mb-1.5 flex items-center justify-center gap-2"><Dumbbell className="w-5 h-5 text-accent" aria-hidden="true" />{t.angebot.formate.map.training.title}</h4>
                         <div className="inline-block px-3 py-1.5 bg-accent/10 text-accent font-medium text-xs rounded-lg mb-4">{t.personalTraining.location.city}</div>
                       </div>
                       <div className="w-full h-[200px] rounded-xl overflow-hidden shadow-inner border border-accent/20">

@@ -12,6 +12,7 @@ import { GestaltScrollTelling } from "@/components/GestaltScrollTelling";
 import { useLanguage } from "@/i18n";
 import { TiltCard } from "@/components/ui/tilt-card";
 import { SEO } from "@/components/SEO";
+import { scrollToId, scrollToTop } from "@/lib/scroll";
 
 const MyWork = () => {
   const { t, getLocalizedPath, language } = useLanguage();
@@ -20,8 +21,7 @@ const MyWork = () => {
 
   useEffect(() => {
     if (location.hash) {
-      const element = document.getElementById(location.hash.slice(1));
-      if (element) { setTimeout(() => { element.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100); }
+      scrollToId(location.hash);
     }
   }, [location.hash]);
 
@@ -30,8 +30,7 @@ const MyWork = () => {
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
-    const element = document.getElementById(targetId);
-    if (element) { element.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    scrollToId(targetId);
   };
 
   const contactCycleImages: Record<string, string> = {
@@ -50,7 +49,7 @@ const MyWork = () => {
     <div className="min-h-screen bg-background overflow-x-clip">
       <SEO title={t.seo?.myWork.title} description={t.seo?.myWork.description} keywords={t.seo?.myWork.keywords} breadcrumbs={[{ name: homeLabel, url: `/${language}` }, { name: t.nav.approach, url: getLocalizedPath('/ansatz') }]} dateModified="2026-02-25" />
       <Navigation />
-      <main className="pt-24 overflow-x-clip">
+      <main id="main-content" className="pt-24 overflow-x-clip">
         {/* Hero */}
         <section className="py-10 sm:py-12 md:py-20 bg-off-white overflow-x-clip">
           <div className="container mx-auto px-4 text-center">
@@ -303,7 +302,7 @@ const MyWork = () => {
               <AnimatedItem><h2 className="font-heading text-2xl md:text-4xl mb-4 md:mb-8 text-white">{t.myWork?.cta?.title || t.gestalttherapie.cta.title}</h2></AnimatedItem>
               <AnimatedItem><p className="text-white/85 text-base md:text-lg mb-6 md:mb-10">{t.myWork?.cta?.description || t.gestalttherapie.cta.description}</p></AnimatedItem>
               <AnimatedItem>
-                <Link to={getLocalizedPath('/angebot')} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                <Link to={getLocalizedPath('/angebot')} onClick={scrollToTop}>
                   <div className="relative inline-block group mt-2">
                     <motion.div className="absolute -inset-1 rounded-full bg-gold-accent opacity-20 blur-lg group-hover:opacity-40 transition-opacity duration-700 pointer-events-none" animate={{ scale: [1, 1.05, 1], opacity: [0.15, 0.35, 0.15] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} />
                     <Button variant="gold" size="lg" className="font-semibold relative z-10 transition-transform duration-300 hover:scale-[1.02]">

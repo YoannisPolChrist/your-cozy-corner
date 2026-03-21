@@ -4,44 +4,11 @@ import { AnimatedSection, StaggerContainer, AnimatedItem } from "@/components/An
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Brain, Dumbbell } from "lucide-react";
 import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 import { goldFrameVariants, imageVariants, viewportSettings } from "@/lib/animations";
 import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/i18n";
 import { SEO } from "@/components/SEO";
 import { AnimatedDivider } from "@/components/AnimatedDivider";
-
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-};
-
-const AboutParallaxImage = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"]
-  });
-  const y = useTransform(scrollYProgress, [0, 1], ["5%", "-5%"]);
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.08, 1, 1.08]);
-  return (
-    <motion.div ref={ref} initial="hidden" whileInView="visible" viewport={viewportSettings} className="relative order-2 md:order-1">
-      <motion.div variants={goldFrameVariants} className="absolute bottom-[-10px] right-[-10px] md:bottom-[-20px] md:right-[-20px] w-full h-full bg-accent rounded-2xl" />
-      <div className="relative z-10 overflow-hidden rounded-2xl shadow-xl aspect-[4/5]">
-        <motion.div
-          animate={{ scale: [1, 1.05, 1] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="w-full h-full"
-        >
-          <motion.img variants={imageVariants} alt="Johannes Christ - Gestalttherapeut und Coach" className="w-full h-full object-cover object-center" style={{ y, scale }} width={528} height={683} loading="lazy" decoding="async" src="/assets/images/e688c494-51b1-4167-a52c-840cab4d93c5.webp" />
-        </motion.div>
-      </div>
-    </motion.div>
-  );
-};
 
 const Index = () => {
   const { t, getLocalizedPath, language } = useLanguage();

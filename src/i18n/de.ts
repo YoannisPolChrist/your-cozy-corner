@@ -60,6 +60,7 @@ export const de: Translations = {
     menuOpen: 'Menü öffnen',
     languageMenuLabel: 'Sprache wählen',
     switchLanguagePrefix: 'Wechseln zu',
+    skipToContent: 'Zum Hauptinhalt springen',
     logoAlt: 'Johannes Christ Logo',
     therapyMapTitle: 'Karte Praxis Gestalttherapie',
     trainingMapTitle: 'Karte Personal Training',
@@ -368,6 +369,19 @@ export const de: Translations = {
       successTitle: 'Nachricht gesendet',
       successMessage: 'Vielen Dank für deine Nachricht. Ich melde mich bald bei dir.',
       errorTitle: 'Nachricht konnte nicht gesendet werden',
+      inlineErrors: {
+        nameRequired: 'Bitte gib deinen Namen ein.',
+        nameTooLong: 'Der Name ist zu lang.',
+        emailRequired: 'Bitte gib deine E-Mail-Adresse an.',
+        emailInvalid: 'Bitte verwende eine gültige E-Mail-Adresse.',
+        emailTooLong: 'Die E-Mail-Adresse ist zu lang.',
+        phoneInvalid: 'Bitte nutze nur Zahlen, Leerzeichen oder + in der Telefonnummer.',
+        phoneTooLong: 'Die Telefonnummer ist zu lang.',
+        messageTooShort: 'Bitte beschreibe dein Anliegen etwas ausführlicher.',
+        messageTooLong: 'Deine Nachricht ist ungewöhnlich lang. Kürze sie bitte etwas.',
+        honeypot: 'Dieses Feld muss leer bleiben.',
+        generic: 'Bitte prüfe dieses Feld.',
+      },
       errors: {
         generic: 'Bitte versuche es gleich noch einmal oder schreibe mir direkt per E-Mail.',
         invalidPayload: 'Bitte prüfe deine Eingaben und ergänze die fehlenden Informationen.',
@@ -449,6 +463,7 @@ export const de: Translations = {
     ],
     personalTraining: [
       { text: 'Johannes schafft es durch seine offene, humorvolle und empathische Art individuell auf seine Klienten einzugehen und nicht nur ein sehr abwechslungsreiches sondern auch unterhaltsames Training zu gestalten. Ein Training bei Johannes macht immer Spaß und durch sein Knowhow schafft er es einen guten Trainingsfortschritt zu ermöglichen. Durch seine einzigartige Lache schafft er es, einem ein Lächeln ins Gesicht zu zaubern auch wenn der Tag nicht besonders war. Kurz gesagt, Trainings mit Johannes sind ein absoluter Energiespender.', name: 'Sascha', role: 'Personal Training Klient', imageId: 'sascha' },
+      { text: 'Als ich nicht wusste, wie ich nach längeren gesundheitlichen Problemen wieder in den Sport finden soll, hat Johannes mir geholfen, wieder Freude am Training und Sport zu finden. Das Training war von Anfang an genau auf mich abgestimmt und Johannes hat unendlich viel Leichtigkeit und Freude reingebracht. Schon nach wenigen Wochen habe ich deutliche Fortschritte gespürt, und vor allem habe ich wieder Spaß am Training und dem Trailrunning gefunden. Das Personal Training war rückblickend die beste Entscheidung für mich und ich kann Johannes wirklich aus voller Überzeugung weiterempfehlen.', name: 'Deniz', role: 'Personal Training Klientin', imageId: 'deniz' },
     ],
   },
   legal: {

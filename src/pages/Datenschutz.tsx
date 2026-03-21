@@ -17,7 +17,7 @@ const Datenschutz = () => {
                 dateModified="2026-03-13"
             />
             <Navigation />
-            <main className="pt-24 pb-16 container mx-auto px-4 max-w-4xl">
+            <main id="main-content" className="pt-24 pb-16 container mx-auto px-4 max-w-4xl">
                 <header className="mb-12 border-b border-primary/10 pb-8">
                     <h1 className="typ-h1 text-primary mb-4">{t.legal?.datenschutz?.title}</h1>
                 </header>

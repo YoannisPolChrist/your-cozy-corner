@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Dumbbell, Heart, Target, MapPin, Award, CheckCircle, Brain, BatteryWarning, ShieldAlert, Activity, Flame } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/i18n";
 import { TextReveal } from "@/components/ui/text-reveal";
@@ -16,10 +17,40 @@ import johannesBodywork1 from "@/assets/johannes-bodywork-new-1.jpg";
 import johannesBodywork2 from "@/assets/johannes-bodywork-new-2.jpg";
 import saschaImage from "@/assets/sascha-testimonial.jpeg";
 import { SEO } from "@/components/SEO";
+import { scrollToTop } from "@/lib/scroll";
 
 const profileImages: Record<string, string> = { sascha: saschaImage };
 
-const scrollToTop = () => { window.scrollTo({ top: 0, behavior: 'smooth' }); };
+const TestimonialAvatar = ({ imageId, name }: { imageId?: string; name: string }) => {
+  const candidates = imageId
+    ? [
+        profileImages[imageId],
+        `/testimonials/${imageId}.jpg`,
+        `/testimonials/${imageId}.jpeg`,
+        `/testimonials/${imageId}.png`,
+        `/testimonials/${imageId}.webp`,
+      ].filter(Boolean) as string[]
+    : [];
+  const [imageIndex, setImageIndex] = useState(0);
+  const src = candidates[imageIndex];
+
+  if (!src) {
+    return (
+      <div className="w-12 h-12 rounded-full bg-red-accent/10 flex items-center justify-center flex-shrink-0">
+        <span className="text-red-accent font-bold text-lg">{name.charAt(0)}</span>
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={src}
+      alt={name}
+      className="w-12 h-12 rounded-full object-cover flex-shrink-0"
+      onError={() => setImageIndex((current) => current + 1)}
+    />
+  );
+};
 
 const PersonalTraining = () => {
   const { t, getLocalizedPath } = useLanguage();
@@ -37,19 +68,20 @@ const PersonalTraining = () => {
           { name: homeLabel, url: getLocalizedPath("/") },
           { name: t.nav.personalTraining, url: getLocalizedPath("/personal-training") },
         ]}
-        dateModified="2026-03-13"
+        dateModified="2026-03-20"
       />
       <Navigation />
-      <main>
+      <main id="main-content">
         {/* 1. Hero */}
-        <section className="relative min-h-[100svh] md:min-h-[85vh] lg:min-h-[70vh] flex flex-col items-center justify-center overflow-hidden pt-20">
+        <section className="relative min-h-[100svh] md:min-h-[85vh] lg:min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
           <div className="absolute inset-0 bg-primary">
             <img
               src="/PT_Header.jpg"
               alt={t.personalTraining.hero.title}
               loading="eager"
               fetchPriority="high"
-              className="w-full h-full object-cover object-[center_45%] md:object-[center_35%] opacity-80 scale-[1.25]"
+              className="w-full h-full object-cover opacity-80 scale-[1.25]"
+              style={{ objectPosition: "calc(50% - 25px) 35%" }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent mix-blend-multiply opacity-70" />
           </div>
@@ -60,21 +92,24 @@ const PersonalTraining = () => {
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} className="max-w-4xl mx-auto text-center">
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
-                <MapPin className="w-4 h-4 text-red-accent" /><span className="text-white/90 text-sm font-medium">{t.personalTraining.hero.badge ?? t.personalTraining.location.city}</span>
+              <TextReveal text={t.personalTraining.hero.title} className="typ-h1 text-white mb-4" delay={0.2} />
+              <p className="typ-lead text-white/85 max-w-2xl mx-auto mb-6">{t.personalTraining.hero.subtitle}</p>
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
+                <MapPin className="w-4 h-4 text-gold-accent" />
+                <span className="text-white/90 text-sm font-medium">{t.personalTraining.hero.badge ?? t.personalTraining.location.city}</span>
               </motion.div>
-              <TextReveal text={t.personalTraining.hero.title} className="typ-h1 text-white mb-6" delay={0.4} />
-              <p className="typ-lead text-white/85 max-w-2xl mx-auto mb-10">{t.personalTraining.hero.subtitle}</p>
-              <Link to={getLocalizedPath('/kontakt')} onClick={scrollToTop}>
-                <MagneticButton strength={0.3}>
-                  <div className="relative inline-block group mt-2">
-                    <motion.div className="absolute -inset-1 rounded-full bg-red-accent opacity-20 blur-lg group-hover:opacity-40 transition-opacity duration-700 pointer-events-none" animate={{ scale: [1, 1.05, 1], opacity: [0.15, 0.35, 0.15] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} />
-                    <Button variant="red" size="lg" className="font-semibold text-lg px-8 relative z-10 transition-transform duration-300 hover:scale-[1.02]">
-                      {t.personalTraining.hero.cta} <ArrowRight className="ml-2 h-5 w-5" />
-                    </Button>
-                  </div>
-                </MagneticButton>
-              </Link>
+              <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.4 }} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Link to={getLocalizedPath('/kontakt')} onClick={scrollToTop}>
+                  <MagneticButton strength={0.3}>
+                    <div className="relative inline-block group mt-2">
+                      <motion.div className="absolute -inset-1 rounded-full bg-red-accent opacity-20 blur-lg group-hover:opacity-40 transition-opacity duration-700 pointer-events-none" animate={{ scale: [1, 1.05, 1], opacity: [0.15, 0.35, 0.15] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} />
+                      <Button variant="red" size="lg" className="font-semibold text-lg px-8 relative z-10 transition-transform duration-300 hover:scale-[1.02]">
+                        {t.personalTraining.hero.cta} <ArrowRight className="ml-2 h-5 w-5" />
+                      </Button>
+                    </div>
+                  </MagneticButton>
+                </Link>
+              </motion.div>
             </motion.div>
           </div>
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-off-white to-transparent" />
@@ -193,13 +228,7 @@ const PersonalTraining = () => {
                   <Card className="p-8 bg-white shadow-soft border-none h-full flex flex-col">
                     <p className="text-lg text-primary italic leading-relaxed mb-8 flex-grow">"{testimonial.text}"</p>
                     <div className="mt-auto flex items-center gap-4">
-                      {testimonial.imageId && profileImages[testimonial.imageId] ? (
-                        <img src={profileImages[testimonial.imageId]} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover flex-shrink-0" />
-                      ) : (
-                        <div className="w-12 h-12 rounded-full bg-red-accent/10 flex items-center justify-center flex-shrink-0">
-                          <span className="text-red-accent font-bold text-lg">{testimonial.name.charAt(0)}</span>
-                        </div>
-                      )}
+                      <TestimonialAvatar imageId={testimonial.imageId} name={testimonial.name} />
                       <div>
                         <p className="font-semibold text-primary">{testimonial.name}</p>
                         <p className="text-sm text-muted-foreground">{testimonial.role}</p>

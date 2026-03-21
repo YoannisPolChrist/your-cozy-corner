@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo.webp";
 import { useLanguage } from "@/i18n";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { scrollToTop } from "@/lib/scroll";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +37,6 @@ export const Navigation = () => {
     return currentPath === localizedPath || currentPath.includes(`/${to}`);
   };
 
-  const scrollToTop = () => { window.scrollTo({ top: 0, behavior: 'smooth' }); };
   const handleNavClick = () => { scrollToTop(); setIsOpen(false); };
 
   const navLinks = [

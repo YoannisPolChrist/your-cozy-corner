@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import { ThreeDIcon } from "@/components/ui/three-d-icon";
 import { SEO } from "@/components/SEO";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { scrollToId, scrollToTop } from "@/lib/scroll";
 
 const Angebot = () => {
   const { t, language, getLocalizedPath } = useLanguage();
@@ -20,9 +21,7 @@ const Angebot = () => {
 
   useEffect(() => {
     if (location.hash) {
-      const id = location.hash.replace('#', '');
-      const element = document.getElementById(id);
-      if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      scrollToId(location.hash);
     }
   }, [location.hash, location.pathname]);
 
@@ -30,7 +29,7 @@ const Angebot = () => {
     <div className="min-h-screen bg-background overflow-x-clip">
       <SEO title={t.seo?.angebot?.title} description={t.seo?.angebot?.description} keywords={t.seo?.angebot?.keywords} faqs={t.angebot.faq.items.map(i => ({ question: i.question as string, answer: i.answer as string }))} breadcrumbs={[{ name: homeLabel, url: `/${language}` }, { name: t.nav.angebot, url: getLocalizedPath('/angebot') }]} dateModified="2026-02-25" />
       <Navigation />
-      <main className="pt-20 overflow-x-clip">
+      <main id="main-content" className="pt-20 overflow-x-clip">
         {/* Pillars */}
         <section className="pt-[68px] pb-20 bg-primary overflow-x-clip relative overflow-hidden">
           <div className="container mx-auto px-4 relative z-10">
@@ -84,7 +83,7 @@ const Angebot = () => {
                       <p className="text-accent text-sm mt-2">{t.angebot.konditionen.intensiv.discount}</p>
                     </div>
                     <p className="text-muted-foreground leading-relaxed text-center mb-8 flex-grow">{t.angebot.konditionen.intensiv.description}</p>
-                    <Link to={`${getLocalizedPath('/kontakt')}?subject=individual-guidance`} className="block mt-auto" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                    <Link to={`${getLocalizedPath('/kontakt')}?subject=individual-guidance`} className="block mt-auto" onClick={scrollToTop}>
                       <Button variant="gold" className="w-full font-semibold">{t.angebot.konditionen.intensiv.cta}</Button>
                     </Link>
                   </Card>
