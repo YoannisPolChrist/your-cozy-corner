@@ -9,31 +9,32 @@ import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/i18n";
 import { SEO } from "@/components/SEO";
 import { AnimatedDivider } from "@/components/AnimatedDivider";
+import { SITE_DOMAIN, SITE_PROFILE_IMAGE } from "@/lib/site";
 
 const Index = () => {
   const { t, getLocalizedPath, language } = useLanguage();
   const serviceIcons = [Heart, Brain, Dumbbell];
   const homeLabel = language === 'de' ? 'Startseite' : language === 'fr' ? 'Accueil' : 'Home';
-  const profileImage = "https://johanneschrist-website.web.app/assets/images/e688c494-51b1-4167-a52c-840cab4d93c5.webp";
+  const profileImage = SITE_PROFILE_IMAGE;
 
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://johanneschrist-website.web.app/#johannes",
+        "@id": `${SITE_DOMAIN}/#johannes`,
         "name": "Johannes Christ",
         "jobTitle": language === 'fr' ? "Gestalt-thérapeute & Coach" : "Gestalttherapeut & Coach",
         "image": profileImage,
-        "url": "https://johanneschrist-website.web.app",
+        "url": SITE_DOMAIN,
         "sameAs": ["https://www.linkedin.com/in/johannes-christ-57b59a203/"]
       },
       {
         "@type": language === 'fr' ? "MedicalBusiness" : "LocalBusiness",
         "name": "Johannes Christ - Gestalttherapie",
         "image": profileImage,
-        "@id": "https://johanneschrist-website.web.app",
-        "url": "https://johanneschrist-website.web.app",
+        "@id": SITE_DOMAIN,
+        "url": SITE_DOMAIN,
         "telephone": "",
         "address": { "@type": "PostalAddress", "addressLocality": "Toulouse", "addressCountry": "FR" },
         "geo": { "@type": "GeoCoordinates", "latitude": 43.6047, "longitude": 1.4442 },

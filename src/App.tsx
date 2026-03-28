@@ -3,11 +3,15 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { LanguageProvider } from "@/i18n";
 import { AnimatePresence } from "framer-motion";
 import { SkipToContent } from "@/components/SkipToContent";
+import { Button } from "@/components/ui/button";
+import { LogIn } from "lucide-react";
+import { getCompanionUrl } from "@/lib/site";
+import type { Language } from "@/i18n";
 
 const ExternalRedirect = ({ to }: { to: string }) => {
   window.location.replace(to);
@@ -58,6 +62,31 @@ const PageLoader = () => (
     <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
   </div>
 );
+
+const getLanguageFromPath = (pathname: string): Language => {
+  const match = pathname.match(/^\/(de|en|fr)(\/|$)/);
+  return (match?.[1] as Language) ?? "de";
+};
+
+const FloatingLoginButton = () => {
+  const location = useLocation();
+  const language = getLanguageFromPath(location.pathname);
+
+  return (
+    <div className="fixed top-4 right-4 z-[70]">
+      <Button
+        asChild
+        variant="gold"
+        className="h-10 rounded-full px-4 backdrop-blur-md bg-primary/85 hover:bg-primary text-white border border-white/15 shadow-lg"
+      >
+        <a href={getCompanionUrl(language)} aria-label="Kind Minds Login">
+          <LogIn className="h-4 w-4" />
+          Login
+        </a>
+      </Button>
+    </div>
+  );
+};
 
 const AppRoutes = () => (
   <Suspense fallback={<PageLoader />}>
@@ -130,6 +159,7 @@ const App = () => (
       <BrowserRouter>
         <LanguageProvider>
           <ErrorBoundary>
+            <FloatingLoginButton />
             <AppRoutes />
           </ErrorBoundary>
         </LanguageProvider>

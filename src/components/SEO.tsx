@@ -2,15 +2,16 @@ import { Helmet } from "react-helmet-async";
 import { useLanguage, routeMap, reverseRouteMap } from "@/i18n";
 import { useLocation } from "react-router-dom";
 import { Language } from "@/i18n/types";
+import { SITE_DOMAIN, SITE_PROFILE_IMAGE } from "@/lib/site";
 
 interface SEOProps { title?: string; description?: string; keywords?: string; image?: string; schema?: object; faqs?: { question: string; answer: string }[]; breadcrumbs?: { name: string; url: string }[]; dateModified?: string; }
 
 export const SEO = ({ title, description, keywords, image, schema, faqs, breadcrumbs, dateModified }: SEOProps) => {
   const { language } = useLanguage();
   const location = useLocation();
-  const domain = "https://johanneschrist-website.web.app";
+  const domain = SITE_DOMAIN;
   const baseTitle = "Johannes Christ - Gestalttherapie, Coaching & Personal Training";
-  const defaultImage = `${domain}/assets/images/e688c494-51b1-4167-a52c-840cab4d93c5.webp`;
+  const defaultImage = SITE_PROFILE_IMAGE;
   const shareImage = image ? (image.startsWith('http') ? image : `${domain}${image}`) : defaultImage;
   const fullTitle = title ? `${title} | Johannes Christ` : baseTitle;
   const metaDescription = description ?? "";

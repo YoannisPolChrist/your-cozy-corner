@@ -15,9 +15,6 @@ import { ThreeDBackground } from "@/components/ThreeDBackground";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 import { SEO } from "@/components/SEO";
 import johannesCoachingTalk from "@/assets/johannes-coaching-talk.webp";
-import johannesMeet from "@/assets/johannes-meet.webp";
-import johannesCoachingNew from "@/assets/johannes-coaching-new.webp";
-import johannesPortrait from "@/assets/johannes-hero-portrait.webp";
 import { scrollToTop } from "@/lib/scroll";
 
 const Gestalttherapie = () => {
@@ -168,8 +165,8 @@ const Gestalttherapie = () => {
         {/* 4. Approach & Qualifications */}
         <AnimatedSection className="py-24 md:py-32 bg-off-white">
           <div className="container mx-auto px-6 md:px-4">
-            <div className="max-w-5xl mx-auto">
-              <StaggerContainer className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-3xl mx-auto">
+              <StaggerContainer>
                 <AnimatedItem className="space-y-8">
                   <div>
                     <span className="text-accent text-sm uppercase tracking-[0.2em] font-medium mb-4 block">{t.gestalttherapie.approach?.label}</span>
@@ -192,18 +189,6 @@ const Gestalttherapie = () => {
                       </ul>
                     </div>
                   )}
-                </AnimatedItem>
-                <AnimatedItem className="relative w-full">
-                  <div className="grid grid-cols-2 gap-4 md:gap-6">
-                    <div className="space-y-4 md:space-y-6 pt-8 md:pt-12">
-                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesCoachingTalk} alt={t.gestalttherapie.approach?.title ?? t.nav.gestalttherapie} className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
-                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesMeet} alt={t.gestalttherapie.qualifications?.title ?? t.nav.gestalttherapie} className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
-                    </div>
-                    <div className="space-y-4 md:space-y-6">
-                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesPortrait} alt={t.nav.gestalttherapie} className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
-                      <motion.img whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }} src={johannesCoachingNew} alt={t.gestalttherapie.cta.title} className="w-full rounded-2xl shadow-lg object-cover" loading="lazy" />
-                    </div>
-                  </div>
                 </AnimatedItem>
               </StaggerContainer>
             </div>
