@@ -14,7 +14,6 @@ import { TextReveal } from "@/components/ui/text-reveal";
 import { ThreeDBackground } from "@/components/ThreeDBackground";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 import { SEO } from "@/components/SEO";
-import johannesCoachingTalk from "@/assets/johannes-coaching-talk.webp";
 import { scrollToTop } from "@/lib/scroll";
 
 const Gestalttherapie = () => {
@@ -106,12 +105,11 @@ const Gestalttherapie = () => {
         <AnimatedSection className="py-24 md:py-32 bg-gradient-to-br from-gold-accent/5 via-white to-accent/5">
           <div className="container mx-auto px-4">
 
-            <div className="max-w-6xl mx-auto flex flex-col md:grid md:grid-cols-2 md:gap-12 items-start">
-              {/* Text & Items (Left on Desktop) */}
+            <div className="max-w-4xl mx-auto">
               <motion.div
-                className="space-y-12 md:order-1 order-2 text-center md:text-left mt-12 md:mt-0"
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                className="space-y-12 text-center md:text-left"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
@@ -138,24 +136,6 @@ const Gestalttherapie = () => {
                       </div>
                     </div>
                   ))}
-                </div>
-              </motion.div>
-
-              {/* Image (Right on Desktop) */}
-              <motion.div
-                className="relative w-full max-w-sm mx-auto md:max-w-md md:order-2 order-1"
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-              >
-                <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl aspect-[2/3]">
-                  <img
-                    src={johannesCoachingTalk}
-                    alt={t.gestalttherapie.transformation?.title ?? t.nav.gestalttherapie}
-                    className="w-full h-full object-cover object-top"
-                    loading="lazy"
-                  />
                 </div>
               </motion.div>
             </div>

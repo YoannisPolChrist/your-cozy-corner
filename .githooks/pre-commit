@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+
+repo_root="$(git rev-parse --show-toplevel)"
+refresh_script="$repo_root/.agent/scripts/refresh-acceptance-review.ps1"
+gate_script="$repo_root/.agent/scripts/check-acceptance-gate.ps1"
+
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$refresh_script" -RepoPath "$repo_root" >/dev/null
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$gate_script" -RepoPath "$repo_root"

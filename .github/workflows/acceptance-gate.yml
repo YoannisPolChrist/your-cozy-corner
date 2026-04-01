@@ -1,0 +1,37 @@
+name: Acceptance Gate
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  acceptance-gate:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Refresh acceptance review
+        shell: pwsh
+        run: .\.agent\scripts\refresh-acceptance-review.ps1 -RepoPath .
+
+      - name: Enforce acceptance gate
+        shell: pwsh
+        run: .\.agent\scripts\check-acceptance-gate.ps1 -RepoPath .
+
+      - name: Check commit message reference
+        if: github.event_name == 'push'
+        shell: pwsh
+        run: |
+          $messagePath = Join-Path $PWD 'head-commit-message.txt'
+          git log -1 --pretty=%B | Set-Content -LiteralPath $messagePath -Encoding UTF8
+          .\.agent\scripts\check-acceptance-reference.ps1 -Mode commit -MessageFile $messagePath -RepoPath .
+
+      - name: Check PR acceptance reference
+        if: github.event_name == 'pull_request'
+        shell: pwsh
+        run: |
+          $event = Get-Content -LiteralPath $env:GITHUB_EVENT_PATH -Raw | ConvertFrom-Json
+          $bodyPath = Join-Path $PWD 'pull-request-body.txt'
+          ($event.pull_request.body ?? '') | Set-Content -LiteralPath $bodyPath -Encoding UTF8
+          .\.agent\scripts\check-acceptance-reference.ps1 -Mode pr -MessageFile $bodyPath -RepoPath .

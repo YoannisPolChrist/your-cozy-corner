@@ -7,7 +7,7 @@ import { useRef } from "react";
 import { ThreeDBackground } from "@/components/ThreeDBackground";
 import { TextReveal } from "@/components/ui/text-reveal";
 import johannesHeroPortrait from "@/assets/johannes-hero-portrait.webp";
-import johannesCoachingTalk from "@/assets/johannes-coaching-new.jpg";
+import johannesCoachingTalk from "@/assets/johannes-coaching-talk.webp";
 import johannesPersoenlich from "@/assets/johannes-persoenlich-neu.webp";
 import johannesSpeed from "@/assets/johannes-speed.webp";
 import johannesCyclingFriends from "@/assets/johannes-cycling-friends.webp";
@@ -116,9 +116,15 @@ const UeberMich = () => {
                 </motion.div>
 
                 {/* Image (Right on Desktop) */}
-                <motion.div className="relative w-full max-w-sm mx-auto mb-8 md:mb-0 md:order-2 order-1">
-                  <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl aspect-[2/3]">
-                    <img src={johannesCoachingTalk} alt={t.ueberMich.arbeitsweise.title} className="w-full h-full object-cover object-top" />
+                <motion.div variants={fadeUp} className="relative w-full max-w-xl mx-auto mb-8 md:mb-0 md:order-2 order-1">
+                  <div className="absolute inset-x-4 -bottom-6 top-8 rounded-[2rem] bg-gold-accent/85 shadow-[0_24px_60px_rgba(170,123,37,0.22)] md:inset-x-6 md:-left-6 md:right-10 md:top-10 md:bottom-[-1.75rem]" />
+                  <div className="relative z-10 overflow-hidden rounded-[2rem] shadow-[0_30px_70px_rgba(23,42,48,0.18)] aspect-[6/5]">
+                    <img
+                      src={johannesCoachingTalk}
+                      alt={t.ueberMich.arbeitsweise.title}
+                      className="w-full h-full object-cover object-[49%_34%]"
+                      style={{ transform: "scale(1.16)", transformOrigin: "50% 36%" }}
+                    />
                   </div>
                 </motion.div>
 

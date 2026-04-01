@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://johanneschrist.com/de</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://johanneschrist.com/de" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://johanneschrist.com/en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://johanneschrist.com/fr" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://johanneschrist.com/de" />
+  </url>
+  <url>
+    <loc>https://johanneschrist.com/de/gestalttherapie</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://johanneschrist.com/de/gestalttherapie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://johanneschrist.com/en/gestalt-therapy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://johanneschrist.com/fr/gestalt-therapie" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://johanneschrist.com/de/gestalttherapie" />
+  </url>
+  <url>
+    <loc>https://johanneschrist.com/de/ansatz</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://johanneschrist.com/de/ansatz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://johanneschrist.com/en/approach" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://johanneschrist.com/fr/approche" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://johanneschrist.com/de/ansatz" />
+  </url>
+  <url>
+    <loc>https://johanneschrist.com/de/angebot</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://johanneschrist.com/de/angebot" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://johanneschrist.com/en/services" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://johanneschrist.com/fr/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://johanneschrist.com/de/angebot" />
+  </url>
+  <url>
+    <loc>https://johanneschrist.com/de/ueber-mich</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://johanneschrist.com/de/ueber-mich" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://johanneschrist.com/en/about-me" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://johanneschrist.com/fr/a-propos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://johanneschrist.com/de/ueber-mich" />
+  </url>
+  <url>
+    <loc>https://johanneschrist.com/de/kontakt</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://johanneschrist.com/de/kontakt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://johanneschrist.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://johanneschrist.com/fr/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://johanneschrist.com/de/kontakt" />
+  </url>
+  <url>
+    <loc>https://johanneschrist.com/de/personal-training</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://johanneschrist.com/de/personal-training" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://johanneschrist.com/en/personal-training" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://johanneschrist.com/fr/coaching-sportif" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://johanneschrist.com/de/personal-training" />
+  </url>
+  <url>
+    <loc>https://johanneschrist.com/de/impressum</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://johanneschrist.com/de/impressum" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://johanneschrist.com/en/legal-notice" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://johanneschrist.com/fr/mentions-legales" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://johanneschrist.com/de/impressum" />
+  </url>
+  <url>
+    <loc>https://johanneschrist.com/de/datenschutz</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://johanneschrist.com/de/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://johanneschrist.com/en/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://johanneschrist.com/fr/politique-confidentialite" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://johanneschrist.com/de/datenschutz" />
+  </url>
+  <url>
+    <loc>https://johanneschrist.com/de/anamnese</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://johanneschrist.com/de/anamnese" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://johanneschrist.com/en/anamnese" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://johanneschrist.com/fr/anamnese" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://johanneschrist.com/de/anamnese" />
+  </url>
+</urlset>

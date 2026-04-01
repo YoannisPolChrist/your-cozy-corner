@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+
+repo_root="$(git rev-parse --show-toplevel)"
+reference_script="$repo_root/.agent/scripts/check-acceptance-reference.ps1"
+message_file="$1"
+
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$reference_script" -Mode commit -MessageFile "$message_file" -RepoPath "$repo_root"

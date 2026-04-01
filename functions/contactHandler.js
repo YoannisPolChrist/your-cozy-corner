@@ -168,7 +168,7 @@ function createContactHandler({
       return;
     }
 
-    if (!config.resendApiKey) {
+    if (!config.resendApiKey || config.resendApiKey.startsWith("MISSING_")) {
       logger.error("Missing RESEND_API_KEY secret.");
       response.status(503).json({ ok: false, code: RESPONSE_MESSAGES.missingConfig });
       return;

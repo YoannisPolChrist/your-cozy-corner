@@ -28,6 +28,50 @@
         }
       },
       {
+        "source": "/de/anamnese",
+        "destination": "/Anamnese/index.html"
+      },
+      {
+        "source": "/en/anamnese",
+        "destination": "/Anamnese/index.html"
+      },
+      {
+        "source": "/fr/anamnese",
+        "destination": "/Anamnese/index.html"
+      },
+      {
+        "source": "/Prozessbegleitung",
+        "destination": "/Prozessbegleitung/index.html"
+      },
+      {
+        "source": "/Prozessbegleitung/**",
+        "destination": "/Prozessbegleitung/index.html"
+      },
+      {
+        "source": "/de/Prozessbegleitung",
+        "destination": "/Prozessbegleitung/index.html"
+      },
+      {
+        "source": "/de/Prozessbegleitung/**",
+        "destination": "/Prozessbegleitung/index.html"
+      },
+      {
+        "source": "/en/Prozessbegleitung",
+        "destination": "/Prozessbegleitung/index.html"
+      },
+      {
+        "source": "/en/Prozessbegleitung/**",
+        "destination": "/Prozessbegleitung/index.html"
+      },
+      {
+        "source": "/fr/Prozessbegleitung",
+        "destination": "/Prozessbegleitung/index.html"
+      },
+      {
+        "source": "/fr/Prozessbegleitung/**",
+        "destination": "/Prozessbegleitung/index.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

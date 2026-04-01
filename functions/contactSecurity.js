@@ -17,7 +17,7 @@ function applyCorsHeaders(res, origin) {
   res.set("Access-Control-Allow-Origin", origin);
   res.set("Vary", "Origin");
   res.set("Access-Control-Allow-Methods", "POST,OPTIONS");
-  res.set("Access-Control-Allow-Headers", "Content-Type,Contact-Proof");
+  res.set("Access-Control-Allow-Headers", "Content-Type,X-Contact-Proof,Contact-Proof,X-Contact-Token");
   res.set("Access-Control-Max-Age", "3600");
   return res;
 }

@@ -73,7 +73,7 @@ const PersonalTraining = () => {
       <Navigation />
       <main id="main-content">
         {/* 1. Hero */}
-        <section className="relative min-h-[100svh] md:min-h-[85vh] lg:min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
+        <section className="relative min-h-[100svh] md:min-h-[85vh] flex items-center justify-center overflow-hidden pt-20">
           <div className="absolute inset-0 bg-primary">
             <img
               src="/PT_Header.jpg"

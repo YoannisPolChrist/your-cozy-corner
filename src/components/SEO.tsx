@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { useLanguage, routeMap, reverseRouteMap } from "@/i18n";
 import { useLocation } from "react-router-dom";
 import { Language } from "@/i18n/types";
-import { SITE_DOMAIN, SITE_PROFILE_IMAGE } from "@/lib/site";
+import { SITE_DEFAULT_DESCRIPTION, SITE_DOMAIN, SITE_NAME, SITE_PROFILE_IMAGE } from "@/lib/site";
 
 interface SEOProps { title?: string; description?: string; keywords?: string; image?: string; schema?: object; faqs?: { question: string; answer: string }[]; breadcrumbs?: { name: string; url: string }[]; dateModified?: string; }
 
@@ -10,11 +10,12 @@ export const SEO = ({ title, description, keywords, image, schema, faqs, breadcr
   const { language } = useLanguage();
   const location = useLocation();
   const domain = SITE_DOMAIN;
-  const baseTitle = "Johannes Christ - Gestalttherapie, Coaching & Personal Training";
+  const baseTitle = `${SITE_NAME} - Gestalttherapie, Coaching & Personal Training`;
   const defaultImage = SITE_PROFILE_IMAGE;
   const shareImage = image ? (image.startsWith('http') ? image : `${domain}${image}`) : defaultImage;
   const fullTitle = title ? `${title} | Johannes Christ` : baseTitle;
-  const metaDescription = description ?? "";
+  const metaDescription = description ?? SITE_DEFAULT_DESCRIPTION;
+  const localeMap: Record<Language, string> = { de: "de_DE", en: "en_GB", fr: "fr_FR" };
 
   const getBaseRoute = (pathname: string): string => {
     const withoutLang = pathname.replace(/^\/(de|en|fr)/, '') || '/';
@@ -27,7 +28,16 @@ export const SEO = ({ title, description, keywords, image, schema, faqs, breadcr
   const getUrlForLang = (lang: Language) => baseRoute ? `${domain}/${lang}/${routeMap[baseRoute]?.[lang] || baseRoute}` : `${domain}/${lang}`;
   const canonicalUrl = location.pathname === "/" ? getUrlForLang(language) : `${domain}${location.pathname}`;
 
-  const allSchemas: object[] = [];
+  const allSchemas: object[] = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": SITE_NAME,
+      "url": domain,
+      "inLanguage": ["de", "en", "fr"],
+      "description": metaDescription,
+    },
+  ];
   if (schema) allSchemas.push(schema);
   if (faqs && faqs.length > 0) allSchemas.push({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.question, "acceptedAnswer": { "@type": "Answer", "text": f.answer } })) });
   if (breadcrumbs && breadcrumbs.length > 0) allSchemas.push({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": breadcrumbs.map((c, i) => ({ "@type": "ListItem", "position": i + 1, "name": c.name, "item": c.url.startsWith("http") ? c.url : `${domain}${c.url}` })) });
@@ -35,6 +45,9 @@ export const SEO = ({ title, description, keywords, image, schema, faqs, breadcr
   return (
     <Helmet>
       <html lang={language} /><title>{fullTitle}</title><meta name="description" content={metaDescription} />
+      <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+      <meta name="author" content={SITE_NAME} />
+      <meta name="theme-color" content="#123742" />
       {keywords && <meta name="keywords" content={keywords} />}
       {dateModified && <meta name="article:modified_time" content={dateModified} />}
       <link rel="canonical" href={canonicalUrl} />
@@ -42,8 +55,21 @@ export const SEO = ({ title, description, keywords, image, schema, faqs, breadcr
       <link rel="alternate" hrefLang="en" href={getUrlForLang('en')} />
       <link rel="alternate" hrefLang="fr" href={getUrlForLang('fr')} />
       <link rel="alternate" hrefLang="x-default" href={getUrlForLang('de')} />
-      <meta property="og:type" content="website" /><meta property="og:title" content={fullTitle} /><meta property="og:description" content={metaDescription} /><meta property="og:url" content={canonicalUrl} /><meta property="og:image" content={shareImage} />
-      <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={fullTitle} /><meta name="twitter:description" content={metaDescription} /><meta name="twitter:image" content={shareImage} />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:locale" content={localeMap[language]} />
+      {(["de", "en", "fr"] as Language[]).filter((lang) => lang !== language).map((lang) => (
+        <meta key={lang} property="og:locale:alternate" content={localeMap[lang]} />
+      ))}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:image" content={shareImage} />
+      <meta property="og:image:alt" content={fullTitle} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image" content={shareImage} />
       {allSchemas.map((s, i) => <script key={i} type="application/ld+json">{JSON.stringify(s)}</script>)}
     </Helmet>
   );
