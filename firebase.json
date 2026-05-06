@@ -19,6 +19,116 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "headers": [
+      {
+        "source": "/assets/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=31536000,immutable"
+          }
+        ]
+      },
+      {
+        "source": "/Prozessbegleitung",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=0,must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/Prozessbegleitung/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=0,must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/Prozessbegleitung/assets/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=31536000,immutable"
+          }
+        ]
+      },
+      {
+        "source": "/index.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=0,must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=0,must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/de",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=0,must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/de/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=0,must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/en",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=0,must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/en/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=0,must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/fr",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=0,must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/fr/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=0,must-revalidate"
+          }
+        ]
+      }
+    ],
     "rewrites": [
       {
         "source": "/api/contact",
@@ -32,11 +142,35 @@
         "destination": "/Anamnese/index.html"
       },
       {
+        "source": "/de/Anamnese",
+        "destination": "/Anamnese/index.html"
+      },
+      {
+        "source": "/de/Anamnese/**",
+        "destination": "/Anamnese/index.html"
+      },
+      {
         "source": "/en/anamnese",
         "destination": "/Anamnese/index.html"
       },
       {
+        "source": "/en/Anamnese",
+        "destination": "/Anamnese/index.html"
+      },
+      {
+        "source": "/en/Anamnese/**",
+        "destination": "/Anamnese/index.html"
+      },
+      {
         "source": "/fr/anamnese",
+        "destination": "/Anamnese/index.html"
+      },
+      {
+        "source": "/fr/Anamnese",
+        "destination": "/Anamnese/index.html"
+      },
+      {
+        "source": "/fr/Anamnese/**",
         "destination": "/Anamnese/index.html"
       },
       {

@@ -14,6 +14,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ───── ROUTING & SPRACHERKENNUNG ─────
     const slugs = {
+        '/Anamnese': 'de',
+        '/Anamnese/': 'de',
+        '/Anamnese/de': 'de',
+        '/Anamnese/de/': 'de',
+        '/Anamnese/en': 'en',
+        '/Anamnese/en/': 'en',
+        '/Anamnese/fr': 'fr',
+        '/Anamnese/fr/': 'fr',
+        '/de/Anamnese': 'de',
+        '/de/Anamnese/': 'de',
+        '/en/Anamnese': 'en',
+        '/en/Anamnese/': 'en',
+        '/fr/Anamnese': 'fr',
+        '/fr/Anamnese/': 'fr',
+        '/de/anamnese': 'de',
+        '/de/anamnese/': 'de',
+        '/en/anamnese': 'en',
+        '/en/anamnese/': 'en',
+        '/fr/anamnese': 'fr',
+        '/fr/anamnese/': 'fr',
         '/Eingangsdiagnostik': 'de',
         '/intake-assessment': 'en',
         '/diagnostic-initial': 'fr'
@@ -21,8 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function detectLanguage() {
         // 1. URL Path check
-        const path = window.location.pathname;
+        const path = window.location.pathname.replace(/\/+$/, '') || '/';
         if (slugs[path]) return slugs[path];
+        if (slugs[path + '/']) return slugs[path + '/'];
 
         // 2. Browser language check as fallback
         const browserLang = navigator.language.slice(0, 2);
@@ -434,7 +455,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!email) return; // User cancelled
             }
 
-            const subj = t('emailPatientSubject') || 'Dein Anamnese PDF - Johannes Christ';
+            const subj = t('emailPatientSubject') || 'Deine Eingangsanamnese PDF - Johannes Christ';
             const bodyTxt = t('emailPatientBody') || 'Hallo,\n\nvielen Dank...';
 
             const subject = encodeURIComponent(subj);

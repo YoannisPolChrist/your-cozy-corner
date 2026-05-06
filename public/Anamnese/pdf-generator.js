@@ -53,7 +53,7 @@ function generateAnamesePDF(gatherFormData, tFunc, currentLang) {
         fr: "Francais",
     }[currentLang] || currentLang.toUpperCase();
 
-    const pdfTitle = t("pdfTitle") || "Klinisch-Biologische Anamnese";
+    const pdfTitle = t("pdfTitle") || "Eingangsanamnese";
     const pdfSubtitle = t("appSubtitle") || "Aktuelle Bestandsaufnahme deiner Situation";
     const pdfSummaryTitle = t("pdfSummaryTitle") || "Zusammenfassung Marker";
     const pdfNormNote = t("pdfNormNote") || "* Normalized: 10 = maximum burden.";
@@ -167,22 +167,6 @@ function generateAnamesePDF(gatherFormData, tFunc, currentLang) {
         drawCoverCard(layout.marginX + cardW + cardGap, cardY, cardW, 22, t("lEmail") || "E-Mail", patientEmail);
         drawCoverCard(layout.marginX, cardY + 28, cardW, 22, t("lDate") || "Datum", dateStr);
         drawCoverCard(layout.marginX + cardW + cardGap, cardY + 28, cardW, 22, "Language", languageLabel);
-
-        setFill(colors.surface);
-        setDraw(colors.line);
-        doc.roundedRect(layout.marginX, 198, layout.contentW, 42, 6, 6, "FD");
-
-        doc.setFont("helvetica", "bold");
-        doc.setFontSize(10);
-        setText(colors.navy);
-        doc.text((t("successTitle") || "Danke fuer deinen Mut zur Ehrlichkeit.").toUpperCase(), layout.marginX + 8, 208);
-
-        doc.setFont("helvetica", "normal");
-        doc.setFontSize(10);
-        setText(colors.ink);
-        const note = t("successDesc") || "Diese Bestandsaufnahme bildet die Grundlage fuer die gemeinsame Einordnung und die weiteren Schritte.";
-        const noteLines = doc.splitTextToSize(note, layout.contentW - 16);
-        doc.text(noteLines, layout.marginX + 8, 216);
 
         doc.setFont("helvetica", "normal");
         doc.setFontSize(8.5);
@@ -615,7 +599,7 @@ function generateAnamesePDF(gatherFormData, tFunc, currentLang) {
     drawCoverPage();
 
     const stepGroups = gatherStepGroups();
-    startBodyPage(t("appTitle") || "Anamnese", true);
+    startBodyPage(t("appTitle") || "Eingangsanamnese", true);
 
     ["1", "2", "3", "4", "5", "6", "7"].forEach(function (stepNum) {
         const items = stepGroups[stepNum];
@@ -676,7 +660,7 @@ function downloadAnamesePDF(gatherFormData, tFunc, currentLang) {
         const meta = gatherFormData();
         const nameVal = meta.name || (tFunc("patient") || "Patient");
         const safeName = nameVal.replace(/[^a-z0-9]/gi, "_").toLowerCase();
-        doc.save(`${tFunc("appTitle") || "Anamnese"}_${safeName}.pdf`);
+        doc.save(`${tFunc("appTitle") || "Eingangsanamnese"}_${safeName}.pdf`);
     }
     return doc;
 }

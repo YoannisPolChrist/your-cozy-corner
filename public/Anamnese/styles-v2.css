@@ -586,7 +586,7 @@ body {
 
 /* Language Toggles */
 .lang-toggles {
-    position: fixed;
+    position: absolute;
     top: 1.5rem;
     right: 1.5rem;
     display: flex;
@@ -1255,22 +1255,50 @@ body.is-ready .app-container {
 
 @media (max-width: 720px) {
     body {
-        padding: 0.8rem;
+        display: block;
+        padding: 0.65rem;
     }
 
     .lang-toggles {
-        position: sticky;
+        position: absolute;
         top: 0.65rem;
-        right: auto;
-        width: fit-content;
-        margin: 0 auto 0.85rem;
+        right: 0.65rem;
+        width: auto;
+        margin: 0;
     }
 
     .form-header {
-        padding: 1.3rem 1rem 1.5rem;
+        padding: 1.15rem 0.9rem 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .app-container {
+        margin: 0 auto 1rem;
+        border-radius: 18px;
+        padding: 4rem 0.95rem 1.5rem;
+    }
+
+    .title {
+        font-size: clamp(1.65rem, 9vw, 2.3rem);
+        line-height: 1.05;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .step-title {
+        font-size: 1.35rem;
+        line-height: 1.2;
+    }
+
+    .section-subheading {
+        font-size: 1rem;
     }
 
     .step-nav {
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 0.45rem;
     }
 
@@ -1283,6 +1311,21 @@ body.is-ready .app-container {
     .btn {
         width: 100%;
         min-width: 0;
+    }
+
+    .form-actions,
+    #success-actions {
+        gap: 0.65rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .app-container {
+        padding: 3.75rem 0.8rem 1.35rem;
+    }
+
+    .yn-options {
+        grid-template-columns: 1fr;
     }
 }
 

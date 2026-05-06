@@ -6,7 +6,7 @@
 const T = {
 
     // ───── APP CHROME ─────
-    appTitle: { de: 'Anamnese', en: 'Anamnesis', fr: 'Anamnèse' },
+    appTitle: { de: 'Eingangsanamnese', en: 'Initial Anamnesis', fr: 'Anamnèse initiale' },
     appSubtitle: { de: 'Aktuelle Bestandsaufnahme deiner Situation', en: 'Current assessment of your situation', fr: 'Évaluation actuelle de ta situation' },
     stepOf: { de: 'Schritt {current} von {total}', en: 'Step {current} of {total}', fr: 'Étape {current} sur {total}' },
     btnNext: { de: 'Weiter', en: 'Next', fr: 'Suivant' },
@@ -28,13 +28,13 @@ const T = {
     },
     yes: { de: 'JA', en: 'YES', fr: 'OUI' },
     no: { de: 'NEIN', en: 'NO', fr: 'NON' },
-    pdfTitle: { de: 'Klinisch-Biologische Anamnese', en: 'Clinical-Biological Anamnesis', fr: 'Anamnèse clinico-biologique' },
+    pdfTitle: { de: 'Eingangsanamnese', en: 'Initial Anamnesis', fr: 'Anamnèse initiale' },
     pdfFilledOn: { de: 'Ausgefüllt am', en: 'Completed on', fr: 'Rempli le' },
-    emailSubject: { de: 'Neue Anamnese', en: 'New Anamnesis', fr: 'Nouvelle anamnèse' },
-    emailBody: { de: 'Neue Anamnese von', en: 'New anamnesis from', fr: 'Nouvelle anamnèse de' },
-    emailPatientSubject: { de: 'Dein Anamnese PDF - Johannes Christ', en: 'Your Anamnesis PDF - Johannes Christ', fr: 'Ton PDF d\'Anamnèse - Johannes Christ' },
+    emailSubject: { de: 'Neue Eingangsanamnese', en: 'New Initial Anamnesis', fr: 'Nouvelle anamnèse initiale' },
+    emailBody: { de: 'Neue Eingangsanamnese von', en: 'New initial anamnesis from', fr: 'Nouvelle anamnèse initiale de' },
+    emailPatientSubject: { de: 'Deine Eingangsanamnese PDF - Johannes Christ', en: 'Your Initial Anamnesis PDF - Johannes Christ', fr: 'Ton PDF d\'anamnèse initiale - Johannes Christ' },
     emailPatientBody: { de: 'Hallo,\n\nvielen Dank für das Ausfüllen der Anamnese! Bitte denke daran, das heruntergeladene PDF Dokument dieser E-Mail als Anhang beizufügen, falls du es mir direkt schicken möchtest, oder behalte es einfach für deine eigenen Unterlagen.\n\nHerzliche Grüße,\nJohannes Christ', en: 'Hello,\n\nThank you for completing the anamnesis! Please remember to attach the downloaded PDF document to this email if you want to send it to me directly, or simply keep it for your own records.\n\nBest regards,\nJohannes Christ', fr: 'Bonjour,\n\nMerci d\'avoir rempli l\'anamnèse ! N\'oublie pas de joindre le document PDF téléchargé à cet e-mail si tu souhaites me l\'envoyer directement, ou conserve-le simplement pour tes propres dossiers.\n\nCordialement,\nJohannes Christ' },
-    emailJohannesSubject: { de: 'Neue Anamnese von', en: 'New Anamnesis from', fr: 'Nouvelle anamnèse de' },
+    emailJohannesSubject: { de: 'Neue Eingangsanamnese von', en: 'New Initial Anamnesis from', fr: 'Nouvelle anamnèse initiale de' },
     emailJohannesBody: { de: 'Hallo Johannes,\n\nhier sind meine Anamnese-Daten. Das ausgefüllte PDF-Dokument befindet sich (hoffentlich) im Anhang.\n\nLiebe Grüße', en: 'Hello Johannes,\n\nhere is my anamnesis data. The completed PDF document is (hopefully) attached.\n\nBest regards', fr: 'Bonjour Johannes,\n\nvoici mes données d\'anamnèse. Le document PDF rempli est (espérons-le) en pièce jointe.\n\nCordialement' },
     emailQ: { de: 'FRAGE', en: 'QUESTION', fr: 'QUESTION' },
     emailA: { de: 'ANTWORT', en: 'ANSWER', fr: 'RÉPONSE' },

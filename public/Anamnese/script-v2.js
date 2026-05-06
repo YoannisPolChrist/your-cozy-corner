@@ -29,6 +29,18 @@ document.addEventListener('DOMContentLoaded', () => {
         '/Anamnese/en/': 'en',
         '/Anamnese/fr': 'fr',
         '/Anamnese/fr/': 'fr',
+        '/de/Anamnese': 'de',
+        '/de/Anamnese/': 'de',
+        '/en/Anamnese': 'en',
+        '/en/Anamnese/': 'en',
+        '/fr/Anamnese': 'fr',
+        '/fr/Anamnese/': 'fr',
+        '/de/anamnese': 'de',
+        '/de/anamnese/': 'de',
+        '/en/anamnese': 'en',
+        '/en/anamnese/': 'en',
+        '/fr/anamnese': 'fr',
+        '/fr/anamnese/': 'fr',
         '/Eingangsdiagnostik': 'de',
         '/intake-assessment': 'en',
         '/diagnostic-initial': 'fr'
@@ -564,10 +576,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 email: safeEmail,
                 recipientEmail: recipientEmail,
                 pdfDataUri: pdfDataUri,
-                subject: (target === 'johannes' ? (t('emailJohannesSubject') || 'Neue Anamnese von') : (t('emailPatientSubject') || 'Dein Anamnese PDF')) + ' - ' + safeName,
+                subject: (target === 'johannes' ? (t('emailJohannesSubject') || 'Neue Eingangsanamnese von') : (t('emailPatientSubject') || 'Deine Eingangsanamnese PDF')) + ' - ' + safeName,
                 message: target === 'johannes'
                     ? (t('emailJohannesBody') || 'Hier sind die Ergebnisse der ersten Eingangsanalyse.')
-                    : (t('emailPatientBody') || 'Hallo,\nvielen Dank für das Ausfüllen der Anamnese.')
+                    : (t('emailPatientBody') || 'Hallo,\nvielen Dank für das Ausfüllen der Eingangsanamnese.')
             };
 
             // Nutzt die finale Webhook-URL für Activepieces
